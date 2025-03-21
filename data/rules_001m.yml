@@ -1,0 +1,260 @@
+version: "3.1"
+rules:
+- rule: Handle select 001M app for get daily report internal request in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+  - intent: ask_request_daily_internal_report_001m_id
+  - action: utter_select_apps_for_daily_report_internal_001M_id
+
+- rule: Handle select 001M app for get daily report internal request in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+  - intent: ask_request_daily_internal_report_001m_en
+  - action: utter_select_apps_for_daily_report_internal_001M_en
+
+- rule: Activate daily report internal select 001M apps form in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: daily_report_internal_choose_001M_app_id
+    - action: get_daily_report_select_001m_by_date_form
+    - active_loop: get_daily_report_select_001m_by_date_form
+
+- rule: Activate daily report internal select 001M apps form in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: daily_report_internal_choose_001M_app_en
+    - action: get_daily_report_select_001m_by_date_form
+    - active_loop: get_daily_report_select_001m_by_date_form
+
+- rule: Submit daily report internal select 001M apps in Indonesia
+  condition:
+    - active_loop: get_daily_report_select_001m_by_date_form
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - action: get_daily_report_select_001m_by_date_form
+    - slot_was_set:
+        - requested_slot: null
+    - active_loop: null
+    - action: action_get_001m_report_daily_internal_date_filter
+    - action: utter_filter_data_by_manufacture_report_internal_001m_id
+
+- rule: Submit daily report internal select 001M apps in English
+  condition:
+    - active_loop: get_daily_report_select_001m_by_date_form
+    - slot_was_set:
+        - language: english
+  steps:
+    - action: get_daily_report_select_001m_by_date_form
+    - slot_was_set:
+        - requested_slot: null
+    - active_loop: null
+    - action: action_get_001m_report_daily_internal_date_filter
+    - action: utter_filter_data_by_manufacture_report_internal_001m_en
+
+- rule: Activate daily report internal 001M select manufacture in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: affirm_filter_data_by_manufacture_report_internal_001m_id
+    - action: get_daily_report_select_001m_by_manufacture_form
+    - active_loop: get_daily_report_select_001m_by_manufacture_form
+
+- rule: Activate daily report internal 001M select manufacture in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: affirm_filter_data_by_manufacture_report_internal_001m_en
+    - action: get_daily_report_select_001m_by_manufacture_form
+    - active_loop: get_daily_report_select_001m_by_manufacture_form
+
+- rule: Submit daily report internal 001M select manufacture in Indonesia
+  condition:
+    - active_loop: get_daily_report_select_001m_by_manufacture_form
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - action: get_daily_report_select_001m_by_manufacture_form
+    - slot_was_set:
+        - requested_slot: null
+    - active_loop: null
+    - action: action_get_001m_report_daily_internal_date_manufacture_filter
+
+- rule: Submit daily report internal 001M select manufacture in English
+  condition:
+    - active_loop: get_daily_report_select_001m_by_manufacture_form
+    - slot_was_set:
+        - language: english
+  steps:
+    - action: get_daily_report_select_001m_by_manufacture_form
+    - slot_was_set:
+        - requested_slot: null
+    - active_loop: null
+    - action: action_get_001m_report_daily_internal_date_manufacture_filter
+
+- rule: Activate daily report internal 001M form in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: request_daily_internal_report_choose_001M_id
+    - action: get_daily_report_select_001m_by_date_form
+    - active_loop: get_daily_report_select_001m_by_date_form
+
+- rule: Activate daily report internal 001M form in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: request_daily_internal_report_choose_001M_en
+    - action: get_daily_report_select_001m_by_date_form
+    - active_loop: get_daily_report_select_001m_by_date_form
+
+- rule: Submit daily report internal 001M in Indonesia
+  condition:
+    - active_loop: get_daily_report_select_001m_by_date_form
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - action: get_daily_report_select_001m_by_date_form
+    - slot_was_set:
+        - requested_slot: null
+    - active_loop: null
+    - action: action_get_001m_report_daily_internal_date_filter
+    - action: utter_filter_data_by_manufacture_report_internal_001m_id
+
+- rule: Submit daily report internal 001M in English
+  condition:
+    - active_loop: get_daily_report_select_001m_by_date_form
+    - slot_was_set:
+        - language: english
+  steps:
+    - action: get_daily_report_select_001m_by_date_form
+    - slot_was_set:
+        - requested_slot: null
+    - active_loop: null
+    - action: action_get_001m_report_daily_internal_date_filter
+    - action: utter_filter_data_by_manufacture_report_internal_001m_en
+
+
+
+
+
+
+
+
+
+
+# - rule: Handle select 001M app for get daily report external request in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#   - intent: ask_request_daily_external_report_001m_id
+#   - action: utter_select_apps_for_daily_report_external_001M_id
+
+# - rule: Handle select 001M app for get daily report external request in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#   - intent: ask_request_daily_external_report_001m_en
+#   - action: utter_select_apps_for_daily_report_external_001M_en
+
+# - rule: Activate daily report external select 001M apps form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: daily_report_external_choose_001M_app_id
+#     - action: utter_proceed_with_next_step_for_daily_report_001M_id
+#     - action: get_daily_report_select_001m_form
+#     - active_loop: get_daily_report_select_001m_form
+
+# - rule: Activate daily report external select 001M apps form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: daily_report_external_choose_001M_app_en
+#     - action: utter_proceed_with_next_step_for_daily_report_001M_en
+#     - action: get_daily_report_select_001m_form
+#     - active_loop: get_daily_report_select_001m_form
+
+# - rule: Submit daily report external select 001M apps in Indonesia
+#   condition:
+#     - active_loop: get_daily_report_select_001m_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_daily_report_select_001m_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_external_all_filter
+
+# - rule: Submit daily report external select 001M apps in English
+#   condition:
+#     - active_loop: get_daily_report_select_001m_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_daily_report_select_001m_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_external_all_filter
+
+# - rule: Activate daily report external 001M form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: request_daily_external_report_choose_001M_id
+#     - action: utter_proceed_with_next_step_for_daily_report_001M_id
+#     - action: get_daily_report_select_001m_form
+#     - active_loop: get_daily_report_select_001m_form
+
+# - rule: Activate daily report external 001M form in english
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: request_daily_external_report_choose_001M_en
+#     - action: utter_proceed_with_next_step_for_daily_report_001M_en
+#     - action: get_daily_report_select_001m_form
+#     - active_loop: get_daily_report_select_001m_form
+
+# - rule: Submit daily report internal 001M in Indonesia
+#   condition:
+#     - active_loop: get_daily_report_select_001m_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_daily_report_select_001m_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_external_all_filter
+
+# - rule: Submit daily report internal 001M in English
+#   condition:
+#     - active_loop: get_daily_report_select_001m_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_daily_report_select_001m_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_external_all_filter

@@ -1,0 +1,2762 @@
+version: "3.1"
+stories:
+- story: Set language to Indonesian and greet
+  steps:
+  - user: |
+      [indonesia]{"entity": "language"}
+    intent: ask_language_id
+  - slot_was_set:
+    - language: indonesia
+  - action: action_set_language
+  - action: utter_greet_id
+
+- story: Set language to Indonesian and greet
+  steps:
+  - user: |
+      [english]{"entity": "language"}
+    intent: ask_language_en
+  - slot_was_set:
+    - language: english
+  - action: action_set_language
+  - action: utter_greet_en
+
+- story: Handle fallback 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      apa itu madhani
+    intent: nlu_fallback
+  - action: action_handle_fallback
+
+- story: check leave info - choose check leave quota 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      cuti
+    intent: check_leave_info_ess_id
+  - action: utter_ask_leave_info_type_id
+  - intent: check_leave_quota_ess_id
+  - action: action_time_off_remaining
+
+- story: check leave info - choose check leave quota 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      leave info
+    intent: check_leave_info_ess_en
+  - action: utter_ask_leave_info_type_en
+  - intent: check_leave_quota_ess_en
+  - action: action_time_off_remaining
+
+- story: check leave info - choose check big leave expired 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      cuti
+    intent: check_leave_info_ess_id
+  - action: utter_ask_leave_info_type_id
+  - intent: check_leave_expired_ess_id
+  - action: utter_ask_leave_category_expired_id
+  - user: |
+      cuti [besar]{"entity": "leave_type"}
+    intent: choose_leave_category_ess_id
+  - slot_was_set:
+      - leave_type: besar
+  - action: action_time_off_expired
+
+- story: check leave info - choose check big leave expired 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      leave
+    intent: check_leave_info_ess_en
+  - action: utter_ask_leave_info_type_en
+  - intent: check_leave_expired_ess_en
+  - action: utter_ask_leave_category_expired_en
+  - user: |
+      [big]{"entity": "leave_type"} leave
+    intent: choose_leave_category_ess_en
+  - slot_was_set:
+      - leave_type: big
+  - action: action_time_off_expired
+
+- story: check leave info - choose check annual leave expired 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      cuti
+    intent: check_leave_info_ess_id
+  - action: utter_ask_leave_info_type_id
+  - intent: check_leave_expired_ess_id
+  - action: utter_ask_leave_category_expired_id
+  - user: |
+      cuti [tahunan]{"entity": "leave_type"}
+    intent: choose_leave_category_ess_id
+  - slot_was_set:
+      - leave_type: tahunan
+  - action: action_time_off_expired
+
+- story: check leave info - choose check annual leave expired 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      leave
+    intent: check_leave_info_ess_en
+  - action: utter_ask_leave_info_type_en
+  - intent: check_leave_expired_ess_en
+  - action: utter_ask_leave_category_expired_id
+  - user: |
+      [annual]{"entity": "leave_type"} leave
+    intent: choose_leave_category_ess_en
+  - slot_was_set:
+      - leave_type: annual
+  - action: action_time_off_expired
+
+- story: check leave info - choose check outstanding leave expired 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      cuti
+    intent: check_leave_info_ess_id
+  - action: utter_ask_leave_info_type_id
+  - intent: check_leave_expired_ess_id
+  - action: utter_ask_leave_category_expired_id
+  - user: |
+      cuti [outstanding]{"entity": "leave_type"}
+    intent: choose_leave_category_ess_id
+  - slot_was_set:
+      - leave_type: outstanding
+  - action: action_time_off_expired
+
+- story: check leave info - choose check outstanding leave expired 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      leave
+    intent: check_leave_info_ess_en
+  - action: utter_ask_leave_info_type_en
+  - intent: check_leave_expired_ess_en
+  - action: utter_ask_leave_category_expired_en
+  - user: |
+      [outstanding]{"entity": "leave_type"} leave
+    intent: choose_leave_category_ess_en
+  - slot_was_set:
+      - leave_type: outstanding
+  - action: action_time_off_expired
+
+- story: check leave info - choose show leave list 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      cuti
+    intent: check_leave_info_ess_id
+  - action: utter_ask_leave_info_type_id
+  - intent: show_leave_list_ess_id
+  - action: action_time_off_list
+
+- story: check leave info - choose show leave list 
+  steps: 
+  - slot_was_set:
+    - language: english
+  - user: |
+      leave
+    intent: check_leave_info_ess_en
+  - action: utter_ask_leave_info_type_en
+  - intent: show_leave_list_ess_en
+  - action: action_time_off_list
+
+- story: check leave quota 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      sisa cuti saya
+    intent: check_leave_quota_ess_id
+  - action: action_time_off_remaining
+
+- story: check leave quota 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      how much leave do i have left?
+    intent: check_leave_quota_ess_en
+  - action: action_time_off_remaining
+
+- story: check leave expired quota and choose big leave 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      cuti saya kapan habis?
+    intent: check_leave_expired_ess_id
+  - action: utter_ask_leave_category_expired_id
+  - user: |
+      cuti [besar]{"entity": "leave_type"}
+    intent: choose_leave_category_ess_id
+  - slot_was_set:
+      - leave_type: besar
+  - action: action_time_off_expired
+
+- story: check leave expired quota and choose big leave 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      when is my leave due?
+    intent: check_leave_expired_ess_en
+  - action: utter_ask_leave_category_expired_en
+  - user: |
+      [big]{"entity": "leave_type"} leave
+    intent: choose_leave_category_ess_en
+  - slot_was_set:
+      - leave_type: big
+  - action: action_time_off_expired
+
+- story: check leave expired quota and choose annual leave 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      cuti saya kapan habis?
+    intent: check_leave_expired_ess_id
+  - action: utter_ask_leave_category_expired_id
+  - user: |
+      cuti [tahunan]{"entity": "leave_type"}
+    intent: choose_leave_category_ess_id
+  - slot_was_set:
+      - leave_type: tahunan
+  - action: action_time_off_expired
+
+- story: check leave expired quota and choose annual leave 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      when is my leave due?
+    intent: check_leave_expired_ess_en
+  - action: utter_ask_leave_category_expired_en
+  - user: |
+      [annual]{"entity": "leave_type"} leave
+    intent: choose_leave_category_ess_en
+  - slot_was_set:
+      - leave_type: annual
+  - action: action_time_off_expired
+
+- story: check leave expired quota and choose outstanding leave 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      cuti saya kapan habis?
+    intent: check_leave_expired_ess_id
+  - action: utter_ask_leave_category_expired_id
+  - user: |
+      cuti [outstanding]{"entity": "leave_type"}
+    intent: choose_leave_category_ess_id
+  - slot_was_set:
+      - leave_type: outstanding
+  - action: action_time_off_expired
+
+- story: check leave expired quota and choose outstanding leave 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      when is my leave due?
+    intent: check_leave_expired_ess_en
+  - action: utter_ask_leave_category_expired_en
+  - user: |
+      [outstanding]{"entity": "leave_type"} leave
+    intent: choose_leave_category_ess_en
+  - slot_was_set:
+      - leave_type: outstanding
+  - action: action_time_off_expired
+
+- story: check leave expired big quota 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      cuti [besar]{"entity": "leave_type"} saya kapan habis?
+    intent: check_leave_expired_big_quota_ess_id
+  - slot_was_set:
+      - leave_type: besar
+  - action: action_time_off_expired 
+
+- story: check leave expired big quota 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      when will my [big]{"entity": "leave_type"} leave finished?
+    intent: check_leave_expired_big_quota_ess_en
+  - slot_was_set:
+      - leave_type: big
+  - action: action_time_off_expired 
+
+- story: show leave list 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      tunjukkan daftar cuti saya
+    intent: show_leave_list_ess_id
+  - action: action_time_off_list
+
+- story: show leave list 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      show the leave list
+    intent: show_leave_list_ess_en
+  - action: action_time_off_list
+
+- story: check last leave approval status 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      apakah cuti terbaru saya sudah disetujui?
+    intent: check_last_leave_approval_status_ess_id
+  - action: action_last_approval_time_off_status
+
+- story: check last leave approval status 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      what is the status of my last leave approval?
+    intent: check_last_leave_approval_status_ess_en
+  - action: action_last_approval_time_off_status
+
+- story: check last leave taken 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      kapan cuti terakhir yang pernah saya ambil?
+    intent: check_last_leave_taken_ess_id
+  - action: action_get_last_approval_time_off
+
+- story: check last leave taken 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      when did I last apply for leave?
+    intent: check_last_leave_taken_ess_en
+  - action: action_get_last_approval_time_off
+
+- story: Ask leave requst
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      saya mau ajukan cuti
+    intent: apply_leave_request_ess_id
+  - action: get_leave_request_form
+  - active_loop: get_leave_request_form
+  - active_loop: null
+  - action: action_ess_leave_confirmation
+  - action: utter_confirm_leave_submission_ess_id
+
+- story: Ask leave requst
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Apply for leave
+    intent: apply_leave_request_ess_en
+  - action: get_leave_request_form
+  - active_loop: get_leave_request_form
+  - active_loop: null
+  - action: action_ess_leave_confirmation
+  - action: utter_confirm_leave_submission_ess_en
+
+- story: Ask leave requst - confirm
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      saya mau ajukan cuti
+    intent: apply_leave_request_ess_id
+  - action: get_leave_request_form
+  - active_loop: get_leave_request_form
+  - active_loop: null
+  - action: action_ess_leave_confirmation
+  - action: utter_confirm_leave_submission_ess_id
+  - intent: affirm_leave_submission_ess_id
+  - action: action_ess_post_leave_timeoff
+
+- story: Ask leave requst - confirm
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Apply for leave
+    intent: apply_leave_request_ess_en
+  - action: get_leave_request_form
+  - active_loop: get_leave_request_form
+  - active_loop: null
+  - action: action_ess_leave_confirmation
+  - action: utter_confirm_leave_submission_ess_en
+  - intent: affirm_leave_submission_ess_en
+  - action: action_ess_post_leave_timeoff
+
+- story: Ask leave requst - decline
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      saya mau ajukan cuti
+    intent: apply_leave_request_ess_id
+  - action: get_leave_request_form
+  - active_loop: get_leave_request_form
+  - active_loop: null
+  - action: action_ess_leave_confirmation
+  - action: utter_confirm_leave_submission_ess_id
+  - intent: deny_leave_submission_ess_id
+  - action: utter_deny_leave_submission_ess_id
+
+- story: Ask leave requst - decline
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Apply for leave
+    intent: apply_leave_request_ess_en
+  - action: get_leave_request_form
+  - active_loop: get_leave_request_form
+  - active_loop: null
+  - action: action_ess_leave_confirmation
+  - action: utter_confirm_leave_submission_ess_en
+  - intent: deny_leave_submission_ess_en
+  - action: utter_deny_leave_submission_ess_en
+
+- story: Ask leave info subordinate
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Saya mau lihat sisa cuti bawahan ku
+    intent: ask_leave_info_subordinate_ess_id
+  - action: get_input_nik_form
+  - active_loop: get_input_nik_form
+  - active_loop: null
+  - action: action_ess_get_leave_by_nik
+
+- story: Ask leave info subordinate
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      I want to check my subordinate's remaining leave
+    intent: ask_leave_info_subordinate_ess_en
+  - action: get_input_nik_form
+  - active_loop: get_input_nik_form
+  - active_loop: null
+  - action: action_ess_get_leave_by_nik
+
+# - story: check attendance for today 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: | 
+#       jam berapa saya berangkat [hari ini]{"entity": "query_condition"}?
+#     intent: check_absentee_data_today_raa_id
+#   - slot_was_set:
+#       - query_condition: hari ini
+#   - action: action_get_absence_data
+
+# - story: check attendance for today 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What time did I leave [today]{"entity": "query_condition"}?
+#     intent: check_absentee_data_today_raa_en
+#   - slot_was_set:
+#       - query_condition: today
+#   - action: action_get_absence_data
+
+# - story: check attendance for yesterday 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       jam berapa saya absen berangkat [kemarin]{"entity": "query_condition"}?
+#     intent: check_absentee_data_yesterday_raa_id
+#   - slot_was_set:
+#       - query_condition: kemarin
+#   - action: action_get_absence_data
+
+# - story: check attendance for yesterday 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       which project was I absent in [yesterday]{"entity": "query_condition"}?
+#     intent: check_absentee_data_yesterday_raa_en
+#   - slot_was_set:
+#       - query_condition: yesterday
+#   - action: action_get_absence_data
+
+# - story: check attendance for last time 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       jam berapa saya absen [terakhir kali]{"entity": "query_condition"}?
+#     intent: check_absentee_data_last_time_raa_id
+#   - slot_was_set:
+#       - query_condition: terakhir kali
+#   - action: action_get_absence_data
+
+# - story: check attendance for last time 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       what time did I clock in [last time]{"entity": "query_condition"}?
+#     intent: check_absentee_data_last_time_raa_en
+#   - slot_was_set:
+#       - query_condition: last time
+#   - action: action_get_absence_data
+
+# - story: Check leave requests this month 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Berapa kali saya mengajukan cuti bulan ini?
+#     intent: check_leave_requests_this_month_raa_id
+#   - action: action_get_leave_requests_this_month
+
+# - story: Check leave requests this month 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How many times have I taken leave this month?
+#     intent: check_leave_requests_this_month_raa_en
+#   - action: action_get_leave_requests_this_month
+
+# - story: Check leave requests last month 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Berapa kali saya mengajukan cuti bulan lalu?
+#     intent: check_leave_requests_last_month_raa_id
+#   - action: action_get_leave_requests_last_month
+
+# - story: Check leave requests last month 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How many leave requests did I submit last month?
+#     intent: check_leave_requests_last_month_raa_en
+#   - action: action_get_leave_requests_last_month
+
+# - story: Check absence requests this month 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Berapa kali saya izin tidak hadir bulan ini?
+#     intent: check_absence_requests_this_month_raa_id
+#   - action: action_get_absence_requests_this_month
+
+# - story: Check absence requests this month 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How many days have I been absent this month?
+#     intent: check_absence_requests_this_month_raa_en
+#   - action: action_get_absence_requests_this_month
+
+# - story: Check absence requests last month 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Berapa kali saya tidak hadir bulan lalu?
+#     intent: check_absence_requests_last_month_raa_id
+#   - action: action_get_absence_requests_last_month
+
+# - story: Check absence requests last month 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Last month, how many times was I absent?
+#     intent: check_absence_requests_last_month_raa_en
+#   - action: action_get_absence_requests_last_month
+
+# - story: Check absence requests (alpha/mangkir) this month 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Berapa kali saya mangkir bulan ini?
+#     intent: check_alpha_absence_requests_this_month_raa_id
+#   - action: action_get_alpha_absence_requests_this_month
+
+# - story: Check absence requests (alpha/mangkir) this month 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How many times have I alpha this month?
+#     intent: check_alpha_absence_requests_this_month_raa_en
+#   - action: action_get_alpha_absence_requests_this_month
+
+# - story: Check absence requests (alpha/mangkir) last month 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Berapa kali saya tidak hadir bulan lalu karena alpha?
+#     intent: check_alpha_absence_requests_last_month_raa_id
+#   - action: action_get_alpha_absence_requests_last_month
+
+# - story: Check absence requests (alpha/mangkir) last month 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How many times was I absent last month without permission?
+#     intent: check_alpha_absence_requests_last_month_raa_en
+#   - action: action_get_alpha_absence_requests_last_month
+
+# - story: Check attendance this month 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Berapa kali saya hadir bulan ini?
+#     intent: check_attendance_this_month_raa_id
+#   - action: action_get_presence_this_month
+
+# - story: Check attendance this month 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How many times have I been present this month?
+#     intent: check_attendance_this_month_raa_en
+#   - action: action_get_presence_this_month
+
+# - story: Check attendance last month 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Berapa total kehadiran saya bulan lalu?
+#     intent: check_attendance_last_month_raa_id
+#   - action: action_get_presence_last_month
+
+# - story: Check attendance last month 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       I'd like to know how many times I attended last month
+#     intent: check_attendance_last_month_raa_en
+#   - action: action_get_presence_last_month
+
+# - story: Check madhani sites projects 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       apa saja project site yang ada di Madhani?
+#     intent: check_madhani_sites_projects_raa_id
+#   - action: action_get_project_sites_madhani
+
+# - story: Check madhani sites projects 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What project sites are there at Madhani?
+#     intent: check_madhani_sites_projects_raa_en
+#   - action: action_get_project_sites_madhani
+
+# - story: Provide user's role information 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Apa role saya di aplikasi ini? 
+#     intent: ask_user_role_raa_id
+#   - action: action_get_user_profile_role
+
+# - story: Provide user's role information 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What role do I have in this application?
+#     intent: ask_user_role_raa_en
+#   - action: action_get_user_profile_role
+
+# - story: Provide user's department information 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Saya terdaftar di departement apa?
+#     intent: ask_user_department_raa_id
+#   - action: action_get_user_profile_department
+
+# - story: Provide user's department information 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Which department am I in?
+#     intent: ask_user_department_raa_en
+#   - action: action_get_user_profile_department
+
+# - story: Provide user's position information 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Saya terdaftar di posisi apa?
+#     intent: ask_user_position_raa_id
+#   - action: action_get_user_profile_position
+
+# - story: Provide user's position information 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What position am I registered in?
+#     intent: ask_user_position_raa_en
+#   - action: action_get_user_profile_position
+
+# - story: Provide user's project site 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Saya ditugaskan di project site mana?
+#     intent: ask_user_assigned_project_site_raa_id
+#   - action: action_get_user_profile_project_site
+
+# - story: Provide user's project site 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is my project site?
+#     intent: ask_user_assigned_project_site_raa_en
+#   - action: action_get_user_profile_project_site
+
+# - story: Provide user's registered email 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Email apa yang terdaftar di akun saya?
+#     intent: ask_registered_email_raa_id
+#   - action: action_get_user_profile_email
+
+# - story: Provide user's registered email 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is my email recorded in this application?
+#     intent: ask_registered_email_raa_en
+#   - action: action_get_user_profile_email
+
+# - story: Provide user's phone number 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Nomor HP apa yang terdaftar di akun saya?
+#     intent: ask_registered_phone_raa_id
+#   - action: action_get_user_profile_phone_number
+
+# - story: Provide user's phone number 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is my phone number recorded in the application?
+#     intent: ask_registered_phone_raa_en
+#   - action: action_get_user_profile_phone_number
+
+# - story: Provide user's date of hire 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Kapan saya mulai bekerja di perusahaan?
+#     intent: ask_date_of_hire_raa_id
+#   - action: action_get_user_profile_hire_date
+
+# - story: Provide user's date of hire 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       When did I start working at the company?
+#     intent: ask_date_of_hire_raa_en
+#   - action: action_get_user_profile_hire_date
+
+# - story: Respond to positions madhani's 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Apa saja posisi yang ada di Madhani?
+#     intent: ask_positions_in_madhani_raa_id
+#   - action: action_get_positions_madhani
+
+# - story: Respond to positions madhani's 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What are the job positions in Madhani?
+#     intent: ask_positions_in_madhani_raa_en
+#   - action: action_get_positions_madhani
+
+# - story: Respond to total positions madhani's 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Ada berapa posisi yang tersedia di Madhani?
+#     intent: ask_total_positions_in_madhani_raa_id
+#   - action: action_get_total_positions_madhani
+
+# - story: Respond to total positions madhani's 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Please provide information about the total positions in Madhani
+#     intent: ask_total_positions_in_madhani_raa_en
+#   - action: action_get_total_positions_madhani
+
+# - story: Respond to departments madhani's 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Apa saja department yang ada di Madhani?
+#     intent: ask_departments_in_madhani_raa_id
+#   - action: action_get_departments_madhani
+
+# - story: Respond to departments madhani's 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Can you tell me the list of departments in Madhani?
+#     intent: ask_departments_in_madhani_raa_en
+#   - action: action_get_departments_madhani
+
+# - story: Respond to total departments madhani's 
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       Ada berapa department yang ada di Madhani?
+#     intent: ask_total_departments_in_madhani_raa_id
+#   - action: action_get_total_departments_madhani
+
+# - story: Respond to total departments madhani's 
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Can you tell me the total number of departments in Madhani?
+#     intent: ask_total_departments_in_madhani_raa_en
+#   - action: action_get_total_departments_madhani
+
+- story: Ask for equipment count
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Madhani punya berapa unit?
+    intent: ask_equipment_count_fms_id
+  - action: action_get_fms_equipment_count
+
+- story: Ask for equipment count
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How many units does Madhani have?
+    intent: ask_equipment_count_fms_en
+  - action: action_get_fms_equipment_count
+
+- story: Check unit availability by type and site 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah tersedia unit dengan tipe TRUCK RIGID?
+    intent: check_unit_by_type_and_site_fms_id
+  - action: check_unit_type_by_site_form
+  - active_loop: check_unit_type_by_site_form
+  - active_loop: null
+  - action: action_get_fms_check_unit_by_type
+
+- story: Check unit availability by type and site 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Is there a unit with the type TRUCK RIGID available?
+    intent: check_unit_by_type_and_site_fms_en
+  - action: check_unit_type_by_site_form
+  - active_loop: check_unit_type_by_site_form
+  - active_loop: null
+  - action: action_get_fms_check_unit_by_type
+
+- story: Ask type of unit by code
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa tipe unit TR-04102SCO?
+    intent: ask_type_of_unit_fms_id
+  - action: check_code_unit_form
+  - active_loop: check_code_unit_form
+  - active_loop: null
+  - action: action_get_fms_type_of_unit
+
+- story: Ask type of unit by code
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What is the type of unit TR-04102SCO?
+    intent: ask_type_of_unit_fms_en
+  - action: check_code_unit_form
+  - active_loop: check_code_unit_form
+  - active_loop: null
+  - action: action_get_fms_type_of_unit
+
+- story: Ask for the count of units by type
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Ada berapa unit dengan tipe BIG TRUCK RIGID?
+    intent: ask_count_units_by_type_fms_id
+  - action: count_units_by_type_form
+  - active_loop: count_units_by_type_form
+  - active_loop: null
+  - action: action_get_fms_count_units_by_type
+
+- story: Ask for the count of units by type
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How many units are there with the type BIG TRUCK RIGID?
+    intent: ask_count_units_by_type_fms_en
+  - action: count_units_by_type_form
+  - active_loop: count_units_by_type_form
+  - active_loop: null
+  - action: action_get_fms_count_units_by_type
+
+- story: Ask for the unit purchase year
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tahun berapa unit TR-04102SCO dibeli?
+    intent: ask_unit_purchase_year_fms_id
+  - action: unit_purchase_year_form
+  - active_loop: unit_purchase_year_form
+  - active_loop: null
+  - action: action_get_fms_unit_purchase_date
+
+- story: Ask for the unit purchase year
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What year was the unit TR-04102SCO purchased?
+    intent: ask_unit_purchase_year_fms_en
+  - action: unit_purchase_year_form
+  - active_loop: unit_purchase_year_form
+  - active_loop: null
+  - action: action_get_fms_unit_purchase_date
+
+- story: Ask check unit by status - status aktif
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tolong berikan detail unit dengan status [aktif]{"entity": "unit_status"}
+    intent: check_unit_by_status_fms_id
+  - slot_was_set:
+      - unit_status: aktif
+  - action: action_get_fms_units_with_status
+
+- story: Ask check unit by status - status active
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Please provide details of units with status [active]{"entity": "unit_status"}
+    intent: check_unit_by_status_fms_en
+  - slot_was_set:
+      - unit_status: active
+  - action: action_get_fms_units_with_status
+
+- story: Ask check unit by status - status tidak aktif
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Unit apa saja dengan status [tidak aktif]{"entity": "unit_status"}?
+    intent: check_unit_by_status_fms_id
+  - slot_was_set:
+      - unit_status: tidak aktif
+  - action: action_get_fms_units_with_status
+
+- story: Ask check unit by status - status inactive
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Are there any units with status [inactive]{"entity": "unit_status"}?
+    intent: check_unit_by_status_fms_en
+  - slot_was_set:
+      - unit_status: inactive
+  - action: action_get_fms_units_with_status
+
+- story: Ask request for get unit information
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berikan informasi tentang unit TR-04102SCO
+    intent: ask_unit_information_fms_id
+  - action: get_unit_information_form
+  - active_loop: get_unit_information_form
+  - active_loop: null
+  - action: action_get_fms_unit_information
+
+- story: Ask request for get unit information
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Provide information about unit TR-04102SCO
+    intent: ask_unit_information_fms_en
+  - action: get_unit_information_form
+  - active_loop: get_unit_information_form
+  - active_loop: null
+  - action: action_get_fms_unit_information
+
+- story: Ask request for unit modification status
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Modifikasi apa yang ada di unit HD465-7?
+    intent: ask_unit_modification_status_fms_id
+  - action: unit_modification_status_form
+  - active_loop: unit_modification_status_form
+  - active_loop: null
+  - action: action_get_fms_unit_modification_status
+
+- story: Ask request for unit modification status
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Please check the modifications on the unit TR-04102SCO
+    intent: ask_unit_modification_status_fms_en
+  - action: unit_modification_status_form
+  - active_loop: unit_modification_status_form
+  - active_loop: null
+  - action: action_get_fms_unit_modification_status
+
+- story: Ask request for unit serial numbers
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berapa serial number unit TR-04102SCO?
+    intent: ask_unit_serial_number_fms_id
+  - action: unit_serial_numbers_form
+  - active_loop: unit_serial_numbers_form
+  - active_loop: null
+  - action: action_get_fms_unit_serial_number
+
+- story: Ask request for unit serial numbers
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What is the serial number of unit TR-04102SCO?
+    intent: ask_unit_serial_number_fms_en
+  - action: unit_serial_numbers_form
+  - active_loop: unit_serial_numbers_form
+  - active_loop: null
+  - action: action_get_fms_unit_serial_number
+
+- story: get equipment category count
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Ada berapa kategori equipment yang ada di Madhani?
+    intent: ask_equipment_category_count_madhani_fms_id
+  - action: action_get_fms_total_category_equipment
+
+- story: get equipment category count
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How many equipment categories are there in Madhani?
+    intent: ask_equipment_category_count_madhani_fms_en
+  - action: action_get_fms_total_category_equipment
+
+- story: get equipment categories
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Sebutkan kategori equipment yang ada di Madhani?
+    intent: get_equipment_categories_madhani_fms_id
+  - action: action_get_fms_category_equipment
+
+- story: get equipment categories
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      List of equipment categories?
+    intent: get_equipment_categories_madhani_fms_en
+  - action: action_get_fms_category_equipment
+
+- story: Ask equipment types by category
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tipe equipment apa saja yang ada dalam kategori Amphibis?
+    intent: get_equipment_types_by_category_fms_id
+  - action: equipment_types_by_category_form
+  - active_loop: equipment_types_by_category_form
+  - active_loop: null
+  - action: action_get_fms_equipment_types_in_category
+
+- story: Ask equipment types by category
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What equipment types are in the Amphibis category?
+    intent: get_equipment_types_by_category_fms_en
+  - action: equipment_types_by_category_form
+  - active_loop: equipment_types_by_category_form
+  - active_loop: null
+  - action: action_get_fms_equipment_types_in_category
+
+- story: Ask get equipment category status
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa status kategori equipment Amphibis?
+    intent: get_equipment_category_status_fms_id
+  - action: equipment_category_status_form
+  - active_loop: equipment_category_status_form
+  - active_loop: null
+  - action: action_get_fms_equipment_category_status
+
+- story: Ask get equipment category status
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What's the status of the Amphibis equipment category?
+    intent: get_equipment_category_status_fms_en
+  - action: equipment_category_status_form
+  - active_loop: equipment_category_status_form
+  - active_loop: null
+  - action: action_get_fms_equipment_category_status
+
+- story: get equipment categories by status - status aktif
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Kategori equipment apa saja yang memiliki status [aktif]{"entity": "equipment_category_status"}
+    intent: get_equipment_categories_by_status_fms_id
+  - slot_was_set:
+      - equipment_category_status: aktif
+  - action: action_get_fms_equipment_category_from_status
+
+- story: get equipment categories by status - status active
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What equipment categories have the status [active]{"entity": "equipment_category_status"}
+    intent: get_equipment_categories_by_status_fms_en
+  - slot_was_set:
+      - equipment_category_status: active
+  - action: action_get_fms_equipment_category_from_status
+
+- story: get equipment categories by status - status tidak aktif
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tunjukkan kategori equipment yang berstatus [tidak aktif]{"entity": "equipment_category_status"}
+    intent: get_equipment_categories_by_status_fms_id
+  - slot_was_set:
+      - equipment_category_status: tidak aktif
+  - action: action_get_fms_equipment_category_from_status
+
+- story: get equipment categories by status - status inactive
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show me the equipment categories with the status [inactive]{"entity": "equipment_category_status"}
+    intent: get_equipment_categories_by_status_fms_en
+  - slot_was_set:
+      - equipment_category_status: inactive
+  - action: action_get_fms_equipment_category_from_status
+
+- story: Ask count equipment categories with specific types
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah ada kategori Amphibis dengan tipe TRUCK RIGID?
+    intent: check_category_with_type_equipment_fms_id
+  - action: count_equipment_categories_by_type_form
+  - active_loop: count_equipment_categories_by_type_form
+  - active_loop: null
+  - action: action_get_fms_total_equipment_category_from_type
+
+- story: Ask count equipment categories with specific types
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Is there a category Amphibis with the type TRUCK RIGID?
+    intent: check_category_with_type_equipment_fms_en
+  - action: count_equipment_categories_by_type_form
+  - active_loop: count_equipment_categories_by_type_form
+  - active_loop: null
+  - action: action_get_fms_total_equipment_category_from_type
+
+- story: Aks work order count
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Ada berapa work order saya?
+    intent: ask_work_order_count_fms_id
+  - action: ask_work_order_count_form
+  - active_loop: ask_work_order_count_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_date
+
+- story: Aks work order count
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How many work orders do I have?
+    intent: ask_work_order_count_fms_en
+  - action: ask_work_order_count_form
+  - active_loop: ask_work_order_count_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_date
+
+- story: Ask show work orders by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tunjukkan work order untuk site 001A
+    intent: get_work_orders_by_site_fms_id
+  - action: show_wo_by_site_form
+  - active_loop: show_wo_by_site_form
+  - active_loop: null
+  - action: action_get_fms_wo_by_site
+
+- story: Ask show work orders by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show the work orders for the site 001A
+    intent: get_work_orders_by_site_fms_en
+  - action: show_wo_by_site_form
+  - active_loop: show_wo_by_site_form
+  - active_loop: null
+  - action: action_get_fms_wo_by_site
+
+- story: Ask for show last work orders by shift - day shift
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tunjukkan work order terakhir yang berjalan pada shift day
+    intent: get_last_work_order_shift_fms_id
+  - action: show_last_wo_by_shift_form
+  - active_loop: show_last_wo_by_shift_form
+  - active_loop: null
+  - action: action_get_fms_last_shift_of_work_order
+
+- story: Ask for show last work orders by shift - day shift
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show me the last work order that ran during the day shift
+    intent: get_last_work_order_shift_fms_en
+  - action: show_last_wo_by_shift_form
+  - active_loop: show_last_wo_by_shift_form
+  - active_loop: null
+  - action: action_get_fms_last_shift_of_work_order
+
+- story: Ask for show last work orders by shift - night shift
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tampilkan work order terakhir yang tercatat di shift night
+    intent: get_last_work_order_shift_fms_id
+  - action: show_last_wo_by_shift_form
+  - active_loop: show_last_wo_by_shift_form
+  - active_loop: null
+  - action: action_get_fms_last_shift_of_work_order
+
+- story: Ask for show last work orders by shift - night shift
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Please show me my last work order on the night shift
+    intent: get_last_work_order_shift_fms_en
+  - action: show_last_wo_by_shift_form
+  - active_loop: show_last_wo_by_shift_form
+  - active_loop: null
+  - action: action_get_fms_last_shift_of_work_order
+
+- story: Ask for show work orders by spesific shift - day shift
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tunjukkan work order yang bekerja pada shift day
+    intent: get_work_orders_by_shift_fms_id
+  - action: show_wo_by_spesific_shift_form
+  - active_loop: show_wo_by_spesific_shift_form
+  - active_loop: null
+  - action: action_get_fms_wo_by_shift
+
+- story: Ask for show work orders by spesific shift - day shift
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show the work orders running on day shift
+    intent: get_work_orders_by_shift_fms_en
+  - action: show_wo_by_spesific_shift_form
+  - active_loop: show_wo_by_spesific_shift_form
+  - active_loop: null
+  - action: action_get_fms_wo_by_shift
+
+- story: Ask for show work orders by spesific shift - night shift
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tampilkan work order saya yang bekerja pada night shift
+    intent: get_work_orders_by_shift_fms_id
+  - action: show_wo_by_spesific_shift_form
+  - active_loop: show_wo_by_spesific_shift_form
+  - active_loop: null
+  - action: action_get_fms_wo_by_shift
+
+- story: Ask for show work orders by spesific shift - night shift
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Please show my work orders during the night shift
+    intent: get_work_orders_by_shift_fms_en
+  - action: show_wo_by_spesific_shift_form
+  - active_loop: show_wo_by_spesific_shift_form
+  - active_loop: null
+  - action: action_get_fms_wo_by_shift
+
+- story: get active work orders
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tunjukkan work order yang memiliki status aktif
+    intent: get_active_work_orders_user_fms_id
+  - action: action_get_fms_active_work_orders
+
+- story: get active work orders
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show me my work orders with active status
+    intent: get_active_work_orders_user_fms_en
+  - action: action_get_fms_active_work_orders
+
+- story: Ask work order count by date
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Ada berapa work order yang tercatat pada tanggal 2024-01-02?
+    intent: get_work_order_count_by_date_fms_id
+  - action: get_work_order_count_by_date_form
+  - active_loop: get_work_order_count_by_date_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_date
+
+- story: Ask work order count by date
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How many work orders were recorded on 2024-01-02?
+    intent: get_work_order_count_by_date_fms_en
+  - action: get_work_order_count_by_date_form
+  - active_loop: get_work_order_count_by_date_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_date
+
+- story: get work orders for today
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tunjukkan work order saya pada [hari ini]{"entity": "day_condition"}
+    intent: get_work_orders_today_fms_id
+  - slot_was_set:
+      - day_condition: hari ini
+  - action: action_get_fms_work_orders_day_condition
+
+- story: get work orders for today
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show me my work orders for [today]{"entity": "day_condition"}
+    intent: get_work_orders_today_fms_en
+  - slot_was_set:
+      - day_condition: today
+  - action: action_get_fms_work_orders_day_condition
+
+- story: get work orders for last noon
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja work order saya yang tercatat [kemarin siang]{"entity": "day_condition"}
+    intent: get_work_orders_last_noon_fms_id
+  - slot_was_set:
+      - day_condition: kemarin siang
+  - action: action_get_fms_work_orders_day_condition
+
+- story: get work orders for last noon
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show me the work orders from [last noon]{"entity": "day_condition"}
+    intent: get_work_orders_last_noon_fms_en
+  - slot_was_set:
+      - day_condition: last noon
+  - action: action_get_fms_work_orders_day_condition
+
+- story: get work orders for last night
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tunjukkan work order pada [kemarin malam]{"entity": "day_condition"}
+    intent: get_work_orders_last_night_fms_id
+  - slot_was_set:
+      - day_condition: kemarin malam
+  - action: action_get_fms_work_orders_day_condition
+
+- story: get work orders for last night
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show me the work orders from [last night]{"entity": "day_condition"}
+    intent: get_work_orders_last_night_fms_en
+  - slot_was_set:
+      - day_condition: last night
+  - action: action_get_fms_work_orders_day_condition
+
+- story: Ask work orders by date
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tunjukkan work order pada tanggal 2024-01-02
+    intent: get_work_orders_by_date_fms_id
+  - action: get_work_orders_by_date_form
+  - active_loop: get_work_orders_by_date_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_date
+
+- story: Ask work orders by date
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show me the work orders for 2024-01-02
+    intent: get_work_orders_by_date_fms_en
+  - action: get_work_orders_by_date_form
+  - active_loop: get_work_orders_by_date_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_date
+
+- story: Ask work order numbers by site and date 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja nomor work order di site 001D pada tanggal 2024-01-02?
+    intent: get_work_order_numbers_by_site_and_date_fms_id
+  - action: get_work_order_numbers_form
+  - active_loop: get_work_order_numbers_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_site_date
+
+- story: Ask work order numbers by site and date 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What are the work order numbers for site 001A on 2024-01-02?
+    intent: get_work_order_numbers_by_site_and_date_fms_en
+  - action: get_work_order_numbers_form
+  - active_loop: get_work_order_numbers_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_site_date
+
+- story: Ask work order numbers by site and day condition - hari ini
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berapa nomor work order pada site 001A di hari ini?
+    intent: get_work_order_number_by_site_day_condition_fms_id
+  - action: get_work_order_number_by_site_today_form
+  - active_loop: get_work_order_number_by_site_today_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_site_day_condition
+
+- story: Ask work order numbers by site and day condition - today
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What are the work order numbers at site 001A today?
+    intent: get_work_order_number_by_site_day_condition_fms_en
+  - action: get_work_order_number_by_site_today_form
+  - active_loop: get_work_order_number_by_site_today_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_site_day_condition
+
+- story: Ask work order numbers by site and day condition - kemarin siang
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Saya ingin tahu nomor work order yang tercatat di site 043C pada kemarin siang
+    intent: get_work_order_number_by_site_day_condition_fms_id
+  - action: get_work_order_number_by_site_today_form
+  - active_loop: get_work_order_number_by_site_today_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_site_day_condition
+
+- story: Ask work order numbers by site and day condition - last noon
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      I'd like to know the work order numbers recorded at site 043C last noon
+    intent: get_work_order_number_by_site_day_condition_fms_en
+  - action: get_work_order_number_by_site_today_form
+  - active_loop: get_work_order_number_by_site_today_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_site_day_condition
+
+- story: Ask work order numbers by site and day condition - kemarin malam
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tolong sebutkan nomor work order di site 043C pada kemarin malam?
+    intent: get_work_order_number_by_site_day_condition_fms_id
+  - action: get_work_order_number_by_site_today_form
+  - active_loop: get_work_order_number_by_site_today_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_site_day_condition
+
+- story: Ask work order numbers by site and day condition - last night
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Please provide the work order numbers for site 043C from last night
+    intent: get_work_order_number_by_site_day_condition_fms_en
+  - action: get_work_order_number_by_site_today_form
+  - active_loop: get_work_order_number_by_site_today_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_site_day_condition
+
+- story: Ask work area by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Work area apa saja yang ada di site 001A?
+    intent: get_work_area_by_site_fms_id
+  - action: work_area_info_by_site_form
+  - active_loop: work_area_info_by_site_form
+  - active_loop: null
+  - action: action_get_fms_wa_by_site
+
+- story: Ask work area by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What are the work areas at site 001A?
+    intent: get_work_area_by_site_fms_en
+  - action: work_area_info_by_site_form
+  - active_loop: work_area_info_by_site_form
+  - active_loop: null
+  - action: action_get_fms_wa_by_site
+
+- story: Ask work area count by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Ada berapa banyak work area yang ada di site 001A?
+    intent: get_work_area_count_by_site_fms_id
+  - action: work_area_count_by_site_form
+  - active_loop: work_area_count_by_site_form
+  - active_loop: null
+  - action: action_get_fms_total_wa_by_site
+
+- story: Ask work area count by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How many work areas are there at site 001A?
+    intent: get_work_area_count_by_site_fms_en
+  - action: work_area_count_by_site_form
+  - active_loop: work_area_count_by_site_form
+  - active_loop: null
+  - action: action_get_fms_total_wa_by_site
+
+- story: Ask check disposal work area
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah work area G09 adalah area disposal?
+    intent: check_disposal_work_area_fms_id 
+  - action: check_disposal_work_area_form
+  - active_loop: check_disposal_work_area_form
+  - active_loop: null
+  - action: action_get_fms_ask_wa_by_site_disposal
+
+- story: Ask check disposal work area
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Is work area G09 a disposal area?
+    intent: check_disposal_work_area_fms_en 
+  - action: check_disposal_work_area_form
+  - active_loop: check_disposal_work_area_form
+  - active_loop: null
+  - action: action_get_fms_ask_wa_by_site_disposal
+
+- story: Ask disposal work area count
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Ada berapa work area pada site 001A yang merupakan area disposal?
+    intent: get_disposal_work_area_count_by_site_fms_id
+  - action: get_disposal_work_area_count_by_site_form
+  - active_loop: get_disposal_work_area_count_by_site_form
+  - active_loop: null
+  - action: action_get_fms_total_wa_by_site_disposal
+
+- story: Ask disposal work area count
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How many work areas at site 001A are disposal areas?
+    intent: get_disposal_work_area_count_by_site_fms_en
+  - action: get_disposal_work_area_count_by_site_form
+  - active_loop: get_disposal_work_area_count_by_site_form
+  - active_loop: null
+  - action: action_get_fms_total_wa_by_site_disposal
+
+- story: Ask inventory count by work area
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berapa banyak inventory yang tersimpan di work area G09?
+    intent: get_inventory_count_by_work_area_fms_id
+  - action: get_inventory_count_by_work_area_form
+  - active_loop: get_inventory_count_by_work_area_form
+  - active_loop: null
+  - action: action_get_fms_wa_by_site_inventory
+
+- story: Ask inventory count by work area
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How many inventories are stored in work area G09?
+    intent: get_inventory_count_by_work_area_fms_en
+  - action: get_inventory_count_by_work_area_form
+  - active_loop: get_inventory_count_by_work_area_form
+  - active_loop: null
+  - action: action_get_fms_wa_by_site_inventory
+
+- story: get fleet count Madhani
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Ada berapa banyak fleet di Madhani?
+    intent: ask_fleet_count_madhani_fms_id
+  - action: action_get_fms_total_fleet
+
+- story: get fleet count Madhani
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How many fleets are there in Madhani?
+    intent: ask_fleet_count_madhani_fms_en
+  - action: action_get_fms_total_fleet
+
+- story: Ask excavators by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Excavator apa yang digunakan pada site 001A?
+    intent: get_excavators_by_site_fms_id
+  - action: get_excavators_by_site_form
+  - active_loop: get_excavators_by_site_form
+  - active_loop: null
+  - action: action_get_fms_excavator_by_site
+
+- story: Ask excavators by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What excavators are used at site 001A?
+    intent: get_excavators_by_site_fms_en
+  - action: get_excavators_by_site_form
+  - active_loop: get_excavators_by_site_form
+  - active_loop: null
+  - action: action_get_fms_excavator_by_site
+
+- story: Ask fleet count by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Ada berapa banyak fleet pada site 001A?
+    intent: get_fleet_count_by_site_fms_id
+  - action: get_fleet_count_by_site_form
+  - active_loop: get_fleet_count_by_site_form
+  - active_loop: null
+  - action: action_get_fms_total_fleet_by_site
+
+- story: Ask fleet count by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How many fleets are there at site 001A?
+    intent: get_fleet_count_by_site_fms_en
+  - action: get_fleet_count_by_site_form
+  - active_loop: get_fleet_count_by_site_form
+  - active_loop: null
+  - action: action_get_fms_total_fleet_by_site
+
+- story: Ask excavator operator
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Siapa operator excavator di site 001A?
+    intent: get_excavator_operator_by_site_fms_id
+  - action: get_excavator_operator_by_site_form
+  - active_loop: get_excavator_operator_by_site_form
+  - active_loop: null
+  - action: action_get_fms_excavator_operator_by_site_fleet
+
+- story: Ask excavator operator
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      I need data on the excavator operators at site 043C
+    intent: get_excavator_operator_by_site_fms_en
+  - action: get_excavator_operator_by_site_form
+  - active_loop: get_excavator_operator_by_site_form
+  - active_loop: null
+  - action: action_get_fms_excavator_operator_by_site_fleet
+
+- story: Ask current activity by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Aktivitas apa yang sedang dilakukan pada site 001A?
+    intent: get_current_activity_by_site_fms_id
+  - action: get_current_activity_by_site_form
+  - active_loop: get_current_activity_by_site_form
+  - active_loop: null
+  - action: action_get_fms_activity_by_site
+
+- story: Ask current activity by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What activity is currently happening at site 001A?
+    intent: get_current_activity_by_site_fms_en
+  - action: get_current_activity_by_site_form
+  - active_loop: get_current_activity_by_site_form
+  - active_loop: null
+  - action: action_get_fms_activity_by_site
+
+- story: Ask hauler count by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Ada berapa hauler yang bekerja pada site 001A?
+    intent: ask_hauler_count_by_site_fms_id
+  - action: get_hauler_count_by_site_form
+  - active_loop: get_hauler_count_by_site_form
+  - active_loop: null
+  - action: action_get_fms_total_hauler_by_site
+
+- story: Ask hauler count by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How many haulers are working at site 001A?
+    intent: ask_hauler_count_by_site_fms_en
+  - action: get_hauler_count_by_site_form
+  - active_loop: get_hauler_count_by_site_form
+  - active_loop: null
+  - action: action_get_fms_total_hauler_by_site
+
+- story: Ask equipment count by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Ada berapa equipment yang bekerja pada site 001A?
+    intent: ask_equipment_count_by_site_fms_id
+  - action: get_equipment_count_by_site_form
+  - active_loop: get_equipment_count_by_site_form
+  - active_loop: null
+  - action: action_get_fms_total_equipment_by_site_fleet
+
+- story: Ask equipment count by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How many pieces of equipment are working at site 001A?
+    intent: ask_equipment_count_by_site_fms_en
+  - action: get_equipment_count_by_site_form
+  - active_loop: get_equipment_count_by_site_form
+  - active_loop: null
+  - action: action_get_fms_total_equipment_by_site_fleet
+
+- story: Ask fleet production target
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berapa target produksi fleet di site 001A?
+    intent: ask_fleet_production_target_by_site_fms_id
+  - action: get_fleet_production_target_by_site_form
+  - active_loop: get_fleet_production_target_by_site_form
+  - active_loop: null
+  - action: action_get_fms_target_production_by_site
+
+- story: Ask fleet production target
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What is the fleet production target at site 001A?
+    intent: ask_fleet_production_target_by_site_fms_en
+  - action: get_fleet_production_target_by_site_form
+  - active_loop: get_fleet_production_target_by_site_form
+  - active_loop: null
+  - action: action_get_fms_target_production_by_site
+
+- story: Ask fleet match factor by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berapa match factor fleet di site 001A?
+    intent: ask_fleet_match_factor_by_site_fms_id
+  - action: get_fleet_match_factor_by_site_form
+  - active_loop: get_fleet_match_factor_by_site_form
+  - active_loop: null
+  - action: action_get_fms_mach_factor_by_site
+
+- story: Ask fleet match factor by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What is the match factor for the fleet at site 001A?
+    intent: ask_fleet_match_factor_by_site_fms_en
+  - action: get_fleet_match_factor_by_site_form
+  - active_loop: get_fleet_match_factor_by_site_form
+  - active_loop: null
+  - action: action_get_fms_mach_factor_by_site
+
+- story: Ask haul time by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berapa lama waktu hauling fleet di site 001A?
+    intent: ask_fleet_haul_time_by_site_fms_id
+  - action: get_fleet_haul_time_by_site_form
+  - active_loop: get_fleet_haul_time_by_site_form 
+  - active_loop: null
+  - action: action_get_fms_haul_time_by_site 
+
+- story: Ask haul time by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How long is the haul time for the fleet at site 001A?
+    intent: ask_fleet_haul_time_by_site_fms_en
+  - action: get_fleet_haul_time_by_site_form
+  - active_loop: get_fleet_haul_time_by_site_form 
+  - active_loop: null
+  - action: action_get_fms_haul_time_by_site 
+
+- story: Ask dump time by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berapa lama waktu dumping fleet di site 001A?
+    intent: ask_fleet_dump_time_by_site_fms_id
+  - action: get_fleet_dump_time_by_site_form
+  - active_loop: get_fleet_dump_time_by_site_form
+  - active_loop: null
+  - action: action_get_fms_dump_time_by_site
+
+- story: Ask dump time by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How long is the dump time for the fleet at site 001A?
+    intent: ask_fleet_dump_time_by_site_fms_en
+  - action: get_fleet_dump_time_by_site_form
+  - active_loop: get_fleet_dump_time_by_site_form
+  - active_loop: null
+  - action: action_get_fms_dump_time_by_site
+
+- story: Ask spot time by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berapa lama spotting time fleet pada site 001A?
+    intent: ask_fleet_spot_time_by_site_fms_id
+  - action: get_fleet_spot_time_by_site_form
+  - active_loop: get_fleet_spot_time_by_site_form
+  - active_loop: null
+  - action: action_get_fms_spot_time_by_site
+
+- story: Ask spot time by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How long is the spotting time for the fleet at site 001A?
+    intent: ask_fleet_spot_time_by_site_fms_en
+  - action: get_fleet_spot_time_by_site_form
+  - active_loop: get_fleet_spot_time_by_site_form
+  - active_loop: null
+  - action: action_get_fms_spot_time_by_site
+
+- story: Ask loader cycle time by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berapa lama loader cycle time pada site 001A?
+    intent: ask_fleet_loader_cycle_time_by_site_fms_id
+  - action: get_fleet_loader_cycle_time_by_site_form
+  - active_loop: get_fleet_loader_cycle_time_by_site_form
+  - active_loop: null
+  - action: action_get_fms_loader_cycle_time_by_site
+
+- story: Ask loader cycle time by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How long is the loader cycle time at site 001A?
+    intent: ask_fleet_loader_cycle_time_by_site_fms_en
+  - action: get_fleet_loader_cycle_time_by_site_form
+  - active_loop: get_fleet_loader_cycle_time_by_site_form
+  - active_loop: null
+  - action: action_get_fms_loader_cycle_time_by_site
+
+- story: Ask return time by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berapa lama waktu return fleet di site 001A?
+    intent: ask_fleet_return_time_by_site_fms_id
+  - action: get_fleet_return_time_by_site_form
+  - active_loop: get_fleet_return_time_by_site_form
+  - active_loop: null
+  - action: action_get_fms_return_time_by_site
+
+- story: Ask return time by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What's the return time duration for the fleet at site 001D?
+    intent: ask_fleet_return_time_by_site_fms_en
+  - action: get_fleet_return_time_by_site_form
+  - active_loop: get_fleet_return_time_by_site_form
+  - active_loop: null
+  - action: action_get_fms_return_time_by_site
+
+- story: Ask production count by site form
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berapa jumlah produksi untuk setiap fleet di site 001A?
+    intent: ask_fleet_production_count_by_site_fms_id
+  - action: get_fleet_production_count_by_site_form
+  - active_loop: get_fleet_production_count_by_site_form
+  - active_loop: null
+  - action: action_get_fms_total_production_by_site
+
+- story: Ask production count by site form
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What is the production count for each fleet at site 001A?
+    intent: ask_fleet_production_count_by_site_fms_en
+  - action: get_fleet_production_count_by_site_form
+  - active_loop: get_fleet_production_count_by_site_form
+  - active_loop: null
+  - action: action_get_fms_total_production_by_site
+
+- story: Ask production per cycle by site
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berapa banyak jumlah produksi untuk setiap fleet di site 001A dalam satu cycle?
+    intent: ask_fleet_production_count_per_cycle_by_site_fms_id
+  - action: get_fleet_production_per_cycle_by_site_form
+  - active_loop: get_fleet_production_per_cycle_by_site_form
+  - active_loop: null
+  - action: action_get_fms_production_per_cycle
+
+- story: Ask production per cycle by site
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How much is the production for each fleet at site 001A in one cycle?
+    intent: ask_fleet_production_count_per_cycle_by_site_fms_en
+  - action: get_fleet_production_per_cycle_by_site_form
+  - active_loop: get_fleet_production_per_cycle_by_site_form
+  - active_loop: null
+  - action: action_get_fms_production_per_cycle
+
+- story: Ask top 10 equipment - case button
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tampilkan top 10 equipment
+    intent: ask_top_10_equipment_fms_id
+  - action: get_top_10_equipment_form
+  - active_loop: get_top_10_equipment_form
+  - active_loop: null
+  - action: action_get_fms_top10_equipment
+
+- story: Ask top 10 equipment - case button
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show the top 10 equipment
+    intent: ask_top_10_equipment_fms_en
+  - action: get_top_10_equipment_form
+  - active_loop: get_top_10_equipment_form
+  - active_loop: null
+  - action: action_get_fms_top10_equipment
+
+- story: Ask top 10 fleet - case button
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tampilkan data top 10 fleet
+    intent: ask_top_10_fleet_fms_id
+  - action: get_top_10_fleet_form
+  - active_loop: get_top_10_fleet_form
+  - active_loop: null
+  - action: action_get_fms_top10_fleet
+
+- story: Ask top 10 fleet - case button
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show the top 10 fleet data
+    intent: ask_top_10_fleet_fms_en
+  - action: get_top_10_fleet_form
+  - active_loop: get_top_10_fleet_form
+  - active_loop: null
+  - action: action_get_fms_top10_fleet
+
+- story: Ask top 10 breakdown - case button
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tunjukkan data top 10 breakdown?
+    intent: ask_top_10_breakdown_fms_id
+  - action: get_top_10_breakdown_form
+  - active_loop: get_top_10_breakdown_form
+  - active_loop: null
+  - action: action_get_fms_top10_breakdown
+
+- story: Ask top 10 breakdown - case button
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show the top 10 breakdown data
+    intent: ask_top_10_breakdown_fms_en
+  - action: get_top_10_breakdown_form
+  - active_loop: get_top_10_breakdown_form
+  - active_loop: null
+  - action: action_get_fms_top10_breakdown
+
+- story: Ask top 10 equipment - case entitas operational hours
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Saya ingin tahu 10 [equipment]{"entity": "category_name"} berdasarkan [jam operasional]{"entity": "equipment_top10_category"} tertinggi
+    intent: request_top_10_equipment_fms_id
+  - slot_was_set:
+    - category_name: equipment
+    - equipment_top10_category: jam operasional
+  - action: get_request_top_10_equipment_form
+  - active_loop: get_request_top_10_equipment_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_equipment
+
+- story: Ask top 10 equipment - case entitas operational hours
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      I want to know the top 10 [equipment]{"entity": "category_name"} with the highest [operating hours]{"entity": "equipment_top10_category"}
+    intent: request_top_10_equipment_fms_en
+  - slot_was_set:
+    - category_name: equipment
+    - equipment_top10_category: operating hours
+  - action: get_request_top_10_equipment_form
+  - active_loop: get_request_top_10_equipment_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_equipment
+
+- story: Ask top 10 equipment - case entitas capacity
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja 10 [equipment]{"entity": "category_name"} dengan [kapasitas]{"entity": "equipment_top10_category"} terbesar?
+    intent: request_top_10_equipment_fms_id
+  - slot_was_set:
+    - category_name: equipment
+    - equipment_top10_category: kapasitas
+  - action: get_request_top_10_equipment_form
+  - active_loop: get_request_top_10_equipment_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_equipment
+
+- story: Ask top 10 equipment - case entitas capacity
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show the top 10 [equipment]{"entity": "category_name"} with the highest [capacity]{"entity": "equipment_top10_category"}?
+    intent: request_top_10_equipment_fms_id
+  - slot_was_set:
+    - category_name: equipment
+    - equipment_top10_category: capacity
+  - action: get_request_top_10_equipment_form
+  - active_loop: get_request_top_10_equipment_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_equipment
+
+- story: Ask top 10 equipment - case entitas distance traveled
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja 10 [equipment](category_name) dengan [jarak tempuh](equipment_top10_category) tertinggi?
+    intent: request_top_10_equipment_fms_id
+  - slot_was_set:
+    - category_name: equipment
+    - equipment_top10_category: jarak tempuh
+  - action: get_request_top_10_equipment_form
+  - active_loop: get_request_top_10_equipment_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_equipment
+
+- story: Ask top 10 equipment - case entitas distance traveled
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Which 10 [equipment](category_name) with the highest [kilometers](equipment_top10_category)?
+    intent: request_top_10_equipment_fms_id
+  - slot_was_set:
+    - category_name: equipment
+    - equipment_top10_category: kilometers
+  - action: get_request_top_10_equipment_form
+  - active_loop: get_request_top_10_equipment_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_equipment
+
+- story: Ask top 10 fleet - case entitas distance traveled
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja 10 [fleet](category_name) dengan [jarak tempuh](fleet_top10_category) tertinggi?
+    intent: request_top_10_fleet_fms_id
+  - slot_was_set:
+    - category_name: fleet
+    - fleet_top10_category: jarak tempuh
+  - action: get_request_top_10_fleet_form
+  - active_loop: get_request_top_10_fleet_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_fleet
+
+- story: Ask top 10 fleet - case entitas distance traveled
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Which are the top 10 [fleet](category_name) with the highest total [distance traveled](fleet_top10_category)?
+    intent: request_top_10_fleet_fms_en
+  - slot_was_set:
+    - category_name: fleet
+    - fleet_top10_category: distance traveled
+  - action: get_request_top_10_fleet_form
+  - active_loop: get_request_top_10_fleet_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_fleet
+
+- story: Ask top 10 fleet - case entitas payload
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tampilkan daftar 10 [fleet](category_name) dengan [muatan](fleet_top10_category) tertinggi?
+    intent: request_top_10_fleet_fms_id
+  - slot_was_set:
+    - category_name: fleet
+    - fleet_top10_category: muatan
+  - action: get_request_top_10_fleet_form
+  - active_loop: get_request_top_10_fleet_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_fleet
+
+- story: Ask top 10 fleet - case entitas payload
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What are the top 10 [fleet](category_name) with the highest [payload](fleet_top10_category)?
+    intent: request_top_10_fleet_fms_en
+  - slot_was_set:
+    - category_name: fleet
+    - fleet_top10_category: payload
+  - action: get_request_top_10_fleet_form
+  - active_loop: get_request_top_10_fleet_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_fleet
+
+- story: Ask top 10 fleet - case entitas operating hours
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja 10 [fleet](category_name) dengan [jam operasional](fleet_top10_category) tertinggi?
+    intent: request_top_10_fleet_fms_id
+  - slot_was_set:
+    - category_name: fleet
+    - fleet_top10_category: jam operasional
+  - action: get_request_top_10_fleet_form
+  - active_loop: get_request_top_10_fleet_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_fleet
+
+- story: Ask top 10 fleet - case entitas operating hours
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Which 10 [fleet](category_name) have the longest total [operating hours](fleet_top10_category)?
+    intent: request_top_10_fleet_fms_en
+  - slot_was_set:
+    - category_name: fleet
+    - fleet_top10_category: operating hours
+  - action: get_request_top_10_fleet_form
+  - active_loop: get_request_top_10_fleet_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_fleet
+
+- story: Ask top 10 fleet - case entitas remaining fuel
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja 10 [fleet](category_name) dengan sisa [bahan bakar](fleet_top10_category) tertinggi?
+    intent: request_top_10_fleet_fms_id
+  - slot_was_set:
+    - category_name: fleet
+    - fleet_top10_category: bahan bakar
+  - action: get_request_top_10_fleet_form
+  - active_loop: get_request_top_10_fleet_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_fleet
+
+- story: Ask top 10 fleet - case entitas remaining fuel
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Which 10 [fleet](category_name) have the highest remaining [fuel](fleet_top10_category)?
+    intent: request_top_10_fleet_fms_en
+  - slot_was_set:
+    - category_name: fleet
+    - fleet_top10_category: fuel
+  - action: get_request_top_10_fleet_form
+  - active_loop: get_request_top_10_fleet_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_fleet
+
+- story: Ask top 10 fleet - case entitas production amount
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bisa tampilkan top 10 [fleet](category_name) dengan [jumlah produksi](fleet_top10_category) terbesar?
+    intent: request_top_10_fleet_fms_id
+  - slot_was_set:
+    - category_name: fleet
+    - fleet_top10_category: jumlah produksi
+  - action: get_request_top_10_fleet_form
+  - active_loop: get_request_top_10_fleet_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_fleet
+
+- story: Ask top 10 fleet - case entitas production amount
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Can you display the top 10 [fleet](category_name) with the largest [production amount](fleet_top10_category)?
+    intent: request_top_10_fleet_fms_en
+  - slot_was_set:
+    - category_name: fleet
+    - fleet_top10_category: production amount
+  - action: get_request_top_10_fleet_form
+  - active_loop: get_request_top_10_fleet_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_fleet
+
+- story: Ask top 10 breakdown - case entitas cause breakdown
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja 10 [penyebab breakdown](breakdown_top10_category) tertinggi pada [equipment](category_name)?
+    intent: request_top_10_breakdown_fms_id
+  - slot_was_set:
+    - category_name: equipment
+    - breakdown_top10_category: penyebab breakdown
+  - action: get_request_top_10_breakdown_form
+  - active_loop: get_request_top_10_breakdown_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_breakdown
+
+- story: Ask top 10 breakdown - case entitas cause breakdown
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What are the top 10 [breakdown causes](breakdown_top10_category) for [equipment](category_name)?
+    intent: request_top_10_breakdown_fms_en
+  - slot_was_set:
+    - category_name: equipment
+    - breakdown_top10_category: penyebab breakdown
+  - action: get_request_top_10_breakdown_form
+  - active_loop: get_request_top_10_breakdown_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_breakdown
+
+- story: Ask top 10 breakdown - case entitas frequently break down
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja 10 [equipment](category_name) yang [sering breakdown](breakdown_top10_category)?
+    intent: request_top_10_breakdown_fms_id
+  - slot_was_set:
+    - category_name: equipment
+    - breakdown_top10_category: sering breakdown
+  - action: get_request_top_10_breakdown_form
+  - active_loop: get_request_top_10_breakdown_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_breakdown
+
+- story: Ask top 10 breakdown - case entitas frequently break down
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+       Which are the top 10 [equipment](category_name) that [frequently break down](breakdown_top10_category)?
+    intent: request_top_10_breakdown_fms_en
+  - slot_was_set:
+    - category_name: equipment
+    - breakdown_top10_category: frequently break down
+  - action: get_request_top_10_breakdown_form
+  - active_loop: get_request_top_10_breakdown_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_breakdown
+
+- story: Ask report production performance control by date, site, shift
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tolong berikan report production performance control tanggal 1 januari di site 043C
+    intent: request_all_production_performance_control_report_fms_id
+  - action: get_all_data_ppc_by_date_form
+  - active_loop: get_all_data_ppc_by_date_form
+  - active_loop: null
+  - action: action_get_fms_production_by_date_shift
+
+- story: Ask report production performance control by date, site, shift
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Please provide the production performance control report for 01-01-2025
+    intent: request_all_production_performance_control_report_fms_en
+  - action: get_all_data_ppc_by_date_form
+  - active_loop: get_all_data_ppc_by_date_form
+  - active_loop: null
+  - action: action_get_fms_production_by_date_shift
+
+- story: Ask report production coal by date, site, shift
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Dapatkah saya mendapatkan report production coal untuk site 001A?
+    intent: request_production_coal_report_fms_id
+  - action: get_request_production_coal_report_form
+  - active_loop: get_request_production_coal_report_form
+  - active_loop: null
+  - action: action_get_fms_production_coal_by_date_shift
+
+- story: Ask report production coal by date, site, shift
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Can I get the production coal report?
+    intent: request_production_coal_report_fms_en
+  - action: get_request_production_coal_report_form
+  - active_loop: get_request_production_coal_report_form
+  - active_loop: null
+  - action: action_get_fms_production_coal_by_date_shift
+
+- story: Ask report production waste by date, site, shift
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tolong kirimkan laporan production waste pada shift pagi
+    intent: request_production_waste_report_fms_id
+  - action: get_request_production_waste_report_form
+  - active_loop: get_request_production_waste_report_form
+  - active_loop: null
+  - action: action_get_fms_production_waste_by_date_shift
+
+- story: Ask report production waste by date, site, shift
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Could you send me the production waste report for the morning shift?
+    intent: request_production_waste_report_fms_en
+  - action: get_request_production_waste_report_form
+  - active_loop: get_request_production_waste_report_form
+  - active_loop: null
+  - action: action_get_fms_production_waste_by_date_shift
+
+- story: Ask report production performance control - today
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tolong tampilkan report production performance control hari ini
+    intent: request_production_performance_report_today_fms_id
+  - action: get_request_production_report_by_today_form
+  - active_loop: get_request_production_report_by_today_form
+  - active_loop: null
+  - action: action_get_fms_production_today
+
+- story: Ask report production performance control - today
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Please show today's production performance control report
+    intent: request_production_performance_report_today_fms_en
+  - action: get_request_production_report_by_today_form
+  - active_loop: get_request_production_report_by_today_form
+  - active_loop: null
+  - action: action_get_fms_production_today
+
+- story: Ask KPI for self
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tunjukkan KPI saya
+    intent: request_kpi_self_fms_id
+  - action: get_kpi_self_form
+  - active_loop: get_kpi_self_form
+  - active_loop: null
+  - action: action_get_fms_kpi_self_result
+
+- story: Ask KPI for self
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show me my KPI
+    intent: request_kpi_self_fms_en
+  - action: get_kpi_self_form
+  - active_loop: get_kpi_self_form
+  - active_loop: null
+  - action: action_get_fms_kpi_self_result
+
+- story: Ask show request KPI for by self today
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Tampilkan KPI saya untuk hari ini
+    intent: request_kpi_self_today_fms_id
+  - action: action_get_fms_kpi_self_result_today
+
+- story: Ask show request KPI for by self today
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Show me my KPI for today
+    intent: request_kpi_self_today_fms_en
+  - action: action_get_fms_kpi_self_result_today
+
+- story: Ask KPI for other operator
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bisa tunjukkan KPI Rudi?
+    intent: request_kpi_other_operator_fms_id
+  - action: get_kpi_other_operator_form
+  - active_loop: get_kpi_other_operator_form
+  - active_loop: null
+  - action: action_get_fms_kpi_other_operator_result
+
+- story: Ask KPI for other operator
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Can you show Rudi's KPI?
+    intent: request_kpi_other_operator_fms_en
+  - action: get_kpi_other_operator_form
+  - active_loop: get_kpi_other_operator_form
+  - active_loop: null
+  - action: action_get_fms_kpi_other_operator_result
+
+- story: Ask summary employee leave info
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Daftar karyawan yang cuti
+    intent: check_summary_employee_leave_info_ess_id
+  - action: get_check_summary_employee_leave_form
+  - active_loop: get_check_summary_employee_leave_form
+  - active_loop: null
+  - action: action_get_ess_summary_employee_leave_info
+
+- story: Ask summary employee leave info
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      List of employees on leave
+    intent: check_summary_employee_leave_info_ess_en
+  - action: get_check_summary_employee_leave_form
+  - active_loop: get_check_summary_employee_leave_form
+  - active_loop: null
+  - action: action_get_ess_summary_employee_leave_info
+
+- story: Handle select 001M app for get daily report internal request using button
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berikan daily internal report
+    intent: ask_request_daily_internal_report_001m_id
+  - action: utter_select_apps_for_daily_report_internal_001M_id
+  - intent: daily_report_internal_choose_001M_app_id
+  - action: utter_proceed_with_next_step_for_daily_report_001M_id
+  - action: get_daily_report_select_001m_form
+  - active_loop: get_daily_report_select_001m_form
+  - active_loop: null
+  - action: action_get_001m_report_daily_internal_all_filter
+
+- story: Handle select 001M app for get daily report internal request using button
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Give me the daily internal report
+    intent: ask_request_daily_internal_report_001m_en
+  - action: utter_select_apps_for_daily_report_internal_001M_en
+  - intent: daily_report_internal_choose_001M_app_en
+  - action: utter_proceed_with_next_step_for_daily_report_001M_en
+  - action: get_daily_report_select_001m_form
+  - active_loop: get_daily_report_select_001m_form
+  - active_loop: null
+  - action: action_get_001m_report_daily_internal_all_filter
+
+- story: Ask for get daily report internal request 001M app 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berikan daily internal report 001M
+    intent: request_daily_internal_report_choose_001M_id
+  - action: utter_proceed_with_next_step_for_daily_report_001M_id
+  - action: get_daily_report_select_001m_form
+  - active_loop: get_daily_report_select_001m_form
+  - active_loop: null
+  - action: action_get_001m_report_daily_internal_all_filter
+
+- story: Ask for get daily report internal request 001M app 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Give me the daily internal report for 001M
+    intent: request_daily_internal_report_choose_001M_en
+  - action: utter_proceed_with_next_step_for_daily_report_001M_en
+  - action: get_daily_report_select_001m_form
+  - active_loop: get_daily_report_select_001m_form
+  - active_loop: null
+  - action: action_get_001m_report_daily_internal_all_filter

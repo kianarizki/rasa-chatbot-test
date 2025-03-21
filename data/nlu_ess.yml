@@ -1,0 +1,662 @@
+# version: "3.1"
+# nlu:
+# - intent: check_leave_info_ess_id
+#   examples: |
+#     - cuti
+#     - cuti saya
+#     - info cuti saya bagaimana?
+#     - info cuti
+#     - info detail cuti
+#     - detail cuti
+#     - informasi cuti
+#     - saya butuh informasi tentang cuti
+#     - saya ingin tahu tentang cuti saya
+#     - bisa kasih tahu tentang cuti saya?
+#     - tolong jelaskan info mengenai cuti
+#     - bisa berikan penjelasan mengenai cuti?
+#     - saya ingin tahu informasi cuti saya
+#     - bisa berikan info tentang cuti saya?
+#     - bisa berikan info mengenai cuti saya?
+#     - saya butuh penjelasan tentang cuti saya
+#     - saya butuh penjelasan mengenai cuti
+#     - cuti saya bagaimana ya?
+#     - saya butuh detail tentang cuti saya
+#     - butuh detail tentang cuti
+#     - saya ingin informasi mengenai cuti saya
+#     - bagaimana proses cuti saya?
+
+# - intent: check_leave_info_ess_en
+#   examples: |
+#     - leave
+#     - my leave
+#     - how is my leave info?
+#     - leave info
+#     - leave details
+#     - leave information
+#     - I need information about my leave
+#     - I want to know about my leave
+#     - can you tell me about my leave?
+#     - please explain the info about my leave
+#     - can you provide an explanation about my leave?
+#     - I want to know my leave information
+#     - can you give me info about my leave?
+#     - can you provide info about my leave?
+#     - I need an explanation about my leave
+#     - I need an explanation about leave
+#     - how is my leave?
+#     - I need details about my leave
+#     - need details about leave
+#     - I want information about my leave
+#     - what is the process for my leave?
+
+# - intent: check_leave_quota_ess_id
+#   examples: |
+#     - sisa cuti saya
+#     - sisa cuti saya tinggal berapa?
+#     - berapa jumlah kuota cuti saya?
+#     - cuti saya tinggal berapa?
+#     - sisa kuota cuti saya ada berapa?
+#     - berapa banyak cuti yang saya punya?
+#     - sisa cuti saya tahun ini berapa?
+#     - cuti saya sudah habis atau masih ada?
+#     - cuti tahunan saya tinggal berapa?
+#     - berapa sisa cuti yang saya miliki saat ini?
+#     - cuti saya berapa hari lagi?
+#     - berapa total kuota cuti yang saya punya?
+#     - saya punya sisa cuti berapa?
+#     - kuota cuti saya berapa banyak?
+#     - sisa hari cuti saya berapa?
+#     - apakah saya masih punya cuti tersisa?
+#     - cuti saya sudah digunakan berapa hari?
+#     - cuti saya masih ada berapa hari?
+#     - berapa kuota cuti yang sudah saya pakai?
+#     - sisa hari cuti tahunan saya berapa?
+#     - apakah saya masih punya cuti untuk tahun ini?
+#     - berapa hari sisa cuti saya?
+#     - berapa sisa cuti saya?
+#     - kuota cuti
+#     - cuti saya masih ada?
+#     - cuti saya apakah masih ada?
+#     - cuti saya ada berapa?
+#     - apakah saya masih punya cuti?
+#     - berapa sisa cuti tahunan saya?
+#     - sisa cuti tahunan saya berapa hari?
+
+# - intent: check_leave_quota_ess_en
+#   examples: |
+#     - my remaining leave
+#     - how much leave do i have left?
+#     - how much leave quota me?
+#     - my remaining leave How much is this year?
+#     - has my leave run out or is there still?
+#     - how much annual leave do I have left?
+#     - how much leave do I currently have?
+#     - how many days of leave do I have left?
+#     - how much is the total?
+#     - how much leave do I have?
+#     - how many leave days do I have left?
+#     - do I still have leave left?
+#     - how many days have I used my leave?
+#     - i still have leave How many days are there?
+#     - how much leave quota have I used?
+#     - how many days of annual leave do I have left?
+#     - do I still have leave for this year?
+#     - how many days do I have left?
+#     - how many days? how much leave do I have left?
+#     - leave quota
+#     - how much leave do I have?
+#     - do I still have leave?
+#     - how much remaining annual leave do I have?
+
+# - intent: check_leave_expired_ess_id
+#   examples: |
+#     - cuti saya kapan habis?
+#     - kapan cuti saya akan habis?
+#     - kapan batas akhir cuti saya?
+#     - sampai kapan cuti saya berlaku?
+#     - kapan saya kehabisan cuti?
+#     - cuti saya habis kapan?
+#     - berapa lama lagi cuti saya berakhir?
+#     - kapan cuti saya expired?
+#     - kapan cuti saya selesai?
+#     - cuti saya berlaku sampai kapan?
+#     - berapa lama sisa cuti saya?
+#     - cuti saya akan habis pada tanggal berapa?
+#     - cuti saya habis tanggal berapa?
+#     - kapan cuti saya berakhir?
+#     - cuti saya sampai kapan?
+#     - kapan batas waktu terakhir cuti saya?
+
+# - intent: check_leave_expired_ess_en
+#   examples: |
+#     - my leave when does it end?
+#     - when will my leave ends?
+#     - when My leave expires?
+#     - How long does my leave last?
+#     - When do I run out of leave?
+#     - When does my leave expire?
+#     - How long before my leave ends?
+#     - When does my leave expire?
+#     - When will my leave end?
+#     - How long will my leave last?
+#     - What date will my leave expire?
+#     - What date will my leave end?
+#     - when does my leave last?
+#     - when is my leave due?
+
+# - intent: choose_leave_category_ess_id
+#   examples: |
+#     - saya ingin melihat dari cuti [besar](leave_type)
+#     - saya ingin melihat dari cuti [tahunan](leave_type)
+#     - saya ingin melihat dari cuti [outstanding](leave_type)
+#     - data dari cuti [tahunan](leave_type)
+#     - data dari cuti [besar](leave_type)
+#     - saya pilih [besar](leave_type)
+#     - saya pilih [tahunan](leave_type)
+#     - saya pilih [outstanding](leave_type)
+#     - saya pilih cuti [besar](leave_type)
+#     - saya pilih cuti [tahunan](leave_type)
+#     - saya pilih cuti [outstanding](leave_type)
+#     - [besar](leave_type)
+#     - [tahunan](leave_type)
+#     - [outstanding](leave_type)
+#     - ingin lihat cuti [tahunan](leave_type)
+#     - pilih cuti [besar](leave_type)
+#     - pilih cuti [tahunan](leave_type)
+#     - cuti [outstanding](leave_type)
+#     - cuti [besar](leave_type)
+#     - cuti [tahunan](leave_type)
+
+# - intent: choose_leave_category_ess_en
+#   examples: |
+#     - i want to see from [big](leave_type) leave
+#     - i want to see from [annual](leave_type) leave
+#     - i want to see from [outstanding](leave_type) leave
+#     - data from [annual](leave_type) leave
+#     - data from [big](leave_type) leave
+#     - i choose [big](leave_type)
+#     - i choose [annual](leave_type)
+#     - i choose [outstanding](leave_type)
+#     - i choose [big](leave_type) leave
+#     - i choose [annual](leave_type) leave
+#     - i choose [outstanding](leave_type) leave
+#     - [big](leave_type)
+#     - [annual](leave_type)
+#     - [outstanding](leave_type)
+#     - i want to see [annual](leave_type) leave
+#     - choose [big](leave_type) leave
+#     - choose [annual](leave_type) leave
+#     - [outstanding](leave_type) leave
+#     - [big](leave_type) leave
+#     - [annual](leave_type) leave
+
+# - intent: check_leave_expired_big_quota_ess_id
+#   examples: |
+#     - cuti [besar](leave_type) saya kapan habis?
+#     - kapan cuti [besar](leave_type) saya akan habis?
+#     - kapan batas akhir cuti [besar](leave_type) saya?
+#     - sampai kapan cuti [besar](leave_type) saya berlaku?
+#     - kapan saya kehabisan cuti [besar](leave_type)?
+#     - cuti [besar](leave_type) saya habis kapan?
+#     - berapa lama lagi cuti [besar](leave_type) saya berakhir?
+#     - kapan cuti [besar](leave_type) saya expired?
+#     - kapan cuti [besar](leave_type) saya selesai?
+#     - cuti [besar](leave_type) saya berlaku sampai kapan?
+#     - berapa lama sisa cuti [besar](leave_type) saya?
+#     - cuti [besar](leave_type) saya akan habis pada tanggal berapa?
+#     - cuti [besar](leave_type) saya habis tanggal berapa?
+#     - kapan cuti [besar](leave_type) saya berakhir?
+#     - cuti [besar](leave_type) saya sampai kapan?
+#     - kapan batas waktu terakhir cuti [besar](leave_type) saya?
+
+# - intent: check_leave_expired_big_quota_ess_en
+#   examples: |
+#     - when will my [big](leave_type) leave finished?
+#     - how long will my [big](leave_type) leave last?
+#     - how long will my [big](leave_type) leave remain?
+#     - what date will my [big](leave_type) leave expire?
+#     - what date does my [big](leave_type) leave expire?
+#     - how long does my [big](leave_type) leave last?
+#     - how long before my [big](leave_type) leave ends?
+#     - when will my [big](leave_type) leave expired?
+#     - when will my [big](leave_type) leave end?
+#     - when is the last day of my [big](leave_type) leave?
+#     - until when is my [big](leave_type) leave valid?
+#     - when will I run out of my [big](leave_type) leave?
+#     - how much time is left until my [big](leave_type) leave expires?
+#     - when does my [big](leave_type) leave expire?
+#     - how much leave do I have left for [big](leave_type)?
+#     - on what date does my [big](leave_type) leave end?
+#     - when does my [big](leave_type) leave expire?
+#     - when does my [big](leave_type) leave end?
+#     - until when does my [big](leave_type) leave last?
+#     - when is the final deadline for my [big](leave_type) leave?
+
+# - intent: check_leave_expired_annual_quota_ess_id
+#   examples: |
+#     - cuti [tahunan](leave_type) saya kapan habis?
+#     - kapan cuti [tahunan](leave_type) saya akan habis?
+#     - kapan batas akhir cuti [tahunan](leave_type) saya?
+#     - sampai kapan cuti [tahunan](leave_type) saya berlaku?
+#     - kapan saya kehabisan cuti [tahunan](leave_type)?
+#     - cuti [tahunan](leave_type) saya habis kapan?
+#     - berapa lama lagi cuti [tahunan](leave_type) saya berakhir?
+#     - kapan cuti [tahunan](leave_type) saya expired?
+#     - kapan cuti [tahunan](leave_type) saya selesai?
+#     - cuti [tahunan](leave_type) saya berlaku sampai kapan?
+#     - berapa lama sisa cuti [tahunan](leave_type) saya?
+#     - cuti [tahunan](leave_type) saya akan habis pada tanggal berapa?
+#     - cuti [tahunan](leave_type) saya habis tanggal berapa?
+#     - kapan cuti [tahunan](leave_type) saya berakhir?
+#     - cuti [tahunan](leave_type) saya sampai kapan?
+#     - kapan batas waktu terakhir cuti [tahunan](leave_type) saya?
+
+# - intent: check_leave_expired_annual_quota_ess_en
+#   examples: |
+#     - when will my [annual](leave_type) leave finished?
+#     - how long will my [annual](leave_type) leave last?
+#     - how long will my [annual](leave_type) leave remain?
+#     - what date will my [annual](leave_type) leave expire?
+#     - what date does my [annual](leave_type) leave expire?
+#     - how long does my [annual](leave_type) leave last?
+#     - how long before my [annual](leave_type) leave ends?
+#     - when will my [annual](leave_type) leave expired?
+#     - when will my [annual](leave_type) leave end?
+#     - when is the last day of my [annual](leave_type) leave?
+#     - until when is my [annual](leave_type) leave valid?
+#     - when will I run out of my [annual](leave_type) leave?
+#     - how much time is left until my [annual](leave_type) leave expires?
+#     - when does my [annual](leave_type) leave expire?
+#     - how much leave do I have left for [annual](leave_type)?
+#     - on what date does my [annual](leave_type) leave end?
+#     - when does my [annual](leave_type) leave expire?
+#     - when does my [annual](leave_type) leave end?
+#     - until when does my [annual](leave_type) leave last?
+#     - when is the final deadline for my [annual](leave_type) leave?
+
+# - intent: check_leave_expired_outstanding_quota_ess_id
+#   examples: |
+#     - cuti [outstanding](leave_type) saya kapan habis?
+#     - kapan cuti [outstanding](leave_type) saya akan habis?
+#     - kapan batas akhir cuti [outstanding](leave_type) saya?
+#     - sampai kapan cuti [outstanding](leave_type) saya berlaku?
+#     - kapan saya kehabisan cuti [outstanding](leave_type)?
+#     - cuti [outstanding](leave_type) saya habis kapan?
+#     - berapa lama lagi cuti [outstanding](leave_type) saya berakhir?
+#     - kapan cuti [outstanding](leave_type) saya expired?
+#     - kapan cuti [outstanding](leave_type) saya selesai?
+#     - cuti [outstanding](leave_type) saya berlaku sampai kapan?
+#     - berapa lama sisa cuti [outstanding](leave_type) saya?
+#     - cuti [outstanding](leave_type) saya akan habis pada tanggal berapa?
+#     - cuti [outstanding](leave_type) saya habis tanggal berapa?
+#     - kapan cuti [outstanding](leave_type) saya berakhir?
+#     - cuti [outstanding](leave_type) saya sampai kapan?
+#     - kapan batas waktu terakhir cuti [outstanding](leave_type) saya?
+  
+# - intent: check_leave_expired_outstanding_quota_ess_en
+#   examples: |
+#     - when will my [outstanding](leave_type) leave finished?
+#     - how long will my [outstanding](leave_type) leave last?
+#     - how long will my [outstanding](leave_type) leave remain?
+#     - what date will my [outstanding](leave_type) leave expire?
+#     - what date does my [outstanding](leave_type) leave expire?
+#     - how long does my [outstanding](leave_type) leave last?
+#     - how long before my [outstanding](leave_type) leave ends?
+#     - when will my [outstanding](leave_type) leave expired?
+#     - when will my [outstanding](leave_type) leave end?
+#     - when is the last day of my [outstanding](leave_type) leave?
+#     - until when is my [outstanding](leave_type) leave valid?
+#     - when will I run out of my [outstanding](leave_type) leave?
+#     - how much time is left until my [outstanding](leave_type) leave expires?
+#     - when does my [outstanding](leave_type) leave expire?
+#     - how much leave do I have left for [outstanding](leave_type)?
+#     - on what date does my [outstanding](leave_type) leave end?
+#     - when does my [outstanding](leave_type) leave expire?
+#     - when does my [outstanding](leave_type) leave end?
+#     - until when does my [outstanding](leave_type) leave last?
+#     - when is the final deadline for my [outstanding](leave_type) leave?
+
+# - intent: show_leave_list_ess_id
+#   examples: |
+#     - tunjukkan daftar cuti saya
+#     - tunjukkan daftar cuti 
+#     - daftar cuti saya
+#     - daftar cuti
+#     - lihat cuti yang saya miliki
+#     - lihat semua cuti saya
+#     - tampilkan daftar cuti saya
+#     - tunjukkan cuti tahunan saya
+#     - tunjukkan cuti besar saya
+#     - tunjukkan cuti outstanding saya
+#     - cuti yang saya punya saat ini
+#     - cuti saya yang belum digunakan
+#     - lihat riwayat cuti saya
+#     - cuti yang masih aktif
+#     - cuti saya yang tersedia
+#     - daftar cuti yang saya miliki
+#     - tampilkan cuti saya yang masih berlaku
+#     - apa saja jenis cuti yang saya miliki?
+#     - lihat semua jenis cuti saya
+#     - daftar jenis cuti saya
+#     - tampilkan semua cuti
+#     - apa saja cuti yang saya miliki?
+#     - cuti yang saya punya
+
+# - intent: show_leave_list_ess_en
+#   examples: |
+#     - show my leave list
+#     - show the leave list
+#     - my leave list
+#     - leave list
+#     - see the leave I have
+#     - see all my leave
+#     - display my leave list
+#     - show my annual leave
+#     - show my big leave
+#     - show my outstanding leave
+#     - the leave I have right now
+#     - my unused leave
+#     - see my leave history
+#     - my active leave
+#     - my available leave
+#     - the leave I have
+#     - display my valid leave
+#     - what types of leave do I have?
+#     - see all types of leave I have
+#     - my leave types list
+#     - display all my leave
+#     - what leave do I have?
+#     - the leave I possess
+
+# - intent: check_last_leave_approval_status_ess_id
+#   examples: |
+#     - apakah cuti terbaru saya sudah disetujui?
+#     - bagaimana status persetujuan cuti terakhir saya?
+#     - apakah cuti saya yang terbaru sudah disetujui?
+#     - cuti saya yang terakhir sudah disetujui atau belum?
+#     - apa status persetujuan cuti terakhir saya?
+#     - status persetujuan cuti terbaru saya bagaimana?
+#     - apakah persetujuan cuti saya sudah ada?
+#     - cuti saya yang terakhir sudah approved atau belum?
+#     - apa status cuti terbaru saya?
+#     - apa status cuti terakhir saya?
+#     - cuti terbaru saya sudah disetujui atau belum?
+#     - cuti terakhir saya disetujui atau tidak?
+#     - bagaimana status cuti saya yang terakhir?
+#     - bagaimana status cuti saya yang terbaru?
+#     - cuti terbaru saya statusnya apa?
+#     - cuti terakhir saya statusnya apa?
+#     - sudah disetujui atau belum cuti saya yang terakhir?
+#     - apakah sudah disetujui atau belum cuti saya yang terbaru?
+
+# - intent: check_last_leave_approval_status_ess_en
+#   examples: |
+#     - has my latest leave been approved?
+#     - what is the status of my last leave approval?
+#     - has my latest leave been approved or not?
+#     - what is the status of my latest leave approval?
+#     - has my leave approval been there?
+#     - what is the status of my latest leave?
+#     - has my last leave been approved or not?
+#     - has my most recent leave been approved?
+#     - what is the approval status of my last leave?
+#     - how is the approval status of my latest leave?
+#     - has my leave been approved yet?
+#     - was my last leave approved or not?
+#     - what is the status of my most recent leave?
+#     - what is the status of my last leave?
+#     - has my last leave been approved yet?
+#     - has my most recent leave been approved yet?
+
+# - intent: check_last_leave_taken_ess_id
+#   examples: |
+#     - kapan cuti terakhir yang pernah saya ambil?
+#     - kapan saya terakhir kali mengambil cuti?
+#     - cuti terakhir yang saya ambil kapan?
+#     - kapan saya terakhir ambil cuti?
+#     - cuti terakhir saya diambil kapan?
+#     - kapan cuti terakhir saya ajukan?
+#     - kapan saya ambil cuti terakhir kali?
+#     - kapan terakhir saya mengajukan cuti?
+#     - cuti terakhir saya itu kapan ya?
+#     - apa tanggal cuti terakhir yang saya ambil?
+#     - tanggal berapa cuti terakhir yang saya ambil?
+#     - kapan terakhir saya mengambil cuti?
+#     - cuti terakhir saya kapan saya ambil?
+#     - kapan saya mengambil cuti terakhir kali?
+#     - kapan tepatnya cuti terakhir saya?
+#     - kapan saya terakhir kali menggunakan hak cuti saya?
+#     - cuti saya yang terakhir kapan ya?
+#     - saya ambil cuti terakhir kapan ya?
+#     - cuti terakhir saya itu pada bulan apa?
+#     - cuti terakhir saya dimulai kapan ya?
+#     - cuti terakhir yang saya ajukan kapan?
+#     - kapan cuti terakhir saya disetujui?
+#     - kapan saya terakhir kali absen untuk cuti?
+#     - kapan cuti terakhir yang pernah saya ajukan?
+
+# - intent: check_last_leave_taken_ess_en
+#   examples: |
+#     - when did I last take leave?
+#     - when did I last apply for leave?
+#     - what was the date of my last leave taken?
+#     - when did I take my last leave?
+#     - when did I last use my leave entitlement?
+#     - when was my last leave?
+#     - what month was my last leave taken?
+#     - when did my last leave start?
+#     - when was my last leave applied for?
+#     - when was my last leave approved?
+#     - when was my last absence for leave?
+#     - when was the last leave I took?
+#     - when did I last take a leave?
+#     - when was the last time I requested leave?
+#     - when did I last request leave?
+#     - what date was the last leave I took?
+#     - what date did I take my last leave?
+#     - when was my last leave taken?
+#     - when exactly was my last leave?
+#     - in which month did I take my last leave?
+#     - when did I last submit a leave request?
+#     - when was the last time I took leave?
+#     - when was the last leave I ever applied for?
+
+# - intent: apply_leave_request_ess_id
+#   examples: |
+#     - Ajuin cuti
+#     - ajukan cuti 
+#     - saya mau ajukan cuti
+#     - Saya ingin mengajukan cuti
+#     - Bagaimana cara ajukan cuti?
+#     - Ajukan ijin/cuti
+#     - Tolong bantu ajukan cuti
+#     - Ingin mengajukan cuti
+#     - Bisa bantu saya ajukan cuti?
+#     - Saya perlu mengajukan cuti
+#     - Tolong ajukan ijin untuk saya
+#     - Saya ingin ijin cuti
+#     - Bagaimana cara mengajukan cuti di sini?
+#     - Ajukan cuti untuk saya
+#     - Mohon bantuan untuk ajukan cuti
+#     - Saya ingin tahu cara ajukan cuti
+#     - Saya ingin meminta ijin cuti
+#     - Apa langkah untuk mengajukan cuti?
+#     - Bisa bantu saya untuk ajukan ijin cuti?
+#     - Saya ingin mulai proses pengajuan cuti
+#     - Tolong bantu saya mengajukan cuti
+#     - Saya butuh mengajukan cuti
+#     - saya ingin ajukan cuti disini
+#     - Bisa tolong pandu saya mengajukan cuti?
+#     - Saya ingin memulai pengajuan cuti sekarang
+#     - Apa yang harus saya lakukan untuk ajukan cuti?
+#     - Ajukan ijin cuti untuk saya
+#     - Tolong bantu proses cuti saya
+#     - Saya mau memulai proses pengajuan cuti
+#     - Saya ingin mendaftar cuti
+#     - Saya perlu tahu cara mengajukan ijin cuti
+
+# - intent: apply_leave_request_ess_en
+#   examples: |
+#     - Apply for leave
+#     - I want to apply for leave
+#     - How do I apply for leave?
+#     - Apply for leave/permission
+#     - Please help me apply for leave
+#     - I'd like to apply for leave
+#     - I want to submit a leave request
+#     - Can you help me submit a leave request?
+#     - I need to apply for leave
+#     - Please submit a leave request for me
+#     - I'd like to request leave
+#     - How do I request leave here?
+#     - Submit a leave request for me
+#     - Could you help me with my leave request?
+#     - I want to know how to apply for leave
+#     - I need to request leave
+#     - What are the steps to apply for leave?
+#     - Can you assist me with applying for leave?
+#     - I want to start the leave request process
+#     - Please guide me through the leave request
+#     - I need to submit a leave request
+#     - I'd like to apply for leave here
+#     - Can you show me how to apply for leave?
+#     - I want to begin the leave application now
+#     - What do I need to do to request leave?
+#     - Submit a leave request on my behalf
+#     - Please help me with my leave process
+#     - I want to start the leave application process
+#     - I'd like to register for leave
+#     - I need to know how to request leave
+
+# - intent: ask_leave_info_subordinate_ess_id
+#   examples: |
+#     - Saya mau lihat sisa cuti bawahan ku
+#     - Aku ingin tahu cuti bawahan ku
+#     - Bisa kasih info sisa cuti bawahan saya?
+#     - Tolong berikan informasi sisa cuti bawahan saya
+#     - Berapa sisa cuti bawahan saya?
+#     - Saya mau tahu informasi cuti bawahan saya
+#     - Berapa kuota cuti bawahan saya?
+#     - Bisa cekkan sisa cuti bawahan ku?
+#     - Tunjukkan info sisa cuti bawahan saya
+#     - Aku ingin tahu kuota cuti bawahan ku
+#     - Berapa sisa cuti milik bawahan saya?
+#     - Bisa bantu cek sisa cuti bawahan saya?
+#     - Tolong tampilkan sisa cuti bawahan saya
+#     - Aku butuh data sisa cuti bawahan ku
+#     - Bawahan saya punya sisa cuti berapa?
+#     - Mohon tampilkan sisa cuti bawahan saya
+#     - Aku ingin cek sisa cuti bawahan ku
+#     - Saya perlu info lengkap tentang sisa cuti bawahan saya
+#     - Aku ingin tahu cuti si gabriel
+#     - Tolong berikan informasi sisa cuti si gabriel
+#     - Bisa kasih info sisa cuti si amanda?
+#     - Aku mau tahu sisa cuti si gabriel
+#     - Berapa sisa cuti si amel?
+#     - Bisa bantu cek sisa cuti gabriel?
+#     - Tunjukkan info sisa cuti amel
+#     - Berapa sisa cuti yang dimiliki si gabriel?
+#     - Aku butuh data sisa cuti milik gabriel
+#     - Saya butuh data cuti milik gabriel
+#     - Bantu saya cek sisa cuti amanada
+#     - Mohon tampilkan cuti milik gabriel
+#     - Bisa kasih detail sisa cuti amel?
+#     - Berapa sisa kuota cuti gabriel sekarang?
+#     - Tolong cek sisa cuti untuk si amel
+#     - Tolong cek infortmasi kuota cuti milik amel
+#     - Aku ingin info lengkap tentang cuti si gabriel
+
+# - intent: ask_leave_info_subordinate_ess_en
+#   examples: |
+#     - I want to check my subordinate's remaining leave
+#     - I want to know how much leave my subordinate has
+#     - Can you tell me about my subordinate's leave?
+#     - Please give me details about my subordinate's leave
+#     - How many days of leave does my subordinate still have?
+#     - I need to know how much leave my subordinate has left
+#     - How much leave is available for my subordinate?
+#     - Can you check my subordinate's leave for me?
+#     - Show me how many days of leave my subordinate has
+#     - I'd like to find out how much leave my subordinate has
+#     - How much leave does my subordinate have left?
+#     - Can you help me check my subordinate's leave?
+#     - Please show how much leave my subordinate has
+#     - I need details about my subordinate's leave
+#     - How many leave days does my subordinate still have?
+#     - Please display my subordinate's leave days
+#     - I'd like to check how many leave days my subordinate has
+#     - I need complete information about my subordinate's leave
+#     - I want to know how much leave Gabriel has
+#     - Please give me information about Gabriel's leave
+#     - Can you tell me how many leave days Amanda has?
+#     - I want to know how many leave days Gabriel has
+#     - How many leave days does Amel have left?
+#     - Can you help me check how much leave Gabriel has?
+#     - Show me how many leave days Amel has
+#     - How many leave days does Gabriel have left?
+#     - I need information about Gabriel's leave
+#     - I need details about Gabriel's leave
+#     - Help me check Amanda's leave days
+#     - Please show Gabriel's leave days
+#     - Can you give me details about Amel's leave?
+#     - How much leave does Gabriel have right now?
+#     - Please check how many leave days Amel has
+#     - Please give me details about Amel's available leave
+#     - I'd like to see the full details of Gabriel's leave
+
+# - intent: check_summary_employee_leave_info_ess_id
+#   examples: |
+#     - Saya mau lihat karyawan yang cuti di tanggal 1 Januari 2025
+#     - Siapa yang cuti pada tanggal 1 Januari 2025?
+#     - Tampilkan karyawan yang cuti pada tanggal 1 Januari 2025
+#     - Lihat daftar karyawan yang cuti di tanggal 15 Januari 2025
+#     - Karyawan cuti pada 1 Januari 
+#     - Siapa saja yang cuti pada tanggal 1 Januari 2025?
+#     - Ada siapa saja yang cuti pada 1 Januari 2025?
+#     - Karyawan yang cuti pada tanggal 1 Januari siapa saja?
+#     - Siapa yang tidak masuk kerja di tanggal 1 Januari 2025 karena cuti?
+#     - Lihat karyawan yang cuti pada tanggal 1 Januari 2025
+#     - Karyawan yang cuti pada tanggal 1 Januari 2025?
+#     - Siapa yang cuti pada tanggal 1 Januari 2025?
+#     - Lihat siapa yang cuti pada 1 Januari 2025?
+#     - Adakah karyawan yang cuti pada 1 Januari 2025?
+#     - Karyawan yang cuti pada tanggal 1 Desember 2024, tunjukkan
+#     - Cuti karyawan pada tanggal 2 Desember 2024, berikan daftarnya
+#     - Adakah karyawan yang cuti pada bulan 1 Januari 2025?
+#     - Tunjukkan daftar karyawan yang cuti di tanggal 1 Januari 2025
+#     - Tunjukkan karyawan yang cuti pada 1 Januari 2025
+#     - Saya mau lihat karyawan yang cuti
+#     - Lihat daftar karyawan yang cuti
+#     - Tunjukkan daftar karyawan yang sedang cuti
+#     - Cuti siapa saja yang sedang berlangsung
+#     - Daftar karyawan yang cuti
+#     - Siapa yang sedang cuti saat ini?, sebutkan nama karyawan
+#     - Lihat siapa yang sedang cuti
+#     - Tampilkan karyawan yang sedang cuti
+#     - Sebutkan karyawan yang ambil cuti pada tanggal 1 Januari 2025
+
+# - intent: check_summary_employee_leave_info_ess_en
+#   examples: |
+#     - I want to see the employees on leave on January 1, 2025
+#     - Who is on leave on January 1, 2025?
+#     - View the list of employees on leave on January 15, 2025
+#     - Employees on leave on January 1
+#     - Which employees are on leave on January 1, 2025?
+#     - Who is absent on January 1, 2025 due to leave?
+#     - Show the employees on leave on January 1, 2025
+#     - Employees on leave on January 1, 2025?
+#     - Show who is on leave on January 1, 2025?
+#     - Are there any employees on leave on January 1, 2025?
+#     - Give the list of employees on leave on December 2, 2024
+#     - Are there employees on leave in January 2025?
+#     - Show the list of employees on leave on January 1, 2025
+#     - Show employees on leave on January 1, 2025
+#     - I want to see the employees on leave
+#     - Show the list of employees who are on leave
+#     - Display the employees currently on leave
+#     - Who is currently on leave?
+#     - List of employees on leave
+#     - Who is on leave at the moment? Please state the employee's name
+#     - Show who is on leave at the moment
+#     - Display employees currently on leave
+#     - Name the employees taking leave on January 1, 2025

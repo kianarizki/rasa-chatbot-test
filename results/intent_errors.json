@@ -1,0 +1,306 @@
+[
+  {
+    "text": "outstanding",
+    "intent": "choose_leave_category_ess_id",
+    "intent_prediction": {
+      "name": "choose_leave_category_ess_en",
+      "confidence": 0.5503303408622742
+    }
+  },
+  {
+    "text": "Berapa unit yang tercatat dengan tipe TRUCK RIGID?",
+    "intent": "ask_count_units_by_type_fms_id",
+    "intent_prediction": {
+      "name": "check_unit_by_type_and_site_fms_id",
+      "confidence": 0.44854384660720825
+    }
+  },
+  {
+    "text": "How many equipment categories are there in Madhani?",
+    "intent": "ask_equipment_category_count_madhani_fms_en",
+    "intent_prediction": {
+      "name": "get_equipment_categories_madhani_fms_en",
+      "confidence": 0.5408628582954407
+    }
+  },
+  {
+    "text": "How many equipment categories are recorded in Madhani?",
+    "intent": "ask_equipment_category_count_madhani_fms_en",
+    "intent_prediction": {
+      "name": "get_equipment_categories_madhani_fms_en",
+      "confidence": 0.47028177976608276
+    }
+  },
+  {
+    "text": "Can you show the total equipment categories registered in Madhani?",
+    "intent": "ask_equipment_category_count_madhani_fms_en",
+    "intent_prediction": {
+      "name": "get_equipment_categories_madhani_fms_en",
+      "confidence": 0.6270558834075928
+    }
+  },
+  {
+    "text": "How many equipment categories exist in Madhani?",
+    "intent": "ask_equipment_category_count_madhani_fms_en",
+    "intent_prediction": {
+      "name": "get_equipment_categories_madhani_fms_en",
+      "confidence": 0.4684481620788574
+    }
+  },
+  {
+    "text": "What is the count of equipment categories in Madhani?",
+    "intent": "ask_equipment_category_count_madhani_fms_en",
+    "intent_prediction": {
+      "name": "get_equipment_categories_madhani_fms_en",
+      "confidence": 0.5909844040870667
+    }
+  },
+  {
+    "text": "Can you display the number of equipment categories?",
+    "intent": "ask_equipment_category_count_madhani_fms_en",
+    "intent_prediction": {
+      "name": "get_equipment_categories_madhani_fms_en",
+      "confidence": 0.4450315535068512
+    }
+  },
+  {
+    "text": "How many equipment categories are currently available?",
+    "intent": "ask_equipment_category_count_madhani_fms_en",
+    "intent_prediction": {
+      "name": "get_equipment_categories_madhani_fms_en",
+      "confidence": 0.5613375902175903
+    }
+  },
+  {
+    "text": "How many equipment categories are available in FMS?",
+    "intent": "ask_equipment_category_count_madhani_fms_en",
+    "intent_prediction": {
+      "name": "get_equipment_categories_madhani_fms_en",
+      "confidence": 0.44768214225769043
+    }
+  },
+  {
+    "text": "Tolong tampilkan jumlah work order saya yang aktif",
+    "intent": "ask_work_order_count_fms_id",
+    "intent_prediction": {
+      "name": "get_active_work_orders_user_fms_id",
+      "confidence": 0.4370536804199219
+    }
+  },
+  {
+    "text": "Tolong tampilkan daftar work order untuk tanggal 2024-01-02",
+    "intent": "get_work_order_count_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_orders_by_date_fms_id",
+      "confidence": 0.42020708322525024
+    }
+  },
+  {
+    "text": "I want to know the work orders recorded on 2024-01-02.",
+    "intent": "get_work_order_count_by_date_fms_en",
+    "intent_prediction": {
+      "name": "get_work_orders_by_date_fms_en",
+      "confidence": 0.42576444149017334
+    }
+  },
+  {
+    "text": "Show me the list of work orders for 2024-01-02.",
+    "intent": "get_work_order_count_by_date_fms_en",
+    "intent_prediction": {
+      "name": "get_work_orders_by_date_fms_en",
+      "confidence": 0.4839797914028168
+    }
+  },
+  {
+    "text": "Can you help check the work orders recorded on 2024-01-02?",
+    "intent": "get_work_order_count_by_date_fms_en",
+    "intent_prediction": {
+      "name": "get_work_orders_by_date_fms_en",
+      "confidence": 0.42736318707466125
+    }
+  },
+  {
+    "text": "Are there any work orders recorded on 2024-01-02?",
+    "intent": "get_work_order_count_by_date_fms_en",
+    "intent_prediction": {
+      "name": "get_work_orders_by_date_fms_en",
+      "confidence": 0.41811203956604004
+    }
+  },
+  {
+    "text": "Tunjukkan work order pada tanggal 2024-01-02",
+    "intent": "get_work_orders_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_order_count_by_date_fms_id",
+      "confidence": 0.44382351636886597
+    }
+  },
+  {
+    "text": "Bisa kasih daftar work order pada 2023-11-20?",
+    "intent": "get_work_orders_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_order_count_by_date_fms_id",
+      "confidence": 0.4335954487323761
+    }
+  },
+  {
+    "text": "Saya ingin tahu work order di tanggal 2024-01-01",
+    "intent": "get_work_orders_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_order_count_by_date_fms_id",
+      "confidence": 0.48834195733070374
+    }
+  },
+  {
+    "text": "Ada work order apa saja di tanggal 2024-12-25?",
+    "intent": "get_work_orders_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_order_count_by_date_fms_id",
+      "confidence": 0.43802064657211304
+    }
+  },
+  {
+    "text": "Apa saja work order yang tercatat di tanggal 2024-01-15?",
+    "intent": "get_work_orders_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_order_count_by_date_fms_id",
+      "confidence": 0.4367920458316803
+    }
+  },
+  {
+    "text": "Informasi work order pada 2024-03-28 ada apa saja?",
+    "intent": "get_work_orders_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_order_count_by_date_fms_id",
+      "confidence": 0.4360191822052002
+    }
+  },
+  {
+    "text": "Bisa tunjukkan work order di tanggal 2024-07-20?",
+    "intent": "get_work_orders_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_order_count_by_date_fms_id",
+      "confidence": 0.4578101933002472
+    }
+  },
+  {
+    "text": "Saya mau tahu daftar work order di tanggal 2024-09-15",
+    "intent": "get_work_orders_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_order_count_by_date_fms_id",
+      "confidence": 0.4525919556617737
+    }
+  },
+  {
+    "text": "Bisakah cari work order pada tanggal 2024-01-02?",
+    "intent": "get_work_orders_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_order_count_by_date_fms_id",
+      "confidence": 0.45155787467956543
+    }
+  },
+  {
+    "text": "Work order yang ada di tanggal 2024-08-01 apa?",
+    "intent": "get_work_orders_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_order_count_by_date_fms_id",
+      "confidence": 0.44443050026893616
+    }
+  },
+  {
+    "text": "Tolong cari work order pada tanggal 2024-02-28",
+    "intent": "get_work_orders_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_order_count_by_date_fms_id",
+      "confidence": 0.44842544198036194
+    }
+  },
+  {
+    "text": "Apa work order yang ada di tanggal 2024-11-11?",
+    "intent": "get_work_orders_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_order_count_by_date_fms_id",
+      "confidence": 0.44363269209861755
+    }
+  },
+  {
+    "text": "Bisa tampilkan work order di tanggal 2024-05-18?",
+    "intent": "get_work_orders_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_order_count_by_date_fms_id",
+      "confidence": 0.43740853667259216
+    }
+  },
+  {
+    "text": "Informasi tentang work order pada 2024-12-31",
+    "intent": "get_work_orders_by_date_fms_id",
+    "intent_prediction": {
+      "name": "get_work_order_count_by_date_fms_id",
+      "confidence": 0.4371320605278015
+    }
+  },
+  {
+    "text": "I'd like to know how many work areas are available at site 001D",
+    "intent": "get_work_area_count_by_site_fms_en",
+    "intent_prediction": {
+      "name": "get_work_area_by_site_fms_en",
+      "confidence": 0.4290948510169983
+    }
+  },
+  {
+    "text": "How many work areas are available at site 043C?",
+    "intent": "get_work_area_count_by_site_fms_en",
+    "intent_prediction": {
+      "name": "get_work_area_by_site_fms_en",
+      "confidence": 0.4913008213043213
+    }
+  },
+  {
+    "text": "What's the count of work areas at site 001A?",
+    "intent": "get_work_area_count_by_site_fms_en",
+    "intent_prediction": {
+      "name": "get_work_area_by_site_fms_en",
+      "confidence": 0.42913132905960083
+    }
+  },
+  {
+    "text": "Please mention the total work areas at site 001M",
+    "intent": "get_work_area_count_by_site_fms_en",
+    "intent_prediction": {
+      "name": "get_work_area_by_site_fms_en",
+      "confidence": 0.44072625041007996
+    }
+  },
+  {
+    "text": "How many work areas are there at site 043C?",
+    "intent": "get_work_area_count_by_site_fms_en",
+    "intent_prediction": {
+      "name": "get_work_area_by_site_fms_en",
+      "confidence": 0.4292459189891815
+    }
+  },
+  {
+    "text": "I'd like to know the total work areas available at site 001M",
+    "intent": "get_work_area_count_by_site_fms_en",
+    "intent_prediction": {
+      "name": "get_work_area_by_site_fms_en",
+      "confidence": 0.5245416164398193
+    }
+  },
+  {
+    "text": "Berikan saya laporan KPI terbaru",
+    "intent": "request_kpi_self_today_fms_id",
+    "intent_prediction": {
+      "name": "request_kpi_self_fms_id",
+      "confidence": 0.4814155399799347
+    }
+  },
+  {
+    "text": "Give me my latest KPI report",
+    "intent": "request_kpi_self_today_fms_en",
+    "intent_prediction": {
+      "name": "request_kpi_self_fms_en",
+      "confidence": 0.38838085532188416
+    }
+  }
+]

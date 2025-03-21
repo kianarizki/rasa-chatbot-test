@@ -1,0 +1,1403 @@
+version: "3.1"
+intents:
+  - greet_id
+  - greet_en
+  - deny_id
+  - deny_en
+  - affirm_id
+  - affirm_en
+  - goodbye_id
+  - goodbye_en
+  - bot_challenge_id
+  - bot_challenge_en
+  - ask_language_id
+  - ask_language_en
+  - choose_language_id
+  - choose_language_en
+  - nlu_fallback
+  - ask_admin_id
+  - ask_admin_en
+  - continue_with_bot_id
+  - continue_with_bot_en
+  - 001M_app_id
+  - 001M_app_en
+  - raa_app_id
+  - raa_app_en
+  - qhse_lms_app_id
+  - qhse_lms_app_en
+  - qhse_ass_app_id
+  - qhse_ass_app_en
+  - lms_opd_app_id
+  - lms_opd_app_en
+  - ess_app_id
+  - ess_app_en
+  - others_app_id
+  - others_app_en
+  - btn_cancel_handover_yes
+  - btn_cancel_handover_no
+  - check_absentee_data_today_raa_id
+  - check_absentee_data_today_raa_en
+  - check_absentee_data_yesterday_raa_id
+  - check_absentee_data_yesterday_raa_en
+  - check_absentee_data_last_time_raa_id
+  - check_absentee_data_last_time_raa_en
+  - check_leave_info_ess_id
+  - check_leave_info_ess_en
+  - check_leave_quota_ess_id
+  - check_leave_quota_ess_en
+  - check_leave_expired_ess_id
+  - check_leave_expired_ess_en
+  - choose_leave_category_ess_id
+  - choose_leave_category_ess_en
+  - check_leave_expired_big_quota_ess_id
+  - check_leave_expired_big_quota_ess_en
+  - check_leave_expired_annual_quota_ess_id
+  - check_leave_expired_annual_quota_ess_en
+  - check_leave_expired_outstanding_quota_ess_id
+  - check_leave_expired_outstanding_quota_ess_en
+  - show_leave_list_ess_id
+  - show_leave_list_ess_en
+  - check_last_leave_approval_status_ess_id
+  - check_last_leave_approval_status_ess_en
+  - check_last_leave_taken_ess_id
+  - check_last_leave_taken_ess_en
+  - apply_leave_request_ess_id
+  - apply_leave_request_ess_en
+  - affirm_leave_submission_ess_id
+  - affirm_leave_submission_ess_en
+  - deny_leave_submission_ess_id
+  - deny_leave_submission_ess_en
+  - ask_leave_info_subordinate_ess_id
+  - ask_leave_info_subordinate_ess_en
+  - check_summary_employee_leave_info_ess_id
+  - check_summary_employee_leave_info_ess_en
+  - check_leave_requests_this_month_raa_id
+  - check_leave_requests_this_month_raa_en
+  - check_leave_requests_last_month_raa_id
+  - check_leave_requests_last_month_raa_en
+  - check_absence_requests_this_month_raa_id
+  - check_absence_requests_this_month_raa_en
+  - check_absence_requests_last_month_raa_id
+  - check_absence_requests_last_month_raa_en
+  - check_alpha_absence_requests_this_month_raa_id
+  - check_alpha_absence_requests_this_month_raa_en
+  - check_alpha_absence_requests_last_month_raa_id
+  - check_alpha_absence_requests_last_month_raa_en
+  - check_attendance_this_month_raa_id
+  - check_attendance_this_month_raa_en
+  - check_attendance_last_month_raa_id
+  - check_attendance_last_month_raa_en
+  - check_madhani_sites_projects_raa_id
+  - check_madhani_sites_projects_raa_en
+  - ask_user_role_raa_id
+  - ask_user_role_raa_en
+  - ask_user_department_raa_id
+  - ask_user_department_raa_en
+  - ask_user_position_raa_id
+  - ask_user_position_raa_en
+  - ask_user_assigned_project_site_raa_id
+  - ask_user_assigned_project_site_raa_en
+  - ask_registered_email_raa_id
+  - ask_registered_email_raa_en
+  - ask_registered_phone_raa_id
+  - ask_registered_phone_raa_en
+  - ask_date_of_hire_raa_id
+  - ask_date_of_hire_raa_en
+  - ask_positions_in_madhani_raa_id
+  - ask_positions_in_madhani_raa_en
+  - ask_total_positions_in_madhani_raa_id
+  - ask_total_positions_in_madhani_raa_en
+  - ask_departments_in_madhani_raa_id
+  - ask_departments_in_madhani_raa_en
+  - ask_total_departments_in_madhani_raa_id
+  - ask_total_departments_in_madhani_raa_en
+  - ask_equipment_count_fms_id
+  - ask_equipment_count_fms_en
+  - check_unit_by_type_and_site_fms_id
+  - check_unit_by_type_and_site_fms_en
+  - ask_type_of_unit_fms_id
+  - ask_type_of_unit_fms_en
+  - ask_count_units_by_type_fms_id
+  - ask_count_units_by_type_fms_en
+  - ask_unit_purchase_year_fms_id
+  - ask_unit_purchase_year_fms_en
+  - check_unit_by_status_fms_id
+  - check_unit_by_status_fms_en
+  - ask_unit_information_fms_id
+  - ask_unit_information_fms_en
+  - ask_unit_modification_status_fms_id
+  - ask_unit_modification_status_fms_en
+  - ask_unit_serial_number_fms_id
+  - ask_unit_serial_number_fms_en
+  - ask_equipment_category_count_madhani_fms_id
+  - ask_equipment_category_count_madhani_fms_en
+  - get_equipment_categories_madhani_fms_id
+  - get_equipment_categories_madhani_fms_en
+  - get_equipment_types_by_category_fms_id
+  - get_equipment_types_by_category_fms_en
+  - get_equipment_category_status_fms_id
+  - get_equipment_category_status_fms_en
+  - get_equipment_categories_by_status_fms_id
+  - get_equipment_categories_by_status_fms_en
+  - check_category_with_type_equipment_fms_id
+  - check_category_with_type_equipment_fms_en
+  - ask_work_order_count_fms_id
+  - ask_work_order_count_fms_en
+  - get_work_orders_by_site_fms_id
+  - get_work_orders_by_site_fms_en
+  - get_last_work_order_shift_fms_id
+  - get_last_work_order_shift_fms_en
+  - get_work_orders_by_shift_fms_id
+  - get_work_orders_by_shift_fms_en
+  - get_active_work_orders_user_fms_id
+  - get_active_work_orders_user_fms_en
+  - get_work_order_count_by_date_fms_id
+  - get_work_order_count_by_date_fms_en
+  - get_work_orders_today_fms_id
+  - get_work_orders_today_fms_en
+  - get_work_orders_last_noon_fms_id
+  - get_work_orders_last_noon_fms_en
+  - get_work_orders_last_night_fms_id
+  - get_work_orders_last_night_fms_en
+  - get_work_orders_by_date_fms_id
+  - get_work_orders_by_date_fms_en
+  - get_work_order_numbers_by_site_and_date_fms_id
+  - get_work_order_numbers_by_site_and_date_fms_en
+  - get_work_order_number_by_site_day_condition_fms_id
+  - get_work_order_number_by_site_day_condition_fms_en
+  - get_work_area_by_site_fms_id
+  - get_work_area_by_site_fms_en
+  - get_work_area_count_by_site_fms_id
+  - get_work_area_count_by_site_fms_en
+  - check_disposal_work_area_fms_id
+  - check_disposal_work_area_fms_en
+  - get_disposal_work_area_count_by_site_fms_id
+  - get_disposal_work_area_count_by_site_fms_en
+  - get_inventory_count_by_work_area_fms_id
+  - get_inventory_count_by_work_area_fms_en
+  - ask_fleet_count_madhani_fms_id
+  - ask_fleet_count_madhani_fms_en
+  - get_excavators_by_site_fms_id
+  - get_excavators_by_site_fms_en
+  - get_fleet_count_by_site_fms_id
+  - get_fleet_count_by_site_fms_en
+  - get_excavator_operator_by_site_fms_id
+  - get_excavator_operator_by_site_fms_en
+  - get_current_activity_by_site_fms_id
+  - get_current_activity_by_site_fms_en
+  - ask_hauler_count_by_site_fms_id
+  - ask_hauler_count_by_site_fms_en
+  - ask_equipment_count_by_site_fms_id
+  - ask_equipment_count_by_site_fms_en
+  - ask_fleet_production_target_by_site_fms_id
+  - ask_fleet_production_target_by_site_fms_en
+  - ask_fleet_match_factor_by_site_fms_id
+  - ask_fleet_match_factor_by_site_fms_en
+  - ask_fleet_haul_time_by_site_fms_id
+  - ask_fleet_haul_time_by_site_fms_en
+  - ask_fleet_dump_time_by_site_fms_id
+  - ask_fleet_dump_time_by_site_fms_en
+  - ask_fleet_spot_time_by_site_fms_id
+  - ask_fleet_spot_time_by_site_fms_en
+  - ask_fleet_loader_cycle_time_by_site_fms_id
+  - ask_fleet_loader_cycle_time_by_site_fms_en
+  - ask_fleet_return_time_by_site_fms_id
+  - ask_fleet_return_time_by_site_fms_en
+  - ask_fleet_production_count_by_site_fms_id
+  - ask_fleet_production_count_by_site_fms_en
+  - ask_fleet_production_count_per_cycle_by_site_fms_id
+  - ask_fleet_production_count_per_cycle_by_site_fms_en
+  - ask_top_10_equipment_fms_id
+  - ask_top_10_equipment_fms_en
+  - ask_top_10_fleet_fms_id
+  - ask_top_10_fleet_fms_en
+  - ask_top_10_breakdown_fms_id
+  - ask_top_10_breakdown_fms_en
+  - request_top_10_equipment_fms_id
+  - request_top_10_equipment_fms_en
+  - request_top_10_fleet_fms_id
+  - request_top_10_fleet_fms_en
+  - request_top_10_breakdown_fms_id
+  - request_top_10_breakdown_fms_en
+  - request_all_production_performance_control_report_fms_id
+  - request_all_production_performance_control_report_fms_en
+  - request_production_coal_report_fms_id
+  - request_production_coal_report_fms_en
+  - request_production_waste_report_fms_id
+  - request_production_waste_report_fms_en
+  - request_production_performance_report_today_fms_id
+  - request_production_performance_report_today_fms_en
+  - request_kpi_self_fms_id
+  - request_kpi_self_fms_en
+  - request_kpi_self_today_fms_id
+  - request_kpi_self_today_fms_en
+  - request_kpi_other_operator_fms_id
+  - request_kpi_other_operator_fms_en
+  - show_date_picker
+  - show_range_picker
+  - show_select_options
+  - show_select_options_with_text
+  - ask_request_daily_internal_report_001m_id
+  - ask_request_daily_internal_report_001m_en
+  - daily_report_internal_choose_001M_app_id
+  - daily_report_internal_choose_001M_app_en
+  - request_daily_internal_report_choose_001M_id
+  - request_daily_internal_report_choose_001M_en
+  - affirm_filter_data_by_manufacture_report_internal_001m_id
+  - affirm_filter_data_by_manufacture_report_internal_001m_en
+  - deny_filter_data_by_manufacture_report_internal_001m_id
+  - deny_filter_data_by_manufacture_report_internal_001m_en
+
+entities:
+  - language
+  - asked_to_transfer_to_admin
+  - cs_name
+  - platform
+  - pov_section
+  - query_condition
+  - leave_type
+  - equipment_category_status
+  - unit_status
+  - day_condition
+  - category_name
+  - equipment_top10_category
+  - fleet_top10_category
+  - breakdown_top10_category
+
+forms:
+  check_unit_type_by_site_form:
+    required_slots:
+      - equipment_type_name
+      - site_name
+
+  check_code_unit_form:
+    required_slots:
+      - unit_code
+
+  count_units_by_type_form:
+    required_slots:
+      - equipment_type_name 
+
+  equipment_types_by_category_form:
+    required_slots:
+      - equipment_category_name
+
+  equipment_category_status_form:
+    required_slots:
+      - equipment_category_name
+  
+  unit_purchase_year_form:
+    required_slots:
+      - unit_code 
+  
+  get_unit_information_form:
+    required_slots:
+      - unit_code 
+  
+  unit_modification_status_form:
+    required_slots:
+      - unit_code 
+
+  unit_serial_numbers_form:
+    required_slots:
+      - unit_code 
+
+  count_equipment_categories_by_type_form:
+    required_slots:
+      - equipment_category_name
+      - equipment_type_name
+
+  show_wo_by_site_form:
+    required_slots:
+      - work_order_site_name
+
+  show_last_wo_by_shift_form:
+    required_slots:
+      - shift_name
+
+  show_wo_by_spesific_shift_form:
+    required_slots:
+      - shift_name
+
+  work_area_info_by_site_form:
+    required_slots:
+      - work_area_site_name
+  
+  work_area_count_by_site_form:
+    required_slots:
+      - work_area_site_name
+
+  check_disposal_work_area_form:
+    required_slots:
+      - work_area_name
+      - work_area_site_name
+
+  get_disposal_work_area_count_by_site_form:
+    required_slots:
+      - work_area_site_name
+
+  get_inventory_count_by_work_area_form:
+    required_slots:
+      - work_area_name
+      - work_area_site_name
+
+  ask_work_order_count_form:
+    required_slots:
+      - date
+    
+  get_work_order_count_by_date_form:
+    required_slots:
+      - date
+
+  get_work_orders_by_date_form:
+    required_slots:
+      - date
+
+  get_work_order_numbers_form:
+    required_slots:
+      - work_order_number_site_name
+      - date
+
+  get_work_order_number_by_site_today_form:
+    required_slots:
+      - work_order_number_site_name
+      - date
+
+  get_excavators_by_site_form:
+    required_slots:
+      - site_name
+
+  get_fleet_count_by_site_form:
+    required_slots:
+      - site_name
+
+  get_excavator_operator_by_site_form:
+    required_slots:
+      - site_name
+
+  get_current_activity_by_site_form:
+    required_slots:
+      - activity_site_name
+
+  get_hauler_count_by_site_form:
+    required_slots:
+      - site_name
+
+  get_equipment_count_by_site_form:
+    required_slots:
+      - equipment_site_name
+
+  get_fleet_production_target_by_site_form:
+    required_slots:
+      - site_name
+
+  get_fleet_match_factor_by_site_form:
+    required_slots:
+      - site_name
+
+  get_fleet_haul_time_by_site_form:
+    required_slots:
+      - site_name
+
+  get_fleet_dump_time_by_site_form:
+    required_slots:
+      - site_name
+
+  get_fleet_spot_time_by_site_form:
+    required_slots:
+      - site_name
+
+  get_fleet_loader_cycle_time_by_site_form:
+    required_slots:
+      - site_name
+
+  get_fleet_return_time_by_site_form:
+    required_slots:
+      - site_name
+
+  get_fleet_production_count_by_site_form:
+    required_slots:
+      - site_name
+
+  get_fleet_production_per_cycle_by_site_form:
+    required_slots:
+      - site_name
+
+  get_leave_request_form:
+    required_slots:
+      - leave_req_type
+      - leave_req_date_from
+      - leave_req_date_until
+      - leave_req_reason
+      - approver_nik
+
+  get_input_nik_subordinate_form:
+    required_slots:
+      - input_nik_subordinate
+
+  get_top_10_equipment_form:
+    required_slots:
+      - equipment_category
+      - site_name
+
+  get_top_10_fleet_form:
+    required_slots:
+      - fleet_category
+      - site_name
+
+  get_top_10_breakdown_form:
+    required_slots:
+      - breakdown_category
+      - site_name
+
+  get_request_top_10_equipment_form:
+    required_slots:
+      - site_name
+
+  get_request_top_10_fleet_form:
+    required_slots:
+      - site_name
+
+  get_request_top_10_breakdown_form:
+    required_slots:
+      - site_name
+
+  get_all_data_ppc_by_date_form:
+    required_slots:
+      - date_production_performance_control
+      - site_name
+      - shift_name
+
+  get_request_production_coal_report_form:
+    required_slots:
+      - date_production_performance_control
+      - site_name
+      - shift_name
+
+  get_request_production_waste_report_form:
+    required_slots:
+      - date_production_performance_control
+      - site_name
+      - shift_name
+
+  get_request_production_report_by_today_form:
+    required_slots:
+      - site_name
+
+  get_kpi_self_form:
+    required_slots:
+      - date_production_performance_control
+
+  get_kpi_other_operator_form:
+    required_slots:
+      - input_nik_operator
+      - date_production_performance_control
+
+  get_check_summary_employee_leave_form:
+    required_slots:
+      - date_summary_employee_leave
+
+  get_daily_report_select_001m_by_date_form:
+    required_slots:
+      - date_daily_report
+
+  get_daily_report_select_001m_by_manufacture_form:
+    required_slots:
+      - date_daily_report
+      - manufacture_daily_report
+
+
+slots:  
+  language:
+    type: categorical
+    influence_conversation: true
+    values:
+      - indonesia
+      - english
+    mappings:
+      - type: from_entity
+        entity: language
+
+  fallback_count:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+  asked_to_transfer_to_admin:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: asked_to_transfer_to_admin
+
+  cs_name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: cs_name
+
+  app_name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  queue_number: 
+    type: any
+    influence_conversation: false
+    initial_value : 0
+    mappings:
+      - type: custom
+
+  platform:
+    type: categorical
+    values:
+      - mobile
+      - website
+    mappings:
+      - type: from_entity
+        entity: platform
+    # influence_conversation: true
+    # mappings:
+    #   - type: from_entity
+    #     entity: platform
+  
+  pov_section:
+    type: categorical
+    values:
+      - pov area
+      - pov assessment
+    mappings:
+      - type: from_entity
+        entity: pov_section
+    # influence_conversation: true
+    # mappings:
+    #   - type: from_entity
+    #     entity: pov_section
+    
+  query_condition:
+    type: categorical
+    values:
+      - hari ini  
+      - kemarin 
+      - terakhir kali
+    mappings:
+      - type: from_entity
+        entity: query_condition
+    # influence_conversation: true
+    # mappings:
+    #   - type: from_entity
+    #     entity: query_condition
+
+  leave_type:
+    type: categorical
+    values:
+      - besar 
+      - tahunan
+      - outstanding
+    mappings:
+      - type: from_entity
+        entity: leave_type
+    # influence_conversation: true
+    # mappings:
+    #   - type: from_entity
+    #     entity: leave_type
+
+  equipment_category_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: equipment_types_by_category_form
+            requested_slot: equipment_category_name
+          - active_loop: equipment_category_status_form
+            requested_slot: equipment_category_name
+          - active_loop: count_equipment_categories_by_type_form
+            requested_slot: equipment_category_name
+
+  equipment_category_status:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: equipment_category_status
+
+  equipment_type_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: check_unit_type_by_site_form
+            requested_slot: equipment_type_name
+          - active_loop: count_units_by_type_form
+            requested_slot: equipment_type_name
+          - active_loop: count_equipment_categories_by_type_form
+            requested_slot: equipment_type_name
+
+  site_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: check_unit_type_by_site_form
+            requested_slot: site_name
+          - active_loop: get_excavators_by_site_form
+            requested_slot: site_name
+          - active_loop: get_fleet_count_by_site_form
+            requested_slot: site_name
+          - active_loop: get_excavator_operator_by_site_form
+            requested_slot: site_name
+          - active_loop: get_hauler_count_by_site_form
+            requested_slot: site_name
+          - active_loop: get_fleet_production_target_by_site_form
+            requested_slot: site_name
+          - active_loop: get_fleet_match_factor_by_site_form
+            requested_slot: site_name
+          - active_loop: get_fleet_haul_time_by_site_form
+            requested_slot: site_name
+          - active_loop: get_fleet_dump_time_by_site_form
+            requested_slot: site_name
+          - active_loop: get_fleet_return_time_by_site_form
+            requested_slot: site_name
+          - active_loop: get_fleet_production_count_by_site_form
+            requested_slot: site_name
+          - active_loop: get_fleet_production_per_cycle_by_site_form
+            requested_slot: site_name
+          - active_loop: get_fleet_spot_time_by_site_form
+            requested_slot: site_name
+          - active_loop: get_fleet_loader_cycle_time_by_site_form
+            requested_slot: site_name
+          - active_loop: get_top_10_equipment_form
+            requested_slot: site_name
+          - active_loop: get_top_10_fleet_form
+            requested_slot: site_name
+          - active_loop: get_top_10_breakdown_form
+            requested_slot: site_name
+          - active_loop: get_all_data_ppc_by_date_form
+            requested_slot: site_name
+          - active_loop: get_request_production_coal_report_form
+            requested_slot: site_name
+          - active_loop: get_request_production_waste_report_form
+            requested_slot: site_name
+          - active_loop: get_request_production_report_by_today_form
+            requested_slot: site_name
+          - active_loop: get_request_top_10_equipment_form
+            requested_slot: site_name
+          - active_loop: get_request_top_10_fleet_form
+            requested_slot: site_name
+          - active_loop: get_request_top_10_breakdown_form
+            requested_slot: site_name
+
+  work_order_site_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: show_wo_by_site_form
+            requested_slot: work_order_site_name
+
+  work_order_number_site_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_work_order_numbers_form
+            requested_slot: work_order_number_site_name
+          - active_loop: get_work_order_number_by_site_today_form
+            requested_slot: work_order_number_site_name
+
+  work_area_site_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: work_area_info_by_site_form
+            requested_slot: work_area_site_name
+          - active_loop: work_area_count_by_site_form
+            requested_slot: work_area_site_name
+          - active_loop: get_disposal_work_area_count_by_site_form
+            requested_slot: work_area_site_name
+          - active_loop: get_inventory_count_by_work_area_form
+            requested_slot: work_area_site_name
+          - active_loop: check_disposal_work_area_form
+            requested_slot: work_area_site_name
+
+  shift_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: show_last_wo_by_shift_form
+            requested_slot: shift_name
+          - active_loop: show_wo_by_spesific_shift_form
+            requested_slot: shift_name
+          - active_loop: get_all_data_ppc_by_date_form
+            requested_slot: shift_name
+          - active_loop: get_request_production_coal_report_form
+            requested_slot: shift_name
+          - active_loop: get_request_production_waste_report_form
+            requested_slot: shift_name
+    
+  unit_code:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: check_code_unit_form
+            requested_slot: unit_code
+          - active_loop: unit_purchase_year_form
+            requested_slot: unit_code
+          - active_loop: get_unit_information_form
+            requested_slot: unit_code
+          - active_loop: unit_modification_status_form
+            requested_slot: unit_code
+          - active_loop: unit_serial_numbers_form
+            requested_slot: unit_code
+
+  unit_status:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: unit_status
+
+  work_area_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: check_disposal_work_area_form
+            requested_slot: work_area_name
+          - active_loop: get_inventory_count_by_work_area_form
+            requested_slot: work_area_name
+
+  date:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: ask_work_order_count_form
+            requested_slot: date
+          - active_loop: get_work_order_count_by_date_form
+            requested_slot: date
+          - active_loop: get_work_orders_by_date_form
+            requested_slot: date
+          - active_loop: get_work_order_numbers_form
+            requested_slot: date
+          - active_loop: get_work_order_number_by_site_today_form
+            requested_slot: date
+
+  day_condition:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: day_condition
+
+  activity_site_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_current_activity_by_site_form
+            requested_slot: activity_site_name
+
+  equipment_site_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_equipment_count_by_site_form
+            requested_slot: equipment_site_name
+
+  leave_req_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_leave_request_form
+            requested_slot: leave_req_type
+
+  leave_req_date_from:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_leave_request_form
+            requested_slot: leave_req_date_from
+
+  leave_req_date_until:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_leave_request_form
+            requested_slot: leave_req_date_until
+
+  leave_req_reason:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_leave_request_form
+            requested_slot: leave_req_reason
+
+  approver_nik:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_leave_request_form
+            requested_slot: approver_nik
+
+  input_nik_subordinate:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_input_nik_subordinate_form
+            requested_slot: input_nik_subordinate
+
+  equipment_category:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_top_10_equipment_form
+            requested_slot: equipment_category
+
+  fleet_category:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_top_10_fleet_form
+            requested_slot: fleet_category
+
+  breakdown_category:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_top_10_breakdown_form
+            requested_slot: breakdown_category
+
+  date_production_performance_control:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_all_data_ppc_by_date_form
+            requested_slot: date_production_performance_control
+          - active_loop: get_request_production_coal_report_form
+            requested_slot: date_production_performance_control
+          - active_loop: get_request_production_waste_report_form
+            requested_slot: date_production_performance_control
+          - active_loop: get_kpi_self_form
+            requested_slot: date_production_performance_control
+          - active_loop: get_kpi_other_operator_form
+            requested_slot: date_production_performance_control
+
+  category_name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: category_name
+
+  equipment_top10_category:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: equipment_top10_category
+
+  fleet_top10_category:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: fleet_top10_category
+
+  breakdown_top10_category:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: breakdown_top10_category
+
+  input_nik_operator:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_kpi_other_operator_form
+            requested_slot: input_nik_operator
+
+  date_summary_employee_leave:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_check_summary_employee_leave_form
+            requested_slot: date_summary_employee_leave
+
+  date_daily_report:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_daily_report_select_001m_by_date_form
+            requested_slot: date_daily_report
+          - active_loop: get_daily_report_select_001m_by_manufacture_form
+            requested_slot: date_daily_report
+
+  manufacture_daily_report:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_daily_report_select_001m_by_manufacture_form
+            requested_slot: manufacture_daily_report
+
+  # model_daily_report:
+  #   type: text
+  #   influence_conversation: true
+  #   mappings:
+  #     - type: from_text
+  #       conditions:
+  #         - active_loop: get_daily_report_select_001m_form
+  #           requested_slot: model_daily_report
+
+  # comp_desc_daily_report:
+  #   type: text
+  #   influence_conversation: true
+  #   mappings:
+  #     - type: from_text
+  #       conditions:
+  #         - active_loop: get_daily_report_select_001m_form
+  #           requested_slot: comp_desc_daily_report
+
+  # status_process_daily_report:
+  #   type: text
+  #   influence_conversation: true
+  #   mappings:
+  #     - type: from_text
+  #       conditions:
+  #         - active_loop: get_daily_report_select_001m_form
+  #           requested_slot: status_process_daily_report
+
+  # search_daily_report:
+  #   type: text
+  #   influence_conversation: true
+  #   mappings:
+  #     - type: from_text
+  #       conditions:
+  #         - active_loop: get_daily_report_select_001m_form
+  #           requested_slot: search_daily_report
+
+actions:
+- action_handle_fallback
+- action_transfer_to_admin
+- action_continue_with_bot
+- action_inform_admin_transfer
+- action_set_language
+- action_cancel_handover_yes
+- action_cancel_handover_no
+- action_get_absence_data
+- action_attendance_today
+- action_attendance_yesterday
+- action_attendance_last_time
+- action_time_off_expired
+- action_time_off_expired_annual
+- action_time_off_expired_big
+- action_time_off_expired_outstanding
+- action_time_off_remaining
+- action_time_off_list
+- action_last_approval_time_off_status
+- action_get_last_approval_time_off
+- action_get_leave_requests_this_month
+- action_get_leave_requests_last_month
+- action_get_absence_requests_this_month
+- action_get_absence_requests_last_month
+- action_get_alpha_absence_requests_this_month
+- action_get_alpha_absence_requests_last_month
+- action_get_presence_this_month
+- action_get_presence_last_month
+- action_get_project_sites_madhani
+- action_get_user_profile_role
+- action_get_user_profile_department
+- action_get_user_profile_position
+- action_get_user_profile_project_site
+- action_get_user_profile_email
+- action_get_user_profile_phone_number
+- action_get_user_profile_hire_date
+- action_get_positions_madhani
+- action_get_total_positions_madhani
+- action_get_departments_madhani
+- action_get_total_departments_madhani
+- action_get_fms_equipment_count
+- action_get_fms_check_unit_by_type
+- action_ask_equipment_type_name
+- action_ask_site_name
+- action_get_fms_type_of_unit
+- action_ask_unit_code
+- action_get_fms_count_units_by_type
+- action_get_fms_unit_purchase_date
+- action_get_fms_units_with_status
+- action_get_fms_unit_information
+- action_get_fms_unit_modification_status
+- action_get_fms_unit_serial_number
+- action_get_fms_total_category_equipment
+- action_get_fms_category_equipment
+- action_get_fms_equipment_types_in_category
+- action_ask_equipment_category_name
+- action_get_fms_equipment_category_status
+- action_get_fms_equipment_category_from_status
+- action_get_fms_total_equipment_category_from_type
+- action_get_fms_wo_by_site
+- action_ask_work_order_site_name
+- action_get_fms_last_shift_of_work_order
+- action_ask_shift_name
+- action_get_fms_active_work_orders
+- action_get_fms_wo_by_shift
+- action_ask_date
+- action_get_fms_work_orders_today
+- action_get_fms_work_orders_by_date
+- action_get_fms_work_orders_by_site_date
+- action_ask_work_order_number_site_name
+- action_get_fms_work_orders_by_site_today
+- action_get_fms_work_orders_by_site_last_night
+- action_get_fms_work_orders_by_site_last_Day
+- action_get_fms_work_orders_last_noon
+- action_get_fms_work_orders_last_night
+- action_get_fms_work_orders_day_condition
+- action_get_fms_work_orders_by_site_day_condition
+- action_get_fms_wa_by_site
+- action_ask_work_area_site_name
+- action_get_fms_total_wa_by_site
+- action_get_fms_ask_wa_by_site_disposal
+- action_ask_work_area_name
+- action_get_fms_total_wa_by_site_disposal
+- action_get_fms_wa_by_site_inventory
+- action_get_fms_total_fleet
+- action_get_fms_excavator_by_site
+- action_get_fms_total_fleet_by_site
+- action_get_fms_excavator_operator_by_site_fleet
+- action_get_fms_activity_by_site
+- action_ask_activity_site_name
+- action_get_fms_total_hauler_by_site
+- action_get_fms_total_equipment_by_site_fleet
+- action_ask_equipment_site_name
+- action_get_fms_target_production_by_site
+- action_get_fms_mach_factor_by_site
+- action_get_fms_haul_time_by_site
+- action_get_fms_dump_time_by_site
+- action_get_fms_spot_time_by_site
+- action_get_fms_loader_cycle_time_by_site
+- action_get_fms_return_time_by_site
+- action_get_fms_total_production_by_site
+- action_get_fms_production_per_cycle
+- action_ess_leave_confirmation
+- action_ess_post_leave_timeoff
+- action_ask_leave_req_type
+- action_ask_leave_req_date_from
+- action_ask_leave_req_date_until
+- action_ask_leave_req_reason
+- action_ess_get_leave_by_nik
+- action_ask_input_nik_subordinate
+- action_ask_approver_nik
+- validate_get_leave_request_form
+- action_get_fms_top_10
+- action_get_fms_top10_equipment
+- action_get_fms_request_top10_equipment
+- action_get_fms_top10_fleet
+- action_get_fms_request_top10_fleet
+- action_get_fms_top10_breakdown
+- action_get_fms_request_top10_breakdown
+- action_ask_equipment_category
+- action_ask_fleet_category
+- action_ask_breakdown_category
+- action_ask_date_production_performance_control
+- action_get_fms_production_by_date_shift
+- action_get_fms_production_coal_by_date_shift
+- action_get_fms_production_waste_by_date_shift
+- action_get_fms_production_today
+- action_get_fms_kpi_self_result
+- action_get_fms_kpi_self_result_today
+- action_get_fms_kpi_other_operator_result
+- action_ask_input_nik_operator
+- action_get_ess_summary_employee_leave_info
+- action_ask_date_summary_employee_leave
+- action_show_date_picker
+- action_show_range_picker
+- action_show_select_options
+- action_show_select_options_with_text
+- action_get_001m_report_daily_internal_date_filter
+- action_get_001m_report_daily_internal_date_manufacture_filter
+- action_ask_date_daily_report
+- action_ask_manufacture_daily_report
+# - action_ask_model_daily_report
+# - action_ask_comp_desc_daily_report
+# - action_ask_status_process_daily_report
+# - action_ask_search_daily_report
+
+responses:
+  utter_greet_id:
+    - text: Halo! Selamat datang di layanan pelanggan MTN Madhani. Apakah ada yang bisa saya bantu terkait dengan aplikasi Madhani?
+      buttons:
+        - title: "001M"
+          payload: "/001M_intent_id"
+        - title: "RAA"
+          payload: "/raa_intent_id"
+        - title: "QHSE"
+          payload: "/qhse_intent_id"
+        - title: "OPD"
+          payload: "/lms_opd_intent_id"
+        - title: "ESS"
+          payload: "/ess_intent_id"
+      custom:
+        text: "Pilih aplikasi di bawah "
+  utter_greet_en:
+    - text: Hello! Welcome to MTN Madhani customer service. Is there anything I can help you with regarding the Madhani application?
+      buttons:
+        - title: "001M"
+          payload: "/001M_intent_en"
+        - title: "RAA"
+          payload: "/raa_intent_en"
+        - title: "QHSE"
+          payload: "/qhse_intent_en"
+        - title: "OPD"
+          payload: "/lms_opd_intent_en"
+        - title: "ESS"
+          payload: "/ess_intent_en"
+      custom:
+        text: "Choose the app below "
+  utter_choose_language_id:
+    - text: "Silakan pilih bahasa / Please select language:"
+      buttons:
+        - title: "English"
+          payload: "/ask_language_en"
+        - title: "Indonesia"
+          payload: "/ask_language_id"
+      custom:
+        text: "Pilih bahasa di bawah "
+  utter_choose_language_en:
+    - text: "Please select language:"
+      buttons:
+        - title: "English"
+          payload: "/ask_language_en"
+        - title: "Indonesia"
+          payload: "/ask_language_id"
+      custom:
+        text: "Choose the language below "
+  utter_another_ask_help_id:
+    - text: Apakah ada yang ingin ditanyakan kembali?
+      buttons:
+        - title: "Ya"
+          payload: "/affirm_id"
+        - title: "Tidak"
+          payload: "/deny_id"
+      custom:
+        text: "Lanjut bertanya kembali atau tidak "
+  utter_another_ask_help_en:
+    - text: Is there anything else you would like to ask?
+      buttons:
+        - title: "Yes"
+          payload: "/affirm_en"
+        - title: "No"
+          payload: "/deny_en"
+      custom:
+        text: "Continue asking or not "
+  utter_offer_response_id:
+    - text: Silahkan ada yang bisa saya bantu terkait dengan aplikasi Madhani?
+      buttons:
+        - title: "001M"
+          payload: "/001M_intent_id"
+        - title: "RAA"
+          payload: "/raa_intent_id"
+        - title: "QHSE"
+          payload: "/qhse_intent_id"
+        - title: "OPD"
+          payload: "/lms_opd_intent_id"
+        - title: "ESS"
+          payload: "/ess_intent_id"
+      custom:
+        text: "Pilih aplikasi di bawah "
+  utter_offer_response_en:
+    - text: Is there anything I can help you with regarding the Madhani application?
+      buttons:
+        - title: "001M"
+          payload: "/001M_intent_en"
+        - title: "RAA"
+          payload: "/raa_intent_en"
+        - title: "QHSE"
+          payload: "/qhse_intent_en"
+        - title: "OPD"
+          payload: "/lms_opd_intent_en"
+        - title: "ESS"
+          payload: "/ess_intent_en"
+      custom:
+        text: "Choose the app below "
+  utter_goodbye_id:
+    - text: Senang bisa membantu! Jika ada pertanyaan lebih lanjut, jangan ragu untuk bertanya ya! 😊
+  utter_goodbye_en:
+    - text: Happy to help! If you have any further questions, please feel free to ask! 😊
+  utter_iamabot_id:
+    - text: Nama saya madhabot, siap melayani Anda. 😊👋🏻
+  utter_iamabot_en:
+    - text: My name is madhabot, ready to serve you. 😊👋🏻
+  utter_iamabot2_id:
+    - text: Sebagai asisten digital di PT Madhani Talatah Nusantara, saya dilatih untuk memberikan jawaban dan tips yang tepat atas kekhawatiran Anda.
+  utter_iamabot2_en:
+    - text: As a digital assistant at PT Madhani Talatah Nusantara, I am trained to provide the right answers and tips for your concerns.
+  utter_choose_transfer_to_admin_id:
+    - text: "Oke, apakah pertanyaan tersebut terkait dengan salah satu aplikasi berikut:"
+      buttons:
+        - title: "001M"
+          payload: "/001M_app_id"
+        - title: "RAA"
+          payload: "/raa_app_id"
+        - title: "QHSE LMS"
+          payload: "/qhse_lms_app_id"
+        - title: "QHSE Assessment"
+          payload: "/qhse_ass_app_id"
+        - title: "OPD"
+          payload: "/lms_opd_app_id"
+        - title: "ESS"
+          payload: "/ess_app_id"
+        - title: "Others"
+          payload: "/others_app_id"
+      custom:
+        text: "Pilih aplikasi di bawah "
+  utter_choose_transfer_to_admin_en:
+    - text: "Ok, is the question related to one of the following applications:"
+      buttons:
+        - title: "001M"
+          payload: "/001M_app_en"
+        - title: "RAA"
+          payload: "/raa_app_en"
+        - title: "QHSE LMS"
+          payload: "/qhse_lms_app_en"
+        - title: "QHSE Assessment"
+          payload: "/qhse_ass_app_en"
+        - title: "OPD"
+          payload: "/lms_opd_app_en"
+        - title: "ESS"
+          payload: "/ess_app_en"
+        - title: "Others"
+          payload: "/others_app_en"
+      custom:
+        text: "Choose the app below "
+  utter_ask_leave_info_type_id:
+    - text: "Informasi mengenai cuti apa yang ingin Anda ketahui?"
+      buttons:
+        - title: "Sisa Cuti"
+          payload: "/check_leave_quota_ess_id"
+        - title: "Cuti Expired"
+          payload: "/check_leave_expired_ess_id"
+        - title: "Daftar Cuti Saya"
+          payload: "/show_leave_list_ess_id"
+      custom:
+        text: "Pilih FAQ terkait di bawah " 
+  utter_ask_leave_info_type_en:
+    - text: "What information about leave do you want to know?"
+      buttons:
+        - title: "Remaining Leave"
+          payload: "/check_leave_quota_ess_en"
+        - title: "Expired Leave"
+          payload: "/check_leave_expired_ess_en"
+        - title: "My Leave List"
+          payload: "/show_leave_list_ess_id"       
+      custom:
+        text: "Select the related FAQ below "
+  utter_ask_leave_category_expired_id:
+    - text: "Kategori cuti mana yang ingin Anda ketahui kuota expired nya? Anda dapat memilih dari: Cuti Tahunan, Cuti Besar, atau Cuti Outstanding"
+  utter_ask_leave_category_expired_en:
+    - text: "Which leave category would you like to know the expired quota for? You can choose from: Annual, Big or Outstanding Leave."
+  utter_confirm_leave_submission_ess_id:
+    - text: "Apakah Anda ingin mengajukan cuti tersebut?"
+      buttons:
+        - title: "Ya"
+          payload: "/affirm_leave_submission_ess_id"
+        - title: "Tidak"
+          payload: "/deny_leave_submission_ess_id"
+      custom:
+        text: "Pilih konfirmasi di bawah "
+  utter_confirm_leave_submission_ess_en:
+    - text: "Do you want to submit this leave request?"
+      buttons:
+        - title: "Yes"
+          payload: "/affirm_leave_submission_ess_en"
+        - title: "No"
+          payload: "/deny_leave_submission_ess_en"
+      custom:
+        text: "Please choose a confirmation below "
+  utter_deny_leave_submission_ess_id:
+    - text: Pengajuan cuti dibatalkan
+  utter_deny_leave_submission_ess_en:
+    - text: Leave application been cancelled
+  utter_select_apps_for_daily_report_internal_001M_id:
+    - text: "Pilih aplikasi yang Anda inginkan untuk mengakses daily internal report?"
+      buttons:
+        - title: "001M"
+          payload: "/daily_report_internal_choose_001M_app_id"
+      custom:
+        text: "Pilih aplikasi di bawah "
+  utter_select_apps_for_daily_report_internal_001M_en:
+    - text: "Please select the application you want to use to access the daily internal report?"
+      buttons:
+        - title: "001M"
+          payload: "/daily_report_internal_choose_001M_app_en"
+      custom:
+        text: "Choose the app below "
+  utter_filter_data_by_manufacture_report_internal_001m_id:
+    - text: "Apakah Anda ingin melakukan pemfilteran data berdasarkan Manufacture?"
+      buttons:
+        - title: "Ya"
+          payload: "/affirm_filter_data_by_manufacture_report_internal_001m_id"
+        - title: "Tidak"
+          payload: "/deny_filter_data_by_manufacture_report_internal_001m_id"
+      custom:
+        text: "Pilih konfirmasi di bawah "
+  utter_filter_data_by_manufacture_report_internal_001m_en:
+    - text: "Would you like to filter the data by Manufacturer?"
+      buttons:
+        - title: "Yes"
+          payload: "/affirm_filter_data_by_manufacture_report_internal_001m_en"
+        - title: "No"
+          payload: "/deny_filter_data_by_manufacture_report_internal_001m_en"
+      custom:
+        text: "Please choose your confirmation below "
+        
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

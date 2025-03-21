@@ -1,0 +1,128 @@
+# version: "3.1"
+# stories:
+# - story: fallback to admin and choose 001M App in Indonesia
+#   steps:
+#     - slot_was_set:
+#         - language: indonesia
+#     - intent: ask_admin_id
+#     - action: utter_choose_transfer_to_admin_id
+#     - intent: 001M_app_id
+#     - action: action_transfer_to_admin
+
+# - story: fallback to admin and choose 001M App in English
+#   steps:
+#     - slot_was_set:
+#         - language: english
+#     - intent: ask_admin_en
+#     - action: utter_choose_transfer_to_admin_en
+#     - intent: 001M_app_en
+#     - action: action_transfer_to_admin
+
+# - story: fallback to admin and choose RAA App in Indonesia
+#   steps:
+#     - slot_was_set:
+#         - language: indonesia
+#     - intent: ask_admin_id
+#     - action: utter_choose_transfer_to_admin_id
+#     - intent: raa_app_id
+#     - action: action_transfer_to_admin
+
+# - story: fallback to admin and choose RAA App in English
+#   steps:
+#     - slot_was_set:
+#         - language: english
+#     - intent: ask_admin_en
+#     - action: utter_choose_transfer_to_admin_en
+#     - intent: raa_app_en
+#     - action: action_transfer_to_admin
+
+# - story: fallback to admin and choose QHSE LMS App in Indonesia
+#   steps:
+#     - slot_was_set:
+#         - language: indonesia
+#     - intent: ask_admin_id
+#     - action: utter_choose_transfer_to_admin_id
+#     - intent: qhse_lms_app_id
+#     - action: action_transfer_to_admin
+
+# - story: fallback to admin and choose QHSE LMS App in English
+#   steps:
+#     - slot_was_set:
+#         - language: english
+#     - intent: ask_admin_en
+#     - action: utter_choose_transfer_to_admin_en
+#     - intent: qhse_lms_app_en
+#     - action: action_transfer_to_admin
+
+# - story: fallback to admin and choose QHSE Assessment App in Indonesia
+#   steps:
+#     - slot_was_set:
+#         - language: indonesia
+#     - intent: ask_admin_id
+#     - action: utter_choose_transfer_to_admin_id
+#     - intent: qhse_ass_app_id
+#     - action: action_transfer_to_admin
+
+# - story: fallback to admin and choose QHSE Assessment App in English
+#   steps:
+#     - slot_was_set:
+#         - language: english
+#     - intent: ask_admin_en
+#     - action: utter_choose_transfer_to_admin_en
+#     - intent: qhse_ass_app_en
+#     - action: action_transfer_to_admin
+
+# - story: fallback to admin and choose LMS OPD App in Indonesia
+#   steps:
+#     - slot_was_set:
+#         - language: indonesia
+#     - intent: ask_admin_id
+#     - action: utter_choose_transfer_to_admin_id
+#     - intent: lms_opd_app_id
+#     - action: action_transfer_to_admin
+
+# - story: fallback to admin and choose LMS OPD App in English
+#   steps:
+#     - slot_was_set:
+#         - language: english
+#     - intent: ask_admin_en
+#     - action: utter_choose_transfer_to_admin_en
+#     - intent: lms_opd_app_en
+#     - action: action_transfer_to_admin
+
+# - story: fallback to admin and choose ESS App in Indonesia
+#   steps:
+#     - slot_was_set:
+#         - language: indonesia
+#     - intent: ask_admin_id
+#     - action: utter_choose_transfer_to_admin_id
+#     - intent: ess_app_id
+#     - action: action_transfer_to_admin
+
+# - story: fallback to admin and choose ESS App in English
+#   steps:
+#     - slot_was_set:
+#         - language: english
+#     - intent: ask_admin_en
+#     - action: utter_choose_transfer_to_admin_en
+#     - intent: ess_app_en
+#     - action: action_transfer_to_admin
+
+# - story: fallback to admin and choose Others in Indonesia
+#   steps:
+#     - slot_was_set:
+#         - language: indonesia
+#     - intent: ask_admin_id
+#     - action: utter_choose_transfer_to_admin_id
+#     - intent: others_app_id
+#     - action: action_transfer_to_admin
+
+# - story: fallback to admin and choose Others in English
+#   steps:
+#     - slot_was_set:
+#         - language: english
+#     - intent: ask_admin_en
+#     - action: utter_choose_transfer_to_admin_en
+#     - intent: others_app_en
+#     - action: action_transfer_to_admin
+

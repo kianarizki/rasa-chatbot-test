@@ -1,0 +1,48 @@
+# The config recipe.
+# https://rasa.com/docs/rasa/model-configuration/
+recipe: default.v1
+
+# The assistant project unique identifier
+# This default value must be replaced with a unique assistant name within your deployment
+assistant_id: 20241011-134725-crazy-bind
+
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: "multilang"
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 150
+    learning_rate: 0.001  # Mengurangi learning rate untuk lebih pelan namun stabil
+    constrain_similarities: true
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 150
+    constrain_similarities: true
+  - name: FallbackClassifier
+    threshold: 0.3 # Dinaikkan sedikit untuk lebih sensitif
+    ambiguity_threshold: 0.1
+
+policies:
+  - name: MemoizationPolicy
+    max_history: 3 # Ditingkatkan untuk mengingat lebih banyak konteks
+  - name: RulePolicy
+    core_fallback_threshold: 0.3 # Menurunkan agar fallback lebih sering aktif di rule
+    nlu_threshold: 0.3  # Menaikkan agar lebih peka terhadap intent yang ambigu
+    enable_fallback_prediction: true
+  - name: TEDPolicy #salah satu policy yang mengelola prediksi aksi dalam percakapan.
+    max_history: 3  #Kurangi max_history ke 10-15 jika cerita pendek.
+    epochs: 150  # Menambah epochs untuk lebih banyak pelatihan
+    learning_rate: 0.001 # Menurunkan learning rate untuk pembelajaran lebih bertahap
+    constrain_similarities: true
+  - name: UnexpecTEDIntentPolicy
+    max_history: 4
+    epochs: 120
+    nlu_threshold: 0.2  # Menaikkan agar fallback lebih sering di ambiguitas
+    ambiguity_threshold: 0.3  # Mengaktifkan fallback lebih tinggi untuk ambigu intent

@@ -1,0 +1,197 @@
+version: "3.1"
+stories:
+- story: Ask work area count by site (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: get_work_area_count_by_site_fms_en  # predicted: nlu_fallback: How many work areas are there at site 001A?
+  - action: work_area_count_by_site_form
+  - active_loop: work_area_count_by_site_form
+  - active_loop: null
+  - action: action_get_fms_total_wa_by_site
+  - action: utter_another_ask_help_en
+- story: Ask check disposal work area (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: check_disposal_work_area_fms_en  # predicted: nlu_fallback: Is work area G09 a disposal area?
+  - action: check_disposal_work_area_form
+  - active_loop: check_disposal_work_area_form
+  - active_loop: null
+  - action: action_get_fms_ask_wa_by_site_disposal
+  - action: utter_another_ask_help_en
+- story: check leave info - choose check annual leave expired (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: check_leave_info_ess_en
+  - action: utter_ask_leave_info_type_en
+  - intent: check_leave_expired_ess_en
+  - action: utter_ask_leave_category_expired_id  # predicted: utter_ask_leave_category_expired_en
+  - intent: choose_leave_category_ess_en
+    entities:
+    - leave_type: annual
+  - slot_was_set:
+    - leave_type: annual
+  - slot_was_set:
+    - leave_type: annual
+  - action: action_time_off_expired
+  - action: utter_another_ask_help_en
+- story: Ask top 10 equipment - case entitas capacity (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: request_top_10_equipment_fms_id  # predicted: request_top_10_equipment_fms_en: Show the top 10 [equipment](category_name) with the highest [capacity](equipment_top10_category)?
+    entities:
+    - category_name: equipment
+    - equipment_top10_category: capacity
+  - slot_was_set:
+    - category_name: equipment
+  - slot_was_set:
+    - equipment_top10_category: capacity
+  - slot_was_set:
+    - category_name: equipment
+  - slot_was_set:
+    - equipment_top10_category: capacity
+  - action: get_request_top_10_equipment_form  # predicted: action_time_off_expired
+  - active_loop: get_request_top_10_equipment_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_equipment
+  - action: utter_another_ask_help_en
+- story: Ask top 10 equipment - case entitas distance traveled (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: request_top_10_equipment_fms_id  # predicted: request_top_10_equipment_fms_en: Which 10 [equipment](category_name) with the highest [kilometers]{"entity": "equipment_top10_category", "value": "distance traveled"}?
+    entities:
+    - category_name: equipment
+    - equipment_top10_category: kilometers
+  - slot_was_set:
+    - category_name: equipment
+  - slot_was_set:
+    - equipment_top10_category: kilometers
+  - slot_was_set:
+    - category_name: equipment
+  - slot_was_set:
+    - equipment_top10_category: kilometers
+  - action: get_request_top_10_equipment_form  # predicted: action_time_off_expired
+  - active_loop: get_request_top_10_equipment_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_equipment
+  - action: utter_another_ask_help_id  # predicted: utter_another_ask_help_en
+- story: Ask top 10 fleet - case entitas payload (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: request_top_10_fleet_fms_en
+    entities:
+    - category_name: fleet
+    - fleet_top10_category: payload
+  - slot_was_set:
+    - category_name: fleet
+  - slot_was_set:
+    - fleet_top10_category: payload
+  - slot_was_set:
+    - category_name: fleet
+  - slot_was_set:
+    - fleet_top10_category: payload
+  - action: get_request_top_10_fleet_form
+  - active_loop: get_request_top_10_fleet_form
+  - active_loop: null
+  - action: action_get_fms_request_top10_fleet
+  - action: utter_another_ask_help_en
+- story: Ask leave info subordinate (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - intent: ask_leave_info_subordinate_ess_id
+  - action: get_input_nik_form  # predicted: get_input_nik_subordinate_form
+  - active_loop: get_input_nik_form
+  - active_loop: null
+  - action: action_ess_get_leave_by_nik  # predicted: action_listen
+  - action: utter_another_ask_help_id  # predicted: action_listen
+- story: Ask leave info subordinate (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: ask_leave_info_subordinate_ess_en
+  - action: get_input_nik_form  # predicted: get_input_nik_subordinate_form
+  - active_loop: get_input_nik_form
+  - active_loop: null
+  - action: action_ess_get_leave_by_nik  # predicted: action_listen
+  - action: utter_another_ask_help_en  # predicted: action_listen
+- story: Ask check unit by status - status active (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: check_unit_by_status_fms_en
+    entities:
+    - unit_status: active
+  - slot_was_set:
+    - unit_status: active
+  - slot_was_set:
+    - unit_status: active
+  - action: action_get_fms_units_with_status
+  - action: utter_another_ask_help_en
+- story: Ask check unit by status - status inactive (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: check_unit_by_status_fms_en
+    entities:
+    - unit_status: inactive
+  - slot_was_set:
+    - unit_status: inactive
+  - slot_was_set:
+    - unit_status: inactive
+  - action: action_get_fms_units_with_status
+  - action: utter_another_ask_help_en
+- story: get equipment category count (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: ask_equipment_category_count_madhani_fms_en  # predicted: get_equipment_categories_madhani_fms_en: How many equipment categories are there in Madhani?
+  - action: action_get_fms_total_category_equipment
+  - action: utter_another_ask_help_en
+- story: get equipment categories by status - status active (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: get_equipment_categories_by_status_fms_en
+    entities:
+    - equipment_category_status: active
+  - slot_was_set:
+    - equipment_category_status: active
+  - slot_was_set:
+    - equipment_category_status: active
+  - action: action_get_fms_equipment_category_from_status
+  - action: utter_another_ask_help_en
+- story: get equipment categories by status - status inactive (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: get_equipment_categories_by_status_fms_en
+    entities:
+    - equipment_category_status: inactive
+  - slot_was_set:
+    - equipment_category_status: inactive
+  - slot_was_set:
+    - equipment_category_status: inactive
+  - action: action_get_fms_equipment_category_from_status
+  - action: utter_another_ask_help_en
+- story: Handle fallback (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - intent: nlu_fallback  # predicted: ask_equipment_count_fms_id: apa itu madhani
+  - action: action_handle_fallback
+- story: Ask work orders by date (D:\BACKUP\RASA\Chatbot2\Rasa-Chatbot-Test\tests\test_stories.yml)
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - intent: get_work_orders_by_date_fms_id  # predicted: nlu_fallback: Tunjukkan work order pada tanggal 2024-01-02
+  - action: get_work_orders_by_date_form
+  - active_loop: get_work_orders_by_date_form
+  - active_loop: null
+  - action: action_get_fms_work_orders_by_date
+  - action: utter_another_ask_help_id

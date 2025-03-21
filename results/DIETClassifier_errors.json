@@ -1,0 +1,172 @@
+[
+  {
+    "text": "apakah saya masih punya cuti untuk tahun ini?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "leave_type",
+        "start": 35,
+        "end": 40,
+        "confidence_entity": 0.7067029476165771,
+        "value": "tahun",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "see my leave history",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "breakdown_top10_category",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.46964383125305176,
+        "value": "see",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tolong cari unit yang memiliki status tidak aktif",
+    "entities": [
+      {
+        "start": 38,
+        "end": 49,
+        "value": "tidak aktif",
+        "entity": "unit_status"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "unit_status",
+        "start": 44,
+        "end": 49,
+        "confidence_entity": 0.5316513180732727,
+        "value": "aktif",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Show 10 equipment with the highest usage frequency",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "breakdown_top10_category",
+        "start": 41,
+        "end": 50,
+        "confidence_entity": 0.6484695076942444,
+        "value": "frequency",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Bisa tunjukkan breakdown mana saja yang paling sering terjadi dalam daftar top 10?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "breakdown_top10_category",
+        "start": 15,
+        "end": 24,
+        "confidence_entity": 0.7564327120780945,
+        "value": "breakdown",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Apa saja 10 equipment dengan kilometer tempuh tertinggi?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 21,
+        "value": "equipment",
+        "entity": "category_name"
+      },
+      {
+        "start": 29,
+        "end": 38,
+        "value": "kilometer",
+        "entity": "equipment_top10_category"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "category_name",
+        "start": 12,
+        "end": 21,
+        "confidence_entity": 0.9997546076774597,
+        "value": "equipment",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "equipment_top10_category",
+        "start": 29,
+        "end": 45,
+        "confidence_entity": 0.7363869547843933,
+        "value": "kilometer tempuh",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What are the 10 most common breakdown causes factors that cause equipment to break down?",
+    "entities": [
+      {
+        "start": 28,
+        "end": 44,
+        "value": "breakdown causes",
+        "entity": "breakdown_top10_category"
+      },
+      {
+        "start": 64,
+        "end": 73,
+        "value": "equipment",
+        "entity": "category_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "breakdown_top10_category",
+        "start": 28,
+        "end": 44,
+        "confidence_entity": 0.9978881478309631,
+        "value": "breakdown causes",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "category_name",
+        "start": 64,
+        "end": 73,
+        "confidence_entity": 0.9995211362838745,
+        "value": "equipment",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "breakdown_top10_category",
+        "start": 77,
+        "end": 82,
+        "confidence_entity": 0.8998986482620239,
+        "value": "break",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

@@ -1,0 +1,161 @@
+version: "3.1"
+rules:
+- rule: Handle fallback in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: nlu_fallback
+    - action: action_handle_fallback
+
+- rule: Handle fallback in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: nlu_fallback
+    - action: action_handle_fallback
+
+- rule: Continue with bot in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: continue_with_bot_id
+    - action: action_continue_with_bot
+
+- rule: Continue with bot in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: continue_with_bot_en
+    - action: action_continue_with_bot
+
+- rule: Handle admin request in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+  - intent: ask_admin_id
+  - action: utter_choose_transfer_to_admin_id
+
+- rule: Handle admin request in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+  - intent: ask_admin_en
+  - action: utter_choose_transfer_to_admin_en
+
+- rule: fallback to admin and choose 001M App in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+  - intent: 001M_app_id
+  - action: action_transfer_to_admin
+
+- rule: fallback to admin and choose 001M App in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+  - intent: 001M_app_en
+  - action: action_transfer_to_admin
+
+- rule: fallback to admin and choose RAA App in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+  - intent: raa_app_id
+  - action: action_transfer_to_admin
+
+- rule: fallback to admin and choose RAA App in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+  - intent: raa_app_en
+  - action: action_transfer_to_admin
+
+- rule: fallback to admin and choose QHSE LMS App in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+  - intent: qhse_lms_app_id
+  - action: action_transfer_to_admin
+
+- rule: fallback to admin and choose QHSE LMS App in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+  - intent: qhse_lms_app_en
+  - action: action_transfer_to_admin
+
+- rule: fallback to admin and choose QHSE Assessment App in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+  - intent: qhse_ass_app_id
+  - action: action_transfer_to_admin
+
+- rule: fallback to admin and choose QHSE Assessment App in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+  - intent: qhse_ass_app_en
+  - action: action_transfer_to_admin
+
+- rule: fallback to admin and choose LMS OPD App in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+  - intent: lms_opd_app_id
+  - action: action_transfer_to_admin
+
+- rule: fallback to admin and choose LMS OPD App in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+  - intent: lms_opd_app_en
+  - action: action_transfer_to_admin
+
+- rule: fallback to admin and choose ESS App in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+  - intent: ess_app_id
+  - action: action_transfer_to_admin
+
+- rule: fallback to admin and choose ESS App in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+  - intent: ess_app_en
+  - action: action_transfer_to_admin
+
+- rule: fallback to admin and choose Others App in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+  - intent: others_app_id
+  - action: action_transfer_to_admin
+
+- rule: fallback to admin and choose Others App in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+  - intent: others_app_en
+  - action: action_transfer_to_admin

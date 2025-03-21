@@ -1,0 +1,242 @@
+version: "3.1"
+nlu:
+- synonym: laporan
+  examples: |
+    - report
+
+- intent: ask_request_daily_internal_report_001m_id
+  examples: |
+    - Berikan daily internal report
+    - Saya ingin laporan harian internal
+    - Tolong kirimkan laporan daily internal
+    - Bisa bantu beri laporan daily internal?
+    - Apakah saya bisa mendapatkan daily internal report?
+    - Butuh report daily internal tanggal 20 februari
+    - Bisakah Anda memberikan daily report internal hari ini?
+    - Daily internal report, tolong
+    - Report daily internal, tolong
+    - Tolong tampilkan laporan harian internal saya
+    - Saya membutuhkan laporan daily internal untuk hari ini
+    - Dapatkah saya menerima daily internal report?
+    - Tolong saya ingin melihat daily internal report untuk hari ini
+    - Berikan report daily internal, apakah tersedia?
+    - Berikan daily internal report saya sekarang
+    - Bisa berikan report daily internal untuk bulan ini?
+    - Report daily internal tanggal 27 Maret
+    - Saya ingin melihat daily internal report untuk hari ini
+    - Saya ingin laporan harian internal untuk hari ini
+    - Tolong kirimkan report daily internal untuk hari ini
+    - Tolong kirimkan report daily internal untuk tanggal 1 Maret 2024
+    - Tolong kirimkan report daily internal untuk bulan ini
+    - Tolong kirimkan report daily internal untuk bulan Januari
+    - Bisa bantu saya dengan report daily internal untuk bulan Desember?
+    - Ada report daily internal untuk tanggal 2 juni 2021?
+    - Bisa saya mendapatkan laporan daily internal hari ini?
+    - Daily internal report untuk hari ini bisa tampilkan?
+    - Ingin tahu daily internal report untuk hari ini
+    - Apakah bisa tampilkan laporan daily internal untuk tanggal 13 September 2001?
+    - Saya butuh laporan daily internal untuk bulan Juni 2022
+    - Bisa tampilkan daily internal report untuk tanggal 13 Maret?
+
+- intent: ask_request_daily_internal_report_001m_en
+  examples: |
+    - Give me the daily internal report
+    - I want the internal daily report
+    - Can you send me the daily internal report?
+    - Can you help me get the daily internal report?
+    - Can I get the daily internal report?
+    - I need the daily internal report for February 20th
+    - Could you provide the daily internal report for today?
+    - Daily internal report, please
+    - Please give me the internal daily report
+    - Can you show me my daily internal report?
+    - I need the daily internal report for today
+    - Can I receive the daily internal report?
+    - Please, I want to see the daily internal report for today
+    - Is the daily internal report available? Please give it to me
+    - Give me my daily internal report now
+    - Can you provide the daily internal report for this month?
+    - Daily internal report for March 27th
+    - I want to see the daily internal report for today
+    - I need the daily internal report for today, please
+    - Can you send me the daily internal report for March 1st, 2024?
+    - Could you send me the daily internal report for this month?
+    - Could you send me the daily internal report for January?
+    - Can you help me with the daily internal report for December?
+    - Is there a daily internal report for June 2nd, 2021?
+    - Can I get the daily internal report for today?
+    - Can you show me the daily internal report for today?
+    - I want to know the daily internal report for today
+    - Could you show me the daily internal report for September 13th, 2001?
+    - I need the daily internal report for June 2022
+    - Can you show me the daily internal report for March 13th?
+
+- intent: request_daily_internal_report_choose_001M_id
+  examples: |
+    - Berikan daily internal report 001M
+    - Tunjukkan daily internal report untuk 001M
+    - Saya ingin melihat daily internal report 001M
+    - Dapatkah kamu berikan laporan daily internal 001M?
+    - Tolong berikan laporan daily internal 001M untuk hari ini
+    - Daily internal report 001M, bisa tolong diberikan?
+    - Mohon tampilkan daily internal report 001M
+    - Bisa minta report daily internal aplikasi 001M?
+    - Report daily internal aplikasi 001M untuk hari ini, tolong berikan
+    - Saya ingin laporan daily internal 001M untuk tanggal 10 Juli 2023
+    - Bisakah kamu memberikan daily report internal untuk aplikasi 001M?
+    - Tolong kirimkan daily report internal 001M di tanggal 5 Januari 2021
+    - Saya butuh laporan daily internal 001M untuk melihat kinerja hari ini
+    - Apakah bisa tampilkan laporan daily internal pada aplikasi 001M untuk saya?
+    - Laporan daily internal 001M untuk hari ini
+    - Laporan daily internal 001M untuk bulan Januari
+    - Mohon berikan daily internal report di aplikasi 001M hari ini
+    - Daily internal report di aplikasi 001M hari ini? Bisa kirimkan ke saya?
+    - Harap tampilkan daily report internal 001M tanggal 3 september
+    - Saya ingin melihat daily internal report 001M untuk tanggal 27 agustus 2017, bisa bantu?
+    - Kirimkan daily internal report 001M hari ini?
+    - Tolong kirim laporan daily report internal 001M 
+    - Tolong kirim laporan daily internal report 001M 
+
+- intent: request_daily_internal_report_choose_001M_en
+  examples: |
+    - Give me the daily internal report for 001M
+    - Show me the daily internal report for 001M
+    - I want to see the daily internal report for 001M
+    - Can you provide the daily internal report for 001M?
+    - Please give me the daily internal report for 001M for today
+    - Daily internal report for 001M, can you please provide it?
+    - Kindly display the daily internal report for 001M
+    - Can I request the daily internal report for the 001M app?
+    - Please send me the daily internal report for 001M for today
+    - I want the daily internal report for 001M for July 10th, 2023
+    - Could you give me the daily internal report for 001M app?
+    - Please send me the daily internal report for 001M on January 5th, 2021
+    - I need the daily internal report for 001M to check today's performance
+    - Can you show the daily internal report for the 001M app for me?
+    - The daily internal report for 001M for today
+    - The daily internal report for 001M for January
+    - Please provide the daily internal report for 001M app today
+    - Can you send me the daily internal report for 001M app today?
+    - Please display the daily internal report for 001M on September 3rd
+    - I would like to see the daily internal report for 001M for August 27th, 2017, can you help?
+    - Send me the daily internal report for 001M today?
+    - Please send the daily internal report for 001M
+    - Kindly send me the daily internal report for 001M
+
+# - intent: ask_request_daily_external_report_001m_id
+#   examples: |
+#     - Berikan daily external report
+#     - Saya ingin laporan harian external
+#     - Tolong kirimkan laporan daily external
+#     - Apakah saya bisa mendapatkan daily external report?
+#     - Butuh report daily external tanggal 20 februari
+#     - Bisakah Anda memberikan report daily external hari ini?
+#     - Daily external report, tolong
+#     - Report daily external, tolong
+#     - Tolong tampilkan laporan harian external saya
+#     - Saya membutuhkan laporan daily external untuk hari ini
+#     - Dapatkah saya menerima daily external report?
+#     - Tolong saya ingin melihat daily external report untuk hari ini
+#     - Berikan report daily external, apakah tersedia?
+#     - Berikan daily external report saya sekarang
+#     - Bisa berikan report daily external untuk bulan ini?
+#     - Report daily external tanggal 27 Maret
+#     - Saya ingin melihat daily external report untuk hari ini
+#     - Saya ingin laporan harian external untuk hari ini
+#     - Tolong kirimkan report daily external untuk hari ini
+#     - Tolong kirimkan report daily external untuk tanggal 1 Maret 2024
+#     - Tolong kirimkan report daily external untuk bulan ini
+#     - Tolong kirimkan report daily external untuk bulan Januari
+#     - Bisa bantu saya dengan report daily external untuk bulan Desember?
+#     - Report daily external untuk tanggal 2 juni 2021?
+#     - Bisa saya mendapatkan laporan daily external hari ini?
+#     - Daily external report untuk tanggal 22 Februari, bisa tampilkan?
+#     - Ingin tahu daily external report untuk hari ini
+#     - Apakah bisa tampilkan laporan daily external untuk tanggal 2 Januari 2024?
+#     - Saya butuh laporan daily external untuk bulan Juni 2022
+#     - Bisa tampilkan daily external report untuk tanggal 13 Maret?
+
+# - intent: ask_request_daily_external_report_001m_en
+#   examples: |
+#     - Give me the daily external report
+#     - I want the daily external report
+#     - Please send me the daily external report
+#     - Can I get the daily external report?
+#     - I need the daily external report for February 20th
+#     - Can you provide the daily external report for today?
+#     - Daily external report, please
+#     - External daily report, please
+#     - Please show me my daily external report
+#     - I need the daily external report for today
+#     - Can I receive the daily external report?
+#     - Please, I would like to see the daily external report for today
+#     - Is the daily external report available? Please provide it
+#     - Please give me my daily external report now
+#     - Can you provide the daily external report for this month?
+#     - The daily external report for March 27th
+#     - I would like to see the daily external report for today
+#     - I want the daily external report for today
+#     - Please send the daily external report for today
+#     - Please send me the daily external report for March 1st, 2024
+#     - Please send the daily external report for this month
+#     - Please send the daily external report for January
+#     - Can you help me with the daily external report for December?
+#     - Is there a daily external report for June 2nd, 2021?
+#     - Can I get the daily external report for today?
+#     - Can you show the daily external report for February 22nd?
+#     - I want to know the daily external report for today
+#     - Can you show the daily external report for January 2nd, 2024?
+#     - I need the daily external report for June 2022
+#     - Can you show the daily external report for March 13th?
+
+# - intent: request_daily_external_report_choose_001M_id
+#   examples: |
+#     - Berikan daily external report 001M
+#     - Tunjukkan daily external report untuk 001M
+#     - Saya ingin melihat daily external report 001M
+#     - Dapatkah kamu berikan laporan daily external 001M?
+#     - Tolong berikan laporan daily external 001M untuk hari ini
+#     - Daily external report 001M, bisa tolong diberikan?
+#     - Mohon tampilkan daily external report 001M
+#     - Bisa minta report daily external aplikasi 001M?
+#     - Report daily external aplikasi 001M untuk hari ini, tolong berikan
+#     - Saya ingin laporan daily external 001M untuk tanggal 10 Juli 2023
+#     - Bisakah kamu memberikan daily report external untuk aplikasi 001M?
+#     - Tolong kirimkan daily report external 001M di tanggal 5 Januari 2021
+#     - Saya butuh laporan daily external 001M untuk melihat kinerja hari ini
+#     - Apakah bisa tampilkan laporan daily external pada aplikasi 001M untuk saya?
+#     - Laporan daily external 001M untuk hari ini
+#     - Laporan daily external 001M untuk bulan Januari
+#     - Mohon berikan daily external report di aplikasi 001M hari ini
+#     - Daily external report di aplikasi 001M? Bisa kirimkan ke saya?
+#     - Harap tampilkan daily report external 001M tanggal 3 september
+#     - Saya ingin melihat daily external report 001M untuk tanggal 27 agustus 2017, bisa bantu?
+#     - Kirimkan daily external report 001M hari ini?
+#     - Tolong kirim laporan daily report external 001M 
+#     - Tolong kirim laporan daily external report 001M 
+
+# - intent: request_daily_external_report_choose_001M_en
+#   examples: |
+#     - Give me the daily external report 001M
+#     - Show me the daily external report for 001M
+#     - I want to see the daily external report 001M
+#     - Can you provide the daily external report 001M?
+#     - Please provide the daily external report 001M for today
+#     - Daily external report 001M, could you please give it to me?
+#     - Please show me the daily external report 001M
+#     - Can I get the daily external report for app 001M?
+#     - The daily external report for app 001M today, please provide it
+#     - I want the daily external report 001M for July 10, 2023
+#     - Can you provide the daily external report for app 001M?
+#     - Please send me the daily external report 001M for January 5, 2021
+#     - I need the daily external report 001M to check today's performance
+#     - Can you show the daily external report on app 001M for me?
+#     - The daily external report 001M for today
+#     - The daily external report 001M for January
+#     - Please provide the daily external report on app 001M today
+#     - Daily external report on app 001M? Can you send it to me?
+#     - Please show the daily external report 001M for September 3
+#     - I want to see the daily external report 001M for August 27, 2017, can you help?
+#     - Send me the daily external report 001M for today
+#     - Please send the daily external report 001M
+#     - Please send me the daily external report 001M

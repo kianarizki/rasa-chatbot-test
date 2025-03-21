@@ -1,0 +1,3094 @@
+# version: "3.1"
+# nlu:
+# - synonym: aktif
+#   examples: |
+#     - aktif
+#     - active
+
+# - synonym: tidak aktif
+#   examples: |
+#     - tidak aktif
+#     - inactive
+
+# - intent: ask_equipment_count_fms_id
+#   examples: |
+#     - Madhani punya berapa unit?
+#     - Total unit Madhani ada berapa?
+#     - Ada berapa banyak unit di Madhani?
+#     - Berapa jumlah unit yang dimiliki Madhani?
+#     - Berapa total unit di Madhani?
+#     - Total unit yang terdaftar di FMS berapa?
+#     - Berapa banyak unit yang dimiliki oleh Madhani?
+#     - Jumlah unit yang ada di FMS, ada berapa ya?
+#     - Ada berapa unit di sistem FMS?
+#     - Total unit yang tercatat di FMS berapa?
+#     - Berapa unit yang terdaftar pada FMS?
+#     - Berapa banyak unit yang tersedia di Madhani?
+#     - Saya ingin tahu jumlah unit yang dimiliki Madhani
+#     - Total jumlah unit di Madhani saat ini berapa?
+#     - Ada berapa unit yang tercatat di Madhani?
+#     - Madhani memiliki berapa banyak unit yang terdaftar di sistem?
+#     - Berapa unit yang terdaftar di Madhani?
+#     - Total unit di FMS ada berapa?
+#     - Saya mau tahu ada berapa unit di FMS?
+#     - Bisa berikan jumlah total unit di Madhani?
+#     - Ada berapa total unit di FMS sekarang?
+#     - Berapa unit yang dimiliki Madhani?
+
+# - intent: ask_equipment_count_fms_en
+#   examples: |
+#     - How many units does Madhani have?
+#     - What is the total number of units at Madhani?
+#     - How many units are there at Madhani?
+#     - How many units does Madhani own?
+#     - What is the total count of units at Madhani?
+#     - How many units are registered in the FMS?
+#     - How many units does Madhani currently have?
+#     - What is the total number of units recorded in the FMS?
+#     - How many units are there in the FMS system?
+#     - What is the total number of units listed in the FMS?
+#     - How many units are registered with the FMS?
+#     - How many units are available at Madhani?
+#     - I want to know the total number of units Madhani has
+#     - What is the total number of units at Madhani right now?
+#     - How many units are recorded at Madhani?
+#     - How many units does Madhani have registered in the system?
+#     - How many units are registered at Madhani?
+#     - What is the total number of units in the FMS?
+#     - Can you tell me how many units are in the FMS?
+#     - Can you provide the total number of units at Madhani?
+#     - How many total units are there in the FMS now?
+#     - How many units does Madhani own?
+
+# - intent: check_unit_by_type_and_site_fms_id
+#   examples: |
+#     - Apakah tersedia unit dengan tipe TRUCK RIGID?
+#     - Unit dengan tipe TRUCK RIGID ada?
+#     - Adakah unit dengan tipe TRUCK RIGID?
+#     - Apakah ada unit tipe TRUCK RIGID?
+#     - Saya ingin tahu apakah ada unit dengan tipe TRUCK RIGID?
+#     - Ada unit dengan tipe TRUCK RIGID?
+#     - Tolong cek apakah ada unit dengan tipe TRUCK RIGID?
+#     - Apakah tipe unit TRUCK RIGID tersedia?
+#     - Cek unit dengan tipe TRUCK RIGID?
+#     - Saya mau tahu apakah unit tipe TRUCK RIGID ada?
+#     - Bisa cek tipe unit TRUCK RIGID ada atau tidak?
+#     - Unit tipe TRUCK RIGID ada?
+#     - Tolong periksa apakah ada unit dengan tipe TRUCK RIGID?
+#     - Apakah unit tipe TRUCK RIGID tersedia?
+#     - Ada unit dengan tipe TRUCK RIGID yang tersedia?
+#     - Saya ingin tahu ketersediaan unit tipe TRUCK RIGID?
+#     - Unit dengan tipe TRUCK RIGID ada di sistem?
+#     - Tolong konfirmasi jika ada unit dengan tipe TRUCK RIGID?
+#     - Bisa tunjukkan daftar unit dengan tipe TRUCK RIGID?
+#     - Unit dengan tipe TRUCK RIGID masih tersedia?
+#     - Apakah ada unit bertipe TRUCK RIGID?
+#     - Adakah unit dengan tipe TRUCK RIGID di site Head Office Jakarta
+#     - Ada unit dengan tipe TRUCK RIGID di site 001A
+#     - Tolong cek apakah ada unit dengan tipe TRUCK RIGID di site 001A
+#     - Apakah tipe unit TRUCK RIGID tersedia di site Head Office Jakarta
+#     - Cek unit dengan tipe TRUCK RIGID di site 001A
+#     - Bisa cek tipe unit TRUCK RIGID ada di site 001A
+#     - Unit tipe TRUCK RIGID ada di site Head Office Jakarta?
+#     - Apakah tipe TRUCK RIGID tersedia di site 001A?
+
+# - intent: check_unit_by_type_and_site_fms_en
+#   examples: |
+#     - Is there a unit with the type TRUCK RIGID available?
+#     - Are there any units of type TRUCK RIGID?
+#     - Are units with the type TRUCK RIGID available?
+#     - Is there a TRUCK RIGID type unit?
+#     - I want to know if there is a unit with the type TRUCK RIGID
+#     - Are there any units of type TRUCK RIGID?
+#     - Please check if there is a unit with the type TRUCK RIGID
+#     - Is the TRUCK RIGID type unit available?
+#     - Check the unit with the type TRUCK RIGID
+#     - I'd like to know if the TRUCK RIGID type unit exists
+#     - Can you check if the TRUCK RIGID type unit is available?
+#     - Is there a TRUCK RIGID type unit available?
+#     - Please confirm if there is a unit with the type TRUCK RIGID
+#     - Is the TRUCK RIGID type unit available?
+#     - Is there a TRUCK RIGID type unit currently available?
+#     - I want to check the availability of a TRUCK RIGID type unit
+#     - Is there a TRUCK RIGID type unit in the system?
+#     - Please confirm if there is a TRUCK RIGID type unit
+#     - Can you show me a list of units with the type TRUCK RIGID?
+#     - Is the TRUCK RIGID type unit still available?
+#     - Are there any TRUCK RIGID type units?
+#     - Is there a unit with the type TRUCK RIGID at the Head Office Jakarta site?
+#     - Is there a TRUCK RIGID type unit at the 001A site?
+#     - Please check if there is a TRUCK RIGID type unit at the 001A site
+#     - Is the TRUCK RIGID type unit available at the Head Office Jakarta site?
+#     - Check for TRUCK RIGID type units at the 001A site
+#     - Can you check if there is a TRUCK RIGID type unit at the 001A site?
+#     - Is there a TRUCK RIGID type unit at the Head Office Jakarta site?
+#     - Is the TRUCK RIGID type unit available at the 001A site?
+
+# - intent: ask_type_of_unit_fms_id
+#   examples: |
+#     - Apa tipe unit TR-04102SCO?
+#     - Tipe unit TR-04102SCO itu apa?
+#     - Bisa beritahu tipe unit TR-04102SCO?
+#     - Unit HD465 itu tipe apa?
+#     - TR-04102SCO masuk tipe apa?
+#     - Apa tipe dari unit TR-04102SCO?
+#     - Tolong beri tahu tipe dari unit TR-04102SCO
+#     - Saya ingin tahu tipe unit TRUCK01
+#     - Informasikan tipe unit TR-04102SCO
+#     - Unit DEVICE975FADLI adalah tipe apa?
+#     - Bisa kasih tahu tipe dari unit TR-04102SCO?
+#     - Saya mau tahu tipe dari unit HD465
+#     - Apa jenis tipe unit TRUCK01?
+#     - Unit TRUCK01 termasuk tipe apa?
+#     - Tipe dari unit HD465 apa?
+#     - Tolong informasikan tipe unit TR-04102SCO
+#     - Saya butuh informasi tipe unit TR-04102SCO ini
+
+# - intent: ask_type_of_unit_fms_en
+#   examples: |
+#     - What is the type of unit TR-04102SCO?
+#     - Can you tell me the type of unit TR-04102SCO?
+#     - What type does TR-04102SCOfall under?
+#     - Please tell me the type of the unit TR-04102SCO
+#     - I want to know the type of unit TR-04102SCO
+#     - Provide the type of unit TR-04102SCO
+#     - What type is the unit TR-04102SCO?
+#     - Can you tell me the type of the unit TR-04102SCO?
+#     - I'd like to know the type of the unit TR-04102SCO
+#     - Which type does the unit TRUCK01 belong to?
+#     - What is the type of the unit TR-04102SCO?
+#     - Please provide information about the type of unit TR-04102SCO
+#     - I need information about the type of unit TR-04102SCO
+
+# - intent: ask_count_units_by_type_fms_id
+#   examples: |
+#     - Ada berapa unit dengan tipe BIG TRUCK RIGID?
+#     - Berapa banyak unit tipe TRUCK RIGID?
+#     - Tolong hitung unit dengan tipe BIG TRUCK RIGID?
+#     - Unit tipe BIG TRUCK RIGID ada berapa?
+#     - Berapa total unit tipe BIG TRUCK RIGID?
+#     - Berapa jumlah unit yang memiliki tipe TRUCK RIGID?
+#     - Beri tahu ada berapa unit tipe BIG TRUCK RIGID?
+#     - Berapa unit yang tercatat dengan tipe TRUCK RIGID?
+#     - Tolong hitungkan jumlah unit dengan tipe TRUCK RIGID?
+#     - Ada berapa total unit dengan tipe BIG TRUCK RIGID?
+#     - Ada berapa total unit tipe BIG TRUCK RIGID?
+#     - Saya ingin tahu jumlah unit tipe TRUCK RIGID
+#     - Bisa hitungkan unit tipe BIG TRUCK RIGID?
+#     - Unit bertipe TRUCK RIGID tersedia berapa banyak?
+#     - Tipe unit BIG TRUCK RIGID ada berapa?
+#     - Tolong informasikan jumlah unit tipe TRUCK RIGID?
+#     - Unit tipe BIG TRUCK RIGID saat ini ada berapa?
+#     - Berapa banyak unit dengan tipe TRUCK RIGID?
+#     - Saya mau tahu berapa banyak unit yang bertipe BIG TRUCK RIGID
+#     - Berapa banyak unit yang bertipe BIG TRUCK RIGID?
+
+# - intent: ask_count_units_by_type_fms_en
+#   examples: |
+#     - How many units are there with the type BIG TRUCK RIGID?
+#     - How many units of type TRUCK RIGID are there?
+#     - Please count the units with the type BIG TRUCK RIGID
+#     - How many units of type BIG TRUCK RIGID are available?
+#     - How many units have the type TRUCK RIGID?
+#     - Tell me how many units of type BIG TRUCK RIGID there are
+#     - How many units are recorded with the type TRUCK RIGID?
+#     - Please calculate the number of units with the type TRUCK RIGID
+#     - What is the total count of units with the type BIG TRUCK RIGID?
+#     - What is the total number of units with the type BIG TRUCK RIGID?
+#     - I want to know the number of units of type TRUCK RIGID
+#     - Can you count the units of type BIG TRUCK RIGID?
+#     - How many units of type TRUCK RIGID are currently available?
+#     - How many units belong to the type BIG TRUCK RIGID?
+#     - Please provide the number of units with the type TRUCK RIGID
+#     - How many units of type BIG TRUCK RIGID are there now?
+#     - How many units exist with the type TRUCK RIGID?
+#     - I want to know how many units belong to the type BIG TRUCK RIGID
+#     - How many units are categorized as BIG TRUCK RIGID?
+
+# - intent: ask_unit_purchase_year_fms_id
+#   examples: |
+#     - Tahun berapa unit TR-04102SCO dibeli?
+#     - Kapan unit TR-04102SCO dibeli?
+#     - Unit TR-04102SCO dibeli tahun berapa?
+#     - Bisa tolong cek, tahun berapa unit TR-04102SCO dibeli?
+#     - Kapan pembelian unit TR-04102SCO?
+#     - Unit TR-04102SCO dibeli di tahun berapa?
+#     - Tahun pembelian untuk unit TR-04102SCO itu kapan?
+#     - Tahu tidak, kapan unit TR-04102SCO dibeli?
+#     - Mohon informasikan tahun pembelian unit TR-04102SCO
+#     - Kapan tepatnya unit TR-04102SCO dibeli?
+#     - Bisa cek tahun pembelian unit TR-04102SCO?
+#     - Saya ingin tahu kapan unit TR-04102SCO dibeli
+#     - Tolong cek tahun berapa unit TR-04102SCO dibeli?
+#     - Unit dengan kode TR-04102SCO dibeli kapan?
+#     - Pembelian unit TR-04102SCO itu tahun berapa?
+#     - Kapan unit dengan kode TR-04102SCO dibeli?
+#     - Tolong berikan tahun pembelian untuk unit TR-04102SCO
+#     - Bisa kasih tahu kapan pembelian unit TR-04102SCO?
+#     - Tahun pembelian unit dengan kode TR-04102SCO itu kapan?
+#     - Apakah bisa informasikan kapan unit TR-04102SCO dibeli?
+
+# - intent: ask_unit_purchase_year_fms_en
+#   examples: |
+#     - What year was the unit TR-04102SCO purchased?
+#     - When was the unit TR-04102SCO purchased?
+#     - In what year was the unit TR-04102SCO bought?
+#     - Can you please check what year the unit TR-04102SCO was purchased?
+#     - When was the purchase of the unit TR-04102SCO?
+#     - What year was the unit TR-04102SCO purchased in?
+#     - What is the purchase year for the unit TR-04102SCO?
+#     - Do you know when the unit TR-04102SCO was purchased?
+#     - Please provide the purchase year of the unit TR-04102SCO
+#     - When exactly was the unit TR-04102SCO purchased?
+#     - Can you check the purchase year of the unit TR-04102SCO?
+#     - I want to know when the unit TR-04102SCO was purchased
+#     - Please check what year the unit TR-04102SCO was purchased
+#     - When was the unit with code TR-04102SCO purchased?
+#     - When was the unit with code TR-04102SCO bought?
+#     - Please provide the purchase year for the unit TR-04102SCO
+#     - Can you tell me when the unit TR-04102SCO was purchased?
+#     - What is the purchase year of the unit with code TR-04102SCO?
+#     - Could you provide information on when the unit TR-04102SCO was purchased?
+
+# - intent: check_unit_by_status_fms_id
+#   examples: |
+#     - Tolong berikan detail unit dengan status [aktif](unit_status)?
+#     - Unit apa yang saat ini dalam status [aktif](unit_status)?
+#     - Butuh daftar unit dengan status [aktif](unit_status)
+#     - Apakah ada unit yang memiliki status [tidak aktif](unit_status)?
+#     - Tampilkan unit dengan status [aktif](unit_status)
+#     - Bisa beri tahu unit apa saja yang sedang dalam status [aktif](unit_status)?
+#     - Cari unit yang memiliki status tidak [aktif](unit_status)
+#     - Tampilkan semua unit yang memiliki status [tidak aktif](unit_status)
+#     - Apa saja unit yang dalam status [aktif](unit_status)?
+#     - Unit apa saja yang memiliki status [aktif](unit_status)?
+#     - Unit apa saja dengan status [tidak aktif](unit_status)?
+#     - Tolong cek unit dengan status [aktif](unit_status), apakah tersedia?
+#     - Berikan daftar unit dengan status [aktif](unit_status)?
+#     - Daftar unit yang memiliki status [tidak aktif](unit_status)?
+#     - Unit apa saja yang sedang dalam status [aktif](unit_status)?
+#     - Apakah ada unit dengan status [tidak aktif](unit_status)?
+#     - Tolong cari unit yang memiliki status [tidak aktif](unit_status)
+#     - Ada unit yang saat ini dalam status [aktif](unit_status)?
+#     - Saya ingin tahu unit apa saja dengan status [aktif](unit_status)
+#     - Apakah unit dengan status [tidak aktif](unit_status) tersedia?
+#     - Apakah ada daftar unit dengan status [tidak aktif](unit_status)?
+
+# - intent: check_unit_by_status_fms_en
+#   examples: |
+#     - Please provide details of units with status [active](unit_status)
+#     - I need a list of units with status [active](unit_status)
+#     - Show units with status [active](unit_status)
+#     - Can you tell me which units are currently in [active](unit_status) unit_status?
+#     - Find units with status [inactive](unit_status)
+#     - Show all units with status [inactive](unit_status)
+#     - What are the units in [active](unit_status) status?
+#     - Which units have the status [active](unit_status)?
+#     - What units have status [inactive](unit_status)?
+#     - Please check if there are any units with status [active](unit_status)
+#     - Provide a list of units with status [active](unit_status)
+#     - List units with status [inactive](unit_status)
+#     - Which units are currently in [active](unit_status) unit_status?
+#     - Are there any units with status [inactive](unit_status)?
+#     - Please find units with status [inactive](unit_status)
+#     - Are there any units currently in [active](unit_status) status?
+#     - I want to know which units have status [active](unit_status)
+#     - Is there a unit with status [inactive](unit_status) available?
+#     - Is there a list of units with status [inactive](unit_status)?
+
+# - intent: ask_unit_information_fms_id
+#   examples: |
+#     - Berikan informasi tentang unit TR-04102SCO
+#     - Apa informasi tentang unit HD465-7?
+#     - Saya ingin tahu detail tentang unit TR-04102SCO
+#     - Tolong beri data lengkap untuk unit TR-04102SCO
+#     - Informasi tentang unit TR-04102SCO
+#     - Bisa kasih tahu informasi tentang unit TR-04102SCO?
+#     - Detail unit HD465-7 apa saja?
+#     - Saya butuh data lengkap untuk unit TR-04102SCO
+#     - Informasi lengkap unit DEVICE975FADLI apa?
+#     - Apa saja detail dari unit TR-04102SCO?
+#     - Mohon beri informasi tentang unit TR-04102SCO
+#     - Jelaskan informasi yang tersedia untuk unit TR-04102SCO
+#     - Tolong tampilkan data unit TR-04102SCO
+#     - Informasi unit TR-04102SCO apa saja yang ada?
+#     - Saya ingin tahu rincian untuk unit TR-04102SCO
+#     - Apa data lengkap tentang unit TR-04102SCO?
+#     - Tunjukkan semua informasi tentang unit TR-04102SCO
+#     - Bisakah Anda beri detail untuk unit TR-04102SCO?
+#     - Apa saja informasi terkait unit TR-04102SCO?
+#     - Saya ingin lihat informasi unit TR-04102SCO
+
+# - intent: ask_unit_information_fms_en
+#   examples: |
+#     - Provide information about unit TR-04102SCO
+#     - What details are available about unit TR-04102SCO?
+#     - I want to know more about unit TR-04102SCO
+#     - Please provide complete data for unit TR-04102SCO
+#     - Can you share information about unit TR-04102SCO?
+#     - What's the information for unit TR-04102SCO?
+#     - What details are there about unit HD465-7?
+#     - I need full data for unit TR-04102SCO
+#     - What is the complete information for unit TR-04102SCO?
+#     - Can you tell me the details of unit TR-04102SCO?
+#     - Please provide details about unit HD465-7
+#     - Explain the available information for unit TR-04102SCO
+#     - Show me the data for unit TR-04102SCO
+#     - What information is available for unit TR-04102SCO?
+#     - I'd like to see the details of unit HD465-7
+#     - What's the complete data for unit TR-04102SCO?
+#     - Show all the information about unit TR-04102SCO
+#     - Could you provide the details for unit TR-04102SCO?
+#     - What information is available for unit HD465-7?
+#     - I want to see the details informations for unit TR-04102SCO
+
+# - intent: ask_unit_modification_status_fms_id
+#   examples: |
+#     - Tolong cek modifikasi pada unit TR-04102SCO
+#     - Modifikasi apa yang ada di unit HD465-7?
+#     - Unit TR-04102SCO di modifikasi?
+#     - Tolong cek, apakah unit TR-04102SCO sudah dimodifikasi?
+#     - Unit TR-04102SCO sudah ada modifikasi atau belum?
+#     - Unit HD465-7 memiliki modifikasi atau tidak?
+#     - Saya ingin tahu modifikasi unit TR-04102SCO apa saja
+#     - Unit TR-04102SCO dimodifikasi atau tidak?
+#     - Tolong cek detail modifikasi untuk unit HD465-7
+#     - Saya ingin tahu apakah ada modifikasi untuk unit TR-04102SCO?
+#     - Bisakah beri tahu detail apakah unit TR-04102SCO dimodifikasi?
+#     - Modifikasi apa saja yang ada di unit TR-04102SCO?
+#     - Apakah unit TR-04102SCO dimodifikasi?
+#     - Tolong cek modifikasi pada unit HD465-7?
+#     - Apakah ada modifikasi pada unit TR-04102SCO?
+#     - Unit TR-04102SCO punya modifikasi apa saja?
+#     - Apakah unit TR-04102SCO punya modifikasi?
+#     - Saya mau tahu modifikasi di unit TR-04102SCO?
+#     - Tolong beri detail modifikasi untuk unit TR-04102SCO?
+#     - Unit HD465-7 dimodifikasi atau tidak?
+#     - Ada modifikasi apa di unit TR-04102SCO?
+#     - Bisa tunjukkan modifikasi untuk unit TR-04102SCO?
+#     - Apakah unit TR-04102SCO dimodifikasi sebelumnya?
+#     - Modifikasi pada unit TR-04102SCO apa saja?
+
+# - intent: ask_unit_modification_status_fms_en
+#   examples: |
+#     - Please check the modifications on the unit TR-04102SCO
+#     - What modifications have been made to the unit HD465-7?
+#     - Has the unit TR-04102SCO been modified?
+#     - Check if the unit TR-04102SCO has undergone modifications
+#     - I want to know what modifications have been made to the unit TR-04102SCO
+#     - Was the unit TR-04102SCO modified or not?
+#     - Please check the modification details for the unit HD465-7
+#     - I'd like to know if there are any modifications for the unit TR-04102SCO
+#     - Can you provide details about whether the unit TR-04102SCO has been modified?
+#     - What modifications are there on the unit TR-04102SCO?
+#     - Could you verify the modifications on the unit HD465-7?
+#     - Are there any modifications applied to the unit TR-04102SCO?
+#     - What kind of modifications does the unit TR-04102SCO have?
+#     - Does the unit TR-04102SCO have any modifications?
+#     - I want to know about the modifications on the unit TR-04102SCO
+#     - Please provide detailed modifications for the unit TR-04102SCO
+#     - What are the modifications on the unit TR-04102SCO?
+#     - What modifications are available for the unit TR-04102SCO?
+#     - Can you show detail the modifications for the unit TR-04102SCO?
+
+# - intent: ask_unit_serial_number_fms_id
+#   examples: |
+#     - Berapa serial number unit TR-04102SCO?
+#     - Apa serial number unit TR-04102SCO?
+#     - Cek serial number untuk unit TR-04102SCO
+#     - Serial number unit HD465-7 berapa?
+#     - Unit TR-04102SCO serial numbernya apa?
+#     - Bisa beri tahu serial number unit TR-04102SCO?
+#     - Serial number untuk unit TR-04102SCO apa?
+#     - Unit HD465-7 memiliki serial number berapa?
+#     - Saya ingin tahu serial number unit TR-04102SCO
+#     - Tolong informasikan serial number untuk unit TR-04102SCO
+#     - Apa serial number dari unit TR-04102SCO?
+#     - Serial number yang terdaftar untuk unit HD465-7 apa?
+#     - Bisa cek serial number unit TR-04102SCO?
+#     - Serial number untuk unit TR-04102SCO tolong beri tahu
+#     - Apakah serial number unit TR-04102SCO?
+#     - Apakah serial number unit TR-04102SCO tersedia?
+#     - Serial number dari unit HD465-7 berapa?
+#     - Beritahu serial number unit TR-04102SCO
+#     - Informasi serial number untuk unit TR-04102SCO apa?
+#     - Apa nomor serial dari unit TR-04102SCO?
+#     - Bisa sebutkan serial number unit HD465-7?
+
+# - intent: ask_unit_serial_number_fms_en
+#   examples: |
+#     - What is the serial number of unit TR-04102SCO?
+#     - Can you tell me the serial number of unit TR-04102SCO?
+#     - Check the serial number for unit TR-04102SCO
+#     - What's the serial number for unit HD465-7?
+#     - What's the serial number for unit TR-04102SCO?
+#     - Could you provide the serial number of unit TR-04102SCO?
+#     - What's the serial number for unit TR-04102SCO?
+#     - Does unit HD465-7 have a serial number?
+#     - I'd like to know the serial number of unit TR-04102SCO
+#     - Please share the serial number for unit TR-04102SCO
+#     - What's the serial number of unit TR-04102SCO?
+#     - What is the registered serial number for unit HD465-7?
+#     - Can you check the serial number of unit TR-04102SCO?
+#     - Could you provide the serial number for unit TR-04102SCO?
+#     - Is there a serial number for unit TR-04102SCO?
+#     - Is the serial number for unit TR-04102SCO available?
+#     - What's the serial number for unit HD465-7?
+#     - Tell me the serial number of unit TR-04102SCO
+#     - What's the serial number information for unit TR-04102SCO?
+#     - Could you share the serial number for unit HD465-7?
+
+# - intent: ask_equipment_category_count_madhani_fms_id
+#   examples: |
+#     - Ada berapa kategori equipment yang ada di Madhani?
+#     - Berapa jumlah kategori equipment di Madhani?
+#     - Total kategori equipment di Madhani ada berapa?
+#     - Kategori equipment di Madhani ada berapa?
+#     - Bisa tunjukkan total kategori equipment yang terdaftar di Madhani?
+#     - Tolong beri tahu berapa kategori equipment yang terdaftar?
+#     - Ada berapa kategori equipment di Madhani?
+#     - Kategori equipment di Madhani ada berapa?
+#     - Jumlah kategori equipment yang tercatat berapa?
+#     - Berapa banyak kategori equipment yang ada di sistem?
+#     - total kategori equipment yang ada di Madhani?
+#     - Ada berapa macam kategori equipment di database?
+#     - Tolong hitungkan jumlah kategori equipment
+#     - Berapa total kategori equipment yang tersedia?
+#     - Mohon info jumlah kategori equipment di sistem Madhani
+#     - Total kategori equipment yang ada saat ini berapa?
+#     - Berapa total kategori equipment di Madhani?
+#     - Bisa tampilkan jumlah kategori equipment?
+#     - Kategori equipment yang ada saat ini berapa banyak?
+#     - Total jumlah kategori equipment di database Madhani?
+#     - Ada berapa kategori equipment yang ada di FMS?
+#     - Berapa jumlah kategori equipment di FMS?
+#     - Total kategori equipment di FMS ada berapa?
+#     - Kategori equipment di FMS ada berapa?
+#     - Bisa tunjukkan total kategori equipment di FMS?
+#     - Berapa banyak kategori equipment yang terdaftar di FMS?
+#     - Jumlah kategori equipment yang ada di FMS berapa?
+#     - Ada berapa macam kategori equipment di sistem FMS?
+#     - Tolong beri tahu jumlah kategori equipment di FMS
+#     - Berapa total kategori equipment di sistem FMS?
+#     - ada berapa total kategori equipment di sistem FMS?
+
+# - intent: ask_equipment_category_count_madhani_fms_en
+#   examples: |
+#     - How many equipment categories are there in Madhani?
+#     - What is the total number of equipment categories in Madhani?
+#     - How many equipment categories are recorded in Madhani?
+#     - Can you show the total equipment categories registered in Madhani?
+#     - How many equipment categories exist in Madhani?
+#     - What is the count of equipment categories in Madhani?
+#     - How many types of equipment categories are there in the database?
+#     - Please tell me the total number of equipment categories
+#     - What is the total equipment category count available?
+#     - How many equipment categories are in the system?
+#     - Can you display the number of equipment categories?
+#     - What is the total number of equipment categories in the database?
+#     - How many equipment categories are currently available?
+#     - Could you provide the number of equipment categories in Madhani?
+#     - What is the total count of equipment categories?
+#     - How many equipment categories are registered in FMS?
+#     - What is the total number of equipment categories in FMS?
+#     - How many categories of equipment exist in the FMS system?
+#     - Can you tell me how many equipment categories are in FMS?
+#     - How many types of equipment categories are registered in FMS?
+#     - How many equipment categories are there in FMS?
+#     - What is the total equipment category count in FMS?
+#     - Can you show the total number of equipment categories in FMS?
+#     - How many equipment categories are available in FMS?
+#     - What is the total count of equipment categories in FMS?
+#     - How many equipment categories are recorded in the FMS database?
+#     - Please provide the total equipment category count in FMS
+#     - What is the current total number of equipment categories in the system?
+#     - How many equipment categories are currently listed in FMS?
+
+# - intent: get_equipment_categories_madhani_fms_id
+#   examples: |
+#     - Sebutkan kategori equipment yang ada di Madhani?
+#     - Daftar kategori equipment?
+#     - Sebutkan kategori equipment yang ada di FMS?
+#     - Daftar kategori equipment yang ada di Madhani
+#     - Tunjukkan kategori equipment milik Madhani?
+#     - Apa saja kategori equipment yang ada di Madhani?
+#     - Bisa tunjukkan kategori equipment yang dimiliki Madhani?
+#     - Sebutkan kategori equipment yang terdaftar di Madhani
+#     - Tolong beri daftar kategori equipment di Madhani
+#     - Kategori equipment apa yang ada di Madhani?
+#     - Ada kategori apa saja untuk equipment di Madhani?
+#     - Berikan daftar kategori equipment
+#     - Berikan daftar kategori equipment yang terdaftar
+#     - Saya ingin tahu kategori equipment yang terdaftar di Madhani
+#     - Kategori equipment di Madhani terdiri dari apa saja?
+#     - Tolong sebutkan kategori-kategori equipment di Madhani
+#     - Apa saja kategori equipment yang tersedia di Madhani?
+#     - Bisakah saya mendapatkan informasi tentang kategori equipment di Madhani?
+#     - Berikan detail kategori equipment yang ada di Madhani
+#     - Ingin lihat daftar kategori equipment yang ada
+#     - Ada berapa kategori equipment dan apa saja namanya?
+#     - Daftar kategori equipment apa yang dimiliki oleh Madhani?
+#     - Tampilkan kategori equipment yang ada
+#     - Apa daftar kategori equipment yang tersedia?
+#     - Madhani memiliki kategori equipment apa saja?
+#     - Bisakah kamu menyebutkan kategori equipment di Madhani?
+#     - Apa saja klasifikasi kategori equipment di Madhani?
+#     - Ada kategori equipment jenis apa saja di Madhani?
+#     - Bisa minta daftar kategori equipment dari Madhani?
+#     - Berikan list kategori equipment di Madhani
+#     - Apa kategori equipment yang terdaftar di Madhani?
+#     - Tolong sebutkan kategori equipment yang ada di Madhani
+
+# - intent: get_equipment_categories_madhani_fms_en
+#   examples: |
+#     - List of equipment categories?
+#     - What are the equipment categories in Madhani?
+#     - What are the equipment categories in FMS?
+#     - Show me the list of equipment categories in FMS
+#     - List the equipment categories in Madhani
+#     - Show the equipment categories owned by Madhani
+#     - What are the equipment categories available in Madhani?
+#     - Can you show me the equipment categories in Madhani?
+#     - Mention the registered equipment categories in Madhani
+#     - Please provide the list of equipment categories in Madhani
+#     - What equipment categories are there in Madhani?
+#     - What types of equipment categories does Madhani have?
+#     - Provide the list of equipment categories
+#     - Show me the registered equipment categories
+#     - I want to know the equipment categories registered in Madhani
+#     - What do the equipment categories in Madhani consist of?
+#     - Please list the equipment categories in Madhani
+#     - What are the available equipment categories in Madhani?
+#     - Can I get information about the equipment categories in Madhani?
+#     - Provide details of the equipment categories in Madhani
+#     - I want to see the list of available equipment categories
+#     - How many equipment categories are there, and what are their names?
+#     - What equipment categories are owned by Madhani?
+#     - Display the available equipment categories
+#     - What is the list of available equipment categories?
+#     - What equipment categories does Madhani have?
+#     - Can you mention the equipment categories in Madhani?
+#     - What are the classifications of equipment categories in Madhani?
+#     - What types of equipment categories are there in Madhani?
+#     - Can I get the list of equipment categories from Madhani?
+#     - Provide the list of equipment categories in Madhani
+#     - What are the registered equipment categories in Madhani?
+#     - Please mention the equipment categories available in Madhani
+
+# - intent: get_equipment_types_by_category_fms_id
+#   examples: |
+#     - Tipe equipment apa saja yang ada dalam kategori Amphibis?
+#     - Apa saja tipe equipment dalam kategori Amphibis?
+#     - Sebutkan tipe equipment untuk kategori Amphibis
+#     - Tipe equipment apa saja yang ada di kategori Amphibis?
+#     - Bisa tunjukkan tipe equipment dalam kategori Amphibis?
+#     - Saya ingin tahu jenis equipment di kategori Amphibis
+#     - Apa tipe equipment yang ada dalam kategori Amphibis?
+#     - Tolong tampilkan tipe equipment untuk kategori Amphibis
+#     - Ada tipe equipment apa saja di kategori Amphibis?
+#     - Daftar tipe equipment dalam kategori Amphibis
+#     - Jenis equipment apa yang ada di dalam kategori Amphibis?
+#     - Tolong sebutkan tipe equipment dalam kategori Amphibis
+#     - Equipment dalam kategori Amphibis apa saja?
+#     - Saya ingin lihat jenis equipment yang ada di kategori Amphibis
+#     - Bisa sebutkan jenis equipment yang ada di kategori Amphibis?
+#     - Berikan daftar tipe equipment dalam kategori Amphibis
+#     - Jenis tipe equipment apa saja yang termasuk kategori Amphibis?
+#     - Mohon tampilkan jenis-jenis equipment yang ada di kategori Amphibis
+
+# - intent: get_equipment_types_by_category_fms_en
+#   examples: |
+#     - What equipment types are in the Amphibis category?
+#     - What are the equipment types in the Amphibis category?
+#     - List the equipment types for the Amphibis category
+#     - What equipment types are included in the Amphibis category?
+#     - Can you show the equipment types in the Amphibis category?
+#     - I want to know the equipment types in the Amphibis category
+#     - What equipment types are available in the Amphibis category?
+#     - Please display the equipment types for the Amphibis category
+#     - What are the types of equipment in the Amphibis category?
+#     - List of equipment types in the Amphibis category
+#     - What types of equipment are there in the Amphibis category?
+#     - Please mention the equipment types in the Amphibis category
+#     - What equipment is included in the Amphibis category?
+#     - I want to see the types of equipment in the Amphibis category
+#     - Can you list the equipment types in the Amphibis category?
+#     - Provide the list of equipment types in the Amphibis category
+#     - What equipment types belong to the Amphibis category?
+#     - Please display the different equipment types in the Amphibis category
+#     - What are the types of equipment under the Amphibis category?
+#     - Show me the list of equipment types in the Amphibis category
+
+# - intent: get_equipment_category_status_fms_id
+#   examples: |
+#     - Apa status kategori equipment Amphibis?
+#     - Apa status kategori untuk equipment Amphibis?
+#     - Berikan status kategori equipment Amphibis
+#     - Saya ingin tahu status dari kategori equipment Amphibis
+#     - Tolong tampilkan status untuk kategori equipment Amphibis
+#     - Status kategori equipment Amphibis apa?
+#     - Kategori equipment Amphibis aktif atau tidak?
+#     - Kategori equipment Amphibis apakah status nya aktif?
+#     - Apakah kategori equipment Amphibis sedang aktif?
+#     - Bisa berikan status kategori equipment Amphibis?
+#     - Tolong sebutkan status kategori equipment Amphibis
+#     - Apakah kategori equipment Amphibis masih aktif?
+#     - Saya mau tahu status kategori equipment Amphibis
+#     - Apakah status untuk kategori equipment Amphibis aktif?
+#     - Status saat ini untuk kategori equipment Amphibis apa?
+#     - Kategori equipment Amphibis saat ini aktif atau tidak?
+#     - Status kategori equipment Amphibis saat ini apa?
+#     - Status terkini dari kategori equipment Amphibis bagaimana?
+#     - Kategori equipment Amphibis statusnya masih aktif?
+#     - Apakah kategori equipment Amphibis sudah tidak aktif?
+#     - Status operasional kategori equipment Amphibis apa?
+
+# - intent: get_equipment_category_status_fms_en
+#   examples: |
+#     - What's the status of the Amphibis equipment category?
+#     - What's the status of the equipment category Amphibis?
+#     - Provide the status of the equipment category Amphibis
+#     - I'd like to know the status of the equipment category Amphibis
+#     - Please show the status of the equipment category Amphibis
+#     - What is the status of the equipment category Amphibis?
+#     - Is the equipment category Amphibis active or not?
+#     - Is the equipment category Amphibis currently active?
+#     - Is the equipment category Amphibis active?
+#     - Can you provide the status of the equipment category Amphibis?
+#     - Please tell me the status of the equipment category Amphibis
+#     - Is the equipment category Amphibis still active?
+#     - I want to know the status of the equipment category Amphibis
+#     - Is the status of the equipment category Amphibis active?
+#     - What's the current status of the equipment category Amphibis?
+#     - Is the equipment category Amphibis currently active or not?
+#     - What is the current status of the equipment category Amphibis?
+#     - What is the latest status of the equipment category Amphibis?
+#     - Is the equipment category Amphibis still active?
+#     - Has the equipment category Amphibis become inactive?
+#     - What's the operational status of the equipment category Amphibis?
+
+# - intent: get_equipment_categories_by_status_fms_id
+#   examples: |
+#     - Kategori equipment apa saja yang memiliki status [aktif](equipment_category_status)?
+#     - Tunjukkan kategori equipment yang berstatus [tidak aktif](equipment_category_status)
+#     - Daftar kategori equipment dengan status [aktif](equipment_category_status)
+#     - Berikan kategori equipment yang memiliki status [aktif](equipment_category_status)
+#     - Kategori apa saja yang memiliki status [aktif](equipment_category_status)?
+#     - Saya ingin tahu kategori equipment dengan status [tidak aktif](equipment_category_status)
+#     - Tipe kategori equipment yang berstatus [aktif](equipment_category_status) apa saja?
+#     - Tolong tampilkan kategori equipment dengan status [tidak aktif](equipment_category_status)
+#     - Bisa tunjukkan kategori equipment dengan status [tidak aktif](equipment_category_status)?
+#     - Kategori equipment berstatus [aktif](equipment_category_status) apa saja?
+#     - Ada kategori equipment dengan status [tidak aktif](equipment_category_status)?
+#     - Kategori equipment yang berstatus [aktif](equipment_category_status) apa?
+#     - Sebutkan kategori equipment yang berstatus [aktif](equipment_category_status)
+#     - Apa saja kategori yang memiliki status [tidak aktif](equipment_category_status)?
+#     - Tolong beri daftar kategori equipment berstatus [aktif](equipment_category_status)
+#     - Daftar kategori equipment yang memiliki status [aktif](equipment_category_status)
+#     - Saya mau tahu kategori equipment yang berstatus [tidak aktif](equipment_category_status)
+#     - Apa saja kategori equipment yang statusnya [aktif](equipment_category_status)?
+#     - Kategori equipment dengan status [tidak aktif](equipment_category_status) apa saja?
+
+# - intent: get_equipment_categories_by_status_fms_en
+#   examples: |
+#     - What equipment categories have the status [active](equipment_category_status)?
+#     - Show me the equipment categories with the status [inactive](equipment_category_status)
+#     - List the equipment categories with the status [active](equipment_category_status)
+#     - Provide the equipment categories with the status [active](equipment_category_status)
+#     - Which categories have the status [active](equipment_category_status)?
+#     - I want to know the equipment categories with the status [inactive](equipment_category_status)
+#     - What types of equipment categories have the status [active](equipment_category_status)?
+#     - Please display the equipment categories with the status [inactive](equipment_category_status)
+#     - What equipment categories are marked as [active](equipment_category_status)?
+#     - Can you show me the equipment categories with the status [inactive](equipment_category_status)?
+#     - Which equipment categories are [active](equipment_category_status)?
+#     - Are there any equipment categories with the status [inactive](equipment_category_status)?
+#     - What are the equipment categories with the status [active](equipment_category_status)?
+#     - Mention the equipment categories that are [active](equipment_category_status)
+#     - What categories have the status [inactive](equipment_category_status)?
+#     - Please provide a list of equipment categories with the status [active](equipment_category_status)
+#     - What is the list of equipment categories with the status [active](equipment_category_status)?
+#     - I'd like to know the equipment categories with the status [inactive](equipment_category_status)
+#     - Which equipment categories have the status [inactive](equipment_category_status)?
+
+# - intent: check_category_with_type_equipment_fms_id
+#   examples: |
+#     - Apakah ada kategori Amphibis dengan tipe TRUCK RIGID?
+#     - Kategori Amphibis punya tipe TRUCK RIGID atau tidak?
+#     - Saya mau tahu apakah kategori Amphibis memiliki tipe TRUCK RIGID?
+#     - Apakah tipe TRUCK RIGID termasuk dalam kategori Amphibis?
+#     - Tipe TRUCK RIGID ada di kategori Amphibis tidak?
+#     - Tolong cek apakah kategori Amphibis memiliki tipe TRUCK RIGID?
+#     - Bisakah periksa tipe TRUCK RIGID di kategori Amphibis?
+#     - Apa kategori Amphibis mencakup tipe TRUCK RIGID?
+#     - Saya ingin tahu apakah tipe TRUCK RIGID ada dalam kategori Amphibis?
+#     - Apakah ada tipe TRUCK RIGID di dalam kategori Amphibis?
+#     - Bisa tampilkan jika kategori Amphibis memiliki tipe TRUCK RIGID?
+#     - Berapa banyak kategori Amphibis yang memiliki tipe TRUCK RIGID?
+#     - Ada berapa kategori Amphibis dengan tipe TRUCK RIGID?
+#     - Bisa tunjukkan jumlah kategori Amphibis yang memiliki tipe TRUCK RIGID?
+#     - Saya mau tahu ada berapa kategori Amphibis dengan tipe TRUCK RIGID?
+#     - Apakah ada kategori lain dengan tipe TRUCK RIGID di Madhani?
+#     - Tolong hitung kategori dengan tipe TRUCK RIGID
+#     - Apakah tipe TRUCK RIGID tersedia di kategori Amphibis?
+#     - Ada berapa kategori di Madhani dengan tipe TRUCK RIGID?
+#     - Berapa jumlah kategori Amphibis dengan tipe TRUCK RIGID?
+#     - Ada berapa kategori Amphibis yang memiliki tipe TRUCK RIGID?
+
+# - intent: check_category_with_type_equipment_fms_en
+#   examples: |
+#     - Is there a category Amphibis with the type TRUCK RIGID?
+#     - Does the category Amphibis include the type TRUCK RIGID?
+#     - I want to know if the category Amphibis has the type TRUCK RIGID
+#     - Is the type TRUCK RIGID part of the category Amphibis?
+#     - Does the type TRUCK RIGID exist in the category Amphibis?
+#     - Can you check if the category Amphibis has the type TRUCK RIGID?
+#     - Could you verify if the type TRUCK RIGID is in the category Amphibis?
+#     - Does the category Amphibis include the type TRUCK RIGID?
+#     - I want to know if the type TRUCK RIGID is part of the category Amphibis
+#     - Is there a type TRUCK RIGID in the category Amphibis?
+#     - Can you show if the category Amphibis has the type TRUCK RIGID?
+#     - How many categories Amphibis have the type TRUCK RIGID?
+#     - How many categories Amphibis include the type TRUCK RIGID?
+#     - Can you show the number of categories Amphibis with the type TRUCK RIGID?
+#     - I'd like to know how many categories Amphibis have the type TRUCK RIGID
+#     - Are there other categories with the type TRUCK RIGID in Madhani?
+#     - Please count the categories with the type TRUCK RIGID
+#     - Is the type TRUCK RIGID available in the category Amphibis?
+#     - How many categories in Madhani include the type TRUCK RIGID?
+#     - What is the number of categories Amphibis with the type TRUCK RIGID?
+#     - How many categories Amphibis include the type TRUCK RIGID?
+
+# - intent: ask_work_order_count_fms_id
+#   examples: |
+#     - Berapa work order saya?
+#     - Ada berapa work order milik saya?
+#     - Hitung total work order saya
+#     - Tolong beri tahu jumlah work order saya
+#     - Work order saya ada berapa?
+#     - Saya ingin tahu berapa work order saya
+#     - Bisa tunjukkan jumlah work order saya?
+#     - Total work order milik saya berapa?
+#     - Hitung berapa banyak work order saya
+#     - Berapa total work order yang saya miliki?
+#     - Work order saya yang tercatat ada berapa?
+#     - Berapa jumlah work order yang terdaftar?
+#     - Tolong hitung total work order saya
+#     - Bisa cek berapa jumlah work order milik saya?
+#     - Berapa banyak work order saya di sistem?
+#     - Tolong tampilkan jumlah work order saya yang aktif
+#     - Ada berapa work order yang saya miliki sekarang?
+#     - Berapa work order yang saya punya di database?
+#     - Bisa beri info tentang total work order saya?
+
+# - intent: ask_work_order_count_fms_en
+#   examples: |
+#     - How many work orders do I have?
+#     - How many work orders are mine?
+#     - Can you count my total work orders?
+#     - Please tell me how many work orders I have
+#     - What's the number of my work orders?
+#     - I'd like to know how many work orders I have
+#     - Can you show me the total number of my work orders?
+#     - What's the total count of work orders I own?
+#     - Count how many work orders I have
+#     - What's the total number of work orders I have?
+#     - How many work orders are listed under my name?
+#     - How many work orders are registered to me?
+#     - Please calculate my total work orders
+#     - Can you check how many work orders I have?
+#     - How many work orders of mine are in the system?
+#     - Please show me the number of my active work orders
+#     - How many work orders do I currently have?
+#     - How many work orders do I have in the database?
+#     - Can you give me info about my total work orders?
+
+# - intent: get_work_orders_by_site_fms_id
+#   examples: |
+#     - Tunjukkan work order untuk site 001A
+#     - Tunjukkan Work Order saya untuk site 001A
+#     - Work order apa saja yang tercatat di site 001A
+#     - Berikan daftar work order saya untuk site 001A
+#     - Tolong tampilkan work order di site 001A
+#     - Work Order apa yang ada di site 001A
+#     - Tampilkan daftar work order saya yang bekerja di site 001A
+#     - Bisa tunjukkan work order di site 001A
+#     - Saya ingin tahu work order saya yang di site 001A
+#     - Tolong tampilkan daftar work order untuk site 001D
+#     - Work order yang di site 001M apa saja?
+#     - Tampilkan work order saya yang ada di site 001A
+#     - work order di site 001A apa saja?
+#     - Apa saja work order di site 001A
+#     - Apa saja work order saya di site 001A
+#     - Tolong berikan daftar work order saya yang terdaftar di site 001D
+#     - Bisa tampilkan Work Order saya di site 001A
+#     - Saya mau tahu work order di site 001A
+#     - Berikan semua work order yang ada di site 001D
+#     - Tampilkan semua work order untuk site 001A
+#     - Ada work order di site 001A, apa saja?
+#     - Tampilkan work order di site 001A
+
+# - intent: get_work_orders_by_site_fms_en
+#   examples: |
+#     - Show the work orders for the site 001A
+#     - Show my work orders for the site 001A
+#     - What work orders are listed at the site 001A?
+#     - Give me a list of my work orders for the site 001D
+#     - Please display the work orders at the site 001A
+#     - What work orders are available at the site 001A?
+#     - Show the list of my work orders at the site 001A
+#     - Can you show the work orders at the site 001D?
+#     - I'd like to know my work orders at the site 001A
+#     - Please display the list of work orders for the site 001M
+#     - What work orders are there at the site 001D?
+#     - Show my work orders at site 001A
+#     - What work orders are listed at the site 001A?
+#     - What work orders are at the site 001D?
+#     - What are my work orders at the site 001D?
+#     - Please give me a list of my work orders registered at the site 001D
+#     - Can you show my work orders at the site 001A?
+#     - I want to know the work orders at the site 001A
+#     - Give me all the work orders available at the site 001D
+#     - Show all work orders for the site 001A
+#     - What work orders are there at the site 001A?
+#     - Display the work orders at the site 001A
+
+# - intent: get_last_work_order_shift_fms_id
+#   examples: |
+#     - Tunjukkan work order terakhir yang berjalan pada shift day
+#     - Tolong tunjukkan work order terakhir saya ada di shift night
+#     - Bisa tolong tampilkan shift terakhir dari work order saya di shift day?
+#     - Tampilkan work order terakhir yang tercatat di shift night
+#     - Apa work order terakhir yang tercatat di shift day?
+#     - Shift terakhir dari work order saya di shift night apa?
+#     - Apa work order terakhir yang ada di shift day?
+#     - Tolong berikan work order terakhir yang tercatat di shift night
+#     - Tampilkan detail work order terakhir saya di shift day
+#     - Bisa bantu tunjukkan shift terakhir work order saya untuk shift night?
+#     - Saya ingin tahu work order terakhir pada shift day
+#     - Tunjukkan informasi work order terakhir di shift day
+#     - Work order terakhir di shift night itu apa saja?
+#     - Tunjukkan work order terakhir yang dijalankan di shift day
+#     - Tampilkan work order terakhir saya yang bekerja di shift night
+#     - Apa shift terakhir dari work order saya di shift day?
+#     - Tolong tampilkan work order terakhir yang tercatat di shift night
+#     - Shift terakhir dari work order saya tercatat pada shift day, bisa tunjukkan?
+#     - Apa saja detail work order terakhir saya pada shift night?
+#     - Tolong beri saya informasi work order terakhir untuk shift day
+#     - Tampilkan work order terakhir saya di shift night
+#     - Saya ingin tahu apa work order terakhir pada shift day
+
+# - intent: get_last_work_order_shift_fms_en
+#   examples: |
+#     - Show me the last work order that ran during the day shift
+#     - Please show me my last work order on the night shift
+#     - Could you show me the last shift of my work order on the day shift?
+#     - Show me the last recorded work order on the night shift
+#     - What was the last work order recorded on the day shift?
+#     - What was the last shift of my work order on the night shift?
+#     - What was the last work order on the day shift?
+#     - Please provide the last recorded work order on the night shift
+#     - Show me the details of my last work order on the day shift
+#     - Could you help me find the last shift of my work order on the night shift?
+#     - I want to know my last work order on the day shift
+#     - Show me the details of the last work order during the day shift
+#     - What was the last work order during the night shift?
+#     - Show me the last work order that was carried out on the day shift
+#     - Display my last work order that was active on the night shift
+#     - What was the last shift of my work order on the day shift?
+#     - Please show me the last work order recorded on the night shift
+#     - The last shift of my work order was recorded during the day shift, could you show it?
+#     - What are the details of my last work order on the night shift?
+#     - Please give me the information about my last work order on the day shift
+#     - Show me my last work order on the night shift
+#     - I'd like to know what my last work order was during the day shift
+
+# - intent: get_work_orders_by_shift_fms_id
+#   examples: |
+#     - Tunjukkan work order yang bekerja pada shift day
+#     - Tolong tampilkan work order saya yang bekerja pada night shift
+#     - Saya ingin tahu work order apa saja yang bekerja di shift night
+#     - Apa saja work order yang tercatat di night shift?
+#     - Bisa tampilkan work order di shift day?
+#     - Tampilkan daftar work order yang aktif di shift night
+#     - Work order saya di shift day apa saja, bisa tampilkan?
+#     - Tolong tunjukkan work order yang ada di shift day
+#     - Tampilkan work order aktif di shift day
+#     - Bisa berikan daftar work order di shift day?
+#     - Bisakah Anda tunjukkan work order untuk shift night?
+#     - Apa saja work order yang aktif di shift day?
+#     - Tolong beri saya daftar work order untuk shift night
+#     - Daftar work order apa yang berjalan di shift day?
+#     - Apa saja daftar work order yang aktif di shift night?
+#     - Tunjukkan work order yang sedang berjalan di shift night
+#     - Tolong tampilkan work order yang tersedia di shift night
+#     - Saya ingin melihat work order yang bekerja di shift day
+#     - Apa saja work order yang ada di shift night?
+#     - Daftar work order pada shift day, bisa ditampilkan?
+
+# - intent: get_work_orders_by_shift_fms_en
+#   examples: |
+#     - Show the work orders running on day shift
+#     - Please show my work orders during the night shift
+#     - I want to know which work orders are active in the night shift
+#     - What work orders are recorded in the night shift?
+#     - Can you display the work orders for the day shift?
+#     - Show me the list of active work orders in the night shift
+#     - What work orders do I have in the day shift? Can you show me?
+#     - Please show the work orders in the day shift
+#     - Display the active work orders for the day shift
+#     - Can you provide a list of work orders for the day shift?
+#     - Can you show the work orders for the night shift?
+#     - What work orders are active in the day shift?
+#     - Please give me a list of work orders in the night shift
+#     - What work orders are running in the day shift?
+#     - What are the active work orders in the night shift?
+#     - Show me the work orders currently running in the night shift
+#     - Please display the available work orders in the night shift
+#     - I want to see the work orders running in the day shift
+#     - What work orders are available in the night shift?
+#     - Can you show me the list of work orders in the day shift?
+
+# - intent: get_active_work_orders_user_fms_id
+#   examples: |
+#     - Tunjukkan work order yang memiliki status aktif
+#     - Apa saja work order saya yang sedang aktif?
+#     - Bisa tampilkan work order saya yang masih berjalan?
+#     - Tolong berikan daftar work order yang berstatus aktif
+#     - Work order apa saja milik saya yang statusnya aktif?
+#     - Tampilkan daftar work order saya yang sedang berjalan
+#     - Berikan work order saya yang masih aktif apa saja?
+#     - Daftar work order saya yang aktif sekarang apa saja?
+#     - Berikan list work order saya yang berstatus aktif
+#     - Tolong tampilkan work order saya yang aktif
+#     - Apa saja work order saya yang berjalan aktif saat ini?
+#     - Tolong tunjukkan work order yang memiliki status aktif
+#     - Work order saya yang berjalan aktif sekarang ada apa saja?
+#     - Bisa berikan work order saya yang aktif?
+#     - work order saya yang berstatus aktif sekarang apa saja?
+#     - Daftar work order aktif milik saya bisa ditampilkan?
+#     - Work order yang status nya masih aktif, bisa tampilkan?
+#     - Saya mau lihat daftar work order saya yang berjalan aktif
+#     - Apa saja work order yang berstatus aktif, tampilkan?
+#     - Tolong tampilkan daftar work order saya yang masih aktif
+#     - Tunjukkan work order saya yang aktif
+
+# - intent: get_active_work_orders_user_fms_en
+#   examples: |
+#     - Show me my work orders with active status
+#     - What are my active work orders?
+#     - Can you display my work orders that are still running?
+#     - Please provide a list of work orders with active status
+#     - Which of my work orders have an active status?
+#     - Show the list of my work orders that are currently running
+#     - What are my work orders that are still active?
+#     - What is the list of my work orders that are currently active?
+#     - Provide me with a list of my work orders with active status
+#     - Please show me my active work orders
+#     - What are my work orders that are currently active?
+#     - Please show the work orders that have active status
+#     - What are my currently active work orders?
+#     - Can you give me my active work orders?
+#     - Which of my work orders have active status now?
+#     - Can you display the list of my active work orders?
+#     - Can you show the work orders that still have active status?
+#     - I'd like to see the list of my work orders that are actively running
+#     - Show me the work orders with active status
+#     - Please show the list of my work orders that are still active
+#     - Show me my active work orders
+
+# - intent: get_work_order_count_by_date_fms_id
+#   examples: |
+#     - Ada berapa work order yang tercatat pada tanggal 2024-01-02?
+#     - Tunjukkan jumlah work order pada tanggal 2 Januari 2025
+#     - Berapa work order yang ada di tanggal 2024-01-02?
+#     - Tolong beri tahu jumlah work order di tanggal 2024-01-02
+#     - Saya ingin tahu work order yang tercatat pada 1 januari
+#     - Berapa banyak work order tercatat di tanggal 2024-01-02?
+#     - Work order pada tanggal 2 Januari 2024 ada berapa?
+#     - Bisa tunjukkan jumlah work order di tanggal 2024-01-02?
+#     - Tolong cari tahu jumlah work order pada 1 September
+#     - Ada berapa work order yang terdaftar di tanggal 2024-01-02?
+#     - Bisa tolong hitung berapa work order yang tercatat pada 2024-01-02?
+#     - Berapa total work order pada tanggal 2024-01-02?
+#     - Tolong tampilkan daftar work order untuk tanggal 1 Agustus 2020
+#     - Tanggal 2 Januari 2025 memiliki berapa work order?
+#     - Ada berapa work order yang tercatat pada 2024-01-02?
+#     - Work order pada tanggal 2024-01-02 ada berapa jumlahnya?
+#     - Saya ingin tahu total work order di tanggal 3 Juli 2024
+#     - Berapa banyak work order pada tanggal 2024-01-02?
+#     - Bisa tampilkan jumlah work order yang ada di tanggal 2024-01-02?
+#     - Ada informasi jumlah work order di tanggal 2024-01-02?
+#     - Berapa jumlah total work order di tanggal 2024-01-02?
+#     - Bisa bantu cek work order yang tercatat pada 2024-01-02?
+#     - Apakah ada work order yang tercatat di tanggal 2024-01-02?
+#     - Ada berapa work order yang tercatat
+
+# - intent: get_work_order_count_by_date_fms_en
+#   examples: |
+#     - How many work orders were recorded on 2024-01-02?
+#     - Show the number of work orders on January 2, 2025
+#     - What's the work order count for 2024-01-02?
+#     - Please tell me how many work orders are there on 2024-01-02
+#     - I want to know the work orders recorded on 2024-01-02
+#     - How many work orders are there on January 2 2024?
+#     - How many work orders are there on 2024-01-02?
+#     - Can you show the number of work orders for 2024-01-02?
+#     - Please find out the number of work orders on September 1
+#     - How many work orders are listed on 2024-01-02?
+#     - Can you calculate the total number of work orders for 2024-01-02?
+#     - What's the total work order count on 2024-01-02?
+#     - Show me the list of work orders for on August 1, 2024
+#     - How many work orders are there on 2024-01-02?
+#     - January 2 2025 has how many work orders?
+#     - I'd like to know the total work orders on on July 3, 2024
+#     - How many work orders are there on 2024-01-02?
+#     - Can you display the work order count for 2024-01-02?
+#     - Is there information about the work order count for 2024-01-02?
+#     - What's the total number of work orders for 2024-01-02?
+#     - Can you help check the work orders recorded on 2024-01-02?
+#     - Are there any work orders recorded on 2024-01-02?
+#     - How many work orders are recorded?
+
+# - intent: get_work_orders_today_fms_id
+#   examples: |
+#     - Ada work order apa aja [hari ini](day_condition)?
+#     - Tunjukkan work order saya pada [hari ini](day_condition)
+#     - Bisa kasih tahu work order saya untuk [hari ini](day_condition)?
+#     - [Hari ini](day_condition) ada work order apa aja ya?
+#     - Tolong tunjukkan work order yang ada [hari ini](day_condition)
+#     - Bisa bantu cek work order [hari ini](day_condition)?
+#     - Apa aja work order yang aktif [hari ini](day_condition)?
+#     - Tampilkan daftar work order untuk [hari ini](day_condition) dong
+#     - Tolong kasih tahu work order [hari ini](day_condition)
+#     - Ada daftar work order yang bisa dilihat [hari ini](day_condition)?
+#     - Cek work order [hari ini](day_condition), ada apa aja?
+#     - Saya mau tahu work order [hari ini](day_condition)
+#     - Apa aja work order yang tercatat [hari ini](day_condition)?
+#     - Bisa tunjukkan daftar work order yang tersedia [hari ini](day_condition)?
+#     - Tolong bantu lihat work order [hari ini](day_condition)
+#     - Saya butuh daftar work order untuk [hari ini](day_condition)
+#     - Bisa tampilkan semua work order [hari ini](day_condition)?
+#     - Tolong tampilkan work order saya yang ada [hari ini](day_condition)
+#     - Apa saja work order yang tercatat [hari ini](day_condition)?
+#     - Saya ingin tahu work order untuk [hari ini](day_condition)
+#     - Bisa beri daftar work order saya [hari ini](day_condition)?
+#     - Tolong tunjukkan semua work order pada [hari ini](day_condition)
+#     - Daftar work order untuk [hari ini](day_condition) apa saja?
+#     - Work order [hari ini](day_condition) apa saja yang tercatat?
+#     - Apa saja work order yang tersedia [hari ini](day_condition)?
+
+# - intent: get_work_orders_today_fms_en
+#   examples: |
+#     - What work orders are there [today](day_condition)?
+#     - Show me my work orders for [today](day_condition)
+#     - Can you tell me my work orders for [today](day_condition)?
+#     - What work orders are available [today](day_condition)?
+#     - Please show me the work orders for [today](day_condition)
+#     - Can you help check the work orders for [today](day_condition)?
+#     - What active work orders are there [today](day_condition)?
+#     - Show me the list of work orders for [today](day_condition)
+#     - Please let me know the work orders for [today](day_condition)
+#     - Is there a list of work orders I can see [today](day_condition)?
+#     - Check the work orders for [today](day_condition), what's available?
+#     - I'd like to know the work orders for [today](day_condition)
+#     - What work orders are recorded [today](day_condition)?
+#     - Can you show me the list of work orders available [today](day_condition)?
+#     - Please help me check the work orders for [today](day_condition)
+#     - I need a list of work orders for [today](day_condition)
+#     - Can you display all the work orders for [today](day_condition)?
+#     - Please show me my work orders that are available [today](day_condition)
+#     - What work orders are recorded for [today](day_condition)?
+#     - I want to know the work orders for [today](day_condition)
+#     - Can you provide the list of my work orders for [today](day_condition)?
+#     - Show me my active work orders for [today](day_condition)
+#     - Please display all work orders for [today](day_condition)
+#     - What's the list of work orders for [today](day_condition)?
+#     - Are there any work orders available [today](day_condition)?
+#     - What work orders can I access [today](day_condition)?
+
+# - intent: get_work_orders_last_noon_fms_id
+#   examples: |
+#     - Tunjukkan work order pada [kemarin siang](day_condition)
+#     - Apa saja work order saya yang tercatat [kemarin siang](day_condition)?
+#     - Bisa kasih daftar work order saya [kemarin siang](day_condition)?
+#     - Work order [kemarin siang](day_condition) ada apa aja?
+#     - Ada work order apa aja [kemarin siang](day_condition)?
+#     - Tolong tampilkan work order saya [kemarin siang](day_condition)
+#     - Apa work order yang ada pada [kemarin siang](day_condition)?
+#     - Saya ingin tahu daftar work order [kemarin siang](day_condition)
+#     - Work order apa saja yang aktif [kemarin siang](day_condition)?
+#     - Bisakah tunjukkan work order untuk [kemarin siang](day_condition)?
+#     - Daftar work order yang tercatat [kemarin siang](day_condition) apa saja?
+#     - Tolong beri daftar work order dari [kemarin siang](day_condition)
+#     - Bisa tampilkan data work order [kemarin siang](day_condition)?
+#     - Saya mau lihat work order saya [kemarin siang](day_condition)
+#     - Informasi work order pada [kemarin siang](day_condition) ada apa?
+#     - [Kemarin siang](day_condition) ada work order apa aja?
+#     - Tolong cari work order yang tercatat [kemarin siang](day_condition)
+#     - Ada data work order dari [kemarin siang](day_condition)?
+#     - [Kemarin siang](day_condition) work order saya apa saja?
+#     - Saya ingin lihat work order saya [kemarin siang](day_condition)
+#     - Apa saja daftar work order dari [kemarin siang](day_condition)?
+#     - Bisa bantu cari work order saya [kemarin siang](day_condition)?
+#     - Tampilkan daftar work order saya [kemarin siang](day_condition)
+
+# - intent: get_work_orders_last_noon_fms_en
+#   examples: |
+#     - Show me the work orders from [last noon](day_condition)
+#     - What work orders of mine were recorded [last noon](day_condition)?
+#     - Can you provide a list of my work orders from [last noon](day_condition)?
+#     - What work orders were available [last noon](day_condition)?
+#     - Are there any work orders from [last noon](day_condition)?
+#     - Please display my work orders from [last noon](day_condition)
+#     - What work orders were there [last noon](day_condition)?
+#     - I'd like to see the list of work orders from [last noon](day_condition)
+#     - Which work orders were active [last noon](day_condition)?
+#     - Can you show me the work orders for [last noon](day_condition)?
+#     - What's the list of work orders recorded [last noon](day_condition)?
+#     - Please provide the work orders from [last noon](day_condition)
+#     - Can you display the work order data from [last noon](day_condition)?
+#     - I want to check my work orders from [last noon](day_condition)
+#     - What's the information about work orders from [last noon](day_condition)?
+#     - What work orders were there [last noon](day_condition)?
+#     - Please find the work orders recorded [last noon](day_condition)
+#     - Are there any details on work orders from [last noon](day_condition)?
+#     - What work orders of mine were available [last noon](day_condition)?
+#     - I'd like to see my work orders from [last noon](day_condition)
+#     - What's the list of work orders from [last noon](day_condition)?
+#     - Can you help find my work orders from [last noon](day_condition)?
+#     - Show me the list of my work orders from [last noon](day_condition)
+
+# - intent: get_work_orders_last_night_fms_id
+#   examples: |
+#     - Tunjukkan work order pada [kemarin malam](day_condition)
+#     - Apa saja work order saya yang tercatat [kemarin malam](day_condition)?
+#     - Bisa kasih daftar work order saya [kemarin malam](day_condition)?
+#     - Work order [kemarin malam](day_condition) ada apa aja?
+#     - Ada work order apa aja [kemarin malam](day_condition)?
+#     - Tolong tampilkan work order saya [kemarin malam](day_condition)
+#     - Apa work order yang ada pada [kemarin malam](day_condition)?
+#     - Saya ingin tahu daftar work order [kemarin malam](day_condition)
+#     - Work order apa saja yang aktif [kemarin malam](day_condition)?
+#     - Bisakah tunjukkan work order untuk [kemarin malam](day_condition)?
+#     - Daftar work order yang tercatat [kemarin malam](day_condition) apa saja?
+#     - Tolong beri daftar work order dari [kemarin malam](day_condition)
+#     - Bisa tampilkan data work order [kemarin malam](day_condition)?
+#     - Saya mau lihat work order saya [kemarin malam](day_condition)
+#     - Informasi work order pada [kemarin malam](day_condition) ada apa?
+#     - [Kemarin malam](day_condition) ada work order apa aja?
+#     - Tolong cari work order yang tercatat [kemarin malam](day_condition)
+#     - Ada data work order dari [kemarin malam](day_condition)?
+#     - [Kemarin malam](day_condition) work order saya apa saja?
+#     - Saya ingin lihat work order saya [kemarin malam](day_condition)
+#     - Apa saja daftar work order dari [kemarin malam](day_condition)?
+#     - Bisa bantu cari work order saya [kemarin malam](day_condition)?
+#     - Tampilkan daftar work order saya [kemarin malam](day_condition)
+
+# - intent: get_work_orders_last_night_fms_en
+#   examples: |
+#     - Show me the work orders from [last night](day_condition)
+#     - What work orders of mine were recorded [last night](day_condition)?
+#     - Can you provide a list of my work orders from [last night](day_condition)?
+#     - What work orders were available [last night](day_condition)?
+#     - Are there any work orders from [last night](day_condition)?
+#     - Please display my work orders from [last night](day_condition)
+#     - What work orders were there [last night](day_condition)?
+#     - I'd like to know the list of work orders from [last night](day_condition)
+#     - Which work orders were active [last night](day_condition)?
+#     - Can you show me the work orders for [last night](day_condition)?
+#     - What's the list of work orders recorded [last night](day_condition)?
+#     - Please provide the work orders from [last night](day_condition)
+#     - Can you display the work order data from [last night](day_condition)?
+#     - I want to check my work orders from [last night](day_condition)
+#     - What's the information about work orders from [last night](day_condition)?
+#     - What work orders were there [last night](day_condition)?
+#     - Please find the work orders recorded [last night](day_condition)
+#     - Are there any details on work orders from [last night](day_condition)?
+#     - What work orders of mine were available [last night](day_condition)?
+#     - I'd like to see my work orders from [last night](day_condition)
+#     - What's the list of work orders from [last night](day_condition)?
+#     - Can you help find my work orders from [last night](day_condition)?
+#     - Show me the list of my work orders from [last night](day_condition)
+
+# - intent: get_work_orders_by_date_fms_id
+#   examples: |
+#     - Tunjukkan work order pada tanggal 1 Maret 2024
+#     - Work order pada tanggal 2024-12-30 apa saja?
+#     - Bisa kasih daftar work order pada 14 Mei 2023?
+#     - Saya ingin tahu work order di tanggal 2024-01-01
+#     - Ada work order apa saja di tanggal 2024-12-25?
+#     - Tolong tampilkan semua work order di 2024-06-10
+#     - Apa saja work order yang tercatat di tanggal 1 Januari?
+#     - Informasi work order pada 2024-03-28 ada apa saja?
+#     - Daftar work order di tanggal 5 Desember 2025 apa saja?
+#     - Bisa tunjukkan work order di tanggal 10 Juli?
+#     - Saya mau tahu daftar work order di tanggal 2024-09-15
+#     - Tampilkan work order di tanggal 2024-02-10
+#     - Tolong beri daftar work order untuk 20 Mei 2001
+#     - Bisakah cari work order pada tanggal 4 November?
+#     - Work order yang ada di tanggal 2024-08-01 apa?
+#     - Tolong cari work order pada tanggal 28 februari 2024
+#     - Apa work order yang ada di tanggal 2024-11-11?
+#     - Bisa tampilkan work order di tanggal 2024-05-18?
+#     - Informasi tentang work order pada 2024-12-31
+#     - Data work order di tanggal 5 oktober 2024 apa saja?
+
+# - intent: get_work_orders_by_date_fms_en
+#   examples: |
+#     - Show me the work orders on March 1, 2024
+#     - What work orders are there on 2024-12-30?
+#     - Can you give me the list of work orders on May 14, 2023?
+#     - I'd like to know the work orders for January 1, 2024
+#     - What work orders are recorded on December 25, 2024?
+#     - Please display all work orders on June 10, 2024
+#     - What work orders are recorded on January 1st?
+#     - Can you show me the work order details for March 28, 2024?
+#     - What work orders are listed on December 5, 2025?
+#     - Could you show me the work orders on July 10?
+#     - I want to know the work order list for September 15, 2024
+#     - Display the work orders on February 10, 2024
+#     - Please provide the work order list for May 20, 2001
+#     - Can you find the work orders for November 4?
+#     - What work orders are there on August 1, 2024?
+#     - Please look up the work orders on February 28, 2024
+#     - Are there any work orders on November 11, 2024?
+#     - Can you display the work orders for May 18, 2024?
+#     - Information about the work orders on December 31, 2024
+#     - What work orders are there on October 5, 2024?
+
+# - intent: get_work_order_numbers_by_site_and_date_fms_id
+#   examples: |
+#     - Berapa nomor work order di site 001A pada tanggal 2 Januari 2024?
+#     - Nomor work order di site Head Office Jakarta pada 1 Januari?
+#     - Tunjukkan nomor work order di site 001A pada tanggal 2024-01-03
+#     - Apa saja nomor work order di site 001A pada tanggal 2024-01-05?
+#     - Saya mau tahu nomor work order di site Head Office Jakarta pada tanggal 1 Januari
+#     - List nomor work order di site 001A Jakarta pada tanggal 2024-01-06?
+#     - Apa saja nomor work order di site 001D pada tanggal 2024-01-02?
+#     - Sebutkan nomor work order di site 001D pada tanggal 5 Agustus 2024?
+#     - Tampilkan nomor work order apa saja yang ada di site 001A pada tanggal 2024-01-04
+#     - Bisa beri tahu nomor work order di site 001A pada tanggal 2024-01-01?
+#     - Apakah ada nomor work order di site 001A pada tanggal 2024-01-05?
+#     - Saya ingin tahu nomor work order di site 001D pada tanggal 2024-01-06
+#     - Apa nomor work order di site 001D tanggal 2024-01-02?
+#     - Cek nomor work order di site Head Office Jakarta pada tanggal 3 Januari 2024
+#     - Bisakah Anda tunjukkan nomor work order di site 001A Jakarta untuk tanggal 2024-01-04?
+#     - Ada nomor work order apa di site 001D tanggal 2024-01-01?
+#     - Apakah ada nomor work order untuk site 001A pada tanggal 2024-01-05?
+#     - Saya mau tahu nomor work order apa saja yang ada disite Head Office Jakarta pada tanggal 2024-01-02
+#     - Tolong tunjukkan nomor work order di site 001A untuk tanggal 2024-01-03
+#     - Apa saja nomor work order di site 001A tanggal 2 Januari?
+#     - Apakah ada nomor work order di site Head Office Jakarta pada 2024-01-05?
+#     - Cek daftar nomor work order di site 001D pada tanggal 2024-01-01
+#     - Apakah ada nomor perintah kerja untuk situs 001A pada tanggal 5 Juni?
+
+# - intent: get_work_order_numbers_by_site_and_date_fms_en
+#   examples: |
+#     - What are the work order numbers for site 001A on March 3, 2025?
+#     - Show me the work order numbers for site Head Office Jakarta on 2024-01-01
+#     - Can you display the work order numbers for site 001A on 2024-01-03?
+#     - What work order numbers are listed for site 001A on 2024-01-05?
+#     - I'd like to know the work order numbers for site Head Office Jakarta on 4 February
+#     - List the work order numbers for site 001A Jakarta on 2024-01-06
+#     - What are the work order numbers for site 001D on 2024-01-02?
+#     - Can you provide the work order numbers for site 001D on 2024-01-05?
+#     - Show me the work order numbers at site 001A for 2024-01-04
+#     - Could you tell me the work order numbers for site 001A on January 1, 2024?
+#     - Are there any work order numbers for site 001A on 2024-01-05?
+#     - I want to know the work order numbers for site 001D on 2024-01-06
+#     - What are the work order numbers at site 001D on 2024-01-02?
+#     - Check the work order numbers for site Head Office Jakarta on 2024-01-03
+#     - Can you show me the work order numbers for site 001A Jakarta on 2024-01-04?
+#     - What work order numbers are there for site 001D on january 2, 2024?
+#     - Are there any work order numbers for site 001A on June 5?
+#     - I'd like to know what work order numbers are available at site Head Office Jakarta on 2024-01-02
+#     - Please show me the work order numbers for site 001A on 2024-01-03
+#     - What work order numbers are listed for site 001A on Januari 2?
+#     - Are there any work order numbers for site Head Office Jakarta on 2024-01-05?
+#     - Check the list of work order numbers for site 001D on Feb 4, 2024
+
+# - intent: get_work_order_number_by_site_day_condition_fms_id
+#   examples: |
+#     - Berapa nomor work order pada site 001A di hari ini?
+#     - Bisa beri tahu nomor work order di site 001M hari ini?
+#     - Saya ingin tahu nomor work order yang tercatat di site 043C pada kemarin siang
+#     - Tunjukkan nomor work order di site 001D hari ini
+#     - Apa saja nomor work order pada site 001A hari ini?
+#     - Tolong tampilkan nomor work order di site 043C untuk hari ini
+#     - Nomor work order apa saja di site 001M pada hari ini?
+#     - Ada nomor work order yang terdaftar di site 001A hari ini?
+#     - Berapa nomor work order yang ada di site 001D hari ini?
+#     - Saya mau tahu nomor work order pada site 001M untuk hari ini
+#     - Tolong sebutkan nomor work order di site 043C pada kemarin malam?
+#     - Bisa tunjukkan nomor work order di site 001A yang tercatat hari ini?
+#     - Berapa nomor work order pada site 001M hari ini?
+#     - Tampilkan daftar nomor work order di site 043C untuk hari ini
+#     - Nomor work order apa yang ada di site 001D pada kemarin siang?
+#     - Nomor work order apa saja yang tercatat di site 001A hari ini?
+#     - Ada nomor work order yang terdaftar di site 001M untuk hari ini?
+#     - Saya butuh nomor work order dari site 043C hari ini
+#     - Tolong cek nomor work order yang tercatat di site 001D untuk hari ini
+#     - Apa saja nomor work order yang ada di site 001A pada kemarin malam?
+#     - Apa saja nomor work order yang ada di site 001A pada hari ini?
+
+# - intent: get_work_order_number_by_site_day_condition_fms_en
+#   examples: |
+#     - What are the work order numbers at site 001A today?
+#     - Can you tell me the work order numbers at site 001M for today?
+#     - I'd like to know the work order numbers recorded at site 043C last noon
+#     - Show me the work order numbers for site 001D today
+#     - What are the work order numbers for site 001A today?
+#     - Please display the work order numbers for site 043C today
+#     - What work order numbers are available at site 001M today?
+#     - Are there any work order numbers registered at site 001A today?
+#     - How many work order numbers are there at site 001D today?
+#     - I want to know the work order numbers for site 001M today
+#     - Please provide the work order numbers for site 043C from last night
+#     - Can you show me the work order numbers recorded at site 001A today?
+#     - What are the work order numbers at site 001M today?
+#     - Display the list of work order numbers for site 043C today
+#     - What work order numbers are there at site 001D last noon?
+#     - What work order numbers are recorded at site 001A today?
+#     - Are there any work order numbers registered at site 001M for today?
+#     - I need the work order numbers from site 043C today
+#     - Please check the work order numbers recorded at site 001D today
+#     - What are the work order numbers at site 001A from last night?
+#     - What are the work order numbers available at site 001A today?
+    
+# - intent: get_work_area_by_site_fms_id
+#   examples: |
+#     - Work area apa saja yang ada di site 001A?
+#     - Bisa tunjukkan work area di site 001A?
+#     - Saya ingin tahu work area apa saja yang tersedia di site 001D
+#     - Apa saja work area yang ada di site 001D?
+#     - Tampilkan work area di site 001M
+#     - Work area apa yang tercatat di site 043C?
+#     - Daftar work area di site 001A apa saja?
+#     - Bisa berikan saya daftar work area untuk site 001D?
+#     - Apa work area yang tersedia di site 001A?
+#     - Tolong tampilkan semua work area di site 043C
+#     - Bisakah Anda tunjukkan work area yang ada di site 001M?
+#     - Saya ingin tahu daftar work area di site 001A
+#     - Apa saja work area yang aktif di site 001M?
+#     - Bisa berikan saya work area di site 043C?
+#     - Work area di site 001A apa saja yang tersedia?
+#     - Tolong beri saya daftar work area untuk site 001A
+#     - Apa work area yang ada di site 001A?
+#     - Bisa tampilkan semua work area yang ada di site 001D?
+#     - Daftar work area pada site 001M, apa saja?
+#     - Apa work area yang ada pada site 043C?
+
+# - intent: get_work_area_by_site_fms_en
+#   examples: |
+#     - What are the work areas at site 001A?
+#     - Can you show me the work areas at site 001A?
+#     - I'd like to know what work areas are available at site 001D
+#     - Show me the work areas at site 001M
+#     - What work areas are recorded at site 043C?
+#     - Can you give me the list of work areas for site 001D?
+#     - Please show all the work areas at site 043C
+#     - Could you show me the work areas at site 001M?
+#     - I want to see the list of work areas at site 001A
+#     - What active work areas are there at site 001M?
+#     - Can you give me the work areas at site 043C?
+#     - What work areas are available at site 001A?
+#     - Please provide the list of work areas for site 001A
+#     - Can you display all the work areas at site 001D?
+#     - What's the list of work areas at site 001M?
+#     - What work areas can be found at site 001A?
+#     - I'd like to know which work areas are available at site 001D
+#     - What work areas exist at site 001D?
+#     - Show me all work areas for site 001M
+#     - Which work areas are recorded at site 043C?
+#     - Can you provide the work areas available at site 043C?
+
+# - intent: get_work_area_count_by_site_fms_id
+#   examples: |
+#     - Ada berapa banyak work area yang ada di site 001A?
+#     - Berapa jumlah work area di site 001A?
+#     - Bisa kasih tahu ada berapa work area di site 001A?
+#     - Tolong beri tahu jumlah work area di site 001D
+#     - Saya ingin tahu ada berapa work area di site 001D
+#     - Total work area yang ada di site 001D berapa?
+#     - Sebutkan jumlah work area di site 001M?
+#     - Berapa banyak work area yang tercatat di site 001A?
+#     - Saya ingin tahu total work area di site 001M
+#     - Tolong tampilkan jumlah work area yang tercatat di site 001D
+#     - Ada berapa jumlah work area yang tersedia di site 043C?
+#     - Berapa banyak work area di site 001A?
+#     - Bisa berikan total work area yang ada di site 001A?
+#     - Tolong sebutkan jumlah work area di site 001M
+#     - Total ada berapa work area di site 001D?
+#     - Berapa total work area yang ada di site 001A?
+#     - Work area yang ada di site 043C berjumlah berapa?
+#     - Bisa beri tahu ada berapa total work area di site 001D?
+#     - Jumlah work area yang ada di site 001A berapa?
+#     - Saya ingin tahu jumlah work area yang tersedia di site 001M
+
+# - intent: get_work_area_count_by_site_fms_en
+#   examples: |
+#     - How many work areas are there at site 001A?
+#     - What's the total number of work areas at site 001A?
+#     - Can you tell me how many work areas are at site 001A?
+#     - Please let me know the number of work areas at site 001D
+#     - I'd like to know how many work areas are available at site 001D
+#     - What's the total work area count for site 001D?
+#     - Could you list the number of work areas at site 001M?
+#     - How many work areas are recorded at site 001A?
+#     - Show me the total number of work areas at site 001D
+#     - How many work areas are available at site 043C?
+#     - What's the count of work areas at site 001A?
+#     - Can you provide the total number of work areas at site 001A?
+#     - Please mention the total work areas at site 001M
+#     - What's the total count of work areas at site 001D?
+#     - How many work areas in total are at site 001A?
+#     - How many work areas are there at site 043C?
+#     - Could you share the total work area count for site 001D?
+#     - What's the number of work areas at site 001A?
+#     - I'd like to know the total work areas available at site 001M
+
+# - intent: check_disposal_work_area_fms_id
+#   examples: |
+#     - Apakah work area G09 adalah area disposal?
+#     - Apakah benar work area G09 merupakan area disposal?
+#     - Work area G09 itu disposal atau bukan?
+#     - Bisa cek apakah work area G09 adalah area disposal?
+#     - Saya ingin tahu apakah work area G09 adalah area disposal
+#     - Apa work area G09 merupakan area disposal?
+#     - Tolong cek apakah work area G09 disposal atau bukan
+#     - Apakah work area G09 termasuk area disposal?
+#     - Apa benar work area G09 disposal?
+#     - Tolong konfirmasi apakah work area G09 adalah disposal
+#     - Apakah work area G09 adalah tempat disposal?
+#     - Apa work area G09 berfungsi sebagai area disposal?
+#     - Bisa beri tahu apakah work area G09 itu disposal?
+#     - Saya ingin tahu apakah work area G09 termasuk disposal
+#     - Apakah work area G09 tercatat sebagai disposal?
+#     - Bisa berikan informasi apakah work area G09 adalah disposal?
+#     - Apa work area G09 dianggap area disposal?
+#     - Work area G09 adalah area disposal, benar atau tidak?
+#     - Bisakah Anda konfirmasi apakah work area G09 adalah disposal?
+#     - Tolong cek apakah area G09 masuk kategori disposal
+#     - Saya ingin tahu apakah area G09 adalah disposal
+
+# - intent: check_disposal_work_area_fms_en
+#   examples: |
+#     - Is work area G09 a disposal area?
+#     - Is it true that work area G09 is a disposal area?
+#     - Is work area G09 considered a disposal?
+#     - Can you check if work area G09 is a disposal area?
+#     - I want to know if work area G09 is a disposal area
+#     - Does work area G09 count as a disposal area?
+#     - Please confirm if work area G09 is a disposal
+#     - Is work area G09 recorded as a disposal area?
+#     - Could you check whether work area G09 is disposal or not?
+#     - Is it correct that work area G09 functions as a disposal area?
+#     - Can you tell me if work area G09 is a disposal area?
+#     - Is work area G09 classified as a disposal?
+#     - Can you provide information about whether work area G09 is disposal?
+#     - Does work area G09 qualify as a disposal area?
+#     - Is work area G09 labeled as a disposal?
+#     - Work area G09 is a disposal, is that correct?
+#     - Can you confirm if work area G09 is a disposal area?
+#     - I'd like to know if work area G09 is included as a disposal
+#     - Please check if G09 falls under the disposal category
+#     - Is G09 considered a disposal area?
+#     - Could you verify if work area G09 is listed as disposal?
+#     - Does work area G09 serve as a disposal area?
+#     - Can you check whether work area G09 is a disposal area?
+#     - Is it accurate that work area G09 is used for disposal?
+
+# - intent: get_disposal_work_area_count_by_site_fms_id
+#   examples: |
+#     - Ada berapa work area pada site 001A yang merupakan area disposal?
+#     - Berapa jumlah work area di site 001A yang merupakan disposal?
+#     - Berapa total jumlah work area disposal di site 001A?
+#     - Tolong beri tahu jumlah work area disposal di site 001A
+#     - Saya ingin tahu ada berapa banyak work area disposal di site 001A
+#     - Total work area disposal yang ada di site 001A berapa?
+#     - Berapa banyak work area disposal di site 001D?
+#     - Work area disposal di site 043C ada berapa?
+#     - Bisakah Anda sebutkan jumlah work area disposal di site 001M?
+#     - Tampilkan jumlah work area disposal di site 001M
+#     - Berapa jumlah work area disposal di site 001A?
+#     - Ada berapa work area disposal di site 001A?
+#     - Bisa berikan berapa total work area yang merupakan disposal di site 043C?
+#     - Tolong konfirmasi jumlah work area disposal di site 001A
+#     - Total ada berapa work area disposal di site 001A?
+#     - Berapa banyak work area yang masuk kategori disposal di site 001A?
+#     - Berapa total work area disposal yang tercatat di site 001A?
+#     - Tolong berikan jumlah work area disposal di site 001A?
+#     - Bisa beri tahu berapa jumlah work area disposal di site 001A?
+#     - Saya ingin tahu total work area yang merupakan disposal di site 001A
+#     - Work area apa saja yang merupakan disposal pada site 001A?
+#     - Apa saja work area disposal di site 001A?
+#     - Tunjukkan work area yang disposal pada site 043C
+#     - Apa saja work area yang disposal di site 043C?
+#     - Bisa sebutkan work area disposal pada site 001D?
+#     - Apa work area disposal pada site 001M?
+#     - Tolong tampilkan work area disposal di site 001D
+#     - Saya ingin tahu work area apa yang disposal di site 042C
+#     - Bisa beri tahu work area yang merupakan disposal di site 020D?
+#     - Apa saja work area yang masuk kategori disposal pada site 001A?
+#     - Bisa berikan daftar work area disposal di site 020D?
+#     - Daftar work area pada site 001A yang disposal apa saja?
+#     - Sebutkan work area disposal pada site 042C?
+#     - Apa saja daftar work area disposal pada site 001A?
+#     - Work area disposal pada site 001A apa saja?
+#     - Bisa tunjukkan semua work area disposal di site 001Z?
+#     - Apa saja work area disposal yang ada di site 008Q?
+#     - Tampilkan semua work area disposal di site 009R
+#     - Tolong sebutkan work area disposal di site 001S
+#     - Saya ingin tahu semua work area disposal di site 002T
+
+# - intent: get_disposal_work_area_count_by_site_fms_en
+#   examples: |
+#     - How many work areas at site 001A are disposal areas?
+#     - What's the total number of disposal work areas at site 001A?
+#     - Can you tell me how many disposal work areas there are at site 001A?
+#     - Please provide the count of disposal work areas at site 001A
+#     - I'd like to know how many disposal work areas are available at site 001A
+#     - What's the total disposal work area count for site 001A?
+#     - How many disposal work areas are there at site 001D?
+#     - How many disposal work areas are recorded at site 043C?
+#     - Could you share the count of disposal work areas at site 001M?
+#     - Show me the total disposal work areas at site 001M
+#     - What's the number of disposal work areas at site 001A?
+#     - How many disposal work areas are available at site 001A?
+#     - Can you give me the total number of disposal work areas at site 043C?
+#     - Please confirm the count of disposal work areas at site 001A
+#     - What's the total number of disposal work areas at site 001A?
+#     - How many work areas qualify as disposal areas at site 001A?
+#     - What's the recorded total of disposal work areas at site 001A?
+#     - Please provide the total disposal work areas for site 001A
+#     - Can you let me know how many disposal work areas there are at site 001A?
+#     - I'd like to know the total number of work areas classified as disposal at site 001A
+#     - What are the disposal work areas at site 001A?
+#     - Which work areas are disposal areas at site 001A?
+#     - Show me the work areas classified as disposal at site 043C
+#     - What disposal work areas exist at site 043C?
+#     - Can you list the disposal work areas at site 001D?
+#     - What disposal work areas are there at site 001M?
+#     - Please show the disposal work areas at site 001D
+#     - I'd like to know which work areas are disposal at site 042C
+#     - Can you tell me the disposal work areas at site 020D?
+#     - What work areas qualify as disposal at site 001A?
+#     - Can you provide a list of disposal work areas at site 020D?
+#     - What disposal work areas are listed for site 001A?
+#     - Tell me the disposal work areas at site 042C
+#     - Which work areas are categorized as disposal at site 001A?
+#     - What are the disposal work areas at site 001A?
+#     - Could you show me all the disposal work areas at site 001Z?
+#     - What disposal work areas are available at site 008Q?
+#     - Show all disposal work areas at site 009R
+#     - Please list the disposal work areas at site 001S
+#     - I'd like to see all disposal work areas at site 002T
+
+# - intent: get_inventory_count_by_work_area_fms_id
+#   examples: |
+#     - Berapa banyak inventory yang tersimpan di work area G09?
+#     - Inventory di work area G09 ada berapa ya?
+#     - Jumlah inventory yang tersimpan di work area DEF, ada berapa?
+#     - Tolong cek inventory yang tersimpan di work area GHI berapa banyak
+#     - Saya mau tahu ada berapa inventory di work area JKL
+#     - Ada berapa inventory yang tersimpan di work area G09?
+#     - Bisa bantu cek jumlah inventory di work area G09?
+#     - Tolong cek total inventory yang tersimpan di work area G09
+#     - Berapa total inventory yang tersimpan di work area GHI?
+#     - Jumlah inventory di work area JKL?
+#     - Bisa kasih info inventory di work area G09?
+#     - Tolong cari tahu ada berapa inventory di work area ABC
+#     - Work area DEF inventory-nya yang tersimpan ada berapa sih?
+#     - Tolong bantu hitung inventory yang tersimpan di work area GHI
+#     - Inventory di work area JKL itu tersimpan berapa banyak?
+#     - Berapa jumlah barang yang tersimpan di work area G09?
+#     - Bisa tolong cek inventory di work area ABC?
+#     - Saya mau tahu inventory yang ada di work area DEF
+#     - Ada informasi soal jumlah inventory yang tersimpan di work area GHI?
+#     - Di work area JKL, inventory-nya yang tersimpan ada berapa?
+
+# - intent: get_inventory_count_by_work_area_fms_en
+#   examples: |
+#     - How many inventories are stored in work area G09?
+#     - Can you tell me the inventory count for work area GHI?
+#     - How many items are stored in work area DEF?
+#     - Can you check how many inventories are stored in work area GHI?
+#     - I want to know the inventory count at work area JKL
+#     - What's the total inventory stored in work area DEF?
+#     - Could you help me check the inventory count at work area G09?
+#     - Please check the total inventory stored in work area G09
+#     - What's the inventory count at work area JKL?
+#     - Could you help calculate the inventory stored in work area GHI?
+#     - How much inventory is stored in work area JKL?
+#     - What's the number of items stored in work area G09?
+#     - How many inventories are stored at work area JKL?
+#     - What's the total inventory count at work area DEF?
+#     - Can you tell me the total number of inventories in work area GHI?
+#     - How much inventory is stored at work area JKL?
+#     - Could you provide the total inventory for work area ABC?
+#     - What's the total inventory available at work area DEF?
+#     - How many total inventories are there at work area GHI?
+#     - Can you check the inventory count at work area JKL?
+#     - What's the total stored inventory for work area G09?
+#     - Can you share the total count of inventories in work area DEF?
+#     - What's the total inventory stored at work area G09?
+
+# - intent: ask_fleet_count_madhani_fms_id
+#   examples: |
+#     - Ada berapa banyak fleet di Madhani?
+#     - Berapa jumlah fleet yang terdaftar pada FMS?
+#     - Bisa kasih tahu total fleet di Madhani?
+#     - Berapa total fleet yang terdaftar di sistem FMS?
+#     - Tolong beri tahu jumlah fleet di Madhani
+#     - Saya ingin tahu total fleet yang ada di Madhani
+#     - Ada berapa fleet yang tercatat di FMS?
+#     - Total fleet di Madhani berapa?
+#     - Bisa berikan informasi jumlah fleet di Madhani?
+#     - Berapa banyak fleet yang tercatat dalam sistem FMS?
+#     - Fleet yang terdaftar di Madhani ada berapa?
+#     - Total fleet di FMS itu berapa ya?
+#     - Tolong tampilkan jumlah fleet yang terdaftar di Madhani
+#     - Saya mau tahu ada berapa fleet di Madhani
+#     - Ada berapa banyak fleet yang ada dalam sistem FMS?
+#     - Berapa total fleet yang tercatat di Madhani?
+#     - Bisa tunjukkan total fleet di Madhani?
+#     - Tolong berikan jumlah fleet yang terdaftar di FMS
+#     - Ada informasi tentang jumlah fleet di Madhani?
+#     - Total fleet yang terdaftar di FMS ada berapa?
+
+# - intent: ask_fleet_count_madhani_fms_en
+#   examples: |
+#     - How many fleets are there in Madhani?
+#     - What's the total number of fleets registered in the FMS?
+#     - Can you tell me the total fleet count at Madhani?
+#     - How many fleets are listed in the FMS system?
+#     - Please let me know the fleet count at Madhani
+#     - I want to know the total number of fleets at Madhani
+#     - How many fleets are recorded in the FMS system?
+#     - What's the total fleet count at Madhani?
+#     - Can you give me the fleet count at Madhani?
+#     - How many fleets are registered in the FMS system?
+#     - How many fleets are listed under Madhani?
+#     - What's the total fleet count in the FMS system?
+#     - Please show me the fleet count registered under Madhani
+#     - I'd like to know how many fleets are there at Madhani
+#     - How many fleets are there in the FMS system?
+#     - What's the total fleet count listed under Madhani?
+#     - Can you show me the total fleet count at Madhani?
+#     - Please provide the number of fleets registered in the FMS
+#     - Do you have information about the fleet count at Madhani?
+#     - How many fleets are registered in the FMS in total?
+
+# - intent: get_excavators_by_site_fms_id
+#   examples: |
+#     - Excavator apa yang digunakan pada site 001A?
+#     - Excavator apa saja di site 043C?
+#     - Bisa tunjukkan excavator yang ada di site 001D?
+#     - Apa saja excavator yang digunakan di site 001M?
+#     - Saya ingin tahu excavator apa saja di site 043C
+#     - Tolong beri tahu excavator yang tersedia di site 001A
+#     - Excavator yang digunakan di site 001A apa saja?
+#     - Apa excavator yang ada di site 001D?
+#     - Bisa berikan daftar excavator di site 001M?
+#     - Tolong tampilkan excavator yang digunakan pada site 001A
+#     - Apa daftar excavator yang tercatat di site 043C?
+#     - Saya mau tahu excavator di site 001D itu apa saja?
+#     - Tolong cek excavator yang digunakan di site 001M
+#     - Bisa kasih tahu excavator apa saja yang ada di site 001A?
+#     - Excavator yang tersedia di site 043C apa saja?
+#     - Beri saya daftar excavator yang digunakan di site 001D
+#     - Apa nama excavator yang ada di site 001M?
+#     - Sebutkan excavator yang digunakan pada site 043C
+#     - Bisa beri tahu excavator apa saja yang tersedia di site 001A?
+#     - Apa saja excavator yang tercatat di site 001D?
+#     - Tolong bantu tampilkan daftar excavator di site 001M
+
+# - intent: get_excavators_by_site_fms_en
+#   examples: |
+#     - What excavators are used at site 001A?
+#     - What excavators are available at site 043C?
+#     - Can you show me the excavators at site 001D?
+#     - Which excavators are used at site 001M?
+#     - I want to know what excavators are available at site 043C
+#     - Please tell me the excavators available at site 001A
+#     - What are the excavators used at site 001A?
+#     - Which excavators are listed at site 001D?
+#     - Can you provide a list of excavators at site 001M?
+#     - Please display the excavators used at site 001A
+#     - What is the list of excavators registered at site 043C?
+#     - I'd like to know the excavators at site 001D
+#     - Please check the excavators used at site 001M
+#     - Can you tell me what excavators are at site 001A?
+#     - Which excavators are available at site 043C?
+#     - Give me a list of excavators used at site 001D
+#     - What are the names of the excavators at site 001M?
+#     - List the excavators used at site 043C
+#     - Can you let me know what excavators are available at site 001A?
+#     - What excavators are recorded at site 001D?
+#     - Please help display the list of excavators at site 001M
+
+# - intent: get_fleet_count_by_site_fms_id
+#   examples: |
+#     - Ada berapa banyak fleet pada site 001A?
+#     - Berapa jumlah fleet di site 043C?
+#     - Tolong beri tahu total fleet di site 001D
+#     - Bisa kasih tahu jumlah fleet di site 001M?
+#     - Saya ingin tahu total fleet di site 001A
+#     - Fleet pada site 043C ada berapa?
+#     - Berapa fleet yang tersedia di site 001D?
+#     - Bisa cek total fleet di site 001M?
+#     - Ada berapa fleet yang tercatat di site 001A?
+#     - Berapa banyak fleet di site 043C?
+#     - Bisa tolong hitung jumlah fleet di site 001D?
+#     - Saya mau tahu ada berapa fleet pada site 001M
+#     - Berapa total fleet di site 001A?
+#     - Tampilkan jumlah fleet di site 043C
+#     - Tolong cari tahu jumlah fleet yang ada di site 001D
+#     - Bisa sebutkan jumlah fleet pada site 001M?
+#     - Apa total fleet yang tercatat di site 001A?
+#     - Ada informasi soal jumlah fleet di site 043C?
+#     - Fleet yang tercatat di site 001D ada berapa?
+#     - Tolong tampilkan total fleet pada site 001M
+
+# - intent: get_fleet_count_by_site_fms_en
+#   examples: |
+#     - How many fleets are there at site 001A?
+#     - What is the fleet count at site 043C?
+#     - Please let me know the total fleet count at site 001D
+#     - Can you tell me the number of fleets at site 001M?
+#     - I want to know the total number of fleets at site 001A
+#     - How many fleets are available at site 043C?
+#     - What is the fleet count at site 001D?
+#     - Can you check the total number of fleets at site 001M?
+#     - How many fleets are recorded at site 001A?
+#     - How many fleets are there at site 043C?
+#     - Can you please count the fleets at site 001D?
+#     - I'd like to know how many fleets are at site 001M
+#     - What's the total fleet count at site 001A?
+#     - Show me the fleet count at site 043C
+#     - Please find out the number of fleets at site 001D
+#     - Can you mention the number of fleets at site 001M?
+#     - What's the total fleet count recorded at site 001A?
+#     - Do you have information about the fleet count at site 043C?
+#     - How many fleets are registered at site 001D?
+#     - Please display the total fleet count at site 001M
+
+# - intent: get_excavator_operator_by_site_fms_id
+#   examples: |
+#     - Saya butuh data operator excavator di site 043C
+#     - Bisa bantu cek operator excavator di site 001A?
+#     - Siapa operator excavator di site 001A?
+#     - Operator excavator di site 001A siapa?
+#     - Saya ingin tahu siapa operator excavator di site Head Office Jakarta
+#     - Berikan informasi operator excavator di site 001A
+#     - Siapa operator excavator yang bertugas di site 001A?
+#     - Cek operator excavator di site Head Office Jakarta
+#     - Siapa operator excavator yang bekerja di site Head Office Jakarta?
+#     - Operator excavator pada site 001D siapa?
+#     - Tolong tampilkan operator excavator di site 001M
+#     - Operator excavator yang menjalankan excavator di site 043C?
+#     - Informasi operator excavator di site 001A siapa?
+#     - Operator excavator pada site 001A?
+#     - Siapa operator excavator saat ini di site 043C?
+#     - Saya perlu tahu operator excavator di site 001D
+#     - Tolong cek operator excavator di site Head Office Jakarta
+#     - Operator excavator yang ada di site 001A?
+#     - Siapa yang bertugas sebagai operator excavator di site 001A?
+#     - Operator excavator mana yang bekerja di site Head Office Jakarta?
+#     - Tunjukkan operator excavator saat ini di site 001D
+#     - Siapa operator excavator yang bertugas di site Head Office Jakarta?
+
+# - intent: get_excavator_operator_by_site_fms_en
+#   examples: |
+#     - I need data on the excavator operators at site 043C
+#     - Can you help check the excavator operators at site 001A?
+#     - Who are the excavator operators at site 001A?
+#     - Who is the excavator operator at site 001A?
+#     - I want to know who the excavator operators are at the Head Office Jakarta site
+#     - Provide information on the excavator operators at site 001A
+#     - Who is assigned as the excavator operator at site 001A?
+#     - Check the excavator operators at the Head Office Jakarta site
+#     - Who is working as an excavator operator at the Head Office Jakarta site?
+#     - Who is the excavator operator at site 001D?
+#     - Please show the excavator operators at site 001M
+#     - Who operates the excavators at site 043C?
+#     - What is the information on the excavator operators at site 001A?
+#     - Are there any excavator operators at site 001A?
+#     - Who are the current excavator operators at site 043C?
+#     - I need to know the excavator operators at site 001D
+#     - Please check the excavator operators at the Head Office Jakarta site
+#     - Are there any excavator operators at site 001A?
+#     - Who is assigned as an excavator operator at site 001A?
+#     - Which excavator operators are working at the Head Office Jakarta site?
+#     - Show the current excavator operators at site 001D
+#     - Who is responsible as an excavator operator at the Head Office Jakarta site?
+
+# - intent: get_current_activity_by_site_fms_id
+#   examples: |
+#     - Aktivitas apa yang sedang dilakukan pada site 001A?
+#     - Apa aktivitas di site 001A?
+#     - Bisa beri tahu aktivitas di site Head Office Jakarta?
+#     - Sedang ada aktivitas apa di site 043C?
+#     - Cek aktivitas di site 001D
+#     - Apa yang sedang dilakukan di site 043C?
+#     - Tolong tampilkan aktivitas saat ini di site 001A
+#     - Saya ingin tahu aktivitas di site 001D
+#     - Apa saja aktivitas di site 001M?
+#     - Aktivitas apa yang sedang berjalan di site Head Office Jakarta?
+#     - Aktivitas di site 001M apa saja?
+#     - Apa pekerjaan yang sedang berlangsung di site 001D?
+#     - Bisa beri informasi tentang aktivitas di site 001A?
+#     - Aktivitas yang sedang dilakukan di site Head Office Jakarta?
+#     - Apa aktivitas yang berlangsung di site Head Office Jakarta?
+#     - Tolong beri tahu aktivitas saat ini di site 001A
+#     - Aktivitas site 001A apa saat ini?
+#     - Sedang ada pekerjaan apa di site 043C?
+#     - Apa aktivitas pekerjaan yang dilakukan di site 043C?
+#     - Apa aktivitas yang sedang dikerjakan di site Head Office Jakarta?
+
+# - intent: get_current_activity_by_site_fms_en
+#   examples: |
+#     - What activity is currently happening at site 001A?
+#     - What are the activities at site 001A?
+#     - Can you tell me the activities at the Head Office Jakarta site?
+#     - What's currently going on at site 043C?
+#     - Check the activities at site 001D
+#     - What's being done at site 043C?
+#     - Please show the current activities at site 001A
+#     - I want to know the activities at site 001D
+#     - What activities are happening at site 001M?
+#     - What activities are ongoing at the Head Office Jakarta site?
+#     - What are the activities at site 001M?
+#     - What work is currently being done at site 001D?
+#     - Can you provide information about the activities at site 001A?
+#     - What activity is happening at the Head Office Jakarta site?
+#     - What's going on at the Head Office Jakarta site?
+#     - Please tell me the current activities at site 001A
+#     - What's the current activity at site 001A?
+#     - What work is being done at site 043C?
+#     - What activities are being carried out at site 043C?
+#     - What's the current work activity at the Head Office Jakarta site?
+
+# - intent: ask_hauler_count_by_site_fms_id
+#   examples: |
+#     - Ada berapa hauler yang bekerja pada site 001A?
+#     - Berapa jumlah hauler di site 001A?
+#     - Bisa beri tahu jumlah hauler yang tersedia di site 001M?
+#     - Saya ingin tahu ada berapa hauler pada site 001A
+#     - Tunjukkan total hauler di site 043C
+#     - Ada berapa banyak hauler di site 001D?
+#     - Berapa banyak hauler yang aktif di site 001M?
+#     - Tolong beri tahu jumlah hauler yang bekerja di site 001D
+#     - Total hauler pada site 043C berapa?
+#     - Berapa total hauler di site 001A?
+#     - Bisa beri informasi jumlah hauler di site 001M?
+#     - Ada berapa hauler yang terdaftar di site 001A?
+#     - Berapa jumlah hauler yang bekerja di site 001A?
+#     - Tolong tampilkan total hauler yang ada di site 043C
+#     - Saya mau tahu jumlah hauler yang tersedia di site 001D
+#     - Tampilkan jumlah hauler pada site 001M
+#     - Ada informasi jumlah hauler yang bekerja di site 001A?
+#     - Tolong sebutkan total hauler di site 043C
+#     - Berapa hauler yang tersedia di site 001M?
+#     - Infokan berapa jumlah hauler yang tersedia di site 001A
+#     - Apa saja hauler yang bekerja pada site 001A?
+#     - Tunjukkan daftar hauler di site 001D
+#     - Hauler apa saja yang beroperasi di site 001M?
+#     - Bisa beri tahu hauler yang bekerja di site 001A?
+#     - Saya ingin tahu hauler di site 001D
+#     - Apa saja nama hauler yang ada di site 001M?
+#     - Tampilkan semua hauler yang bekerja di site 001A
+#     - Hauler yang bekerja di site 001D apa saja?
+#     - Mohon berikan informasi hauler pada site 001M
+#     - Daftar hauler di site 001A ada apa saja?
+#     - Tolong cek hauler yang ada di site 001D
+#     - Bisa informasikan hauler di site 001M?
+#     - Hauler di site 001D ada apa saja?
+#     - Bisa bantu cari daftar hauler di site 001M?
+#     - Mohon beri tahu nama hauler yang bekerja pada site 001A
+#     - Beri saya daftar hauler yang beroperasi di site 001A
+#     - Informasi tentang hauler di site 001D, apa saja?
+
+# - intent: ask_hauler_count_by_site_fms_en
+#   examples: |
+#     - How many haulers are working at site 001A?
+#     - What is the total number of haulers at site 001A?
+#     - Can you tell me how many haulers are available at site 001M?
+#     - I want to know how many haulers are at site 001A
+#     - Show me the total haulers at site 043C
+#     - How many haulers are there at site 001D?
+#     - How many active haulers are there at site 001M?
+#     - Please tell me the number of haulers working at site 001D
+#     - What is the total hauler count at site 043C?
+#     - What's the total number of haulers at site 001A?
+#     - Can you provide information on the hauler count at site 001M?
+#     - How many haulers are registered at site 001A?
+#     - Please display the total number of haulers at site 043C
+#     - I'd like to know the number of haulers available at site 001D
+#     - Show the number of haulers at site 001M
+#     - Is there information about the haulers working at site 001A?
+#     - Please mention the total hauler count at site 043C
+#     - How many haulers are available at site 001M?
+#     - Let me know the number of haulers available at site 001A
+#     - Which haulers are working at site 001A?
+#     - Show me the list of haulers at site 001D
+#     - What haulers are operating at site 001M?
+#     - Can you tell me which haulers are working at site 001A?
+#     - I want to know about the haulers at site 001D
+#     - What are the names of the haulers at site 001M?
+#     - Display all haulers working at site 001A
+#     - Which haulers are operating at site 001D?
+#     - Please provide information about the haulers at site 001M
+#     - What's the list of haulers at site 001A?
+#     - Check the haulers at site 001D
+#     - Can you provide information on the haulers at site 001M?
+#     - What haulers are available at site 001D?
+#     - Can you help find the list of haulers at site 001M?
+#     - Please tell me the names of the haulers working at site 001A
+#     - Give me the list of haulers operating at site 001A
+#     - What information is available about the haulers at site 001D?
+
+# - intent: ask_equipment_count_by_site_fms_id
+#   examples: |
+#     - Ada berapa equipment yang bekerja pada site 001A?
+#     - Berapa jumlah equipment yang beroperasi di site 001D?
+#     - Bisa beri tahu total equipment pada site 001M?
+#     - Total equipment di site 001A ada berapa?
+#     - Saya ingin tahu jumlah equipment di site 001A
+#     - Berapa equipment yang bekerja di site 001M?
+#     - Bisa bantu cek jumlah equipment di site 001D?
+#     - Berapa banyak equipment pada site 001A?
+#     - Total equipment di site 001D itu berapa ya?
+#     - Mohon informasikan jumlah equipment di site 001M
+#     - Bisa tolong hitung jumlah equipment di site 001A?
+#     - Tolong cek ada berapa equipment di site 001D?
+#     - Informasikan total equipment yang bekerja di site 001M
+#     - Berapa equipment aktif di site 001A?
+#     - Equipment yang bekerja di site 001D ada berapa?
+#     - Bisa cek jumlah equipment aktif di site 001M?
+#     - Ada berapa equipment operasional di site 001A?
+#     - Berapa total equipment di site 001D?
+#     - Mohon bantu hitung total equipment pada site 001A
+#     - Equipment pada site 001M itu ada berapa?
+#     - Apa saja equipment yang bekerja pada site 001A?
+#     - Tunjukkan daftar equipment di site 001D
+#     - Equipment apa saja yang beroperasi di site 001M?
+#     - Bisa beri tahu equipment yang bekerja di site 001A?
+#     - Saya ingin tahu equipment di site 001D
+#     - Apa saja nama equipment yang ada di site 001M?
+#     - Tampilkan semua equipment yang bekerja di site 001A
+#     - Equipment yang bekerja di site 001D apa saja?
+#     - Mohon berikan informasi equipment pada site 001M
+#     - Daftar equipment di site 001A ada apa saja?
+#     - Tolong cek equipment yang ada di site 001D
+#     - Bisa informasikan equipment di site 001M?
+#     - Equipment di site 001D ada apa saja?
+#     - Bisa bantu cari daftar equipment di site 001M?
+#     - Mohon beri tahu nama equipment yang bekerja pada site 001A
+#     - Ada berapa equipment di site 001D?
+#     - Beri saya daftar equipment yang beroperasi di site 001A
+#     - Informasi tentang equipment di site 001D, apa saja?
+
+# - intent: ask_equipment_count_by_site_fms_en
+#   examples: |
+#     - How many pieces of equipment are working at site 001A?
+#     - What is the number of equipment operating at site 001D?
+#     - Can you tell me the total equipment at site 001M?
+#     - What's the total equipment count at site 001A?
+#     - I'd like to know the number of equipment at site 001A.
+#     - How many pieces of equipment are working at site 001M?
+#     - Can you help check the equipment count at site 001D?
+#     - How much equipment is at site 001A?
+#     - What's the total equipment count at site 001D?
+#     - Please provide information on the equipment at site 001M.
+#     - Can you calculate the total equipment at site 001A?
+#     - Check how many pieces of equipment are at site 001D.
+#     - Let me know the total equipment working at site 001M.
+#     - How many active pieces of equipment are there at site 001A?
+#     - What's the number of equipment working at site 001D?
+#     - Can you check the active equipment count at site 001M?
+#     - How many operational pieces of equipment are at site 001A?
+#     - What's the total number of equipment at site 001D?
+#     - Please help calculate the total equipment at site 001A.
+#     - How much equipment is at site 001M?
+#     - Which equipment is working at site 001A?
+#     - Show me the list of equipment at site 001D.
+#     - What equipment is operating at site 001M?
+#     - Can you tell me which equipment is working at site 001A?
+#     - I want to know the equipment at site 001D.
+#     - What are the names of the equipment at site 001M?
+#     - Display all equipment working at site 001A.
+#     - Which equipment is working at site 001D?
+#     - Please provide information about the equipment at site 001M.
+#     - What's the list of equipment at site 001A?
+#     - Check the equipment at site 001D.
+#     - Can you provide information on the equipment at site 001M?
+#     - What equipment is available at site 001D?
+#     - Can you help find the list of equipment at site 001M?
+#     - Please tell me the names of the equipment working at site 001A.
+#     - How many pieces of equipment are at site 001D?
+#     - Give me the list of equipment operating at site 001A.
+#     - What information is available about the equipment at site 001D?
+
+# - intent: ask_fleet_production_target_by_site_fms_id
+#   examples: |
+#     - Berapa target produksi fleet di site 001A?
+#     - Tunjukkan target produksi fleet di site 001D
+#     - Bisa beri tahu target produksi fleet pada site 001M?
+#     - Saya ingin tahu target produksi fleet di site 001A
+#     - Apa target produksi fleet yang bekerja di site 001D?
+#     - Mohon informasikan target produksi fleet di site 001M
+#     - Target produksi fleet di site 001A berapa?
+#     - Tolong tampilkan target produksi fleet pada site 001D
+#     - Informasi target produksi fleet pada site 001M
+#     - Ada berapa target produksi fleet di site 001A?
+#     - Apa target produksi fleet pada site 001D?
+#     - Bisa bantu cari target produksi fleet di site 001M?
+#     - Target produksi fleet pada site 001A apa saja?
+#     - Beri tahu target produksi fleet yang ada di site 001D
+#     - Tolong tampilkan target produksi fleet pada site 001M
+#     - Berapa nilai target produksi fleet di site 001A?
+#     - Saya mau tahu angka target produksi fleet di site 001D
+#     - Apa angka target produksi fleet di site 001M?
+#     - Bisa kasih tahu berapa target produksi fleet pada site 001A?
+#     - Target produksi fleet di site 001D ada berapa?
+
+# - intent: ask_fleet_production_target_by_site_fms_en
+#   examples: |
+#     - What is the fleet production target at site 001A?
+#     - Show me the fleet production target at site 001D
+#     - Can you tell me the fleet production target at site 001M?
+#     - I want to know the fleet production target at site 001A
+#     - What's the production target for fleets working at site 001D?
+#     - Please provide the fleet production target at site 001M
+#     - How much is the fleet production target at site 001A?
+#     - Please display the fleet production target at site 001D
+#     - Do you have information on the fleet production target at site 001M?
+#     - What's the total fleet production target at site 001A?
+#     - What is the production target for fleets at site 001D?
+#     - Can you help find the fleet production target at site 001M?
+#     - What are the fleet production targets at site 001A?
+#     - Tell me the production target for fleets at site 001D
+#     - Please show the fleet production target at site 001M
+#     - What's the value of the fleet production target at site 001A?
+#     - I'd like to know the production target figure for fleets at site 001D
+#     - What's the production target figure for fleets at site 001M?
+#     - Can you let me know the fleet production target at site 001A?
+#     - How many production targets are there for fleets at site 001D?
+
+# - intent: ask_fleet_match_factor_by_site_fms_id
+#   examples: |
+#     - Berapa match factor fleet di site 001A?
+#     - Bisa kasih tahu data match factor untuk setiap fleet di site 001D?
+#     - Apa match factor fleet yang bekerja di site 001M?
+#     - Saya ingin tahu match factor untuk tiap fleet yang di site 001A
+#     - Tolong beri informasi data match factor fleet di site 001D
+#     - Mohon informasikan match factor tiap fleet pada site 001M
+#     - Sebutkan match factor fleet di site 001A berapa?
+#     - Apa nilai match factor fleet di site 001D?
+#     - Saya mau tahu berapa match factor untuk tiap fleet pada site 001M
+#     - Ada informasi tentang match factor fleet di site 001A?
+#     - Data match factor fleet pada site 001D berapa nilainya?
+#     - Tampilkan data match factor untuk setiap fleet yang ada di site 001M
+#     - Match factor fleet pada site 001A berapa ya?
+#     - Tolong informasikan data match factor fleet pada site 001D
+#     - Bisa bantu cari tahu match factor fleet di site 001M?
+#     - Match factor fleet yang tercatat di site 001A berapa nilainya?
+#     - Saya mau informasi tentang match factor setiap fleet yang bekerja di site 001D
+#     - Match factor fleet di site 001M itu berapa ya?
+#     - Apa data match factor fleet yang ada di site 001A?
+#     - Mohon bantu saya berikan data match factor fleet pada site 001D
+
+# - intent: ask_fleet_match_factor_by_site_fms_en
+#   examples: |
+#     - What is the match factor for the fleet at site 001A?
+#     - Can you provide the match factor data for the fleet at site 001D?
+#     - What's the match factor for the fleet operating at site 001M?
+#     - I'd like to know the match factor for the fleet at site 001A
+#     - Please share the match factor data for the fleet at site 001D
+#     - Could you give me the match factor for the fleet at site 001M?
+#     - How much is the match factor for the fleet at site 001A?
+#     - What's the match factor value for the fleet at site 001D?
+#     - I want to know the match factor for the fleet at site 001M
+#     - Do you have information about the fleet match factor at site 001A?
+#     - What's the match factor data for the fleet at site 001D?
+#     - Show me the match factor data for the fleet at site 001M
+#     - How much is the match factor for the fleet at site 001A?
+#     - Please provide the match factor data for the fleet at site 001D
+#     - Can you help me find the fleet match factor at site 001M?
+#     - What's the recorded match factor value for the fleet at site 001A?
+#     - I need information about the fleet match factor at site 001D
+#     - What's the match factor for the fleet at site 001M?
+#     - Do you have data on the fleet match factor at site 001A?
+#     - Could you help me with the match factor data for the fleet at site 001D?
+
+# - intent: ask_fleet_haul_time_by_site_fms_id
+#   examples: |
+#     - Berapa lama waktu hauling fleet di site 001A?
+#     - Berapa hauling time fleet di site 001D?
+#     - Bisa kasih tahu berapa lama hauling fleet di site 001M?
+#     - Lama hauling fleet di site 001A itu berapa?
+#     - Saya ingin tahu lama hauling time fleet di site 001D
+#     - Berapa waktu hauling fleet yang tercatat di site 001M?
+#     - Mohon informasi tentang lama hauling fleet di site 001A
+#     - Apa data waktu hauling fleet di site 001D?
+#     - Saya mau tahu lama waktu hauling fleet di site 001M
+#     - Lama hauling fleet di site 001A saat ini berapa?
+#     - Berapa lama waktu hauling fleet yang ada di site 001D?
+#     - Tampilkan lama waktu hauling fleet di site 001M
+#     - Waktu hauling fleet pada site 001A itu berapa menit?
+#     - Bisa bantu cari tahu lama hauling fleet di site 001D?
+#     - Mohon informasikan hauling fleet time di site 001M
+#     - Apa hauling time fleet yang ada di site 001A?
+#     - Berapa waktu hauling fleet di site 001D berdasarkan data saat ini?
+#     - Tolong beri informasi lama hauling fleet di site 001M
+#     - Lama hauling fleet di site 001A berdasarkan laporan berapa?
+#     - Saya mau tahu waktu hauling fleet pada site 001D itu berapa menit
+#     - Waktu hauling fleet yang tercatat di site 001A berapa menit?
+#     - Saya mau informasi tentang hauling fleet time di site 001D itu berapa lama
+
+# - intent: ask_fleet_haul_time_by_site_fms_en
+#   examples: |
+#     - How long is the haul time for the fleet at site 001A?
+#     - What's the haul time for the fleet at site 001D?
+#     - Can you tell me the haul time for the fleet at site 001M?
+#     - What's the haul duration for the fleet at site 001A?
+#     - I'd like to know the haul time for the fleet at site 001D
+#     - What is the recorded haul time for the fleet at site 001M?
+#     - Please provide information on the haul time for the fleet at site 001A
+#     - What's the haul time data for the fleet at site 001D?
+#     - I want to know how long the haul time is for the fleet at site 001M
+#     - How long is the current haul time for the fleet at site 001A?
+#     - How much haul time is recorded for the fleet at site 001D?
+#     - Show me the haul time duration for the fleet at site 001M
+#     - What's the haul time for the fleet at site 001A in minutes?
+#     - Can you help find the haul time for the fleet at site 001D?
+#     - Please share the haul time data for the fleet at site 001M
+#     - What's the current haul time for the fleet at site 001A?
+#     - How long is the haul time for the fleet at site 001D based on current data?
+#     - Please provide details on the haul time for the fleet at site 001M
+#     - How long is the haul time for the fleet at site 001A based on the report?
+#     - I'd like to know the haul time for the fleet at site 001D in minutes
+#     - What's the recorded haul time for the fleet at site 001A in minutes?
+#     - I need information on how long the haul time for the fleet at site 001D is
+
+# - intent: ask_fleet_dump_time_by_site_fms_id
+#   examples: |
+#     - Berapa lama waktu dumping fleet di site 001A?
+#     - Lama dumping fleet di site 001D itu berapa?
+#     - Bisa kasih tahu lama waktu dumping fleet di site 001M?
+#     - Saya ingin tahu waktu dumping fleet di site 001A
+#     - Mohon informasi dumping time fleet di site 001D
+#     - Berapa waktu dumping fleet yang tercatat di site 001M?
+#     - Lama dumping fleet pada site 001A saat ini berapa?
+#     - Saya mau tahu lama dumping fleet di site 001D
+#     - Bisa bantu cari waktu dumping fleet di site 001M?
+#     - Waktu dumping fleet di site 001A itu berapa menit?
+#     - Berapa lama waktu dumping fleet di site 001D?
+#     - Tampilkan lama dumping fleet di site 001M
+#     - Apa data lama waktu dumping fleet pada site 001A?
+#     - Mohon beri tahu waktu dumping fleet di site 001D
+#     - Lama waktu dumping fleet di site 001M berapa menit?
+#     - Waktu dumping fleet di site 001A menurut laporan berapa menit?
+#     - Apa waktu dumping fleet yang ada di site 001D?
+#     - Tolong beri informasi dumping fleet time di site 001M
+#     - Dumping fleet time di site 001A itu berapa lama?
+#     - Saya mau tahu dumping time fleet pada site 001D saat ini
+#     - Berapa waktu dumping fleet di site 001D berdasarkan data saat ini?
+
+# - intent: ask_fleet_dump_time_by_site_fms_en
+#   examples: |
+#     - How long is the dump time for the fleet at site 001A?
+#     - What's the dump time duration for the fleet at site 001D?
+#     - Can you tell me the dump time for the fleet at site 001M?
+#     - I'd like to know the dump time for the fleet at site 001A.
+#     - Please provide information on the dump time for the fleet at site 001D.
+#     - What is the recorded dump time for the fleet at site 001M?
+#     - How long is the current dump time for the fleet at site 001A?
+#     - I want to know the dump time for the fleet at site 001D.
+#     - Can you help find the dump time for the fleet at site 001M?
+#     - What's the dump time for the fleet at site 001A in minutes?
+#     - How long is the dump time for the fleet at site 001D?
+#     - Show me the dump time duration for the fleet at site 001M.
+#     - What's the data on the dump time for the fleet at site 001A?
+#     - Please tell me the dump time for the fleet at site 001D.
+#     - How many minutes is the dump time for the fleet at site 001M?
+#     - What's the dump time for the fleet at site 001A according to the report?
+#     - What is the dump time for the fleet at site 001D?
+#     - Please provide details on the dump time for the fleet at site 001M.
+#     - How long is the dump time for the fleet at site 001A?
+#     - I'd like to know the current dump time for the fleet at site 001D.
+#     - What's the dump time for the fleet at site 001D based on current data?
+
+# - intent: ask_fleet_spot_time_by_site_fms_id  
+#   examples: |
+#     - Berapa lama spotting time fleet pada site 001A?
+#     - Spotting time fleet di site 043C berapa menit?
+#     - Saya ingin tahu spotting time fleet pada site Head Office Jakarta
+#     - Spotting time di site 001M berapa ya?
+#     - Bisa cek spotting time di site 001A?
+#     - Tunjukkan spotting time fleet pada site 001D
+#     - Spotting time fleet di site 001M itu berapa lama?
+#     - Apa durasi spotting time di site 043C?
+#     - Berapa spotting time di site 001A?
+#     - Informasi spotting time di site 001M?
+#     - Spotting time untuk fleet di site 001D itu berapa menit?
+#     - Bisa kasih tahu durasi spotting time di site 001A?
+#     - Apa data terkait spotting time fleet di site Head Office Jakarta?
+#     - Spotting time fleet di site 001M berapa lama?
+#     - Berapa durasi spotting time fleet pada site 043C?
+#     - Informasi spotting time fleet di site 001A apa saja?
+#     - Saya mau tahu durasi spotting time fleet di site 001M
+#     - Spotting time fleet di site Head Office Jakarta berapa lama?
+#     - Durasi spotting time fleet pada site 043C berapa menit?
+#     - Berapa waktu spotting time fleet di site 001A?
+
+# - intent: ask_fleet_spot_time_by_site_fms_en
+#   examples: |
+#     - How long is the spotting time for the fleet at site 001A?
+#     - What is the spotting time for the fleet at site 043C in minutes?
+#     - I want to know the spotting time for the fleet at Head Office Jakarta
+#     - What's the spotting time at site 001M?
+#     - Can you check the spotting time at site 001A?
+#     - Show me the spotting time for the fleet at site 001D
+#     - How long is the spotting time for the fleet at site 001M?
+#     - What is the duration of the spotting time at site 043C?
+#     - How long is the spotting time at site 001A?
+#     - What's the spotting time information at site 001M?
+#     - How many minutes is the spotting time for the fleet at site 001D?
+#     - Can you tell me the spotting time duration at site 001A?
+#     - What data is available regarding the spotting time for the fleet at Head Office Jakarta?
+#     - How long is the spotting time for the fleet at site 001M?
+#     - What's the duration of spotting time for the fleet at site 043C?
+#     - What's the information about spotting time for the fleet at site 001A?
+#     - I'd like to know the spotting time duration for the fleet at site 001M
+#     - What's the spotting time for the fleet at Head Office Jakarta?
+#     - How many minutes is the spotting time duration for the fleet at site 043C?
+#     - What is the spotting time for the fleet at site 001A?
+
+# - intent: ask_fleet_loader_cycle_time_by_site_fms_id
+#   examples: |
+#     - Berapa lama loader cycle time pada site 001A?
+#     - Loader cycle time untuk fleet di site 043C berapa?
+#     - Saya ingin tahu loader cycle time pada site Head Office Jakarta
+#     - Tunjukkan loader cycle time pada site 001M
+#     - Loader cycle time di site 043C itu berapa lama?
+#     - Loader cycle time di site 001A itu berapa menit?
+#     - Durasi loader cycle pada fleet di site 001A?
+#     - Berapa lama loader cycle time di site 001D?
+#     - Cek loader cycle time di site 001A
+#     - Loader cycle time di site 001M berapa ya?
+#     - Bisa kasih tahu loader cycle time di site 043C?
+#     - Apa saja informasi terkait loader cycle time di site 001A?
+#     - Tampilkan loader cycle time untuk site 001M
+#     - Saya butuh info waktu loader cycle di site 001D
+#     - Durasi loader cycle di site 001A berapa menit?
+#     - Informasi tentang loader cycle time di site 043C apa?
+#     - Loader cycle duration di site 001M berapa lama?
+#     - Tolong cari tahu loader cycle duration di site 001A
+#     - Loader cycle time pada site 001D itu berapa menit?
+#     - Tolong berikan informasi loader cycle time yang tercatat di site 001A?
+#     - Saya mau tahu loader cycle time fleet di site 001D
+
+# - intent: ask_fleet_loader_cycle_time_by_site_fms_en
+#   examples: |
+#     - How long is the loader cycle time at site 001A?
+#     - What is the loader cycle time for the fleet at site 043C?
+#     - I'd like to know the loader cycle time at the Head Office Jakarta site
+#     - Show me the loader cycle time at site 001M
+#     - What's the loader cycle time at site 043C?
+#     - How many minutes is the loader cycle time at site 001A?
+#     - What's the loader cycle duration for the fleet at site 001A?
+#     - How long is the loader cycle time at site 001D?
+#     - Check the loader cycle time at site 001A
+#     - What's the loader cycle time at site 001M?
+#     - Can you tell me the loader cycle time at site 043C?
+#     - What information is available about the loader cycle time at site 001A?
+#     - Show me the loader cycle time for site 001M
+#     - I need the loader cycle time information for site 001D
+#     - What's the loader cycle duration in minutes at site 001A?
+#     - What's the information on loader cycle time at site 043C?
+#     - How long is the loader cycle duration at site 001M?
+#     - Please check the loader cycle duration at site 001A
+#     - How many minutes is the loader cycle time at site 001D?
+#     - Can you provide the loader cycle time information for site 001A?
+#     - I'd like to know the loader cycle time for the fleet at site 001D
+
+# - intent: ask_fleet_return_time_by_site_fms_id
+#   examples: |
+#     - Berapa lama waktu return fleet di site 001A?
+#     - Lama return fleet di site 001D itu berapa?
+#     - Bisa kasih tahu lama waktu return fleet di site 001M?
+#     - Saya ingin tahu waktu return fleet di site 001A
+#     - Mohon informasi return time fleet di site 001D
+#     - Berapa waktu return fleet yang tercatat di site 001M?
+#     - Lama return fleet pada site 001A saat ini berapa?
+#     - Saya mau tahu lama return fleet di site 001D
+#     - Bisa bantu cari waktu return fleet di site 001M?
+#     - Waktu return fleet di site 001A itu berapa?
+#     - Berapa waktu return fleet di site 001D?
+#     - Tampilkan lama return fleet di site 001M
+#     - Apa data lama waktu return fleet pada site 001A?
+#     - Mohon beri tahu waktu return fleet di site 001D
+#     - Lama waktu return fleet di site 001M berapa menit?
+#     - Waktu return fleet di site 001A menurut laporan berapa?
+#     - Apa waktu return fleet yang ada di site 001D?
+#     - Tolong beri informasi return fleet time di site 001M
+#     - Return fleet time di site 001A itu berapa?
+#     - Saya mau tahu return time fleet pada site 001D saat ini
+#     - Berapa lama waktu return fleet di site 001D berdasarkan data saat ini?
+
+# - intent: ask_fleet_return_time_by_site_fms_en
+#   examples: |
+#     - What's the return time duration for the fleet at site 001D?
+#     - Can you tell me the return time for the fleet at site 001M?
+#     - I'd like to know the return time for the fleet at site 001A
+#     - Please provide information on the return time for the fleet at site 001D
+#     - What is the recorded return time for the fleet at site 001M?
+#     - How long is the current return time for the fleet at site 001A?
+#     - I want to know the return time for the fleet at site 001D
+#     - Can you help find the return time for the fleet at site 001M?
+#     - What's the return time for the fleet at site 001A?
+#     - How much is the return time for the fleet at site 001D?
+#     - Show me the return time duration for the fleet at site 001M
+#     - What's the data on the return time for the fleet at site 001A?
+#     - Please tell me the return time for the fleet at site 001D
+#     - How many minutes is the return time for the fleet at site 001M?
+#     - What's the return time for the fleet at site 001A according to the report?
+#     - What is the return time for the fleet at site 001D?
+#     - Please provide details on the return time for the fleet at site 001M
+#     - How long is the return time for the fleet at site 001A?
+#     - I'd like to know the current return time for the fleet at site 001D
+#     - What's the return time for the fleet at site 001D based on current data?
+    
+# - intent: ask_fleet_production_count_by_site_fms_id
+#   examples: |
+#     - Berapa jumlah produksi untuk setiap fleet di site 001A?
+#     - Berapa banyak jumlah produksi di setiap fleet pada site 001A?
+#     - Produksi tiap fleet pada site 001D ada berapa?
+#     - Mohon infokan jumlah produksi di setiap fleet pada site 001M
+#     - Bisa beri tahu total produksi di site 001A?
+#     - Berapa jumlah produksi fleet di site 001D?
+#     - Saya ingin tahu total produksi fleet di site 001M
+#     - Tolong tampilkan jumlah produksi di site 001A
+#     - Tolong tampilkan jumlah produksi untuk setiap fleet di site 001A
+#     - Apa data jumlah produksi pada site 001D?
+#     - Bisa bantu cek jumlah produksi pada setiap fleet di site 001M?
+#     - Produksi fleet di site 001A itu berapa?
+#     - Ada berapa jumlah produksi di site 001D?
+#     - Mohon beri tahu jumlah produksi pada site 001M
+#     - Saya mau tahu jumlah produksi untuk setiap fleet di site 001A
+#     - Saya mau tahu jumlah produksi di site 001A
+#     - Apa data total produksi fleet di site 001D?
+#     - Berapa jumlah produksi yang tercatat di site 001M?
+#     - Bisa tunjukkan total produksi tiap fleet di site 001A?
+#     - Produksi fleet pada site 001D itu berapa banyak?
+#     - Tampilkan total produksi fleet pada site 001M
+#     - Apa jumlah produksi di site 001A saat ini?
+#     - Tolong cek jumlah produksi pada tiap fleet di site 001D
+
+# - intent: ask_fleet_production_count_by_site_fms_en
+#   examples: |
+#     - What is the production count for each fleet at site 001A?
+#     - How much is the production for each fleet at site 001A?
+#     - What's the fleet production at site 001D?
+#     - Please provide the production count for each fleet at site 001M
+#     - Can you tell me the total production at site 001A?
+#     - What is the production count for the fleet at site 001D?
+#     - I'd like to know the total production for the fleet at site 001M
+#     - Show me the production count at site 001A
+#     - Please display the production count for each fleet at site 001A
+#     - What's the production data for site 001D?
+#     - Can you check the production count for each fleet at site 001M?
+#     - How much is the fleet production at site 001A?
+#     - How many production units are recorded at site 001D?
+#     - Please tell me the production count for site 001M
+#     - I want to know the production count for each fleet at site 001A
+#     - I want to know the total production count at site 001A
+#     - What's the total fleet production data at site 001D?
+#     - How much production has been recorded at site 001M?
+#     - Can you show me the total production for each fleet at site 001A?
+#     - How much production is recorded for the fleet at site 001D?
+#     - Show me the total production for the fleet at site 001M
+#     - What's the current production count at site 001A?
+#     - Please check the production count for each fleet at site 001D
+
+# - intent: ask_fleet_production_count_per_cycle_by_site_fms_id
+#   examples: |
+#     - Berapa banyak jumlah produksi untuk setiap fleet di site 001A dalam satu cycle?
+#     - Bisa beri tahu produksi per fleet per cycle di site 001D?
+#     - Produksi per fleet dalam satu cycle di site 001M itu berapa?
+#     - Mohon info jumlah produksi tiap fleet dalam satu cycle di site 001A
+#     - Saya mau tahu produksi untuk setiap fleet per cycle di site 001D
+#     - Tolong tampilkan jumlah produksi per fleet di site 001M dalam satu cycle
+#     - Berapa jumlah produksi tiap fleet per cycle di site 001A?
+#     - Berapa produksi per fleet di site 001D dalam satu cycle?
+#     - Produksi tiap fleet per cycle di site 001M itu berapa?
+#     - Bisa bantu cek produksi per fleet per cycle di site 001A?
+#     - Data jumlah produksi tiap fleet dalam satu cycle di site 001D?
+#     - Saya ingin tahu produksi per fleet di site 001M untuk satu cycle
+#     - Tolong beri tahu produksi tiap fleet di site 001A dalam satu cycle
+#     - Produksi fleet per cycle di site 001D itu berapa?
+#     - Berapa total produksi per fleet dalam satu cycle di site 001M?
+#     - Data jumlah produksi tiap fleet per cycle di site 001A?
+#     - Mohon beri tahu produksi untuk setiap fleet per cycle di site 001D
+#     - Tampilkan produksi tiap fleet dalam satu cycle di site 001M
+#     - Apa produksi per fleet dalam satu cycle di site 001A?
+#     - Berapa jumlah produksi tiap fleet per cycle di site 001D?
+
+# - intent: ask_fleet_production_count_per_cycle_by_site_fms_en
+#   examples: |
+#     - How much is the production for each fleet at site 001A in one cycle?
+#     - Can you tell me the production per fleet per cycle at site 001D?
+#     - What's the production per fleet in one cycle at site 001M?
+#     - Please provide the production count per fleet in one cycle at site 001A
+#     - I want to know the production for each fleet per cycle at site 001D
+#     - Show me the production per fleet in one cycle at site 001M
+#     - How much is the production for each fleet per cycle at site 001A?
+#     - What's the production per fleet at site 001D in one cycle?
+#     - How much production does each fleet have per cycle at site 001M?
+#     - Can you check the production per fleet per cycle at site 001A?
+#     - What's the production data per fleet in one cycle at site 001D?
+#     - I'd like to know the production per fleet at site 001M for one cycle
+#     - Please tell me the production for each fleet at site 001A in one cycle
+#     - What's the production per cycle for the fleet at site 001D?
+#     - How much is the total production per fleet in one cycle at site 001M?
+#     - What's the production data for each fleet per cycle at site 001A?
+#     - Please provide the production for each fleet per cycle at site 001D
+#     - Show me the production for each fleet in one cycle at site 001M
+#     - What's the production per fleet in one cycle at site 001A?
+#     - How much is the production for each fleet per cycle at site 001D?
+
+# - intent: ask_top_10_equipment_fms_id
+#   examples: |
+#     - Tampilkan top 10 equipment
+#     - Top 10 equipment
+#     - Tolong tampilkan daftar top 10 equipment
+#     - Saya ingin melihat daftar top 10 equipment
+#     - Berikan daftar 10 equipment dengan performa terbaik
+#     - Apa saja 10 equipment terbaik saat ini?
+#     - Tunjukkan 10 equipment dengan kinerja tertinggi
+#     - Bisa berikan informasi tentang top 10 equipment?
+#     - Tampilkan peringkat 10 besar equipment terbaik
+#     - Apa saja top 10 equipment?
+#     - Tampilkan daftar top 10 equipment
+#     - Tunjukkan peringkat 10 besar equipment 
+#     - Tolong berikan informasi mengenai top 10 equipment
+#     - Apa saja top 10 equipment dengan performa paling tinggi?
+#     - Berikan daftar 10 equipment dengan kinerja tertinggi
+#     - Berikan saya daftar peringkat top 10 equipment
+#     - Tampilkan 10 equipment dengan frekuensi penggunaan tertinggi
+#     - Berikan daftar 10 equipment dengan tingkat penggunaan tertinggi
+
+# - intent: ask_top_10_equipment_fms_en
+#   examples: |
+#     - Show the top 10 equipment
+#     - Please display the top 10 equipment list
+#     - I want to see the top 10 equipment ranking
+#     - Give me a list of the 10 best-performing equipment
+#     - What are the top 10 best equipment right now?
+#     - Show me 10 equipment with the highest performance
+#     - Can you provide details on the top 10 equipment?
+#     - Display the top 10 highest-rated equipment
+#     - Which equipment is in the top 10?
+#     - Show the ranking of the top 10 equipment
+#     - Provide the list of the best 10 equipment
+#     - Can I get information about the top 10 equipment?
+#     - What are the top 10 equipment with the best performance?
+#     - List the 10 equipment with the highest efficiency
+#     - Give me the ranking of the top 10 equipment
+#     - Show 10 equipment with the highest usage frequency
+#     - Provide a list of the 10 most frequently used equipment
+
+# - intent: ask_top_10_fleet_fms_id
+#   examples: |
+#     - Tampilkan data top 10 fleet
+#     - Top 10 fleet
+#     - Tolong tampilkan data top 10 fleet
+#     - Bisa tunjukkan data top 10 fleet?
+#     - Saya ingin melihat data top 10 fleet
+#     - Berikan daftar top 10 fleet
+#     - Apa saja fleet yang masuk dalam top 10?
+#     - Bisa tampilkan daftar top 10 fleet?
+#     - Tampilkan fleet dengan peringkat 10 besar
+#     - Saya ingin tahu fleet dengan peringkat tertinggi dalam top 10
+#     - Tampilkan data fleet dengan performa terbaik dalam top 10
+#     - Tolong berikan informasi mengenai top 10 fleet
+#     - Apa saja fleet yang memiliki performa tertinggi dalam top 10?
+#     - Saya butuh daftar fleet yang masuk top 10
+#     - Tampilkan daftar fleet dengan kinerja terbaik
+#     - Apa saja 10 fleet dengan performa paling unggul?
+#     - Saya ingin melihat laporan 10 fleet yang memiliki produktivitas tertinggi
+#     - Berikan daftar 10 fleet dengan tingkat penggunaan tertinggi
+#     - Tampilkan fleet yang memiliki catatan operasional terbaik dalam top 10
+
+# - intent: ask_top_10_fleet_fms_en
+#   examples: |
+#     - Show the top 10 fleet data
+#     - Please display the top 10 fleet list
+#     - Can you show the top 10 fleet?
+#     - I want to see the top 10 fleet data
+#     - Provide a list of the top 10 fleet
+#     - Which fleets are ranked in the top 10?
+#     - Can you display the top 10 fleet ranking?
+#     - Show the fleet with the highest top 10 rankings
+#     - I'd like to know which fleet ranks highest in the top 10
+#     - Display the fleet with the best performance in the top 10
+#     - Please provide information about the top 10 fleet
+#     - Which fleets have the highest performance in the top 10?
+#     - I need a list of fleets that made it into the top 10
+#     - Show the list of fleets with the best performance
+#     - What are the 10 best-performing fleets?
+#     - I want to see a report on the 10 fleets that have the highest productivity
+#     - Provide a list of the 10 most used fleets
+#     - Show the fleets with the best operational records in the top 10
+
+# - intent: ask_top_10_breakdown_fms_id
+#   examples: |
+#     - Tampilkan data top 10 breakdown
+#     - Top 10 breakdown
+#     - Tolong tampilkan data top 10 breakdown
+#     - Bisa tunjukkan data top 10 breakdown?
+#     - Saya ingin melihat data top 10 breakdown
+#     - Berikan daftar top 10 breakdown
+#     - Apa saja breakdown yang masuk dalam top 10?
+#     - Bisa tampilkan daftar top 10 breakdown?
+#     - Saya ingin tahu breakdown dengan peringkat tertinggi dalam top 10
+#     - Tolong berikan informasi mengenai top 10 breakdown
+#     - Apa saja breakdown yang paling sering terjadi dalam top 10?
+#     - Bisakah Anda menunjukkan data top 10 breakdown?
+#     - Saya ingin melihat breakdown yang masuk daftar top 10
+#     - Berikan saya data top 10 breakdown dengan peringkat tertinggi
+#     - Tampilkan daftar 10 breakdown dengan frekuensi kejadian tertinggi
+#     - Apa saja 10 breakdown yang paling sering terjadi?
+#     - Bisa berikan data 10 breakdown yang memiliki dampak paling besar?
+#     - Saya ingin tahu breakdown mana yang paling sering dialami dalam top 10
+#     - Berikan daftar 10 breakdown dengan jumlah kasus terbanyak
+#     - Tampilkan 10 kejadian breakdown yang paling sering dilaporkan
+#     - Bisa tunjukkan breakdown mana saja yang paling sering terjadi dalam daftar top 10?
+
+# - intent: ask_top_10_breakdown_fms_en
+#   examples: |
+#     - Show the top 10 breakdown data
+#     - Show top 10 breakdown data
+#     - Please display the top 10 breakdown list
+#     - Can you show the top 10 breakdowns?
+#     - I want to see the top 10 breakdown data
+#     - Provide a list of the top 10 breakdowns
+#     - What are the top 10 most frequent breakdowns?
+#     - Can you display the ranking of the top 10 breakdowns?
+#     - I'd like to know which breakdowns rank the highest in the top 10
+#     - Please provide information about the top 10 breakdowns
+#     - What are the most common breakdowns in the top 10?
+#     - Could you show me the top 10 breakdown data?
+#     - I want to check which breakdowns are in the top 10 list
+#     - Give me the top 10 breakdowns with the highest ranking
+#     - Show the list of 10 breakdowns with the highest frequency
+#     - Which 10 breakdowns occur the most often?
+#     - Can you provide data on the 10 breakdowns with the biggest impact?
+#     - I'd like to know which breakdowns happen the most in the top 10
+#     - Provide a list of the 10 breakdowns with the highest number of cases
+#     - Show the 10 most frequently reported breakdown incidents
+#     - Can you list the breakdowns that happen the most in the top 10?
+
+# - synonym: jarak tempuh
+#   examples: |
+#     - kilometer
+
+# - intent: request_top_10_equipment_fms_id
+#   examples: |
+#     - Saya ingin tahu 10 [equipment](category_name) berdasarkan [jam operasional](equipment_top10_category) tertinggi
+#     - Apa saja 10 [equipment](category_name) dengan [jam operasional](equipment_top10_category) tertinggi?
+#     - Berikan daftar 10 [equipment](category_name) yang paling sering digunakan berdasarkan [jam operasional](equipment_top10_category)
+#     - Tampilkan 10 [equipment](category_name) dengan total [jam operasional](equipment_top10_category) tertinggi
+#     - Bisa berikan daftar 10 [equipment](category_name) dengan [jam operasional](equipment_top10_category) tertinggi?
+#     - Berikan daftar 10 [equipment](category_name) dengan [jam operasional](equipment_top10_category) terbesar
+#     - Apa saja 10 [equipment](category_name) dengan penggunaan tertinggi berdasarkan [jam operasional](equipment_top10_category)?
+#     - Daftar top 10 [equipment](category_name) dengan [jam operasional](equipment_top10_category) paling tinggi
+#     - Apa saja 10 [equipment](category_name) dengan [kapasitas](equipment_top10_category) terbesar?
+#     - Berikan daftar 10 [equipment](category_name) berdasarkan [kapasitas](equipment_top10_category) terbesar
+#     - 10 [equipment](category_name) dengan [kapasitas](equipment_top10_category) terbesar di kategori tertentu?
+#     - Tampilkan 10 [equipment](category_name) dengan [kapasitas](equipment_top10_category) terbesar
+#     - Berikan daftar 10 [equipment](category_name) berdasarkan [kapasitas](equipment_top10_category) terbesar dalam Ton
+#     - Tampilkan 10 [equipment](category_name) berdasarkan [kilometer](equipment_top10_category) tertinggi
+#     - Apa saja 10 [equipment](category_name) dengan [kilometer](equipment_top10_category) tempuh tertinggi?
+#     - Tampilkan daftar 10 [equipment](category_name) yang paling sering digunakan berdasarkan [jarak tempuh](equipment_top10_category)
+#     - 10 [equipment](category_name) mana saja dengan [kilometer](equipment_top10_category) tertinggi?
+#     - Apa saja 10 [equipment](category_name) dengan [jarak tempuh](equipment_top10_category) tertinggi?
+#     - Berikan daftar top 10 [equipment](category_name) berdasarkan [jarak tempuh](equipment_top10_category)
+#     - Tampilkan top 10 [equipment](category_name) dengan [kilometer](equipment_top10_category) terbesar
+
+# - intent: request_top_10_equipment_fms_en
+#   examples: |
+#     - I want to know the top 10 [equipment](category_name) with the highest [operating hours](equipment_top10_category)
+#     - Which are the top 10 [equipment](category_name) with the highest [hour meter](equipment_top10_category)?
+#     - Show me a list of the top 10 [equipment](category_name) with the most usage based on [hour meter](equipment_top10_category)
+#     - Display the 10 [equipment](category_name) with the highest total [operating hours](equipment_top10_category)
+#     - Can you provide a list of the top 10 [equipment](category_name) with the highest [hour meter](equipment_top10_category)?
+#     - Give me the top 10 [equipment](category_name) with the largest [hour meter](equipment_top10_category)
+#     - What are the top 10 [equipment](category_name) with the highest usage based on [hour meter](equipment_top10_category)?
+#     - Show the top 10 [equipment](category_name) with the highest [hour meter](equipment_top10_category)
+#     - Which 10 [equipment](category_name) have the largest [capacity](equipment_top10_category)?
+#     - Provide a list of the top 10 [equipment](category_name) ranked by [capacity](equipment_top10_category)
+#     - Which 10 [equipment](category_name) have the highest [capacity](equipment_top10_category) in a specific category?
+#     - Show the top 10 [equipment](category_name) with the highest [capacity](equipment_top10_category)
+#     - List the top 10 [equipment](category_name) based on [capacity](equipment_top10_category) in tons
+#     - Display the top 10 [equipment](category_name) with the highest [kilometers](equipment_top10_category)
+#     - What are the top 10 [equipment](category_name) with the highest [distance traveled](equipment_top10_category)?
+#     - Show a list of the top 10 [equipment](category_name) most frequently used based on [mileage](equipment_top10_category)
+#     - Which 10 [equipment](category_name) with the highest [kilometers](equipment_top10_category)?
+#     - What are the 10 [equipment](category_name) with the highest [mileage](equipment_top10_category)?
+#     - Provide a list of the top 10 [equipment](category_name) based on [distance traveled](equipment_top10_category)
+#     - Show the top 10 [equipment](category_name) with the most [kilometers](equipment_top10_category) recorded
+
+# - synonym: muatan
+#   examples: |
+#     - payload 
+
+# - intent: request_top_10_fleet_fms_id 
+#   examples: |
+#     - Apa saja 10 [fleet](category_name) dengan total [jarak tempuh](fleet_top10_category) tertinggi?
+#     - Tampilkan daftar 10 [fleet](category_name) berdasarkan total [jarak tempuh](fleet_top10_category) terbesar
+#     - 10 [fleet](category_name) mana saja yang memiliki total [jarak tempuh](fleet_top10_category) tertinggi?
+#     - Apa saja 10 [fleet](category_name) dengan [payload](fleet_top10_category) tertinggi?
+#     - Tampilkan daftar 10 [fleet](category_name) berdasarkan [payload](fleet_top10_category) terbesar
+#     - Tampilkan daftar 10 [fleet](category_name) berdasarkan [muatan](fleet_top10_category) terbesar
+#     - 10 [fleet](category_name) manakah yang sering membawa [muatan](fleet_top10_category) terberat?
+#     - Apa saja 10 [fleet](category_name) dengan [jam operasional](fleet_top10_category) tertinggi?
+#     - 10 [fleet](category_name) mana saja yang memiliki [jam operasional](fleet_top10_category) tertinggi?
+#     - Tampilkan 10 [fleet](category_name) yang paling sering digunakan berdasarkan [jam operasional](fleet_top10_category)
+#     - Apa saja 10 [fleet](category_name) dengan sisa [bahan bakar](fleet_top10_category) tertinggi?
+#     - Tampilkan daftar 10 [fleet](category_name) berdasarkan sisa [bahan bakar](fleet_top10_category) terbesar
+#     - 10 [fleet](category_name) yang memiliki sisa [bahan bakar](fleet_top10_category) tertinggi?
+#     - Apa saja top 10 [fleet](category_name) dengan [jumlah produksi](fleet_top10_category) terbanyak?
+#     - Tampilkan daftar top 10 [fleet](category_name) berdasarkan [jumlah produksi](fleet_top10_category) terbesar
+#     - 10 [fleet](category_name) mana saja yang memiliki [jumlah produksi](fleet_top10_category) tertinggi?
+#     - Berikan daftar top 10 [fleet](category_name) yang memiliki [jumlah produksi](fleet_top10_category) terbanyak
+#     - Apa saja top 10 [fleet](category_name) dengan [jumlah produksi](fleet_top10_category) tertinggi?
+#     - Bisa tampilkan top 10 [fleet](category_name) dengan [jumlah produksi](fleet_top10_category) terbesar?
+#     - Tampilkan daftar top 10 [fleet](category_name) dengan [jumlah produksi](fleet_top10_category) tertinggi
+#     - 10 [fleet](category_name) yang menghasilkan [jumlah produksi](fleet_top10_category) terbanyak?
+
+# - synonym: distance traveled
+#   examples: |
+#     - mileage 
+#     - kilometers
+
+# - synonym: operating hours 
+#   examples: |
+#     - hour meter
+
+# - synonym: production amount
+#   examples: |
+#     - production output
+#     - production volume
+#     - production quantity
+
+# - intent: request_top_10_fleet_fms_en
+#   examples: |
+#     - Which are the top 10 [fleet](category_name) with the highest total [distance traveled](fleet_top10_category)?
+#     - Show the list of the top 10 [fleet](category_name) based on the longest [distance traveled](fleet_top10_category)
+#     - Which 10 [fleet](category_name) have the highest total [mileage](fleet_top10_category)?
+#     - What are the top 10 [fleet](category_name) with the highest [payload](fleet_top10_category)?
+#     - Show the list of the top 10 [fleet](category_name) ranked by [payload](fleet_top10_category)
+#     - Display the top 10 [fleet](category_name) based on the largest [payload](fleet_top10_category)
+#     - Which 10 [fleet](category_name) frequently carries the heaviest [payload](fleet_top10_category)?
+#     - What are the top 10 [fleet](category_name) with the highest [hour meter](fleet_top10_category)?
+#     - Which 10 [fleet](category_name) have the longest total [operating hours](fleet_top10_category)?
+#     - Show the top 10 [fleet](category_name) that are most frequently used based on [operating hours](fleet_top10_category)
+#     - What are the 10 [fleet](category_name) with the highest remaining [fuel](fleet_top10_category)?
+#     - Show the list of the top 10 [fleet](category_name) ranked by remaining [fuel](fleet_top10_category)
+#     - Which 10 [fleet](category_name) have the highest remaining [fuel](fleet_top10_category)?
+#     - What are the top 10 [fleet](category_name) with the highest [production output](fleet_top10_category)?
+#     - Show the top 10 [fleet](category_name) based on the largest [production output](fleet_top10_category)
+#     - Which 10 [fleet](category_name) have the highest [production number](fleet_top10_category)?
+#     - Provide the top 10 [fleet](category_name) with the largest [production output](fleet_top10_category)
+#     - Which top 10 [fleet](category_name) have the highest [production quantity](fleet_top10_category)?
+#     - Can you display the top 10 [fleet](category_name) with the largest [production amount](fleet_top10_category)?
+#     - Show the list of the top 10 [fleet](category_name) with the highest [production output](fleet_top10_category)
+#     - 10 [fleet](category_name) that produce the most [production output](fleet_top10_category)?
+
+# - synonym: breakdown
+#   examples: |
+#     - kerusakan
+#     - rusak
+
+# - synonym: sering breakdown
+#   examples: |
+#     - sering rusak
+
+# - intent: request_top_10_breakdown_fms_id
+#   examples: |
+#     - Apa saja 10 [penyebab breakdown](breakdown_top10_category) tertinggi pada [equipment](category_name)?
+#     - Sebutkan 10 [penyebab breakdown](breakdown_top10_category) utama pada [equipment](category_name)
+#     - Tampilkan daftar 10 [penyebab breakdown](breakdown_top10_category) paling sering terjadi pada [equipment](category_name)
+#     - Saya ingin tahu 10 [penyebab breakdown](breakdown_top10_category) paling umum pada [equipment](category_name)
+#     - Apa 10 faktor utama [penyebab breakdown](breakdown_top10_category) pada [equipment](category_name)?
+#     - Bisa tunjukkan 10 [penyebab breakdown](breakdown_top10_category) paling sering terjadi pada [equipment](category_name)?
+#     - Saya ingin melihat data 10 besar [penyebab breakdown](breakdown_top10_category) pada [equipment](category_name)
+#     - Berikan informasi tentang 10 [penyebab kerusakan](breakdown_top10_category) utama yang mengakibatkan [equipment](category_name) rusak
+#     - Apa saja 10 faktor [penyebab kerusakan](breakdown_top10_category) paling sering yang menyebabkan [equipment](category_name) rusak?
+#     - Apa 10 [penyebab breakdown](breakdown_top10_category) terbanyak pada [equipment](category_name)?
+#     - Apa saja 10 utama [penyebab breakdown](breakdown_top10_category) yang sering terjadi pada [equipment](category_name)?
+#     - Sebutkan 10 kategori [penyebab breakdown](breakdown_top10_category) yang paling banyak dialami pada [equipment](category_name)
+#     - Apa saja 10 [equipment](category_name) yang [sering breakdown](breakdown_top10_category)?
+#     - Tampilkan daftar 10 [equipment](category_name) dengan kasus [sering breakdown](breakdown_top10_category) tertinggi
+#     - Bisa tunjukkan 10 [equipment](category_name) yang paling [sering breakdown](breakdown_top10_category)?
+#     - Berikan daftar top 10 [equipment](category_name) yang memiliki riwayat [sering breakdown](breakdown_top10_category)
+#     - Saya ingin tahu daftar 10 [equipment](category_name) yang paling banyak mengalami [sering breakdown](breakdown_top10_category)
+#     - Apa saja 10 [equipment](category_name) yang memiliki rekor [sering breakdown](breakdown_top10_category) tertinggi?
+#     - Tampilkan statistik 10 [equipment](category_name) yang paling [sering breakdown](breakdown_top10_category)
+#     - Tampilkan daftar 10 [equipment](category_name) yang paling [sering rusak](breakdown_top10_category) pada [equipment](category_name)
+#     - Berikan data top 10 [equipment](category_name) yang [sering breakdown](breakdown_top10_category)
+
+# - synonym: frequently break down
+#   examples: |
+#     - frequent breakdowns 
+
+# - intent: request_top_10_breakdown_fms_en
+#   examples: |
+#     - What are the top 10 [breakdown causes](breakdown_top10_category) for [equipment](category_name)?
+#     - List the 10 main [breakdown causes](breakdown_top10_category) for [equipment](category_name)
+#     - Show the top 10 most frequent [breakdown causes](breakdown_top10_category) for [equipment](category_name)
+#     - I want to know the 10 most common [breakdown causes](breakdown_top10_category) for [equipment](category_name)
+#     - What are the 10 main factors [breakdown causes](breakdown_top10_category) in [equipment](category_name)?
+#     - Can you show me the 10 most frequent [breakdown causes](breakdown_top10_category) for [equipment](category_name)?
+#     - I'd like to see the top 10 [breakdown causes](breakdown_top10_category) for [equipment](category_name)
+#     - Provide details on the 10 major [breakdown causes](breakdown_top10_category) that lead to [equipment](category_name) issues
+#     - What are the 10 most common [breakdown causes](breakdown_top10_category) factors that cause [equipment](category_name) to break down?
+#     - What are the 10 most frequent [breakdown causes](breakdown_top10_category) for [equipment](category_name)?
+#     - What are the top 10 [breakdown causes](breakdown_top10_category) leading to downtime in [equipment](category_name)?
+#     - What are the top 10 recurring [breakdown causes](breakdown_top10_category) affecting [equipment](category_name)?
+#     - List the 10 most common [breakdown causes](breakdown_top10_category) experienced by [equipment](category_name)
+#     - Which are the top 10 [equipment](category_name) that [frequently break down](breakdown_top10_category)?
+#     - Show the list of the 10 [equipment](category_name) with the highest number of [frequent breakdowns](breakdown_top10_category)
+#     - Can you display the 10 [equipment](category_name) with the most [frequent breakdowns](breakdown_top10_category)?
+#     - Provide the top 10 [equipment](category_name) with a history of [frequent breakdowns](breakdown_top10_category)
+#     - I'd like to know which 10 [equipment](category_name) have experienced the most [frequent breakdowns](breakdown_top10_category)
+#     - Show the report for the 10 [equipment](category_name) with the most [frequent breakdowns](breakdown_top10_category) in a given period
+#     - What are the 10 [equipment](category_name) that have the highest [frequent breakdowns](breakdown_top10_category) record?
+#     - Display statistics for the top 10 [equipment](category_name) that [frequently break down](breakdown_top10_category)
+#     - Show the top 10 [equipment](category_name) that are most prone to [frequently break down](breakdown_top10_category)
+#     - Provide top 10 data [equipment](category_name) that [frequently breakdown](breakdown_top10_category)
+
+# - synonym: PPC
+#   examples: |
+#     - production performance control
+#     - ppc 
+
+# - intent: request_all_production_performance_control_report_fms_id
+#   examples: |
+#     - Tolong berikan report production performance control tanggal 01-01-2025
+#     - Tolong berikan report PPC tanggal 1 januari di site 043C
+#     - Saya butuh data report PPC untuk tanggal 01-01-2025
+#     - Bisa minta report PPC untuk 01-01-2025?
+#     - Bisa minta report production performance control untuk 01-01-2025?
+#     - Tolong tunjukkan report production performance control terbaru
+#     - Saya ingin lihat report production performance control pada shift malam tanggal 1 januari 
+#     - Bisa tampilkan report production performance control untuk shift pagi pada tanggal 01-01-2025?
+#     - Tolong berikan report production performance control tanggal 1 januari 
+#     - Bisa berikan report production performance control tanggal 15-05-2024?
+#     - Tolong tampilkan report production performance control tanggal 20-08-2024
+#     - Saya ingin melihat report PPC tanggal 30 september 2023
+#     - Mohon berikan data PPC tanggal 25-12-2021
+#     - Tampilkan report PPC 
+#     - Bisa kasih saya ringkasan laporan production performance control?
+#     - Saya mau lihat laporan production performance control
+#     - Tolong tampilkan report production performance control untuk site 001A
+#     - Mohon berikan laporan production performance control
+#     - Saya ingin melihat laporan production performance control
+#     - Mohon tampilkan laporan data evaluasi production performance control untuk site 001A
+#     - Tolong tampilkan laporan production performance control
+#     - Bisa berikan data report production performance control untuk shift pagi
+#     - Tolong tampilkan report production performance control pada tanggal 1 januari 
+#     - Tolong tampilkan data hasil PPC
+#     - Tolong berikan report PPC tanggal 01-01-2025
+
+# - intent: request_all_production_performance_control_report_fms_en
+#   examples: |
+#     - Please provide the production performance control report for 01-01-2025
+#     - Can I have the PPC report for January 1st at site 043C?
+#     - I need the PPC report data for 01-01-2025
+#     - Can you send me the PPC report for 01-01-2025?
+#     - Could I get the production performance control report for 01-01-2025?
+#     - Please show me the latest production performance control report
+#     - I'd like to see the production performance control report for the night shift on January 1st
+#     - Can you display the production performance control report for the morning shift on 01-01-2025?
+#     - Please give me the production performance control report for January 1st
+#     - Could you provide the production performance control report for 15-05-2024?
+#     - Please show the production performance control report for 20-08-2024
+#     - I want to see the PPC report for September 30, 2023
+#     - Please provide the PPC data for 25-12-2021
+#     - Show me the PPC report
+#     - Can you give me a summary of the production performance control report?
+#     - I'd like to look at the production performance control report
+#     - Please show me the production performance control report for site 001A
+#     - Kindly provide the production performance control report
+#     - I want to view the production performance control report
+#     - Please show the evaluation data report for production performance control for site 001A
+#     - Please display the production performance control report
+#     - Can you give me the production performance control data for the morning shift?
+#     - Please show the production performance control report for January 1st
+#     - Show me the PPC data
+#     - Please provide the PPC report for 01-01-2025
+
+# - intent: request_production_coal_report_fms_id
+#   examples: |
+#     - Tolong berikan report production coal
+#     - Bisa minta laporan production coal?
+#     - Saya butuh laporan production coal
+#     - Kirimkan report untuk production coal
+#     - Laporan production coal, tolong
+#     - Tolong kirimkan laporan production coal pada shift pagi
+#     - Dapatkah saya mendapatkan report production coal untuk site 001A?
+#     - Laporan production coal untuk tanggal 15 Januari
+#     - Laporan production coal untuk shift malam
+#     - Minta laporan lengkap production coal untuk tanggal 01-01-2025 
+#     - Report production coal untuk tanggal 01-01-2025
+#     - Laporan production coal untuk site B, tolong
+#     - Saya ingin tahu laporan production coal untuk tanggal 12 Februari 2025
+#     - Tolong berikan laporan production coal untuk shift pagi
+#     - Bisa tolong kirimkan laporan production coal untuk site 001M?
+
+# - intent: request_production_coal_report_fms_en
+#   examples: |
+#     - Please provide the production coal report
+#     - Can I get the production coal report?
+#     - I need the production coal report
+#     - Send me the report for production coal
+#     - Production coal report, please
+#     - Could you send the production coal report for the morning shift?
+#     - Can I get the production coal report for site 001A?
+#     - Show me the production coal report for January 15
+#     - Provide the production coal report for the night shift
+#     - I'd like a detailed production coal report for 01-01-2025
+#     - Production coal report for 01-01-2025
+#     - Could you give me the production coal report for site B?
+#     - I want to check the production coal report for February 12, 2025
+#     - Please send the production coal report for the morning shift
+#     - Please provide a coal production report for the morning shift
+#     - Could you please send a coal production report for site 001M?
+#     - Can you share the production coal report for site 001M?
+
+# - intent: request_production_waste_report_fms_id
+#   examples: |
+#     - Tolong berikan report production waste
+#     - Bisa minta laporan production waste?
+#     - Saya butuh laporan production waste
+#     - Kirimkan report untuk production waste
+#     - Laporan production waste, tolong
+#     - Tolong kirimkan laporan production waste pada shift pagi
+#     - Dapatkah saya mendapatkan report production waste untuk site 001A?
+#     - Laporan production waste untuk tanggal 15 Januari
+#     - Laporan production waste untuk shift malam
+#     - Minta laporan lengkap production waste untuk tanggal 01-01-2025 
+#     - Report production waste untuk tanggal 01-01-2025
+#     - Laporan production waste untuk site B, tolong
+#     - Saya ingin tahu laporan production waste untuk tanggal 12 Februari 2025
+#     - Tolong berikan laporan production waste untuk shift pagi
+#     - Bisa tolong kirimkan laporan production waste untuk site 001M?
+
+# - intent: request_production_waste_report_fms_en
+#   examples: |
+#     - Please provide the production waste report
+#     - Can I get the production waste report?
+#     - I need the production waste report
+#     - Send me the report for production waste
+#     - Production waste report, please
+#     - Could you send me the production waste report for the morning shift?
+#     - Can I request the production waste report for site 001A?
+#     - Show me the production waste report for January 15
+#     - Provide the production waste report for the night shift
+#     - I'd like a full production waste report for 01-01-2025
+#     - Give me the production waste report for January 1, 2025
+#     - Could you provide the production waste report for site B?
+#     - I want to check the production waste report for February 12, 2025
+#     - Please send the production waste report for the morning shift
+#     - Can you share the production waste report for site 001M?
+
+# - intent: request_production_performance_report_today_fms_id
+#   examples: |
+#     - Tolong tampilkan report production performance control hari ini
+#     - Bisa tampilkan laporan production performance control untuk hari ini?
+#     - Saya butuh report production performance control hari ini
+#     - Kirimkan report production performance control untuk hari ini
+#     - Tampilkan laporan production performance control hari ini
+#     - Laporan production performance control hari ini, tolong
+#     - Apakah ada report production performance control untuk hari ini, kirimkan?
+#     - Bisa tunjukkan laporan production performance control hari ini?
+#     - Mohon tampilkan report production performance control untuk hari ini
+#     - Bisa minta laporan production performance control hari ini?
+#     - Tolong kirim laporan production performance control hari ini
+#     - Laporan production performance control untuk hari ini ada tidak?
+#     - Saya ingin lihat laporan production performance control hari ini
+#     - Bisakah Anda menampilkan laporan production performance control untuk hari ini?
+#     - Laporan production performance control untuk hari ini, tolong ditunjukkan
+#     - Bisa minta laporan production performance control di hari ini?
+#     - Kirim report production performance control hari ini
+#     - Saya ingin melihat laporan production performance control hari ini
+
+# - intent: request_production_performance_report_today_fms_en
+#   examples: |
+#     - Please show today's production performance control report
+#     - Can you display the production performance control report for today?
+#     - I need the production performance control report for today
+#     - Send me today's production performance control report
+#     - Show today's production performance report
+#     - Production performance report for today, please
+#     - Is there a production performance control report for today? If so, send it
+#     - Could you provide the production performance report for today?
+#     - Please display today's production performance control report
+#     - Can I get today's production performance control report?
+#     - Kindly send me today's production performance control report
+#     - Is today's production performance control report available?
+#     - I'd like to check today's production performance report
+#     - Can you show me today's production performance control report?
+#     - Please provide the production performance control report for today
+#     - Can I get the production performance report for today?
+#     - Send a production performance control report today
+#     - I want to see today's production performance control report
+
+# - intent: request_kpi_self_fms_id
+#   examples: |
+#     - Berapa KPI saya?
+#     - Tunjukkan KPI saya
+#     - Saya mau liat KPI saya, tolong tunjukkan
+#     - Saya ingin tahu KPI saya
+#     - Bisa kasih laporan KPI saya?
+#     - Saya ingin melihat KPI saya
+#     - Bagaimana performa KPI saya?
+#     - Apa hasil KPI saya?
+#     - Bisa tunjukkan statistik KPI saya?
+#     - Tampilkan hasil evaluasi kinerja saya
+#     - Bagaimana produktivitas KPI saya?
+#     - Saya ingin melihat pencapaian KPI saya
+#     - Apakah KPI saya baik atau buruk?
+#     - Tampilkan laporan performa KPI saya
+#     - Saya mau lihat nilai KPI saya
+#     - Seberapa baik performa saya menurut KPI?
+#     - Tolong tampilkan ringkasan KPI saya
+#     - Saya ingin melihat progres KPI saya
+#     - Apakah KPI saya meningkat atau menurun?
+#     - Bisakah Anda menampilkan KPI saya?
+#     - Apakah target saya tercapai, boleh saya liat KPI saya?
+
+# - intent: request_kpi_self_fms_en
+#   examples: |
+#     - What's my KPI?
+#     - Show me my KPI
+#     - I'd like to check my KPI, can you show me?
+#     - I want to know my KPI
+#     - Can you give me my KPI report?
+#     - I'd like to see my KPI details
+#     - How are my KPIs performing?
+#     - What's my KPI result?
+#     - Can you show my KPI statistics?
+#     - Show my performance evaluation results
+#     - How is my KPI productivity?
+#     - I want to see my KPI achievements
+#     - Is my KPI good or bad?
+#     - Show my KPI performance report
+#     - I want to check my KPI score
+#     - How well am I performing based on my KPI?
+#     - Please display my KPI summary
+#     - I'd like to review my KPI progress
+#     - Is my KPI improving or declining?
+#     - Can you pull up my KPI report?
+#     - Have I met my target? Let me check my KPI
+
+# - intent: request_kpi_self_today_fms_id
+#   examples: |
+#     - Saya ingin tahu KPI saya hari ini
+#     - Tampilkan KPI saya untuk hari ini
+#     - Berapa KPI saya hari ini?
+#     - Bisa tunjukkan KPI saya untuk hari ini?
+#     - Saya ingin melihat laporan KPI saya hari ini
+#     - Bagaimana performa KPI saya hari ini?
+#     - Berikan saya laporan KPI terbaru
+#     - Tolong tampilkan data KPI saya hari ini
+#     - Apa saja detail KPI saya untuk hari ini?
+#     - Bisa kasih saya ringkasan KPI hari ini?
+#     - Saya ingin mengecek KPI saya sekarang
+#     - Apakah saya bisa melihat KPI saya hari ini?
+#     - Bagaimana hasil KPI saya pada hari ini?
+#     - Bisa tolong berikan laporan KPI saya untuk hari ini?
+#     - Saya mau melihat pencapaian KPI saya hari ini
+#     - Berapa total skor KPI saya hari ini?
+#     - Tolong tampilkan performa KPI saya saat ini
+#     - Saya ingin mengetahui progres KPI saya hari ini
+#     - Apakah saya bisa mendapatkan data KPI saya hari ini?
+#     - Saya perlu laporan KPI saya untuk hari ini
+#     - Bisa tunjukkan perkembangan KPI saya saat ini?
+
+# - intent: request_kpi_self_today_fms_en
+#   examples: |
+#     - I want to check my KPI for today
+#     - Show me my KPI for today
+#     - What's my KPI score today?
+#     - Can you display my KPI for today?
+#     - I'd like to see my KPI report for today
+#     - How's my KPI performance today?
+#     - Give me my latest KPI report
+#     - Please show my KPI data for today
+#     - What are the details of my KPI for today?
+#     - Can I get a summary of my KPI today?
+#     - I want to review my KPI right now
+#     - Can I check my KPI for today?
+#     - How did my KPI turn out today?
+#     - Can you provide my KPI report for today?
+#     - I'd like to see my KPI achievements today
+#     - What's my total KPI score today?
+#     - Please show my KPI performance right now
+#     - I want to track my KPI progress today
+#     - Can I get my KPI data for today?
+#     - I need my KPI report for today
+#     - Can you show my KPI trend for today?
+
+# - intent: request_kpi_other_operator_fms_id
+#   examples: |
+#     - Berapa KPI Budi?
+#     - Bisa tunjukkan KPI Rudi?
+#     - Tampilkan KPI untuk Sari
+#     - Saya ingin tahu KPI Fadli
+#     - Bisa tampilkan KPI gabriel?
+#     - Tunjukkan performa kerja KPI Dina
+#     - Tunjukkan KPI Rian?
+#     - Bagaimana kinerja Adi, boleh liat KPI Adi?
+#     - Saya ingin melihat KPI Adi
+#     - Seberapa baik performa Adit, boleh liat KPI nya?
+#     - Apakah KPI Dewi meningkat atau menurun?
+#     - Bisa tolong berikan laporan KPI untuk Fajar?
+#     - Tampilkan statistik KPI Reza
+#     - Saya ingin tahu progres KPI Ani
+#     - Bisa kasih ringkasan KPI Eka?
+#     - Bagaimana hasil evaluasi KPI untuk Dani?
+#     - Apakah KPI Fauzan sudah membaik, bisa liat KPI nya?
+#     - Tolong berikan skor KPI untuk Bayu
+#     - Bisa tunjukkan laporan KPI terbaru untuk Citra?
+#     - Apakah KPI Indra memenuhi target?
+#     - Bisa liat KPI punya Eka?
+
+# - intent: request_kpi_other_operator_fms_en
+#   examples: |
+#     - What's Budi's KPI?
+#     - Can you show Rudi's KPI?
+#     - Display Sari's KPI
+#     - I'd like to check Fadli's KPI
+#     - Can you pull up Gabriel's KPI?
+#     - Show me Dina's work performance KPI
+#     - How is Rian's KPI looking?
+#     - How's Adi's performance? Can I see his KPI?
+#     - I want to check Adi's KPI
+#     - How well is Adit performing? Can I see his KPI?
+#     - Has Dewi's KPI improved or dropped?
+#     - Can you provide a KPI report for Fajar?
+#     - Show me Reza's KPI statistics
+#     - I'd like to track Ani's KPI progress
+#     - Can I get a KPI summary for Eka?
+#     - How did Dani's KPI evaluation turn out?
+#     - Has Fauzan's KPI improved? Can I check it?
+#     - Please give me Bayu's KPI score
+#     - Can you show the latest KPI report for Citra?
+#     - Is Indra's KPI meeting the target?
+#     - Can I see Eka's KPI?

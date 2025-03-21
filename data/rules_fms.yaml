@@ -1,0 +1,2298 @@
+# version: "3.1"
+# rules:
+# - rule: Respond to equipment count in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_equipment_count_fms_id
+#     - action: action_get_fms_equipment_count
+
+# - rule: Respond to equipment count in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_equipment_count_fms_en
+#     - action: action_get_fms_equipment_count
+
+# - rule: Activate check unit by site form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: check_unit_by_type_and_site_fms_id
+#     - action: check_unit_type_by_site_form
+#     - active_loop: check_unit_type_by_site_form
+
+# - rule: Activate check unit by site form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: check_unit_by_type_and_site_fms_en
+#     - action: check_unit_type_by_site_form
+#     - active_loop: check_unit_type_by_site_form
+
+# - rule: Submit check unit form by site in Indonesia
+#   condition:
+#     - active_loop: check_unit_type_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: check_unit_type_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_check_unit_by_type
+
+# - rule: Submit check unit form by site in English
+#   condition:
+#     - active_loop: check_unit_type_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: check_unit_type_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_check_unit_by_type
+
+# - rule: Activate ask type of unit form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_type_of_unit_fms_id
+#     - action: check_code_unit_form
+#     - active_loop: check_code_unit_form
+
+# - rule: Activate ask type of unit form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_type_of_unit_fms_en
+#     - action: check_code_unit_form
+#     - active_loop: check_code_unit_form
+
+# - rule: Submit type of unit in Indonesia
+#   condition:
+#     - active_loop: check_code_unit_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: check_code_unit_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_type_of_unit
+
+# - rule: Submit type of unit in English
+#   condition:
+#     - active_loop: check_code_unit_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: check_code_unit_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_type_of_unit
+
+# - rule: Activate count units form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_count_units_by_type_fms_id
+#     - action: count_units_by_type_form
+#     - active_loop: count_units_by_type_form
+
+# - rule: Activate count units form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_count_units_by_type_fms_en
+#     - action: count_units_by_type_form
+#     - active_loop: count_units_by_type_form
+
+# - rule: Submit count units form in Indonesia
+#   condition:
+#     - active_loop: count_units_by_type_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: count_units_by_type_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_count_units_by_type
+
+# - rule: Submit count units form in English
+#   condition:
+#     - active_loop: count_units_by_type_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: count_units_by_type_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_count_units_by_type
+
+# - rule: Activate ask unit purchase year form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_unit_purchase_year_fms_id
+#     - action: unit_purchase_year_form
+#     - active_loop: unit_purchase_year_form
+
+# - rule: Activate ask unit purchase year form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_unit_purchase_year_fms_en
+#     - action: unit_purchase_year_form
+#     - active_loop: unit_purchase_year_form 
+
+# - rule: Submit ask unit purchase year in Indonesia
+#   condition:
+#     - active_loop: unit_purchase_year_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: unit_purchase_year_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_unit_purchase_date
+
+# - rule: Submit ask unit purchase year in English
+#   condition:
+#     - active_loop: unit_purchase_year_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: unit_purchase_year_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_unit_purchase_date
+
+# - rule: Respond check unit by status in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: check_unit_by_status_fms_id
+#     - action: action_get_fms_units_with_status
+
+# - rule: Respond check unit by status in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: check_unit_by_status_fms_en
+#     - action: action_get_fms_units_with_status
+    
+# - rule: Activate request for get unit information form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_unit_information_fms_id
+#     - action: get_unit_information_form
+#     - active_loop: get_unit_information_form
+
+# - rule: Activate request for get unit information form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_unit_information_fms_en
+#     - action: get_unit_information_form
+#     - active_loop: get_unit_information_form
+
+# - rule: Submit request for get unit information in Indonesia
+#   condition:
+#     - active_loop: get_unit_information_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_unit_information_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_unit_information
+
+# - rule: Submit request for get unit information in English
+#   condition:
+#     - active_loop: get_unit_information_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_unit_information_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_unit_information
+
+# - rule: Activate request for unit modification status form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_unit_modification_status_fms_id
+#     - action: unit_modification_status_form
+#     - active_loop: unit_modification_status_form
+
+# - rule: Activate request for unit modification status form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_unit_modification_status_fms_en
+#     - action: unit_modification_status_form
+#     - active_loop: unit_modification_status_form
+
+# - rule: Submit request for unit modification status in Indonesia
+#   condition:
+#     - active_loop: unit_modification_status_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: unit_modification_status_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_unit_modification_status
+
+# - rule: Submit request for unit modification status in English
+#   condition:
+#     - active_loop: unit_modification_status_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: unit_modification_status_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_unit_modification_status
+
+# - rule: Activate request for unit serial numbers form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_unit_serial_number_fms_id
+#     - action: unit_serial_numbers_form
+#     - active_loop: unit_serial_numbers_form
+
+# - rule: Activate request for unit serial numbers form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_unit_serial_number_fms_en
+#     - action: unit_serial_numbers_form
+#     - active_loop: unit_serial_numbers_form
+
+# - rule: Submit request for unit serial numbers in Indonesia
+#   condition:
+#     - active_loop: unit_serial_numbers_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: unit_serial_numbers_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_unit_serial_number
+
+# - rule: Submit request for unit serial numbers in English
+#   condition:
+#     - active_loop: unit_serial_numbers_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: unit_serial_numbers_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_unit_serial_number
+
+# - rule: Respond to equipment category count in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_equipment_category_count_madhani_fms_id
+#     - action: action_get_fms_total_category_equipment
+
+# - rule: Respond to equipment category count in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_equipment_category_count_madhani_fms_en
+#     - action: action_get_fms_total_category_equipment
+
+# - rule: Respond to equipment categories in Madhani in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_equipment_categories_madhani_fms_id
+#     - action: action_get_fms_category_equipment
+
+# - rule: Respond to equipment categories in Madhani in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_equipment_categories_madhani_fms_en
+#     - action: action_get_fms_category_equipment
+
+# - rule: Activate get equipment types by category form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_equipment_types_by_category_fms_id
+#     - action: equipment_types_by_category_form
+#     - active_loop: equipment_types_by_category_form
+
+# - rule: Activate get equipment types by category form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_equipment_types_by_category_fms_en
+#     - action: equipment_types_by_category_form
+#     - active_loop: equipment_types_by_category_form
+
+# - rule: Submit get equipment types by category in Indonesia
+#   condition:
+#     - active_loop: equipment_types_by_category_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: equipment_types_by_category_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_equipment_types_in_category
+
+# - rule: Submit get equipment types by category in English
+#   condition:
+#     - active_loop: equipment_types_by_category_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: equipment_types_by_category_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_equipment_types_in_category
+
+# - rule: Activate get equipment category status form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_equipment_category_status_fms_id
+#     - action: equipment_category_status_form
+#     - active_loop: equipment_category_status_form
+
+# - rule: Activate get equipment category status form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_equipment_category_status_fms_en
+#     - action: equipment_category_status_form
+#     - active_loop: equipment_category_status_form
+
+# - rule: Submit get equipment category status in Indonesia
+#   condition:
+#     - active_loop: equipment_category_status_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: equipment_category_status_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_equipment_category_status
+
+# - rule: Submit get equipment category status in English
+#   condition:
+#     - active_loop: equipment_category_status_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: equipment_category_status_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_equipment_category_status
+
+# - rule: Respond to equipment categories by status in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_equipment_categories_by_status_fms_id
+#     - action: action_get_fms_equipment_category_from_status
+
+# - rule: Respond to equipment categories by status in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_equipment_categories_by_status_fms_en
+#     - action: action_get_fms_equipment_category_from_status
+
+# - rule: Activate count equipment categories with specific types form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: check_category_with_type_equipment_fms_id
+#     - action: count_equipment_categories_by_type_form
+#     - active_loop: count_equipment_categories_by_type_form
+
+# - rule: Activate count equipment categories with specific types form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: check_category_with_type_equipment_fms_en
+#     - action: count_equipment_categories_by_type_form
+#     - active_loop: count_equipment_categories_by_type_form
+
+# - rule: Submit count equipment categories with specific types in Indonesia
+#   condition:
+#     - active_loop: count_equipment_categories_by_type_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: count_equipment_categories_by_type_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_total_equipment_category_from_type
+
+# - rule: Submit count equipment categories with specific types in English
+#   condition:
+#     - active_loop: count_equipment_categories_by_type_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: count_equipment_categories_by_type_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_total_equipment_category_from_type
+
+# - rule: Activate work order count form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_work_order_count_fms_id
+#     - action: ask_work_order_count_form
+#     - active_loop: ask_work_order_count_form
+
+# - rule: Submit work order count in Indonesia
+#   condition:
+#     - active_loop: ask_work_order_count_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: ask_work_order_count_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_work_orders_by_date
+
+# - rule: Activate work order count form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_work_order_count_fms_en
+#     - action: ask_work_order_count_form
+#     - active_loop: ask_work_order_count_form
+
+# - rule: Submit work order count in English
+#   condition:
+#     - active_loop: ask_work_order_count_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: ask_work_order_count_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_work_orders_by_date
+
+# - rule: Activate show work orders by site form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_work_orders_by_site_fms_id
+#     - action: show_wo_by_site_form
+#     - active_loop: show_wo_by_site_form
+
+# - rule: Submit show work orders by site in Indonesia
+#   condition:
+#     - active_loop: show_wo_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: show_wo_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_wo_by_site
+
+# - rule: Activate show work orders by site form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_work_orders_by_site_fms_en
+#     - action: show_wo_by_site_form
+#     - active_loop: show_wo_by_site_form
+
+# - rule: Submit show work orders by site in English
+#   condition:
+#     - active_loop: show_wo_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: show_wo_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_wo_by_site
+
+# - rule: Activate show last work orders by shift form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_last_work_order_shift_fms_id
+#     - action: show_last_wo_by_shift_form
+#     - active_loop: show_last_wo_by_shift_form
+
+# - rule: Activate show last work orders by shift form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_last_work_order_shift_fms_en
+#     - action: show_last_wo_by_shift_form
+#     - active_loop: show_last_wo_by_shift_form
+
+# - rule: Submit show last work orders by shift in Indonesia
+#   condition:
+#     - active_loop: show_last_wo_by_shift_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: show_last_wo_by_shift_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_last_shift_of_work_order
+
+# - rule: Submit show last work orders by shift in English
+#   condition:
+#     - active_loop: show_last_wo_by_shift_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: show_last_wo_by_shift_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_last_shift_of_work_order
+
+# - rule: Activate show work orders by spesific shift form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_work_orders_by_shift_fms_id
+#     - action: show_wo_by_spesific_shift_form
+#     - active_loop: show_wo_by_spesific_shift_form
+
+# - rule: Activate show work orders by spesific shift form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_work_orders_by_shift_fms_en
+#     - action: show_wo_by_spesific_shift_form
+#     - active_loop: show_wo_by_spesific_shift_form
+
+# - rule: Submit show work orders by spesific shift in Indonesia
+#   condition:
+#     - active_loop: show_wo_by_spesific_shift_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: show_wo_by_spesific_shift_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_wo_by_shift
+
+# - rule: Submit show work orders by spesific shift in English
+#   condition:
+#     - active_loop: show_wo_by_spesific_shift_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: show_wo_by_spesific_shift_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_wo_by_shift
+
+# - rule: Respond to active work orders for user in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_active_work_orders_user_fms_id
+#     - action: action_get_fms_active_work_orders
+
+# - rule: Respond to active work orders for user in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_active_work_orders_user_fms_en
+#     - action: action_get_fms_active_work_orders
+
+# - rule: Activate get work order count by date form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_work_order_count_by_date_fms_id
+#     - action: get_work_order_count_by_date_form
+#     - active_loop: get_work_order_count_by_date_form
+
+# - rule: Activate get work order count by date form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_work_order_count_by_date_fms_en
+#     - action: get_work_order_count_by_date_form
+#     - active_loop: get_work_order_count_by_date_form
+
+# - rule: Submit get work order count by date in Indonesia
+#   condition:
+#     - active_loop: get_work_order_count_by_date_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_work_order_count_by_date_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_work_orders_by_date
+
+# - rule: Submit get work order count by date in English
+#   condition:
+#     - active_loop: get_work_order_count_by_date_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_work_order_count_by_date_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_work_orders_by_date
+
+# - rule: Respond Get work orders for today in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_work_orders_today_fms_id
+#     - action: action_get_fms_work_orders_day_condition
+
+# - rule: Respond Get work orders for today in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_work_orders_today_fms_en
+#     - action: action_get_fms_work_orders_day_condition
+
+# - rule: Respond Get work orders for last noon in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_work_orders_last_noon_fms_id
+#     - action: action_get_fms_work_orders_day_condition
+
+# - rule: Respond Get work orders for last noon in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_work_orders_last_noon_fms_en
+#     - action: action_get_fms_work_orders_day_condition
+
+# - rule: Respond Get work orders for last night in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_work_orders_last_night_fms_id
+#     - action: action_get_fms_work_orders_day_condition
+
+# - rule: Respond Get work orders for last night in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_work_orders_last_night_fms_en
+#     - action: action_get_fms_work_orders_day_condition
+
+# - rule: Activate get work orders by date form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_work_orders_by_date_fms_id
+#     - action: get_work_orders_by_date_form
+#     - active_loop: get_work_orders_by_date_form
+
+# - rule: Activate get work orders by date form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_work_orders_by_date_fms_en
+#     - action: get_work_orders_by_date_form
+#     - active_loop: get_work_orders_by_date_form
+
+# - rule: Submit get work orders by date in Indonesia
+#   condition:
+#     - active_loop: get_work_orders_by_date_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_work_orders_by_date_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_work_orders_by_date
+
+# - rule: Submit get work orders by date in English
+#   condition:
+#     - active_loop: get_work_orders_by_date_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_work_orders_by_date_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_work_orders_by_date
+
+# - rule: Activate get work order numbers by site and date form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_work_order_numbers_by_site_and_date_fms_id
+#     - action: get_work_order_numbers_form
+#     - active_loop: get_work_order_numbers_form
+
+# - rule: Activate get work order numbers by site and date form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_work_order_numbers_by_site_and_date_fms_en
+#     - action: get_work_order_numbers_form
+#     - active_loop: get_work_order_numbers_form
+
+# - rule: Submit get work order numbers by site and date in Indonesia
+#   condition:
+#     - active_loop: get_work_order_numbers_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_work_order_numbers_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_work_orders_by_site_date
+
+# - rule: Submit get work order numbers by site and date in English
+#   condition:
+#     - active_loop: get_work_order_numbers_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_work_order_numbers_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_work_orders_by_site_date
+
+# - rule: Activate work order numbers by site and day condition form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_work_order_number_by_site_day_condition_fms_id
+#     - action: get_work_order_number_by_site_today_form
+#     - active_loop: get_work_order_number_by_site_today_form
+
+# - rule: Activate work order numbers by site and day condition form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_work_order_number_by_site_day_condition_fms_en
+#     - action: get_work_order_number_by_site_today_form
+#     - active_loop: get_work_order_number_by_site_today_form
+
+# - rule: Submit work order numbers by site and day condition in Indonesia
+#   condition:
+#     - active_loop: get_work_order_number_by_site_today_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_work_order_number_by_site_today_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_work_orders_by_site_day_condition
+
+# - rule: Submit work order numbers by site and day condition in English
+#   condition:
+#     - active_loop: get_work_order_number_by_site_today_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_work_order_number_by_site_today_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_work_orders_by_site_day_condition
+
+# - rule: Activate work area by site form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_work_area_by_site_fms_id
+#     - action: work_area_info_by_site_form
+#     - active_loop: work_area_info_by_site_form
+
+# - rule: Activate work area by site form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_work_area_by_site_fms_en
+#     - action: work_area_info_by_site_form
+#     - active_loop: work_area_info_by_site_form
+
+# - rule: Submit work area by site in Indonesia
+#   condition:
+#     - active_loop: work_area_info_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: work_area_info_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_wa_by_site
+
+# - rule: Submit work area by site in English
+#   condition:
+#     - active_loop: work_area_info_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: work_area_info_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_wa_by_site
+
+# - rule: Activate get work area count by site form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_work_area_count_by_site_fms_id
+#     - action: work_area_count_by_site_form
+#     - active_loop: work_area_count_by_site_form
+
+# - rule: Activate get work area count by site form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_work_area_count_by_site_fms_en
+#     - action: work_area_count_by_site_form
+#     - active_loop: work_area_count_by_site_form
+
+# - rule: Submit get work area count by site in Indonesia
+#   condition:
+#     - active_loop: work_area_count_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: work_area_count_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_total_wa_by_site
+
+# - rule: Submit get work area count by site in Eglish
+#   condition:
+#     - active_loop: work_area_count_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: work_area_count_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_total_wa_by_site
+
+# - rule: Activate check disposal work area form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: check_disposal_work_area_fms_id
+#     - action: check_disposal_work_area_form
+#     - active_loop: check_disposal_work_area_form
+
+# - rule: Activate check disposal work area form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: check_disposal_work_area_fms_en
+#     - action: check_disposal_work_area_form
+#     - active_loop: check_disposal_work_area_form
+
+# - rule: Submit check disposal work area in Indonesia
+#   condition:
+#     - active_loop: check_disposal_work_area_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: check_disposal_work_area_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_ask_wa_by_site_disposal
+
+# - rule: Submit check disposal work area in English
+#   condition:
+#     - active_loop: check_disposal_work_area_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: check_disposal_work_area_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_ask_wa_by_site_disposal
+
+# - rule: Activate get disposal work area count form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_disposal_work_area_count_by_site_fms_id
+#     - action: get_disposal_work_area_count_by_site_form
+#     - active_loop: get_disposal_work_area_count_by_site_form
+
+# - rule: Activate get disposal work area count form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_disposal_work_area_count_by_site_fms_en
+#     - action: get_disposal_work_area_count_by_site_form
+#     - active_loop: get_disposal_work_area_count_by_site_form
+
+# - rule: Submit get disposal work area count in Indonesia
+#   condition:
+#     - active_loop: get_disposal_work_area_count_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_disposal_work_area_count_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_total_wa_by_site_disposal
+
+# - rule: Submit get disposal work area count in English
+#   condition:
+#     - active_loop: get_disposal_work_area_count_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_disposal_work_area_count_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_total_wa_by_site_disposal
+
+# - rule: Activate get inventory count by work area form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_inventory_count_by_work_area_fms_id
+#     - action: get_inventory_count_by_work_area_form
+#     - active_loop: get_inventory_count_by_work_area_form
+
+# - rule: Activate get inventory count by work area form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_inventory_count_by_work_area_fms_en
+#     - action: get_inventory_count_by_work_area_form
+#     - active_loop: get_inventory_count_by_work_area_form
+
+# - rule: Submit get inventory count by work area in Indonesia
+#   condition:
+#     - active_loop: get_inventory_count_by_work_area_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_inventory_count_by_work_area_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_wa_by_site_inventory
+
+# - rule: Submit get inventory count by work area in English
+#   condition:
+#     - active_loop: get_inventory_count_by_work_area_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_inventory_count_by_work_area_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_wa_by_site_inventory
+
+# - rule: Respond to get fleet count Madhani in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_fleet_count_madhani_fms_id
+#     - action: action_get_fms_total_fleet
+
+# - rule: Respond to get fleet count Madhani in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_fleet_count_madhani_fms_en
+#     - action: action_get_fms_total_fleet
+
+# - rule: Activate get excavators by site form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_excavators_by_site_fms_id
+#     - action: get_excavators_by_site_form
+#     - active_loop: get_excavators_by_site_form
+
+# - rule: Activate get excavators by site form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_excavators_by_site_fms_en
+#     - action: get_excavators_by_site_form
+#     - active_loop: get_excavators_by_site_form
+
+# - rule: Submit get excavators by site in Indonesia
+#   condition:
+#     - active_loop: get_excavators_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_excavators_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_excavator_by_site
+
+# - rule: Submit get excavators by site in English
+#   condition:
+#     - active_loop: get_excavators_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_excavators_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_excavator_by_site
+
+# - rule: Activate get fleet count by site form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_fleet_count_by_site_fms_id
+#     - action: get_fleet_count_by_site_form
+#     - active_loop: get_fleet_count_by_site_form
+
+# - rule: Activate get fleet count by site form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_fleet_count_by_site_fms_en
+#     - action: get_fleet_count_by_site_form
+#     - active_loop: get_fleet_count_by_site_form
+
+# - rule: Submit get fleet count by site in Indonesia
+#   condition:
+#     - active_loop: get_fleet_count_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_fleet_count_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_total_fleet_by_site
+
+# - rule: Submit get fleet count by site in English
+#   condition:
+#     - active_loop: get_fleet_count_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_fleet_count_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_total_fleet_by_site
+
+# - rule: Activate excavator operator form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_excavator_operator_by_site_fms_id
+#     - action: get_excavator_operator_by_site_form
+#     - active_loop: get_excavator_operator_by_site_form
+
+# - rule: Activate excavator operator form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_excavator_operator_by_site_fms_en
+#     - action: get_excavator_operator_by_site_form
+#     - active_loop: get_excavator_operator_by_site_form
+
+# - rule: Submit excavator operator in Indonesia
+#   condition:
+#     - active_loop: get_excavator_operator_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_excavator_operator_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_excavator_operator_by_site_fleet
+
+# - rule: Submit excavator operator in English
+#   condition:
+#     - active_loop: get_excavator_operator_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_excavator_operator_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_excavator_operator_by_site_fleet
+
+# - rule: Activate get current activity by site in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_current_activity_by_site_fms_id
+#     - action: get_current_activity_by_site_form
+#     - active_loop: get_current_activity_by_site_form
+
+# - rule: Activate get current activity by site in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_current_activity_by_site_fms_en
+#     - action: get_current_activity_by_site_form
+#     - active_loop: get_current_activity_by_site_form
+
+# - rule: Submit get current activity by site in Indonesia
+#   condition:
+#     - active_loop: get_current_activity_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_current_activity_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_activity_by_site
+
+# - rule: Submit get current activity by site in English
+#   condition:
+#     - active_loop: get_current_activity_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_current_activity_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_activity_by_site
+
+# - rule: Activate hauler count by site in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_hauler_count_by_site_fms_id
+#     - action: get_hauler_count_by_site_form
+#     - active_loop: get_hauler_count_by_site_form
+
+# - rule: Activate hauler count by site in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_hauler_count_by_site_fms_en
+#     - action: get_hauler_count_by_site_form
+#     - active_loop: get_hauler_count_by_site_form
+
+# - rule: Submit hauler count by site in Indonesia
+#   condition:
+#     - active_loop: get_hauler_count_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_hauler_count_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_total_hauler_by_site
+
+# - rule: Submit hauler count by site in English
+#   condition:
+#     - active_loop: get_hauler_count_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_hauler_count_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_total_hauler_by_site
+
+# - rule: Activate equipment count by site in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_equipment_count_by_site_fms_id
+#     - action: get_equipment_count_by_site_form
+#     - active_loop: get_equipment_count_by_site_form
+
+# - rule: Activate equipment count by site in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_equipment_count_by_site_fms_en
+#     - action: get_equipment_count_by_site_form
+#     - active_loop: get_equipment_count_by_site_form
+
+# - rule: Submit equipment count by site in Indonesia
+#   condition:
+#     - active_loop: get_equipment_count_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_equipment_count_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_total_equipment_by_site_fleet
+
+# - rule: Submit equipment count by site in English
+#   condition:
+#     - active_loop: get_equipment_count_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_equipment_count_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_total_equipment_by_site_fleet
+
+# - rule: Activate fleet production target in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_fleet_production_target_by_site_fms_id
+#     - action: get_fleet_production_target_by_site_form
+#     - active_loop: get_fleet_production_target_by_site_form
+
+# - rule: Activate fleet production target in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_fleet_production_target_by_site_fms_en
+#     - action: get_fleet_production_target_by_site_form
+#     - active_loop: get_fleet_production_target_by_site_form
+
+# - rule: Submit fleet production target in Indonesia
+#   condition:
+#     - active_loop: get_fleet_production_target_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_fleet_production_target_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_target_production_by_site
+
+# - rule: Submit fleet production target in English
+#   condition:
+#     - active_loop: get_fleet_production_target_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_fleet_production_target_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_target_production_by_site
+
+# - rule: Activate ask fleet match factor by site in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_fleet_match_factor_by_site_fms_id
+#     - action: get_fleet_match_factor_by_site_form
+#     - active_loop: get_fleet_match_factor_by_site_form
+
+# - rule: Activate ask fleet match factor by site in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_fleet_match_factor_by_site_fms_en
+#     - action: get_fleet_match_factor_by_site_form
+#     - active_loop: get_fleet_match_factor_by_site_form
+
+# - rule: Submit ask fleet match factor by site in Indonesia
+#   condition:
+#     - active_loop: get_fleet_match_factor_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_fleet_match_factor_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_mach_factor_by_site
+
+# - rule: Submit ask fleet match factor by site in English
+#   condition:
+#     - active_loop: get_fleet_match_factor_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_fleet_match_factor_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_mach_factor_by_site
+
+# - rule: Activate ask haul time by site form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_fleet_haul_time_by_site_fms_id
+#     - action: get_fleet_haul_time_by_site_form
+#     - active_loop: get_fleet_haul_time_by_site_form
+
+# - rule: Activate ask haul time by site form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_fleet_haul_time_by_site_fms_en
+#     - action: get_fleet_haul_time_by_site_form
+#     - active_loop: get_fleet_haul_time_by_site_form
+
+# - rule: Submit ask haul time by site in Indonesia
+#   condition:
+#     - active_loop: get_fleet_haul_time_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_fleet_haul_time_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_haul_time_by_site
+
+# - rule: Submit ask haul time by site in English
+#   condition:
+#     - active_loop: get_fleet_haul_time_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_fleet_haul_time_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_haul_time_by_site
+
+# - rule: Activate ask dump time by site form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_fleet_dump_time_by_site_fms_id
+#     - action: get_fleet_dump_time_by_site_form
+#     - active_loop: get_fleet_dump_time_by_site_form
+
+# - rule: Activate ask dump time by site form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_fleet_dump_time_by_site_fms_en
+#     - action: get_fleet_dump_time_by_site_form
+#     - active_loop: get_fleet_dump_time_by_site_form
+
+# - rule: Submit ask dump time by site in Indonesia
+#   condition:
+#     - active_loop: get_fleet_dump_time_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_fleet_dump_time_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_dump_time_by_site
+
+# - rule: Submit ask dump time by site in English
+#   condition:
+#     - active_loop: get_fleet_dump_time_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_fleet_dump_time_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_dump_time_by_site
+
+# - rule: Activate ask spot time by site form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_fleet_spot_time_by_site_fms_id
+#     - action: get_fleet_spot_time_by_site_form
+#     - active_loop: get_fleet_spot_time_by_site_form
+
+# - rule: Activate ask spot time by site form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_fleet_spot_time_by_site_fms_en
+#     - action: get_fleet_spot_time_by_site_form
+#     - active_loop: get_fleet_spot_time_by_site_form
+    
+# - rule: Submit ask spot time by site in Indonesia
+#   condition:
+#     - active_loop: get_fleet_spot_time_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_fleet_spot_time_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_spot_time_by_site
+
+# - rule: Submit ask spot time by site in English
+#   condition:
+#     - active_loop: get_fleet_spot_time_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_fleet_spot_time_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_spot_time_by_site
+
+# - rule: Activate ask loader cycle time by site form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_fleet_loader_cycle_time_by_site_fms_id
+#     - action: get_fleet_loader_cycle_time_by_site_form
+#     - active_loop: get_fleet_loader_cycle_time_by_site_form
+
+# - rule: Activate ask loader cycle time by site form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_fleet_loader_cycle_time_by_site_fms_en
+#     - action: get_fleet_loader_cycle_time_by_site_form
+#     - active_loop: get_fleet_loader_cycle_time_by_site_form
+
+# - rule: Submit ask loader cycle time by site in Indonesia
+#   condition:
+#     - active_loop: get_fleet_loader_cycle_time_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_fleet_loader_cycle_time_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_loader_cycle_time_by_site
+
+# - rule: Submit ask loader cycle time by site in English
+#   condition:
+#     - active_loop: get_fleet_loader_cycle_time_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_fleet_loader_cycle_time_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_loader_cycle_time_by_site
+
+# - rule: Activate ask return time by site form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_fleet_return_time_by_site_fms_id
+#     - action: get_fleet_return_time_by_site_form
+#     - active_loop: get_fleet_return_time_by_site_form
+
+# - rule: Activate ask return time by site form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_fleet_return_time_by_site_fms_en
+#     - action: get_fleet_return_time_by_site_form
+#     - active_loop: get_fleet_return_time_by_site_form
+
+# - rule: Submit ask return time by site in Indonesia
+#   condition:
+#     - active_loop: get_fleet_return_time_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_fleet_return_time_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_return_time_by_site
+
+# - rule: Submit ask return time by site in English
+#   condition:
+#     - active_loop: get_fleet_return_time_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_fleet_return_time_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_return_time_by_site
+
+# - rule: Activate ask production count by site form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_fleet_production_count_by_site_fms_id
+#     - action: get_fleet_production_count_by_site_form
+#     - active_loop: get_fleet_production_count_by_site_form
+
+# - rule: Activate ask production count by site form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_fleet_production_count_by_site_fms_en
+#     - action: get_fleet_production_count_by_site_form
+#     - active_loop: get_fleet_production_count_by_site_form
+
+# - rule: Submit ask production count by site in Indonesia
+#   condition:
+#     - active_loop: get_fleet_production_count_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_fleet_production_count_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_total_production_by_site
+
+# - rule: Submit ask production count by site in English
+#   condition:
+#     - active_loop: get_fleet_production_count_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_fleet_production_count_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_total_production_by_site
+
+# - rule: Activate ask for production per cycle by site form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_fleet_production_count_per_cycle_by_site_fms_id
+#     - action: get_fleet_production_per_cycle_by_site_form
+#     - active_loop: get_fleet_production_per_cycle_by_site_form
+
+# - rule: Submit ask for production per cycle by site in Indonesia
+#   condition:
+#     - active_loop: get_fleet_production_per_cycle_by_site_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_fleet_production_per_cycle_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_production_per_cycle
+
+# - rule: Activate ask for production per cycle by site form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_fleet_production_count_per_cycle_by_site_fms_en
+#     - action: get_fleet_production_per_cycle_by_site_form
+#     - active_loop: get_fleet_production_per_cycle_by_site_form
+
+# - rule: Submit ask for production per cycle by site in English
+#   condition:
+#     - active_loop: get_fleet_production_per_cycle_by_site_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_fleet_production_per_cycle_by_site_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_production_per_cycle
+
+# - rule: Activate ask top 10 equipment form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_top_10_equipment_fms_id
+#     - action: get_top_10_equipment_form
+#     - active_loop: get_top_10_equipment_form
+
+# - rule: Submit ask top 10 equipment by site in Indonesia
+#   condition:
+#     - active_loop: get_top_10_equipment_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_top_10_equipment_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_top10_equipment
+    
+# - rule: Activate ask top 10 equipment form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_top_10_equipment_fms_en
+#     - action: get_top_10_equipment_form
+#     - active_loop: get_top_10_equipment_form
+
+# - rule: Submit ask top 10 equipment by site in English
+#   condition:
+#     - active_loop: get_top_10_equipment_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_top_10_equipment_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_top10_equipment
+
+# - rule: Activate ask top 10 fleet form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_top_10_fleet_fms_id
+#     - action: get_top_10_fleet_form
+#     - active_loop: get_top_10_fleet_form
+
+# - rule: Submit ask top 10 fleet by site in Indonesia
+#   condition:
+#     - active_loop: get_top_10_fleet_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_top_10_fleet_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_top10_fleet
+
+# - rule: Activate ask top 10 fleet form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_top_10_fleet_fms_en
+#     - action: get_top_10_fleet_form
+#     - active_loop: get_top_10_fleet_form
+
+# - rule: Submit ask top 10 fleet by site in English
+#   condition:
+#     - active_loop: get_top_10_fleet_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_top_10_fleet_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_top10_fleet
+
+# - rule: Activate ask top 10 breakdown form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_top_10_breakdown_fms_id
+#     - action: get_top_10_breakdown_form
+#     - active_loop: get_top_10_breakdown_form
+
+# - rule: Submit ask top 10 breakdown by site in Indonesia
+#   condition:
+#     - active_loop: get_top_10_breakdown_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_top_10_breakdown_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_top10_breakdown
+
+# - rule: Activate ask top 10 breakdown form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_top_10_breakdown_fms_en
+#     - action: get_top_10_breakdown_form
+#     - active_loop: get_top_10_breakdown_form
+
+# - rule: Submit ask top 10 breakdown by site in English
+#   condition:
+#     - active_loop: get_top_10_breakdown_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_top_10_breakdown_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_top10_breakdown
+
+# - rule: Activate request top 10 equipment form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: request_top_10_equipment_fms_id
+#     - action: get_request_top_10_equipment_form
+#     - active_loop: get_request_top_10_equipment_form
+
+# - rule: Submit request top 10 equipment in Indonesia
+#   condition:
+#     - active_loop: get_request_top_10_equipment_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_request_top_10_equipment_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_request_top10_equipment
+
+# - rule: Activate request top 10 equipment form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: request_top_10_equipment_fms_en
+#     - action: get_request_top_10_equipment_form
+#     - active_loop: get_request_top_10_equipment_form
+
+# - rule: Submit request top 10 equipment in English
+#   condition:
+#     - active_loop: get_request_top_10_equipment_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_request_top_10_equipment_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_request_top10_equipment
+    
+# - rule: Activate request top 10 fleet form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: request_top_10_fleet_fms_id
+#     - action: get_request_top_10_fleet_form
+#     - active_loop: get_request_top_10_fleet_form
+
+# - rule: Submit request top 10 fleet in Indonesia
+#   condition:
+#     - active_loop: get_request_top_10_fleet_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_request_top_10_fleet_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_request_top10_fleet
+
+# - rule: Activate request top 10 fleet form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: request_top_10_fleet_fms_en
+#     - action: get_request_top_10_fleet_form
+#     - active_loop: get_request_top_10_fleet_form
+
+# - rule: Submit request top 10 fleet in English
+#   condition:
+#     - active_loop: get_request_top_10_fleet_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_request_top_10_fleet_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_request_top10_fleet
+
+# - rule: Activate request top 10 breakdown form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: request_top_10_breakdown_fms_id
+#     - action: get_request_top_10_breakdown_form
+#     - active_loop: get_request_top_10_breakdown_form
+
+# - rule: Submit request top 10 breakdown in Indonesia
+#   condition:
+#     - active_loop: get_request_top_10_breakdown_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_request_top_10_breakdown_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_request_top10_breakdown
+
+# - rule: Activate request top 10 breakdown form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: request_top_10_breakdown_fms_en
+#     - action: get_request_top_10_breakdown_form
+#     - active_loop: get_request_top_10_breakdown_form
+
+# - rule: Submit request top 10 breakdown in English
+#   condition:
+#     - active_loop: get_request_top_10_breakdown_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_request_top_10_breakdown_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_request_top10_breakdown
+
+# - rule: Activate ask report all production performance control form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: request_all_production_performance_control_report_fms_id
+#     - action: get_all_data_ppc_by_date_form
+#     - active_loop: get_all_data_ppc_by_date_form
+
+# - rule: Submit ask report all production performance control in Indonesia
+#   condition:
+#     - active_loop: get_all_data_ppc_by_date_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_all_data_ppc_by_date_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_production_by_date_shift
+
+# - rule: Activate ask report all production performance control form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: request_all_production_performance_control_report_fms_en
+#     - action: get_all_data_ppc_by_date_form
+#     - active_loop: get_all_data_ppc_by_date_form
+
+# - rule: Submit ask report all production performance control in English
+#   condition:
+#     - active_loop: get_all_data_ppc_by_date_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_all_data_ppc_by_date_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_production_by_date_shift
+
+# - rule: Activate ask report production coal form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: request_production_coal_report_fms_id
+#     - action: get_request_production_coal_report_form
+#     - active_loop: get_request_production_coal_report_form
+
+# - rule: Submit ask report production coal in Indonesia
+#   condition:
+#     - active_loop: get_request_production_coal_report_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_request_production_coal_report_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_production_coal_by_date_shift
+
+# - rule: Activate ask report production coal form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: request_production_coal_report_fms_en
+#     - action: get_request_production_coal_report_form
+#     - active_loop: get_request_production_coal_report_form
+
+# - rule: Submit ask report production coal in English
+#   condition:
+#     - active_loop: get_request_production_coal_report_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_request_production_coal_report_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_production_coal_by_date_shift
+
+# - rule: Activate ask report production waste form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: request_production_waste_report_fms_id
+#     - action: get_request_production_waste_report_form
+#     - active_loop: get_request_production_waste_report_form
+
+# - rule: Submit ask report production waste in Indonesia
+#   condition:
+#     - active_loop: get_request_production_waste_report_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_request_production_waste_report_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_production_waste_by_date_shift
+
+# - rule: Activate ask report production waste form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: request_production_waste_report_fms_en
+#     - action: get_request_production_waste_report_form
+#     - active_loop: get_request_production_waste_report_form
+
+# - rule: Submit ask report production waste in English
+#   condition:
+#     - active_loop: get_request_production_waste_report_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_request_production_waste_report_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_production_waste_by_date_shift
+
+# - rule: Activate ask report production today form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: request_production_performance_report_today_fms_id
+#     - action: get_request_production_report_by_today_form
+#     - active_loop: get_request_production_report_by_today_form
+
+# - rule: Submit ask report production today in Indonesia
+#   condition:
+#     - active_loop: get_request_production_report_by_today_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_request_production_report_by_today_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_production_today
+
+# - rule: Activate ask report production today form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: request_production_performance_report_today_fms_en
+#     - action: get_request_production_report_by_today_form
+#     - active_loop: get_request_production_report_by_today_form
+
+# - rule: Submit ask report production today in English
+#   condition:
+#     - active_loop: get_request_production_report_by_today_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_request_production_report_by_today_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_production_today
+
+# - rule: Activate ask KPI for self form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#   - intent: request_kpi_self_fms_id
+#   - action: get_kpi_self_form
+#   - active_loop: get_kpi_self_form
+
+# - rule: Submit ask KPI for self in Indonesia
+#   condition:
+#     - active_loop: get_kpi_self_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_kpi_self_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_kpi_self_result
+
+# - rule: Activate ask KPI for self form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#   - intent: request_kpi_self_fms_en
+#   - action: get_kpi_self_form
+#   - active_loop: get_kpi_self_form
+
+# - rule: Submit ask KPI for self in English
+#   condition:
+#     - active_loop: get_kpi_self_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_kpi_self_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_kpi_self_result
+
+# - rule: Respond to show request KPI for by self today in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: request_kpi_self_today_fms_id
+#     - action: action_get_fms_kpi_self_result_today
+
+# - rule: Respond to show request KPI for by self today in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: request_kpi_self_today_fms_en
+#     - action: action_get_fms_kpi_self_result_today
+
+# - rule: Activate ask KPI for other operator form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#   - intent: request_kpi_other_operator_fms_id
+#   - action: get_kpi_other_operator_form
+#   - active_loop: get_kpi_other_operator_form
+
+# - rule: Submit ask KPI for other operator in Indonesia
+#   condition:
+#     - active_loop: get_kpi_other_operator_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_kpi_other_operator_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_kpi_other_operator_result
+
+# - rule: Activate ask KPI for other operator form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#   - intent: request_kpi_other_operator_fms_en
+#   - action: get_kpi_other_operator_form
+#   - active_loop: get_kpi_other_operator_form
+
+# - rule: Submit ask KPI for other operator in English
+#   condition:
+#     - active_loop: get_kpi_other_operator_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_kpi_other_operator_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_fms_kpi_other_operator_result
+
+# - rule: Get date picker
+#   steps:
+#     - intent: show_date_picker
+#     - action: action_show_date_picker
+
+# - rule: Get range picker
+#   steps:
+#     - intent: show_range_picker
+#     - action: action_show_range_picker
+
+# - rule: Get show picker
+#   steps:
+#     - intent: show_select_options
+#     - action: action_show_select_options
+
+# - rule: Get show picker
+#   steps:
+#     - intent: show_select_options_with_text
+#     - action: action_show_select_options_with_text
+

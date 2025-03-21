@@ -1,0 +1,79 @@
+# version: "3.1"
+# stories:
+# - story: check leave expired quota and choose big leave in Indonesia
+#   steps:
+#     - slot_was_set:
+#         - language: indonesia
+#     - intent: check_leave_expired_ess_id
+#     - action: utter_ask_leave_category_expired_id
+#     - intent: choose_leave_category_ess_id
+#       entities:
+#         - leave_type: besar
+#     - slot_was_set:
+#         - leave_type: besar
+#     - action: action_time_off_expired
+
+# - story: check leave expired quota and choose big leave in English
+#   steps:
+#     - slot_was_set:
+#         - language: english
+#     - intent: check_leave_expired_ess_en
+#     - action: utter_ask_leave_category_expired_en
+#     - intent: choose_leave_category_ess_en
+#       entities:
+#         - leave_type: big
+#     - slot_was_set:
+#         - leave_type: big
+#     - action: action_time_off_expired
+
+# - story: check leave expired quota and choose annual leave in Indonesia
+#   steps:
+#     - slot_was_set:
+#         - language: indonesia
+#     - intent: check_leave_expired_ess_id
+#     - action: utter_ask_leave_category_expired_id
+#     - intent: choose_leave_category_ess_id
+#       entities:
+#         - leave_type: tahunan
+#     - slot_was_set:
+#         - leave_type: tahunan
+#     - action: action_time_off_expired
+
+# - story: check leave expired quota and choose annual leave in English
+#   steps:
+#     - slot_was_set:
+#         - language: english
+#     - intent: check_leave_expired_ess_en
+#     - action: utter_ask_leave_category_expired_en
+#     - intent: choose_leave_category_ess_en
+#       entities:
+#         - leave_type: annual
+#     - slot_was_set:
+#         - leave_type: annual
+#     - action: action_time_off_expired
+
+# - story: check leave expired quota and choose outstanding leave in Indonesia
+#   steps:
+#     - slot_was_set:
+#         - language: indonesia
+#     - intent: check_leave_expired_ess_id
+#     - action: utter_ask_leave_category_expired_id
+#     - intent: choose_leave_category_ess_id
+#       entities:
+#         - leave_type: outstanding
+#     - slot_was_set:
+#         - leave_type: outstanding
+#     - action: action_time_off_expired
+
+# - story: check leave expired quota and choose outstanding leave in English
+#   steps:
+#     - slot_was_set:
+#         - language: english
+#     - intent: check_leave_expired_ess_en
+#     - action: utter_ask_leave_category_expired_en
+#     - intent: choose_leave_category_ess_en
+#       entities:
+#         - leave_type: outstanding
+#     - slot_was_set:
+#         - leave_type: outstanding
+#     - action: action_time_off_expired

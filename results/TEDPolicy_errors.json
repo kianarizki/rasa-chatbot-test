@@ -1,0 +1,732 @@
+[
+  {
+    "text": "cuti besar",
+    "entities": [
+      {
+        "start": 5,
+        "end": 10,
+        "value": "besar",
+        "entity": "leave_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "big leave",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "big",
+        "entity": "leave_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "cuti tahunan",
+    "entities": [
+      {
+        "start": 5,
+        "end": 12,
+        "value": "tahunan",
+        "entity": "leave_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "annual leave",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "annual",
+        "entity": "leave_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "cuti outstanding",
+    "entities": [
+      {
+        "start": 5,
+        "end": 16,
+        "value": "outstanding",
+        "entity": "leave_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Saya ingin tahu 10 equipment berdasarkan jam operasional tertinggi",
+    "entities": [
+      {
+        "start": 19,
+        "end": 28,
+        "value": "equipment",
+        "entity": "category_name"
+      },
+      {
+        "start": 41,
+        "end": 56,
+        "value": "jam operasional",
+        "entity": "equipment_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want to know the top 10 equipment with the highest operating hours",
+    "entities": [
+      {
+        "start": 26,
+        "end": 35,
+        "value": "equipment",
+        "entity": "category_name"
+      },
+      {
+        "start": 53,
+        "end": 68,
+        "value": "operating hours",
+        "entity": "equipment_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Apa saja 10 equipment dengan kapasitas terbesar?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 21,
+        "value": "equipment",
+        "entity": "category_name"
+      },
+      {
+        "start": 29,
+        "end": 38,
+        "value": "kapasitas",
+        "entity": "equipment_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Show the top 10 equipment with the highest capacity?",
+    "entities": [
+      {
+        "text": "Show the top 10 equipment with the highest capacity?",
+        "start": 16,
+        "end": 25,
+        "entity": "category_name",
+        "value": "equipment"
+      },
+      {
+        "text": "Show the top 10 equipment with the highest capacity?",
+        "start": 43,
+        "end": 51,
+        "entity": "equipment_top10_category",
+        "value": "capacity"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "outstanding leave",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "outstanding",
+        "entity": "leave_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Apa saja 10 equipment dengan jarak tempuh tertinggi?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 21,
+        "value": "equipment",
+        "entity": "category_name"
+      },
+      {
+        "start": 29,
+        "end": 41,
+        "value": "jarak tempuh",
+        "entity": "equipment_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Which 10 equipment with the highest kilometers?",
+    "entities": [
+      {
+        "text": "Which 10 equipment with the highest kilometers?",
+        "start": 9,
+        "end": 18,
+        "entity": "category_name",
+        "value": "equipment"
+      },
+      {
+        "text": "Which 10 equipment with the highest kilometers?",
+        "start": 36,
+        "end": 46,
+        "entity": "equipment_top10_category",
+        "value": "kilometers"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Apa saja 10 fleet dengan jarak tempuh tertinggi?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 17,
+        "value": "fleet",
+        "entity": "category_name"
+      },
+      {
+        "start": 25,
+        "end": 37,
+        "value": "jarak tempuh",
+        "entity": "fleet_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Which are the top 10 fleet with the highest total distance traveled?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 26,
+        "value": "fleet",
+        "entity": "category_name"
+      },
+      {
+        "start": 50,
+        "end": 67,
+        "value": "distance traveled",
+        "entity": "fleet_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Tampilkan daftar 10 fleet dengan muatan tertinggi?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 25,
+        "value": "fleet",
+        "entity": "category_name"
+      },
+      {
+        "start": 33,
+        "end": 39,
+        "value": "muatan",
+        "entity": "fleet_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What are the top 10 fleet with the highest payload?",
+    "entities": [
+      {
+        "text": "What are the top 10 fleet with the highest payload?",
+        "start": 20,
+        "end": 25,
+        "entity": "category_name",
+        "value": "fleet"
+      },
+      {
+        "text": "What are the top 10 fleet with the highest payload?",
+        "start": 43,
+        "end": 50,
+        "entity": "fleet_top10_category",
+        "value": "payload"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Apa saja 10 fleet dengan jam operasional tertinggi?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 17,
+        "value": "fleet",
+        "entity": "category_name"
+      },
+      {
+        "start": 25,
+        "end": 40,
+        "value": "jam operasional",
+        "entity": "fleet_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Which 10 fleet have the longest total operating hours?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 14,
+        "value": "fleet",
+        "entity": "category_name"
+      },
+      {
+        "start": 38,
+        "end": 53,
+        "value": "operating hours",
+        "entity": "fleet_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Apa saja 10 fleet dengan sisa bahan bakar tertinggi?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 17,
+        "value": "fleet",
+        "entity": "category_name"
+      },
+      {
+        "start": 30,
+        "end": 41,
+        "value": "bahan bakar",
+        "entity": "fleet_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Which 10 fleet have the highest remaining fuel?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 14,
+        "value": "fleet",
+        "entity": "category_name"
+      },
+      {
+        "start": 42,
+        "end": 46,
+        "value": "fuel",
+        "entity": "fleet_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Bisa tampilkan top 10 fleet dengan jumlah produksi terbesar?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 27,
+        "value": "fleet",
+        "entity": "category_name"
+      },
+      {
+        "start": 35,
+        "end": 50,
+        "value": "jumlah produksi",
+        "entity": "fleet_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can you display the top 10 fleet with the largest production amount?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 32,
+        "value": "fleet",
+        "entity": "category_name"
+      },
+      {
+        "start": 50,
+        "end": 67,
+        "value": "production amount",
+        "entity": "fleet_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Apa saja 10 penyebab breakdown tertinggi pada equipment?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 30,
+        "value": "penyebab breakdown",
+        "entity": "breakdown_top10_category"
+      },
+      {
+        "start": 46,
+        "end": 55,
+        "value": "equipment",
+        "entity": "category_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What are the top 10 breakdown causes for equipment?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 36,
+        "value": "breakdown causes",
+        "entity": "breakdown_top10_category"
+      },
+      {
+        "start": 41,
+        "end": 50,
+        "value": "equipment",
+        "entity": "category_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Apa saja 10 equipment yang sering breakdown?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 21,
+        "value": "equipment",
+        "entity": "category_name"
+      },
+      {
+        "start": 27,
+        "end": 43,
+        "value": "sering breakdown",
+        "entity": "breakdown_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Which are the top 10 equipment that frequently break down?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 30,
+        "value": "equipment",
+        "entity": "category_name"
+      },
+      {
+        "start": 36,
+        "end": 57,
+        "value": "frequently break down",
+        "entity": "breakdown_top10_category"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "indonesia",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "indonesia",
+        "entity": "language"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "cuti besar",
+    "entities": [
+      {
+        "start": 5,
+        "end": 10,
+        "value": "besar",
+        "entity": "leave_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "big leave",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "big",
+        "entity": "leave_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "cuti tahunan",
+    "entities": [
+      {
+        "start": 5,
+        "end": 12,
+        "value": "tahunan",
+        "entity": "leave_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "annual leave",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "annual",
+        "entity": "leave_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "cuti outstanding",
+    "entities": [
+      {
+        "start": 5,
+        "end": 16,
+        "value": "outstanding",
+        "entity": "leave_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "outstanding leave",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "outstanding",
+        "entity": "leave_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "cuti besar saya kapan habis?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 10,
+        "value": "besar",
+        "entity": "leave_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "when will my big leave finished?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 16,
+        "value": "big",
+        "entity": "leave_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "english",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "english",
+        "entity": "language"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Tolong berikan detail unit dengan status aktif",
+    "entities": [
+      {
+        "start": 41,
+        "end": 46,
+        "value": "aktif",
+        "entity": "unit_status"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Please provide details of units with status active",
+    "entities": [
+      {
+        "text": "Please provide details of units with status active",
+        "start": 44,
+        "end": 50,
+        "entity": "unit_status",
+        "value": "active"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Unit apa saja dengan status tidak aktif?",
+    "entities": [
+      {
+        "start": 28,
+        "end": 39,
+        "value": "tidak aktif",
+        "entity": "unit_status"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Are there any units with status inactive?",
+    "entities": [
+      {
+        "text": "Are there any units with status inactive?",
+        "start": 32,
+        "end": 40,
+        "entity": "unit_status",
+        "value": "inactive"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Kategori equipment apa saja yang memiliki status aktif",
+    "entities": [
+      {
+        "start": 49,
+        "end": 54,
+        "value": "aktif",
+        "entity": "equipment_category_status"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What equipment categories have the status active",
+    "entities": [
+      {
+        "text": "What equipment categories have the status active",
+        "start": 42,
+        "end": 48,
+        "entity": "equipment_category_status",
+        "value": "active"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Tunjukkan kategori equipment yang berstatus tidak aktif",
+    "entities": [
+      {
+        "start": 44,
+        "end": 55,
+        "value": "tidak aktif",
+        "entity": "equipment_category_status"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Show me the equipment categories with the status inactive",
+    "entities": [
+      {
+        "text": "Show me the equipment categories with the status inactive",
+        "start": 49,
+        "end": 57,
+        "entity": "equipment_category_status",
+        "value": "inactive"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Tunjukkan work order saya pada hari ini",
+    "entities": [
+      {
+        "start": 31,
+        "end": 39,
+        "value": "hari ini",
+        "entity": "day_condition"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Show me my work orders for today",
+    "entities": [
+      {
+        "start": 27,
+        "end": 32,
+        "value": "today",
+        "entity": "day_condition"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Apa saja work order saya yang tercatat kemarin siang",
+    "entities": [
+      {
+        "start": 39,
+        "end": 52,
+        "value": "kemarin siang",
+        "entity": "day_condition"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Show me the work orders from last noon",
+    "entities": [
+      {
+        "start": 29,
+        "end": 38,
+        "value": "last noon",
+        "entity": "day_condition"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Tunjukkan work order pada kemarin malam",
+    "entities": [
+      {
+        "start": 26,
+        "end": 39,
+        "value": "kemarin malam",
+        "entity": "day_condition"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Show me the work orders from last night",
+    "entities": [
+      {
+        "start": 29,
+        "end": 39,
+        "value": "last night",
+        "entity": "day_condition"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

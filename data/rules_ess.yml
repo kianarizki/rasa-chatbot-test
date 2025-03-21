@@ -1,0 +1,297 @@
+# version: "3.1"
+# rules:
+# - rule: check leave info in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: check_leave_info_ess_id
+#     - action: utter_ask_leave_info_type_id
+
+# - rule: check leave info in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: check_leave_info_ess_en
+#     - action: utter_ask_leave_info_type_en
+
+# - rule: check leave quota in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: check_leave_quota_ess_id
+#     - action: action_time_off_remaining
+
+# - rule: check leave quota in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: check_leave_quota_ess_en
+#     - action: action_time_off_remaining
+
+# - rule: check leave expired quota in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: check_leave_expired_ess_id
+#     - action: utter_ask_leave_category_expired_id
+
+# - rule: check leave expired quota in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: check_leave_expired_ess_en
+#     - action: utter_ask_leave_category_expired_en
+
+# - rule: check leave expired big quota in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: check_leave_expired_big_quota_ess_id
+#     - action: action_time_off_expired
+
+# - rule: check leave expired big quota in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: check_leave_expired_big_quota_ess_en
+#     - action: action_time_off_expired
+
+# - rule: check leave expired annual quota in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: check_leave_expired_annual_quota_ess_id
+#     - action: action_time_off_expired
+
+# - rule: check leave expired annual quota in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: check_leave_expired_annual_quota_ess_en
+#     - action: action_time_off_expired
+
+# - rule: check leave expired outstanding quota in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: check_leave_expired_outstanding_quota_ess_id
+#     - action: action_time_off_expired
+
+# - rule: check leave expired outstanding quota in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: check_leave_expired_outstanding_quota_ess_en
+#     - action: action_time_off_expired
+
+# - rule: show leave list in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: show_leave_list_ess_id
+#     - action: action_time_off_list
+
+# - rule: show leave list in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: show_leave_list_ess_en
+#     - action: action_time_off_list
+
+# - rule: check last leave approval status in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: check_last_leave_approval_status_ess_id
+#     - action: action_last_approval_time_off_status
+
+# - rule: check last leave approval status in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: check_last_leave_approval_status_ess_en
+#     - action: action_last_approval_time_off_status
+
+# - rule: check last leave taken in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: check_last_leave_taken_ess_id
+#     - action: action_get_last_approval_time_off
+
+# - rule: check last leave taken in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: check_last_leave_taken_ess_en
+#     - action: action_get_last_approval_time_off
+
+# - rule: Activate leave request form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: apply_leave_request_ess_id
+#     - action: get_leave_request_form
+#     - active_loop: get_leave_request_form
+
+# - rule: Submit leave request in Indonesia
+#   condition:
+#     - active_loop: get_leave_request_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_leave_request_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_ess_leave_confirmation
+#     - action: utter_confirm_leave_submission_ess_id
+
+# - rule: Activate leave request form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: apply_leave_request_ess_en
+#     - action: get_leave_request_form
+#     - active_loop: get_leave_request_form
+
+# - rule: Submit leave request in English
+#   condition:
+#     - active_loop: get_leave_request_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_leave_request_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_ess_leave_confirmation
+#     - action: utter_confirm_leave_submission_ess_en
+
+# - rule: Confirm leave submission in Indonesia
+#   steps:
+#     - action: utter_confirm_leave_submission_ess_id
+#     - intent: affirm_leave_submission_ess_id
+#     - action: action_ess_post_leave_timeoff
+
+# - rule: Confirm leave submission in English
+#   steps:
+#     - action: utter_confirm_leave_submission_ess_en
+#     - intent: affirm_leave_submission_ess_en
+#     - action: action_ess_post_leave_timeoff
+
+# - rule: Decline leave submission in Indonesia
+#   steps:
+#     - action: utter_confirm_leave_submission_ess_id
+#     - intent: deny_leave_submission_ess_id
+#     - action: utter_deny_leave_submission_ess_id
+
+# - rule: Decline leave submission in English
+#   steps:
+#     - action: utter_confirm_leave_submission_ess_en
+#     - intent: deny_leave_submission_ess_en
+#     - action: utter_deny_leave_submission_ess_en
+
+# - rule: Activate leave info subordinate form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_leave_info_subordinate_ess_id
+#     - action: get_input_nik_subordinate_form
+#     - active_loop: get_input_nik_subordinate_form
+
+# - rule: Submit leave info subordinate in Indonesia
+#   condition:
+#     - active_loop: get_input_nik_subordinate_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_input_nik_subordinate_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_ess_get_leave_by_nik
+    
+# - rule: Activate leave info subordinate form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_leave_info_subordinate_ess_en
+#     - action: get_input_nik_subordinate_form
+#     - active_loop: get_input_nik_subordinate_form
+
+# - rule: Submit leave info subordinate in English
+#   condition:
+#     - active_loop: get_input_nik_subordinate_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_input_nik_subordinate_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_ess_get_leave_by_nik
+
+# - rule: Activate summary employee leave info form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: check_summary_employee_leave_info_ess_id
+#     - action: get_check_summary_employee_leave_form
+#     - active_loop: get_check_summary_employee_leave_form
+
+# - rule: Submit summary employee leave info in Indonesia
+#   condition:
+#     - active_loop: get_check_summary_employee_leave_form
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_check_summary_employee_leave_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_ess_summary_employee_leave_info
+    
+# - rule: Activate summary employee leave info form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: check_summary_employee_leave_info_ess_en
+#     - action: get_check_summary_employee_leave_form
+#     - active_loop: get_check_summary_employee_leave_form
+
+# - rule: Submit summary employee leave info in English
+#   condition:
+#     - active_loop: get_check_summary_employee_leave_form
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_check_summary_employee_leave_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_ess_summary_employee_leave_info
