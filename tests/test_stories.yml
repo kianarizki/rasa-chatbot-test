@@ -2705,7 +2705,7 @@ stories:
   - active_loop: null
   - action: action_get_ess_summary_employee_leave_info
 
-- story: Handle select 001M app for get daily report internal request using button
+- story: Handle select 001M app for get daily internal report request using button
   steps:
   - slot_was_set:
     - language: indonesia
@@ -2714,13 +2714,13 @@ stories:
     intent: ask_request_daily_internal_report_001m_id
   - action: utter_select_apps_for_daily_report_internal_001M_id
   - intent: daily_report_internal_choose_001M_app_id
-  - action: utter_proceed_with_next_step_for_daily_report_001M_id
-  - action: get_daily_report_select_001m_form
-  - active_loop: get_daily_report_select_001m_form
+  - action: get_daily_report_select_001m_by_date_internal_form
+  - active_loop: get_daily_report_select_001m_by_date_internal_form
   - active_loop: null
-  - action: action_get_001m_report_daily_internal_all_filter
+  - action: action_get_001m_report_daily_internal_date_filter
+  - action: utter_filter_data_report_internal_001m_id
 
-- story: Handle select 001M app for get daily report internal request using button
+- story: Handle select 001M app for get daily internal report request using button
   steps:
   - slot_was_set:
     - language: english
@@ -2729,34 +2729,162 @@ stories:
     intent: ask_request_daily_internal_report_001m_en
   - action: utter_select_apps_for_daily_report_internal_001M_en
   - intent: daily_report_internal_choose_001M_app_en
-  - action: utter_proceed_with_next_step_for_daily_report_001M_en
-  - action: get_daily_report_select_001m_form
-  - active_loop: get_daily_report_select_001m_form
+  - action: get_daily_report_select_001m_by_date_internal_form
+  - active_loop: get_daily_report_select_001m_by_date_internal_form
   - active_loop: null
-  - action: action_get_001m_report_daily_internal_all_filter
+  - action: action_get_001m_report_daily_internal_date_filter
+  - action: utter_filter_data_report_internal_001m_en
 
-- story: Ask for get daily report internal request 001M app 
+- story: Handle affirm filter data report internal 001M
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - intent: affirm_filter_data_report_internal_001m_id
+  - action: get_daily_report_select_001m_by_additional_internal_form
+  - active_loop: get_daily_report_select_001m_by_additional_internal_form
+  - active_loop: null
+  - action: action_get_001m_report_daily_internal_additional_filter
+  - action: utter_filter_data_report_internal_001m_id
+
+- story: Handle affirm filter data report internal 001M
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: affirm_filter_data_report_internal_001m_en
+  - action: get_daily_report_select_001m_by_additional_internal_form
+  - active_loop: get_daily_report_select_001m_by_additional_internal_form
+  - active_loop: null
+  - action: action_get_001m_report_daily_internal_additional_filter
+  - action: utter_filter_data_report_internal_001m_en
+
+- story: Handle deny filter data report internal 001M
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - intent: deny_filter_data_report_internal_001m_id
+  - action: action_cancel_followup_001m_report
+
+- story: Handle deny filter data report internal 001M
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: deny_filter_data_report_internal_001m_en
+  - action: action_cancel_followup_001m_report
+
+- story: Handle request daily internal report 
   steps:
   - slot_was_set:
     - language: indonesia
   - user: |
       Berikan daily internal report 001M
     intent: request_daily_internal_report_choose_001M_id
-  - action: utter_proceed_with_next_step_for_daily_report_001M_id
-  - action: get_daily_report_select_001m_form
-  - active_loop: get_daily_report_select_001m_form
+  - action: get_daily_report_select_001m_by_date_internal_form
+  - active_loop: get_daily_report_select_001m_by_date_internal_form
   - active_loop: null
-  - action: action_get_001m_report_daily_internal_all_filter
+  - action: action_get_001m_report_daily_internal_date_filter
+  - action: utter_filter_data_report_internal_001m_id
 
-- story: Ask for get daily report internal request 001M app 
+- story: Handle request daily internal report 
   steps:
   - slot_was_set:
     - language: english
   - user: |
       Give me the daily internal report for 001M
     intent: request_daily_internal_report_choose_001M_en
-  - action: utter_proceed_with_next_step_for_daily_report_001M_en
-  - action: get_daily_report_select_001m_form
-  - active_loop: get_daily_report_select_001m_form
+  - action: get_daily_report_select_001m_by_date_internal_form
+  - active_loop: get_daily_report_select_001m_by_date_internal_form
   - active_loop: null
-  - action: action_get_001m_report_daily_internal_all_filter
+  - action: action_get_001m_report_daily_internal_date_filter
+  - action: utter_filter_data_report_internal_001m_en
+
+- story: Handle select 001M app for get daily external report request using button
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berikan daily external report
+    intent: ask_request_daily_external_report_001m_id
+  - action: utter_select_apps_for_daily_report_external_001M_id
+  - intent: daily_report_external_choose_001M_app_id
+  - action: get_daily_report_select_001m_by_date_external_form
+  - active_loop: get_daily_report_select_001m_by_date_external_form
+  - active_loop: null
+  - action: action_get_001m_report_daily_external_date_filter
+  - action: utter_filter_data_report_external_001m_id
+
+- story: Handle select 001M app for get daily external report request using button
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Give me the daily external report
+    intent: ask_request_daily_external_report_001m_en
+  - action: utter_select_apps_for_daily_report_external_001M_en
+  - intent: daily_report_external_choose_001M_app_en
+  - action: get_daily_report_select_001m_by_date_external_form
+  - active_loop: get_daily_report_select_001m_by_date_external_form
+  - active_loop: null
+  - action: action_get_001m_report_daily_external_date_filter
+  - action: utter_filter_data_report_external_001m_en
+
+- story: Handle affirm filter data report external 001M
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - intent: affirm_filter_data_report_external_001m_id
+  - action: get_daily_report_select_001m_by_additional_external_form
+  - active_loop: get_daily_report_select_001m_by_additional_external_form
+  - active_loop: null
+  - action: action_get_001m_report_daily_external_additional_filter
+  - action: utter_filter_data_report_external_001m_id
+
+- story: Handle affirm filter data report external 001M
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: affirm_filter_data_report_external_001m_en
+  - action: get_daily_report_select_001m_by_additional_external_form
+  - active_loop: get_daily_report_select_001m_by_additional_external_form
+  - active_loop: null
+  - action: action_get_001m_report_daily_external_additional_filter
+  - action: utter_filter_data_report_external_001m_en
+
+- story: Handle deny filter data report external 001M
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - intent: deny_filter_data_report_external_001m_id
+  - action: action_cancel_followup_001m_report
+
+- story: Handle deny filter data report external 001M
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: deny_filter_data_report_external_001m_en
+  - action: action_cancel_followup_001m_report
+
+- story: Handle request daily external report 
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berikan daily external report 001M
+    intent: request_daily_external_report_choose_001M_id
+  - action: get_daily_report_select_001m_by_date_external_form
+  - active_loop: get_daily_report_select_001m_by_date_external_form
+  - active_loop: null
+  - action: action_get_001m_report_daily_external_date_filter
+  - action: utter_filter_data_report_external_001m_id
+
+- story: Handle request daily external report 
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Give me the daily external report for 001M
+    intent: request_daily_external_report_choose_001M_en
+  - action: get_daily_report_select_001m_by_date_external_form
+  - active_loop: get_daily_report_select_001m_by_date_external_form
+  - active_loop: null
+  - action: action_get_001m_report_daily_external_date_filter
+  - action: utter_filter_data_report_external_001m_en

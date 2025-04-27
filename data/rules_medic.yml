@@ -1,0 +1,385 @@
+version: "3.1"
+rules:
+- rule: Asks about Disease Management Menu in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_disease_management_menu_medic_id
+    - action: utter_disease_management_menu_medic_id
+
+- rule: Asks about Disease Management Menu in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_disease_management_menu_medic_en
+    - action: utter_disease_management_menu_medic_en
+
+- rule: Asks about Disease Management Menu Access in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_disease_management_menu_access_medic_id
+    - action: utter_who_can_access_disease_management_menu_medic_id
+
+- rule: Asks about Disease Management Menu Access in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_disease_management_menu_access_medic_en
+    - action: utter_who_can_access_disease_management_menu_medic_en
+
+- rule: Asks about Paramedic Change Disease Data in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_paramedic_change_disease_data_medic_id
+    - action: utter_paramedic_change_disease_data_medic_id
+
+- rule: Asks about Paramedic Change Disease Data in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_paramedic_change_disease_data_medic_en
+    - action: utter_paramedic_change_disease_data_medic_en
+
+- rule: Asks about How to Add New Disease Data in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_how_to_add_new_disease_data_medic_id
+    - action: utter_how_to_add_new_disease_data_medic_id
+
+- rule: Asks about How to Add New Disease Data in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_how_to_add_new_disease_data_medic_en
+    - action: utter_how_to_add_new_disease_data_medic_en
+
+- rule: Asks about Info for Adding New Disease Data in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_info_for_adding_new_disease_data_medic_id
+    - action: utter_how_to_add_new_disease_data_medic_id
+
+- rule: Asks about Info for Adding New Disease Data in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_info_for_adding_new_disease_data_medic_en
+    - action: utter_how_to_add_new_disease_data_medic_en
+
+- rule: Asks about Disease Type and Add Info in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_disease_type_and_add_info_medic_id
+    - action: utter_disease_type_add_and_info_medic_id
+
+- rule: Asks about Disease Type and Add Info in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_disease_type_and_add_info_medic_en
+    - action: utter_disease_type_add_and_info_medic_en
+
+- rule: Asks about Required Fields Empty in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_required_fields_empty_medic_id
+    - action: utter_about_required_fields_empty_medic_id
+
+- rule: Asks about Required Fields Empty in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_required_fields_empty_medic_en
+    - action: utter_about_required_fields_empty_medic_en
+
+- rule: Asks about Existing Data Entry in Medic Apps in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_existing_data_entry_medic_id
+    - action: utter_about_existing_data_entry_medic_id
+
+- rule: Asks about Existing Data Entry in Medic Apps in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_existing_data_entry_medic_en
+    - action: utter_about_existing_data_entry_medic_en
+
+- rule: Asks about Post Addition Process Add Disease Data in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_post_addition_process_add_disease_data_medic_id
+    - action: utter_about_post_addition_process_add_disease_data_medic_id
+
+- rule: Asks about Post Addition Process Add Disease Data in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_post_addition_process_add_disease_data_medic_en
+    - action: utter_about_post_addition_process_add_disease_data_medic_en
+
+- rule: Asks about Who Can See Disease Data Medic in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_who_can_see_disease_data_medic_id
+    - action: utter_about_who_can_see_disease_data_medic_id
+
+- rule: Asks about Who Can See Disease Data Medic in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_who_can_see_disease_data_medic_en
+    - action: utter_about_who_can_see_disease_data_medic_en
+
+- rule: Asks about Who can edit Disease Data Medic in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_who_can_edit_disease_data_medic_id
+    - action: utter_about_who_can_edit_disease_data_medic_id
+
+- rule: Asks about Who can edit Disease Data Medic in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_who_can_edit_disease_data_medic_en
+    - action: utter_about_who_can_edit_disease_data_medic_en
+
+- rule: Asks about Disease Management Menu Connections with Others Menu in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_disease_management_menu_connections_medic_id
+    - action: utter_about_disease_management_menu_connections_medic_id
+
+- rule: Asks about Disease Management Menu Connections with Others Menu in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_disease_management_menu_connections_medic_en
+    - action: utter_about_disease_management_menu_connections_medic_en
+
+- rule: Asks about Effect of Updating Disease Data Used in Other Menu's in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_effect_of_updating_disease_data_used_in_other_menus_medic_id
+    - action: utter_about_effect_of_updating_disease_data_used_in_other_menus_medic_id
+
+- rule: Asks about Effect of Updating Disease Data Used in Other Menu's in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_effect_of_updating_disease_data_used_in_other_menus_medic_en
+    - action: utter_about_effect_of_updating_disease_data_used_in_other_menus_medic_en
+
+- rule: Asks about Who Can Delete Disease Data in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_who_can_delete_disease_data_medic_id
+    - action: utter_about_who_can_delete_disease_data_medic_id
+
+- rule: Asks about Who Can Delete Disease Data in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_who_can_delete_disease_data_medic_en
+    - action: utter_about_who_can_delete_disease_data_medic_en
+
+- rule: Asks about How to Delete Disease Data in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_how_to_delete_disease_data_medic_id
+    - action: utter_about_how_to_delete_disease_data_medic_id
+
+- rule: Asks about How to Delete Disease Data in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_how_to_delete_disease_data_medic_en
+    - action: utter_about_how_to_delete_disease_data_medic_en
+
+- rule: Asks about Deleting Used Disease Data in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_deleting_used_disease_data_medic_id
+    - action: utter_about_deleting_used_disease_data_medic_id
+
+- rule: Asks about Deleting Used Disease Data in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_deleting_used_disease_data_medic_en
+    - action: utter_about_deleting_used_disease_data_medic_en
+
+- rule: Asks about Deleting Unused Disease Data in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_deleting_unused_disease_data_medic_id
+    - action: utter_about_deleting_unused_disease_data_medic_id
+
+- rule: Asks about Deleting Unused Disease Data in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_deleting_unused_disease_data_medic_en
+    - action: utter_about_deleting_unused_disease_data_medic_en
+
+- rule: Asks about Paramedic Access in The Future in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_paramedics_access_in_the_future_medic_id
+    - action: utter_paramedic_change_disease_data_medic_id
+
+- rule: Asks about Paramedic Access in The Future in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_paramedics_access_in_the_future_medic_en
+    - action: utter_paramedic_change_disease_data_medic_en
+
+- rule: Asks about How to Filter Disease Data in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_how_to_filter_disease_data_medic_id
+    - action: utter_about_how_to_filter_disease_data_medic_id
+
+- rule: Asks about How to Filter Disease Data in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_how_to_filter_disease_data_medic_en
+    - action: utter_about_how_to_filter_disease_data_medic_en
+
+- rule: Asks about How to Search for Disease Data in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_how_to_search_for_disease_data_medic_id
+    - action: utter_about_how_to_search_for_disease_data_medic_id
+
+- rule: Asks about How to Search for Disease Data in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_how_to_search_for_disease_data_medic_en
+    - action: utter_about_how_to_search_for_disease_data_medic_en
+
+- rule: Asks about Export and Import Disease Data in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_export_import_disease_data_medic_id
+    - action: utter_about_export_import_disease_data_medic_id
+
+- rule: Asks about Export and Import Disease Data in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_export_import_disease_data_medic_en
+    - action: utter_about_export_import_disease_data_medic_en
+
+- rule: Asks about Notification for Paramedics in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_notifications_for_paramedics_medic_id
+    - action: utter_about_notifications_for_paramedics_medic_id
+
+- rule: Asks about Notification for Paramedics in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_notifications_for_paramedics_medic_en
+    - action: utter_about_notifications_for_paramedics_medic_en
+
+- rule: Asks about How to Edit Disease Data in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_how_to_edit_disease_data_medic_id
+    - action: utter_about_how_to_edit_disease_data_medic_id
+
+- rule: Asks about How to Edit Disease Data in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_how_to_edit_disease_data_medic_en
+    - action: utter_about_how_to_edit_disease_data_medic_en
+
+- rule: Asks about Post Edit Disease Data Process in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_about_post_edit_disease_data_process_medic_id
+    - action: utter_about_post_edit_disease_data_process_medic_id
+
+- rule: Asks about Post Edit Disease Data Process in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_about_post_edit_disease_data_process_medic_en
+    - action: utter_about_post_edit_disease_data_process_medic_en

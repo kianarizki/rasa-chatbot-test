@@ -239,14 +239,94 @@ intents:
   - show_select_options_with_text
   - ask_request_daily_internal_report_001m_id
   - ask_request_daily_internal_report_001m_en
+  - ask_request_daily_external_report_001m_id
+  - ask_request_daily_external_report_001m_en
   - daily_report_internal_choose_001M_app_id
   - daily_report_internal_choose_001M_app_en
+  - daily_report_external_choose_001M_app_id
+  - daily_report_external_choose_001M_app_en
   - request_daily_internal_report_choose_001M_id
   - request_daily_internal_report_choose_001M_en
-  - affirm_filter_data_by_manufacture_report_internal_001m_id
-  - affirm_filter_data_by_manufacture_report_internal_001m_en
-  - deny_filter_data_by_manufacture_report_internal_001m_id
-  - deny_filter_data_by_manufacture_report_internal_001m_en
+  - request_daily_external_report_choose_001M_id
+  - request_daily_external_report_choose_001M_en
+  - affirm_filter_data_report_internal_001M_id
+  - affirm_filter_data_report_internal_001M_en
+  - affirm_filter_data_report_external_001M_id
+  - affirm_filter_data_report_external_001M_en
+  - deny_filter_data_report_internal_001M_id
+  - deny_filter_data_report_internal_001M_en
+  - deny_filter_data_report_external_001M_en
+  - deny_filter_data_report_external_001M_id
+  - ask_request_forecast_allocation_report_001M_id
+  - ask_request_forecast_allocation_report_001M_en
+  - forecasting_allocation_report_choose_001M_app_id
+  - forecasting_allocation_report_choose_001M_app_en
+  - affirm_filter_data_forecast_allocation_report_001m_id
+  - affirm_filter_data_forecast_allocation_report_001m_en
+  - deny_filter_data_forecast_allocation_report_001m_id
+  - deny_filter_data_forecast_allocation_report_001m_en
+  - request_forecasting_allocation_report_choose_001M_id
+  - request_forecasting_allocation_report_choose_001M_en
+  - estimate_component_repair_finish_date_001M_id
+  - estimate_component_repair_finish_date_001M_en
+  - get_component_repair_location_001M_id
+  - get_component_repair_location_001M_en
+  - get_approval_status_route_component_repair_001M_id
+  - get_approval_status_route_component_repair_001M_en
+  - get_employee_name_working_on_component_repair_001M_id
+  - get_employee_name_working_on_component_repair_001M_en
+  - get_employee_current_task_on_component_repair_001M_id
+  - get_employee_current_task_on_component_repair_001M_en
+  - get_shipment_status_on_component_repair_001M_id
+  - get_shipment_status_on_component_repair_001M_en
+  - ask_about_disease_management_menu_medic_id
+  - ask_about_disease_management_menu_medic_en
+  - ask_disease_management_menu_access_medic_id
+  - ask_disease_management_menu_access_medic_en
+  - ask_paramedic_change_disease_data_medic_id
+  - ask_paramedic_change_disease_data_medic_en
+  - ask_how_to_add_new_disease_data_medic_id
+  - ask_how_to_add_new_disease_data_medic_en
+  - ask_about_info_for_adding_new_disease_data_medic_id
+  - ask_about_info_for_adding_new_disease_data_medic_en
+  - ask_about_disease_type_and_add_info_medic_id
+  - ask_about_disease_type_and_add_info_medic_en
+  - ask_about_required_fields_empty_medic_id
+  - ask_about_required_fields_empty_medic_en
+  - ask_about_existing_data_entry_medic_id
+  - ask_about_existing_data_entry_medic_en
+  - ask_about_post_addition_process_add_disease_data_medic_id
+  - ask_about_post_addition_process_add_disease_data_medic_en
+  - ask_about_who_can_see_disease_data_medic_id
+  - ask_about_who_can_see_disease_data_medic_en
+  - ask_about_who_can_edit_disease_data_medic_id
+  - ask_about_who_can_edit_disease_data_medic_en
+  - ask_about_disease_management_menu_connections_medic_id
+  - ask_about_disease_management_menu_connections_medic_en
+  - ask_about_effect_of_updating_disease_data_used_in_other_menus_medic_id
+  - ask_about_effect_of_updating_disease_data_used_in_other_menus_medic_en
+  - ask_about_who_can_delete_disease_data_medic_id
+  - ask_about_who_can_delete_disease_data_medic_en
+  - ask_about_how_to_delete_disease_data_medic_id
+  - ask_about_how_to_delete_disease_data_medic_en
+  - ask_about_deleting_used_disease_data_medic_id
+  - ask_about_deleting_used_disease_data_medic_en
+  - ask_about_deleting_unused_disease_data_medic_id
+  - ask_about_deleting_unused_disease_data_medic_en
+  - ask_about_paramedics_access_in_the_future_medic_id
+  - ask_about_paramedics_access_in_the_future_medic_en
+  - ask_about_how_to_filter_disease_data_medic_id
+  - ask_about_how_to_filter_disease_data_medic_en
+  - ask_about_how_to_search_for_disease_data_medic_id
+  - ask_about_how_to_search_for_disease_data_medic_en
+  - ask_about_export_import_disease_data_medic_id
+  - ask_about_export_import_disease_data_medic_en
+  - ask_about_notifications_for_paramedics_medic_id
+  - ask_about_notifications_for_paramedics_medic_en
+  - ask_about_how_to_edit_disease_data_medic_id
+  - ask_about_how_to_edit_disease_data_medic_en
+  - ask_about_post_edit_disease_data_process_medic_id
+  - ask_about_post_edit_disease_data_process_medic_en
 
 entities:
   - language
@@ -497,15 +577,64 @@ forms:
     required_slots:
       - date_summary_employee_leave
 
-  get_daily_report_select_001m_by_date_form:
+  get_daily_report_select_001m_by_date_internal_form:
     required_slots:
-      - date_daily_report
-
-  get_daily_report_select_001m_by_manufacture_form:
+      - date_001m_daily_report
+  
+  get_daily_report_select_001m_by_date_external_form:
     required_slots:
-      - date_daily_report
-      - manufacture_daily_report
+      - date_001m_daily_report
 
+  get_daily_report_select_001m_by_additional_internal_form:
+    required_slots:
+      - additional_001m_daily_report
+      - additional_001m_daily_report_value
+
+  get_daily_report_select_001m_by_additional_external_form:
+    required_slots:
+      - additional_001m_daily_report
+      - additional_001m_daily_report_value
+
+  get_forecast_allocation_report_select_001m_by_date_form:
+    required_slots:
+      - date_001m_forecast_allocation_report
+
+  get_forecast_allocation_report_select_001m_by_additional_form:
+    required_slots:
+      - additional_001m_forecast_report
+      - additional_001m_forecast_report_value
+
+  get_estimate_component_repair_finish_date_report_001m_form:
+    required_slots:
+      - component_name_001m
+
+  get_component_repair_location_report_001m_form:
+    required_slots:
+      - component_name_001m
+
+  get_approval_route_component_repair_report_001m_form:
+    required_slots:
+      - component_name_001m
+
+  get_members_working_on_component_report_001m_form:
+    required_slots:
+      - component_name_001m
+
+  get_mechanic_name_forecast_allocation_report_001m_form:
+    required_slots:
+      - mechanic_nik_001m
+
+  get_shipment_status_on_component_repair_report_001m_form:
+    required_slots:
+      - component_name_001m
+
+  # get_component_status_report_001m_form:
+  #   required_slots:
+  #     - component_name_001m
+  
+  # get_component_allocation_report_001m_form:
+  #   required_slots:
+  #     - component_name_001m
 
 slots:  
   language:
@@ -968,61 +1097,95 @@ slots:
           - active_loop: get_check_summary_employee_leave_form
             requested_slot: date_summary_employee_leave
 
-  date_daily_report:
+  date_001m_daily_report:
     type: text
     influence_conversation: true
     mappings:
       - type: from_text
         conditions:
-          - active_loop: get_daily_report_select_001m_by_date_form
-            requested_slot: date_daily_report
-          - active_loop: get_daily_report_select_001m_by_manufacture_form
-            requested_slot: date_daily_report
+          - active_loop: get_daily_report_select_001m_by_date_internal_form
+            requested_slot: date_001m_daily_report
+          - active_loop: get_daily_report_select_001m_by_date_external_form
+            requested_slot: date_001m_daily_report
 
-  manufacture_daily_report:
+  additional_001m_daily_report:
     type: text
     influence_conversation: true
     mappings:
       - type: from_text
         conditions:
-          - active_loop: get_daily_report_select_001m_by_manufacture_form
-            requested_slot: manufacture_daily_report
+          - active_loop: get_daily_report_select_001m_by_additional_internal_form
+            requested_slot: additional_001m_daily_report
+          - active_loop: get_daily_report_select_001m_by_additional_external_form
+            requested_slot: additional_001m_daily_report
+    
+  additional_001m_daily_report_value:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_daily_report_select_001m_by_additional_internal_form
+            requested_slot: additional_001m_daily_report_value
+          - active_loop: get_daily_report_select_001m_by_additional_external_form
+            requested_slot: additional_001m_daily_report_value
 
-  # model_daily_report:
-  #   type: text
-  #   influence_conversation: true
-  #   mappings:
-  #     - type: from_text
-  #       conditions:
-  #         - active_loop: get_daily_report_select_001m_form
-  #           requested_slot: model_daily_report
+  date_001m_forecast_allocation_report:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_forecast_allocation_report_select_001m_by_date_form
+            requested_slot: date_001m_forecast_allocation_report
 
-  # comp_desc_daily_report:
-  #   type: text
-  #   influence_conversation: true
-  #   mappings:
-  #     - type: from_text
-  #       conditions:
-  #         - active_loop: get_daily_report_select_001m_form
-  #           requested_slot: comp_desc_daily_report
+  additional_001m_forecast_report:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_forecast_allocation_report_select_001m_by_additional_form
+            requested_slot: additional_001m_forecast_report
 
-  # status_process_daily_report:
-  #   type: text
-  #   influence_conversation: true
-  #   mappings:
-  #     - type: from_text
-  #       conditions:
-  #         - active_loop: get_daily_report_select_001m_form
-  #           requested_slot: status_process_daily_report
+  additional_001m_forecast_report_value:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_forecast_allocation_report_select_001m_by_additional_form
+            requested_slot: additional_001m_forecast_report_value
 
-  # search_daily_report:
-  #   type: text
-  #   influence_conversation: true
-  #   mappings:
-  #     - type: from_text
-  #       conditions:
-  #         - active_loop: get_daily_report_select_001m_form
-  #           requested_slot: search_daily_report
+  component_name_001m:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_estimate_component_repair_finish_date_report_001m_form
+            requested_slot: component_name_001m
+          - active_loop: get_component_repair_location_report_001m_form
+            requested_slot: component_name_001m
+          - active_loop: get_approval_route_component_repair_report_001m_form
+            requested_slot: component_name_001m
+          - active_loop: get_members_working_on_component_report_001m_form
+            requested_slot: component_name_001m
+          - active_loop: get_shipment_status_on_component_repair_report_001m_form
+            requested_slot: component_name_001m
+          # - active_loop: get_component_status_report_001m_form
+          #   requested_slot: component_name_001m
+          # - active_loop: get_component_allocation_report_001m_form
+          #   requested_slot: component_name_001m
+
+  mechanic_nik_001m:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: get_mechanic_name_forecast_allocation_report_001m_form
+            requested_slot: mechanic_nik_001m
 
 actions:
 - action_handle_fallback
@@ -1162,9 +1325,30 @@ actions:
 - action_show_select_options
 - action_show_select_options_with_text
 - action_get_001m_report_daily_internal_date_filter
-- action_get_001m_report_daily_internal_date_manufacture_filter
+- action_get_001m_report_daily_external_date_filter
 - action_ask_date_daily_report
-- action_ask_manufacture_daily_report
+- action_get_001m_report_daily_internal_additional_filter
+- action_get_001m_report_daily_external_additional_filter
+- action_cancel_followup_001m_daily_report
+- action_ask_additional_daily_report
+- action_ask_additional_daily_report_value
+- action_get_001m_forecast_allocation_report_date_filter
+- action_get_001m_forecast_allocation_report_additional_filter
+- action_ask_date_001m_forecast_allocation_report
+- action_ask_additional_001m_forecast_report
+- action_ask_additional_001m_forecast_report_value
+- action_cancel_followup_001m_forecast_allocation_report
+- action_ask_component_name_001m
+- action_ask_mechanic_nik_001m
+- action_get_001m_component_estimated_finish_date_forecast_allocation_report
+# - action_get_001m_component_status_forecast_allocation_report
+- action_get_001m_component_repair_location_forecast_allocation_report
+- action_get_001m_approval_route_forecast_allocation_report
+# - action_get_001m_component_allocation_forecast_allocation_report
+- action_get_001m_mechanic_name_on_component_repairs_forecast_allocation_report
+- action_get_001m_mechanic_current_task_on_component_repairs_forecast_allocation_report
+- action_get_001m_shipment_status_for_component_repairs_traceabilty_report
+# - action_ask_manufacture_daily_report
 # - action_ask_model_daily_report
 # - action_ask_comp_desc_daily_report
 # - action_ask_status_process_daily_report
@@ -1365,39 +1549,266 @@ responses:
     - text: Pengajuan cuti dibatalkan
   utter_deny_leave_submission_ess_en:
     - text: Leave application been cancelled
+
   utter_select_apps_for_daily_report_internal_001M_id:
-    - text: "Pilih aplikasi yang Anda inginkan untuk mengakses daily internal report?"
+    - text: "Pilih aplikasi yang Anda inginkan untuk mengakses Daily Internal report?"
       buttons:
         - title: "001M"
           payload: "/daily_report_internal_choose_001M_app_id"
       custom:
         text: "Pilih aplikasi di bawah "
   utter_select_apps_for_daily_report_internal_001M_en:
-    - text: "Please select the application you want to use to access the daily internal report?"
+    - text: "Please select the application you want to use to access The Daily Internal report?"
       buttons:
         - title: "001M"
           payload: "/daily_report_internal_choose_001M_app_en"
       custom:
         text: "Choose the app below "
-  utter_filter_data_by_manufacture_report_internal_001m_id:
-    - text: "Apakah Anda ingin melakukan pemfilteran data berdasarkan Manufacture?"
+  utter_select_apps_for_daily_report_external_001M_id:
+    - text: "Pilih aplikasi yang Anda inginkan untuk mengakses Daily External report?"
+      buttons:
+        - title: "001M"
+          payload: "/daily_report_external_choose_001M_app_id"
+      custom:
+        text: "Pilih aplikasi di bawah "
+  utter_select_apps_for_daily_report_external_001M_en:
+    - text: "Please select the application you want to use to access The Daily External report?"
+      buttons:
+        - title: "001M"
+          payload: "/daily_report_external_choose_001M_app_en"
+      custom:
+        text: "Choose the app below "
+  utter_filter_data_report_internal_001M_id:
+    - text: "Apakah Anda ingin melakukan pemfilteran data?"
       buttons:
         - title: "Ya"
-          payload: "/affirm_filter_data_by_manufacture_report_internal_001m_id"
+          payload: "/affirm_filter_data_report_internal_001M_id"
         - title: "Tidak"
-          payload: "/deny_filter_data_by_manufacture_report_internal_001m_id"
+          payload: "/deny_filter_data_report_internal_001M_id"
       custom:
         text: "Pilih konfirmasi di bawah "
-  utter_filter_data_by_manufacture_report_internal_001m_en:
-    - text: "Would you like to filter the data by Manufacturer?"
+  utter_filter_data_report_external_001M_id:
+    - text: "Apakah Anda ingin melakukan pemfilteran data?"
       buttons:
-        - title: "Yes"
-          payload: "/affirm_filter_data_by_manufacture_report_internal_001m_en"
-        - title: "No"
-          payload: "/deny_filter_data_by_manufacture_report_internal_001m_en"
+        - title: "Ya"
+          payload: "/affirm_filter_data_report_external_001M_id"
+        - title: "Tidak"
+          payload: "/deny_filter_data_report_external_001M_id"
       custom:
-        text: "Please choose your confirmation below "
-        
+        text: "Pilih konfirmasi di bawah "
+  utter_filter_data_report_internal_001M_en:
+    - text: "Do you want filter the data?"
+      buttons:
+        - title: "Ya"
+          payload: "/affirm_filter_data_report_internal_001M_en"
+        - title: "Tidak"
+          payload: "/deny_filter_data_report_internal_001M_en"
+  utter_filter_data_report_external_001M_en:
+    - text: "Do you want filter the data?"
+      buttons:
+        - title: "Ya"
+          payload: "/affirm_filter_data_report_external_001M_en"
+        - title: "Tidak"
+          payload: "/deny_filter_data_report_external_001M_en"
+  utter_select_apps_for_forecast_allocation_report_001M_id:
+    - text: "Pilih aplikasi yang Anda inginkan untuk mengakses Forecasting & Allocation report?"
+      buttons:
+        - title: "001M"
+          payload: "/forecasting_allocation_report_choose_001M_app_id"
+      custom:
+        text: "Pilih aplikasi di bawah "
+  utter_select_apps_for_forecast_allocation_report_001M_en:
+    - text: "Please select the application you want to use to access The Forecasting & Allocation report?"
+      buttons:
+        - title: "001M"
+          payload: "/forecasting_allocation_report_choose_001M_app_en"
+      custom:
+        text: "Choose the app below "
+  utter_filter_data_forecast_allocation_report_001m_id:
+    - text: "Apakah Anda ingin melakukan pemfilteran data?"
+      buttons:
+        - title: "Ya"
+          payload: "/affirm_filter_data_forecast_allocation_report_001m_id"
+        - title: "Tidak"
+          payload: "/deny_filter_data_forecast_allocation_report_001m_id"
+      custom:
+        text: "Pilih konfirmasi di bawah "
+  utter_filter_data_forecast_allocation_report_001m_en:
+    - text: "Do you want filter the data?"
+      buttons:
+        - title: "Ya"
+          payload: "/affirm_filter_data_forecast_allocation_report_001m_en"
+        - title: "Tidak"
+          payload: "/deny_filter_data_forecast_allocation_report_001m_en"
+
+  utter_disease_management_menu_medic_id:
+    - text: Menu Disease Management adalah fitur dalam sistem yang digunakan untuk mengelola data penyakit, termasuk kode ICD, nama penyakit, jenis penyakit, dan kategorinya.
+  utter_disease_management_menu_medic_en:
+    - text: Disease Management Menu is a feature in the system used to manage disease data, including ICD codes, disease names, types of diseases, and their categories.
+  utter_who_can_access_disease_management_menu_medic_id:
+    - text: |
+        Menu Disease Management hanya dapat diakses oleh dokter dan paramedis:
+        1. Dokter memiliki hak akses penuh, termasuk menambahkan, mengedit, dan menghapus data penyakit.
+        2. Paramedis hanya dapat melihat data penyakit tanpa bisa melakukan perubahan apapun.
+        Namun, kedepannya paramedis akan memiliki akses untuk mengedit dan menghapus data penyakit melalui role permission yang akan diatur dalam sistem. Namun, fitur ini masih dalam tahap pengembangan dan belum tersedia saat ini.
+  utter_who_can_access_disease_management_menu_medic_en:
+    - text: |
+        The Disease Management menu can only be accessed by doctors and paramedics:
+        1. Doctors have full access, including adding, editing, and deleting disease data.
+        2. Paramedics can only view disease data without being able to make any changes.
+        However, in the future, paramedics will have access to edit and delete disease data through role permissions that will be set in the system. However, this feature is still in development and is not currently available.
+  utter_paramedic_change_disease_data_medic_id:
+    - text: |
+        Saat ini paramedis hanya dapat melihat data penyakit yang tersedia, tetapi tidak dapat melakukan perubahan apapun.
+        Namun, untuk kedepannya paramedis akan memiliki akses untuk mengedit dan menghapus data penyakit melalui role permission yang akan diatur dalam sistem. Namun, fitur ini masih dalam tahap pengembangan dan belum tersedia saat ini.
+  utter_paramedic_change_disease_data_medic_en:
+    - text: |
+        Currently paramedics can only view available disease data, but cannot make any changes.
+        However, in the future, paramedics will have access to edit and delete disease data through role permissions that will be set in the system. However, this feature is still in development and is not currently available.
+  utter_how_to_add_new_disease_data_medic_id:
+    - text: |
+        Saat menambahkan data penyakit baru, dokter harus mengisi:
+        1. Code ICD Version: Versi kode ICD dalam bentuk angka.
+        2. Code ICD: Kode ICD dalam bentuk angka. Kode ini harus unik dan tidak boleh sama dengan data lain.
+        3. Disease Name: Nama penyakit dalam format free text dengan maksimal 150 karakter.
+        3. Disease Type: Jenis penyakit yang dipilih melalui dropdown.
+        4. Category: Kategori penyakit yang dapat dipilih antara Minor atau Major.
+
+        Berikut adalah cara menambahkan data penyakit baru:
+        1. Klik tombol "+ Add New Disease".
+        2. Sistem akan menampilkan formulir untuk mengisi informasi seperti **Code ICD Version**, **Code ICD**, **Disease Name**, **Disease Type**, dan **Category**.
+        3. Setelah seluruh data terisi, tombol **Add** akan otomatis aktif.
+        4. Klik tombol "Add" untuk menambahkan data penyakit.
+        5. Jika pengisian data berhasil, sistem akan menampilkan pesan "Data Added Successfully".
+        6. Data yang berhasil ditambahkan akan secara otomatis muncul di daftar penyakit.  
+  utter_how_to_add_new_disease_data_medic_en:
+    - text: |
+        When adding a new disease, the doctor needs to fill in:
+        1. Code ICD Version: The ICD code version in numeric format.
+        2. Code ICD: The ICD code in numeric format. This code must be unique and cannot be the same as other data.
+        3. Disease Name: The disease name in free text format with a maximum of 150 characters.
+        4. Disease Type: The type of disease selected from a dropdown.
+        5. Category: The disease category that can be chosen as either Minor or Major.
+
+        Here is how to add a new disease:
+        1. Click the "+ Add New Disease" button.
+        2. The system will display a form to fill in information such as **Code ICD Version**, **Code ICD**, **Disease Name**, **Disease Type**, and **Category**.
+        3. Once all data is filled in, the **Add** button will be activated automatically.
+        4. Click the "Add" button to add the disease data.
+        5. If the data is successfully entered, the system will display the message "Data Added Successfully".
+        6. The successfully added data will automatically appear in the disease list.
+  utter_disease_type_add_and_info_medic_id:
+    - text: Disease Type adalah kategori yang digunakan untuk mengelompokkan jenis penyakit. Disease Type berupa dropdown yang dapat dipilih saat menambahkan atau mengedit data penyakit. Dokter dapat menambah atau memperbarui daftar Disease Type melalui menu "Master Data Type Disease".
+  utter_disease_type_add_and_info_medic_en:
+    - text: Disease Type is a category used to classify types of diseases. Disease Type appears as a dropdown that can be selected when adding or editing disease data. Doctors can add or update the list of Disease Types through the "Master Data Type Disease" menu.
+  utter_about_required_fields_empty_medic_id:
+    - text: Jika ada field yang wajib diisi (seperti Code ICD Version, Code ICD, Disease Name, Disease Type, atau Category) yang kosong, sistem akan menampilkan pesan "Data Required", yang artinya dokter wajib mengisinya sebelum melanjutkan penyimpanan data baru.
+  utter_about_required_fields_empty_medic_en:
+    - text: If there are required fields (such as Code ICD Version, Code ICD, Disease Name, Disease Type, or Category) left empty, the system will display a "Data Required" message, indicating that the doctor must fill in these fields before proceeding with saving the new data.
+  utter_about_existing_data_entry_medic_id:
+    - text: Jika dokter mencoba menambahkan data penyakit dengan Code ICD yang sudah ada dalam sistem, sistem akan menampilkan pesan peringatan "Data Already Exist," untuk mencegah duplikasi data.
+  utter_about_existing_data_entry_medic_en:
+    - text: If the doctor tries to add disease data with an ICD Code that already exists in the system, the system will display a warning message "Data Already Exist," to prevent data duplication.
+  utter_about_post_addition_process_add_disease_data_medic_id:
+    - text: |
+        Setelah dokter berhasil menambahkan data penyakit, sistem akan menampilkan pesan "Data Added Successfully". Data penyakit yang baru ditambahkan akan otomatis muncul di daftar tabel penyakit.
+        Data tersebut akan otomatis tersedia untuk dilihat oleh paramedis di seluruh project site. Namun, paramedis hanya dapat melihat data tanpa kemampuan untuk mengedit atau menghapusnya.
+  utter_about_post_addition_process_add_disease_data_medic_en:
+    - text: |
+        After the doctor successfully adds disease data, the system will display the message "Data Added Successfully". The newly added disease data will automatically appear in the disease list table.
+        The data will automatically be available for paramedics to view across the entire project site. However, paramedics can only view the data without the ability to edit or delete it.
+  utter_about_who_can_see_disease_data_medic_id:
+    - text: Setelah dokter menambahkan data penyakit, data tersebut akan otomatis tersedia untuk dilihat oleh paramedis di seluruh project site. Namun, paramedis hanya dapat melihat data tanpa kemampuan untuk mengedit atau menghapusnya.
+  utter_about_who_can_see_disease_data_medic_en:
+    - text: After the doctor adds disease data, the data will automatically be available for paramedics to view across the entire project site. However, paramedics can only view the data without the ability to edit or delete it.
+  utter_about_who_can_edit_disease_data_medic_id:
+    - text: |
+        Hanya dokter yang dapat mengedit data penyakit. Dokter dapat mengubah informasi seperti Code ICD, Disease Name, Disease Type, dan Category jika diperlukan.
+        Jika dokter mengedit data penyakit, perubahan tersebut akan langsung terlihat di seluruh sistem dan dapat dilihat oleh paramedis di seluruh project site.
+  utter_about_who_can_edit_disease_data_medic_en:
+    - text: |
+        Only doctors can edit disease data. Doctors can change information such as ICD Code, Disease Name, Disease Type, and Category if necessary.
+        If the doctor edits disease data, the changes will immediately be reflected throughout the system and can be seen by paramedics across the entire project site.
+  utter_about_disease_management_menu_connections_medic_id:
+    - text: Ya, menu Disease Management terhubung langsung dengan menu Medical Checkup (MCU), Medical Record FAR, dan Medical Record External. Data penyakit yang ada di menu Disease Management akan digunakan dan ditampilkan di menu-menu tersebut.
+  utter_about_disease_management_menu_connections_medic_en:
+    - text: Yes, the Disease Management menu is directly linked to the Medical Checkup (MCU), Medical Record FAR, and Medical Record External menus. The disease data in the Disease Management menu will be used and displayed in those menus.
+  utter_about_effect_of_updating_disease_data_used_in_other_menus_medic_id:
+    - text: Jika dokter memperbarui data penyakit yang sudah ada dan digunakan dalam Medical Checkup (MCU), Medical Record FAR, atau Medical Record External, maka perubahan tersebut akan otomatis diterapkan pada semua data yang terkait. Artinya, jika ada data penyakit yang telah digunakan di salah satu menu tersebut, data tersebut akan diperbarui sesuai dengan perubahan yang dilakukan oleh dokter.
+  utter_about_effect_of_updating_disease_data_used_in_other_menus_medic_en:
+    - text: If the doctor updates disease data that is already used in the Medical Checkup (MCU), Medical Record FAR, or Medical Record External, the changes will automatically be applied to all related data. This means that if disease data has been used in any of those menus, the data will be updated according to the changes made by the doctor.
+  utter_about_who_can_delete_disease_data_medic_id:
+    - text: Hanya dokter yang dapat menghapus data penyakit. Dokter dapat menghapus data penyakit yang tidak digunakan dalam Medical Checkup (MCU), Medical Record FAR, atau Medical Record External.
+  utter_about_who_can_delete_disease_data_medic_en:
+    - text: Only doctors can delete disease data. Doctors can delete disease data that is not used in the Medical Checkup (MCU), Medical Record FAR, or Medical Record External.
+  utter_about_how_to_delete_disease_data_medic_id:
+    - text: |
+        Dokter dapat menghapus data penyakit dengan mengklik ikon tempat sampah di kolom "Action" pada tabel data penyakit. Setelah berhasil, data tersebut akan dihapus dan tidak akan muncul lagi dalam daftar, dan sistem akan menampilkan pesan "Data Deleted Successfully".
+        Jika data penyakit sudah digunakan dalam Medical Checkup (MCU), Medical Record FAR, atau Medical Record External, sistem akan menampilkan pesan "This disease is already used" dan tombol delete akan dinonaktifkan.
+  utter_about_how_to_delete_disease_data_medic_en:
+    - text: |
+        Doctors can delete disease data by clicking the trash icon in the "Action" column on the disease data table. Once successful, the data will be deleted and will no longer appear in the list, and the system will display the message "Data Deleted Successfully".
+        If the disease data has already been used in Medical Checkup (MCU), Medical Record FAR, or Medical Record External, the system will display the message "This disease is already used" and the delete button will be disabled.
+  utter_about_deleting_used_disease_data_medic_id:
+    - text: Jika data penyakit sudah digunakan dalam Medical Checkup (MCU), Medical Record FAR, atau Medical Record External, sistem akan menampilkan pesan "This disease is already used" dan tombol delete akan dinonaktifkan.
+  utter_about_deleting_used_disease_data_medic_en:
+    - text: If the disease data has already been used in Medical Checkup (MCU), Medical Record FAR, or Medical Record External, the system will display the message "This disease is already used" and the delete button will be disabled.
+  utter_about_deleting_unused_disease_data_medic_id: 
+    - text: Jika data penyakit belum digunakan dalam sistem (Medical Checkup (MCU), Medical Record FAR, atau Medical Record External), tombol delete akan aktif dan dokter dapat menghapus data tersebut.
+  utter_about_deleting_unused_disease_data_medic_en: 
+    - text: If the disease data has not been used in the system (Medical Checkup (MCU), Medical Record FAR, or Medical Record External), the delete button will be active and the doctor can delete the data.
+  utter_about_how_to_filter_disease_data_medic_id: 
+    - text: Dokter dan Paramedis dapat menggunakan fitur Filter untuk filter daftar penyakit berdasarkan jenis penyakit (Disease Type) dan kategori (Major/Minor).
+  utter_about_how_to_filter_disease_data_medic_en: 
+    - text: Doctors and paramedics can use the Filter feature to filter the disease list based on disease type (Disease Type) and category (Major/Minor).
+  utter_about_how_to_search_for_disease_data_medic_id: 
+    - text: Gunakan kolom Search by ICD code or disease name di bagian atas untuk mencari penyakit berdasarkan kode ICD atau nama penyakit.
+  utter_about_how_to_search_for_disease_data_medic_en: 
+    - text: Use the Search by ICD code or disease name field at the top to search for diseases based on ICD code or disease name.
+  utter_about_export_import_disease_data_medic_id: 
+    - text: |
+        Ya, terdapat tiga fitur di bagian atas:
+        1. Download Template: Untuk mengunduh format template data penyakit.
+        2. Import: Untuk mengunggah data penyakit dari file eksternal.
+        3. Export: Untuk mengunduh daftar penyakit dalam format file tertentu.
+        Namun, fitur tersebut masih dalam tahap pengembangan dan belum tersedia saat ini.
+  utter_about_export_import_disease_data_medic_en: 
+    - text: |
+        Yes, there are three features at the top:
+        1. Download Template: To download the disease data template format.
+        2. Import: To upload disease data from an external file.
+        3. Export: To download the disease list in a specific file format.
+        However, these features are still under development and are not available at the moment.
+  utter_about_notifications_for_paramedics_medic_id: 
+    - text: Ya, setelah dokter menambahkan penyakit baru, paramedis akan menerima notifikasi bahwa data penyakit baru telah ditambahkan dan tersedia di sistem.
+  utter_about_notifications_for_paramedics_medic_en: 
+    - text: Yes, after the doctor adds a new disease, paramedics will receive a notification that the new disease data has been added and is available in the system.
+  utter_about_how_to_edit_disease_data_medic_id: 
+    - text: |
+        Berikut adalah cara mengedit data penyakit:
+        1. Pilih ikon pensil di kolom "Action" pada tabel data penyakit.
+        2. Sistem akan menampilkan formulir pengeditan dengan informasi yang dapat diubah, seperti Code ICD, Disease Name, Disease Type, atau Category.
+        3. Lakukan perubahan yang diinginkan pada informasi yang ada.
+        4. Setelah selesai mengubah data, klik tombol "Save" untuk menyimpan perubahan.
+        5. Jika perubahan berhasil disimpan, sistem akan menampilkan pesan "Data Updated Successfully".
+        6. Data yang telah diperbarui akan otomatis terlihat di daftar penyakit dan dapat dilihat oleh paramedis.
+        Setelah dokter berhasil memperbarui data penyakit, sistem akan menampilkan pesan "Data Updated Successfully". Data yang telah diperbarui akan otomatis terlihat oleh paramedis di seluruh project site. 
+  utter_about_how_to_edit_disease_data_medic_en: 
+    - text: |
+        Here's how to edit disease data:
+        1. Click the pencil icon in the "Action" column on the disease data table.
+        2. The system will display the edit form with information that can be changed, such as ICD Code, Disease Name, Disease Type, or Category.
+        3. Make the desired changes to the existing information.
+        4. After making the changes, click the "Save" button to save the updates.
+        5. If the changes are successfully saved, the system will display the message "Data Updated Successfully".
+        6. The updated data will automatically appear in the disease list and can be viewed by paramedics.
+        After the doctor successfully updates the disease data, the system will display the message "Data Updated Successfully". The updated data will automatically be visible to paramedics across the entire project site.
+  utter_about_post_edit_disease_data_process_medic_id: 
+    - text: Setelah dokter berhasil memperbarui data penyakit, sistem akan menampilkan pesan "Data Updated Successfully". Data yang telah diperbarui akan otomatis terlihat oleh paramedis di seluruh project site. 
+  utter_about_post_edit_disease_data_process_medic_en: 
+    - text: After the doctor successfully updates the disease data, the system will display the message "Data Updated Successfully". The updated data will automatically be visible to paramedics across the entire project site.
+
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

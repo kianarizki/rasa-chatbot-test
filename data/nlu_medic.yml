@@ -1,0 +1,549 @@
+version: "3.1"
+nlu:
+- intent: ask_about_disease_management_menu_medic_id
+  examples: |
+    - Menu Disease Management itu membantu apa saja di aplikasi ini?
+    - Menu Disease Management di sini untuk ngapain ya?
+    - Apa saja yang tercatat di dalam menu Disease Management?
+    - Apa itu menu Disease Management?
+    - Bisa jelaskan apa itu menu Disease Management?
+    - Apa sih fungsi dari menu Disease Management?
+    - Apa yang dimaksud dengan menu Disease Management?
+    - Tolong jelaskan tentang menu Disease Management
+    - Apa kegunaan menu Disease Management dalam sistem madhani?
+    - Menu Disease Management itu buat apa ya?
+    - Apa aja yang ada di dalam menu Disease Management?
+    - Bisa kasih tahu apa yang ada di menu Disease Management?
+    - Menu Disease Management itu mengelola apa aja sih?
+    - Bisa jelasin tentang fungsi menu Disease Management di sistem ini?
+    - Menu Disease Management itu apa gunanya dalam sistem ini?
+    - Di dalam menu Disease Management, ada data apa saja?
+    - Menurut kamu, apa yang ada di menu Disease Management?
+    - Apa saja yang terdaftar di menu Disease Management?
+    - Menu Disease Management ini penting untuk apa?
+    - Apa yang bisa kita lakukan di menu Disease Management?
+    - Apa manfaat menu Disease Management di aplikasi ini?
+
+- intent: ask_disease_management_menu_access_medic_id
+  examples: |
+    - Siapa yang dapat mengakses menu Disease Management?
+    - Menu Disease Management bisa diakses oleh siapa saja?
+    - Siapa saja yang memiliki akses ke menu Disease Management?
+    - Apa syarat untuk mengakses menu Disease Management?
+    - Siapa yang berhak mengakses menu Disease Management?
+    - Hanya siapa yang bisa mengakses menu Disease Management?
+    - Siapa yang diperbolehkan mengakses menu Disease Management?
+    - Apakah semua orang bisa mengakses menu Disease Management?
+    - Siapa yang memiliki hak akses untuk melihat data penyakit?
+    - Siapa saja yang bisa akses data di menu Disease Management?
+    - Apakah paramedis bisa mengakses menu Disease Management?
+    - Siapa yang punya hak penuh untuk mengubah data penyakit?
+    - Apakah dokter dan paramedis memiliki akses yang sama di menu Disease Management?
+    - Siapa yang bisa menghapus data penyakit di menu Disease Management?
+    - Apakah ada pembatasan akses untuk menu Disease Management?
+    - Bisa kah dokter mengakses menu Disease Management dengan hak penuh?
+    - Siapa yang bisa melihat data penyakit di menu Disease Management?
+    - Apa yang membedakan hak akses dokter dan paramedis di menu Disease Management?
+    - Siapa yang dapat melakukan perubahan data di menu Disease Management?
+
+- intent: ask_paramedic_change_disease_data_medic_id
+  examples: |
+    - Apakah paramedis dapat mengubah data penyakit?
+    - Apakah paramedis bisa edit atau hapus data penyakit?
+    - Dapatkah paramedis edit data penyakit?
+    - Bisakah paramedis melakukan perubahan pada data penyakit?
+    - Apakah paramedis bisa mengedit data penyakit yang ada?
+    - Kira-kira paramedis dapat melakukan perubahan pada data penyakit kah?
+    - Bisa kah paramedis memperbarui data penyakit?
+    - Apakah paramedis dapat menambah atau ubah data penyakit?
+    - Apakah paramedis dapat melakukan perubahan apapun pada data penyakit?
+    - Dapatkah paramedis memodifikasi data penyakit yang saat ini ada di sistem?
+    - Apakah paramedis memiliki izin untuk mengubah data penyakit?
+    - Apakah paramedis dapat mengubah informasi penyakit yang ada?
+    - Apakah paramedis diperbolehkan edit data penyakit yang terdaftar?
+    - Bisakah paramedis mengubah data penyakit yang telah ada?
+    - Apakah paramedis memiliki hak untuk memodifikasi data penyakit?
+    - Dapatkah paramedis menambah atau mengedit data penyakit yang sudah ada?
+    - Apakah paramedis bisa mengakses atau mengubah data penyakit?
+    - Apakah paramedis punya akses untuk ubah data penyakit yang sudah terdaftar?
+    - Bisa gak paramedis menambah data penyakit di sistem?
+    - Kalau paramedis mau ubah data penyakit, bisa gak?
+    - Apakah paramedis punya akses untuk edit data penyakit?
+    
+- intent: ask_how_to_add_new_disease_data_medic_id
+  examples: |
+    - Bagaimana cara menambahkan data penyakit baru?
+    - Apa langkah-langkah untuk menambahkan data penyakit baru?
+    - Bagaimana cara saya menambah data penyakit ke sistem?
+    - Bisa kasih tahu cara menambah data penyakit baru di aplikasi medic madhani?
+    - Gimana sih cara nambahin data penyakit baru di aplikasi medic ini?
+    - Langkah-langkah untuk menambahkan data penyakit baru di sistem aplikasi medic madhani?
+    - Apa yang harus dilakukan untuk menambahkan data penyakit di sistem?
+    - Bagaimana menambahkan data penyakit baru ke dalam daftar penyakit?
+    - Bisa jelaskan bagaimana cara menambahkan data penyakit baru di sistem ini?
+    - Saya ingin tahu bagaimana menambahkan data penyakit baru ke aplikasi medic
+    - Apa saja tahapan untuk menambahkan data penyakit baru ke dalam sistem?
+    - Apa langkah pertama yang harus saya lakukan untuk menambahkan data penyakit?
+    - Apa yang harus saya isi untuk menambahkan data penyakit baru di aplikasi medic?
+    - Di aplikasi medic, bagaimana cara untuk menambahkan data penyakit baru?
+    - Apa saja yang perlu dilakukan untuk memasukkan data penyakit baru ke dalam aplikasi medic madhani?
+    - Prosedur menambahkan data penyakit baru ke dalam sistem aplikasi?
+    - Apa saja langkah-langkah yang dibutuhkan untuk menambahkan data penyakit baru ke dalam aplikasi?
+    - Saya ingin menambahkan data penyakit, bagaimana caranya di sistem ini?
+    - Bisa jelaskan cara menambahkan data penyakit baru di aplikasi kesehatan ini?
+    - Cara nambah data penyakit baru di aplikasi ini gimana ya?
+    - Saya bingung, bagaimana menambahkan data penyakit di aplikasi medic?
+    - Ada nggak langkah-langkah mudah buat nambahkan data penyakit baru ke sistem?
+
+- intent: ask_about_info_for_adding_new_disease_data_medic_id
+  examples: |
+    - Apa saja informasi yang perlu dimasukkan saat menambahkan data penyakit baru ke aplikasi medic?
+    - Data apa saja yang harus diisi untuk menambahkan data penyakit ke aplikasi medic?
+    - Apa yang harus dimasukkan ketika menambahkan data penyakit baru di sistem?
+    - Informasi apa saja yang diperlukan saat menambahkan data penyakit baru?
+    - Apa saja yang perlu saya isi saat menambahkan data penyakit ke aplikasi medic madhani ini?
+    - Kode apa saja yang perlu dimasukkan saat menambahkan data penyakit baru?
+    - Apa saja yang harus saya masukkan untuk menambah data penyakit ke dalam daftar?
+    - Jenis data apa saja yang diperlukan untuk menambahkan data penyakit baru?
+    - Apa yang perlu diisi untuk menambahkan data penyakit baru dalam sistem?
+    - Apa informasi yang diperlukan dokter untuk menambahkan data penyakit baru?
+    - Bagaimana cara mengisi data untuk menambah penyakit baru ke aplikasi medic?
+    - Apa yang harus diisi oleh dokter pada formulir untuk menambahkan data penyakit baru ke sistem aplikasi medic?
+
+- intent: ask_about_disease_type_and_add_info_medic_id
+  examples: |
+    - Apa itu disease type dan bagaimana cara menambahkannya?
+    - Apa yang dimaksud dengan disease type dan bagaimana edit daftar disease type tersebut?
+    - disease type itu apa sih dan bagaimana cara menambahkan data baru?
+    - Bagaimana cara menambahakan disease type baru ke sistem?
+    - Apa yang dimaksud dengan tipe penyakit dan bagaimana menambahkan data baru?
+    - Di mana saya bisa tambah data untuk disease type?
+    - Apa yang dimaksud dengan disease type dan bisakah tambah data tipe penyakit baru di aplikasi medic?
+    - Bisa jelaskan tentang disease type dan bagaimana cara menambahkannya?
+    - Bagaimana cara menambahkan disease type dalam daftar tipe penyakit?
+    - Apa itu disease type?
+    - Cara edit data disease type di aplikasi medic untuk ubah data penyakit baru?
+    - Saya ingin ubah data disease type dan bagaimana caranya?
+    - Apakah ada cara untuk menambahkan data disease type di sistem ini?
+    - Di mana saya bisa menambahkan atau memperbarui data disease type di aplikasi medic?
+    - Apa yang dimaksud dengan disease type dan bagaimana cara menambah data baru?
+    - Bagaimana saya ingin memperbarui data disease type di aplikasi medic?
+    - Apakah bisa update data disease type?
+    - Apa tujuan adanya disease type di sistem ini dan bagaimana saya menambahkan data baru?
+    - Bagaimana cara menambahkan disease type yang belum ada?
+    - Saya ingin menambah disease type baru, bagaimana langkah-langkahnya?
+    - Dimana saya bisa menemukan opsi untuk mengedit daftar disease type?
+    - Jika saya ingin menambah data disease type baru, langkah pertama apa?
+    - Menu khusus untuk edit data disease type di sistem ini?
+    - Apakah saya bisa mengedit atau menambah disease type yang sudah ada?
+
+- intent: ask_about_required_fields_empty_medic_id
+  examples: |
+    - Apa yang terjadi kalau ada field yang kosong saat saya nambah penyakit baru?
+    - Kalau saya nggak ngisi field yang wajib diisi pas nambahin penyakit baru, apa yang terjadi?
+    - Kalau ada field yang nggak diisi, bisa lanjut nggak waktu nambah penyakit baru?
+    - Gimana kalau ada kolom yang wajib diisi tapi kosong, bisa nggak simpan data penyakit baru?
+    - Jika saya lupa ngisi kolom yang penting waktu nambahin penyakit baru, apa yang terjadi?
+    - Apa pesan yang keluar kalau ada field yang wajib diisi nggak terisi pas masukin penyakit baru?
+    - Kalau saya sengaja nggak ngisi beberapa field wajib diisi waktu nambah penyakit, apakah data bisa disimpan?
+    - Apa yang bakal terjadi jika kolom-kolom yang wajib diisi saya kosongkan pas nambah penyakit baru?
+    - Kalau ada bagian yang kosong pada saat saya nambahin data penyakit baru, apa yang terjadi pada sistem?
+    - Apakah saya bisa melanjutkan nambah penyakit baru kalau ada field yang wajib diisi kosong?
+    - Jika ada field yang penting terlewat diisi, apakah sistem memperbolehkan untuk simpan data penyakit baru?
+    - Apa pesan yang muncul kalau saya terlewat mengisi kolom yang required diisi waktu nambahin penyakit baru?
+    - Bisa nggak sih tambah penyakit baru kalau ada field yang wajib diisi tapi saya kosongin? 
+    - Apa yang terjadi jika saya nggak ngisi semua kolom yang wajib diisi di form penyakit baru?
+    - Jika ada field kosong di form penyakit baru, apakah saya bisa lanjutkan penyimpanan atau nggak?
+    - Kalau saya kelupaan ngisi kolom required di form penyakit baru, apa yang bakal terjadi pada sistem?
+    - Apa akibatnya kalau saya kosongkan kolom yang harus diisi waktu nambah penyakit baru?
+    - Jika saya nggak isi kolom yang wajib diisi, apakah bisa lanjut ke halaman berikutnya?
+    - Bagaimana sistem menanggapi kalau ada field yang kosong saat nambahin penyakit baru?
+    - Apa yang dilakukan sistem kalau ada field kosong yang seharusnya wajib diisi saat nambahin data penyakit baru?
+
+- intent: ask_about_existing_data_entry_medic_id
+  examples: |
+    - Apa yang terjadi kalau data yang dimasukkan sudah ada sebelumnya?
+    - Kalau saya coba nambahin data penyakit yang udah ada, apa yang terjadi?
+    - Gimana kalau data penyakit yang saya masukkan sudah terdaftar sebelumnya?
+    - Apa yang terjadi jika saya input data penyakit yang sudah ada di sistem?
+    - Kalau saya isi data yang sudah ada, apa yang terjadi?
+    - Kalau saya coba masukkan Code ICD yang sama, apakah ada pesan peringatan?
+    - Jika data penyakit yang sama sudah ada, apakah bisa tetap ditambah?
+    - Apa yang terjadi kalau Code ICD yang saya masukkan sudah ada di sistem?
+    - Jika saya coba masukin data yang sudah terdaftar, apa yang terjadi pada aplikasi medic?
+    - Bagaimana sistem menangani jika data penyakit sudah ada sebelumnya?
+    - Apa yang akan terjadi kalau saya masukkan data yang sudah tercatat di sistem?
+    - Kalau saya keliru masukkan data yang sama, apakah ada pesan pemberitahuan dari sistem?
+    - Apa yang terjadi jika saya input data penyakit yang sudah ada?
+    - Jika saya memasukkan data penyakit dengan Code ICD yang sudah terdaftar, apa yang sistem lakukan?
+    - Apa yang muncul di layar kalau saya masukkan data yang sudah terdaftar?
+    - Apakah bisa masukin data yang sudah ada tanpa mengetahui kalau itu duplikasi?
+    - Kalau saya salah input data yang sudah ada, apa yang dilakukan sistem?
+    - Jika data yang sama sudah ada di sistem, apa yang terjadi saat saya coba masukkan lagi?
+    - Apakah saya masih bisa lanjutkan penambahan data jika sudah ada duplikasi?
+    - Apa respon sistem kalau saya menginput data penyakit yang sama dengan yang sudah ada?
+    - Kalau saya coba simpan data penyakit yang sudah ada, apakah ada pesan peringatan atau error?
+    - Gimana caranya supaya sistem bisa mencegah saya masukin data duplikasi?
+    - Kalau saya input data penyakit dengan kode yang sama, aplikasi medic akan memberikan warning?
+
+- intent: ask_about_post_addition_process_add_disease_data_medic_id
+  examples: |
+    - Apa yang terjadi setelah data penyakit berhasil ditambahkan?
+    - Kalau data penyakit sudah berhasil ditambah, apa yang akan muncul?
+    - Setelah saya tambahkan data penyakit baru, apa yang terjadi selanjutnya?
+    - Apa yang akan terlihat setelah berhasil menambah data penyakit baru?
+    - Apa yang terjadi jika berhasil menambahkan data penyakit?
+    - Kalau data penyakit berhasil disimpan, apa pesan yang muncul?
+    - Setelah input data penyakit berhasil, apakah sistem memberikan konfirmasi?
+    - Apa yang terjadi di sistem setelah saya berhasil tambah data penyakit baru?
+    - Bagaimana sistem memberi tahu kalau data penyakit sudah berhasil ditambah?
+    - Setelah data penyakit baru ditambahkan, apa yang akan muncul di layar?
+    - Apa yang terjadi kalau data penyakit sudah berhasil dimasukkan?
+    - Kalau berhasil nambahin data penyakit, apa yang muncul di layar saya?
+    - Setelah berhasil input data penyakit, apakah data langsung tampil di tabel?
+    - Setelah menambah data penyakit, ada pesan yang ditampilkan di layar?
+    - Bagaimana cara sistem menunjukkan kalau data penyakit sudah ditambahkan dengan sukses?
+    - Setelah berhasil nambahin penyakit, apa yang saya lihat di halaman tabel penyakit?
+    - Apa yang muncul di layar setelah berhasil menambahkan data penyakit baru?
+    - Apakah ada pesan yang muncul setelah saya berhasil menambah data penyakit baru di sistem?
+    - Jika data penyakit berhasil ditambahkan, akan muncul pesan apa di sistem?
+    - Apakah tabel penyakit akan langsung diperbarui setelah data penyakit baru ditambahkan ke sistem?
+
+- intent: ask_about_who_can_see_disease_data_medic_id
+  examples: |
+    - Setelah dokter menambahkan data penyakit baru, siapa yang bisa melihat data penyakit tersebut?
+    - Kalau dokter sudah tambahkan data penyakit, siapa yang dapat mengaksesnya?
+    - Siapa saja yang bisa melihat data penyakit setelah dokter memasukkannya?
+    - Kalau dokter udah input data penyakit, siapa yang bisa lihat data itu?
+    - Setelah data penyakit dimasukkan oleh dokter, siapa yang dapat melihat data penyakit tersebut?
+    - Apakah data penyakit yang ditambahkan oleh dokter bisa dilihat oleh paramedis?
+    - Setelah dokter menyimpan data penyakit, siapa yang bisa mengaksesnya di sistem?
+    - Siapa yang berhak melihat data penyakit setelah dokter menambahkan data baru?
+    - Kalau dokter sudah input data penyakit, apakah orang lain bisa melihatnya?
+    - Setelah data penyakit baru ditambahkan, siapa yang bisa melihat data penyakit selain dokter?
+    - Siapa saja yang dapat mengakses data penyakit setelah berhasil ditambahkan oleh dokter?
+    - Apakah paramedis bisa melihat data penyakit yang dimasukkan dokter?
+    - Setelah dokter menambahkan data penyakit, apakah pasien bisa melihatnya?
+    - Siapa yang diizinkan melihat data penyakit setelah dokter menambahkannya?
+    - Apakah hanya dokter yang bisa melihat data penyakit yang baru dimasukkan?
+    - Kalau dokter sudah menambahkan data penyakit, siapa yang bisa melihat data tersebut di sistem?
+    - Apakah data yang dimasukkan dokter bisa dilihat oleh admin atau petugas lain?
+    - Setelah data penyakit baru dimasukkan oleh dokter, apakah hanya paramedis yang bisa melihatnya?
+    - Jika dokter menambahkan data penyakit, siapa yang bisa mengakses data tersebut secara langsung?
+
+- intent: ask_about_who_can_edit_disease_data_medic_id
+  examples: |
+    - Siapa yang dapat mengedit data penyakit?
+    - Kalau data penyakit perlu diubah, siapa yang bisa melakukannya?
+    - Siapa yang memiliki akses untuk mengedit data penyakit?
+    - Apakah paramedis bisa mengedit data penyakit yang sudah dimasukkan?
+    - Kalau ada perubahan pada data penyakit, siapa yang bisa merubahnya?
+    - Siapa yang diizinkan mengubah data penyakit yang sudah ada?
+    - Apakah hanya dokter yang bisa mengedit data penyakit?
+    - Siapa yang bisa mengedit informasi seperti Code ICD dan Disease Name?
+    - Kalau ada kesalahan pada data penyakit, siapa yang bisa memperbaikinya?
+    - Siapa yang punya hak untuk mengubah data penyakit?
+    - Apakah saya bisa mengedit data penyakit jika saya bukan dokter?
+    - Siapa yang bisa mengubah kategori penyakit atau nama penyakit?
+    - Jika ada yang perlu diubah pada data penyakit, siapa yang bisa melakukannya?
+    - Hanya dokter kah yang bisa mengedit data penyakit?
+    - Siapa yang punya hak akses untuk mengedit informasi penyakit?
+    - Kalau dokter ingin memperbarui data penyakit, siapa yang bisa melakukannya?
+    - Apakah petugas medis lain bisa mengedit data penyakit di aplikasi medic?
+    - Siapa yang bisa mengubah detail data penyakit seperti kategori atau kode ICD?
+    - Siapa yang punya hak untuk mengedit data penyakit yang ada di sistem?
+
+- intent: ask_about_disease_management_menu_connections_medic_id
+  examples: |
+    - Apakah menu Disease Management terhubung dengan menu lain di sistem?
+    - Menu Disease Management apakah terhubung dengan menu lain yang ada di aplikasi medic?
+    - Apakah data di menu Disease Management terhubung dengan menu lain di aplikasi medic?
+    - Apakah data di menu Disease Management digunakan di menu lain?
+    - Menu Disease Management terintegrasi dengan menu apa saja di sistem?
+    - Apa saja menu yang saling terkait dengan Disease Management di sistem?
+    - Menu disease management itu apakah berasosiasi dengan menu lain pada aplikasi medic?
+    - Apakah menu Disease Management saling terkait dengan menu lain yang ada di aplikasi medic?
+    - Apakah menu Disease Management terjalin langsung dengan menu lain di sistem?
+    - Jika saya mengupdate data di menu Disease Management, apakah perubahan itu terlihat di menu lain?
+    - Apa saja menu yang terintegrasi dengan Disease Management?
+    - Apakah menu Disease Management terkait dengan Medical Checkup?
+    - Menu Disease Management berintegrasi dengan Medical Record FAR dan External nggak?
+    - Apakah menu Disease Management akan mempengaruhi data di menu Medical Record FAR?
+    - Bagaimana hubungan antara Disease Management dan menu Medical Record External?
+    - Menu Disease Management ada kaitannya dengan menu lain seperti Medical Checkup?
+    - Jika saya tambah data penyakit di Disease Management, apakah data itu langsung ada di menu Medical Checkup?
+    - Apakah menu Medical Checkup berkaitan dengan menu Disease Management di sistem?
+    - Menu apa saja yang menggunakan data dari Disease Management?
+    - Apakah menu Disease Management digunakan di menu Medical Record FAR dan Medical Record External?
+    - Apakah ada koneksi antara Disease Management dengan Medical Checkup dan Medical Record External?
+
+- intent: ask_about_effect_of_updating_disease_data_used_in_other_menus_medic_id
+  examples: |
+    - Apa yang terjadi jika dokter memperbarui data penyakit yang sudah digunakan dalam menu Medical Check Up, Medical Record FAR, dan Medical Record External?
+    - Kalau dokter mengupdate data penyakit yang sudah ada di Medical Check Up, Medical Record FAR, atau Medical Record External, apa yang akan terjadi?
+    - Jika dokter mengubah data penyakit yang sudah digunakan dalam menu lain seperti Medical Checkup atau Medical Record FAR, bagaimana dampaknya?
+    - Apakah perubahan data penyakit di menu Medical Checkup akan mempengaruhi data di menu lain?
+    - Jika dokter mengubah data penyakit yang sudah ada di Medical Record FAR dan Medical Record External, apakah perubahan tersebut akan terlihat di menu lain?
+    - Apa efeknya jika dokter memperbarui data penyakit yang sudah digunakan di Medical Checkup, Medical Record FAR, atau Medical Record External?
+    - Kalau data penyakit yang ada di Medical Record FAR diperbarui, apa yang terjadi di menu lain seperti menu Medical Checkup?
+    - Jika dokter mengedit data penyakit yang sudah ada di menu Medical Checkup dan Medical Record FAR, apakah data tersebut akan berubah di semua menu?
+    - Jika saya mengupdate data penyakit di Medical Record External, apakah perubahan tersebut memengaruhi data di menu Medical Checkup?
+    - Apa yang terjadi jika dokter melakukan perubahan pada data penyakit yang ada di Medical Checkup, Medical Record FAR, dan Medical Record External?
+    - Apakah perubahan yang dilakukan dokter pada data penyakit yang digunakan di beberapa menu akan diterapkan di semua menu terkait?
+    - Jika ada perubahan data penyakit di Medical Checkup, itu apakah akan mempengaruhi data di Medical Record FAR atau Medical Record External?
+    - Apakah data penyakit yang ada di Medical Record External akan otomatis terupdate jika dokter mengubah data yang ada di Medical Checkup?
+    - Apakah data penyakit yang diperbarui oleh dokter akan langsung diperbarui di semua menu yang menggunakan data tersebut?
+    - Apa yang terjadi jika dokter mengubah data penyakit yang sudah dipakai di menu Medical Checkup dan Medical Record External?
+    - Jika dokter memperbarui data penyakit yang telah digunakan di beberapa menu, apa yang akan terjadi pada data di menu lainnya?
+    - Bagaimana cara sistem menangani perubahan data penyakit yang digunakan di Medical Checkup, Medical Record FAR, dan Medical Record External?
+    - Jika data penyakit diubah di salah satu menu, apakah perubahan tersebut akan otomatis berlaku di menu-menu lainnya?
+    - Apakah perubahan yang dilakukan dokter pada data penyakit akan diterapkan pada semua menu yang menggunakan data tersebut?
+    - Apakah perubahan pada data penyakit akan mempengaruhi menu-menu lain di aplikasi medic madhani?
+    - Jika saya mengupdate data penyakit di menu Medical Checkup, apakah perubahan itu otomatis terlihat di Medical Record FAR?
+
+- intent: ask_about_who_can_delete_disease_data_medic_id
+  examples: |
+    - Siapa yang dapat menghapus data penyakit?
+    - Apakah paramedis bisa menghapus data penyakit?
+    - Kalau saya ingin menghapus data penyakit, siapa yang bisa melakukannya?
+    - Siapa yang memiliki izin untuk menghapus data penyakit?
+    - Apakah hanya dokter yang bisa menghapus data penyakit?
+    - Siapa yang berhak menghapus data penyakit yang sudah dimasukkan?
+    - Apakah paramedis bisa menghapus data penyakit yang sudah ada di sistem?
+    - Kalau saya ingin menghapus data penyakit yang sudah tercatat, siapa yang bisa melakukannya?
+    - Apakah saya bisa menghapus data penyakit jika saya bukan dokter?
+    - Siapa yang bisa menghapus data penyakit yang ada di sistem aplikasi medic?
+    - Kalau data penyakit sudah tidak digunakan di Medical Checkup, siapa yang bisa menghapusnya?
+    - Siapa yang bisa menghapus data penyakit yang tidak ada di Medical Record FAR?
+    - Hanya dokter kah yang bisa menghapus data penyakit yang belum terpakai di Medical Record FAR?
+    - Siapa yang bertanggung jawab untuk menghapus data penyakit di sistem?
+    - Apakah dokter bisa menghapus data penyakit yang terdaftar di Medical Record External?
+    - Apa yang harus dilakukan untuk menghapus data penyakit yang tidak digunakan lagi, siapa yang bisa menghapus data tersebuut?
+    - Siapa yang bisa menghapus data penyakit pada aplikasi medic?
+    - Kalau data penyakit tidak digunakan lagi dalam sistem, siapa yang dapat menghapusnya?
+    - Apakah dokter bisa menghapus data penyakit yang sudah tidak relevan di sistem?
+
+- intent: ask_about_how_to_delete_disease_data_medic_id
+  examples: |
+    - Cara hapus data penyakit?
+    - Langkah-langkah untuk menghapus data penyakit?
+    - Kalau saya ingin menghapus data penyakit, apa yang harus saya lakukan?
+    - Cara menghapus data penyakit itu gimana?
+    - Apa yang harus dilakukan untuk menghapus data penyakit di sistem medic?
+    - Bagaimana cara menghapus data penyakit yang sudah tercatat di aplikasi medic madhani?
+    - Langkah-langkah untuk hapus data penyakit di aplikasi medic?
+    - Langkah apa yang perlu diikuti untuk menghapus data penyakit?
+    - Apa yang perlu dilakukan agar saya bisa menghapus data penyakit?
+    - Tahapan untuk menghapus data penyakit di aplikasi medic?
+    - Jika data penyakit sudah tidak diperlukan, bagaimana cara menghapusnya?
+    - Bagaimana cara dokter menghapus data penyakit di sistem?
+    - Gimana cara untuk menghapus data penyakit yang tidak digunakan lagi?
+    - Kalau dokter ingin menghapus data penyakit, apa yang harus dilakukan di sistem?
+    - Apakah ada opsi penghapusan data penyakit di sistem?
+    - Apa langkah yang harus dilakukan dokter untuk menghapus data penyakit?
+    - Jika saya ingin menghapus data penyakit yang sudah terdaftar, bagaimana caranya?
+    - Bagaimana cara menghapus data penyakit yang terdaftar di menu Medical Checkup?
+    - Jika data penyakit tidak digunakan dalam Medical Checkup, bagaimana cara menghapus dari aplikasi medic?
+    - Apakah ada fitur untuk menghapus data penyakit yang sudah tidak relevan?
+    - Bagaimana cara menghapus data penyakit di sistem jika sudah tidak terpakai?
+    - Kalau saya ingin menghapus data penyakit yang ada di tabel, apa yang harus dilakukan?
+    - Apa yang harus dilakukan dokter untuk menghapus data penyakit yang tidak digunakan lagi?
+
+- intent: ask_about_deleting_used_disease_data_medic_id
+  examples: |
+    - Apa yang terjadi kalau dokter coba hapus data penyakit yang udah dipakai?
+    - Kalau data penyakit udah digunakan, bisa nggak dihapus?
+    - Kenapa tombol delete nggak aktif kalau data penyakit udah dipakai?
+    - Apa yang muncul kalau dokter mau hapus data yang udah dipakai?
+    - Kalau data udah dipakai di Medical Checkup, kenapa nggak bisa dihapus?
+    - Apa yang terjadi kalau dokter salah hapus data penyakit yang udah dipakai?
+    - Kalau dokter coba hapus data yang udah dipakai, ada pesan nggak?
+    - Apa yang ditunjukkan sistem kalau data penyakit udah dipakai di tempat lain?
+    - Kenapa nggak bisa hapus data yang udah dipake di Medical Checkup?
+    - Kalau data udah dipakai di FAR, bisa nggak dihapus?
+    - Apa yang muncul kalau coba hapus data penyakit yang udah dipakai di sistem?
+    - Apa pesan yang muncul kalau dokter coba hapus data yang udah dipakai di menu lain?
+    - Apa yang terjadi kalau dokter mau hapus data penyakit yang sudah digunakan di MCU, FAR, atau External?
+    - Bagaimana cara sistem mencegah dokter menghapus data yang udah digunakan di menu lain?
+    - Kalau data penyakit sudah dipakai di Medical Checkup, FAR, atau External, apakah data bisa dihapus?
+    - Apa yang terjadi jika dokter mencoba menghapus data penyakit yang sudah digunakan?
+    - Kalau dokter mau hapus data yang dipakai di menu Medical Checkup atau Medical Record, apa yang muncul?
+    - Apa yang terjadi di sistem kalau dokter menghapus data penyakit yang udah digunakan di menu lain?
+    - Bagaimana sistem menangani penghapusan data penyakit yang sudah digunakan di Medical Record FAR atau External?
+    - Apa yang terjadi jika data penyakit sudah digunakan di beberapa menu dan dokter coba hapus?
+    - Kenapa tombol delete nggak bisa dipakai kalau data udah terpakai di menu lain?
+    - Apa pesan yang muncul jika dokter coba hapus data penyakit yang udah terpakai di Medical Checkup atau FAR?
+
+- synonym: delete
+  examples: |
+    - hapus
+
+- intent: ask_about_deleting_unused_disease_data_medic_id
+  examples: |
+    - Apa yang terjadi kalau data penyakit belum dipakai di sistem?
+    - Kalau data penyakit belum digunakan di sistem, bisa dihapus?
+    - Kalau data penyakit sudah gak dipakai di dalam menu Medical Checkup atau FAR, apa yang terjadi?
+    - Gimana kalau data penyakit belum dipakai di sistem, bisa dihapus?
+    - Kalau data penyakit tidak digunakan, tombol delete aktif nggak?
+    - Kalau dokter mau hapus data yang belum dipakai di sistem, bisa nggak?
+    - Apa yang bisa dokter lakukan kalau data penyakit belum digunakan?
+    - Kalau data penyakit belum dipakai di MCU atau Medical Record, bisa dihapus nggak?
+    - Kenapa tombol delete aktif kalau data penyakit belum digunakan di sistem?
+    - Apa yang terjadi kalau data penyakit nggak dipake di menu lain, bisa dihapus?
+    - Kalau data penyakit tidak digunakan di sistem, dokter bisa hapus data penyakit tersebut?
+    - Jika data penyakit belum terpakai, apakah dokter bisa menghapus data penyakit dari sistem?
+    - Gimana cara dokter hapus data penyakit yang belum digunakan di sistem?
+    - Apakah tombol delete bisa dipake kalau data penyakit belum dipakai di sistem?
+    - Apa yang terjadi kalau dokter ingin delete data yang belum digunakan di sistem?
+    - Apakah data penyakit yang belum dipakai di Medical Record bisa dihapus?
+    - Kalau data penyakit belum dipakai di Medical Record FAR, bisa dihapus ga?
+    - Kalau data penyakit nggak dipake di Medical Checkup, bisa dihapus nggak?
+    - Kalau data penyakit belum digunakan, dokter bisa langsung hapus?
+
+- synonym: edit
+  examples: |
+    - ubah
+
+- intent: ask_about_paramedics_access_in_the_future_medic_id
+  examples: |
+    - Kedepannya, paramedis bisa nggak ya edit data penyakit?
+    - Kalau paramedis mau ubah data penyakit, bisa nggak di masa depan?
+    - Apakah paramedis bakal punya akses untuk hapus data penyakit?
+    - Nanti paramedis bisa edit atau hapus data penyakit di sistem?
+    - Apa paramedis bisa ubah atau hapus data penyakit di aplikasi medic?
+    - Apa paramedis bisa ubah data penyakit di masa depan?
+    - Apakah paramedis akan bisa menghapus data penyakit?
+    - Apakah paramedis bisa edit data penyakit di sistem?
+    - Apakah paramedis bisa hapus data penyakit nanti kedepan nya di sistem?
+    - Apakah paramedis bisa mengubah data penyakit ke depannya?
+    - Nanti paramedis bisa ngapus data penyakit atau cuma bisa lihat aja?
+    - Apakah di masa depan paramedis bisa mengubah data penyakit yang sudah ada?
+    - Kalau paramedis butuh ubah data penyakit, bisa engga nanti?
+    - Fitur paramedis buat ngedit data penyakit kapan ya tersedia?
+    - Apa paramedis bisa edit atau hapus data penyakit?
+    - Gimana kalau paramedis butuh edit atau hapus data penyakit, bisa nggak nanti?
+    - Apakah paramedis akan punya fitur untuk melakukan edit data penyakit?
+    - Kapan paramedis bisa ubah atau ngapus data penyakit?
+    - Di masa depan apakah paramedis bisa edit data penyakit kalau ada perubahan?
+
+- intent: ask_about_how_to_filter_disease_data_medic_id
+  examples: |
+    - Gimana cara filter data penyakit?
+    - Apa cara untuk memfilter daftar penyakit?
+    - Bagaimana caranya filter data penyakit berdasarkan jenis dan kategori?
+    - Kalau mau filter data penyakit, gimana caranya?
+    - Ada fitur filter buat select daftar penyakit berdasarkan jenis?
+    - Bagaimana cara filter penyakit berdasarkan kategori dan jenisnya?
+    - Gimana cara dokter dan paramedis filter data penyakit?
+    - Apa yang harus dilakukan untuk memfilter data penyakit?
+    - Kalau saya mau filter daftar penyakit, apa yang harus dipilih?
+    - Bagaimana cara milih penyakit berdasarkan jenis dan kategori?
+    - Bisa nggak sih filter data penyakit berdasarkan kategori atau jenis penyakit?
+    - Kalau saya cuma mau lihat penyakit jenis tertentu, gimana cara filter-nya?
+    - Bisa nggak filter data penyakit berdasarkan kategori besar atau kecil?
+    - Fitur filter itu ada di mana buat daftar penyakit?
+    - Apakah ada cara untuk memfilter penyakit berdasarkan Major atau Minor?
+    - Bagaimana cara lihat penyakit berdasarkan tipe dan kategori?
+    - Kalau ingin lihat penyakit berdasarkan kategori, gimana cara filter-nya?
+    - Saya pengen filter penyakit dengan kategori major aja, gimana caranya?
+    - Ingin filter penyakit dengan kategori minor, gimana caranya?
+    - Cara filter penyakit berdasarkan kategori Major atau Minor?
+    - Kalau saya cuma mau lihat penyakit tipe tertentu, bisa nggak di filter?
+    - Bagaimana caranya supaya saya bisa pilih penyakit sesuai dengan jenisnya?
+  
+- intent: ask_about_how_to_search_for_disease_data_medic_id
+  examples: |
+    - Gimana cara cari penyakit tertentu?
+    - Kalau mau cari penyakit, gimana caranya?
+    - Bagaimana cara nyari penyakit pakai kode ICD atau nama penyakit?
+    - Kalau saya pengen cari penyakit, apa yang harus saya lakuin?
+    - Cara mencari penyakit dengan kode ICD itu gimana?
+    - Bagaimana cara mencari penyakit berdasarkan nama atau kode ICD?
+    - Gimana caranya cari penyakit pake nama atau kode ICD?
+    - Apa yang harus saya klik buat cari penyakit tertentu?
+    - Kalau mau cari penyakit tertentu, harus pakai kolom apa?
+    - Dimana saya bisa cari penyakit pake kode ICD atau nama penyakit?
+    - Gimana caranya cari penyakit dengan kode atau nama?
+    - Kalau saya mau cari penyakit spesifik, gimana cara pencariannya?
+
+- intent: ask_about_export_import_disease_data_medic_id
+  examples: |
+    - Apakah data penyakit bisa di export dan di import?
+    - Bisa nggak sih export atau import data penyakit?
+    - Kalau mau import atau mengexport data penyakit, bisa nggak?
+    - Gimana cara import data penyakit?
+    - Gimana cara export data penyakit?
+    - Bisa nggak sih ngunduh dan unggah data penyakit?
+    - Apa ada cara buat export atau import data penyakit?
+    - Apakah saya bisa import data penyakit ke sistem?
+    - Bagaimana cara mengimport atau mengexport data penyakit?
+    - Apakah data penyakit bisa diunduh dan diunggah kembali?
+    - Ada fitur untuk export dan import data penyakit?
+    - Bisa nggak sih download atau upload data penyakit?
+    - Kalau saya mau export data penyakit, gimana?
+    - Gimana cara saya bisa export data penyakit yang ada?
+    - Kalau data penyakit sudah ada, bisa nggak di import ke sistem?
+    - Bagaimana cara saya bisa mengunggah data penyakit dari file eksternal?
+    - Apakah saya bisa mendownload template data penyakit?
+    - Apa yang harus dilakukan untuk mengexport daftar penyakit?
+    - Kalau saya ingin mengunggah data penyakit dari file, gimana caranya?
+    - Apa yang harus saya lakukan untuk mengexport data penyakit?
+    - Bisa nggak sih saya unggah data penyakit dari file eksternal?
+    - Bagaimana cara ngunduh template untuk data penyakit?
+
+- intent: ask_about_notifications_for_paramedics_medic_id
+  examples: |
+    - Apakah paramedis dapat notifikasi kalau dokter menambahkan penyakit baru?
+    - Kalau dokter nambahin penyakit baru, paramedis dapat pemberitahuan dari sistem?
+    - Paramedis bakal tahu tidak kalau dokter nambahin data penyakit baru, apakah akan ada pesan pemberitahuan?
+    - Apa paramedis dikasih notifikasi kalau ada penyakit yang baru ditambahkan oleh dokter?
+    - Apakah paramedis dapat pemberitahuan tentang penyakit baru yang ditambahkan dokter?
+    - Jika dokter nambahin data penyakit baru, paramedis dapat info nggak?
+    - Apakah paramedis akan mendapatkan notifikasi kalau dokter menambahkan data penyakit baru di sistem?
+    - Kalau ada penyakit baru yang ditambahkan oleh dokter, apakah paramedis dapat notifikasi pemberitahuan?
+    - Apakah paramedis tahu jika dokter baru saja menambahkan data penyakit baru?
+    - Paramedis apakah mendapat info dari sistem jika dokter menambahkan data penyakit baru?
+    - Jika dokter menambahkan data penyakit ke aplikasi medic, apakah paramedis akan mendapatkan pesan pemberitahuan dari sistem?
+
+- intent: ask_about_how_to_edit_disease_data_medic_id
+  examples: |
+    - Gimana cara edit data penyakit?
+    - Apa langkah-langkah untuk mengedit data penyakit?
+    - Kalau saya ingin mengubah data penyakit, apa yang harus saya lakukan?
+    - Cara mengedit data penyakit itu gimana?
+    - Apa saja yang perlu dilakukan untuk mengedit data penyakit?
+    - Bagaimana cara memperbarui data penyakit yang sudah ada?
+    - Langkah apa yang harus diikuti untuk mengedit informasi penyakit?
+    - Kalau saya perlu mengubah data penyakit, bagaimana cara edit nya?
+    - Apa prosedur untuk mengedit data penyakit di sistem?
+    - Bagaimana cara mengganti informasi penyakit di sistem?
+    - Apa yang harus dilakukan untuk mengedit data penyakit yang sudah ada?
+    - Bagaimana cara mengupdate data penyakit?
+    - Bagaimana sih cara edit data penyakit di sistem?
+    - Apa yang perlu dilakukan agar saya bisa mengedit data penyakit?
+    - Kalau ingin mengubah data penyakit, apakah ada tombol khusus yang harus dipilih?
+    - Apa saja tahapan untuk mengedit data penyakit di sistem?
+    - Kalau saya ingin memperbarui data penyakit, bagaimana cara melakukannya?
+    - Gimana cara mengubah data penyakit yang ada?
+    - Bagaimana prosedur untuk mengedit data penyakit yang sudah dimasukkan?
+
+- intent: ask_about_post_edit_disease_data_process_medic_id
+  examples: |
+    - Apa yang terjadi setelah data penyakit berhasil diperbarui?
+    - Kalau data penyakit udah berhasil diperbarui, apa yang muncul di sistem?
+    - Setelah dokter update data penyakit, apa yang terjadi?
+    - Gimana kalau data penyakit sudah berhasil diubah?
+    - Apa yang akan dilihat paramedis setelah data penyakit diperbarui oleh dokter?
+    - Kalau perubahan berhasil, apa yang muncul di layar?
+    - Apa yang terjadi setelah data penyakit berhasil di-update?
+    - Kalau data penyakit udah diperbarui, apa yang ditampilkan di sistem?
+    - Apa yang muncul di sistem setelah dokter memperbarui data penyakit?
+    - Kalau data penyakit udah ter-update, paramedis bisa lihat nggak?
+    - Apa yang paramedis lihat setelah data penyakit diperbarui oleh dokter di sistem?
+    - Jika dokter melakukan ubah data penyakit, paramedis bakal tahu tidak?
+    - Setelah data penyakit diperbarui, ada pemberitahuan nggak buat paramedis?
+    - Apa yang terjadi setelah dokter selesai update data penyakit di sistem?
+    - Setelah data berhasil diperbarui, siapa saja yang bisa lihat perubahan itu?
+    - Apakah perubahan data penyakit bisa langsung dilihat oleh paramedis setelah diperbarui?
+    - Setelah data penyakit diperbarui, apakah langsung ada notifikasi untuk paramedis?
+    - Setelah dokter memperbarui data penyakit di aplikasi medic, paramedis apakah mendapatkan pesan pemberitahuan?

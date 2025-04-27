@@ -70,6 +70,72 @@ nlu:
     - Could you show me the daily internal report for September 13th, 2001?
     - I need the daily internal report for June 2022
     - Can you show me the daily internal report for March 13th?
+    
+- intent: ask_request_daily_external_report_001m_id
+  examples: |
+    - Berikan daily external report
+    - Saya ingin laporan harian external
+    - Tolong kirimkan laporan daily external
+    - Apakah saya bisa mendapatkan daily external report?
+    - Butuh report daily external tanggal 20 februari
+    - Bisakah Anda memberikan report daily external hari ini?
+    - Daily external report, tolong
+    - Report daily external, tolong
+    - Tolong tampilkan laporan harian external saya
+    - Saya membutuhkan laporan daily external untuk hari ini
+    - Dapatkah saya menerima daily external report?
+    - Tolong saya ingin melihat daily external report untuk hari ini
+    - Berikan report daily external, apakah tersedia?
+    - Berikan daily external report saya sekarang
+    - Bisa berikan report daily external untuk bulan ini?
+    - Report daily external tanggal 27 Maret
+    - Saya ingin melihat daily external report untuk hari ini
+    - Saya ingin laporan harian external untuk hari ini
+    - Tolong kirimkan report daily external untuk hari ini
+    - Tolong kirimkan report daily external untuk tanggal 1 Maret 2024
+    - Tolong kirimkan report daily external untuk bulan ini
+    - Tolong kirimkan report daily external untuk bulan Januari
+    - Bisa bantu saya dengan report daily external untuk bulan Desember?
+    - Report daily external untuk tanggal 2 juni 2021?
+    - Bisa saya mendapatkan laporan daily external hari ini?
+    - Daily external report untuk tanggal 22 Februari, bisa tampilkan?
+    - Ingin tahu daily external report untuk hari ini
+    - Apakah bisa tampilkan laporan daily external untuk tanggal 2 Januari 2024?
+    - Saya butuh laporan daily external untuk bulan Juni 2022
+    - Bisa tampilkan daily external report untuk tanggal 13 Maret?
+    
+- intent: ask_request_daily_external_report_001m_en
+  examples: |
+    - Give me the daily external report
+    - I want the external daily report
+    - Can you send me the daily external report?
+    - Can you help me get the daily external report?
+    - Can I get the daily external report?
+    - I need the daily external report for February 20th
+    - Could you provide the daily external report for today?
+    - Daily external report, please
+    - Please give me the external daily report
+    - Can you show me my daily external report?
+    - I need the daily external report for today
+    - Can I receive the daily external report?
+    - Please, I want to see the daily external report for today
+    - Is the daily external report available? Please give it to me
+    - Give me my daily external report now
+    - Can you provide the daily external report for this month?
+    - Daily external report for March 27th
+    - I want to see the daily external report for today
+    - I need the daily external report for today, please
+    - Can you send me the daily external report for March 1st, 2024?
+    - Could you send me the daily external report for this month?
+    - Could you send me the daily external report for January?
+    - Can you help me with the daily external report for December?
+    - Is there a daily external report for June 2nd, 2021?
+    - Can I get the daily external report for today?
+    - Can you show me the daily external report for today?
+    - I want to know the daily external report for today
+    - Could you show me the daily external report for September 13th, 2001?
+    - I need the daily external report for June 2022
+    - Can you show me the daily external report for March 13th?
 
 - intent: request_daily_internal_report_choose_001M_id
   examples: |
@@ -122,121 +188,367 @@ nlu:
     - Send me the daily internal report for 001M today?
     - Please send the daily internal report for 001M
     - Kindly send me the daily internal report for 001M
+    
+- intent: request_daily_external_report_choose_001M_id
+  examples: |
+    - Berikan daily external report 001M
+    - Tunjukkan daily external report untuk 001M
+    - Saya ingin melihat daily external report 001M
+    - Dapatkah kamu berikan laporan daily external 001M?
+    - Tolong berikan laporan daily external 001M untuk hari ini
+    - Daily external report 001M, bisa tolong diberikan?
+    - Mohon tampilkan daily external report 001M
+    - Bisa minta report daily external aplikasi 001M?
+    - Report daily external aplikasi 001M untuk hari ini, tolong berikan
+    - Saya ingin laporan daily external 001M untuk tanggal 10 Juli 2023
+    - Bisakah kamu memberikan daily report external untuk aplikasi 001M?
+    - Tolong kirimkan daily report external 001M di tanggal 5 Januari 2021
+    - Saya butuh laporan daily external 001M untuk melihat kinerja hari ini
+    - Apakah bisa tampilkan laporan daily external pada aplikasi 001M untuk saya?
+    - Laporan daily external 001M untuk hari ini
+    - Laporan daily external 001M untuk bulan Januari
+    - Mohon berikan daily external report di aplikasi 001M hari ini
+    - Daily external report di aplikasi 001M hari ini? Bisa kirimkan ke saya?
+    - Harap tampilkan daily report external 001M tanggal 3 september
+    - Saya ingin melihat daily external report 001M untuk tanggal 27 agustus 2017, bisa bantu?
+    - Kirimkan daily external report 001M hari ini?
+    - Tolong kirim laporan daily report external 001M 
+    - Tolong kirim laporan daily external report 001M 
 
-# - intent: ask_request_daily_external_report_001m_id
-#   examples: |
-#     - Berikan daily external report
-#     - Saya ingin laporan harian external
-#     - Tolong kirimkan laporan daily external
-#     - Apakah saya bisa mendapatkan daily external report?
-#     - Butuh report daily external tanggal 20 februari
-#     - Bisakah Anda memberikan report daily external hari ini?
-#     - Daily external report, tolong
-#     - Report daily external, tolong
-#     - Tolong tampilkan laporan harian external saya
-#     - Saya membutuhkan laporan daily external untuk hari ini
-#     - Dapatkah saya menerima daily external report?
-#     - Tolong saya ingin melihat daily external report untuk hari ini
-#     - Berikan report daily external, apakah tersedia?
-#     - Berikan daily external report saya sekarang
-#     - Bisa berikan report daily external untuk bulan ini?
-#     - Report daily external tanggal 27 Maret
-#     - Saya ingin melihat daily external report untuk hari ini
-#     - Saya ingin laporan harian external untuk hari ini
-#     - Tolong kirimkan report daily external untuk hari ini
-#     - Tolong kirimkan report daily external untuk tanggal 1 Maret 2024
-#     - Tolong kirimkan report daily external untuk bulan ini
-#     - Tolong kirimkan report daily external untuk bulan Januari
-#     - Bisa bantu saya dengan report daily external untuk bulan Desember?
-#     - Report daily external untuk tanggal 2 juni 2021?
-#     - Bisa saya mendapatkan laporan daily external hari ini?
-#     - Daily external report untuk tanggal 22 Februari, bisa tampilkan?
-#     - Ingin tahu daily external report untuk hari ini
-#     - Apakah bisa tampilkan laporan daily external untuk tanggal 2 Januari 2024?
-#     - Saya butuh laporan daily external untuk bulan Juni 2022
-#     - Bisa tampilkan daily external report untuk tanggal 13 Maret?
+- intent: request_daily_external_report_choose_001M_en
+  examples: |
+    - Give me the daily external report for 001M
+    - Show me the daily external report for 001M
+    - I want to see the daily external report for 001M
+    - Can you provide the daily external report for 001M?
+    - Please give me the daily external report for 001M for today
+    - Daily external report for 001M, can you please provide it?
+    - Kindly display the daily external report for 001M
+    - Can I request the daily external report for the 001M app?
+    - Please send me the daily external report for 001M for today
+    - I want the daily external report for 001M for July 10th, 2023
+    - Could you give me the daily external report for 001M app?
+    - Please send me the daily external report for 001M on January 5th, 2021
+    - I need the daily external report for 001M to check today's performance
+    - Can you show the daily external report for the 001M app for me?
+    - The daily external report for 001M for today
+    - The daily external report for 001M for January
+    - Please provide the daily external report for 001M app today
+    - Can you send me the daily external report for 001M app today?
+    - Please display the daily external report for 001M on September 3rd
+    - I would like to see the daily external report for 001M for August 27th, 2017, can you help?
+    - Send me the daily external report for 001M today?
+    - Please send the daily external report for 001M
+    - Kindly send me the daily external report for 001M
 
-# - intent: ask_request_daily_external_report_001m_en
-#   examples: |
-#     - Give me the daily external report
-#     - I want the daily external report
-#     - Please send me the daily external report
-#     - Can I get the daily external report?
-#     - I need the daily external report for February 20th
-#     - Can you provide the daily external report for today?
-#     - Daily external report, please
-#     - External daily report, please
-#     - Please show me my daily external report
-#     - I need the daily external report for today
-#     - Can I receive the daily external report?
-#     - Please, I would like to see the daily external report for today
-#     - Is the daily external report available? Please provide it
-#     - Please give me my daily external report now
-#     - Can you provide the daily external report for this month?
-#     - The daily external report for March 27th
-#     - I would like to see the daily external report for today
-#     - I want the daily external report for today
-#     - Please send the daily external report for today
-#     - Please send me the daily external report for March 1st, 2024
-#     - Please send the daily external report for this month
-#     - Please send the daily external report for January
-#     - Can you help me with the daily external report for December?
-#     - Is there a daily external report for June 2nd, 2021?
-#     - Can I get the daily external report for today?
-#     - Can you show the daily external report for February 22nd?
-#     - I want to know the daily external report for today
-#     - Can you show the daily external report for January 2nd, 2024?
-#     - I need the daily external report for June 2022
-#     - Can you show the daily external report for March 13th?
+- intent: ask_request_forecast_allocation_report_001M_id
+  examples: |
+    - forecasting dan allocation report
+    - kirimkan forecasting dan allocation report
+    - Berikan forecasting & allocation report
+    - Tolong kirimkan laporan forecasting dan allocation
+    - Saya butuh forecasting report, tolong kirimkan 
+    - Saya butuh allocation report, tolong kirimkan
+    - Bisa minta laporan forecasting dan allocation?
+    - Kirimkan laporan forecasting & allocation 
+    - Tunjukkan forecasting & allocation report tanggal 3 september 2022
+    - berikan forecasting dan allocation report untuk bulan ini
+    - Dapatkah Anda memberikan laporan forecasting dan allocation untuk tanggal 1 april 2023?
+    - Saya ingin laporan forecasting dan allocation di tanggal 2 desember 2013
+    - Saya ingin laporan forecasting dan allocation di hari ini
+    - Apakah Anda punya forecasting dan allocation report untuk hari ini?
+    - Apakah Anda punya forecasting dan allocation report untuk tanggal 3 september
+    - Berikan laporan forecasting & allocation sekarang
+    - Laporan forecasting dan allocation, tolong
+    - Bisa tampilkan laporan forecasting dan allocation?
+    - Tolong tampilkan laporan forecasting dan allocation untuk minggu ini
+    - Saya ingin melihat laporan forecasting dan allocation terbaru
+    - Tolong berikan laporan forecasting & allocation untuk hari ini
+    - Kirim laporan forecasting dan allocation yang terbaru
+    - Apa laporan forecasting dan allocation yang tersedia?
+    - Bisa tunjukkan laporan forecasting dan allocation yang terakhir?
+    - Apakah ada laporan forecasting dan allocation untuk taggal 12 juli 2016?
 
-# - intent: request_daily_external_report_choose_001M_id
-#   examples: |
-#     - Berikan daily external report 001M
-#     - Tunjukkan daily external report untuk 001M
-#     - Saya ingin melihat daily external report 001M
-#     - Dapatkah kamu berikan laporan daily external 001M?
-#     - Tolong berikan laporan daily external 001M untuk hari ini
-#     - Daily external report 001M, bisa tolong diberikan?
-#     - Mohon tampilkan daily external report 001M
-#     - Bisa minta report daily external aplikasi 001M?
-#     - Report daily external aplikasi 001M untuk hari ini, tolong berikan
-#     - Saya ingin laporan daily external 001M untuk tanggal 10 Juli 2023
-#     - Bisakah kamu memberikan daily report external untuk aplikasi 001M?
-#     - Tolong kirimkan daily report external 001M di tanggal 5 Januari 2021
-#     - Saya butuh laporan daily external 001M untuk melihat kinerja hari ini
-#     - Apakah bisa tampilkan laporan daily external pada aplikasi 001M untuk saya?
-#     - Laporan daily external 001M untuk hari ini
-#     - Laporan daily external 001M untuk bulan Januari
-#     - Mohon berikan daily external report di aplikasi 001M hari ini
-#     - Daily external report di aplikasi 001M? Bisa kirimkan ke saya?
-#     - Harap tampilkan daily report external 001M tanggal 3 september
-#     - Saya ingin melihat daily external report 001M untuk tanggal 27 agustus 2017, bisa bantu?
-#     - Kirimkan daily external report 001M hari ini?
-#     - Tolong kirim laporan daily report external 001M 
-#     - Tolong kirim laporan daily external report 001M 
+- intent: request_forecasting_allocation_report_choose_001M_id
+  examples: |
+    - Berikan forecasting & allocation report 001M
+    - Tolong kirimkan laporan forecasting dan allocation 001M
+    - Saya butuh laporan forecasting dan allocation 001M
+    - Bisa minta laporan forecasting dan allocation untuk 001M?
+    - Kirimkan laporan forecasting & allocation 001M hari ini
+    - tunjukkan forecasting dan allocation report 001M, tolong
+    - Bisa kirimkan forecasting & allocation report 001M?
+    - Tolong tampilkan forecasting dan allocation report untuk 001M di tanggal 2 maret
+    - Saya ingin melihat forecasting & allocation report 001M
+    - Forecasting & allocation report 001M hari ini, tolong
+    - Kirimkan laporan forecasting dan allocation 001M yang terbaru
+    - Apakah ada forecasting & allocation report 001M untuk minggu ini?
+    - Berikan laporan forecasting & allocation 001M hari ini tanggal 1 juli 
+    - Berikan forecasting & allocation report di tanggal 3 September 2022
+    - Tolong berikan laporan forecasting & allocation di tanggal 5 Oktober
+    - Bisa kirimkan laporan forecasting dan allocation 001M pada tanggal 15 Agustus 2021?
+    - Saya butuh forecasting dan allocation report 001M untuk tanggal 20 Januari 2022
+    - Tolong berikan laporan forecasting dan allocation 001M pada tanggal 1 Januari 2023
 
-# - intent: request_daily_external_report_choose_001M_en
+- intent: estimate_component_repair_finish_date_001M_id
+  examples: |
+    - Perkiraan komponen DESCMTNR selesai diperbaiki di tanggal berapa?
+    - Kapan komponen DESCMTNR diperkirakan selesai diperbaiki?
+    - Tanggal perkiraan selesai perbaikan untuk komponen DESCMTNR kapan?
+    - Tanggal berapa estimasi selesai perbaikan komponen DESCMTNR di site 001M?
+    - Kapan komponen DESCMTNR selesai diperbaiki di site 001M?
+    - Bisa kasih tahu tanggal selesai perbaikan untuk komponen DESCMTNR?
+    - Kapan estimasi selesai komponen DESCMTNR diperbaiki di site 001M?
+    - Perkiraan selesai perbaikan komponen DESCMTNR di tanggal berapa?
+    - Komponen DESCMTNR selesai diperbaiki di tanggal berapa?
+    - Kapan perbaikan komponen DESCMTNR selesai?
+    - Kapan perbaikan komponen DESCMTNR selesai di site 001M?
+    - Estimasi selesai perbaikan untuk komponen DESCMTNR di tanggal berapa?
+    - Komponen DESCMTNR diperkirakan selesai diperbaiki tanggal berapa?
+    - Kapan perbaikan komponen DESCMTNR selesai di 001M?
+    - Kapan komponen DESCMTNR selesai perbaikannya?
+    - Kapan komponen DESCMTNR diperkirakan bisa selesai?
+    - Tanggal berapa komponen DESCMTNR diperkirakan selesai diperbaiki di 001M?
+
+- intent: get_component_repair_location_001M_id
+  examples: |
+    - Dimana komponen TESTEXT2 diperbaiki?
+    - Dimana lokasi perbaikan komponen TESTEXT2?
+    - Lokasi perbaikan untuk komponen DESCMTNR ada di mana?
+    - Komponen DESCMTNR diperbaiki di mana?
+    - Lokasi tempat perbaikan komponen DESCMTNR?
+    - Di lokasi mana komponen TESTEXT2 sedang diperbaiki?
+    - Dimana perbaikan untuk komponen DESCMTNR dilakukan?
+    - Lokasi perbaikan komponen TESTEXT2 di 001M itu di mana?
+    - Dimana komponen TESTEXT2 sedang dalam proses perbaikan?
+    - Dimana komponen DESCMTNR diperbaiki saat ini?
+    - Dimana tempat perbaikan komponen DESCMTNR?
+    - Perbaikan untuk komponen TESTEXT2 sedang berlangsung di mana?
+    - Perbaikan komponen DESCMTNR dilakukan di lokasi?
+    - Dimana tempat perbaikan komponen DESCMTNR dilakukan?
+    - Apakah lokasi perbaikan komponen DESCMTNR di site 001M?
+    - Di lokasi mana perbaikan komponen DESCMTNR dilaksanakan?
+    - Dimana lokasi penggantian komponen WAHYUEXTERNAL-01 dilakukan?
+    - Komponen DESCMTNR sudah diperbaiki? lokasi perbaikannya di mana?
+    - Dimana tepatnya lokasi perbaikan komponen DESCMTNR di 001M?
+    - Di mana lokasi kerja perbaikan komponen WAHYUEXTERNAL-01?
+    - Apakah lokasi perbaikan komponen WAHYUEXTERNAL-01 di tempat tertentu?
+    - Dimana lokasi perbaikan untuk komponen DESCMTNR saat ini?
+    - Di lokasi mana perbaikan komponen WAHYUEXTERNAL-01 berlangsung?
+    - Dimana proses perbaikan komponen DESCMTNR berlangsung saat ini?
+    - Komponen WAHYUEXTERNAL-01 sedang diperbaiki dimana saat ini?
+
+- intent: get_approval_status_route_component_repair_001M_id
+  examples: |
+    - Siapa yang memberi persetujuan perbaikan untuk komponen TESTEXT2?
+    - Siapa yang bertanggung jawab atas persetujuan komponen TESTEXT2?
+    - Saat ini komponen DESCMTNR sudah di tahap persetujuan siapa?
+    - Status approval untuk komponen TESTFORCASE saat ini sudah di setujui oleh siapa?
+    - Komponen DESCMTNR saat ini sedang menunggu approval siapa ya?
+    - Apakah persetujuan untuk komponen DESCMTNR sudah selesai?
+    - Apa status persetujuan untuk komponen DESCTESTEXT2MTNR saat ini?
+    - Persetujuan komponen TESTEXT2 sudah ditahap approval siapa?
+    - Siapa yang memberikan approval perbaikan untuk komponen DESCMTNR?
+    - Komponen TESTEXT2 sudah mendapatkan persetujuan perbaikan dari siapa?
+    - Persetujuan perbaikan komponen DESCMTNR sedang diproses oleh siapa saat ini?
+    - Apakah komponen DESCMTNR sudah mendapatkan persetujuan akhir?
+    - Siapa yang bertanggung jawab memberikan persetujuan perbaikan untuk komponen DESCMTNR?
+    - Apakah ada perubahan dalam status persetujuan komponen DESCMTNR?
+    - Komponen TESTFORCASE sedang menunggu siapa untuk persetujuan?
+    - Sudah ada yang menyetujui komponen TESTFORCASE?
+    - Apa status persetujuan perbaikan komponen DESCMTNR saat ini?
+    - Siapa yang terlibat dalam persetujuan perbaikan komponen DESCMTNR?
+    - Persetujuan komponen TESTFORCASE saat ini ada di tahap siapa?
+    - Sudah diterima atau masih menunggu persetujuan untuk komponen DESCMTNR?
+    - Apakah proses persetujuan komponen TESTFORCASE sudah selesai atau masih berjalan?
+    - Siapa yang menjadi penanggung jawab atas approval perbaikan komponen DESCMTNR?
+    - Saat ini siapa yang memberikan status aproval perbaikan komponen DESCMTNR?
+    - Apakah persetujuan untuk komponen DESCMTNR sudah mendapatkan hasil final?
+    - Bagaimana kabar status persetujuan perbaikan untuk komponen DESCMTNR saat ini?
+
+- intent: get_employee_name_working_on_component_repair_001M_id
+  examples: |
+    - Perbaikan komponen DESCMTNR siapa yang mengerjakan?
+    - Saat ini komponen DESCMTNR siapa yang mengerjakan?
+    - Siapa yang sedang bekerja pada perbaikan komponen DESCMTNR?
+    - Siapa yang mengerjakan perbaikan untuk komponen DESCMTNR?
+    - Saat ini, siapa yang menangani perbaikan yang dilakukan pada komponen DESCMTNR?
+    - Siapa yang sedang melakukan perbaikan pada komponen DESCMTNR?
+    - Komponen DESCMTNR sedang dikerjakan oleh siapa?
+    - Siapa yang sedang menangani perbaikan komponen DESCMTNR di 001M?
+    - Di tangan karyawan siapa komponen DESCMTNR sekarang diperbaiki?
+    - Karyawan yang menangani perbaikan komponen DESCMTNR, siapa?
+    - Siapa yang mengelola perbaikan untuk komponen DESCMTNR?
+    - Komponen DESCMTNR sedang diperbaiki oleh siapa?
+    - Siapa yang melakukan perbaikan pada komponen DESCMTNR saat ini?
+    - Siapa yang terlibat dalam pekerjaan untuk komponen DESCMTNR?
+    - Siapa yang sedang bertugas mengerjakan perbaikan komponen DESCMTNR di 001M?
+    - Siapa yang saat ini mengerjakan komponen DESCMTNR di site 001M?
+    - Komponen DESCMTNR saat ini sedang dikerjakan oleh siapa di 001M?
+    - Siapa yang bertanggung jawab untuk menangani komponen DESCMTNR di lokasi perbaikan?
+    - Siapa yang sedang mengerjakan komponen DESCMTNR pada tahap perbaikan saat ini?
+    - Siapa yang sedang bertugas dengan komponen DESCMTNR di saat ini?
+    - Siapa yang menangani pekerjaan komponen DESCMTNR saat ini di tim?
+    - Siapa yang menangani komponen DESCMTNR di bagian perbaikan?
+    - Perbaikan komponen DESCMTNR sedang diurus oleh siapa saat ini?
+    - Siapa yang sedang bekerja pada proyek perbaikan komponen DESCMTNR di 001M?
+    - Siapa yang sedang mengerjakan perbaikan untuk komponen DESCMTNR?
+    - Siapa yang sedang bekerja dengan komponen DESCMTNR saat ini?
+
+- intent: get_employee_current_task_on_component_repair_001M_id
+  examples: |
+    - Saat ini Wahyu mengerjakan pekerjaan di komponen apa?
+    - Saat ini karyawan dengan nama Gabriel mengerjakan perbaikan komponen apa?
+    - Karyawan Gabriel sedang mengerjakan pekerjaan perbaikan apa?
+    - Pekerjaan apa yang sedang dikerjakan oleh Wahyu saat ini?
+    - Apa pekerjaan yang sedang dilakukan oleh Diki sekarang?
+    - Apa tugas yang sedang dijalankan oleh karyawan Gabriel saat ini?
+    - Apa yang sedang dikerjakan oleh karyawan dengan nama Gabriel?
+    - Sedang mengerjakan apa Wahyu di proyek ini?
+    - Komponen apa yang sedang diperbaiki oleh Diki saat ini?
+    - Komponen apa yang sedang ditangani oleh Adam saat ini?
+    - Wahyu lagi mengerjakan pekerjaan di komponen apa?
+    - Apa yang sedang dikerjakan oleh Indah di bagian perbaikan?
+    - Karyawan Gabriel bekerja di perbaikan komponen apa saat ini?
+    - Perbaikan komponen apa yang kiana sedang lakukan sekarang?
+    - Pekerjaan apa yang sedang dilakukan oleh Diki dalam proyek ini?
+    - Apa perbaikan yang sedang dikerjakan oleh Gabriel sekarang?
+    - Komponen apa yang sedang diperbaiki oleh Wahyu saat ini?
+    - Sedang mengerjakan apa saja Wahyu dan Diki di tim?
+    - Pekerjaan apa yang sedang dikerjakan oleh Wahyu di proyek perbaikan?
+    - Komponen DESCMTNR apakah sedang ditangani oleh Gabriel saat ini?
+    - Gabriel bekerja di perbaikan komponen apa saat ini?
+    - Apa tugas yang sedang dikerjakan oleh Gabriel di lokasi perbaikan?
+    - Sedang menangani komponen apa Diki saat ini?
+    - Wahyu sedang menangani pekerjaan di komponen mana?
+    - Komponen apa yang sedang diperbaiki oleh Wahyu di lokasi saat ini?
+    - Apakah Diki sedang mengerjakan perbaikan pada komponen DESCMTNR?
+
+- synonym: traceability
+  examples: |
+    - pengiriman
+
+- intent: get_shipment_status_on_component_repair_001M_id
+  examples: |
+    - Apakah komponen TESTEXTRFU sudah diterima di site tujuan?
+    - Apa status pengiriman komponen TESTEXTRFU saat ini?
+    - Bagaimana status pengiriman komponen DESCMTNR setelah perbaikan dari site 001M?
+    - Komponen DESCMTNR sudah sampai di site tujuan atau belum?
+    - Kapan komponen DESCMTNR diperkirakan sampai di site tujuan setelah diperbaiki di 001M?
+    - Bagaimana status pengiriman komponen TESTEXTRFU dari 001M ke site tujuan?
+    - Sudah diterima di site tujuan atau belum komponen TESTEXTRFU?
+    - Kapan komponen TESTEXTRFU akan sampai di lokasi tujuan setelah selesai perbaikan?
+    - Apakah komponen DESCMTNR sedang dalam perjalanan ke site tujuan?
+    - Dimana posisi pengiriman komponen TESTEXTRFU saat ini?
+    - Sudah ada update pengiriman untuk komponen TESTEXTRFU?
+    - Apakah pengiriman komponen TESTEXTRFU sudah berhasil?
+    - Berapa lama lagi pengiriman sampai komponen TESTEXTRFU ke site tujuan setelah perbaikan?
+    - Status traceability komponen DESCMTNR sudah sampai tahap apa?
+    - Kapan diperkirakan komponen TESTEXTRFU akan tiba di site tujuan setelah perbaikan?
+    - Apakah komponen DESCMTNR sedang diproses untuk pengiriman?
+    - Berapa lama lagi pengiriman komponen TESTEXTRFU sampai ke site tujuan?
+    - Estimasi waktu pengiriman komponen DESCMTNR ke site tujuan kapan setelah diperbaiki?
+    - Ingin tau update terbaru mengenai pengiriman komponen TESTEXTRFU?
+    - Status pengiriman komponen TESTEXTRFU sudah sampai tahap apa sekarang?
+    - Ada informasi terbaru tentang pengiriman komponen TESTEXTRFU?
+    - Bagaimana pengiriman komponen DESCMTNR sejauh ini?
+    - Sudah ada informasi tentang pengiriman komponen TESTEXTRFU ke site tujuan?
+    - Apa status terkini pengiriman komponen TESTEXTRFU?
+    - Update pengiriman komponen TESTEXTRFU apakah sudah sampai tujuan?
+    - Komponen TESTEXTRFU sudah ada progres pengiriman atau belum?
+    - Apa status pengiriman komponen TESTEXTRFU dari 001M?
+    - Bagaimana status pengiriman komponen TESTEXTRFU setelah keluar dari 001M?
+    - Apakah status pengiriman komponen TESTEXTRFU sudah selesai?
+    - Sudah ada update status pengiriman komponen TESTEXTRFU di site tujuan?
+    - Bagaimana perkembangan status pengiriman komponen TESTEXTRFU ke site tujuan?
+    - Apa status pengiriman komponen TESTEXTRFU saat ini?
+    - Apakah pengiriman komponen TESTEXTRFU sudah diterima di lokasi tujuan?
+
+# - intent: get_component_status_001M_id
 #   examples: |
-#     - Give me the daily external report 001M
-#     - Show me the daily external report for 001M
-#     - I want to see the daily external report 001M
-#     - Can you provide the daily external report 001M?
-#     - Please provide the daily external report 001M for today
-#     - Daily external report 001M, could you please give it to me?
-#     - Please show me the daily external report 001M
-#     - Can I get the daily external report for app 001M?
-#     - The daily external report for app 001M today, please provide it
-#     - I want the daily external report 001M for July 10, 2023
-#     - Can you provide the daily external report for app 001M?
-#     - Please send me the daily external report 001M for January 5, 2021
-#     - I need the daily external report 001M to check today's performance
-#     - Can you show the daily external report on app 001M for me?
-#     - The daily external report 001M for today
-#     - The daily external report 001M for January
-#     - Please provide the daily external report on app 001M today
-#     - Daily external report on app 001M? Can you send it to me?
-#     - Please show the daily external report 001M for September 3
-#     - I want to see the daily external report 001M for August 27, 2017, can you help?
-#     - Send me the daily external report 001M for today
-#     - Please send the daily external report 001M
-#     - Please send me the daily external report 001M
+#     - Apa status komponen DESCMTNR saat ini?
+#     - Bagaimana status komponen DESCMTNR di 001M?
+#     - Komponen DESCMTNR statusnya apa sekarang?
+#     - Status untuk komponen DESCMTNR saat ini seperti apa?
+#     - Apakah status komponen DESCMTNR sudah diperbarui?
+#     - Bagaimana kondisi komponen DESCMTNR sekarang?
+#     - Di mana status terkini untuk komponen DESCMTNR?
+#     - Apakah status komponen DESCMTNR sudah selesai diperbaiki?
+#     - Sudah sampai dimana status komponen DESCMTNR?
+#     - Bagaimana status komponen DESCMTNR yang sedang diperbaiki di 001M?
+#     - Apakah komponen DESCMTNR masih dalam proses?
+#     - Apakah komponen DESCMTNR sedang dalam status WIP?
+#     - Apakah komponen DESCMTNR sudah dalam status selesai?
+#     - Komponen DESCMTNR saat ini dalam tahap apa status perbaikan nya?
+#     - Di tahap mana status perbaikan komponen DESCMTNR saat ini berada?
+#     - Status terbaru komponen DESCMTNR di 001M seperti apa?
+#     - Apa status terkini dari komponen DESCMTNR di lokasi 001M?
+#     - Bagaimana progres status komponen DESCMTNR saat ini?
+#     - Komponen DESCMTNR statusnya sekarang masih di WIP?
+#     - Apakah status komponen DESCMTNR sudah berubah?
+#     - Komponen DESCMTNR sudah diterima atau masih menunggu?
+#     - Sudah ada perkembangan baru pada status komponen DESCMTNR?
+#     - Bagaimana status pemeliharaan komponen DESCMTNR di 001M?
+#     - Apakah ada perubahan status perbaikan komponen untuk komponen DESCMTNR di 001M?
+
+# - intent: get_component_allocation_001M_id
+#   examples: |
+#     - Di mana komponen DESCMTNR dialokasikan?
+#     - Komponen DESCMTNR dialokasikan ke site mana?
+#     - Dimana alokasi untuk komponen DESCMTNR?
+#     - Di lokasi mana komponen DESCMTNR dipindahkan?
+#     - Komponen DESCMTNR sedang dialokasikan di mana?
+#     - Kemana komponen DESCMTNR akan dipindahkan?
+#     - Dimana tepatnya komponen DESCMTNR dialokasikan?
+#     - Apa alokasi untuk komponen DESCMTNR saat ini?
+#     - Dimana peralihan komponen DESCMTNR dilakukan?
+#     - Komponen DESCMTNR sedang dialokasikan di site apa?
+#     - Dimana lokasi alokasi komponen DESCMTNR?
+#     - Apakah komponen DESCMTNR sudah dialokasikan ke site tertentu?
+#     - Dimana komponen DESCMTNR sedang ditempatkan?
+#     - Alokasi komponen DESCMTNR ada di tempatkan di site apa?
+#     - Komponen DESCMTNR dipindahkan ke lokasi mana?
+#     - Apakah komponen DESCMTNR telah dialokasikan ke lokasi yang baru?
+#     - Dimana komponen DESCMTNR dialokasikan saat ini?
+#     - Apakah ada perubahan alokasi untuk komponen DESCMTNR?
+#     - Dimana lokasi komponen DESCMTNR dialokasikan sekarang?
+#     - Apakah alokasi komponen DESCMTNR sudah diselesaikan?
+#     - Alokasi untuk komponen DESCMTNR sudah diputuskan atau belum?
+#     - Ke mana komponen DESCMTNR dialokasikan saat ini?
+
+# - intent: get_component_repair_information_progress_001M_id
+#   examples: |
+#     - Berapa persentase progres komponen DESCMTNR saat ini?
+#     - Sejauh mana progres komponen DESCMTNR?
+#     - komponen DESCMTNR sedang dalam proses apa sekarang?
+#     - Apa status progres untuk komponen DESCMTNR?
+#     - Berapa persen progres perbaikan komponen DESCMTNR?
+#     - komponen DESCMTNR sudah sampai mana dalam proses perbaikan?
+#     - Seberapa jauh progres komponen DESCMTNR di 001M?
+#     - Progres komponen DESCMTNR sudah berapa persen?
+#     - Apa status progres untuk perbaikan komponen DESCMTNR?
+#     - komponen DESCMTNR sudah selesai dikerjakan berapa persen?
+#     - Berapa banyak pekerjaan yang sudah selesai untuk komponen DESCMTNR?
+#     - Sudah berapa persen progres komponen DESCMTNR?
+#     - komponen DESCMTNR sudah berada di tahap mana sekarang?
+#     - komponen DESCMTNR sedang pada tahap apa saat ini?
+#     - Sejauh ini, progres komponen DESCMTNR bagaimana?
+#     - Berapa banyak progress yang telah dicapai oleh komponen DESCMTNR?
+#     - Apakah komponen DESCMTNR sudah mencapai target progres yang diinginkan?
+#     - komponen DESCMTNR sudah hampir selesai atau masih jauh progresnya?
+#     - Berapa persen progres komponen DESCMTNR saat ini di tahap ini?
+#     - Bagaimana progres pengerjaan komponen DESCMTNR di saat ini?
+#     - Progres perbaikan komponen DESCMTNR sudah selesai berapa persen?
+#     - Sejauh mana kemajuan yang sudah dicapai pada komponen DESCMTNR?
+#     - komponen DESCMTNR sekarang sudah selesai seberapa banyak?
+#     - Pada tahap apa komponen DESCMTNR saat ini?
+#     - Berapa banyak progress yang sudah diselesaikan untuk komponen DESCMTNR?
+#     - komponen DESCMTNR berada di tahap progres apa sekarang?
+#     - Apa saja yang sudah selesai dikerjakan untuk komponen DESCMTNR?
+#     - Apa yang sudah dilakukan untuk komponen DESCMTNR sampai saat ini?
+#     - Progres komponen DESCMTNR apakah sudah mencapai 50%?
+#     - Sejauh mana progress komponen DESCMTNR dalam perbaikan?
+#     - Apakah progres komponen DESCMTNR sudah mencapai 80%?
+#     - Bagaimana progres komponen DESCMTNR dibandingkan dengan target yang ditentukan?
+
+

@@ -102,4 +102,4 @@ test_query.py
 test2.py
 
 ## Note : Ignore one models for deployment !
-!/models/20250318-113542-coral-pole.tar.gz
+# !/models/20250410-102245-bitter-pass.tar.gz

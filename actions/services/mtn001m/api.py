@@ -15,8 +15,7 @@ def get_001m_token(tracker):
         if token_fms:
             return token_fms
 
-    return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDI2MjU2NzAsImlzcyI6IjEwMTAiLCJ1c2VyIjp7Im5payI6IjEwMTAiLCJuYW1lIjoiUHJpc2NhIEF1ZHlhIFRyaSBDYWh5YSBBbmdncmFldGEiLCJyb2xlX2lkIjoiMSIsInBlcm1pc3Npb25zIjpbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDYsNDcsNDgsNDksNTAsNTEsNTIsNTMsNTQsNTUsNTYsNTcsNTgsNTksNjAsNjEsNjIsNjMsNjQsNjUsNjgsNjksNzAsNzEsNzIsNzQsNzUsNzYsNzcsNzgsNzksODAsODEsODIsODQsODUsODYsODgsODksOTAsOTEsOTIsOTMsOTQsOTUsOTYsOTcsOTgsOTksMTAwLDEwMSwxMDIsMTAzLDEwNCwxMDUsMTA2LDEwNywxMDgsMTA5LDExMCwxMTEsMTEyLDExMywxMTQsMTE1LDExNiwxMTcsMTE4LDExOSwxMjIsMTIzLDEyNCwxMjUsMTI2LDEyNywxMjgsMTI5LDEzMCwxMzEsMTMyLDEzMywxMzYsMTM3LDEzOSwxNDBdfX0.tDZsaeoTrZ1e2hqcPmS7cj2ZmfJNd9ptoZ8p_rjKJlY"
-
+    return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDQ3NzAyMjQsImlzcyI6IjEwMTAiLCJ1c2VyIjp7Im5payI6IjEwMTAiLCJuYW1lIjoiUHJpc2NhIEF1ZHlhIFRyaSBDYWh5YSBBbmdncmFldGEiLCJyb2xlX2lkIjoiMSIsInBlcm1pc3Npb25zIjpbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDYsNDcsNDgsNDksNTAsNTEsNTIsNTMsNTQsNTUsNTYsNTcsNTgsNTksNjAsNjEsNjIsNjMsNjQsNjUsNjgsNjksNzAsNzEsNzIsNzQsNzUsNzYsNzcsNzgsNzksODAsODEsODIsODQsODUsODYsODgsODksOTAsOTEsOTIsOTMsOTQsOTUsOTYsOTcsOTgsOTksMTAwLDEwMSwxMDIsMTAzLDEwNCwxMDUsMTA2LDEwNywxMDgsMTA5LDExMCwxMTEsMTEyLDExMywxMTQsMTE1LDExNiwxMTcsMTE4LDExOSwxMjIsMTIzLDEyNCwxMjUsMTI2LDEyNywxMjgsMTI5LDEzMCwxMzEsMTMyLDEzMywxMzYsMTM3LDEzOSwxNDBdfX0.hNLDnRtYm1EhxIS6o9tyDAO8j33iTZWQoaZJWb2-niI"
 
 def get_001m_report_daily_internal(token_001m:str,daily_report_date="", search="", status_process="", manufacturer="", model="", component_description="",limit="",page=""):
     url = f"{config.MTN001M_BASE_URL}/jobs/daily-report?daily-report-date={daily_report_date}&search={search}&status-process={status_process}&manufacturer={manufacturer}&model={model}&component-description={component_description}&limit={limit}&page={page}"
@@ -36,7 +35,26 @@ def get_001m_report_daily_internal(token_001m:str,daily_report_date="", search="
         logger.error(f"Error occured while fetching daily report internal: {e}")
         return None
 
-    
+def get_001m_report_daily_external(token_001m:str,daily_report_date="", search="", status_process="", manufacturer="", model="", component_description="",limit="",page=""):
+    url = f"{config.MTN001M_BASE_URL}/jobs/daily-report/external?daily-report-date={daily_report_date}&search={search}&status-process={status_process}&manufacturer={manufacturer}&model={model}&component-description={component_description}&limit={limit}&page={page}"
+    logger.info(f"Fetching {url}")
+
+    try:
+        response = requests.get(url, headers={"cookie":f"token_001m={token_001m}"})
+        logger.info(f"Response GET Daily Report External 001M : {response.json()}")
+        if response.status_code == 200:
+            data = response.json()
+            data = data.get("data",[])
+            return data
+        else:
+            logger.warning(f"Failed to fetch daily report external {response}")
+            return None
+    except Exception as e:
+        logger.error(f"Error occured while fetching daily report external: {e}")
+        return None
+
+
+
 def get_001m_model_manufacturers(token_001m:str):
     url = f"{config.MTN001M_BASE_URL}/models/manufacturers"
 
@@ -74,7 +92,7 @@ def get_001m_model_manufacturers(token_001m:str):
     ]
 
     try:
-        response = requests.get(url, headers={"cookie":f"token_001m {token_001m}"})
+        response = requests.get(url, headers={"cookie":f"token_001m={token_001m}"})
         logger.info(f"Response GET Daily Report Internal 001M : {response.json()}")
      
         if response.status_code == 200:
@@ -155,7 +173,7 @@ def get_001m_model_dropdown(token_001m:str):
         ]
 
     try:
-        response = requests.get(url, headers={"cookie":f"token_001m {token_001m}"})
+        response = requests.get(url, headers={"cookie":f"token_001m={token_001m}"})
         logger.info(f"Response GET Daily Report Internal 001M : {response.json()}")
      
         if response.status_code == 200:
@@ -272,7 +290,7 @@ def get_001m_component_description(token_001m:str):
         ]
 
     try:
-        response = requests.get(url, headers={"cookie":f"token_001m {token_001m}"})
+        response = requests.get(url, headers={"cookie":f"token_001m={token_001m}"})
         logger.info(f"Response GET Daily Report Internal 001M : {response.json()}")
      
         if response.status_code == 200:
@@ -287,8 +305,12 @@ def get_001m_component_description(token_001m:str):
     
 
 
-def get_001m_internal_status_process(token_001m:str):
+def get_001m_internal_status_process(token_001m:str,tracker):
+    current_jobs = tracker.active_loop.get("name","")
+    logger.info(f"Current Jobs: {current_jobs}")
     url = f"{config.MTN001M_BASE_URL}/jobs/status-process"
+    if "external" in current_jobs:
+        url = f"{config.MTN001M_BASE_URL}/jobs/external/status-process"
 
     default_data = [
         {
@@ -384,9 +406,9 @@ def get_001m_internal_status_process(token_001m:str):
     ]
 
     try:
-        response = requests.get(url, headers={"cookie":f"token_001m {token_001m}"})
+        response = requests.get(url, headers={"cookie":f"token_001m={token_001m}"})
         logger.info(f"Response GET Daily Report Internal 001M : {response.json()}")
-     
+
         if response.status_code == 200:
             data = response.json()
             data = data.get("data",[])
@@ -397,3 +419,73 @@ def get_001m_internal_status_process(token_001m:str):
         logger.error(f"Error occured while fetching daily report internal: {e}")
         return default_data        
     
+from datetime import datetime
+from babel.dates import format_datetime
+
+
+def reformat_date(datestr, lang="indonesia") -> str:
+    locale = "id" if lang == "indonesia" else "en"
+    
+    try:
+        dt = datetime.fromisoformat(datestr.replace('Z', '+00:00'))
+
+        if locale=="en":
+            english_format = format_datetime(
+                dt, 
+                format='full',  
+                locale='en_US'
+            )
+
+            return english_format
+
+        indonesian_format = format_datetime(
+        dt,
+        format='full',  
+        locale='id_ID'
+    )   
+        return indonesian_format
+    except Exception as e:
+        return "-"
+
+def get_001m_forecast_allocation_report(token_001m:str, start_date='',end_date='',manufacturer='',model='',comp_description='',site_allocation='',search=''):
+    
+    
+    url = f"{config.MTN001M_BASE_URL}/jobs/forecast-allocation-report?start_date={start_date}&end_date={end_date}&manufacturer={manufacturer}&model={model}&component-description={comp_description}&site_allocation={site_allocation}&search={search}"
+    try:
+        response = requests.get(url, headers={"cookie":f"token_001m={token_001m}"})
+        logger.info(f"{url} :Response GET Jobs Forecast Allocation Report 001M : {response.json()}")
+
+        if response.status_code == 200:
+            data = response.json()
+            data = data.get("data",[])
+            return data
+        else:
+            return []
+    except Exception as e:
+        logger.error(f"Error occured while fetching daily report internal: {e}")
+        return None
+
+def get_001m_site_allocation(token_001m:str, tracker):
+    url = f"{config.MTN001M_BASE_URL}/shipment-tracking/site-allocation"
+    try:
+        response = requests.get(url, headers={"cookie":f"token_001m={token_001m}"})
+        logger.info(f"Response GET Site Allocation 001M : {response.json()}")
+        default_data = [
+            {
+                "name":"001Z",
+                "id"  :"4"
+            },
+            {
+                "name":"020D",
+                "id"  : "5"
+            }
+        ]
+        if response.status_code == 200:
+            data = response.json()
+            data = data.get("data",[])
+            return data
+        else:
+            return default_data
+    except Exception as e:
+        logger.error(f"Error occured while fetching site allocation: {e}")
+        return default_data        
