@@ -1,0 +1,55 @@
+version: "3.1"
+stories:
+- story: Asks about what's medical menu checkup - choose website in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: what_is_medical_checkup_menu_medic_id
+    - action: utter_ask_platform_choice_medic_id
+    - intent: choose_website_platform_medic_id
+    - action: utter_what_is_medical_checkup_menu_web_medic_id
+
+- story: Asks about what's medical menu checkup - choose website in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: what_is_medical_checkup_menu_medic_id
+    - action: utter_ask_platform_choice_medic_en
+    - intent: choose_website_platform_medic_en
+    - action: utter_what_is_medical_checkup_menu_web_medic_en
+
+- story: Asks about who can accss medical checkup menu - choose website in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: who_can_access_medical_checkup_menu_medic_id
+    - action: utter_ask_platform_choice_medic_id
+    - intent: choose_website_platform_medic_id
+    - action: utter_who_can_access_medical_checkup_menu_web_medic_id
+
+- story: Asks about who can accss medical checkup menu - choose website in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: who_can_access_medical_checkup_menu_medic_en
+    - action: utter_ask_platform_choice_medic_en
+    - intent: choose_website_platform_medic_en
+    - action: utter_who_can_access_medical_checkup_menu_web_medic_en
+
+- story: Asks about what are filters in medical checkup menu - choose website in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: what_are_filters_in_medical_checkup_menu_medic_id
+    - action: utter_ask_platform_choice_medic_id
+    - intent: choose_website_platform_medic_id
+    - action: utter_what_are_filters_in_medical_checkup_menu_web_medic_id
+
+- story: Asks about what are filters in medical checkup menu - choose website in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: what_are_filters_in_medical_checkup_menu_medic_en
+    - action: utter_ask_platform_choice_medic_en
+    - intent: choose_website_platform_medic_en
+    - action: utter_what_are_filters_in_medical_checkup_menu_web_medic_en

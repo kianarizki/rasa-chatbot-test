@@ -12,7 +12,7 @@ import datetime
 from datetime import datetime, timedelta, date
 from babel.dates import format_datetime
 from actions.schema import MessageSchema,MessageDatePicker,MessageRangePicker, MessageSelectOptions
-from actions.services.mtn001m.api import get_001m_token,get_001m_report_daily_internal,get_001m_report_daily_external,get_001m_component_description,get_001m_model_dropdown,get_001m_internal_status_process,get_001m_forecast_allocation_report, reformat_date, get_001m_site_allocation,get_001m_model_manufacturers
+from actions.services.mtn001m.api import get_001m_token,get_001m_report_daily_internal,get_001m_report_daily_external,get_001m_component_description,get_001m_model_dropdown,get_001m_internal_status_process,get_001m_forecast_allocation_report, reformat_date, get_001m_site_allocation,get_001m_model_manufacturers, get_001m_jobs, get_001m_timesheets, get_001m_job_detail, get_001m_shipment, get_001m_shipment_detail
 
 logger = logging.getLogger(__name__)
 logger.info("Starting Action 001M Server")
@@ -576,7 +576,7 @@ class ActionGet001MForecastAllocationReportDateFilter(Action):
         return []
     
 
-class ActionAskDate001MForecastAllocationReport(Action):
+class ActionAskDateForecastAllocationReport(Action):
     def name(self) -> Text:
         # date_001m_forecast_allocation_report
         return "action_ask_date_001m_forecast_allocation_report"
@@ -660,7 +660,7 @@ class ActionAskAdditional001MForecastReport(Action):
             )
         return []
     
-class ActionAskAdditional001MForecastReportValue(Action):
+class ActionAskAdditional001MForecastValue(Action):
 
     def name(self) -> Text:
         return "action_ask_additional_001m_forecast_report_value"
@@ -811,3 +811,461 @@ class ActionCancelFollowup001MForecastAllocationReport(Action):
             dispatcher.utter_message("Thankyou")
            
         return [SlotSet("date_001m_forecast_allocation_report",None), SlotSet("additional_001m_forecast_report", None), SlotSet("additional_001m_forecast_report_value",None)]
+
+
+class ActionAskComponentName001M(Action):
+
+    def name(self)-> str:
+        return "action_ask_component_name_001m"
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict[Text, Any]]:
+        language = tracker.get_slot("language")
+
+        if language == "indonesia":
+            dispatcher.utter_message(text="Tolong sebutkan komponen yang Anda cari, contohnya: DESCMTNR")
+        
+        else:
+            dispatcher.utter_message(text="Please state the component you are looking for, example: DESCMTNR")
+        
+        return []
+    
+class ActionGet001MComponentEstimatedFinishDateForecastAllocationReport(Action):
+    def name(self) -> str:
+        return "action_get_001m_component_estimated_finish_date_forecast_allocation_report"
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict[Text, Any]]:
+        language = tracker.get_slot("language")
+        component_name = tracker.get_slot("component_name_001m")
+        token_001m = get_001m_token(tracker)
+        data = get_001m_jobs(token_001m=token_001m,  q_filter="comp_name", filter_value=[component_name])
+        message = ""
+        if data:
+            if len(data):
+                if language == "indonesia":
+                    message = f"Komponen {data[0]['mtn_information']['serial_number']} masih dalam proses, komponen ini diperkirakan selesai pada tanggal **{reformat_date(data[0]['production_line']['estimated_finish_date'])}**"
+                else:
+                    message = f"Component {data[0]['mtn_information']['serial_number']} is still in process, this component estimated will be done on **{reformat_date(data[0]['production_line']['estimated_finish_date'], 'english')}**"
+            else:
+                if language == "indonesia":
+                    message = f"Maaf, tidak ditemukan data untuk komponen {component_name}"
+                else:
+                    message = f"Sorry, there's no data for component {component_name}"
+        else:
+            if language == "indonesia":
+                message = "Maaf, sedang terjadi error dalam server"
+            else:
+                message = "Sorry, there was error on server"
+        
+        dispatcher.utter_message(message)
+
+
+
+        return [SlotSet("component_name_001m", None)]
+    
+class ActionGet001MComponentRepairLocationForecastAllocationReport(Action):
+
+    def name(self)-> str:
+        return "action_get_001m_component_repair_location_forecast_allocation_report"
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict[Text, Any]]:
+        language = tracker.get_slot("language")
+        component_name = tracker.get_slot("component_name_001m")
+        token_001m = get_001m_token(tracker)
+        data = get_001m_jobs(token_001m=token_001m, q_filter="comp_name", filter_value=[component_name])
+        message = ""
+        doc = snakemd.Document()
+        table_data = []
+
+        if data:
+            if len(data):
+                if language == "indonesia":
+                    message = f"Baik, informasi perbaikan untuk komponen **{data[0]['mtn_information']['serial_number']}** adalah sebagai berikut:\n"
+                    table_data.append(["Manufacture", data[0]['mtn_information']['model']['manufacturer']['name']])
+                    table_data.append(["Model", data[0]['mtn_information']['model']['name']])
+                    table_data.append(["Comp. Description", data[0]['mtn_information']['component_description']])
+                    table_data.append(["Repair By", data[0]['repair_information']['repair_by']])
+                    table_data.append(["Repair/Rebuild As", data[0]['repair_information']['repair_rebuild_as']])
+                    table_data.append(["Repair Location", data[0]['repair_information']['repair_location']])
+                    table_data.append(["Process", data[0]['production_line']['status_process']])
+                    table_data.append(["Progress", f"{data[0]['repair_information']['progress']}%"])
+                    table_data.append(["Component Status", data[0]['repair_information']['component_status']])
+                    table_data.append(["Estimated Finish Date", reformat_date(data[0]['production_line']['estimated_finish_date'])])
+
+                else:
+                    message = f"The information for component **{data[0]['mtn_information']['serial_number']}** are:\n"
+                    table_data.append(["Model", data[0]['mtn_information']['model']['name']])
+                    table_data.append(["Comp. Description", data[0]['mtn_information']['component_description']])
+                    table_data.append(["Repair By", data[0]['repair_information']['repair_by']])
+                    table_data.append(["Repair/Rebuild As", data[0]['repair_information']['repair_rebuild_as']])
+                    table_data.append(["Repair Location", data[0]['repair_information']['repair_location']])
+                    table_data.append(["Process", data[0]['production_line']['status_process']])
+                    table_data.append(["Progress", f"{data[0]['repair_information']['progress']}%"])
+                    table_data.append(["Component Status", data[0]['repair_information']['component_status']])
+                    table_data.append(["Estimated Finish Date", reformat_date(data[0]['production_line']['estimated_finish_date'])])
+
+            else:
+                if language == "indonesia":
+                    message = f"Maaf, tidak ditemukan data untuk komponen {component_name}"
+                else:
+                    message = f"Sorry, there's no data for component {component_name}"
+        else:
+            if language == "indonesia":
+                message = "Maaf, sedang terjadi error dalam server"
+            else:
+                message = "Sorry, there was error on server"
+        
+
+
+        dispatcher.utter_message(message)
+
+        if len(table_data):
+            doc.add_table(header=["Name", "Value"], data= table_data)
+            dispatcher.utter_message(doc.__str__())
+
+
+        return [SlotSet("component_name_001m", None)]
+
+class ActionGet001MApprovalRouteForecastAllocationReport(Action):
+    def name(self)-> str:
+        return "action_get_001m_approval_route_forecast_allocation_report"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict[Text, Any]]:
+        language = tracker.get_slot("language")
+        component_name = tracker.get_slot("component_name_001m")
+        token_001m = get_001m_token(tracker)
+        data = get_001m_jobs(token_001m=token_001m,  q_filter="comp_name", filter_value=[component_name])
+        message = ""
+        doc = snakemd.Document()
+        table_data = []
+        if data:
+            if len(data):
+                if language=="indonesia":
+
+                    message = f"Berikut proses persetujuan perbaikan komponen **{data[0]['mtn_information']['serial_number']}** dilakukan oleh:\n"
+                    message+= f"- Current Approval Status: **{self.approval_status_to_text(data[0]['approval_route']['approval_status'],data)}** \n"
+                    message+= "\n"
+                    message+= f"Approval Route Details:\n"
+                    message+= f"- Supervisor: \n"
+                    message+= f"Name: {data[0]['approval_route']['plant_supervisor']['name']}\n"
+                    message+= f"Role: {data[0]['approval_route']['plant_supervisor']['role']['name']}\n"
+                    if data[0]['approval_route']['plant_supervisor'].get('approval_status',None):
+                        message+= f"Approval Status: {'Approved' if data[0]['approval_route']['plant_supervisor']['approval_status'] else 'Not Approved'}\n"#Approved" if approval_status else "Not Approved"---> nilainya true and false. true (approved) false (not approved)
+                        message+= f"Approval Comment: {data[0]['approval_route']['plant_supervisor']['approval_comment']}\n"
+
+                    message += "\n"
+                    
+                    message+=f"- Superintendent: \n"
+                    message+=f"Name: {data[0]['approval_route']['plant_superintendent']['name']} \n"
+                    message+=f"Role: {data[0]['approval_route']['plant_superintendent']['role']['name']}\n"
+                    if data[0]['approval_route']['plant_superintendent'].get('approval_status',None):
+                        message+= f"Approval Status: {'Approved' if data[0]['approval_route']['plant_superintendent']['approval_status'] else 'Not Approved'}\n"#Approved" if approval_status else "Not Approved"---> nilainya true and false. true (approved) false (not approved)
+                        message+= f"Approval Comment: {data[0]['approval_route']['plant_superintendent']['approval_comment']}\n"
+                    
+                    message+= "\n"
+                    
+                    message+=f"- Manager: \n"
+                    message+=f"Name: {data[0]['approval_route']['plant_manager']['name']} \n"
+                    message+=f"Role: {data[0]['approval_route']['plant_manager']['role']['name']}\n"
+                    if data[0]['approval_route']['plant_manager'].get('approval_status',None):
+                        message+= f"Approval Status: {'Approved' if data[0]['approval_route']['plant_manager']['approval_status'] else 'Not Approved'}\n"#Approved" if approval_status else "Not Approved"---> nilainya true and false. true (approved) false (not approved)
+                        message+= f"Approval Comment: {data[0]['approval_route']['plant_manager']['approval_comment']}\n"
+                    
+                    message+= "\n"
+                
+                else:
+                    message = f"Here are approval process of **{data[0]['mtn_information']['serial_number']}** :\n"
+                    message+= f"- Current Approval Status: **{self.approval_status_to_text(data[0]['approval_route']['approval_status'],data)}** \n"
+                    message+= "\n"
+                    message+= f"Approval Route Details:\n"
+                    message+= f"- Supervisor: \n"
+                    message+= f"Name: {data[0]['approval_route']['plant_supervisor']['name']}\n"
+                    message+= f"Role: {data[0]['approval_route']['plant_supervisor']['role']['name']}\n"
+                    if data[0]['approval_route']['plant_supervisor'].get('approval_status',None):
+                        message+= f"Approval Status: {'Approved' if data[0]['approval_route']['plant_supervisor']['approval_status'] else 'Not Approved'}\n"#Approved" if approval_status else "Not Approved"---> nilainya true and false. true (approved) false (not approved)
+                        message+= f"Approval Comment: {data[0]['approval_route']['plant_supervisor']['approval_comment']}\n"
+
+                    message += "\n"
+                    
+                    message+=f"- Superintendent: \n"
+                    message+=f"Name: {data[0]['approval_route']['plant_superintendent']['name']} \n"
+                    message+=f"Role: {data[0]['approval_route']['plant_superintendent']['role']['name']}\n"
+                    if data[0]['approval_route']['plant_superintendent'].get('approval_status',None):
+                        message+= f"Approval Status: {'Approved' if data[0]['approval_route']['plant_superintendent']['approval_status'] else 'Not Approved'}\n"#Approved" if approval_status else "Not Approved"---> nilainya true and false. true (approved) false (not approved)
+                        message+= f"Approval Comment: {data[0]['approval_route']['plant_superintendent']['approval_comment']}\n"
+                    
+                    message+= "\n"
+                    
+                    message+=f"- Manager: \n"
+                    message+=f"Name: {data[0]['approval_route']['plant_manager']['name']} \n"
+                    message+=f"Role: {data[0]['approval_route']['plant_manager']['role']['name']}\n"
+                    if data[0]['approval_route']['plant_manager'].get('approval_status',None):
+                        message+= f"Approval Status: {'Approved' if data[0]['approval_route']['plant_manager']['approval_status'] else 'Not Approved'}\n"#Approved" if approval_status else "Not Approved"---> nilainya true and false. true (approved) false (not approved)
+                        message+= f"Approval Comment: {data[0]['approval_route']['plant_manager']['approval_comment']}\n"
+                    
+                    message+= "\n"
+
+            else:
+                if language == "indonesia":
+                    message = f"Maaf, tidak ditemukan data untuk komponen {component_name}"
+                else:
+                    message = f"Sorry, there's no data for component {component_name}"
+        else:
+            if language == "indonesia":
+                message = "Maaf, sedang terjadi error dalam server"
+            else:
+                message = "Sorry, there was error on server"
+        dispatcher.utter_message(message)
+        if len(table_data):
+            doc.add_table(header=["Name", "Value"], data= table_data)
+            dispatcher.utter_message(doc.__str__())
+        return [SlotSet("component_name_001m", None)]
+
+    def approval_status_to_text(self,status,data)-> str:
+        if status == None :
+            if not data[0]['approval_route']['plant_supervisor'].get('approval_status',None):
+                return "Waiting Approval Supervisor"
+            
+            if not data[0]['approval_route']['plant_superintendent'].get('approval_status',None):
+                return "Waiting Approval Superintendent"
+
+            if not data[0]['approval_route']['plant_manager'].get('approval_status',None):
+                return "Waiting Approval Manager"
+            return "Waiting Approval"
+        
+        if status == 0 :
+            return "Waiting Approval Supervisor"
+
+        if status == 1 :
+            return "Waiting Approval Superintendent"
+
+        if status == 2:
+            return "Waiting Approval Manager"
+        
+        if status == 4:
+            return "Waiting Approval Admin"
+        
+        if status == -4:
+            return "Not Approved by Admin"
+
+        if status == -1 :
+            return "Not Approved by Superintendent"
+        
+        if status == -2 :
+            return "Not Approved by Manager"
+
+    
+class ActionGet001MMechanicNameOnComponentRepairsForecastAllocationReport(Action):
+    def name(self)-> str:
+        return "action_get_001m_mechanic_name_on_component_repairs_forecast_allocation_report"
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict[Text, Any]]:
+        language = tracker.get_slot("language")
+        component_name = tracker.get_slot("component_name_001m")
+        token_001m = get_001m_token(tracker)
+        data = get_001m_jobs(token_001m=token_001m, q_filter="comp_name", filter_value=[component_name])
+        message = ""
+        doc = snakemd.Document()
+        table_data = []
+        if data:
+            if len(data):
+                data_timesheet = get_001m_timesheets(token_001m=token_001m,q_filter="job-id",filter_value=[data[0]['id']])
+                if language == "indonesia":
+                    message = f"Saat ini, perbaikan komponen **{data[0]['mtn_information']['serial_number']}** sedang dikerjakan oleh:\n"
+                    table_data.append(["Manufacture", data[0]['mtn_information']['model']['manufacturer']['name']])
+                    table_data.append(["Model", data[0]['mtn_information']['model']['name']])
+                    table_data.append(["Comp. Description", data[0]['mtn_information']['component_description']])
+                    table_data.append(["Mechanic Name", data_timesheet[0]['mechanic']['name']])
+                    table_data.append(["Mechanic NIK", data_timesheet[0]['mechanic']['nik']])
+                    table_data.append(["Repair Location", data[0]['repair_information']['repair_location']])
+                    table_data.append(["Progress", f"{data[0]['repair_information']['progress']}%"])
+                    table_data.append(["Status Process", data_timesheet[0]['status_process']])
+                    table_data.append(["Estimated Finish Date", reformat_date(data[0]['production_line']['estimated_finish_date'])])
+
+                else:
+                    message = f"Currently, component **{data[0]['mtn_information']['serial_number']}** is worked by:\n"
+                    table_data.append(["Manufacture", data[0]['mtn_information']['model']['manufacturer']['name']])
+                    table_data.append(["Model", data[0]['mtn_information']['model']['name']])
+                    table_data.append(["Comp. Description", data[0]['mtn_information']['component_description']])
+                    table_data.append(["Mechanic Name", data_timesheet[0]['mechanic']['name']])
+                    table_data.append(["Mechanic NIK", data_timesheet[0]['mechanic']['nik']])
+                    table_data.append(["Repair Location", data[0]['repair_information']['repair_location']])
+                    table_data.append(["Progress", f"{data[0]['repair_information']['progress']}%"])
+                    table_data.append(["Status Process", data_timesheet[0]['status_process']])
+                    table_data.append(["Estimated Finish Date", reformat_date(data[0]['production_line']['estimated_finish_date'])])
+
+            else:
+                if language == "indonesia":
+                    message = f"Maaf, tidak ditemukan data untuk komponen {component_name}"
+                else:
+                    message = f"Sorry, there's no data for component {component_name}"
+        else:
+            if language == "indonesia":
+                message = "Maaf, sedang terjadi error dalam server"
+            else:
+                message = "Sorry, there was error on server"
+
+        dispatcher.utter_message(message)
+        if len(table_data):
+            doc.add_table(header=["Name", "Value"], data= table_data)
+            dispatcher.utter_message(doc.__str__())
+
+        return [SlotSet("component_name_001m", None)]
+
+class ActionGet001MechanicCurrentTaskOnComponentRepairsForecastAllocationReport(Action):
+    def name(self)-> str:
+        return "action_get_001m_mechanic_current_task_on_component_repairs_forecast_allocation_report"
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict[Text, Any]]:
+        language = tracker.get_slot("language")
+        component_name = tracker.get_slot("mechanic_nik_001m")
+        token_001m = get_001m_token(tracker)
+        data_timesheet = get_001m_timesheets(token_001m=token_001m,q_filter="mechanic",filter_value=[component_name])
+        message = ""
+        doc = snakemd.Document()
+        table_data = []
+        if data_timesheet:
+            if len(data_timesheet):
+                data = get_001m_job_detail(token_001m=token_001m, job_id=data_timesheet[0]['job']['id'])
+                if language == "indonesia":
+                    message = f"Saat ini, **{data_timesheet[0]['mechanic']['name']}** sedang mengerjakan perbaikan pada komponen **{data[0]['mtn_information']['serial_number']}**\n"
+                    table_data.append(["Manufacture", data[0]['mtn_information']['model']['manufacturer']['name']])
+                    table_data.append(["Model", data[0]['mtn_information']['model']['name']])
+                    table_data.append(["Comp. Description", data[0]['mtn_information']['component_description']])
+                    table_data.append(["Repair Location", data[0]['repair_information']['repair_location']])
+                    table_data.append(["Progress", f"{data[0]['repair_information']['progress']}%"])
+                    table_data.append(["Component Status", data[0]['repair_information']['component_status']])
+                    table_data.append(["Estimated Finish Date", reformat_date(data[0]['production_line']['estimated_finish_date'])])
+
+                else:
+                    message = f"Currently, **{data_timesheet[0]['mechanic']['name']}** is fixing on component **{data[0]['mtn_information']['serial_number']}**\n"
+                    table_data.append(["Manufacture", data[0]['mtn_information']['model']['manufacturer']['name']])
+                    table_data.append(["Model", data[0]['mtn_information']['model']['name']])
+                    table_data.append(["Comp. Description", data[0]['mtn_information']['component_description']])
+                    table_data.append(["Repair Location", data[0]['repair_information']['repair_location']])
+                    table_data.append(["Progress", f"{data[0]['repair_information']['progress']}%"])
+                    table_data.append(["Component Status", data[0]['repair_information']['component_status']])
+                    table_data.append(["Estimated Finish Date", reformat_date(data[0]['production_line']['estimated_finish_date'])])
+
+            else:
+                if language == "indonesia":
+                    message = f"Maaf, tidak ditemukan data untuk mekanik {component_name}"
+                else:
+                    message = f"Sorry, there's no data for mechanic {component_name}"
+        else:
+            if language == "indonesia":
+                message = "Maaf, sedang terjadi error dalam server"
+            else:
+                message = "Sorry, there was error on server"
+        
+        dispatcher.utter_message(message)
+        if len(table_data):
+            doc.add_table(header=["Name", "Value"], data= table_data)
+            dispatcher.utter_message(doc.__str__())
+        return [SlotSet("mechanic_nik_001m", None)]
+    
+
+class ActionAskMechanicNIK001M(Action):
+    def name(self)-> str:
+        return "action_ask_mechanic_nik_001m"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict[Text, Any]]:
+        language = tracker.get_slot("language")
+
+        if language == "indonesia":
+            dispatcher.utter_message(text="Tolong sebutkan NIK mekanik yang Anda cari, contohnya: 1010")
+        
+        else:
+            dispatcher.utter_message(text="Please state the mechanic NIK you are looking for, example: 1010")
+        
+        return []
+    
+
+class ActionGet001MShipmentStatusForComponentRepairsTraceabilityReport(Action):
+    def name(self)-> str:
+        return "action_get_001m_shipment_status_for_component_repairs_traceabilty_report"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict[Text, Any]]:
+        language = tracker.get_slot("language")
+        component_name = tracker.get_slot("component_name_001m")
+        token_001m = get_001m_token(tracker)
+        data = get_001m_jobs(token_001m=token_001m, q_filter="comp_name", filter_value=[component_name])
+        doc = snakemd.Document()
+        table_data = []
+        if data:
+            if len(data):
+                data_shipment = get_001m_shipment(token_001m=token_001m,q_filter="job-id",filter_value=[data[0].get("id",1)])
+                data_detail = get_001m_shipment_detail(token_001m=token_001m,shipment_id=data_shipment[0].get("id",1))
+                if language == "indonesia":
+                    message = f"Baik, status pengiriman untuk komponen **{component_name}** saat ini:\n"
+                    message+= f"Job Details:\n"
+                    message+= f"- Manufacture: {data_shipment[0]['manufacturer']}\n"
+                    message+= f"- Model: {data_shipment[0]['model']}\n"
+                    message+= f"- MTN Routable: {data_shipment[0]['serial_number']}\n"
+                    message+= f"- Component Part Number: {data_shipment[0]['component']}\n"
+                    message+= f"- Component Description: {data_shipment[0]['component_description']}\n"
+                    message+= f"- Component Status: {data_shipment[0]['component_status']}\n"
+                    message+= f"- Site Origin: {data_shipment[0]['site_origin']}\n"
+                    message+= f"- Unit Origin: {data_shipment[0]['unit_origin']}\n"
+                    message+= f"- Site Allocation: {data_shipment[0]['site_allocation']}\n"
+                    message+= f"- Unit Allocation: {data_shipment[0]['unit_allocation']}\n"
+                    message+= f"- Last Updated: {reformat_date(data_shipment[0]['updated_at'])}\n"
+                    message+= f"- Process: {data_shipment[0]['status']['name']}\n"
+
+                    message+= "\n"
+
+                    message+=f"Progress Details:\n"
+
+                    for i in range(len(data_detail.get("timeline",[]))):
+                        message+=f"- Date: {data_detail['timeline'][i]['updated_at']}\n"
+                        message+=f"Status: {data_detail['timeline'][i]['status']['name']}\n"
+                        message+=f"Updated by: {data_detail['timeline'][i]['user']['nik']} - {data_detail['timeline'][i]['user']['name']} - {data_detail['timeline'][i]['user']['role']['name']} \n"
+                        message+=f"Description: {data_detail['timeline'][i]['description']}\n"
+
+
+                else:
+                    message = f"Currently, component **{data[0]['mtn_information']['serial_number']}** is worked by:\n"
+                    message+= f"Job Details:\n"
+                    message+= f"- Manufacture: {data_shipment[0]['manufacturer']}\n"
+                    message+= f"- Model: {data_shipment[0]['model']}\n"
+                    message+= f"- MTN Routable: {data_shipment[0]['serial_number']}\n"
+                    message+= f"- Component Part Number: {data_shipment[0]['component']}\n"
+                    message+= f"- Component Description: {data_shipment[0]['component_description']}\n"
+                    message+= f"- Component Status: {data_shipment[0]['component_status']}\n"
+                    message+= f"- Site Origin: {data_shipment[0]['site_origin']}\n"
+                    message+= f"- Unit Origin: {data_shipment[0]['unit_origin']}\n"
+                    message+= f"- Site Allocation: {data_shipment[0]['site_allocation']}\n"
+                    message+= f"- Unit Allocation: {data_shipment[0]['unit_allocation']}\n"
+                    message+= f"- Last Updated: {reformat_date(data_shipment[0]['updated_at'])}\n"
+                    message+= f"- Process: {data_shipment[0]['status']['name']}\n"
+
+                    message+= "\n"
+
+                    message+=f"Progress Details:\n"
+
+                    for i in range(len(data_detail.get("timeline",[]))):
+                        message+=f"- Date: {data_detail['timeline'][i]['updated_at']}\n"
+                        message+=f"Status: {data_detail['timeline'][i]['status']['name']}\n"
+                        message+=f"Updated by: {data_detail['timeline'][i]['user']['nik']} - {data_detail['timeline'][i]['user']['name']} - {data_detail['timeline'][i]['user']['role']['name']} \n"
+                        message+=f"Description: {data_detail['timeline'][i]['description']}\n"
+
+            else:
+                if language == "indonesia":
+                    message = f"Maaf, tidak ditemukan data untuk komponen {component_name}"
+                else:
+                    message = f"Sorry, there's no data for component {component_name}"
+        else:
+            if language == "indonesia":
+                message = "Maaf, sedang terjadi error dalam server"
+            else:
+                message = "Sorry, there was error on server"
+        
+        dispatcher.utter_message(message)
+
+        if len(table_data):
+            doc.add_table(header=["Name", "Value"], data= table_data)
+            dispatcher.utter_message(doc.__str__())
+        
+        return [SlotSet("component_name_001m", None)]
+
+
+

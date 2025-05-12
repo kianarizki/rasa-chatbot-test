@@ -1,797 +1,797 @@
-version: "3.1"
-rules:
-- rule: Handle select 001M app for get daily report internal request in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-  - intent: ask_request_daily_internal_report_001m_id
-  - action: utter_select_apps_for_daily_report_internal_001M_id
-
-- rule: Handle select 001M app for get daily report internal request in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-  - intent: ask_request_daily_internal_report_001m_en
-  - action: utter_select_apps_for_daily_report_internal_001M_en
-
-- rule: Activate daily report internal select 001M apps form in Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - intent: daily_report_internal_choose_001M_app_id
-    - action: get_daily_report_select_001m_by_date_internal_form
-    - active_loop: get_daily_report_select_001m_by_date_internal_form
-
-- rule: Activate daily report internal select 001M apps form in English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - intent: daily_report_internal_choose_001M_app_en
-    - action: get_daily_report_select_001m_by_date_internal_form
-    - active_loop: get_daily_report_select_001m_by_date_internal_form
-
-- rule: Submit daily report internal select 001M apps in Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - action: get_daily_report_select_001m_by_date_internal_form
-    - slot_was_set:
-      - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_report_daily_internal_date_filter
-    - action: utter_filter_data_report_internal_001M_id
-
-- rule: Submit daily report internal select 001M apps in English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - action: get_daily_report_select_001m_by_date_internal_form
-    - slot_was_set:
-      - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_report_daily_internal_date_filter
-    - action: utter_filter_data_report_internal_001M_en
-
-- rule: Activate daily report internal additional 001m filter in Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - intent: affirm_filter_data_report_internal_001M_id
-    - action: get_daily_report_select_001m_by_additional_internal_form
-    - active_loop: get_daily_report_select_001m_by_additional_internal_form
-
-- rule: Submit daily report internal additional 001m filter in Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - action: get_daily_report_select_001m_by_additional_internal_form
-    - slot_was_set:
-      - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_report_daily_internal_additional_filter
-    - action: utter_filter_data_report_internal_001M_id
-
-- rule: Activate daily report internal additional 001m filter in English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - intent: affirm_filter_data_report_internal_001M_en
-    - action: get_daily_report_select_001m_by_additional_internal_form
-    - active_loop: get_daily_report_select_001m_by_additional_internal_form
-
-- rule: Submit daily report internal additional 001m filter in English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - action: get_daily_report_select_001m_by_additional_internal_form
-    - slot_was_set:
-      - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_report_daily_internal_additional_filter
-    - action: utter_filter_data_report_internal_001M_en
-
-- rule: Activate request daily internal report 001M form in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: request_daily_internal_report_choose_001M_id
-    - action: get_daily_report_select_001m_by_date_internal_form
-    - active_loop: get_daily_report_select_001m_by_date_internal_form
-
-- rule: Submit request daily internal report 001M in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - action: get_daily_report_select_001m_by_date_internal_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_report_daily_internal_date_filter
-    - action: utter_filter_data_report_internal_001M_id
-
-- rule: Activate request daily internal report 001M form in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: request_daily_internal_report_choose_001M_en
-    - action: get_daily_report_select_001m_by_date_internal_form
-    - active_loop: get_daily_report_select_001m_by_date_internal_form
-
-- rule: Submit request daily internal report 001M in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - action: get_daily_report_select_001m_by_date_internal_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_report_daily_internal_date_filter
-    - action: utter_filter_data_report_internal_001M_en
-
-- rule: Clean Internal 001m Report In Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - intent: deny_filter_data_report_internal_001M_id
-    - action: action_cancel_followup_001m_daily_report
-
-- rule: Clean Internal 001m Report In English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - intent: deny_filter_data_report_internal_001M_en
-    - action: action_cancel_followup_001m_daily_report
-
-#######################################
-
-- rule: Handle select 001M app for get daily report external request in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-  - intent: ask_request_daily_external_report_001m_id
-  - action: utter_select_apps_for_daily_report_external_001M_id
-
-- rule: Handle select 001M app for get daily report external request in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-  - intent: ask_request_daily_external_report_001m_en
-  - action: utter_select_apps_for_daily_report_external_001M_en
-
-- rule: Activate daily report external select 001M apps form in Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - intent: daily_report_external_choose_001M_app_id
-    - action: get_daily_report_select_001m_by_date_external_form
-    - active_loop: get_daily_report_select_001m_by_date_external_form
-
-- rule: Activate daily report external select 001M apps form in English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - intent: daily_report_external_choose_001M_app_en
-    - action: get_daily_report_select_001m_by_date_external_form
-    - active_loop: get_daily_report_select_001m_by_date_external_form
-
-- rule: Submit daily report external select 001M apps in Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - action: get_daily_report_select_001m_by_date_external_form
-    - slot_was_set:
-      - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_report_daily_external_date_filter
-    - action: utter_filter_data_report_external_001M_id
-
-- rule: Submit daily report external select 001M apps in English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - action: get_daily_report_select_001m_by_date_external_form
-    - slot_was_set:
-      - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_report_daily_external_date_filter
-    - action: utter_filter_data_report_external_001M_en
-
-- rule: Activate daily report external additional 001m filter in Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - intent: affirm_filter_data_report_external_001M_id
-    - action: get_daily_report_select_001m_by_additional_external_form
-    - active_loop: get_daily_report_select_001m_by_additional_external_form
-
-- rule: Submit daily report external additional 001m filter in Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - action: get_daily_report_select_001m_by_additional_external_form
-    - slot_was_set:
-      - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_report_daily_external_additional_filter
-    - action: utter_filter_data_report_external_001M_id
-
-- rule: Activate daily report external additional 001m filter in English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - intent: affirm_filter_data_report_external_001M_en
-    - action: get_daily_report_select_001m_by_additional_external_form
-    - active_loop: get_daily_report_select_001m_by_additional_external_form
-
-- rule: Submit daily report external additional 001m filter in English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - action: get_daily_report_select_001m_by_additional_external_form
-    - slot_was_set:
-      - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_report_daily_external_additional_filter
-    - action: utter_filter_data_report_external_001M_en
-
-- rule: Clean External 001m Report In Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - intent: deny_filter_data_report_external_001M_id
-    - action: action_cancel_followup_001m_daily_report
-
-- rule: Clean External 001m Report In English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - intent: deny_filter_data_report_external_001M_en
-    - action: action_cancel_followup_001m_daily_report
-
-- rule: Activate request daily external report 001M form in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: request_daily_external_report_choose_001M_id
-    - action: get_daily_report_select_001m_by_date_external_form
-    - active_loop: get_daily_report_select_001m_by_date_external_form
-
-- rule: Submit request daily external report 001M in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - action: get_daily_report_select_001m_by_date_external_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_report_daily_external_date_filter
-    - action: utter_filter_data_report_external_001M_id
-
-- rule: Activate request daily external report 001M form in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: request_daily_external_report_choose_001M_en
-    - action: get_daily_report_select_001m_by_date_external_form
-    - active_loop: get_daily_report_select_001m_by_date_external_form
-
-- rule: Submit request daily external report 001M in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - action: get_daily_report_select_001m_by_date_external_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_report_daily_external_date_filter
-    - action: utter_filter_data_report_external_001M_en
-
-- rule: Handle select 001M app for get forecasting & allocation report in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-  - intent: ask_request_forecast_allocation_report_001M_id 
-  - action: utter_select_apps_for_forecast_allocation_report_001M_id
-
-- rule: Handle select 001M app for get forecasting & allocation report in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-  - intent: ask_request_forecast_allocation_report_001M_en
-  - action: utter_select_apps_for_forecast_allocation_report_001M_en
-
-- rule: Activate forecasting & allocation report select 001M apps form in Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - intent: forecasting_allocation_report_choose_001M_app_id
-    - action: get_forecast_allocation_report_select_001m_by_date_form
-    - active_loop: get_forecast_allocation_report_select_001m_by_date_form
-
-- rule: Submit forecasting & allocation report select 001M apps in Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - action: get_forecast_allocation_report_select_001m_by_date_form
-    - slot_was_set:
-      - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_forecast_allocation_report_date_filter
-    - action: utter_filter_data_forecast_allocation_report_001m_id
-
-- rule: Activate forecasting & allocation report select 001M apps form in English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - intent: forecasting_allocation_report_choose_001M_app_en
-    - action: get_forecast_allocation_report_select_001m_by_date_form
-    - active_loop: get_forecast_allocation_report_select_001m_by_date_form
-
-- rule: Submit forecasting & allocation report select 001M apps in English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - action: get_forecast_allocation_report_select_001m_by_date_form
-    - slot_was_set:
-      - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_forecast_allocation_report_date_filter
-    - action: utter_filter_data_forecast_allocation_report_001m_en
-
-- rule: Activate forecasting & allocation report additional 001m in Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - intent: affirm_filter_data_forecast_allocation_report_001m_id
-    - action: get_forecast_allocation_report_select_001m_by_additional_form
-    - active_loop: get_forecast_allocation_report_select_001m_by_additional_form
-
-- rule: Submit forecasting & allocation report additional 001m filter in Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - action: get_forecast_allocation_report_select_001m_by_additional_form
-    - slot_was_set:
-      - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_forecast_allocation_report_additional_filter
-    - action: utter_filter_data_forecast_allocation_report_001m_id
-
-- rule: Activate forecasting & allocation report additional 001m in English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - intent: affirm_filter_data_forecast_allocation_report_001m_en
-    - action: get_forecast_allocation_report_select_001m_by_additional_form
-    - active_loop: get_forecast_allocation_report_select_001m_by_additional_form
-
-- rule: Submit forecasting & allocation report additional 001m filter in English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - action: get_forecast_allocation_report_select_001m_by_additional_form
-    - slot_was_set:
-      - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_forecast_allocation_report_additional_filter
-    - action: utter_filter_data_forecast_allocation_report_001m_en
-
-- rule: Clean forecasting & allocation report 001M In Indonesia
-  condition:
-    - slot_was_set:
-      - language: indonesia
-  steps:
-    - intent: deny_filter_data_forecast_allocation_report_001m_id
-    - action: action_cancel_followup_001m_forecast_allocation_report
-
-- rule: Clean forecasting & allocation report 001M In English
-  condition:
-    - slot_was_set:
-      - language: english
-  steps:
-    - intent: deny_filter_data_forecast_allocation_report_001m_en
-    - action: action_cancel_followup_001m_forecast_allocation_report
-
-- rule: Activate request forecasting & allocation report 001M form in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: request_forecasting_allocation_report_choose_001M_id
-    - action: get_forecast_allocation_report_select_001m_by_date_form
-    - active_loop: get_forecast_allocation_report_select_001m_by_date_form
-
-- rule: Submit request forecasting & allocation report 001M in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - action: get_forecast_allocation_report_select_001m_by_date_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_forecast_allocation_report_date_filter
-    - action: utter_filter_data_forecast_allocation_report_001m_id
-
-- rule: Activate request forecasting & allocation report 001M form in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: request_forecasting_allocation_report_choose_001M_en
-    - action: get_forecast_allocation_report_select_001m_by_date_form
-    - active_loop: get_forecast_allocation_report_select_001m_by_date_form
-
-- rule: Submit request forecasting & allocation report 001M in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - action: get_forecast_allocation_report_select_001m_by_date_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_forecast_allocation_report_date_filter
-    - action: utter_filter_data_forecast_allocation_report_001m_en
-
-- rule: Activate estimate component repair finish date report 001M form in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: estimate_component_repair_finish_date_001M_id
-    - action: get_estimate_component_repair_finish_date_report_001m_form
-    - active_loop: get_estimate_component_repair_finish_date_report_001m_form
-
-- rule: Submit estimate component repair finish date report 001M in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - action: get_estimate_component_repair_finish_date_report_001m_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_component_estimated_finish_date_forecast_allocation_report
-
-- rule: Activate estimate component repair finish date report 001M form in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: estimate_component_repair_finish_date_001M_en
-    - action: get_estimate_component_repair_finish_date_report_001m_form
-    - active_loop: get_estimate_component_repair_finish_date_report_001m_form
-
-- rule: Submit estimate component repair finish date report 001M in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - action: get_estimate_component_repair_finish_date_report_001m_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_component_estimated_finish_date_forecast_allocation_report
-
-- rule: Activate get repair location report 001M form in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: get_component_repair_location_001M_id
-    - action: get_component_repair_location_report_001m_form
-    - active_loop: get_component_repair_location_report_001m_form
-
-- rule: Submit repair location report 001M in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - action: get_component_repair_location_report_001m_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_component_repair_location_forecast_allocation_report
-
-- rule: Activate get repair location report 001M form in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: get_component_repair_location_001M_en
-    - action: get_component_repair_location_report_001m_form
-    - active_loop: get_component_repair_location_report_001m_form
-
-- rule: Submit repair location report 001M in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - action: get_component_repair_location_report_001m_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_component_repair_location_forecast_allocation_report
-
-- rule: Activate get approval status route component repair report 001M form in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: get_approval_status_route_component_repair_001M_id
-    - action: get_approval_route_component_repair_report_001m_form
-    - active_loop: get_approval_route_component_repair_report_001m_form
-
-- rule: Submit approval status route component repair report 001M in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - action: get_approval_route_component_repair_report_001m_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_approval_route_forecast_allocation_report
-
-- rule: Activate get approval status route component repair report 001M form in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: get_approval_status_route_component_repair_001M_en
-    - action: get_approval_route_component_repair_report_001m_form
-    - active_loop: get_approval_route_component_repair_report_001m_form
-
-- rule: Submit approval status route component repair report 001M in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - action: get_approval_route_component_repair_report_001m_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_approval_route_forecast_allocation_report
-
-- rule: Activate get members name working on component report 001M form in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: get_employee_name_working_on_component_repair_001M_id 
-    - action: get_members_working_on_component_report_001m_form
-    - active_loop: get_members_working_on_component_report_001m_form
-
-- rule: Submit to know whom members working on component report 001M in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - action: get_members_working_on_component_report_001m_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_mechanic_name_on_component_repairs_forecast_allocation_report
-
-- rule: Activate get members name working on component report 001M form in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: get_employee_name_working_on_component_repair_001M_en
-    - action: get_members_working_on_component_report_001m_form
-    - active_loop: get_members_working_on_component_report_001m_form
-
-- rule: Submit to know whom members working on component report 001M in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - action: get_members_working_on_component_report_001m_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_mechanic_name_on_component_repairs_forecast_allocation_report
-
-- rule: Activate get employee current task on component report 001M form in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: get_employee_current_task_on_component_repair_001M_id
-    - action: get_mechanic_name_forecast_allocation_report_001m_form
-    - active_loop: get_mechanic_name_forecast_allocation_report_001m_form
-
-- rule: Submit members whom working on current task report 001M in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - action: get_mechanic_name_forecast_allocation_report_001m_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_mechanic_current_task_on_component_repairs_forecast_allocation_report
+# version: "3.1"
+# rules:
+# - rule: Handle select 001M app for get daily report internal request in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#   - intent: ask_request_daily_internal_report_001m_id
+#   - action: utter_select_apps_for_daily_report_internal_001M_id
+
+# - rule: Handle select 001M app for get daily report internal request in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#   - intent: ask_request_daily_internal_report_001m_en
+#   - action: utter_select_apps_for_daily_report_internal_001M_en
+
+# - rule: Activate daily report internal select 001M apps form in Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - intent: daily_report_internal_choose_001M_app_id
+#     - action: get_daily_report_select_001m_by_date_internal_form
+#     - active_loop: get_daily_report_select_001m_by_date_internal_form
+
+# - rule: Activate daily report internal select 001M apps form in English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - intent: daily_report_internal_choose_001M_app_en
+#     - action: get_daily_report_select_001m_by_date_internal_form
+#     - active_loop: get_daily_report_select_001m_by_date_internal_form
+
+# - rule: Submit daily report internal select 001M apps in Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - action: get_daily_report_select_001m_by_date_internal_form
+#     - slot_was_set:
+#       - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_internal_date_filter
+#     - action: utter_filter_data_report_internal_001M_id
+
+# - rule: Submit daily report internal select 001M apps in English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - action: get_daily_report_select_001m_by_date_internal_form
+#     - slot_was_set:
+#       - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_internal_date_filter
+#     - action: utter_filter_data_report_internal_001M_en
+
+# - rule: Activate daily report internal additional 001m filter in Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - intent: affirm_filter_data_report_internal_001M_id
+#     - action: get_daily_report_select_001m_by_additional_internal_form
+#     - active_loop: get_daily_report_select_001m_by_additional_internal_form
+
+# - rule: Submit daily report internal additional 001m filter in Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - action: get_daily_report_select_001m_by_additional_internal_form
+#     - slot_was_set:
+#       - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_internal_additional_filter
+#     - action: utter_filter_data_report_internal_001M_id
+
+# - rule: Activate daily report internal additional 001m filter in English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - intent: affirm_filter_data_report_internal_001M_en
+#     - action: get_daily_report_select_001m_by_additional_internal_form
+#     - active_loop: get_daily_report_select_001m_by_additional_internal_form
+
+# - rule: Submit daily report internal additional 001m filter in English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - action: get_daily_report_select_001m_by_additional_internal_form
+#     - slot_was_set:
+#       - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_internal_additional_filter
+#     - action: utter_filter_data_report_internal_001M_en
+
+# - rule: Activate request daily internal report 001M form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: request_daily_internal_report_choose_001M_id
+#     - action: get_daily_report_select_001m_by_date_internal_form
+#     - active_loop: get_daily_report_select_001m_by_date_internal_form
+
+# - rule: Submit request daily internal report 001M in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_daily_report_select_001m_by_date_internal_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_internal_date_filter
+#     - action: utter_filter_data_report_internal_001M_id
+
+# - rule: Activate request daily internal report 001M form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: request_daily_internal_report_choose_001M_en
+#     - action: get_daily_report_select_001m_by_date_internal_form
+#     - active_loop: get_daily_report_select_001m_by_date_internal_form
+
+# - rule: Submit request daily internal report 001M in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_daily_report_select_001m_by_date_internal_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_internal_date_filter
+#     - action: utter_filter_data_report_internal_001M_en
+
+# - rule: Clean Internal 001m Report In Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - intent: deny_filter_data_report_internal_001M_id
+#     - action: action_cancel_followup_001m_daily_report
+
+# - rule: Clean Internal 001m Report In English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - intent: deny_filter_data_report_internal_001M_en
+#     - action: action_cancel_followup_001m_daily_report
+
+# #######################################
+
+# - rule: Handle select 001M app for get daily report external request in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#   - intent: ask_request_daily_external_report_001m_id
+#   - action: utter_select_apps_for_daily_report_external_001M_id
+
+# - rule: Handle select 001M app for get daily report external request in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#   - intent: ask_request_daily_external_report_001m_en
+#   - action: utter_select_apps_for_daily_report_external_001M_en
+
+# - rule: Activate daily report external select 001M apps form in Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - intent: daily_report_external_choose_001M_app_id
+#     - action: get_daily_report_select_001m_by_date_external_form
+#     - active_loop: get_daily_report_select_001m_by_date_external_form
+
+# - rule: Activate daily report external select 001M apps form in English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - intent: daily_report_external_choose_001M_app_en
+#     - action: get_daily_report_select_001m_by_date_external_form
+#     - active_loop: get_daily_report_select_001m_by_date_external_form
+
+# - rule: Submit daily report external select 001M apps in Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - action: get_daily_report_select_001m_by_date_external_form
+#     - slot_was_set:
+#       - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_external_date_filter
+#     - action: utter_filter_data_report_external_001M_id
+
+# - rule: Submit daily report external select 001M apps in English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - action: get_daily_report_select_001m_by_date_external_form
+#     - slot_was_set:
+#       - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_external_date_filter
+#     - action: utter_filter_data_report_external_001M_en
+
+# - rule: Activate daily report external additional 001m filter in Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - intent: affirm_filter_data_report_external_001M_id
+#     - action: get_daily_report_select_001m_by_additional_external_form
+#     - active_loop: get_daily_report_select_001m_by_additional_external_form
+
+# - rule: Submit daily report external additional 001m filter in Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - action: get_daily_report_select_001m_by_additional_external_form
+#     - slot_was_set:
+#       - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_external_additional_filter
+#     - action: utter_filter_data_report_external_001M_id
+
+# - rule: Activate daily report external additional 001m filter in English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - intent: affirm_filter_data_report_external_001M_en
+#     - action: get_daily_report_select_001m_by_additional_external_form
+#     - active_loop: get_daily_report_select_001m_by_additional_external_form
+
+# - rule: Submit daily report external additional 001m filter in English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - action: get_daily_report_select_001m_by_additional_external_form
+#     - slot_was_set:
+#       - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_external_additional_filter
+#     - action: utter_filter_data_report_external_001M_en
+
+# - rule: Clean External 001m Report In Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - intent: deny_filter_data_report_external_001M_id
+#     - action: action_cancel_followup_001m_daily_report
+
+# - rule: Clean External 001m Report In English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - intent: deny_filter_data_report_external_001M_en
+#     - action: action_cancel_followup_001m_daily_report
+
+# - rule: Activate request daily external report 001M form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: request_daily_external_report_choose_001M_id
+#     - action: get_daily_report_select_001m_by_date_external_form
+#     - active_loop: get_daily_report_select_001m_by_date_external_form
+
+# - rule: Submit request daily external report 001M in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_daily_report_select_001m_by_date_external_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_external_date_filter
+#     - action: utter_filter_data_report_external_001M_id
+
+# - rule: Activate request daily external report 001M form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: request_daily_external_report_choose_001M_en
+#     - action: get_daily_report_select_001m_by_date_external_form
+#     - active_loop: get_daily_report_select_001m_by_date_external_form
+
+# - rule: Submit request daily external report 001M in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_daily_report_select_001m_by_date_external_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_report_daily_external_date_filter
+#     - action: utter_filter_data_report_external_001M_en
+
+# - rule: Handle select 001M app for get forecasting & allocation report in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#   - intent: ask_request_forecast_allocation_report_001M_id 
+#   - action: utter_select_apps_for_forecast_allocation_report_001M_id
+
+# - rule: Handle select 001M app for get forecasting & allocation report in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#   - intent: ask_request_forecast_allocation_report_001M_en
+#   - action: utter_select_apps_for_forecast_allocation_report_001M_en
+
+# - rule: Activate forecasting & allocation report select 001M apps form in Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - intent: forecasting_allocation_report_choose_001M_app_id
+#     - action: get_forecast_allocation_report_select_001m_by_date_form
+#     - active_loop: get_forecast_allocation_report_select_001m_by_date_form
+
+# - rule: Submit forecasting & allocation report select 001M apps in Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - action: get_forecast_allocation_report_select_001m_by_date_form
+#     - slot_was_set:
+#       - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_forecast_allocation_report_date_filter
+#     - action: utter_filter_data_forecast_allocation_report_001m_id
+
+# - rule: Activate forecasting & allocation report select 001M apps form in English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - intent: forecasting_allocation_report_choose_001M_app_en
+#     - action: get_forecast_allocation_report_select_001m_by_date_form
+#     - active_loop: get_forecast_allocation_report_select_001m_by_date_form
+
+# - rule: Submit forecasting & allocation report select 001M apps in English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - action: get_forecast_allocation_report_select_001m_by_date_form
+#     - slot_was_set:
+#       - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_forecast_allocation_report_date_filter
+#     - action: utter_filter_data_forecast_allocation_report_001m_en
+
+# - rule: Activate forecasting & allocation report additional 001m in Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - intent: affirm_filter_data_forecast_allocation_report_001m_id
+#     - action: get_forecast_allocation_report_select_001m_by_additional_form
+#     - active_loop: get_forecast_allocation_report_select_001m_by_additional_form
+
+# - rule: Submit forecasting & allocation report additional 001m filter in Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - action: get_forecast_allocation_report_select_001m_by_additional_form
+#     - slot_was_set:
+#       - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_forecast_allocation_report_additional_filter
+#     - action: utter_filter_data_forecast_allocation_report_001m_id
+
+# - rule: Activate forecasting & allocation report additional 001m in English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - intent: affirm_filter_data_forecast_allocation_report_001m_en
+#     - action: get_forecast_allocation_report_select_001m_by_additional_form
+#     - active_loop: get_forecast_allocation_report_select_001m_by_additional_form
+
+# - rule: Submit forecasting & allocation report additional 001m filter in English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - action: get_forecast_allocation_report_select_001m_by_additional_form
+#     - slot_was_set:
+#       - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_forecast_allocation_report_additional_filter
+#     - action: utter_filter_data_forecast_allocation_report_001m_en
+
+# - rule: Clean forecasting & allocation report 001M In Indonesia
+#   condition:
+#     - slot_was_set:
+#       - language: indonesia
+#   steps:
+#     - intent: deny_filter_data_forecast_allocation_report_001m_id
+#     - action: action_cancel_followup_001m_forecast_allocation_report
+
+# - rule: Clean forecasting & allocation report 001M In English
+#   condition:
+#     - slot_was_set:
+#       - language: english
+#   steps:
+#     - intent: deny_filter_data_forecast_allocation_report_001m_en
+#     - action: action_cancel_followup_001m_forecast_allocation_report
+
+# - rule: Activate request forecasting & allocation report 001M form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: request_forecasting_allocation_report_choose_001M_id
+#     - action: get_forecast_allocation_report_select_001m_by_date_form
+#     - active_loop: get_forecast_allocation_report_select_001m_by_date_form
+
+# - rule: Submit request forecasting & allocation report 001M in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_forecast_allocation_report_select_001m_by_date_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_forecast_allocation_report_date_filter
+#     - action: utter_filter_data_forecast_allocation_report_001m_id
+
+# - rule: Activate request forecasting & allocation report 001M form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: request_forecasting_allocation_report_choose_001M_en
+#     - action: get_forecast_allocation_report_select_001m_by_date_form
+#     - active_loop: get_forecast_allocation_report_select_001m_by_date_form
+
+# - rule: Submit request forecasting & allocation report 001M in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_forecast_allocation_report_select_001m_by_date_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_forecast_allocation_report_date_filter
+#     - action: utter_filter_data_forecast_allocation_report_001m_en
+
+# - rule: Activate estimate component repair finish date report 001M form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: estimate_component_repair_finish_date_001M_id
+#     - action: get_estimate_component_repair_finish_date_report_001m_form
+#     - active_loop: get_estimate_component_repair_finish_date_report_001m_form
+
+# - rule: Submit estimate component repair finish date report 001M in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_estimate_component_repair_finish_date_report_001m_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_component_estimated_finish_date_forecast_allocation_report
+
+# - rule: Activate estimate component repair finish date report 001M form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: estimate_component_repair_finish_date_001M_en
+#     - action: get_estimate_component_repair_finish_date_report_001m_form
+#     - active_loop: get_estimate_component_repair_finish_date_report_001m_form
+
+# - rule: Submit estimate component repair finish date report 001M in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_estimate_component_repair_finish_date_report_001m_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_component_estimated_finish_date_forecast_allocation_report
+
+# - rule: Activate get repair location report 001M form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_component_repair_location_001M_id
+#     - action: get_component_repair_location_report_001m_form
+#     - active_loop: get_component_repair_location_report_001m_form
+
+# - rule: Submit repair location report 001M in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_component_repair_location_report_001m_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_component_repair_location_forecast_allocation_report
+
+# - rule: Activate get repair location report 001M form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_component_repair_location_001M_en
+#     - action: get_component_repair_location_report_001m_form
+#     - active_loop: get_component_repair_location_report_001m_form
+
+# - rule: Submit repair location report 001M in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_component_repair_location_report_001m_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_component_repair_location_forecast_allocation_report
+
+# - rule: Activate get approval status route component repair report 001M form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_approval_status_route_component_repair_001M_id
+#     - action: get_approval_route_component_repair_report_001m_form
+#     - active_loop: get_approval_route_component_repair_report_001m_form
+
+# - rule: Submit approval status route component repair report 001M in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_approval_route_component_repair_report_001m_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_approval_route_forecast_allocation_report
+
+# - rule: Activate get approval status route component repair report 001M form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_approval_status_route_component_repair_001M_en
+#     - action: get_approval_route_component_repair_report_001m_form
+#     - active_loop: get_approval_route_component_repair_report_001m_form
+
+# - rule: Submit approval status route component repair report 001M in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_approval_route_component_repair_report_001m_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_approval_route_forecast_allocation_report
+
+# - rule: Activate get members name working on component report 001M form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_employee_name_working_on_component_repair_001M_id 
+#     - action: get_members_working_on_component_report_001m_form
+#     - active_loop: get_members_working_on_component_report_001m_form
+
+# - rule: Submit to know whom members working on component report 001M in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_members_working_on_component_report_001m_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_mechanic_name_on_component_repairs_forecast_allocation_report
+
+# - rule: Activate get members name working on component report 001M form in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: get_employee_name_working_on_component_repair_001M_en
+#     - action: get_members_working_on_component_report_001m_form
+#     - active_loop: get_members_working_on_component_report_001m_form
+
+# - rule: Submit to know whom members working on component report 001M in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - action: get_members_working_on_component_report_001m_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_mechanic_name_on_component_repairs_forecast_allocation_report
+
+# - rule: Activate get employee current task on component report 001M form in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: get_employee_current_task_on_component_repair_001M_id
+#     - action: get_mechanic_name_forecast_allocation_report_001m_form
+#     - active_loop: get_mechanic_name_forecast_allocation_report_001m_form
+
+# - rule: Submit members whom working on current task report 001M in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - action: get_mechanic_name_forecast_allocation_report_001m_form
+#     - slot_was_set:
+#         - requested_slot: null
+#     - active_loop: null
+#     - action: action_get_001m_mechanic_current_task_on_component_repairs_forecast_allocation_report
     
-- rule: Activate get employee current task on component report 001M form in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: get_employee_current_task_on_component_repair_001M_en
-    - action: get_mechanic_name_forecast_allocation_report_001m_form
-    - active_loop: get_mechanic_name_forecast_allocation_report_001m_form
-
-- rule: Submit members whom working on current task report 001M in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - action: get_mechanic_name_forecast_allocation_report_001m_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_mechanic_current_task_on_component_repairs_forecast_allocation_report
-
-- rule: Activate get shipment status on component repair report 001M form in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: get_shipment_status_on_component_repair_001M_id
-    - action: get_shipment_status_on_component_repair_report_001m_form
-    - active_loop: get_shipment_status_on_component_repair_report_001m_form
-
-- rule: Submit shipment status on component repair report 001M in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - action: get_shipment_status_on_component_repair_report_001m_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_shipment_status_for_component_repairs_traceabilty_report
-
-- rule: Activate get shipment status on component repair report 001M form in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: get_shipment_status_on_component_repair_001M_en
-    - action: get_shipment_status_on_component_repair_report_001m_form
-    - active_loop: get_shipment_status_on_component_repair_report_001m_form
-
-- rule: Submit shipment status on component repair report 001M in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - action: get_shipment_status_on_component_repair_report_001m_form
-    - slot_was_set:
-        - requested_slot: null
-    - active_loop: null
-    - action: action_get_001m_shipment_status_for_component_repairs_traceabilty_report
-
-# - rule: Activate get component status report 001M form in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: get_component_status_001M_id
-#     - action: get_component_status_report_001m_form
-#     - active_loop: get_component_status_report_001m_form
-
-# - rule: Submit component status report 001M in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - action: get_component_status_report_001m_form
-#     - slot_was_set:
-#         - requested_slot: null
-#     - active_loop: null
-#     - action: action_get_001m_component_status_forecast_allocation_report
-
-# - rule: Activate get component status report 001M form in English
+# - rule: Activate get employee current task on component report 001M form in English
 #   condition:
 #     - slot_was_set:
 #         - language: english
 #   steps:
-#     - intent: get_component_status_001M_en
-#     - action: get_component_status_report_001m_form
-#     - active_loop: get_component_status_report_001m_form
+#     - intent: get_employee_current_task_on_component_repair_001M_en
+#     - action: get_mechanic_name_forecast_allocation_report_001m_form
+#     - active_loop: get_mechanic_name_forecast_allocation_report_001m_form
 
-# - rule: Submit component status report 001M in English
+# - rule: Submit members whom working on current task report 001M in English
 #   condition:
 #     - slot_was_set:
 #         - language: english
 #   steps:
-#     - action: get_component_status_report_001m_form
+#     - action: get_mechanic_name_forecast_allocation_report_001m_form
 #     - slot_was_set:
 #         - requested_slot: null
 #     - active_loop: null
-#     - action: action_get_001m_component_status_forecast_allocation_report
+#     - action: action_get_001m_mechanic_current_task_on_component_repairs_forecast_allocation_report
 
-# - rule: Activate get component allocation report 001M form in Indonesia
+# - rule: Activate get shipment status on component repair report 001M form in Indonesia
 #   condition:
 #     - slot_was_set:
 #         - language: indonesia
 #   steps:
-#     - intent: get_component_allocation_001M_id
-#     - action: get_component_allocation_report_001m_form
-#     - active_loop: get_component_allocation_report_001m_form
+#     - intent: get_shipment_status_on_component_repair_001M_id
+#     - action: get_shipment_status_on_component_repair_report_001m_form
+#     - active_loop: get_shipment_status_on_component_repair_report_001m_form
 
-# - rule: Submit component allocation report 001M in Indonesia
+# - rule: Submit shipment status on component repair report 001M in Indonesia
 #   condition:
 #     - slot_was_set:
 #         - language: indonesia
 #   steps:
-#     - action: get_component_allocation_report_001m_form
+#     - action: get_shipment_status_on_component_repair_report_001m_form
 #     - slot_was_set:
 #         - requested_slot: null
 #     - active_loop: null
-#     - action: action_get_001m_component_allocation_forecast_allocation_report
+#     - action: action_get_001m_shipment_status_for_component_repairs_traceabilty_report
 
-# - rule: Activate get component allocation report 001M form in English
+# - rule: Activate get shipment status on component repair report 001M form in English
 #   condition:
 #     - slot_was_set:
 #         - language: english
 #   steps:
-#     - intent: get_component_allocation_001M_en
-#     - action: get_component_allocation_report_001m_form
-#     - active_loop: get_component_allocation_report_001m_form
+#     - intent: get_shipment_status_on_component_repair_001M_en
+#     - action: get_shipment_status_on_component_repair_report_001m_form
+#     - active_loop: get_shipment_status_on_component_repair_report_001m_form
 
-# - rule: Submit component allocation report 001M in English
+# - rule: Submit shipment status on component repair report 001M in English
 #   condition:
 #     - slot_was_set:
 #         - language: english
 #   steps:
-#     - action: get_component_allocation_report_001m_form
+#     - action: get_shipment_status_on_component_repair_report_001m_form
 #     - slot_was_set:
 #         - requested_slot: null
 #     - active_loop: null
-#     - action: action_get_001m_component_allocation_forecast_allocation_report
+#     - action: action_get_001m_shipment_status_for_component_repairs_traceabilty_report
+
+# # - rule: Activate get component status report 001M form in Indonesia
+# #   condition:
+# #     - slot_was_set:
+# #         - language: indonesia
+# #   steps:
+# #     - intent: get_component_status_001M_id
+# #     - action: get_component_status_report_001m_form
+# #     - active_loop: get_component_status_report_001m_form
+
+# # - rule: Submit component status report 001M in Indonesia
+# #   condition:
+# #     - slot_was_set:
+# #         - language: indonesia
+# #   steps:
+# #     - action: get_component_status_report_001m_form
+# #     - slot_was_set:
+# #         - requested_slot: null
+# #     - active_loop: null
+# #     - action: action_get_001m_component_status_forecast_allocation_report
+
+# # - rule: Activate get component status report 001M form in English
+# #   condition:
+# #     - slot_was_set:
+# #         - language: english
+# #   steps:
+# #     - intent: get_component_status_001M_en
+# #     - action: get_component_status_report_001m_form
+# #     - active_loop: get_component_status_report_001m_form
+
+# # - rule: Submit component status report 001M in English
+# #   condition:
+# #     - slot_was_set:
+# #         - language: english
+# #   steps:
+# #     - action: get_component_status_report_001m_form
+# #     - slot_was_set:
+# #         - requested_slot: null
+# #     - active_loop: null
+# #     - action: action_get_001m_component_status_forecast_allocation_report
+
+# # - rule: Activate get component allocation report 001M form in Indonesia
+# #   condition:
+# #     - slot_was_set:
+# #         - language: indonesia
+# #   steps:
+# #     - intent: get_component_allocation_001M_id
+# #     - action: get_component_allocation_report_001m_form
+# #     - active_loop: get_component_allocation_report_001m_form
+
+# # - rule: Submit component allocation report 001M in Indonesia
+# #   condition:
+# #     - slot_was_set:
+# #         - language: indonesia
+# #   steps:
+# #     - action: get_component_allocation_report_001m_form
+# #     - slot_was_set:
+# #         - requested_slot: null
+# #     - active_loop: null
+# #     - action: action_get_001m_component_allocation_forecast_allocation_report
+
+# # - rule: Activate get component allocation report 001M form in English
+# #   condition:
+# #     - slot_was_set:
+# #         - language: english
+# #   steps:
+# #     - intent: get_component_allocation_001M_en
+# #     - action: get_component_allocation_report_001m_form
+# #     - active_loop: get_component_allocation_report_001m_form
+
+# # - rule: Submit component allocation report 001M in English
+# #   condition:
+# #     - slot_was_set:
+# #         - language: english
+# #   steps:
+# #     - action: get_component_allocation_report_001m_form
+# #     - slot_was_set:
+# #         - requested_slot: null
+# #     - active_loop: null
+# #     - action: action_get_001m_component_allocation_forecast_allocation_report

@@ -2863,7 +2863,7 @@ stories:
   - intent: deny_filter_data_report_external_001m_en
   - action: action_cancel_followup_001m_report
 
-- story: Handle request daily external report 
+- story: Handle request daily external report 001M
   steps:
   - slot_was_set:
     - language: indonesia
@@ -2876,7 +2876,7 @@ stories:
   - action: action_get_001m_report_daily_external_date_filter
   - action: utter_filter_data_report_external_001m_id
 
-- story: Handle request daily external report 
+- story: Handle request daily external report 001M
   steps:
   - slot_was_set:
     - language: english
@@ -2888,3 +2888,671 @@ stories:
   - active_loop: null
   - action: action_get_001m_report_daily_external_date_filter
   - action: utter_filter_data_report_external_001m_en
+
+- story: Handle select 001M app for get forecasting & allocation report 001M
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      kirimkan forecasting dan allocation report
+    intent: ask_request_forecast_allocation_report_001M_id
+  - action: utter_select_apps_for_forecast_allocation_report_001M_id
+  - intent: forecasting_allocation_report_choose_001M_app_id
+  - action: get_forecast_allocation_report_select_001m_by_date_form
+  - active_loop: get_forecast_allocation_report_select_001m_by_date_form
+  - active_loop: null
+  - action: action_get_001m_forecast_allocation_report_date_filter
+  - action: utter_filter_data_forecast_allocation_report_001m_id
+
+- story: Handle select 001M app for get forecasting & allocation report 001M
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      send forecasting and allocation report
+    intent: ask_request_forecast_allocation_report_001M_en
+  - action: utter_select_apps_for_forecast_allocation_report_001M_en
+  - intent: forecasting_allocation_report_choose_001M_app_en
+  - action: get_forecast_allocation_report_select_001m_by_date_form
+  - active_loop: get_forecast_allocation_report_select_001m_by_date_form
+  - active_loop: null
+  - action: action_get_001m_forecast_allocation_report_date_filter
+  - action: utter_filter_data_forecast_allocation_report_001m_en
+
+- story: Handle affirm filter forecasting & allocation report additional 001M
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - intent: affirm_filter_data_forecast_allocation_report_001m_id
+  - action: get_forecast_allocation_report_select_001m_by_additional_form
+  - active_loop: get_forecast_allocation_report_select_001m_by_additional_form
+  - active_loop: null
+  - action: action_get_001m_forecast_allocation_report_additional_filter
+  - action: utter_filter_data_forecast_allocation_report_001m_id
+
+- story: Handle affirm filter forecasting & allocation report additional 001M
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: affirm_filter_data_forecast_allocation_report_001m_en
+  - action: get_forecast_allocation_report_select_001m_by_additional_form
+  - active_loop: get_forecast_allocation_report_select_001m_by_additional_form
+  - active_loop: null
+  - action: action_get_001m_forecast_allocation_report_additional_filter
+  - action: utter_filter_data_forecast_allocation_report_001m_en
+
+- story: Handle deny filter forecasting & allocation report additional 001M
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - intent: deny_filter_data_forecast_allocation_report_001m_id
+  - action: action_cancel_followup_001m_forecast_allocation_report
+
+- story: Handle deny filter forecasting & allocation report additional 001M
+  steps:
+  - slot_was_set:
+    - language: english
+  - intent: deny_filter_data_forecast_allocation_report_001m_en
+  - action: action_cancel_followup_001m_forecast_allocation_report
+
+- story: Handle request forecasting & allocation report 001M
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Berikan forecasting & allocation report 001M
+    intent: request_forecasting_allocation_report_choose_001M_id
+  - action: get_forecast_allocation_report_select_001m_by_date_form
+  - active_loop: get_forecast_allocation_report_select_001m_by_date_form
+  - active_loop: null
+  - action: action_get_001m_forecast_allocation_report_date_filter
+  - action: utter_filter_data_forecast_allocation_report_001m_id
+
+- story: Handle request forecasting & allocation report 001M
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Provide forecasting & allocation report 001M
+    intent: request_forecasting_allocation_report_choose_001M_en
+  - action: get_forecast_allocation_report_select_001m_by_date_form
+  - active_loop: get_forecast_allocation_report_select_001m_by_date_form
+  - active_loop: null
+  - action: action_get_001m_forecast_allocation_report_date_filter
+  - action: utter_filter_data_forecast_allocation_report_001m_en
+
+- story: Handle estimate component repair finish date report 001M
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Kapan komponen TESTEXT2 diperkirakan selesai diperbaiki?
+    intent: estimate_component_repair_finish_date_001M_id
+  - action: get_estimate_component_repair_finish_date_report_001m_form
+  - active_loop: get_estimate_component_repair_finish_date_report_001m_form
+  - active_loop: null
+  - action: action_get_001m_component_estimated_finish_date_forecast_allocation_report
+
+- story: Handle estimate component repair finish date report 001M
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      When is the TESTEXT2 component expected to be repaired?
+    intent: estimate_component_repair_finish_date_001M_en
+  - action: get_estimate_component_repair_finish_date_report_001m_form
+  - active_loop: get_estimate_component_repair_finish_date_report_001m_form
+  - active_loop: null
+  - action: action_get_001m_component_estimated_finish_date_forecast_allocation_report
+
+- story: Handle repair location report 001M
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Dimana lokasi perbaikan komponen TESTEXT2?
+    intent: get_component_repair_location_001M_id
+  - action: get_component_repair_location_report_001m_form
+  - active_loop: get_component_repair_location_report_001m_form
+  - active_loop: null
+  - action: action_get_001m_component_repair_location_forecast_allocation_report
+
+- story: Handle repair location report 001M
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Where is the location for repair of TESTEXT2 components?
+    intent: get_component_repair_location_001M_en
+  - action: get_component_repair_location_report_001m_form
+  - active_loop: get_component_repair_location_report_001m_form
+  - active_loop: null
+  - action: action_get_001m_component_repair_location_forecast_allocation_report
+
+- story: Handle approval status route component repair report 001M
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Siapa yang memberi persetujuan perbaikan untuk komponen TESTEXT2?
+    intent: get_approval_status_route_component_repair_001M_id
+  - action: get_approval_route_component_repair_report_001m_form
+  - active_loop: get_approval_route_component_repair_report_001m_form
+  - active_loop: null
+  - action: action_get_001m_approval_route_forecast_allocation_report
+
+- story: Handle approval status route component repair report 001M
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Who approves fixes for TESTEXT2 components?
+    intent: get_approval_status_route_component_repair_001M_en
+  - action: get_approval_route_component_repair_report_001m_form
+  - active_loop: get_approval_route_component_repair_report_001m_form
+  - active_loop: null
+  - action: action_get_001m_approval_route_forecast_allocation_report
+
+- story: Handle get members name working on component report 001M
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Siapa yang sedang bekerja pada perbaikan komponen DESCMTNR?
+    intent: get_employee_name_working_on_component_repair_001M_id
+  - action: get_members_working_on_component_report_001m_form
+  - active_loop: get_members_working_on_component_report_001m_form
+  - active_loop: null
+  - action: action_get_001m_mechanic_name_on_component_repairs_forecast_allocation_report
+
+- story: Handle get members name working on component report 001M
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Who is working on the DESCMTNR component fix?
+    intent: get_employee_name_working_on_component_repair_001M_en
+  - action: get_members_working_on_component_report_001m_form
+  - active_loop: get_members_working_on_component_report_001m_form
+  - active_loop: null
+  - action: action_get_001m_mechanic_name_on_component_repairs_forecast_allocation_report
+
+- story: Handle get employee current task on component report 001M
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Saat ini Wahyu mengerjakan pekerjaan di komponen apa?
+    intent: get_employee_current_task_on_component_repair_001M_id
+  - action: get_mechanic_name_forecast_allocation_report_001m_form
+  - active_loop: get_mechanic_name_forecast_allocation_report_001m_form
+  - active_loop: null
+  - action: action_get_001m_mechanic_current_task_on_component_repairs_forecast_allocation_report
+
+- story: Handle get employee current task on component report 001M
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What component is Wahyu currently working on?
+    intent: get_employee_current_task_on_component_repair_001M_en
+  - action: get_mechanic_name_forecast_allocation_report_001m_form
+  - active_loop: get_mechanic_name_forecast_allocation_report_001m_form
+  - active_loop: null
+  - action: action_get_001m_mechanic_current_task_on_component_repairs_forecast_allocation_report
+
+- story: Handle shipment status on component repair report 001M
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa status pengiriman komponen TESTEXTRFU saat ini?
+    intent: get_shipment_status_on_component_repair_001M_id
+  - action: get_shipment_status_on_component_repair_report_001m_form
+  - active_loop: get_shipment_status_on_component_repair_report_001m_form
+  - active_loop: null
+  - action: action_get_001m_shipment_status_for_component_repairs_traceabilty_report
+
+- story: Handle shipment status on component repair report 001M
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What is the current shipping status of TESTEXTRFU components?
+    intent: get_shipment_status_on_component_repair_001M_en
+  - action: get_shipment_status_on_component_repair_report_001m_form
+  - active_loop: get_shipment_status_on_component_repair_report_001m_form
+  - active_loop: null
+  - action: action_get_001m_shipment_status_for_component_repairs_traceabilty_report
+
+- story: Handle about Disease Management Menu Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa itu menu Disease Management?
+    intent: ask_about_disease_management_menu_medic_id
+  - action: utter_disease_management_menu_medic_id
+
+- story: Handle about Disease Management Menu
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What is the Disease Management menu?
+    intent: ask_about_disease_management_menu_medic_en
+  - action: utter_disease_management_menu_medic_en
+
+- story: Handle about disease management menu access
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Menu Disease Management bisa diakses oleh siapa saja?
+    intent: ask_disease_management_menu_access_medic_id
+  - action: utter_who_can_access_disease_management_menu_medic_id
+
+- story: Handle about disease management menu access
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Can anyone access the Disease Management menu?
+    intent: ask_disease_management_menu_access_medic_en
+  - action: utter_who_can_access_disease_management_menu_medic_en
+
+- story: Handle about paramedic change disease data
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah paramedis dapat mengubah data penyakit?
+    intent: ask_paramedic_change_disease_data_medic_id
+  - action: utter_paramedic_change_disease_data_medic_id
+
+- story: Handle about paramedic change disease data
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Can paramedics change disease data?
+    intent: ask_paramedic_change_disease_data_medic_en
+  - action: utter_paramedic_change_disease_data_medic_en
+
+- story: Handle about how to add new disease data
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Langkah-langkah untuk menambahkan data penyakit baru di sistem aplikasi medic madhani?
+    intent: ask_how_to_add_new_disease_data_medic_id
+  - action: utter_how_to_add_new_disease_data_medic_id
+
+- story: Handle about how to add new disease data
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Steps to add new disease data in the Medic Madhani application system?
+    intent: ask_how_to_add_new_disease_data_medic_en
+  - action: utter_how_to_add_new_disease_data_medic_en
+
+- story: Handle about info for adding new disase data
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja informasi yang perlu dimasukkan saat menambahkan data penyakit baru ke aplikasi medic?
+    intent: ask_about_info_for_adding_new_disease_data_medic_id
+  - action: utter_how_to_add_new_disease_data_medic_id
+
+- story: Handle about info for adding new disase data
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What information needs to be entered when adding new disease data to the medic application?
+    intent: ask_about_info_for_adding_new_disease_data_medic_en
+  - action: utter_how_to_add_new_disease_data_medic_en
+
+- story: Handle about disease type and add info
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa itu disease type dan bagaimana cara menambahkannya?
+    intent: ask_about_disease_type_and_add_info_medic_id
+  - action: utter_disease_type_add_and_info_medic_id
+
+- story: Handle about disease type and add info
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What is a disease type and how do I add one?
+    intent: ask_about_disease_type_and_add_info_medic_en
+  - action: utter_disease_type_add_and_info_medic_en
+
+- story: Handle about required fields empty
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa yang terjadi kalau ada field yang kosong saat saya nambah penyakit baru?
+    intent: ask_about_required_fields_empty_medic_id
+  - action: utter_about_required_fields_empty_medic_id
+
+- story: Handle about required fields empty
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What happens if there is an empty field when I add a new disease?
+    intent: ask_about_required_fields_empty_medic_en
+  - action: utter_about_required_fields_empty_medic_en
+
+- story: Handle about existing data entry in medic apps
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Gimana kalau data penyakit yang saya masukkan sudah terdaftar sebelumnya?
+    intent: ask_about_existing_data_entry_medic_id
+  - action: utter_about_existing_data_entry_medic_id
+
+- story: Handle about existing data entry in medic apps
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What if the disease data I entered has been registered previously?
+    intent: ask_about_existing_data_entry_medic_en
+  - action: utter_about_existing_data_entry_medic_en
+
+- story: Handle about post addition process add disease data
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Kalau data penyakit sudah berhasil ditambah, apa yang akan muncul?
+    intent: ask_about_post_addition_process_add_disease_data_medic_id
+  - action: utter_about_post_addition_process_add_disease_data_medic_id
+
+- story: Handle about post addition process add disease data
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      If the disease data has been successfully added, what will appear?
+    intent: ask_about_post_addition_process_add_disease_data_medic_en
+  - action: utter_about_post_addition_process_add_disease_data_medic_en
+
+- story: Handle about who can see disease data medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Setelah dokter menambahkan data penyakit baru, siapa yang bisa melihat data penyakit tersebut?
+    intent: ask_about_who_can_see_disease_data_medic_id
+  - action: utter_about_who_can_see_disease_data_medic_id
+
+- story: Handle about who can see disease data medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      After a doctor adds new disease data, who can see the disease data?
+    intent: ask_about_who_can_see_disease_data_medic_en
+  - action: utter_about_who_can_see_disease_data_medic_en
+
+- story: Handle about who can edit disease data medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Siapa yang memiliki akses untuk mengedit data penyakit?
+    intent: ask_about_who_can_edit_disease_data_medic_id
+  - action: utter_about_who_can_edit_disease_data_medic_id
+
+- story: Handle about who can edit disease data medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Who has access to edit disease data?
+    intent: ask_about_who_can_edit_disease_data_medic_en
+  - action: utter_about_who_can_edit_disease_data_medic_en
+
+- story: Handle about disease management menu connections with others menu Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah menu Disease Management terhubung dengan menu lain di sistem?
+    intent: ask_about_disease_management_menu_connections_medic_id
+  - action: utter_about_disease_management_menu_connections_medic_id
+
+- story: Handle about disease management menu connections with others menu Medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Is the Disease Management menu connected to other menus in the system?
+    intent: ask_about_disease_management_menu_connections_medic_en
+  - action: utter_about_disease_management_menu_connections_medic_en
+
+- story: Handle about effect of updating disease data used in other menu Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa yang terjadi jika dokter memperbarui data penyakit yang sudah digunakan dalam menu Medical Check Up, Medical Record FAR, dan Medical Record External?
+    intent: ask_about_effect_of_updating_disease_data_used_in_other_menus_medic_id
+  - action: utter_about_effect_of_updating_disease_data_used_in_other_menus_medic_id
+
+- story: Handle about effect of updating disease data used in other menu Medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What happens if a doctor updates disease data that has been used in the Medical Check Up, Medical Record FAR, and Medical Record External menus?
+    intent: ask_about_effect_of_updating_disease_data_used_in_other_menus_medic_en
+  - action: utter_about_effect_of_updating_disease_data_used_in_other_menus_medic_en
+
+- story: Handle about who can delete disease data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Siapa yang dapat menghapus data penyakit?
+    intent: ask_about_who_can_delete_disease_data_medic_id
+  - action: utter_about_who_can_delete_disease_data_medic_id
+
+- story: Handle about who can delete disease data Medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Who can delete disease data?
+    intent: ask_about_who_can_delete_disease_data_medic_en
+  - action: utter_about_who_can_delete_disease_data_medic_en
+
+- story: Handle about how to delete disease data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Cara hapus data penyakit?
+    intent: ask_about_how_to_delete_disease_data_medic_id
+  - action: utter_about_how_to_delete_disease_data_medic_id
+
+- story: Handle about how to delete disease data Medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How to delete disease data?
+    intent: ask_about_how_to_delete_disease_data_medic_en
+  - action: utter_about_how_to_delete_disease_data_medic_en
+
+- story: Handle about deleting used disease data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa yang terjadi kalau dokter coba hapus data penyakit yang udah dipakai?
+    intent: ask_about_deleting_used_disease_data_medic_id
+  - action: utter_about_deleting_used_disease_data_medic_id
+
+- story: Handle about deleting used disease data Medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What happens if a doctor tries to delete disease data that has been used?
+    intent: ask_about_deleting_used_disease_data_medic_en
+  - action: utter_about_deleting_used_disease_data_medic_en
+
+- story: Handle about deleting unused disease data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa yang terjadi kalau data penyakit belum dipakai di sistem?
+    intent: ask_about_deleting_unused_disease_data_medic_id
+  - action: utter_about_deleting_unused_disease_data_medic_id
+
+- story: Handle about deleting unused disease data Medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What happens if the disease data is not used in the system?
+    intent: ask_about_deleting_unused_disease_data_medic_en
+  - action: utter_about_deleting_unused_disease_data_medic_en
+
+- story: Handle about paramedic access in the future Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Kedepannya, paramedis bisa nggak ya edit data penyakit?
+    intent: ask_about_paramedics_access_in_the_future_medic_id
+  - action: utter_paramedic_change_disease_data_medic_id
+
+- story: Handle about paramedic access in the future Medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      In the future, will paramedics be able to edit disease data?
+    intent: ask_about_paramedics_access_in_the_future_medic_en
+  - action: utter_paramedic_change_disease_data_medic_en
+
+- story: Handle about how to filter disease data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Gimana cara filter data penyakit?
+    intent: ask_about_how_to_filter_disease_data_medic_id
+  - action: utter_about_how_to_filter_disease_data_medic_id
+
+- story: Handle about how to filter disease data Medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How to filter disease data?
+    intent: ask_about_how_to_filter_disease_data_medic_en
+  - action: utter_about_how_to_filter_disease_data_medic_en
+
+- story: Handle about how to search for disease data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Gimana cara cari penyakit tertentu?
+    intent: ask_about_how_to_search_for_disease_data_medic_id
+  - action: utter_about_how_to_search_for_disease_data_medic_id
+
+- story: Handle about how to search for disease data Medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How to search for a specific disease?
+    intent: ask_about_how_to_search_for_disease_data_medic_en
+  - action: utter_about_how_to_search_for_disease_data_medic_en
+
+- story: Handle about export and import disease data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah data penyakit bisa di export dan di import?
+    intent: ask_about_export_import_disease_data_medic_id
+  - action: utter_about_export_import_disease_data_medic_id
+
+- story: Handle about export and import disease data Medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Can disease data be exported and imported?
+    intent: ask_about_export_import_disease_data_medic_en
+  - action: utter_about_export_import_disease_data_medic_en
+
+- story: Handle about notification for paramedics data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah paramedis dapat notifikasi kalau dokter menambahkan penyakit baru?
+    intent: ask_about_notifications_for_paramedics_medic_id
+  - action: utter_about_notifications_for_paramedics_medic_id
+
+- story: Handle about notification for paramedics data Medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      Do paramedics get notified if a doctor adds a new disease?
+    intent: ask_about_notifications_for_paramedics_medic_en
+  - action: utter_about_notifications_for_paramedics_medic_en
+
+- story: Handle about how to edit disease data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Gimana cara edit data penyakit?
+    intent: ask_about_how_to_edit_disease_data_medic_id
+  - action: utter_about_how_to_edit_disease_data_medic_id
+
+- story: Handle about how to edit disease data Medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      How to edit disease data?
+    intent: ask_about_how_to_edit_disease_data_medic_en
+  - action: utter_about_how_to_edit_disease_data_medic_en
+
+- story: Handle about post edit disease data process Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa yang terjadi setelah data penyakit berhasil diperbarui?
+    intent: ask_about_post_edit_disease_data_process_medic_id
+  - action: utter_about_post_edit_disease_data_process_medic_id
+
+- story: Handle about post edit disease data process Medic
+  steps:
+  - slot_was_set:
+    - language: english
+  - user: |
+      What happens after the disease data is successfully updated?
+    intent: ask_about_post_edit_disease_data_process_medic_en
+  - action: utter_about_post_edit_disease_data_process_medic_en

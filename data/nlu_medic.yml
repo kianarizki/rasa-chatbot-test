@@ -1,6 +1,6 @@
 version: "3.1"
 nlu:
-- intent: ask_about_disease_management_menu_medic_id
+- intent: disease_management_menu_medic_id
   examples: |
     - Menu Disease Management itu membantu apa saja di aplikasi ini?
     - Menu Disease Management di sini untuk ngapain ya?
@@ -24,7 +24,7 @@ nlu:
     - Apa yang bisa kita lakukan di menu Disease Management?
     - Apa manfaat menu Disease Management di aplikasi ini?
 
-- intent: ask_disease_management_menu_access_medic_id
+- intent: disease_management_menu_access_medic_id
   examples: |
     - Siapa yang dapat mengakses menu Disease Management?
     - Menu Disease Management bisa diakses oleh siapa saja?
@@ -46,7 +46,7 @@ nlu:
     - Apa yang membedakan hak akses dokter dan paramedis di menu Disease Management?
     - Siapa yang dapat melakukan perubahan data di menu Disease Management?
 
-- intent: ask_paramedic_change_disease_data_medic_id
+- intent: paramedic_change_disease_data_medic_id
   examples: |
     - Apakah paramedis dapat mengubah data penyakit?
     - Apakah paramedis bisa edit atau hapus data penyakit?
@@ -70,7 +70,7 @@ nlu:
     - Kalau paramedis mau ubah data penyakit, bisa gak?
     - Apakah paramedis punya akses untuk edit data penyakit?
     
-- intent: ask_how_to_add_new_disease_data_medic_id
+- intent: how_to_add_new_disease_data_medic_id
   examples: |
     - Bagaimana cara menambahkan data penyakit baru?
     - Apa langkah-langkah untuk menambahkan data penyakit baru?
@@ -95,7 +95,7 @@ nlu:
     - Saya bingung, bagaimana menambahkan data penyakit di aplikasi medic?
     - Ada nggak langkah-langkah mudah buat nambahkan data penyakit baru ke sistem?
 
-- intent: ask_about_info_for_adding_new_disease_data_medic_id
+- intent: info_for_add_new_disease_data_medic_id
   examples: |
     - Apa saja informasi yang perlu dimasukkan saat menambahkan data penyakit baru ke aplikasi medic?
     - Data apa saja yang harus diisi untuk menambahkan data penyakit ke aplikasi medic?
@@ -110,7 +110,7 @@ nlu:
     - Bagaimana cara mengisi data untuk menambah penyakit baru ke aplikasi medic?
     - Apa yang harus diisi oleh dokter pada formulir untuk menambahkan data penyakit baru ke sistem aplikasi medic?
 
-- intent: ask_about_disease_type_and_add_info_medic_id
+- intent: disease_type_and_add_info_medic_id
   examples: |
     - Apa itu disease type dan bagaimana cara menambahkannya?
     - Apa yang dimaksud dengan disease type dan bagaimana edit daftar disease type tersebut?
@@ -137,7 +137,7 @@ nlu:
     - Menu khusus untuk edit data disease type di sistem ini?
     - Apakah saya bisa mengedit atau menambah disease type yang sudah ada?
 
-- intent: ask_about_required_fields_empty_medic_id
+- intent: required_fields_empty_medic_id
   examples: |
     - Apa yang terjadi kalau ada field yang kosong saat saya nambah penyakit baru?
     - Kalau saya nggak ngisi field yang wajib diisi pas nambahin penyakit baru, apa yang terjadi?
@@ -160,33 +160,31 @@ nlu:
     - Bagaimana sistem menanggapi kalau ada field yang kosong saat nambahin penyakit baru?
     - Apa yang dilakukan sistem kalau ada field kosong yang seharusnya wajib diisi saat nambahin data penyakit baru?
 
-- intent: ask_about_existing_data_entry_medic_id
+- intent: existing_data_entry_medic_id
   examples: |
-    - Apa yang terjadi kalau data yang dimasukkan sudah ada sebelumnya?
+    - Apa yang terjadi kalau data penyakit yang dimasukkan sudah ada sebelumnya?
     - Kalau saya coba nambahin data penyakit yang udah ada, apa yang terjadi?
     - Gimana kalau data penyakit yang saya masukkan sudah terdaftar sebelumnya?
     - Apa yang terjadi jika saya input data penyakit yang sudah ada di sistem?
-    - Kalau saya isi data yang sudah ada, apa yang terjadi?
-    - Kalau saya coba masukkan Code ICD yang sama, apakah ada pesan peringatan?
+    - Kalau saya isi data penyakit yang sudah ada, apa yang terjadi?
+    - Kalau saya coba masukkan data penyakit dengan Code ICD yang sama, apakah ada pesan peringatan?
     - Jika data penyakit yang sama sudah ada, apakah bisa tetap ditambah?
     - Apa yang terjadi kalau Code ICD yang saya masukkan sudah ada di sistem?
-    - Jika saya coba masukin data yang sudah terdaftar, apa yang terjadi pada aplikasi medic?
+    - Jika saya coba masukin data penyakit yang sudah terdaftar, apa yang terjadi pada aplikasi medic?
     - Bagaimana sistem menangani jika data penyakit sudah ada sebelumnya?
-    - Apa yang akan terjadi kalau saya masukkan data yang sudah tercatat di sistem?
-    - Kalau saya keliru masukkan data yang sama, apakah ada pesan pemberitahuan dari sistem?
+    - Apa yang akan terjadi kalau saya masukkan data penyakit yang sudah tercatat di sistem?
     - Apa yang terjadi jika saya input data penyakit yang sudah ada?
     - Jika saya memasukkan data penyakit dengan Code ICD yang sudah terdaftar, apa yang sistem lakukan?
-    - Apa yang muncul di layar kalau saya masukkan data yang sudah terdaftar?
-    - Apakah bisa masukin data yang sudah ada tanpa mengetahui kalau itu duplikasi?
-    - Kalau saya salah input data yang sudah ada, apa yang dilakukan sistem?
-    - Jika data yang sama sudah ada di sistem, apa yang terjadi saat saya coba masukkan lagi?
-    - Apakah saya masih bisa lanjutkan penambahan data jika sudah ada duplikasi?
+    - Apa yang muncul di layar kalau saya memasukkan data penyakit yang sudah terdaftar?
+    - Kalau saya salah input data penyakit yang sudah ada di sistem, apa yang dilakukan sistem?
+    - Jika data penyakit yang sudah ada di sistem, apa yang terjadi saat saya input data baru dengan data yang sama?
+    - Apakah saya masih bisa lanjutkan penambahan data penyakit jika sudah ada duplikasi?
     - Apa respon sistem kalau saya menginput data penyakit yang sama dengan yang sudah ada?
     - Kalau saya coba simpan data penyakit yang sudah ada, apakah ada pesan peringatan atau error?
-    - Gimana caranya supaya sistem bisa mencegah saya masukin data duplikasi?
+    - Gimana caranya supaya sistem bisa mencegah saya masukin data penyakit yg duplikasi?
     - Kalau saya input data penyakit dengan kode yang sama, aplikasi medic akan memberikan warning?
 
-- intent: ask_about_post_addition_process_add_disease_data_medic_id
+- intent: post_addition_process_add_disease_data_medic_id
   examples: |
     - Apa yang terjadi setelah data penyakit berhasil ditambahkan?
     - Kalau data penyakit sudah berhasil ditambah, apa yang akan muncul?
@@ -209,7 +207,7 @@ nlu:
     - Jika data penyakit berhasil ditambahkan, akan muncul pesan apa di sistem?
     - Apakah tabel penyakit akan langsung diperbarui setelah data penyakit baru ditambahkan ke sistem?
 
-- intent: ask_about_who_can_see_disease_data_medic_id
+- intent: who_can_see_disease_data_medic_id
   examples: |
     - Setelah dokter menambahkan data penyakit baru, siapa yang bisa melihat data penyakit tersebut?
     - Kalau dokter sudah tambahkan data penyakit, siapa yang dapat mengaksesnya?
@@ -231,7 +229,7 @@ nlu:
     - Setelah data penyakit baru dimasukkan oleh dokter, apakah hanya paramedis yang bisa melihatnya?
     - Jika dokter menambahkan data penyakit, siapa yang bisa mengakses data tersebut secara langsung?
 
-- intent: ask_about_who_can_edit_disease_data_medic_id
+- intent: who_can_edit_disease_data_medic_id
   examples: |
     - Siapa yang dapat mengedit data penyakit?
     - Kalau data penyakit perlu diubah, siapa yang bisa melakukannya?
@@ -253,7 +251,7 @@ nlu:
     - Siapa yang bisa mengubah detail data penyakit seperti kategori atau kode ICD?
     - Siapa yang punya hak untuk mengedit data penyakit yang ada di sistem?
 
-- intent: ask_about_disease_management_menu_connections_medic_id
+- intent: disease_management_menu_connections_medic_id
   examples: |
     - Apakah menu Disease Management terhubung dengan menu lain di sistem?
     - Menu Disease Management apakah terhubung dengan menu lain yang ada di aplikasi medic?
@@ -277,7 +275,7 @@ nlu:
     - Apakah menu Disease Management digunakan di menu Medical Record FAR dan Medical Record External?
     - Apakah ada koneksi antara Disease Management dengan Medical Checkup dan Medical Record External?
 
-- intent: ask_about_effect_of_updating_disease_data_used_in_other_menus_medic_id
+- intent: effect_of_updating_disease_data_used_in_other_menus_medic_id
   examples: |
     - Apa yang terjadi jika dokter memperbarui data penyakit yang sudah digunakan dalam menu Medical Check Up, Medical Record FAR, dan Medical Record External?
     - Kalau dokter mengupdate data penyakit yang sudah ada di Medical Check Up, Medical Record FAR, atau Medical Record External, apa yang akan terjadi?
@@ -301,7 +299,7 @@ nlu:
     - Apakah perubahan pada data penyakit akan mempengaruhi menu-menu lain di aplikasi medic madhani?
     - Jika saya mengupdate data penyakit di menu Medical Checkup, apakah perubahan itu otomatis terlihat di Medical Record FAR?
 
-- intent: ask_about_who_can_delete_disease_data_medic_id
+- intent: who_can_delete_disease_data_medic_id
   examples: |
     - Siapa yang dapat menghapus data penyakit?
     - Apakah paramedis bisa menghapus data penyakit?
@@ -323,7 +321,7 @@ nlu:
     - Kalau data penyakit tidak digunakan lagi dalam sistem, siapa yang dapat menghapusnya?
     - Apakah dokter bisa menghapus data penyakit yang sudah tidak relevan di sistem?
 
-- intent: ask_about_how_to_delete_disease_data_medic_id
+- intent: how_to_delete_disease_data_medic_id
   examples: |
     - Cara hapus data penyakit?
     - Langkah-langkah untuk menghapus data penyakit?
@@ -349,7 +347,7 @@ nlu:
     - Kalau saya ingin menghapus data penyakit yang ada di tabel, apa yang harus dilakukan?
     - Apa yang harus dilakukan dokter untuk menghapus data penyakit yang tidak digunakan lagi?
 
-- intent: ask_about_deleting_used_disease_data_medic_id
+- intent: deleting_used_disease_data_medic_id
   examples: |
     - Apa yang terjadi kalau dokter coba hapus data penyakit yang udah dipakai?
     - Kalau data penyakit udah digunakan, bisa nggak dihapus?
@@ -378,7 +376,7 @@ nlu:
   examples: |
     - hapus
 
-- intent: ask_about_deleting_unused_disease_data_medic_id
+- intent: deleting_unused_disease_data_medic_id
   examples: |
     - Apa yang terjadi kalau data penyakit belum dipakai di sistem?
     - Kalau data penyakit belum digunakan di sistem, bisa dihapus?
@@ -404,7 +402,7 @@ nlu:
   examples: |
     - ubah
 
-- intent: ask_about_paramedics_access_in_the_future_medic_id
+- intent: paramedics_access_disease_data_in_the_future_medic_id
   examples: |
     - Kedepannya, paramedis bisa nggak ya edit data penyakit?
     - Kalau paramedis mau ubah data penyakit, bisa nggak di masa depan?
@@ -426,7 +424,7 @@ nlu:
     - Kapan paramedis bisa ubah atau ngapus data penyakit?
     - Di masa depan apakah paramedis bisa edit data penyakit kalau ada perubahan?
 
-- intent: ask_about_how_to_filter_disease_data_medic_id
+- intent: how_to_filter_disease_data_medic_id
   examples: |
     - Gimana cara filter data penyakit?
     - Apa cara untuk memfilter daftar penyakit?
@@ -451,7 +449,7 @@ nlu:
     - Kalau saya cuma mau lihat penyakit tipe tertentu, bisa nggak di filter?
     - Bagaimana caranya supaya saya bisa pilih penyakit sesuai dengan jenisnya?
   
-- intent: ask_about_how_to_search_for_disease_data_medic_id
+- intent: how_to_search_for_disease_data_medic_id
   examples: |
     - Gimana cara cari penyakit tertentu?
     - Kalau mau cari penyakit, gimana caranya?
@@ -466,7 +464,7 @@ nlu:
     - Gimana caranya cari penyakit dengan kode atau nama?
     - Kalau saya mau cari penyakit spesifik, gimana cara pencariannya?
 
-- intent: ask_about_export_import_disease_data_medic_id
+- intent: export_import_disease_data_medic_id
   examples: |
     - Apakah data penyakit bisa di export dan di import?
     - Bisa nggak sih export atau import data penyakit?
@@ -491,7 +489,7 @@ nlu:
     - Bisa nggak sih saya unggah data penyakit dari file eksternal?
     - Bagaimana cara ngunduh template untuk data penyakit?
 
-- intent: ask_about_notifications_for_paramedics_medic_id
+- intent: notifications_for_paramedics_medic_id
   examples: |
     - Apakah paramedis dapat notifikasi kalau dokter menambahkan penyakit baru?
     - Kalau dokter nambahin penyakit baru, paramedis dapat pemberitahuan dari sistem?
@@ -505,7 +503,7 @@ nlu:
     - Paramedis apakah mendapat info dari sistem jika dokter menambahkan data penyakit baru?
     - Jika dokter menambahkan data penyakit ke aplikasi medic, apakah paramedis akan mendapatkan pesan pemberitahuan dari sistem?
 
-- intent: ask_about_how_to_edit_disease_data_medic_id
+- intent: how_to_edit_disease_data_medic_id
   examples: |
     - Gimana cara edit data penyakit?
     - Apa langkah-langkah untuk mengedit data penyakit?
@@ -527,7 +525,7 @@ nlu:
     - Gimana cara mengubah data penyakit yang ada?
     - Bagaimana prosedur untuk mengedit data penyakit yang sudah dimasukkan?
 
-- intent: ask_about_post_edit_disease_data_process_medic_id
+- intent: post_edit_disease_data_process_medic_id
   examples: |
     - Apa yang terjadi setelah data penyakit berhasil diperbarui?
     - Kalau data penyakit udah berhasil diperbarui, apa yang muncul di sistem?
@@ -547,3 +545,1491 @@ nlu:
     - Apakah perubahan data penyakit bisa langsung dilihat oleh paramedis setelah diperbarui?
     - Setelah data penyakit diperbarui, apakah langsung ada notifikasi untuk paramedis?
     - Setelah dokter memperbarui data penyakit di aplikasi medic, paramedis apakah mendapatkan pesan pemberitahuan?
+
+- intent: medicine_standard_menu_medic_id
+  examples: |
+    - Apa itu menu medicine standard?
+    - Jelaskan tentang medicine standard.
+    - Apa fungsi dari menu medicine standard?
+    - Bisa jelaskan apa itu menu medicine standard?
+    - Apa yang dimaksud dengan menu medicine standard?
+    - Bagaimana cara kerja menu medicine standard?
+    - Untuk apa menu medicine standard digunakan?
+    - Menu medicine standard itu apa sih?
+    - Ceritakan tentang menu medicine standard.
+    - Apa saja fitur yang ada di menu medicine standard?
+    - Apa saja yang bisa dikelola di menu medicine standard?
+    - Bisa kasih penjelasan tentang medicine standard?
+    - Menu medicine standard itu untuk apa saja?
+    - Apa fungsi utama dari medicine standard?
+    - Apa saja kategori yang ada di medicine standard?
+    - Apa yang termasuk dalam daftar obat di medicine standard?
+    - Apa peran menu medicine standard dalam sistem ini?
+    - Apa manfaat dari menu medicine standard?
+
+- intent: who_can_access_medicine_standard_menu_medic_id
+  examples: |
+    - Siapa yang dapat mengakses menu medicine standard?
+    - Siapa saja yang bisa mengakses medicine standard menu?
+    - Menu medicine standard bisa diakses oleh siapa saja?
+    - Siapa yang diperbolehkan mengakses menu medicine standard?
+    - Siapa yang memiliki akses ke menu medicine standard?
+    - Siapa yang bisa membuka medicine standard menu?
+    - Apakah semua orang bisa mengakses menu medicine standard?
+    - Siapa yang memiliki hak akses ke menu medicine standard?
+    - Siapa yang dapat menggunakan menu medicine standard?
+    - Siapa yang dapat mengakses menu ini dalam sistem?
+    - Siapa yang boleh mengakses medicine standard menu di sistem ini?
+    - Dapatkah saya mengakses menu medicine standard?
+    - Apakah dokter dan paramedis bisa mengakses menu ini?
+    - Apakah ada batasan akses untuk medicine standard menu?
+    - Siapa yang berhak untuk menambahkan data obat di medicine standard menu?
+    - Siapa yang punya hak untuk mengubah data di menu medicine standard?
+    - Apakah hanya Dokter yang bisa mengakses munu medicine standard?
+    - Siapa yang bisa mengelola data obat di menu medicine standard?
+    - Apakah menu medicine standard hanya untuk staf medis?
+
+- intent: how_doctors_add_medicine_data_medic_id
+  examples: |
+    - Gimana cara dokter menambahkan data obat baru di menu medicine standard?
+    - Bagaimana dokter bisa tambahkan data obat baru?
+    - Bagaimana dokter menambah data obat di menu medicine standard?
+    - Apa prosedur yang harus dilakukan oleh dokter untuk menambah data obat di menu medicine standard?
+    - Bagaimana cara dokter untuk menambah data obat pada menu medicine standard?
+    - Saya sebagai dokter ingin nambahin data obat gimana caranya?
+    - Gimana prosedurnya dokter untuk tambah data obat di aplikasi medic?
+    - Prosedur nambahin obat baru buat role as dokter gimana?
+    - Langkah-langkah apa saja yang perlu diambil oleh dokter untuk menambahkan data obat dalam menu medicine standard?
+    - Cara dokter nge-add obat baru gimana ya?
+    - Kalau dokter mau masukin obat baru, caranya gimana?
+    - Apa yang harus dokter lakuin buat nambahin obat baru?
+    - Langkah-langkah dokter buat nambahin obat itu gimana?
+    - Bagaimana cara dokter menambahkan obat baru di menu Mmdicine standard?
+    - Gimana cara dokter nambahin obat baru di sistem?
+    - Apa yang harus dokter lakuin buat nambahin data obat?
+    - Apa prosedur dokter buat nambahin obat baru?
+    - Cara dokter masukin obat baru ke menu medicine standard gimana?
+    - Langkah-langkah dokter buat masukin obat baru di aplikasi medic itu gimana?
+    - Gimana prosedur dokter kalau mau nambahin obat?
+    - Dokter bisa masukin obat baru ke daftar medicine standard dengan cara apa?
+    - Apa langkah yang dokter lakukan buat nambahin obat baru?
+
+- intent: how_paramedics_add_medicine_data_medic_id
+  examples: |
+    - Bagaimana cara paramedis menambah obat baru di menu medicine standard?
+    - Apa langkah paramedis untuk menambah obat di medicine standard?
+    - Apa yang harus dilakukan paramedis untuk menambah obat baru di medicine standard?
+    - Bagaimana paramedis menambah obat di medicine standard?
+    - Langkah apa yang perlu diambil paramedis untuk menambah obat baru?
+    - Bagaimana cara paramedis memasukkan data obat baru di medicine standard?
+    - Apa yang paramedis lakukan untuk menambah data obat di medicine standard?
+    - Apa yang perlu diisi paramedis saat menambah obat baru?
+    - Bagaimana paramedis menginput obat baru di medicine standard?
+    - Apa yang dilakukan paramedis untuk menambahkan data obat di menu medicine standard?
+    - Apa yang paramedis harus lakukan untuk menambahkan obat baru?
+    - Apa saja yang perlu dilakukan paramedis untuk menambahkan data obat baru di sistem?
+    - Langkah mudah untuk paramedis menambah obat di medicine standard?
+    - Bagaimana paramedis menginput data obat baru di medicine standard?
+    - Apa yang paramedis lakukan untuk menambah obat baru di menu medicine standard?
+    - Apa yang perlu paramedis isi untuk menambah obat di medicine standard?
+    - Bagaimana cara paramedis menambahkan obat ke medicine standard?
+    - Apa langkah paramedis untuk memasukkan obat baru di medicine standard?
+    - Apa yang harus dilakukan paramedis agar obat baru bisa ditambahkan?
+    - Apa yang perlu dilakukan paramedis untuk menginput obat baru di medicine standard?
+    - Bagaimana cara paramedis menginput obat baru?
+    - Apa yang harus diisi paramedis untuk menambah obat baru?
+    - Apa yang perlu dilakukan paramedis agar obat baru bisa masuk ke sistem?
+    - Langkah apa yang perlu diambil paramedis untuk menambah obat di aplikasi medicine standard
+    - Jika paramedis ingin menambahkan obat baru di medicine standard, apa yang harus dilakukan?
+
+- intent: info_for_doctor_add_new_medicine_data_medic_id
+  examples: |
+    - Apa saja informasi yang perlu dimasukkan oleh dokter saat menambahkan obat baru?
+    - Informasi apa saja yang harus diisi dokter ketika menambahkan obat baru?
+    - Apa saja data yang perlu dimasukkan dokter untuk menambah obat baru?
+    - Informasi apa yang diperlukan dokter untuk menambahkan data obat baru di medicine standard?
+    - Dokter harus mengisi informasi apa saja saat menambah obat baru di medicine standard?
+    - Data apa yang harus diisi oleh dokter ketika menambahkan data obat baru?
+    - Apa saja yang perlu diisi oleh dokter saat memasukkan obat baru di medicine standard?
+    - Apa yang harus dimasukkan oleh dokter ketika menambahkan obat baru di sistem medicine standard?
+    - Dokter perlu mengisi informasi apa saja ketika menambah obat baru di menu medicine standard?
+    - Apa informasi yang harus dokter masukkan saat menambah obat baru?
+    - Dokter perlu mengisi data apa saja saat menambah obat baru di medicine standard?
+    - Apa saja kolom yang perlu diisi dokter ketika menambahkan obat baru?
+    - Apa informasi yang harus dimasukkan oleh dokter dalam formulir saat menambah obat baru?
+    - Dokter harus mengisi kolom apa saja ketika menambahkan obat baru di medicine standard?
+    - Apa saja yang diminta sistem kepada dokter untuk diisi saat menambah obat baru?
+
+- intent: info_for_paramedics_add_new_medicine_data_medic_id
+  examples: |
+    - Apa saja informasi yang perlu dimasukkan oleh paramedis saat menambahkan obat baru?
+    - Informasi apa saja yang harus diisi paramedis ketika menambahkan obat baru?
+    - Apa saja data yang perlu dimasukkan paramedis untuk menambah obat baru?
+    - Informasi apa yang diperlukan paramedis untuk menambahkan obat baru di medicine standard?
+    - Paramedis harus mengisi informasi apa saja saat menambah obat baru di medicine standard?
+    - Data apa yang harus diisi oleh paramedis ketika menambahkan obat baru?
+    - Apa saja yang perlu diisi oleh paramedis saat memasukkan obat baru di medicine standard?
+    - Apa yang harus dimasukkan oleh paramedis ketika menambahkan obat baru di sistem medicine standard?
+    - Paramedis perlu mengisi informasi apa saja ketika menambah obat baru di menu medicine standard?
+    - Apa informasi yang harus paramedis masukkan saat menambah obat baru?
+    - Paramedis perlu mengisi data apa saja saat menambah obat baru di medicine standard?
+    - Apa saja kolom yang perlu diisi paramedis ketika menambahkan obat baru?
+    - Apa informasi yang harus dimasukkan oleh paramedis dalam formulir saat menambah obat baru?
+    - Paramedis harus mengisi kolom apa saja ketika menambahkan obat baru di medicine standard?
+    - Apa saja yang diminta sistem kepada paramedis untuk diisi saat menambah obat baru?
+
+- intent: view_medicine_submission_paramedic_medic_id
+  examples: |
+    - Bagaimana cara melihat obat yang telah diajukan oleh paramedis?
+    - Apa langkah-langkah untuk melihat obat yang diajukan oleh paramedis?
+    - Saya ingin tahu cara melihat obat yang sudah diajukan oleh paramedis.
+    - Bagaimana cara dokter melihat obat yang diajukan oleh paramedis?
+    - Apa yang harus dilakukan untuk melihat obat yang diajukan oleh paramedis?
+    - Di mana bisa melihat obat yang sudah diajukan oleh paramedis?
+    - Bagaimana cara dokter memeriksa obat yang diajukan oleh paramedis?
+    - Langkah-langkah apa yang perlu dilakukan untuk melihat obat yang diajukan oleh paramedis?
+    - Apa prosedur untuk melihat obat yang telah diajukan paramedis?
+    - Bagaimana dokter bisa melihat pengajuan obat dari paramedis?
+    - Apa saja yang perlu dilakukan untuk memeriksa obat yang diajukan oleh paramedis?
+    - Bagaimana melihat daftar pengajuan obat yang dilakukan paramedis?
+    - Di mana saya dapat melihat pengajuan obat oleh paramedis?
+    - Bagaimana cara memeriksa obat yang telah diajukan oleh paramedis di medicine standard?
+    - Bagaimana dokter bisa mengakses pengajuan obat dari paramedis?
+    - Langkah apa yang perlu diambil untuk melihat pengajuan obat paramedis di sistem?
+    - Bagaimana cara dokter melihat semua pengajuan obat dari paramedis?
+    - Apa langkah-langkah untuk melihat status obat yang diajukan oleh paramedis?
+    - Apa yang dokter harus lakukan untuk melihat pengajuan obat yang diajukan paramedis?
+    - Apa yang dilakukan dokter untuk melihat pengajuan obat paramedis yang sudah terdaftar?
+    - Bagaimana cara dokter meninjau obat yang sudah diajukan oleh paramedis?
+    - Apa langkah-langkah untuk mengecek status obat yang telah diajukan oleh paramedis?
+
+- intent: approve_medicine_submission_by_paramedic_medic_id
+  examples: |
+    - Bagaimana proses persetujuan obat yang diajukan oleh paramedis?
+    - Apa langkah-langkah dokter dalam menyetujui obat yang diajukan oleh paramedis?
+    - Bagaimana cara dokter menyetujui obat yang diajukan oleh paramedis?
+    - Apa yang dilakukan dokter untuk menyetujui obat yang diajukan oleh paramedis?
+    - Bagaimana cara dokter menyetujui atau menolak obat yang diajukan oleh paramedis?
+    - Proses apa yang dilakukan dokter untuk menyetujui obat yang diajukan oleh paramedis?
+    - Apa yang harus dokter lakukan untuk menyetujui atau menolak obat dari paramedis?
+    - Bagaimana cara dokter memberikan persetujuan atau penolakan untuk obat yang diajukan paramedis?
+    - Langkah-langkah apa yang harus diikuti dokter untuk menyetujui pengajuan obat dari paramedis?
+    - Apa prosedur untuk menyetujui atau menolak pengajuan obat oleh paramedis?
+    - Bagaimana dokter dapat menyetujui pengajuan obat dari paramedis?
+    - Apa saja yang perlu dilakukan dokter untuk menanggapi pengajuan obat dari paramedis?
+    - Proses apa saja yang harus dilalui dokter untuk menyetujui obat dari paramedis?
+    - Bagaimana proses persetujuan obat yang diajukan paramedis oleh dokter?
+    - Apa langkah-langkah dokter dalam menerima atau menolak obat yang diajukan paramedis?
+
+- intent: meaning_status_draft_medicine_submission_medic_id
+  examples: |
+    - Apa arti status Draft pada pengajuan obat?
+    - Apa maksud dari status Draft pada pengajuan obat?
+    - Apa yang dimaksud dengan status Draft dalam pengajuan obat?
+    - Jelaskan arti status Draft pada pengajuan obat di sistem medic
+    - Apa penjelasan tentang status Draft pada pengajuan obat?
+    - Apa yang dimaksud status Draft di pengajuan obat?
+    - Bagaimana status Draft mempengaruhi pengajuan obat?
+    - Apa yang terjadi jika status obatnya Draft?
+    - Status Draft artinya apa pada pengajuan obat di aplikasi medic?
+    - Apa pengaruh status Draft terhadap pengajuan obat?
+    - Apa yang dimaksud status Draft dalam proses pengajuan obat?
+    - Apa arti status Draft di sistem medic pada proses pengajuan obat?
+    - Bagaimana cara mengetahui jika pengajuan obat masih Draft?
+    - Status pengajuan obat Draft apa artinya?
+    - Apakah status Draft menunjukkan bahwa obat belum disetujui?
+
+- intent: meaning_status_approved_medicine_submission_medic_id
+  examples: |
+    - Apa arti status approved pada pengajuan obat?
+    - Apa yang dimaksud dengan status approved dalam pengajuan obat?
+    - Apa makna status approved pada pengajuan obat di sistem medic?
+    - Apa yang terjadi ketika status pengajuan obat berubah menjadi approved?
+    - Status approved artinya apa dalam proses pengajuan obat?
+    - Apa pengaruh status approved pada pengajuan obat?
+    - Apa yang dimaksud dengan status approved pada pengajuan obat di sistem?
+    - Bagaimana status approved menunjukkan bahwa obat sudah disetujui?
+    - Apa yang terjadi setelah status pengajuan obat menjadi approved?
+    - Apa artinya ketika status pengajuan obat berubah menjadi approved di sisi paramedis?
+    - Apa yang dimaksud dengan status approved pada pengajuan obat oleh paramedis?
+    - Apa arti status approved pada pengajuan obat oleh paramedis di aplikasi medic?
+    - Jika pengajuan obat sudah berstatus approved, apa yang akan terjadi pada obat tersebut?
+    - Apa yang dilakukan dokter setelah pengajuan obat berubah menjadi approved?
+    - Bagaimana status approved mempengaruhi pengelolaan obat di sistem?
+    - Apa pengaruh status approved terhadap obat yang diajukan oleh paramedis?
+
+- intent: meaning_status_rejected_medicine_submission_medic_id
+  examples: |
+    - Apa arti status rejected pada pengajuan obat?
+    - Apa yang dimaksud dengan status rejected dalam pengajuan obat?
+    - Apa makna status rejected pada pengajuan obat di sistem medic?
+    - Apa yang terjadi ketika status pengajuan obat berubah menjadi rejected?
+    - Status rejected artinya apa dalam proses pengajuan obat?
+    - Apa pengaruh status rejected pada pengajuan obat?
+    - Apa yang dimaksud dengan status rejected pada pengajuan obat di sistem?
+    - Bagaimana status rejected menunjukkan bahwa obat sudah disetujui?
+    - Apa yang terjadi setelah status pengajuan obat menjadi rejected?
+    - Apa artinya ketika status pengajuan obat berubah menjadi rejected di sisi paramedis?
+    - Apa yang dimaksud dengan status rejected pada pengajuan obat oleh paramedis?
+    - Apa arti status rejected pada pengajuan obat oleh paramedis di aplikasi medic?
+    - Jika pengajuan obat sudah berstatus rejected, apa yang akan terjadi pada obat tersebut?
+    - Apa yang dilakukan dokter setelah pengajuan obat berubah menjadi rejected?
+    - Bagaimana status rejected mempengaruhi pengelolaan obat di sistem?
+    - Apa pengaruh status rejected terhadap obat yang diajukan oleh paramedis?
+
+- intent: rejected_medicine_resubmission_medic_id
+  examples: |
+    - Apakah obat yang sudah ditolak dapat diajukan kembali?
+    - Bisakah obat yang statusnya rejected diajukan kembali?
+    - Obat yang sudah ditolak, apakah bisa diajukan ulang?
+    - Apakah ada cara untuk mengajukan kembali obat yang sudah ditolak?
+    - Apa yang terjadi jika obat yang ditolak ingin diajukan lagi?
+    - Apakah obat yang berstatus rejected masih bisa diajukan lagi?
+    - Dapatkah obat yang ditolak oleh dokter diajukan lagi oleh paramedis?
+    - Apakah pengajuan obat yang ditolak bisa diajukan ulang oleh paramedis?
+    - Apakah mungkin mengajukan obat yang sudah ditolak sebelumnya?
+    - Apakah obat yang statusnya rejected bisa diproses ulang?
+    - Jika obat sudah ditolak, apakah bisa diajukan kembali untuk persetujuan?
+    - Bagaimana cara mengajukan obat yang telah ditolak kembali?
+    - Apakah ada prosedur untuk mengajukan ulang obat yang sudah ditolak oleh dokter?
+    - Apakah obat dengan status rejected dapat diajukan lagi setelah ditolak?
+    - Apakah pengajuan obat yang sudah ditolak bisa dilakukan ulang?
+    - Jika obat ditolak, bisa kah diajukan lagi dengan perubahan?
+    - Obat yang telah ditolak bisa diajukan kembali atau tidak?
+    - Dapatkah obat yang ditolak disetujui jika diajukan lagi?
+    - Apa yang harus dilakukan jika obat yang sudah ditolak ingin diajukan lagi?
+    - Apakah ada opsi untuk mengajukan kembali obat yang telah ditolak?
+    - Apa yang terjadi jika obat yang ditolak tetapi paramedis mengajukan kembali?
+    - Bagaimana sistem menangani jika paramedis mencoba mengajukan obat yang telah ditolak?
+
+- intent: who_can_edit_medicine_data_medic_id
+  examples: |
+    - Siapa yang dapat mengedit data obat?
+    - Apakah paramedis bisa mengedit data obat?
+    - Siapa yang berwenang mengubah data obat di sistem?
+    - Siapa saja yang bisa mengedit data obat dalam sistem medicine standard?
+    - Apakah dokter bisa mengedit data obat?
+    - Siapa yang diperbolehkan untuk mengubah informasi obat?
+    - Siapa yang bisa mengubah data obat yang sudah diajukan?
+    - Apakah hanya dokter yang bisa mengedit data obat?
+    - Apa yang bisa diubah oleh dokter pada data obat?
+    - Siapa yang memiliki hak untuk mengedit informasi obat di aplikasi medic?
+    - Apakah paramedis memiliki akses untuk mengedit data obat?
+    - Siapa yang bertanggung jawab mengedit data obat dalam sistem?
+    - Apakah dokter bisa mengubah Medicine Name atau Medicine Category?
+    - Siapa yang bisa mengedit kategori dan kelas obat dalam sistem?
+    - Apakah ada batasan siapa yang bisa mengubah data obat?
+    - Apakah hanya dokter yang dapat mengubah UoM atau Medicine Class?
+    - Bagaimana cara mengetahui siapa yang memiliki akses untuk edit data obat di sistem?
+    - Siapa yang memiliki izin untuk mengedit data obat dalam aplikasi?
+
+- intent: what_happens_when_doctor_edits_medicine_data_medic_id
+  examples: |
+    - Apa yang terjadi jika dokter mengedit data obat?
+    - Apa yang akan terjadi jika dokter mengubah data obat?
+    - Bagaimana pengaruhnya jika dokter mengedit data obat di sistem?
+    - Jika dokter mengubah data obat, apa yang terjadi di sistem?
+    - Apa yang terjadi di sistem jika dokter mengedit data obat?
+    - Apa dampak dari pengeditan data obat oleh dokter?
+    - Jika dokter mengedit data obat, siapa yang bisa melihat perubahan tersebut?
+    - Apakah perubahan data obat oleh dokter langsung terlihat di seluruh sistem?
+    - Apa yang terjadi pada data obat setelah dokter mengeditnya?
+    - Jika dokter mengedit data obat, apakah paramedis bisa melihatnya?
+    - Apa efek dari pengeditan data obat oleh dokter terhadap paramedis?
+    - Bagaimana perubahan data obat yang diedit dokter terlihat di sistem?
+    - Apa yang dilakukan sistem jika dokter mengedit informasi obat?
+    - Apa yang terjadi jika data obat yang di edit oleh dokter?
+    - Apa yang terlihat oleh paramedis jika dokter mengedit data obat?
+    - Jika dokter mengubah data obat, apakah paramedis bisa melihat perubahan itu?
+    - Bagaimana cara paramedis mengetahui perubahan pada data obat yang diedit dokter?
+
+- intent: how_doctor_edits_medicine_data_medic_id
+  examples: |
+    - Bagaimana cara ubah data obat di sistem?
+    - Apa langkah-langkah dokter untuk mengedit data obat?
+    - Bagaimana dokter mengubah data obat di sistem?
+    - Apa yang perlu dilakukan dokter untuk mengedit informasi obat?
+    - Bagaimana dokter mengubah data obat yang sudah ada?
+    - Apa prosedur untuk dokter dalam mengedit data obat?
+    - Langkah-langkah apa saja yang dilakukan dokter untuk mengedit data obat di sistem?
+    - Bagaimana cara dokter mengubah informasi obat yang sudah terdaftar?
+    - Apa yang perlu dilakukan dokter untuk melakukan perubahan pada data obat?
+    - Cara dokter mengedit nama obat atau jenis obat dalam sistem?
+    - Apa yang dokter lakukan jika ingin mengubah kategori atau kelas obat di aplikasi medic?
+    - Bagaimana cara dokter memperbarui data obat di Medicine List?
+    - Apa yang perlu dilakukan dokter agar data obat bisa diedit?
+    - Apa yang harus dilakukan dokter setelah memilih ikon pensil di tab Medicine List untuk edit data obat?
+    - Apakah ada cara untuk dokter mengubah informasi obat di Medicine List?
+    - Apa langkah-langkah untuk dokter agar perubahan data obat tersimpan dengan benar?
+    - Apa yang perlu dilakukan untuk mengedit dan menyimpan perubahan data obat?
+    - Bagaimana cara dokter memperbarui data obat yang sudah terdaftar di sistem?
+    - Apa yang terjadi setelah dokter menyimpan perubahan data obat di sistem?
+    - Apa yang dokter lakukan jika perubahan data obat sudah berhasil disimpan?
+
+- intent: why_medicine_code_cannot_be_edited_medic_id
+  examples: |
+    - Mengapa medicine code tidak dapat diedit?
+    - Apa alasan medicine code tidak bisa diubah?
+    - Kenapa tidak bisa edit medicine code?
+    - Mengapa kode obat tidak dapat diubah setelah dibuat?
+    - Apa yang menyebabkan medicine code tidak bisa diedit?
+    - Apa yang membuat medicine code tidak bisa diubah?
+    - Kenapa medicine code bersifat tetap dan tidak bisa diubah?
+    - Mengapa sistem tidak memperbolehkan perubahan pada medicine code?
+    - Apa yang menyebabkan medicine code tetap dan tidak dapat diubah?
+    - Kenapa kode obat tidak dapat disunting?
+    - Mengapa kode obat tidak bisa diedit di sistem?
+    - Apa alasan medicine code tidak bisa dilakukan perubahan data?
+    - Kenapa medicine code harus tetap dan tidak bisa diubah?
+    - Mengapa kode obat dihasilkan otomatis dan tidak bisa diubah?
+    - Apa yang menjadi alasan teknis medicine code tidak bisa diedit?
+    - Mengapa medicine code hanya bisa dihasilkan otomatis?
+    - Apa tujuan agar medicine code tidak bisa diedit?
+    - Mengapa medicine code selalu dihasilkan berdasarkan aturan sistem?
+    - Mengapa dokter atau paramedis tidak bisa mengubah medicine code?
+    - Mengapa perubahan pada medicine code tidak diizinkan dalam sistem?
+
+- intent: medicine_code_order_in_system_medic_id
+  examples: |
+    - Bagaimana urutan medicine code yang telah diatur oleh sistem?
+    - Apa yang mempengaruhi urutan medicine code dalam sistem?
+    - Bagaimana sistem mengurutkan medicine code?
+    - Apa dasar yang digunakan sistem untuk mengurutkan medicine code?
+    - Bagaimana sistem menentukan urutan medicine code untuk obat?
+    - Bagaimana cara kerja pengurutan medicine code dalam sistem?
+    - Apa urutan yang diikuti sistem dalam menghasilkan medicine code?
+    - Bagaimana sistem menghasilkan urutan medicine code di sistem
+    - Apa saja faktor yang mempengaruhi urutan medicine code yang dihasilkan sistem?
+    - Apa yang menjadi dasar sistem dalam mengurutkan medicine code obat?
+    - Bagaimana sistem menentukan urutan medicine code berdasarkan medicine type?
+    - Apa yang perlu dilakukan agar sistem mengurutkan medicine code dengan benar?
+    - Apa saja faktor yang berpengaruh terhadap urutan medicine code yang dihasilkan sistem?
+    - Bagaimana medicine code dihasilkan dan diurutkan dalam sistem?
+    - Bagaimana cara sistem mengurutkan kode obat yang sudah disetujui?
+    - Apa yang menentukan urutan medicine code dalam sistem?
+    - Apa urutan yang digunakan sistem untuk menghasilkan medicine code obat?
+    - Apa yang menjadi acuan sistem dalam mengurutkan medicine code obat?
+    - Bagaimana sistem menentukan urutan kode obat berdasarkan jenisnya?
+    - Apa dasar pengurutan medicine code oleh sistem untuk obat jenis Disease dan Emergency
+
+- intent: doctor_changes_medicine_name_medic_id
+  examples: |
+    - Apakah dokter dapat melakukan perubahan data medicine name dengan medicine name yang sudah ada?
+    - Apakah dokter bisa mengubah nama obat menjadi nama obat yang sudah terdaftar?
+    - Bisa kah dokter mengganti medicine name dengan nama obat yang sudah ada?
+    - Apakah dokter bisa merubah medicine name menjadi nama obat yang sudah ada sebelumnya?
+    - Apa yang terjadi jika dokter mencoba mengubah medicine name menjadi nama obat yang sudah ada?
+    - Apakah sistem membolehkan dokter mengubah nama obat yang sudah terdaftar?
+    - Apakah dokter dapat mengubah medicine name menjadi yang sudah ada di daftar obat?
+    - Apa yang terjadi jika dokter mengubah medicine name menjadi nama yang sudah ada di sistem?
+    - Apakah ada pembatasan bagi dokter untuk mengubah medicine name dengan nama yang sudah ada?
+    - Apa yang terjadi jika dokter memasukkan medicine name yang sudah ada di sistem?
+    - Bagaimana sistem merespons jika dokter mengganti medicine name dengan nama obat yang sudah ada?
+    - Jika dokter mengubah medicine name menjadi nama obat yang sudah ada, apa yang terjadi di sistem?
+    - Apakah perubahan nama obat akan diterima jika nama obat sudah ada di sistem?
+    - Apakah dokter bisa mengubah medicine name ke nama obat yang sudah terdaftar dalam sistem?
+    - Apa yang ditampilkan sistem jika dokter mengubah medicine name dengan data yang sudah ada?
+    - Apakah sistem membatasi perubahan medicine name jika sudah ada yang terdaftar dengan nama tersebut?
+    - Apakah perubahan pada medicine name yang sudah ada akan ditolak oleh sistem?
+    - Apa yang terjadi jika dokter mengganti medicine name dengan yang sudah ada di sistem?
+    - Apakah dokter bisa mengganti nama obat dengan nama yang sudah terdaftar sebelumnya?
+    - Bagaimana sistem menangani pengubahan medicine name yang sudah terdaftar di sistem?
+
+- intent: can_medicine_registered_be_deleted_medic_id
+  examples: |
+    - Apakah obat yang sudah terdaftar dapat dihapus?
+    - Bisakah obat yang sudah terdaftar dihapus dari sistem?
+    - Apa yang terjadi jika obat yang sudah terdaftar ingin dihapus?
+    - Apakah dokter bisa menghapus obat yang sudah terdaftar?
+    - Dapatkah obat yang terdaftar dihapus dari sistem?
+    - Obat yang sudah terdaftar apakah bisa dihapus?
+    - Apakah ada cara untuk menghapus obat yang sudah terdaftar?
+    - Apakah memungkinkan untuk menghapus obat yang sudah terdaftar di sistem?
+    - Bagaimana cara menghapus obat yang sudah terdaftar di sistem?
+    - Apakah ada prosedur untuk menghapus obat yang sudah terdaftar?
+    - Bisakah obat yang sudah terdaftar dihapus oleh dokter?
+    - Bagaimana jika obat yang terdaftar perlu dihapus?
+    - Apakah obat yang sudah ada di daftar bisa dihapus?
+    - Apakah ada opsi untuk menghapus obat yang sudah terdaftar di sistem?
+    - Bisa kah obat yang terdaftar dihapus oleh paramedis?
+    - Apakah obat yang sudah terdaftar akan tetap ada atau bisa dihapus?
+    - Mengapa obat yang sudah terdaftar tidak bisa dihapus?
+    - Apa yang terjadi jika obat yang sudah terdaftar perlu dihapus dari sistem?
+    - Apakah ada batasan terkait penghapusan obat yang terdaftar?
+    - Bisakah obat yang sudah terdaftar dihapus dan tidak ditampilkan di sistem lagi?
+
+- intent: how_to_activate_or_deactivate_medicine_medic_id
+  examples: |
+    - Bagaimana cara mengaktifkan atau menonaktifkan obat di medicine standard?
+    - Apa langkah-langkah untuk mengaktifkan atau menonaktifkan obat?
+    - Bagaimana cara dokter mengaktifkan atau menonaktifkan obat di sistem?
+    - Apa prosedur untuk menonaktifkan obat di medicine standard?
+    - Bagaimana cara mengubah status obat di medicine standard menjadi aktif atau non-aktif?
+    - Apa yang perlu dilakukan dokter untuk mengaktifkan obat?
+    - Bagaimana cara mengatur status aktif atau non-aktif untuk obat yang terdaftar?
+    - Apa langkah-langkah dokter dalam menonaktifkan obat?
+    - Bagaimana cara menonaktifkan obat agar tidak dapat digunakan?
+    - Bagaimana cara menonaktifkan obat yang sudah terdaftar di medicine standard?
+    - Apa yang harus dilakukan dokter agar obat dapat diaktifkan atau dinonaktifkan?
+    - Bagaimana cara membuat obat tersedia untuk paramedis atau tidak di medicine standard?
+    - Bagaimana cara mengaktifkan obat agar dapat digunakan kembali?
+    - Apakah hanya dokter yang bisa mengaktifkan atau menonaktifkan obat di sistem?
+    - Apakah paramedis bisa mengaktifkan atau menonaktifkan obat di medicine standard?
+    - Apakah ada langkah-langkah khusus untuk mengaktifkan atau menonaktifkan obat?
+    - Bagaimana cara sistem menampilkan status aktif atau non-aktif obat?
+    - Apa yang perlu dilakukan dokter untuk mengubah status obat menjadi aktif atau tidak aktif?
+    - Apa yang harus dilakukan dokter mengaktifkan atau menonaktifkan obat di sistem?
+
+- intent: what_happens_when_doctor_toggles_medicine_medic_id
+  examples: |
+    - Apa yang terjadi jika dokter mengaktifkan atau menonaktifkan medicine?
+    - Apa yang terjadi setelah dokter mengaktifkan atau menonaktifkan obat?
+    - Bagaimana pengaruhnya jika dokter menonaktifkan medicine?
+    - Apa yang akan terjadi jika dokter mengaktifkan atau menonaktifkan obat dalam sistem?
+    - Bagaimana efeknya jika dokter mengaktifkan atau menonaktifkan medicine?
+    - Apa yang terjadi pada medicine yang diaktifkan atau dinonaktifkan oleh dokter?
+    - Apa yang terjadi jika dokter mengubah status medicine menjadi aktif atau non-aktif?
+    - Jika dokter menonaktifkan medicine, apa yang terjadi pada obat tersebut?
+    - Apa yang terjadi jika dokter menonaktifkan obat dalam sistem?
+    - Apa yang terlihat di sistem jika dokter mengaktifkan atau menonaktifkan medicine?
+    - Apa yang terjadi di sistem jika dokter melakukan perubahan status pada medicine?
+    - Apakah ada pengaruhnya jika dokter menonaktifkan medicine di sistem?
+    - Apa yang dimaksud dengan medicine yang diaktifkan atau dinonaktifkan oleh dokter?
+    - Apakah dokter dapat melihat perubahan status medicine setelah diaktifkan atau dinonaktifkan?
+    - Apa pesan yang ditampilkan ketika dokter mengaktifkan atau menonaktifkan medicine?
+    - Jika dokter menonaktifkan medicine, apakah obat tersebut masih bisa digunakan oleh paramedis?
+    - Apakah medicine yang dinonaktifkan hilang dari daftar obat?
+    - Apakah ada konfirmasi yang ditampilkan saat dokter mengaktifkan atau menonaktifkan obat?
+    - Apa dampaknya jika dokter mengaktifkan atau menonaktifkan medicine bagi paramedis?
+    - Apakah dokter bisa menonaktifkan medicine dari daftar obat?
+
+- intent: who_has_access_to_toggle_medicine_medic_id
+  examples: |
+    - Siapa yang memiliki akses untuk mengaktifkan atau menonaktifkan Medicine?
+    - Apakah paramedis bisa mengaktifkan atau menonaktifkan Medicine di sistem?
+    - Siapa yang bisa mengubah status Medicine menjadi aktif atau non-aktif?
+    - Apakah hanya dokter yang memiliki akses untuk mengaktifkan atau menonaktifkan Medicine?
+    - Siapa yang berwenang untuk mengaktifkan atau menonaktifkan Medicine di sistem?
+    - Apakah paramedis bisa menonaktifkan atau mengaktifkan Medicine?
+    - Siapa yang diperbolehkan untuk mengubah status Medicine dalam sistem?
+    - Apakah dokter memiliki akses untuk mengubah status Medicine?
+    - Apakah paramedis memiliki hak untuk menonaktifkan Medicine?
+    - Siapa yang dapat menonaktifkan atau mengaktifkan Medicine di sistem?
+    - Apakah hanya dokter yang bisa melakukan perubahan status pada Medicine?
+    - Siapa yang berhak untuk mengaktifkan atau menonaktifkan Medicine?
+    - Apakah ada hak akses khusus untuk mengaktifkan atau menonaktifkan Medicine?
+    - Apakah paramedis dapat mengubah status Medicine di sistem?
+    - Siapa yang dapat mengubah status Medicine di tab Medicine List?
+    - Siapa yang bisa melakukan toggle status pada Medicine?
+    - Apakah ada pembatasan akses untuk mengaktifkan atau menonaktifkan Medicine?
+    - Siapa yang memiliki izin untuk mengaktifkan atau menonaktifkan Medicine di sistem?
+
+- intent: what_happens_when_medicine_is_deactivated_in_records_medic_id
+  examples: |
+    - Apa yang terjadi jika obat tersebut dinonaktifkan tetapi digunakan pada data Medical Record FAR dan Medical Check Up?
+    - Bagaimana pengaruhnya jika obat dinonaktifkan tetapi sudah digunakan pada Medical Record FAR atau Medical Check Up?
+    - Apa yang terjadi pada data Medical Record FAR dan Medical Check Up jika obat dinonaktifkan?
+    - Apakah data obat yang sudah digunakan di Medical Record FAR terpengaruh jika obat dinonaktifkan?
+    - Apakah data obat pada Medical Check Up tetap ada meskipun obat tersebut dinonaktifkan?
+    - Jika obat dinonaktifkan, apakah data di Medical Record FAR tetap ada?
+    - Apa pengaruhnya jika obat yang digunakan dalam Medical Check Up dinonaktifkan?
+    - Bagaimana status obat yang sudah terdaftar di Medical Record FAR jika obat dinonaktifkan?
+    - Apa yang terjadi jika obat yang digunakan pada Medical Record FAR dinonaktifkan?
+    - Apakah data yang sudah ada di Medical Record FAR tetap bisa diakses setelah obat dinonaktifkan?
+    - Apakah obat yang telah digunakan pada Medical Check Up akan hilang jika obat tersebut dinonaktifkan?
+    - Bagaimana status obat yang sudah terdaftar dalam Medical Record FAR jika obat tersebut dinonaktifkan?
+    - Apa pengaruh status obat terhadap data yang sudah ada di Medical Record FAR?
+    - Apa yang terjadi pada penggunaan obat yang sudah ada di Medical Check Up jika obat tersebut dinonaktifkan?
+    - Apakah pengaktifan atau penonaktifan obat mempengaruhi data yang sudah ada di Medical Record FAR?
+    - Bagaimana data obat pada Medical Check Up tetap terlihat meskipun obat dinonaktifkan?
+    - Apakah status obat yang sudah terdaftar sebelumnya di Medical Record berubah jika obat dinonaktifkan?
+    - Jika obat dinonaktifkan, apakah data tersebut tetap bisa dilihat di Medical Record FAR?
+    - Apa yang terjadi pada data obat di Medical Check Up yang sudah digunakan jika obat tersebut dinonaktifkan?
+    - Bagaimana status obat yang sudah digunakan pada Medical Record FAR setelah obat dinonaktifka
+
+- intent: is_medicine_standard_connected_to_other_menus_medic_id
+  examples: |
+    - Apakah menu medicine standard terhubung dengan menu lain di sistem?
+    - Apakah ada keterhubungan antara menu medicine standard dengan menu lainnya?
+    - Apakah menu medicine standard connect dengan menu lain dalam sistem?
+    - Apakah data di menu medicine standard digunakan di menu lain?
+    - Menu medicine standard terhubung dengan menu apa saja di sistem?
+    - Bagaimana hubungan menu medicine standard dengan menu lain di sistem?
+    - Apakah menu medicine standard mempengaruhi menu lain di sistem?
+    - Apakah menu medicine standard terkait dengan menu Medical Checkup?
+    - Apa hubungan antara menu medicine standard dan menu Medical Record FAR?
+    - Apakah menu medicine standard berhubungan langsung dengan menu Medical Checkup?
+    - Apakah data obat di medicine standard digunakan di menu lain?
+    - Apakah menu medicine standard terhubung dengan menu Medical Checkup?
+    - Menu apa saja yang terhubung dengan medicine standard di sistem?
+    - Apa saja menu yang menggunakan data dari medicine standard?
+    - Apakah data obat di medicine standard juga muncul di menu lain?
+    - Apakah menu medicine standard dipengaruhi oleh menu lain di sistem?
+    - Apa dampak perubahan data di medicine standard terhadap menu lain di sistem?
+    - Apakah menu medicine standard terhubung dengan menu Medical Record FAR?
+    - Apakah data dari menu medicine standard digunakan di Medical Checkup atau Medical Record FAR?
+    - Apakah menu medicine standard digunakan oleh menu lain di sistem?
+
+- intent: paramedics_access_medicine_data_in_the_future_medic_id
+  examples: |
+    - Apakah paramedis akan memiliki akses untuk mengedit atau menghapus data obat?
+    - Apakah paramedis bisa mengedit atau menghapus data obat di sistem?
+    - Apakah paramedis memiliki hak untuk mengedit atau menghapus data obat?
+    - Bisakah paramedis mengedit atau menghapus data obat di sistem?
+    - Apakah paramedis dapat mengubah atau menghapus data obat?
+    - Apakah paramedis memiliki izin untuk mengedit data obat?
+    - Dapatkah paramedis menghapus data obat yang sudah terdaftar?
+    - Apakah paramedis bisa menonaktifkan atau menghapus obat yang sudah terdaftar?
+    - Apakah paramedis dapat mengedit atau menghapus data obat dengan role permission?
+    - Apakah paramedis akan diberikan akses untuk mengedit data obat?
+    - Apa hak akses paramedis terkait dengan pengeditan atau penghapusan data obat?
+    - Apakah paramedis dapat mengakses dan mengedit data obat?
+    - Bagaimana paramedis bisa mengubah atau menghapus data obat?
+    - Apakah paramedis dapat mengedit atau menghapus medicine data dengan role tertentu?
+    - Apakah paramedis bisa mengaktifkan atau menonaktifkan obat yang sudah terdaftar?
+    - Apakah paramedis bisa melakukan perubahan pada data obat yang sudah terdaftar?
+    - Apakah paramedis diberikan akses untuk menghapus atau mengubah data obat?
+    - Apakah paramedis bisa mengubah status atau menghapus data obat di sistem?
+    - Kapan paramedis bisa mengakses fitur untuk mengedit atau menghapus data obat?
+    - Apakah paramedis akan mendapatkan akses untuk mengedit atau menghapus data obat di masa depan?
+
+- intent: how_to_filter_medicine_data_medic_id
+  examples: |
+    - Bagaimana cara memfilter data obat?
+    - Apa cara untuk memfilter daftar obat di Medicine List?
+    - Apa yang bisa difilter dalam daftar obat di Medicine List?
+    - Bagaimana cara memfilter obat berdasarkan kategori atau kelas di sistem?
+    - Apa yang perlu dilakukan dokter atau paramedis untuk memfilter data obat?
+    - Bagaimana cara memfilter obat menggunakan Medicine Category, UoM, dan Medicine Class?
+    - Apa opsi filter yang tersedia untuk dokter di tab Medicine Entries?
+    - Bagaimana dokter memfilter daftar obat di tab Medicine Entries?
+    - Apakah dokter bisa memfilter data obat berdasarkan Project dan Status di tab Medicine Entries?
+    - Bagaimana cara paramedis memfilter daftar obat di tab Medicine List?
+    - Apa yang bisa difilter oleh paramedis di tab Medicine List?
+    - Apa opsi filter yang tersedia untuk paramedis di tab Medicine Entries?
+    - Bagaimana paramedis memfilter daftar obat berdasarkan UoM, Medicine Category, dan Status?
+    - Apakah ada fitur untuk memfilter daftar obat berdasarkan status dan kategori obat?
+    - Apa langkah-langkah untuk memfilter obat menggunakan Medicine Class di Medicine List?
+    - Apa filter yang bisa digunakan paramedis untuk menampilkan obat di Medicine List?
+    - Bagaimana dokter menggunakan fitur filter untuk memilih obat berdasarkan status dan project?
+    - Apakah bisa memfilter obat berdasarkan beberapa kategori sekaligus?
+    - Bagaimana cara memfilter obat menggunakan filter di tab Medicine Entries dan Medicine List?
+    - Apa saja yang bisa difilter oleh paramedis dan dokter di daftar obat?
+
+- intent: how_to_search_medicine_data_medic_id
+  examples: |
+    - Bagaimana cara mencari obat tertentu?
+    - Apa cara untuk mencari obat dengan kode atau nama obat?
+    - Bagaimana cara mencari obat berdasarkan Medicine Code atau Medicine Name?
+    - Apa langkah-langkah untuk mencari obat berdasarkan kode atau nama obat?
+    - Bagaimana cara menemukan obat tertentu di sistem?
+    - Apa yang perlu dilakukan untuk mencari obat tertentu menggunakan kode atau nama?
+    - Apakah ada cara untuk mencari obat dengan kode atau nama di sistem?
+    - Apakah saya bisa mencari obat berdasarkan kode atau nama obat?
+    - Bagaimana cara mencari obat di sistem dengan menggunakan Medicine Code?
+    - Bagaimana cara menemukan obat dengan menggunakan Medicine Name?
+    - Apa yang perlu dilakukan untuk mencari obat tertentu dengan kolom pencarian?
+    - Di mana kolom pencarian untuk mencari obat berdasarkan kode atau nama?
+    - Gimana caranya mencari obat berdasarkan nama obat?
+    - Bagaimana cara mencari obat menggunakan fitur pencarian di sistem?
+    - Apakah ada pencarian data obat berdasarkan kode obat di sistem?
+    - Cara mencari data obat tertentu dengan menggunakan kolom pencarian di sistem?
+    - Apa yang bisa dicari menggunakan kolom pencarian di sistem?
+    - Bagaimana cara mencari obat yang sudah terdaftar di sistem?
+    - Apakah saya bisa mencari obat berdasarkan kategori atau nama di sistem?
+
+- intent: export_import_medicine_data_medic_id
+  examples: |
+    - Apakah data obat bisa diekspor dan diimpor?
+    - Apakah ada fitur untuk mengimpor dan mengekspor data obat?
+    - Bagaimana cara mengimpor dan mengekspor data obat?
+    - Apakah sistem mendukung ekspor dan impor data obat?
+    - Bisa kah data obat diimpor dari file eksternal dan diekspor ke format lain?
+    - Apakah ada cara untuk mengekspor dan mengimpor daftar obat?
+    - Apakah ada fitur untuk mengunduh data obat dalam format file?
+    - Bagaimana cara mengimpor data obat dari file eksternal?
+    - Apakah fitur ekspor dan impor data obat sudah tersedia di sistem?
+    - Apakah saya bisa mengunduh template data obat?
+    - Apakah saya bisa mengunggah data obat melalui fitur impor?
+    - Bagaimana cara menggunakan fitur ekspor dan impor untuk data obat?
+    - Apakah saya bisa mengunduh template format untuk data obat?
+    - Bagaimana cara mengunduh daftar obat dalam format file?
+    - Apakah sistem memungkinkan saya untuk mengunggah data obat?
+    - Apakah data obat dapat dipindahkan ke sistem lain melalui ekspor dan impor?
+    - Bagaimana cara mengunggah data obat menggunakan fitur impor?
+    - Apakah fitur ekspor dan impor data obat sudah aktif atau masih dalam pengembangan?
+    - Apakah ada fitur untuk mengunduh atau mengunggah daftar obat di sistem?
+
+- intent: medical_record_external_menu_medic_id
+  examples: |
+    - Apa itu menu medical record external?
+    - Apa yang dimaksud dengan menu Medical Record External?
+    - Jelaskan tentang menu Medical Record External
+    - Apa fungsi dari menu Medical Record External di aplikasi Medic?
+    - Bagaimana cara kerja menu Medical Record External dalam aplikasi?
+    - Apa yang dilakukan dalam menu Medical Record External?
+    - Apa tujuan dari menu Medical Record External?
+    - Bagaimana menu Medical Record External digunakan oleh dokter atau paramedis?
+    - Apa saja fitur yang ada di menu Medical Record External?
+    - Apa yang dapat dipantau di menu Medical Record External?
+    - Apa yang dimaksud dengan menu medical record external di aplikasi Medic?
+    - Apa manfaat menu Medical Record External bagi dokter dan paramedis?
+    - Bisa jelaskan apa itu menu medical record external?
+    - Apa yang dimaksud dengan menu medical record external?
+    - Untuk apa menu medical record external digunakan?
+    - Ceritakan tentang menu medical record external
+    - Apa saja yang bisa dikelola di menu medical record external?
+    - Menu medical record external itu untuk apa saja?
+    - Apa fungsi utama dari medical record external?
+    - Apa manfaat dari menu medical record external?
+
+- intent: who_can_access_medical_record_external_menu_medic_id
+  examples: |
+    - Siapa yang dapat mengakses menu Medical Record External?
+    - Siapa saja yang memiliki akses ke menu Medical Record External?
+    - Apakah paramedis bisa mengakses menu Medical Record External?
+    - Apa hak akses dokter dan paramedis di menu Medical Record External?
+    - Siapa yang bisa melihat data di menu Medical Record External?
+    - Apakah dokter bisa mengakses menu Medical Record External untuk semua project site?
+    - Apakah paramedis dapat melihat pengajuan di menu Medical Record External?
+    - Siapa yang berhak mengakses menu Medical Record External di aplikasi?
+    - Apa hak akses paramedis untuk menu Medical Record External?
+    - Apakah dokter memiliki akses melakukan approval untuk semua pengajuan di Medical Record External?
+    - Siapa yang memiliki izin untuk memproses pengajuan di menu Medical Record External?
+    - Apa yang dapat dilakukan dokter di menu Medical Record External?
+    - Apakah paramedis hanya bisa mengakses menu Medical Record External untuk project site tertentu?
+    - Apakah paramedis dapat menyetujui pengajuan di menu Medical Record External?
+    - Bagaimana perbedaan akses dokter dan paramedis di menu Medical Record External?
+    - Apa peran paramedis di menu Medical Record External?
+    - Apa peran dokter di menu Medical Record External?
+    - Apakah dokter bisa mengakses seluruh pengajuan di menu Medical Record External?
+    - Apakah paramedis memiliki akses penuh di menu Medical Record External?
+    - Apakah ada perbedaan hak akses antara dokter dan paramedis di menu Medical Record External?
+
+- intent: how_to_access_medical_record_external_menu_medic_id
+  examples: |
+    - Bagaimana cara mengakses menu Medical Record External?
+    - Apa langkah-langkah untuk mengakses menu Medical Record External?
+    - Bagaimana cara masuk ke menu Medical Record External?
+    - Apa yang perlu dilakukan untuk mengakses menu Medical Record External?
+    - Cara akses menu Medical Record External?
+    - Bagaimana dokter dan paramedis mengakses menu Medical Record External?
+    - Apakah ada prosedur untuk mengakses menu Medical Record External?
+    - Dimana saya dapat menemukan menu Medical Record External?
+    - Apa yang harus dilakukan untuk membuka menu Medical Record External di aplikasi?
+    - Apa langkah-langkah yang harus diikuti untuk mengakses menu Medical Record External?
+    - Bagaimana cara dokter membuka menu Medical Record External?
+    - Apa yang harus dilakukan paramedis untuk mengakses menu Medical Record External?
+    - Bagaimana cara membuka halaman utama dari menu Medical Record External?
+    - Di menu apa saya dapat menemukan menu Medical Record External?
+    - Bagaimana cara mengakses halaman utama menu Medical Record External?
+    - Di mana saya bisa menemukan menu Medical Record External di aplikasi?
+    - Bagaimana cara menuju menu Medical Record External di aplikasi?
+    - Apa yang perlu dilakukan untuk melihat halaman utama menu Medical Record External?
+
+- intent: what_is_displayed_in_active_tab_of_medical_record_external_medic_id
+  examples: |
+    - Apa yang ditampilkan dalam tab Active pada menu Medical Record External?
+    - Apa saja yang muncul dalam tab Active pada menu Medical Record External?
+    - Apa yang dapat dilihat di tab Active pada menu Medical Record External?
+    - Apa informasi yang tersedia di tab Active pada menu Medical Record External?
+    - Dalam tab Active pada menu Medical Record External, data apa yang ditampilkan?
+    - Kolom apa saja yang ada pada tab Active di menu Medical Record External?
+    - Apa yang dibedakan dalam tab Active pada menu Medical Record External?
+    - Bagaimana cara melihat klaim yang perlu disetujui di tab Active menu Medical Record External?
+    - Apakah pengajuan yang memerlukan persetujuan dokter muncul di tab Active menu Medical Record External?
+    - Bagaimana cara melihat klaim yang telah dikembalikan untuk revisi di tab Active menu Medical Record External?
+    - Apa yang membedakan data yang ada di tab Active dengan tab lainnya pada menu Medical Record External?
+    - Jelaskan data yang ditampilkan di tab Active dalam menu Medical Record External.
+    - Data apa yang terlihat pada tab Active pada menu Medical Record External?
+    - Apa saja kolom yang ditampilkan di tab Active menu Medical Record External?
+    - Apa saja status yang muncul di tab Active pada menu Medical Record External?
+    - Apa perbedaan data yang ditampilkan di tab Active dengan tab lainnya?
+    - Bagaimana cara melihat klaim yang memerlukan approval di tab Active?
+    - Apa yang dibedakan antara status need approval dan revision di tab Active?
+    - Bagaimana cara memfilter data di tab Active pada menu Medical Record External?
+    - Di tab Active menu Medical Record External, data apa saja yang ditampilkan?
+
+- intent: what_is_displayed_in_history_tab_of_medical_record_external_medic_id
+  examples: |
+    - Apa yang dapat dilihat di tab history pada menu Medical Record External?
+    - Informasi yang tersedia di tab history pada menu Medical Record External?
+    - Dalam tab history pada menu Medical Record External, data apa yang ditampilkan?
+    - Kolom apa saja yang ada pada tab history di menu Medical Record External?
+    - Apa yang membedakan data yang ada di tab history dengan tab lainnya pada menu Medical Record External?
+    - Jelaskan data yang ditampilkan di tab history dalam menu Medical Record External.
+    - Data apa yang terlihat pada tab history pada menu Medical Record External?
+    - Apa saja status yang muncul di tab history pada menu Medical Record External?
+    - Apa perbedaan data yang ditampilkan di tab history dengan tab lainnya?
+    - Di tab history menu Medical Record External, data apa saja yang ditampilkan?
+    - Jelaskan apa saja yang ditampilkan di tab History dalam menu Medical Record External.
+    - Apa informasi yang ada di tab History pada menu Medical Record External?
+    - Bagaimana data ditampilkan di tab History pada menu Medical Record External?
+    - Apa saja status yang muncul di tab History dalam menu Medical Record External?
+    - Apa saja kolom yang ada di tab History pada menu Medical Record External?
+    - Kolom apa saja yang ditampilkan di tab History pada menu Medical Record External?
+    - Apa saja data yang dapat dilihat di tab History pada menu Medical Record External?
+    - Apa yang dimaksud dengan status approved dan rejected di tab History?
+    - Apa urutan data yang ditampilkan di tab History berdasarkan status pengajuan?
+    - Apa yang dibedakan antara status approved dan rejected di tab History?
+
+- intent: how_to_search_data_in_medical_record_external_menu_medic_id
+  examples: |
+    - Bagaimana cara melakukan pencarian data dalam menu Medical Record External?
+    - Bagaimana cara mencari data klaim di menu Medical Record External?
+    - Apa langkah-langkah untuk melakukan pencarian dalam menu Medical Record External?
+    - Bagaimana cara menggunakan kolom search untuk mencari data di menu Medical Record External?
+    - Apa saja yang bisa dicari menggunakan kolom search di menu Medical Record External?
+    - Bagaimana cara memfilter data dalam menu Medical Record External?
+    - Bagaimana cara melakukan pencarian dengan filter di menu Medical Record External?
+    - Apakah ada filter yang bisa digunakan saat mencari data di menu Medical Record External?
+    - Apa saja yang dapat difilter di tab Active dan History untuk pencarian data?
+    - Bagaimana cara menggunakan kolom search dan filter untuk pencarian data di tab Active dan History?
+    - Bagaimana cara memanfaatkan fitur pencarian dengan search dan filter di tab Active dan History?
+    - Apakah saya bisa mencari data berdasarkan jenis tunjangan di menu Medical Record External?
+    - Apa yang bisa dicari di tab Active dan History menggunakan kolom search?
+    - Apa pengaruh pencarian dengan keyword terhadap data di tab Active dan History?
+    - Bagaimana cara melihat hasil pencarian setelah menggunakan filter di menu Medical Record External?
+    - Bagaimana cara mencari data klaim di tab Active dan History?
+    - Dokter dan Paramedis dapat melakukan pencarian data menggunakan kolom search dan filter yang tersedia pada tab Active maupun History.
+    - Bagaimana cara pencarian data di tab Active dan History menggunakan search dan filter?
+    - Apakah dokter dan paramedis bisa melakukan pencarian data di tab Active dan History?
+    - Apa cara mencari data dengan menggunakan kolom search di tab Active dan History?
+    - Bagaimana cara mencari data klaim dengan filter di tab Active dan History?
+    - Apakah ada kolom search untuk mencari data di tab Active dan History?
+
+- intent: how_to_view_medical_record_external_submission_detail_medic_id
+  examples: |
+    - Bagaimana cara melihat detail Pengajuan Medical Record External?
+    - Apa langkah-langkah untuk melihat detail pengajuan Medical Record External?
+    - Bagaimana cara membuka detail pengajuan di menu Medical Record External?
+    - Apa yang perlu dilakukan untuk melihat detail klaim di Medical Record External?
+    - Bagaimana cara memeriksa detail pengajuan klaim di menu Medical Record External?
+    - Apa langkah yang harus diambil untuk melihat informasi detail pengajuan di Medical Record External?
+    - Bagaimana saya dapat melihat detail klaim pada menu Medical Record External?
+    - Apa yang perlu saya lakukan untuk melihat detail pengajuan Medical Record External?
+    - Apa yang dimaksud dengan tombol view detail pada menu Medical Record External?
+    - Bagaimana cara meninjau klaim yang telah diajukan di menu Medical Record External?
+    - Apa saja langkah-langkah untuk melihat detail klaim di menu Medical Record External?
+    - Di mana saya bisa menemukan detail pengajuan klaim di menu Medical Record External?
+    - Bagaimana cara mengakses detail klaim di menu Medical Record External?
+    - Di menu apa saya bisa melihat informasi klaim yang lebih rinci di Medical Record External?
+    - Bagaimana cara melihat informasi detail pengajuan klaim pada menu Medical Record External?
+    - Apa yang perlu dilakukan untuk melihat detail pengajuan pada Medical Record External?
+    - Bagaimana cara melihat detail pengajuan klaim di menu Medical Record External setelah klik tombol View Detail?
+    - Bagaimana saya bisa melihat lebih detail data tentang pengajuan di menu Medical Record External?
+    - Apa yang ditampilkan dalam View Detail Medical Record External?
+    - Apa saja yang terlihat saat mengklik View Detail di Medical Record External?
+    - Apa yang akan ditampilkan di halaman Detail Medical Record External?
+    - Apa yang bisa dilihat dalam View Detail Medical Record External?
+    - Informasi apa yang muncul setelah mengklik tombol View Detail di Medical Record External?
+    - Apa saja data yang ditampilkan di View Detail Medical Record External?
+    - Bagaimana cara melihat data yang lebih rinci di View Detail Medical Record External?
+    - Apa yang ditampilkan setelah mengklik tombol View Detail pada klaim di Medical Record External?
+    - Apa informasi yang ditampilkan dalam Detail Pengajuan di View Detail Medical Record External?
+    - Apa yang ada dalam bagian Personal Identity di View Detail Medical Record External?
+    - Apa yang ditampilkan dalam bagian Detail Pengajuan di View Detail Medical Record External?
+    - Bagaimana cara mengakses informasi medical klaim di View Detail Medical Record External?
+
+- intent: what_documents_are_needed_for_medical_record_external_submission_medic_id
+  examples: |
+    - Dokumen apa saja yang perlu diunggah dalam pengajuan Medical Record External?
+    - Apa saja dokumen yang diperlukan untuk pengajuan Medical Record External?
+    - Dokumen apa yang harus diunggah untuk klaim Medical Record External?
+    - Jenis dokumen yang dibutuhkan dalam pengajuan klaim di Medical Record External?
+    - Apa yang perlu diunggah untuk klaim Medical Record External?
+    - Dokumen apa yang dibutuhkan untuk pengajuan medical klaim eksternal?
+    - Apa saja persyaratan dokumen untuk mengajukan klaim di Medical Record External?
+    - Apa dokumen yang harus diunggah berdasarkan jenis tunjangan di Medical Record External?
+    - Apa format dokumen yang diperlukan untuk pengajuan Medical Record External?
+    - Jenis dokumen apa yang harus diunggah untuk pengajuan klaim persalinan di Medical Record External?
+    - Apa dokumen yang diperlukan untuk pengajuan klaim kacamata di Medical Record External?
+    - Apakah ada format khusus untuk dokumen yang diunggah di Medical Record External?
+    - Apa jenis dokumen yang harus diunggah untuk klaim rawat inap di Medical Record External?
+    - Apakah ada batasan ukuran file untuk dokumen yang diunggah di Medical Record External?
+    - Apa saja jenis dokumen yang dibutuhkan berdasarkan jenis tunjangan yang dipilih?
+    - Dokumen apa saja yang diperlukan untuk klaim rawat jalan di Medical Record External?
+    - Apa saja dokumen yang perlu diunggah jika memilih jenis tunjangan donasi?
+    - Apa format file yang dapat diunggah di pengajuan Medical Record External?
+    - Dokumen apa yang perlu diunggah jika saya memilih jenis tunjangan rawat inap untuk keluarga di Medical Record External?
+    - Berapa ukuran maksimal file dokumen yang dapat diunggah untuk klaim Medical Record External?
+  
+- intent: how_to_filter_based_on_cut_off_period_medic_id
+  examples: |
+    - Bagaimana ketentuan filter berdasarkan batas cut-off?
+    - Apa yang dimaksud dengan filter berdasarkan batas cut-off dalam pengajuan klaim?
+    - Gimana cara kerja batas cut-off dalam sistem?
+    - Apa yang terjadi pada data medical record external setelah melewati batas cut-off?
+    - Bagaimana cara mengetahui periode cut-off pada pengajuan klaim?
+    - Apa yang perlu diketahui tentang batas cut-off dalam sistem pengajuan medical record external?
+    - Bagaimana data diurutkan berdasarkan batas cut-off?
+    - Apa saja ketentuan yang berlaku untuk filter berdasarkan batas cut-off?
+    - Apa periode cut-off dalam pengajuan klaim?
+    - Gimana cara kerja batas cut-off dalam menampilkan data klaim?
+    - Apa saja yang mempengaruhi data yang tampil pada tab Active berdasarkan cut-off?
+    - Bagaimana cara data diatur setelah melewati periode cut-off?
+    - Apa yang terjadi jika pengajuan klaim melewati batas cut-off?
+    - Apa yang dimaksud dengan data yang telah melewati periode cut-off?
+    - Gimana tab History mengelola data setelah batas cut-off?
+    - Apa saja perubahan yang terjadi pada data klaim yang lewat dari batas cut-off?
+    - Bagaimana cara menentukan tanggal cut-off dalam pengajuan klaim?
+    - Bagaimana cut-off mempengaruhi data yang ditampilkan dalam sistem klaim?
+    - Gimana cara filter bekerja setelah melewati periode cut-off dalam sistem pengajuan medical record external?
+
+- intent: statuses_are_involved_in_medical_claim_approval_process_medic_id
+  examples: |
+    - Apa saja status dalam proses persetujuan medical klaim?
+    - Status apa saja yang ada dalam proses persetujuan medical klaim?
+    - Apa yang dimaksud dengan status dalam proses persetujuan medical klaim?
+    - Apa saja status yang digunakan dalam pengajuan medical klaim?
+    - Apa saja status yang ada dalam proses persetujuan medical klaim oleh dokter dan paramedis?
+    - Jelaskan status dalam proses persetujuan medical klaim
+    - Apa yang dimaksud dengan status approved dalam proses persetujuan medical klaim?
+    - Apa yang dimaksud dengan status need approval dalam proses medical klaim?
+    - Apa saja arti status dalam proses persetujuan medical klaim?
+    - Apa status approved dalam proses pengajuan medical klaim?
+    - Apa yang terjadi pada klaim dengan status rejected?
+    - Apa arti status revision dalam proses persetujuan medical klaim, dan bagaimana cara menangani klaim dengan status revision?
+    - Apa arti status need approval dalam medical klaim?
+    - Status apa yang menunjukkan klaim telah disetujui oleh dokter atau paramedis?
+    - Bagaimana status rejected mempengaruhi medical klaim?
+    - Apa yang harus dilakukan jika medical klaim diberi status revision?
+    - Apa yang terjadi jika klaim diberi status need approval?
+    - Apa perbedaan antara status approved dan rejected dalam medical klaim?
+    - Jelaskan status revision dalam proses pengajuan medical klaim
+    - Arti dari status rejected pada proses persetujuan atau pengajuan medical klaim di aplikasi medic?
+
+- intent: how_do_doctor_or_paramedic_approve_medical_claim_medic_id
+  examples: |
+    - Bagaimana cara dokter/paramedis memberikan approval pengajuan medical klaim?
+    - Apa langkah yang dilakukan dokter/paramedis untuk menyetujui pengajuan klaim medis?
+    - Apa yang perlu dilakukan dokter/paramedis untuk menyetujui klaim medis?
+    - Bagaimana proses dokter/paramedis dalam memberikan approval pada klaim medis?
+    - Apa yang harus dilakukan dokter untuk menyetujui klaim medis yang diajukan?
+    - Apa langkah-langkah yang diambil oleh dokter/paramedis untuk menyetujui pengajuan klaim medis?
+    - Bagaimana cara dokter/paramedis mengonfirmasi persetujuan klaim medis?
+    - Apa yang dilakukan dokter/paramedis untuk memberikan approval klaim medis yang diajukan?
+    - Apa saja yang perlu dilakukan dokter untuk menyetujui klaim medis dalam sistem?
+    - Apa yang dilakukan sistem ketika dokter/paramedis memberikan persetujuan pada klaim medis?
+    - Bagaimana proses persetujuan klaim medis oleh dokter/paramedis di aplikasi?
+    - Apa yang dilakukan setelah dokter/paramedis mengklik tombol "Approve" pada klaim medis?
+    - Bagaimana cara dokter memberikan approval untuk klaim medis yang sudah diajukan?
+    - Apa yang perlu dilakukan oleh paramedis untuk menyetujui pengajuan klaim medis?
+    - Langkah apa saja yang harus dilakukan paramedis untuk memberikan approval pada klaim medis?
+    - Apa proses yang dilakukan oleh paramedis untuk menyetujui klaim medis?
+    - Bagaimana cara paramedis mengonfirmasi persetujuan klaim medis yang diajukan oleh karyawan?
+    - Apa langkah-langkah yang harus diambil paramedis untuk menyetujui klaim medis dalam sistem?
+    - Apa yang perlu dilakukan paramedis ketika memberikan approval untuk klaim medis yang diajukan oleh karyawan?
+    - Bagaimana dokter melakukan approval pengajuan medical claim?
+
+- intent: how_do_doctor_or_paramedic_reject_medical_claim_medic_id
+  examples: |
+    - Gimana cara dokter/paramedis memberikan rejected pada pengajuan medical klaim?
+    - Apa yang perlu dilakukan dokter/paramedis untuk menolak klaim medis?
+    - Bagaimana proses penolakan klaim medis oleh dokter/paramedis?
+    - Apa langkah yang diambil dokter/paramedis untuk menolak pengajuan klaim medis?
+    - Bagaimana cara dokter/paramedis menolak pengajuan klaim medis?
+    - Apa yang harus dilakukan dokter/paramedis untuk memberikan status rejected pada klaim medis?
+    - Apa yang perlu dilakukan oleh dokter/paramedis setelah mengklik tombol rejected?
+    - Bagaimana cara dokter/paramedis mengonfirmasi penolakan pengajuan klaim medis?
+    - Apa yang dilakukan dokter/paramedis setelah mengklik tombol rejected pada klaim medis?
+    - Bagaimana proses sistem setelah dokter/paramedis memberikan penolakan pada klaim medis?
+    - Apa yang terjadi setelah dokter/paramedis mengklik rejected pada klaim medis?
+    - Bagaimana cara memberikan aksi rejected atau menolak atas klaim medis di sistem setelah pengajuan?
+    - Bagaimana langkah-langkah yang dilakukan dokter/paramedis untuk menolak klaim medis yang diajukan?
+    - Apa yang dilakukan dokter/paramedis jika klaim medis tidak disetujui?
+    - Apa yang perlu dilakukan dokter/paramedis untuk mengisi alasan penolakan pada klaim medis?
+    - Bagaimana cara dokter/paramedis menolak klaim medis dalam aplikasi?
+    - Apa yang terjadi setelah dokter/paramedis menolak pengajuan klaim medis di sistem?
+    - Apa yang dilakukan sistem setelah dokter/paramedis menolak klaim medis?
+    - Bagaimana dokter/paramedis memberikan penolakan pada pengajuan klaim medis yang diajukan oleh karyawan?
+    - Bagaimana dokter melakukan reject atas pengajuan medical claim?
+
+- intent: how_do_doctor_or_paramedic_revision_medical_claim_medic_id
+  examples: |
+    - Gimana cara dokter/paramedis memberikan revision pada pengajuan medical klaim?
+    - Apa yang perlu dilakukan dokter/paramedis untuk mengajukan revisi klaim medis?
+    - Cara proses revisi klaim medis oleh dokter/paramedis?
+    - Apa langkah yang diambil dokter/paramedis untuk memberikan revisi pada klaim medis?
+    - Bagaimana cara dokter/paramedis mengajukan revisi klaim medis yang diajukan?
+    - Apa yang harus dilakukan dokter/paramedis untuk memberikan status revisi pada klaim medis?
+    - Apa yang perlu dilakukan oleh dokter/paramedis setelah mengklik tombol revisi?
+    - Bagaimana cara dokter/paramedis mengonfirmasi revisi pada pengajuan klaim medis?
+    - Apa yang dilakukan dokter/paramedis setelah mengklik tombol revisi pada klaim medis?
+    - Bagaimana proses sistem setelah dokter/paramedis memberikan revisi pada klaim medis?
+    - Apa yang terjadi setelah dokter/paramedis mengklik revisi pada klaim medis?
+    - Bagaimana cara memberikan revisi klaim medis dalam sistem?
+    - Bagaimana langkah-langkah yang dilakukan dokter/paramedis untuk merevisi klaim medis yang diajukan?
+    - Apa yang dilakukan dokter/paramedis jika klaim medis perlu direvisi?
+    - Apa yang perlu dilakukan dokter/paramedis untuk mengisi alasan revisi pada klaim medis?
+    - Bagaimana cara dokter/paramedis merevisi klaim medis dalam aplikasi?
+    - Apa yang terjadi setelah dokter/paramedis menekan tombol revisi pada klaim medis?
+    - Bagaimana cara dokter/paramedis melakukan revisi klaim medis yang diajukan oleh karyawan?
+    - Bagaimana dokter memberikan revisi atas pengajuan medical claim yang diajukan oleh karyawan
+    - Bagaimana dokter melakukan revisi atas pengajuan medical claim?  
+
+- intent: why_shift_loss_and_diagnosis_are_marked_with_minus_in_history_tab_medic_id
+  examples: |
+    - Mengapa kolom Shift Loss dan Diagnosis ditandai dengan (-) pada tab History di menu medical record external?
+    - Kenapa ada tanda (-) di kolom Shift Loss dan Diagnosis pada tab History di menu medical record external?
+    - Apa alasan kolom Shift Loss dan Diagnosis ditandai dengan (-) di tab History?
+    - Mengapa kolom Diagnosis dan Shift Loss tidak terisi pada tab History di menu medical record external?
+    - Apa yang menyebabkan tanda (-) muncul di kolom Diagnosis dan Shift Loss di menu medical record external?
+    - Kenapa kolom Shift Loss dan Diagnosis muncul dengan tanda (-) di tab History?
+    - Mengapa data di kolom Shift Loss dan Diagnosis tidak tersedia di tab History?
+    - Mengapa data Shift Loss dan Diagnosis kebanyakan beriisi tanda (-) di menu medical record external?
+    - Apa yang menyebabkan kolom Shift Loss dan Diagnosis kosong atau terisi tanda (-) pada tab History?
+    - Apa alasan kolom Shift Loss dan Diagnosis tidak terisi di tab History?
+    - Mengapa pada klaim jenis Donasi kolom Shift Loss dan Diagnosis diberi tanda (-)?
+    - Apa yang menyebabkan kolom Shift Loss dan Diagnosis mayoritas datanya berisi kosong atau tanda (-) di tab History?
+    - Kenapa Shift Loss dan Diagnosis tidak perlu diisi jika klaimnya adalah Donasi?
+    - Kenapa Shift Loss dan Diagnosis tidak perlu diisi jika jenis tunjangan nya adalah keluarga karyawan - rawat inap pada menu medical record external?
+    - Kenapa Shift Loss dan Diagnosis tidak perlu diisi jika klaim nya adalah keluarga karyawan - rawat jalan pada menu medical record external?
+    - Mengapa kolom Shift Loss dan Diagnosis dikosongkan pada jenis klaim Keluarga Karyawan - Rawat Inap/Rawat Jalan?
+    - Kenapa kolom Shift Loss dan Diagnosis tidak diperlukan pada klaim Donasi?
+    - Apa alasan Shift Loss dan Diagnosis tidak perlu diisi pada klaim Keluarga Karyawan - Rawat Inap/Rawat Jalan?
+    - Mengapa tanda (-) muncul di kolom Shift Loss dan Diagnosis di tab History pada klaim Donasi atau Keluarga Karyawan?
+    - Kenapa kolom Shift Loss dan Diagnosis ditandai dengan tanda (-) pada klaim jenis tertentu di tab History?
+
+- intent: can_claim_data_be_edited_after_approval_or_rejection_tab_medic_id
+  examples: |
+    - Apakah bisa mengedit data klaim yang sudah disetujui atau ditolak?
+    - Bisakah data klaim yang sudah disetujui atau ditolak diedit?
+    - Apakah data klaim yang telah disetujui atau ditolak masih bisa diubah?
+    - Bisa kah data klaim yang sudah disetujui atau ditolak diubah?
+    - Apa yang terjadi jika ingin mengedit klaim yang sudah disetujui atau ditolak?
+    - Apakah ada cara untuk mengedit data klaim yang sudah disetujui atau ditolak?
+    - Apakah data klaim yang telah disetujui atau ditolak dapat diperbaiki?
+    - Setelah klaim disetujui atau ditolak, bisa kah diubah?
+    - Bisakah mengedit klaim yang statusnya sudah disetujui atau ditolak?
+    - Apa yang terjadi jika ingin mengedit klaim setelah statusnya Approved atau Rejected?
+    - Apakah sistem mengizinkan pengeditan data klaim setelah disetujui atau ditolak?
+    - Apakah data klaim yang sudah disetujui atau ditolak tetap bisa diedit di sistem?
+    - Apakah memungkinkan untuk mengubah klaim yang sudah disetujui atau ditolak?
+    - Apakah ada perubahan yang bisa dilakukan pada klaim yang sudah disetujui atau ditolak?
+    - Bisakah klaim yang sudah disetujui atau ditolak diubah kembali?
+    - Apakah bisa memperbarui klaim yang sudah disetujui atau ditolak?
+    - Apakah klaim yang sudah disetujui atau ditolak dapat dimodifikasi?
+    - Dapatkah klaim yang sudah disetujui atau ditolak diedit kembali?
+    - Jika klaim sudah disetujui atau ditolak, bisakah dilakukan perubahan data?
+
+- intent: relationship_between_medical_record_external_in_medic_and_medical_claim_in_ess_medic_id
+  examples: |
+    - Apa hubungan antara Medical Record External di Medic Apps dengan medical klaim di ESS Apps?
+    - Apa yang terjadi setelah klaim diverifikasi di Medical Record External pada Medic Apps?
+    - Apa peran Medic Apps dalam pengajuan medical klaim di ESS Apps?
+    - Bagaimana pengajuan klaim di Medical Record External di Medic Apps diproses di ESS Apps?
+    - Apa yang dimaksud dengan hubungan antara Medic Apps dan ESS Apps dalam pengajuan medical klaim?
+    - Apa fungsi dari Medical Record External di Medic Apps dalam kaitannya dengan medical klaim di ESS Apps?
+    - Apa yang terjadi di ESS Apps setelah klaim disetujui atau ditolak di Medical Record External?
+    - Bagaimana Medical Record External di Medic Apps mempengaruhi klaim yang ada di ESS Apps?
+    - Apakah medical klaim di ESS Apps otomatis terupdate setelah klaim diverifikasi di Medic Apps?
+    - Bagaimana medical klaim yang telah disetujui di Medic Apps dapat diakses di ESS Apps?
+    - Apakah ada integrasi antara Medical Record External di Medic Apps dan medical klaim di ESS Apps?
+    - Bagaimana Medical Record External membantu dalam proses verifikasi klaim di ESS Apps?
+    - Apakah Medical Record External di Medic Apps terhubung dengan medical klaim di ESS Apps?
+    - Apakah sistem Medic dan ESS saling terhubung untuk medical klaim?
+    - Bagaimana cara kerja integrasi antara Medical Record External dan medical klaim di ESS Apps?
+    - Apakah data di Medical Record External otomatis terhubung ke ESS Apps?
+    - Bagaimana data medical klaim diteruskan dari Medic Apps ke ESS Apps?
+    - Apakah pengajuan klaim di Medic Apps mempengaruhi data di ESS Apps?
+    - Apa yang terjadi setelah klaim disetujui di Medic Apps, apakah langsung muncul di ESS Apps?
+    - Apakah ada integrasi otomatis antara Medic Apps dan ESS Apps untuk medical klaim?
+    - Apakah Medical Record External di Medic Apps dan medical klaim di ESS Apps saling terhubung langsung?
+
+- intent: meaning_of_numbers_in_active_tab_medic_id
+  examples: |
+    - Apa arti angka yang muncul di tab Active pada menu medical record external?
+    - Apa yang dimaksud dengan angka di tab Active?
+    - Angka yang muncul di tab Active pada menu medical record external apa artinya?
+    - Apa yang dihitung oleh angka di tab Active?
+    - Apa maksudnya jika ada angka di tab Active?
+    - Mengapa ada angka yang muncul di tab Active dalam medical klaim?
+    - Apa arti jumlah angka yang tampil di tab Active?
+    - Apa yang dimaksud dengan jumlah medical klaim di tab Active?
+    - Bagaimana cara mengetahui jumlah klaim yang membutuhkan persetujuan di tab Active?
+    - Apa yang ditunjukkan oleh angka di tab Active pada menu medical record external?
+    - Apa yang dihitung dalam angka yang muncul di tab Active di Medic Apps?
+    - Apa arti angka di tab Active terkait medical klaim?
+    - Mengapa tab Active menunjukkan angka klaim yang menunggu persetujuan?
+    - Apa informasi yang diberikan oleh angka di tab Active terkait medical klaim?
+    - Apa yang perlu diketahui tentang angka yang muncul di tab Active?
+    - Apa angka di tab Active menunjukkan jumlah klaim yang sedang dalam proses?
+    - Bagaimana cara mengetahui klaim yang membutuhkan persetujuan melalui angka di tab Active?
+    - Apa yang perlu dilakukan jika ada angka di tab Active yang menunjukkan klaim menunggu persetujuan?
+    - Apa arti dari angka yang terlihat di tab Active pada sistem medical klaim?
+    - Apa arti dari angka yang terlihat di tab Active pada pengajuan medical di menu medical record external?
+
+- intent: what_happens_after_claim_is_approved_in_medic_apps_medic_id
+  examples: |
+    - Apa yang terjadi setelah medical klaim disetujui di Medic Apps?
+    - Apa langkah berikutnya setelah medical klaim disetujui di Medic Apps?
+    - Apa yang terjadi setelah medical klaim disetujui oleh tim medis di Medic Apps?
+    - Setelah medical klaim disetujui di Medic Apps, apa yang terjadi selanjutnya?
+    - Apa yang terjadi setelah medical klaim diverifikasi dan disetujui di Medic Apps?
+    - Apa yang terjadi jika medical klaim sudah disetujui di Medic Apps?
+    - Setelah disetujui di Medic Apps, ke mana data medical klaim akan diteruskan?
+    - Apa yang terjadi setelah medical klaim disetujui di Medic Apps?
+    - Apakah klaim yang disetujui di Medic Apps diteruskan ke sistem lain?
+    - Bagaimana proses medical klaim setelah disetujui di Medic Apps?
+    - Apakah ada pemberitahuan setelah medical klaim disetujui di Medic Apps?
+    - Apa langkah selanjutnya untuk medical klaim setelah disetujui di Medic Apps?
+    - Setelah disetujui di Medic Apps, bagaimana karyawan diberitahukan mengenai status medical klaim?
+    - Apa yang terjadi setelah medical klaim disetujui oleh tim medis di Medic Apps dan data diteruskan ke ESS Apps?
+    - Bagaimana proses pemberitahuan kepada karyawan setelah medical klaim disetujui di Medic Apps?
+    - Apakah medical klaim yang sudah disetujui di Medic Apps langsung muncul di ESS Apps?
+    - Apa yang terjadi pada medical klaim yang telah disetujui oleh tim medis di Medic Apps?
+    - Apakah medical klaim yang disetujui di Medic Apps langsung diproses di ESS Apps?
+    - Apa yang harus dilakukan setelah medical klaim disetujui di Medic Apps?
+
+# - intent: process_flow_after_medical_claim_submission_medic_id
+#   examples: |
+#     - Apa urutan proses yang terjadi setelah pengajuan medical klaim diajukan?
+#     - Apa langkah-langkah yang terjadi setelah medical klaim diajukan oleh karyawan?
+#     - Bagaimana proses yang dilakukan setelah medical klaim diajukan?
+#     - Apa yang terjadi setelah pengajuan medical klaim oleh karyawan?
+#     - Apa yang terjadi setelah medical klaim dikirimkan oleh karyawan?
+#     - Apa tahapan yang dilalui medical klaim setelah diajukan?
+#     - Bagaimana prosedur yang terjadi setelah medical klaim diajukan di ESS Apps?
+#     - Apa saja langkah-langkah yang diambil setelah medical klaim diajukan oleh karyawan?
+#     - Apa yang dilakukan setelah medical klaim diajukan di sistem?
+#     - Setelah medical klaim diajukan, bagaimana proses persetujuannya?
+#     - Apa urutan pengolahan medical klaim di sistem?
+#     - Apa yang dilakukan setelah medical klaim dimasukkan ke dalam ESS Apps?
+#     - Setelah pengajuan klaim, apa yang dilakukan oleh dokter/paramedis?
+#     - Apa yang terjadi setelah medical klaim dikirim oleh karyawan melalui ESS Apps?
+#     - Bagaimana cara medical klaim diproses setelah diajukan oleh karyawan?
+#     - Apa langkah-langkah yang diambil oleh tim medis setelah klaim diajukan?
+#     - Apa yang dimaksud dengan status "Need Approval" pada medical klaim?
+#     - Apa yang dimaksud dengan status "Approved" atau rejected pada medical klaim?
+#     - Apakah ada revisi yang dilakukan setelah medical klaim diajukan?
+#     - Bagaimana proses pembaruan status klaim di ESS Apps setelah disetujui atau ditolak?
+#     - Bagaimana langkah-langkah proses persetujuan medical klaim?
+#     - Apa saja tahapan dalam persetujuan medical klaim?
+
+#     - Apa tahapan yang dilakukan setelah medical klaim diajukan?
+#     - Bagaimana proses persetujuan medical klaim dari awal sampai akhir?
+#     - Apa yang terjadi setelah pengajuan medical klaim dilakukan oleh karyawan?
+#     - Apa urutan proses setelah medical klaim diajukan oleh karyawan?
+#     - Setelah medical klaim diajukan, bagaimana langkah-langkah selanjutnya?
+#     - Apa yang terjadi setelah medical klaim diverifikasi oleh dokter?
+#     - Apa yang terjadi jika medical klaim tidak disetujui?
+#     - Apa urutan proses persetujuan medical klaim setelah pengajuan?
+#     - Bagaimana langkah-langkah yang terjadi setelah pengajuan medical klaim?
+#     - Apa saja tahapan yang harus dilalui setelah medical klaim diajukan?
+#     - Apa yang terjadi setelah medical klaim diajukan oleh karyawan?
+#     - Bagaimana proses persetujuan medical klaim setelah diajukan?
+#     - Apa proses yang terjadi setelah medical klaim diajukan ke ESS Apps?
+#     - Setelah medical klaim diajukan, bagaimana proses persetujuannya?
+#     - Apa yang dilakukan dokter/paramedis setelah klaim diajukan oleh karyawan?
+#     - Apa urutan proses yang dilakukan tim medis setelah pengajuan medical klaim?
+#     - Apa yang dilakukan tim medis setelah menerima medical klaim untuk persetujuan?
+#     - Apa langkah yang dilakukan dokter setelah menerima medical klaim yang diajukan?
+#     - Apa yang terjadi jika klaim memerlukan revisi oleh karyawan?
+#     - Bagaimana pembaruan status klaim di ESS Apps setelah disetujui atau ditolak?
+#     - Bagaimana cara status klaim diperbarui di ESS Apps setelah tindakan dokter?
+
+- intent: what_is_approval_activity_feature_medic_id
+  examples: |
+    - Apa itu fitur Approval Activity?
+    - Apa yang dimaksud dengan fitur Approval Activity?
+    - Apa fungsi dari fitur Approval Activity?
+    - Bisa jelaskan apa itu fitur Approval Activity?
+    - Apa yang ditampilkan oleh fitur Approval Activity?
+    - Apa kegunaan fitur Approval Activity dalam proses medical klaim?
+    - Apa yang dapat dilihat dengan fitur Approval Activity?
+    - Fitur Approval Activity digunakan untuk apa?
+    - Bagaimana cara kerja fitur Approval Activity?
+    - Apa yang dapat dipantau dengan fitur Approval Activity?
+    - Apa peran fitur Approval Activity dalam pengajuan medical klaim?
+    - Fitur Approval Activity itu apa sih?
+    - Apa yang dimaksud dengan tracking pengajuan medical klaim di fitur Approval Activity?
+    - Bagaimana fitur Approval Activity membantu dalam melihat riwayat medical klaim?
+    - Apa yang tercatat dalam fitur Approval Activity?
+    - Apa yang ditunjukkan fitur Approval Activity selama proses medical klaim?
+    - Apa yang bisa dilihat pada fitur Approval Activity?
+    - Bagaimana fitur Approval Activity berfungsi dalam memantau persetujuan klaim?
+    - Bagaimana cara menggunakan fitur Approval Activity untuk melacak medical klaim?
+    - Informasi apa saja yang ditampilkan dalam Approval Activity?
+    - Apa saja yang muncul di Approval Activity?
+    - Apa saja detail yang ditampilkan dalam fitur Approval Activity?
+    - Apa informasi yang bisa dilihat dalam Approval Activity?
+    - Apa saja yang ada di dalam pop-up Approval Activity?
+    - Apa yang ditampilkan pada detail fitur Approval Activity?
+    - Apa saja yang terlihat pada Approval Activity?
+    - Fitur Approval Activity menampilkan informasi apa saja?
+    - Apa yang ditampilkan dalam tab Approval Activity?
+    - Apa yang muncul saat saya buka Approval Activity?
+    - Apa yang ada dalam Activity Log di Approval Activity?
+    - Apa yang ditunjukkan oleh status pengajuan dalam form Approval Activity?
+    - Apa yang muncul di Approval Activity saat pengajuan medical klaim disetujui?
+    - Apa yang ditampilkan pada Request Date di Approval Activity?
+    - Bagaimana cara melihat informasi pengajuan medical klaim di Approval Activity?
+    - Apa jenis tunjangan yang ditampilkan dalam menu Approval Activity?
+    - Apa saja yang ada di dalam Activity Log pada Approval Activity?
+    - Apa detail yang dapat dilihat dalam Approval Activity setelah pengajuan medical klaim
+
+- intent: see_attachments_uploaded_by_employee_medic_id
+  examples: |
+    - Gimana cara liat attachment kwitansi yang sudah diunggah?
+    - Gimana cara liat attachment diagnosa yang sudah diunggah?
+    - Cara membuka file yang diunggah oleh karyawan?
+    - Apa yang perlu dilakukan untuk melihat attachment file kwitansi yang udah diupload di sistem medic?
+    - Di mana saya bisa melihat dokumen atau gambar yang sudah saya unggah?
+    - Cara lihat file yang diupload oleh karyawan di system?
+    - Apa langkah-langkah untuk melihat attachment pada pengajuan medical claim?
+    - Bagaimana cara melihat dokumen atau file diagnosa/kwitansi yang terlampir dalam Medical Record External?
+    - Bagaimana cara membuka attachment di Medical Record External?
+    - Apa yang harus dilakukan untuk melihat attachment pada medical klaim yang diajukan di menu medical record external?
+    - Apa yang harus saya klik untuk melihat file yang diunggah oleh karyawan?
+    - Gimana cara melihat lampiran klaim medis di detail Medical Record External?
+    - Di mana bisa melihat gambar atau dokumen yang diunggah?
+    - Cara akses dokumen yang telah diunggah pada menu medic pada saat pengajuan medical claim?
+    - Bagaimana cara melihat file yang terlampir pada klaim medis?
+    - Bagaimana cara menampilkan dokumen yang diunggah oleh karyawan pada saat pengajuan medical claim?
+    - Apa yang perlu saya klik untuk melihat file attachment mengenai file pengajuan medical claim di menu medical record external?
+    - Bagaimana cara melihat gambar atau dokumen yang sudah diupload di Medical Record?
+    - Apa yang harus saya lakukan untuk melihat file attachment diagnosa yang diunggah di menu medical record external?
+    - Gimana cara untuk melihat file attachment kwitansi yang sudah diunggah pada saat pengajuan medical claim di menu medical record external?
+    - Gimana cara buka dokumen atau gambar yang dilampirkan di medical record external?
+    - Gimana cara lihat attachment yang sudah diunggah oleh karyawan?
+    - Bagaimana cara buka file untuk melihat dokumen atau gambar kwitansi yang diunggah oleh karyawan di aplikasi medic?
+
+- intent: notifications_sent_in_medical_record_external_medic_id
+  examples: |
+    - Kapan notifikasi dalam sistem Medical Record External dikirimkan?
+    - Apa penyebab notifikasi dikirimkan dalam sistem Medical Record External?
+    - Bagaimana cara notifikasi dikirimkan dalam sistem Medical Record External?
+    - Kapan saya akan menerima notifikasi dalam sistem Medical Record External?
+    - Apa yang memicu pengiriman notifikasi di Medical Record External?
+    - Notifikasi apa yang dikirimkan dalam sistem Medical Record External?
+    - Kapan notifikasi muncul dalam sistem Medical Record External?
+    - Bagaimana cara sistem mengirimkan notifikasi dalam Medical Record External?
+    - Kapan notifikasi muncul setelah pengajuan Medical Claim di ESS?
+    - Apa yang memicu pengiriman notifikasi setelah pengajuan klaim?
+    - Sistem akankah mengirimkan notifikasi setelah pengajuan klaim medis?
+    - Kapan saya mendapatkan pemberitahuan dalam sistem Medical Record External?
+    - Apa yang menyebabkan munculnya notifikasi pada sistem Medical Record External?
+    - Apakah notifikasi dikirim ketika medical klaim baru diajukan?
+    - Apakah sistem mengirimkan notifikasi ketika klaim diajukan oleh karyawan?
+    - Kapan saya mendapatkan notifikasi jika ada klaim medis yang diajukan?
+    - Bagaimana cara sistem mengirimkan pemberitahuan dalam Medical Record External?
+    - Apakah notifikasi muncul setelah ada klaim baru yang diajukan?
+    - Kapan sistem mengirimkan pemberitahuan tentang medical klaim medis yang baru?
+    - Bagaimana sistem memberikan notifikasi setelah pengajuan medical klaim oleh karyawan?
+
+- intent: what_is_medical_checkup_menu_medic_id
+  examples: |
+    - Apa itu menu Medical Checkup?
+    - Apa yang dimaksud dengan menu Medical Checkup dalam sistem?
+    - Jelaskan fungsi dari menu Medical Checkup
+    - Apa yang dapat dilakukan di menu Medical Checkup?
+    - Apa yang ditampilkan di menu Medical Checkup?
+    - Menu Medical Checkup itu apa?
+    - Apa saja fitur yang ada di menu Medical Checkup?
+    - Apa tujuan dari menu Medical Checkup dalam sistem ini?
+    - Apa saja yang bisa dikelola melalui menu Medical Checkup?
+    - Bagaimana cara menggunakan menu Medical Checkup?
+    - Apa yang bisa dilakukan dokter/paramedis di menu Medical Checkup?
+    - Fitur apa saja yang ada di menu Medical Checkup?
+    - Bagaimana menu Medical Checkup membantu dokter/paramedis?
+    - Menu apa yang digunakan untuk melihat hasil medical checkup?
+    - Apa yang dimaksud dengan pengelolaan data pemeriksaan kesehatan di menu Medical Checkup?
+    - Apa fungsi menu Medical Checkup dalam aplikasi ini?
+    - Apa yang dilakukan di menu Medical Checkup dalam mengelola hasil pemeriksaan?
+    - Menu Medical Checkup itu fungsinya untuk apa?
+
+- intent: who_can_access_medical_checkup_menu_medic_id
+  examples: |
+    - Siapa yang dapat mengakses menu Medical Checkup?
+    - Siapa saja yang bisa mengakses menu Medical Checkup di aplikasi Medic?
+    - Apakah hanya dokter yang bisa mengakses menu Medical Checkup?
+    - Siapa yang dapat melihat dan menambah data di menu Medical Checkup?
+    - Role apa yang dapat mengakses menu Medical Checkup dalam sistem?
+    - Dokter dan paramedis dapat mengakses menu Medical Checkup?
+    - Role yang memiliki hak akses untuk melihat hasil pemeriksaan di menu Medical Checkup?
+    - Siapa saja yang memiliki hak akses ke data Medical Checkup di aplikasi?
+    - Apakah paramedis juga dapat mengakses menu Medical Checkup?
+    - Apakah dokter memiliki akses penuh ke menu Medical Checkup?
+    - Siapa yang bisa menambahkan data hasil Medical Checkup di menu?
+    - Apa perbedaan akses antara dokter dan paramedis di menu Medical Checkup?
+    - Apakah hanya dokter yang dapat menambahkan data Medical Checkup?
+    - Apakah paramedis dapat melihat dan menambah data di menu Medical Checkup?
+    - Apa yang membedakan hak akses dokter dan paramedis di menu Medical Checkup?
+    - Role yang dapat mengedit data di menu Medical Checkup?
+    - Siapa yang bisa mengakses data hasil Medical Checkup di aplikasi ini?
+    - Apakah paramedis bisa mengakses menu Medical Checkup di seluruh site?
+    - Siapa yang bisa mengakses dan mengelola data hasil pemeriksaan di Medical Checkup?
+    - Apakah hanya petugas medis yang bisa mengakses menu Medical Checkup?
+    - Menu Medical Checkup bisa diakses oleh siapa saja?
+    - Siapa yang diberikan hak akses untuk membuka menu Medical Checkup?
+    - Apakah karyawan dapat mengakses menu Medical Checkup?
+    - Apakah ada pembatasan akses pada menu Medical Checkup?
+    - Apakah hanya pengguna tertentu yang dapat mengakses menu Medical Checkup?
+    - Bagaimana cara akses menu Medical Check Up?
+    - Apa langkah-langkah untuk membuka menu Medical Checkup?
+    - Bagaimana cara masuk ke menu Medical Checkup di aplikasi?
+    - Apa yang perlu dilakukan untuk melihat menu Medical Checkup?
+    - Di mana saya bisa menemukan menu Medical Checkup dalam aplikasi?
+    - Bagaimana cara mengakses halaman Medical Checkup?
+    - Apa saja yang perlu dilakukan dokter/paramedis untuk membuka menu Medical Checkup?
+    - Langkah apa yang harus diambil untuk membuka menu Medical Checkup?
+    - Di bagian mana saya bisa menemukan menu Medical Checkup di aplikasi?
+    - Bagaimana saya bisa membuka menu Medical Checkup?
+    - Dimana menu Medical Checkup dapat diakses dalam aplikasi?
+
+- intent: what_is_type_mcu_column_in_medical_checkup_medic_id
+  examples: |
+    - Apa itu kolom type MCU dalam tabel Medical Checkup?
+    - Apa arti kolom type MCU di tabel Medical Checkup?
+    - Apa yang dimaksud dengan kolom type MCU dalam tabel pemeriksaan medis?
+    - Jelaskan tentang kolom type MCU dalam tabel Medical Checkup
+    - Apa fungsi kolom type MCU pada data Medical Checkup?
+    - Apa yang ditunjukkan oleh kolom type MCU dalam tabel Medical Checkup?
+    - Apa informasi yang terdapat dalam kolom type MCU di Medical Checkup?
+    - Mengapa kolom type MCU penting dalam tabel Medical Checkup?
+    - Apa isi kolom type MCU dalam tabel Medical Checkup?
+    - Kolom type MCU menunjukkan apa dalam data Medical Checkup?
+    - Kolom type MCU di Medical Checkup digunakan untuk apa?
+    - Apa yang dimaksud dengan jenis-jenis yang ada di kolom type MCU?
+    - Kolom type MCU terdiri dari apa saja di tabel Medical Checkup?
+    - Jenis pemeriksaan apa saja yang tercantum dalam kolom type MCU?
+    - Apa saja kategori dalam kolom type MCU di Medical Checkup?
+    - Kolom type MCU menunjukkan kategori pemeriksaan apa saja?
+    - Kolom type MCU dalam Medical Checkup merujuk pada jenis pemeriksaan apa?
+    - Jelaskan kategori yang ada pada kolom type MCU dalam tabel Medical Checkup.
+
+- intent: what_is_last_mcu_date_column_in_medical_checkup_medic_id
+  examples: |
+    - Apa itu kolom last MCU date dalam tabel Medical Checkup?
+    - Apa arti kolom last MCU date dalam tabel Medical Checkup?
+    - Jelaskan tentang kolom last MCU date dalam tabel Medical Checkup.
+    - Apa yang dimaksud dengan kolom last MCU date di data Medical Checkup?
+    - Apa informasi yang ditampilkan pada kolom last MCU date di Medical Checkup?
+    - Apa yang ditunjukkan oleh kolom last MCU date dalam tabel Medical Checkup?
+    - Kolom last MCU date pada Medical Checkup menunjukkan apa?
+    - Apa fungsi kolom last MCU date dalam tabel pemeriksaan Medical Checkup?
+    - Kolom last MCU date itu untuk apa?
+    - Apa yang ada di kolom last MCU date pada data Medical Checkup?
+    - Apa yang dimaksud dengan tanggal pada kolom last MCU date?
+    - Kolom last MCU date berfungsi untuk apa dalam Medical Checkup?
+    - Apa yang tercatat pada kolom last MCU date dalam tabel Medical Checkup?
+    - Apa kegunaan kolom last MCU date dalam data pemeriksaan medis?
+    - Kolom last MCU date berisi informasi apa pada tabel Medical Checkup?
+    - Apa yang menunjukkan kolom last MCU date dalam laporan Medical Checkup?
+
+- intent: what_is_expired_mcu_column_in_medical_checkup_medic_id
+  examples: |
+    - Apa itu kolom expired MCU dalam tabel Medical Checkup?
+    - Apa arti kolom expired MCU di tabel Medical Checkup?
+    - Apa yang dimaksud dengan kolom expired MCU dalam data Medical Checkup?
+    - Apa fungsi kolom expired MCU dalam tabel pemeriksaan Medical Checkup?
+    - Apa yang ditunjukkan oleh kolom expired MCU dalam tabel Medical Checkup?
+    - Jelaskan tentang kolom expired MCU dalam tabel Medical Checkup.
+    - Kolom expired MCU pada Medical Checkup menunjukkan apa?
+    - Apa yang ditampilkan dalam kolom expired MCU pada tabel Medical Checkup?
+    - Kolom expired MCU pada tabel Medical Checkup berfungsi untuk apa?
+    - Apa informasi yang ada di kolom expired MCU dalam data Medical Checkup?
+    - Kolom expired MCU menunjukkan tanggal kedaluwarsa untuk apa?
+    - Apa yang dimaksud dengan tanggal kedaluwarsa pada kolom expired MCU?
+    - Kolom expired MCU digunakan untuk menginformasikan kapan pemeriksaan MCU berikutnya dilakukan, benar?
+    - Kolom expired MCU membantu mengetahui kapan pemeriksaan berikutnya, apa saja yang ada di kolom ini?
+    - Apa yang tercatat di kolom expired MCU pada Medical Checkup?
+    - Kolom expired MCU akan memperlihatkan tanggal kedaluwarsa pemeriksaan MCU, apa artinya itu?
+
+- intent: what_is_health_status_column_in_medical_checkup_medic_id
+  examples: |
+    - Apa itu kolom status kesehatan dalam tabel Medical Checkup?
+    - Apa arti kolom status kesehatan pada tabel Medical Checkup?
+    - Apa yang dimaksud dengan kolom status kesehatan dalam data Medical Checkup?
+    - Jelaskan tentang kolom status kesehatan dalam tabel Medical Checkup
+    - Kolom status kesehatan pada Medical Checkup menunjukkan apa?
+    - Apa informasi yang ada di kolom status kesehatan dalam tabel Medical Checkup?
+    - Kolom status kesehatan pada tabel Medical Checkup berfungsi untuk apa?
+    - Apa yang tercatat pada kolom status kesehatan dalam tabel Medical Checkup?
+    - Apa yang dimaksud dengan status kesehatan pada kolom status kesehatan?
+    - Apa yang ditunjukkan oleh kolom status kesehatan di Medical Checkup?
+    - Apa hasil yang ditampilkan pada kolom status kesehatan dalam data Medical Checkup?
+    - Apa yang ada di kolom status kesehatan untuk hasil Medical Checkup?
+    - Kolom status kesehatan menunjukkan kondisi kesehatan karyawan, apa artinya itu?
+    - Jelaskan isi kolom status kesehatan dalam tabel Medical Checkup
+    - Kolom status kesehatan itu untuk apa dalam Medical Checkup?
+    - Kolom status kesehatan pada Medical Checkup mencatat apa saja?
+    - Apa saja hasil yang mungkin ada di kolom status kesehatan dalam tabel Medical Checkup?
+    - Apa yang dimaksud dengan status Unfit di kolom status kesehatan?
+    - Kolom status kesehatan menampilkan status apa saja mengenai kesehatan karyawan?
+    - Apa makna dari status Fit to Work dalam kolom status kesehatan?
+    - Apa makna dari status Fit with Note dalam kolom status kesehatan?
+    - Apa makna dari status Temporary Unfit dalam kolom status kesehatan?
+    - Apa makna dari status Unfit dalam kolom status kesehatan?
+
+- intent: what_is_health_status_in_mcu_result_medic_id
+  examples: |
+    - Apa arti dari status kesehatan pada Hasil medical checkup?
+    - Apa yang dimaksud dengan status kesehatan dalam Hasil MCU?
+    - Jelaskan tentang jenis-jenis status kesehatan pada Hasil MCU
+    - Apa arti status kesehatan Fit to Work dalam Hasil MCU?
+    - Apa yang dimaksud dengan status Fit with Note (FWN) pada Hasil MCU?
+    - Apa itu status Temporary Unfit pada hasil Medical Check Up?
+    - Bagaimana cara memahami status kesehatan pada Hasil MCU?
+    - Apa yang dimaksud dengan status Unfit dalam Hasil MCU?
+    - Apa perbedaan antara Fit to Work dan Fit with Note di Hasil MCU?
+    - Arti status kesehatan temporary unift dalam Hasil MCU?
+    - Apa yang ditunjukkan oleh status kesehatan Fit with Note dalam Hasil MCU?
+    - Apa yang dimaksud dengan status Temporary Unfit pada hasil Medical Checkup?
+    - Jenis status kesehatan pada Hasil medical checkup menampilkan apa saja?
+    - Jelaskan kategori status kesehatan dalam Hasil MCU.
+    - Apa yang dimaksud dengan status Unfit pada Hasil Medical Checkup?
+    - Arti jika status kesehatan pada Hasil MCU adalah Fit to Work, jelaskan?
+    - Apa yang dimaksud dengan status kesehatan yang memerlukan tindak lanjut dalam Hasil MCU?
+    - Status kesehatan apa saja yang ditampilkan di dalam Hasil medical checkup?
+    - Apa artinya jika status kesehatan di Hasil MCU adalah Temporary Unfit?
+    - Bagaimana cara mengetahui status kesehatan karyawan berdasarkan Hasil MCU?
+
+- intent: how_to_search_medical_checkup_data_medic_id
+  examples: |
+    - Gimana cara ingin cari data medical check up secara spesifik?
+    - Apa langkah-langkah untuk mencari data medical check up berdasarkan nama atau NIK?
+    - Bagaimana cara mencari data medical check up dengan menggunakan NIK atau Nama?
+    - Apa yang harus dilakukan untuk mencari data medical check up secara detail?
+    - Bagaimana cara mencari data pemeriksaan kesehatan berdasarkan NIK?
+    - Apa cara mencari data medical check up berdasarkan nama karyawan?
+    - Bagaimana cara menggunakan search field untuk mencari data medical check up?
+    - Bagaimana cara mencari data medical check up di aplikasi?
+    - Bagaimana cara melakukan pencarian data medical check up secara spesifik?
+    - Apa yang perlu dilakukan untuk menemukan data medical check up dengan cepat?
+    - Apakah saya bisa mencari data medical check up berdasarkan NIK?
+    - Cara mencari data medical check up menggunakan Nama atau NIK?
+    - Bagaimana mencari data medical check up untuk karyawan tertentu?
+    - Bisakah saya mencari data medical check up berdasarkan Nama atau NIK?
+    - Apa fungsi search field dalam mencari data medical check up?
+    - Bagaimana cara menggunakan search field untuk pencarian data medical check up?
+    - Apa yang perlu dimasukkan di search field untuk mencari data medical check up?
+    - Bagaimana cara cepat mencari data medical check up berdasarkan NIK atau nama?
+    - Apa yang harus dicari di search field untuk menemukan data medical check up?
+
+- intent: what_are_filters_in_medical_checkup_menu_medic_id
+  examples: |
+    - Apa saja filter yang tersedia di menu Medical Check Up?
+    - Apa filter yang dapat digunakan di menu Medical Check Up?
+    - Jelaskan filter apa saja yang bisa digunakan di menu Medical Check Up
+    - Apa fungsi filter dalam menu Medical Check Up?
+    - Filter apa yang tersedia dalam menu Medical Check Up untuk dokter?
+    - Apa filter yang bisa dipakai untuk mencari data di menu Medical Check Up?
+    - Apa yang dapat difilter di menu Medical Check Up?
+    - Filter apa yang dapat digunakan oleh dokter di menu Medical Check Up?
+    - Dokter bisa menggunakan filter apa saja di menu Medical Check Up?
+    - Apa yang dapat difilter oleh paramedis di menu Medical Check Up?
+    - Apa saja filter yang tersedia di menu mcu untuk dokter/paramedis mendapatkan data?
+    - Apa filter yang tersedia untuk paramedis di menu Medical Check Up?
+    - Apa saja filter yang tersedia untuk mencari data di menu Medical Check Up?
+    - Apakah paramedis dapat menggunakan filter berdasarkan Project di menu Medical Check Up?
+    - Apakah filter berdasarkan Project hanya tersedia untuk dokter di menu Medical Check Up?
+    - Bagaimana cara memfilter hasil Medical Checkup (MCU)?
+    - Bagaimana cara memfilter data Medical Checkup (MCU)?
+    - Apa filter yang dapat digunakan untuk mencari data hasil mcu di menu Medical Check Up?
+    - Apa saja kriteria filter yang tersedia di menu Medical Check Up?
+    - Filter apa yang tersedia di menu Medical Check Up untuk mencari data hasil MCU?
+    - Apa saja kategori yang dapat difilter dalam menu Medical Check Up?
+    - Apakah paramedis dapat menggunakan filter berdasarkan Project di menu Medical Check Up?
+    - Bagaimana cara memfilter hasil medical check up berdasarkan tahun pelaksanaan MCU?
+    - Filter apa yang tersedia untuk paramedis di menu Medical Check Up?
+    - Bagaimana cara dokter menggunakan filter untuk mencari data berdasarkan status kesehatan di menu Medical Check Up?
+
+- intent: what_is_selected_column_feature_menu_medic_id
+  examples: |
+    - Apa itu fitur selected column?
+    - Fungsi fitur selected column pada sistem?
+    - Apa yang dimaksud dengan fitur selected column?
+    - Jelaskan tentang fitur selected column
+    - Apa kegunaan fitur selected column dalam menu Medical Checkup?
+    - Bagaimana fitur selected column bekerja pada tabel Medical Checkup?
+    - Apa manfaat fitur selected column untuk dokter/paramedis?
+    - Bagaimana cara menggunakan fitur selected column di menu Medical Checkup?
+    - Fungsi dari fitur selected column dalam mengelola data Medical Checkup?
+    - Bagaimana cara mengatur kolom yang ditampilkan di menu Medical Checkup menggunakan fitur selected column?
+    - Apa saja kolom yang dapat disembunyikan atau ditampilkan dengan fitur selected column?
+    - Apa keuntungan menggunakan fitur selected column di tabel Medical Checkup?
+    - Mengapa fitur selected column penting bagi dokter atau paramedis dalam menggunakan Medical Checkup?
+    - Apa yang dapat dilakukan dengan fitur selected column di menu Medical Checkup bagi dokter/paramedis?
+    - Bagaimana fitur selected column membantu dokter dalam mengelola data Medical Checkup?
+    - Bisa jelaskan cara kerja fitur selected column untuk paramedis di Medical Checkup?
+    - Jelaskan cara kerja fitur selected column untuk dokter di menu Medical Checkup?
+    - Apakah semua kolom dapat disembunyikan atau ditampilkan dengan fitur selected column?
+    - Bagaimana cara menggunakan fitur Selected Column?
+    - Apa langkah-langkah untuk menggunakan fitur Selected Column?
+    - Bagaimana cara mengaktifkan fitur Selected Column di menu Medical Checkup?
+    - Apa yang harus dilakukan untuk menampilkan atau menyembunyikan kolom di menu Medical Checkup?
+    - Bagaimana cara memilih kolom yang ingin ditampilkan dengan fitur Selected Column?
+    - Bagaimana cara menyembunyikan kolom menggunakan fitur Selected Column?
+    - Jelaskan cara menggunakan fitur Selected Column di tabel Medical Checkup.
+    - Apa saja yang perlu dilakukan untuk menggunakan fitur Selected Column?
+    - Bagaimana cara memilih kolom yang akan ditampilkan atau disembunyikan di menu Medical Checkup?
+    - Bagaimana cara menggunakan fitur Selected Column untuk menampilkan kolom tertentu di tabel Medical Checkup?
+    - Gimana cara atur kolom yang ingin ditampilkan di tabel menggunakan Selected Column?
+
+- intent: is_selected_column_change_permanent_medic_id
+  examples: |
+    - Apakah perubahan pada Selected Column bersifat permanen?
+    - Perubahan pada Selected Column apakah tetap ada setelah halaman dimuat ulang?
+    - Apakah pengaturan Selected Column akan tetap sama setelah refresh halaman?
+    - Apakah perubahan yang saya buat pada Selected Column akan bertahan selamanya?
+    - Apakah setelah halaman dimuat ulang, kolom yang dipilih di Selected Column tetap sama?
+    - Apakah pengaturan pada Selected Column kembali ke default setelah halaman dimuat ulang?
+    - Apakah pengaturan di Selected Column disimpan secara permanen?
+    - Setelah refresh halaman, apakah kolom yang dipilih di Selected Column akan hilang?
+    - Apakah perubahan yang dilakukan pada Selected Column bersifat sementara atau permanen?
+    - Apakah data pada Selected Column yang sudah diubah akan tetap tersimpan?
+    - Setelah mengubah kolom di Selected Column, apakah perubahan itu bertahan setelah reload halaman?
+    - Apakah setiap kali halaman dimuat ulang, kolom yang dipilih pada Selected Column akan kembali ke default?
+    - Bagaimana cara menyimpan perubahan di Selected Column agar tetap ada setelah refresh?
+    - Jika saya menyesuaikan Selected Column, apakah perubahan ini permanen?
+    - Apakah pengaturan Selected Column akan kembali ke default setiap kali saya membuka halaman baru?
+    - Apakah perubahan pada Selected Column disimpan setiap kali saya logout dan login kembali?
+    - Apakah data kolom yang difilter menggunakan Selected Column itu permanent?
+
+- intent: does_each_user_have_different_selected_column_preferences_medic_id
+  examples: |
+    - Apakah setiap pengguna memiliki preferensi Selected Column yang berbeda?
+    - Setiap orang dapat menyesuaikan tampilan Selected Column mereka masing-masing?
+    - Apakah setiap pengguna dapat menyesuaikan kolom yang ditampilkan di Selected Column?
+    - Apakah preferensi tampilan Selected Column bersifat pribadi untuk masing-masing pengguna?
+    - Bisakah saya menyesuaikan tampilan Selected Column tanpa mempengaruhi pengguna lain?
+    - Apakah setiap pengguna memiliki pengaturan Selected Column yang terpisah?
+    - Apakah perubahan pada Selected Column hanya mempengaruhi pengguna yang melakukan perubahan?
+    - Apakah tampilan Selected Column dapat disesuaikan oleh setiap pengguna secara terpisah?
+    - Apakah setiap pengguna dapat memilih kolom yang ingin ditampilkan di Selected Column sesuai keinginan?
+    - Apakah preferensi tampilan tabel pada Selected Column berbeda antar pengguna?
+    - Dapatkah setiap pengguna menyesuaikan tampilan tabel di Selected Column tanpa mempengaruhi pengguna lain?
+    - Apakah perubahan tampilan pada Selected Column bersifat pribadi untuk masing-masing pengguna?
+    - Apakah pengaturan Selected Column akan berbeda jika saya menggunakan akun yang berbeda?
+    - Apakah pengaturan Selected Column dapat disesuaikan oleh tiap pengguna sesuai dengan kebutuhan pribadi?
+    - Apakah saya dapat mengatur tampilan tabel di Selected Column hanya untuk saya?
+    - Apakah pengaturan yang dilakukan pada Selected Column mempengaruhi pengguna lain?
+    - Bisakah setiap pengguna mengatur tampilan Selected Column sesuai preferensi mereka sendiri?
+    - Apakah setiap pengguna memiliki hak untuk mengatur tampilan Selected Column secara pribadi?
+
+- intent: how_to_add_medical_checkup_data_medic_id
+  examples: |
+    - Gimana cara add data Medical Checkup?
+    - Bagaimana cara tambah data baru hasil Medical Checkup karyawan?
+    - Apa langkah-langkah untuk menambahkan data hasil Medical Checkup?
+    - Bagaimana cara input data Medical Checkup baru?
+    - Apa yang harus dilakukan untuk menambahkan data Medical Checkup di sistem?
+    - Bagaimana cara menambah hasil pemeriksaan Medical Checkup?
+    - Apa prosedur untuk add data Medical Checkup dalam aplikasi?
+    - Bagaimana cara memasukkan data hasil pemeriksaan Medical Checkup di aplikasi?
+    - Apa yang perlu dilakukan untuk menambahkan data pemeriksaan kesehatan karyawan?
+    - Bagaimana cara menambahkan data MCU di aplikasi?
+    - Apa yang harus dilakukan setelah klik Add MCU untuk menambah data Medical Checkup?
+    - Apa yang perlu diisi ketika menambahkan data Medical Checkup di sistem?
+    - Bagaimana cara menambahkan data hasil MCU di Medical Checkup?
+    - Gimana cara add data hasil MCU di Medical Checkup?
+    - Apa yang harus dimasukkan saat menambahkan data hasil pemeriksaan medis?
+    - Apa saja langkah untuk menambahkan data medical checkup pada aplikasi medis?
+    - Gimana cara nya menambahkan data hasil Medical Checkup di sistem aplikasi?
+    - Apa langkah pertama untuk add data MCU di sistem?
+    - Bagaimana cara melengkapi data Medical Checkup di aplikasi?
+    - Apa yang dilakukan dokter ketika menambahkan data Medical Checkup baru?
+    - Bagaimana cara input data hasil Medical Checkup baru untuk pasien di aplikasi?
+    - Apa saja yang perlu diisi dalam form untuk menambahkan data Medical Checkup?

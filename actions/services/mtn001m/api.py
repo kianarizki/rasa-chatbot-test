@@ -15,7 +15,7 @@ def get_001m_token(tracker):
         if token_fms:
             return token_fms
 
-    return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDQ3NzAyMjQsImlzcyI6IjEwMTAiLCJ1c2VyIjp7Im5payI6IjEwMTAiLCJuYW1lIjoiUHJpc2NhIEF1ZHlhIFRyaSBDYWh5YSBBbmdncmFldGEiLCJyb2xlX2lkIjoiMSIsInBlcm1pc3Npb25zIjpbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDYsNDcsNDgsNDksNTAsNTEsNTIsNTMsNTQsNTUsNTYsNTcsNTgsNTksNjAsNjEsNjIsNjMsNjQsNjUsNjgsNjksNzAsNzEsNzIsNzQsNzUsNzYsNzcsNzgsNzksODAsODEsODIsODQsODUsODYsODgsODksOTAsOTEsOTIsOTMsOTQsOTUsOTYsOTcsOTgsOTksMTAwLDEwMSwxMDIsMTAzLDEwNCwxMDUsMTA2LDEwNywxMDgsMTA5LDExMCwxMTEsMTEyLDExMywxMTQsMTE1LDExNiwxMTcsMTE4LDExOSwxMjIsMTIzLDEyNCwxMjUsMTI2LDEyNywxMjgsMTI5LDEzMCwxMzEsMTMyLDEzMywxMzYsMTM3LDEzOSwxNDBdfX0.hNLDnRtYm1EhxIS6o9tyDAO8j33iTZWQoaZJWb2-niI"
+    return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDYwODMxMDUsImlzcyI6IjEwMTAiLCJ1c2VyIjp7Im5payI6IjEwMTAiLCJuYW1lIjoiUHJpc2NhIEF1ZHlhIFRyaSBDYWh5YSBBbmdncmFldGEiLCJyb2xlX2lkIjoiMSIsInBlcm1pc3Npb25zIjpbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDYsNDcsNDgsNDksNTAsNTEsNTIsNTMsNTQsNTUsNTYsNTcsNTgsNTksNjAsNjEsNjIsNjMsNjQsNjUsNjgsNjksNzAsNzEsNzIsNzQsNzUsNzYsNzcsNzgsNzksODAsODEsODIsODQsODUsODYsODgsODksOTAsOTEsOTIsOTMsOTQsOTUsOTYsOTcsOTgsOTksMTAwLDEwMSwxMDIsMTAzLDEwNCwxMDUsMTA2LDEwNywxMDgsMTA5LDExMCwxMTEsMTEyLDExMywxMTQsMTE1LDExNiwxMTcsMTE4LDExOSwxMjIsMTIzLDEyNCwxMjUsMTI2LDEyNywxMjgsMTI5LDEzMCwxMzEsMTMyLDEzMywxMzYsMTM3LDEzOSwxNDBdfX0.7oeNbLK4PabTTsepsGmo50qWAqYPPbjk0l-_a3xKh1w"
 
 def get_001m_report_daily_internal(token_001m:str,daily_report_date="", search="", status_process="", manufacturer="", model="", component_description="",limit="",page=""):
     url = f"{config.MTN001M_BASE_URL}/jobs/daily-report?daily-report-date={daily_report_date}&search={search}&status-process={status_process}&manufacturer={manufacturer}&model={model}&component-description={component_description}&limit={limit}&page={page}"
@@ -432,7 +432,6 @@ def reformat_date(datestr, lang="indonesia") -> str:
         if locale=="en":
             english_format = format_datetime(
                 dt, 
-                format='full',  
                 locale='en_US'
             )
 
@@ -440,7 +439,6 @@ def reformat_date(datestr, lang="indonesia") -> str:
 
         indonesian_format = format_datetime(
         dt,
-        format='full',  
         locale='id_ID'
     )   
         return indonesian_format
@@ -489,3 +487,117 @@ def get_001m_site_allocation(token_001m:str, tracker):
     except Exception as e:
         logger.error(f"Error occured while fetching site allocation: {e}")
         return default_data        
+
+def get_001m_jobs(token_001m:str, q_filter:str, filter_value: list ):
+    url = f"{config.MTN001M_BASE_URL}/jobs"
+
+    if q_filter:
+        if q_filter == 'comp_name':
+            url+= f"?search={filter_value[0]}&limit=1"
+    try:
+        response = requests.get(url, headers={"cookie":f"token_001m={token_001m}"})
+        logger.info(f"Response GET Jobs 001M : {response.json()}")
+        default_data = []
+        if response.status_code == 200:
+            data = response.json()
+            data = data.get("data",[])
+            return data
+        elif response.status_code == 404:
+            return default_data
+        else:
+            return default_data
+    except Exception as e:
+        logger.error(f"Error occured while Jobs 001m allocation: {e}")
+        return None        
+    
+def get_001m_timesheets(token_001m:str, q_filter:str, filter_value: list):
+
+    url = f"{config.MTN001M_BASE_URL}/jobs/timesheets"
+
+    if q_filter:
+        if q_filter == 'mechanic':
+            url+= f"?search={filter_value[0]}&limit=1"
+        elif q_filter == 'job-id':
+            url+= f"?job-id={filter_value[0]}&limit=1"
+    try:
+        response = requests.get(url, headers={"cookie":f"token_001m={token_001m}"})
+        logger.info(f"Response GET Timesheets Jobs 001M : {response.json()}")
+        default_data = []
+        if response.status_code == 200:
+            data = response.json()
+            data = data.get("data",[])
+            return data
+        elif response.status_code == 404:
+            return default_data
+        else:
+            return default_data
+    except Exception as e:
+        logger.error(f"Error occured while timesheet 001m jobs: {e}")
+        return None        
+    
+
+def get_001m_job_detail(token_001m:str, job_id:str):
+
+    url = f"{config.MTN001M_BASE_URL}/jobs/{job_id}/detail"
+
+
+    try:
+        response = requests.get(url, headers={"cookie":f"token_001m={token_001m}"})
+        logger.info(f"Response GET Detail Jobs 001M : {response.json()}")
+        default_data = []
+        if response.status_code == 200:
+            data = response.json()
+            data = data.get("data",{})
+            return [data]
+        elif response.status_code == 404:
+            return default_data
+        else:
+            return default_data
+    except Exception as e:
+        logger.error(f"Error occured while fetching detail 001m job: {e}")
+        return None        
+    
+
+
+def get_001m_shipment(token_001m:str, q_filter:str, filter_value: list):
+    url = f"{config.MTN001M_BASE_URL}/shipment-tracking"
+    if q_filter:
+        if q_filter == 'mechanic':
+            url+= f"?search={filter_value[0]}&limit=1"
+        elif q_filter == 'job-id':
+            url+= f"?job-id={filter_value[0]}&limit=1"
+    try:
+        response = requests.get(url, headers={"cookie":f"token_001m={token_001m}"})
+        logger.info(f"Response GET Shipment 001M : {response.json()}")
+        default_data = []
+        if response.status_code == 200:
+            data = response.json()
+            data = data.get("data",[])
+            return data
+        elif response.status_code == 404:
+            return default_data
+        else:
+            return default_data
+    except Exception as e:
+        logger.error(f"Error occured while fetching detail 001m job: {e}")
+        return None        
+    
+def get_001m_shipment_detail(token_001m:str, shipment_id:str):
+    url = f"{config.MTN001M_BASE_URL}/shipment-tracking/{shipment_id}"
+    
+    try:
+        response = requests.get(url, headers={"cookie":f"token_001m={token_001m}"})
+        logger.info(f"Response GET Shipment Detail 001M : {response.json()}")
+        default_data = {}
+        if response.status_code == 200:
+            data = response.json()
+            data = data.get("data",{})
+            return data
+        elif response.status_code == 404:
+            return default_data
+        else:
+            return default_data
+    except Exception as e:
+        logger.error(f"Error occured while fetching shipment detail 001m : {e}")
+        return None        
+    
