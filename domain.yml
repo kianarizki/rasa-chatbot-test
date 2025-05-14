@@ -315,14 +315,6 @@ intents:
   - deleting_unused_disease_data_medic_en
   - paramedics_access_disease_data_in_the_future_medic_id
   - paramedics_access_disease_data_in_the_future_medic_en
-  - how_to_filter_disease_data_medic_id
-  - how_to_filter_disease_data_medic_en
-  - how_to_search_for_disease_data_medic_id
-  - how_to_search_for_disease_data_medic_en
-  - export_import_disease_data_medic_id
-  - export_import_disease_data_medic_en
-  - notifications_for_paramedics_medic_id
-  - notifications_for_paramedics_medic_en
   - how_to_edit_disease_data_medic_id
   - how_to_edit_disease_data_medic_en
   - post_edit_disease_data_process_medic_id
@@ -377,12 +369,6 @@ intents:
   - is_medicine_standard_connected_to_other_menus_medic_en
   - paramedics_access_medicine_data_in_the_future_medic_id
   - paramedics_access_medicine_data_in_the_future_medic_en
-  - how_to_filter_medicine_data_medic_id
-  - how_to_filter_medicine_data_medic_en
-  - how_to_search_medicine_data_medic_id
-  - how_to_search_medicine_data_medic_en
-  - export_import_medicine_data_medic_id
-  - export_import_medicine_data_medic_en
   - medical_record_external_menu_medic_id
   - medical_record_external_menu_medic_en
   - who_can_access_medical_record_external_menu_medic_id
@@ -1916,32 +1902,6 @@ responses:
     - text: Jika data penyakit belum digunakan dalam sistem (Medical Checkup (MCU), Medical Record FAR, atau Medical Record External), tombol delete akan aktif dan dokter dapat menghapus data tersebut.
   utter_deleting_unused_disease_data_medic_en: 
     - text: If the disease data has not been used in the system (Medical Checkup (MCU), Medical Record FAR, or Medical Record External), the delete button will be active and the doctor can delete the data.
-  utter_how_to_filter_disease_data_medic_id: 
-    - text: Dokter dan Paramedis dapat menggunakan fitur Filter untuk filter daftar penyakit berdasarkan jenis penyakit (Disease Type) dan kategori (Major/Minor).
-  utter_how_to_filter_disease_data_medic_en: 
-    - text: Doctors and paramedics can use the Filter feature to filter the disease list based on disease type (Disease Type) and category (Major/Minor).
-  utter_how_to_search_for_disease_data_medic_id: 
-    - text: Gunakan kolom Search by ICD code or disease name di bagian atas untuk mencari penyakit berdasarkan kode ICD atau nama penyakit.
-  utter_how_to_search_for_disease_data_medic_en: 
-    - text: Use the Search by ICD code or disease name field at the top to search for diseases based on ICD code or disease name.
-  utter_export_import_disease_data_medic_id: 
-    - text: |
-        Ya, terdapat tiga fitur di bagian atas:
-        1. Download Template: Untuk mengunduh format template data penyakit.
-        2. Import: Untuk mengunggah data penyakit dari file eksternal.
-        3. Export: Untuk mengunduh daftar penyakit dalam format file tertentu.
-        Namun, fitur tersebut masih dalam tahap pengembangan dan belum tersedia saat ini.
-  utter_export_import_disease_data_medic_en: 
-    - text: |
-        Yes, there are three features at the top:
-        1. Download Template: To download the disease data template format.
-        2. Import: To upload disease data from an external file.
-        3. Export: To download the disease list in a specific file format.
-        However, these features are still under development and are not available at the moment.
-  utter_notifications_for_paramedics_medic_id: 
-    - text: Ya, setelah dokter menambahkan penyakit baru, paramedis akan menerima notifikasi bahwa data penyakit baru telah ditambahkan dan tersedia di sistem.
-  utter_notifications_for_paramedics_medic_en: 
-    - text: Yes, after the doctor adds a new disease, paramedics will receive a notification that the new disease data has been added and is available in the system.
   utter_how_to_edit_disease_data_medic_id: 
     - text: |
         Berikut cara mengedit data penyakit:
@@ -2326,32 +2286,7 @@ responses:
     - text: Kedepannya, paramedis akan memiliki akses untuk mengedit atau aktif/nonaktif data obat melalui role permission yang akan diatur dalam sistem. Namun, fitur ini masih dalam tahap pengembangan dan belum tersedia saat ini.
   utter_paramedics_access_medicine_data_in_the_future_medic_en:
     - text: In the future, paramedics will have access to edit or activate/deactivate medicine data through role permissions that will be set within the system. However, this feature is still under development and is not available at this time.
-  utter_how_to_filter_medicine_data_medic_id:
-    - text: |
-        Dokter dan Paramedis dapat menggunakan fitur Filter untuk memfilter daftar obat berdasarkan "UoM", "Medicine Category", dan "Medicine Class" pada tab **Medicine List**.
-        Sedangkan pada tab **Medicine Entries**, Dokter dapat memfilter daftar obat berdasarkan "Project" dan "Status", sementara Paramedis dapat memfilter menggunakan "UoM", "Medicine Category", dan "Status".
-  utter_how_to_filter_medicine_data_medic_en:
-    - text: |
-        Doctors and Paramedics can use the Filter feature to filter the medicine list based on "UoM", "Medicine Category", and "Medicine Class" in the **Medicine List** tab.
-        In the **Medicine Entries** tab, Doctors can filter the medicine list based on "Project" and "Status", while Paramedics can filter using "UoM", "Medicine Category", and "Status".
-  utter_how_to_search_medicine_data_medic_id:
-    - text: Gunakan kolom Search by Medicine Code or Medicine Name di bagian atas untuk mencari obat berdasarkan kode obat atau nama obat.
-  utter_how_to_search_medicine_data_medic_en:
-    - text: Use the Search by Medicine Code or Medicine Name field at the top to search for a medicine by its medicine code or name.
-  utter_export_import_medicine_data_medic_id:
-    - text: |
-        Ya, terdapat tiga fitur di bagian atas:
-        1. Download Template: Untuk mengunduh format template data obat.
-        2. Import: Untuk mengunggah data obat dari file eksternal.
-        3. Export: Untuk mengunduh daftar obat dalam format file tertentu.
-        Namun, fitur tersebut masih dalam tahap pengembangan dan belum tersedia saat ini.
-  utter_export_import_medicine_data_medic_en:
-    - text: |
-        Yes, there are three features at the top:
-        1. Download Template: To download the template format for medicine data.
-        2. Import: To upload medicine data from an external file.
-        3. Export: To download the medicine list in a specific file format.
-        However, these features are still under development and are not available at this time.
+
   utter_medical_record_external_menu_medic_id:
     - text: Menu Medical Record External adalah fitur dalam Aplikasi Medic yang digunakan untuk mengelola pengajuan klaim medis eksternal oleh karyawan. Dokter/ Paramedis dapat memantau, meninjau, dan memproses pengajuan klaim yang diajukan melalui Aplikasi ESS.
   utter_medical_record_external_menu_medic_en:
@@ -2708,52 +2643,6 @@ responses:
     - text: Setelah klaim disetujui oleh tim medis di Medic Apps, data klaim tersebut akan otomatis diteruskan ke Medical Claim di ESS Apps, dan karyawan terkait akan diberitahukan mengenai status klaim yang telah disetujui.
   utter_what_happens_after_claim_is_approved_in_medic_apps_medic_en:
     - text: After the claim is approved by the medical team in Medic Apps, the claim data will automatically be forwarded to Medical Claim in ESS Apps, and the employee concerned will be notified about the status of the approved claim.
-  # utter_process_flow_after_medical_claim_submission_medic_id:
-  #   - text: |
-  #       **Urutan Proses Persetujuan Medical Claim**:
-  #       1. **Pengajuan Klaim oleh Karyawan**  
-  #       - Karyawan mengajukan klaim medis melalui **ESS Apps** dengan melengkapi informasi yang diperlukan, seperti rekam medis atau biaya yang dikeluarkan.  
-  #       - **Notifikasi**: Setelah klaim diajukan, **Dokter/Paramedis** secara otomatis menerima notifikasi untuk memverifikasi klaim tersebut.
-
-  #       2. **Proses Verifikasi oleh Tim Medis (Dokter/Paramedis)**  
-  #       - Tim medis memverifikasi klaim yang diajukan berdasarkan rekam medis atau dokumen yang ada.  
-  #       - **Status**: **Need Approval** – Klaim menunggu persetujuan medis dari tim dokter/paramedis.
-        
-  #       3. **Persetujuan Klaim oleh Dokter/Paramedis**  
-  #       - Dokter/paramedis memutuskan apakah klaim disetujui atau ditolak berdasarkan pemeriksaan medis.  
-  #       - **Status**:  
-  #         - **Approved** – Klaim disetujui dan dapat diproses lebih lanjut.  
-  #         - **Rejected** – Klaim ditolak, karyawan tidak dapat mengajukan klaim yang sama kembali.  
-        
-  #       4. **Revisi Klaim (Jika Diperlukan)**  
-  #       - Jika klaim memerlukan perbaikan atau penambahan informasi, klaim akan diarahkan untuk revisi oleh karyawan.  
-  #       - **Status**: **Revision** – Klaim membutuhkan perbaikan atau revisi sebelum dapat disetujui.
-        
-  #       5. **Pembaruan Status Otomatis di ESS Apps**  
-  #       - Seluruh aksi yang dilakukan oleh **Dokter/Paramedis** (persetujuan, penolakan, atau permintaan revisi) akan secara otomatis terhubung dan terupdate di **ESS Apps**, memungkinkan karyawan untuk memantau status klaim mereka.
-  # utter_process_flow_after_medical_claim_submission_medic_en:
-  #   - text: |
-  #       **Medical Claim Approval Process Steps**:
-  #       1. **Claim Submission by Employee**  
-  #       - The employee submits a medical claim through **ESS Apps** by filling out the required information, such as medical records or incurred expenses.  
-  #       - **Notification**: After the claim is submitted, the **Doctor/Paramedic** automatically receives a notification to verify the claim.
-        
-  #       2. **Verification by Medical Team (Doctor/Paramedic)**  
-  #       - The medical team verifies the submitted claim based on the available medical records or documents.  
-  #       - **Status**: **Need Approval** – The claim is awaiting medical approval from the doctor/paramedic.
-        
-  #       3. **Claim Approval by Doctor/Paramedic**  
-  #       - The doctor/paramedic decides whether to approve or reject the claim based on medical examination.  
-  #       - **Status**:  
-  #         - **Approved** – The claim is approved and can proceed further.  
-  #         - **Rejected** – The claim is rejected, and the employee cannot resubmit the same claim.
-        
-  #       4. **Claim Revision (If Needed)**  
-  #       - If the claim requires correction or additional information, it will be directed back for revision by the employee.  
-  #       - **Status**: **Revision** – The claim needs to be corrected or revised before it can be approved.
-        
-  #       5. **Automatic Status Update in ESS Apps**  
-  #       - All actions taken by the **Doctor/Paramedic** (approval, rejection, or revision request) will automatically be updated 
   utter_what_is_approval_activity_feature_medic_id:
     - text: |
         **Approval Activity** adalah fitur yang digunakan untuk melihat tracking pengajuan Medical Claim, termasuk riwayat status dan aktivitas persetujuan dari karyawan hingga Dokter/Paramedis. 
@@ -2810,6 +2699,7 @@ responses:
     - text: Notifikasi dalam sistem Medical Record External akan dikirimkan secara otomatis oleh sistem ketika terdapat pengajuan baru oleh karyawan di Medical Claim ESS.
   utter_notifications_sent_in_medical_record_external_medic_en:
     - text: Notifications in the Medical Record External system are automatically sent by the system when there is a new submission by an employee in the Medical Claim ESS.
+  
   utter_ask_platform_choice_medic_id:
     - text: "Terima kasih atas pertanyaan Anda. Untuk melanjutkan, apakah Anda lebih memilih menggunakan platform mobile atau website?"
       buttons:
@@ -2850,7 +2740,7 @@ responses:
         
         Dokter/Paramedis dapat mengakses menu Medical Check Up dengan cara:
         1. Klik menu **Medical Management**.
-        2. Klik sub-menu **Medical Checkup"
+        2. Klik sub-menu **Medical Checkup**
   utter_who_can_access_medical_checkup_menu_web_medic_en:
     - text: |
         This feature is accessible by Doctors and Paramedics with different roles and access rights:
@@ -2986,7 +2876,7 @@ responses:
           - Pastikan MCU Date yang diinputkan tidak boleh sama dengan data MCU yang telah ditambahkan sebelumnya. 
           - Jika MCU Date sudah diisi, **Expired MCU** akan otomatis terisi berdasarkan Periode MCU yang dipilih.
         4. **Pengisian Hasil Medical Checkup**:
-          - Klik "Next" untuk mengisi hasil pemeriksaan.
+          - Klik **Next** untuk mengisi hasil pemeriksaan.
           - Isi pemeriksaan fisik & laboratorium (Normal/Tidak Normal).
           - Jika Tidak Normal, wajib menambahkan keterangan (maksimal 50 karakter).
           - Bisa menambahkan parameter dan item pemeriksaan baru jika diperlukan dengan mengklik tombol "Add Parameter Pemeriksaan" atau "Add Item Pemeriksaan".

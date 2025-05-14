@@ -424,85 +424,6 @@ nlu:
     - Kapan paramedis bisa ubah atau ngapus data penyakit?
     - Di masa depan apakah paramedis bisa edit data penyakit kalau ada perubahan?
 
-- intent: how_to_filter_disease_data_medic_id
-  examples: |
-    - Gimana cara filter data penyakit?
-    - Apa cara untuk memfilter daftar penyakit?
-    - Bagaimana caranya filter data penyakit berdasarkan jenis dan kategori?
-    - Kalau mau filter data penyakit, gimana caranya?
-    - Ada fitur filter buat select daftar penyakit berdasarkan jenis?
-    - Bagaimana cara filter penyakit berdasarkan kategori dan jenisnya?
-    - Gimana cara dokter dan paramedis filter data penyakit?
-    - Apa yang harus dilakukan untuk memfilter data penyakit?
-    - Kalau saya mau filter daftar penyakit, apa yang harus dipilih?
-    - Bagaimana cara milih penyakit berdasarkan jenis dan kategori?
-    - Bisa nggak sih filter data penyakit berdasarkan kategori atau jenis penyakit?
-    - Kalau saya cuma mau lihat penyakit jenis tertentu, gimana cara filter-nya?
-    - Bisa nggak filter data penyakit berdasarkan kategori besar atau kecil?
-    - Fitur filter itu ada di mana buat daftar penyakit?
-    - Apakah ada cara untuk memfilter penyakit berdasarkan Major atau Minor?
-    - Bagaimana cara lihat penyakit berdasarkan tipe dan kategori?
-    - Kalau ingin lihat penyakit berdasarkan kategori, gimana cara filter-nya?
-    - Saya pengen filter penyakit dengan kategori major aja, gimana caranya?
-    - Ingin filter penyakit dengan kategori minor, gimana caranya?
-    - Cara filter penyakit berdasarkan kategori Major atau Minor?
-    - Kalau saya cuma mau lihat penyakit tipe tertentu, bisa nggak di filter?
-    - Bagaimana caranya supaya saya bisa pilih penyakit sesuai dengan jenisnya?
-  
-- intent: how_to_search_for_disease_data_medic_id
-  examples: |
-    - Gimana cara cari penyakit tertentu?
-    - Kalau mau cari penyakit, gimana caranya?
-    - Bagaimana cara nyari penyakit pakai kode ICD atau nama penyakit?
-    - Kalau saya pengen cari penyakit, apa yang harus saya lakuin?
-    - Cara mencari penyakit dengan kode ICD itu gimana?
-    - Bagaimana cara mencari penyakit berdasarkan nama atau kode ICD?
-    - Gimana caranya cari penyakit pake nama atau kode ICD?
-    - Apa yang harus saya klik buat cari penyakit tertentu?
-    - Kalau mau cari penyakit tertentu, harus pakai kolom apa?
-    - Dimana saya bisa cari penyakit pake kode ICD atau nama penyakit?
-    - Gimana caranya cari penyakit dengan kode atau nama?
-    - Kalau saya mau cari penyakit spesifik, gimana cara pencariannya?
-
-- intent: export_import_disease_data_medic_id
-  examples: |
-    - Apakah data penyakit bisa di export dan di import?
-    - Bisa nggak sih export atau import data penyakit?
-    - Kalau mau import atau mengexport data penyakit, bisa nggak?
-    - Gimana cara import data penyakit?
-    - Gimana cara export data penyakit?
-    - Bisa nggak sih ngunduh dan unggah data penyakit?
-    - Apa ada cara buat export atau import data penyakit?
-    - Apakah saya bisa import data penyakit ke sistem?
-    - Bagaimana cara mengimport atau mengexport data penyakit?
-    - Apakah data penyakit bisa diunduh dan diunggah kembali?
-    - Ada fitur untuk export dan import data penyakit?
-    - Bisa nggak sih download atau upload data penyakit?
-    - Kalau saya mau export data penyakit, gimana?
-    - Gimana cara saya bisa export data penyakit yang ada?
-    - Kalau data penyakit sudah ada, bisa nggak di import ke sistem?
-    - Bagaimana cara saya bisa mengunggah data penyakit dari file eksternal?
-    - Apakah saya bisa mendownload template data penyakit?
-    - Apa yang harus dilakukan untuk mengexport daftar penyakit?
-    - Kalau saya ingin mengunggah data penyakit dari file, gimana caranya?
-    - Apa yang harus saya lakukan untuk mengexport data penyakit?
-    - Bisa nggak sih saya unggah data penyakit dari file eksternal?
-    - Bagaimana cara ngunduh template untuk data penyakit?
-
-- intent: notifications_for_paramedics_medic_id
-  examples: |
-    - Apakah paramedis dapat notifikasi kalau dokter menambahkan penyakit baru?
-    - Kalau dokter nambahin penyakit baru, paramedis dapat pemberitahuan dari sistem?
-    - Paramedis bakal tahu tidak kalau dokter nambahin data penyakit baru, apakah akan ada pesan pemberitahuan?
-    - Apa paramedis dikasih notifikasi kalau ada penyakit yang baru ditambahkan oleh dokter?
-    - Apakah paramedis dapat pemberitahuan tentang penyakit baru yang ditambahkan dokter?
-    - Jika dokter nambahin data penyakit baru, paramedis dapat info nggak?
-    - Apakah paramedis akan mendapatkan notifikasi kalau dokter menambahkan data penyakit baru di sistem?
-    - Kalau ada penyakit baru yang ditambahkan oleh dokter, apakah paramedis dapat notifikasi pemberitahuan?
-    - Apakah paramedis tahu jika dokter baru saja menambahkan data penyakit baru?
-    - Paramedis apakah mendapat info dari sistem jika dokter menambahkan data penyakit baru?
-    - Jika dokter menambahkan data penyakit ke aplikasi medic, apakah paramedis akan mendapatkan pesan pemberitahuan dari sistem?
-
 - intent: how_to_edit_disease_data_medic_id
   examples: |
     - Gimana cara edit data penyakit?
@@ -680,7 +601,7 @@ nlu:
 
 - intent: view_medicine_submission_paramedic_medic_id
   examples: |
-    - Bagaimana cara melihat obat yang telah diajukan oleh paramedis?
+    - Gimana cara lihat obat yang telah diajukan oleh paramedis?
     - Apa langkah-langkah untuk melihat obat yang diajukan oleh paramedis?
     - Saya ingin tahu cara melihat obat yang sudah diajukan oleh paramedis.
     - Bagaimana cara dokter melihat obat yang diajukan oleh paramedis?
@@ -1093,73 +1014,6 @@ nlu:
     - Kapan paramedis bisa mengakses fitur untuk mengedit atau menghapus data obat?
     - Apakah paramedis akan mendapatkan akses untuk mengedit atau menghapus data obat di masa depan?
 
-- intent: how_to_filter_medicine_data_medic_id
-  examples: |
-    - Bagaimana cara memfilter data obat?
-    - Apa cara untuk memfilter daftar obat di Medicine List?
-    - Apa yang bisa difilter dalam daftar obat di Medicine List?
-    - Bagaimana cara memfilter obat berdasarkan kategori atau kelas di sistem?
-    - Apa yang perlu dilakukan dokter atau paramedis untuk memfilter data obat?
-    - Bagaimana cara memfilter obat menggunakan Medicine Category, UoM, dan Medicine Class?
-    - Apa opsi filter yang tersedia untuk dokter di tab Medicine Entries?
-    - Bagaimana dokter memfilter daftar obat di tab Medicine Entries?
-    - Apakah dokter bisa memfilter data obat berdasarkan Project dan Status di tab Medicine Entries?
-    - Bagaimana cara paramedis memfilter daftar obat di tab Medicine List?
-    - Apa yang bisa difilter oleh paramedis di tab Medicine List?
-    - Apa opsi filter yang tersedia untuk paramedis di tab Medicine Entries?
-    - Bagaimana paramedis memfilter daftar obat berdasarkan UoM, Medicine Category, dan Status?
-    - Apakah ada fitur untuk memfilter daftar obat berdasarkan status dan kategori obat?
-    - Apa langkah-langkah untuk memfilter obat menggunakan Medicine Class di Medicine List?
-    - Apa filter yang bisa digunakan paramedis untuk menampilkan obat di Medicine List?
-    - Bagaimana dokter menggunakan fitur filter untuk memilih obat berdasarkan status dan project?
-    - Apakah bisa memfilter obat berdasarkan beberapa kategori sekaligus?
-    - Bagaimana cara memfilter obat menggunakan filter di tab Medicine Entries dan Medicine List?
-    - Apa saja yang bisa difilter oleh paramedis dan dokter di daftar obat?
-
-- intent: how_to_search_medicine_data_medic_id
-  examples: |
-    - Bagaimana cara mencari obat tertentu?
-    - Apa cara untuk mencari obat dengan kode atau nama obat?
-    - Bagaimana cara mencari obat berdasarkan Medicine Code atau Medicine Name?
-    - Apa langkah-langkah untuk mencari obat berdasarkan kode atau nama obat?
-    - Bagaimana cara menemukan obat tertentu di sistem?
-    - Apa yang perlu dilakukan untuk mencari obat tertentu menggunakan kode atau nama?
-    - Apakah ada cara untuk mencari obat dengan kode atau nama di sistem?
-    - Apakah saya bisa mencari obat berdasarkan kode atau nama obat?
-    - Bagaimana cara mencari obat di sistem dengan menggunakan Medicine Code?
-    - Bagaimana cara menemukan obat dengan menggunakan Medicine Name?
-    - Apa yang perlu dilakukan untuk mencari obat tertentu dengan kolom pencarian?
-    - Di mana kolom pencarian untuk mencari obat berdasarkan kode atau nama?
-    - Gimana caranya mencari obat berdasarkan nama obat?
-    - Bagaimana cara mencari obat menggunakan fitur pencarian di sistem?
-    - Apakah ada pencarian data obat berdasarkan kode obat di sistem?
-    - Cara mencari data obat tertentu dengan menggunakan kolom pencarian di sistem?
-    - Apa yang bisa dicari menggunakan kolom pencarian di sistem?
-    - Bagaimana cara mencari obat yang sudah terdaftar di sistem?
-    - Apakah saya bisa mencari obat berdasarkan kategori atau nama di sistem?
-
-- intent: export_import_medicine_data_medic_id
-  examples: |
-    - Apakah data obat bisa diekspor dan diimpor?
-    - Apakah ada fitur untuk mengimpor dan mengekspor data obat?
-    - Bagaimana cara mengimpor dan mengekspor data obat?
-    - Apakah sistem mendukung ekspor dan impor data obat?
-    - Bisa kah data obat diimpor dari file eksternal dan diekspor ke format lain?
-    - Apakah ada cara untuk mengekspor dan mengimpor daftar obat?
-    - Apakah ada fitur untuk mengunduh data obat dalam format file?
-    - Bagaimana cara mengimpor data obat dari file eksternal?
-    - Apakah fitur ekspor dan impor data obat sudah tersedia di sistem?
-    - Apakah saya bisa mengunduh template data obat?
-    - Apakah saya bisa mengunggah data obat melalui fitur impor?
-    - Bagaimana cara menggunakan fitur ekspor dan impor untuk data obat?
-    - Apakah saya bisa mengunduh template format untuk data obat?
-    - Bagaimana cara mengunduh daftar obat dalam format file?
-    - Apakah sistem memungkinkan saya untuk mengunggah data obat?
-    - Apakah data obat dapat dipindahkan ke sistem lain melalui ekspor dan impor?
-    - Bagaimana cara mengunggah data obat menggunakan fitur impor?
-    - Apakah fitur ekspor dan impor data obat sudah aktif atau masih dalam pengembangan?
-    - Apakah ada fitur untuk mengunduh atau mengunggah daftar obat di sistem?
-
 - intent: medical_record_external_menu_medic_id
   examples: |
     - Apa itu menu medical record external?
@@ -1421,6 +1275,7 @@ nlu:
     - Apa langkah-langkah yang harus diambil paramedis untuk menyetujui klaim medis dalam sistem?
     - Apa yang perlu dilakukan paramedis ketika memberikan approval untuk klaim medis yang diajukan oleh karyawan?
     - Bagaimana dokter melakukan approval pengajuan medical claim?
+    - Bagaimana proses saat Dokter atau Paramedis menyetujui (Approval) pengajuan Medical Record External?
 
 - intent: how_do_doctor_or_paramedic_reject_medical_claim_medic_id
   examples: |
@@ -1444,6 +1299,7 @@ nlu:
     - Apa yang dilakukan sistem setelah dokter/paramedis menolak klaim medis?
     - Bagaimana dokter/paramedis memberikan penolakan pada pengajuan klaim medis yang diajukan oleh karyawan?
     - Bagaimana dokter melakukan reject atas pengajuan medical claim?
+    - Bagaimana proses saat Dokter atau Paramedis menolak (Reject) pengajuan Medical Record External?
 
 - intent: how_do_doctor_or_paramedic_revision_medical_claim_medic_id
   examples: |
@@ -1460,13 +1316,14 @@ nlu:
     - Apa yang terjadi setelah dokter/paramedis mengklik revisi pada klaim medis?
     - Bagaimana cara memberikan revisi klaim medis dalam sistem?
     - Bagaimana langkah-langkah yang dilakukan dokter/paramedis untuk merevisi klaim medis yang diajukan?
-    - Apa yang dilakukan dokter/paramedis jika klaim medis perlu direvisi?
+    - Apa yang dilakukan dokter/paramedis jika klaim medis perlu dilakukan revision?
     - Apa yang perlu dilakukan dokter/paramedis untuk mengisi alasan revisi pada klaim medis?
     - Bagaimana cara dokter/paramedis merevisi klaim medis dalam aplikasi?
     - Apa yang terjadi setelah dokter/paramedis menekan tombol revisi pada klaim medis?
     - Bagaimana cara dokter/paramedis melakukan revisi klaim medis yang diajukan oleh karyawan?
     - Bagaimana dokter memberikan revisi atas pengajuan medical claim yang diajukan oleh karyawan
     - Bagaimana dokter melakukan revisi atas pengajuan medical claim?  
+    - Bagaimana proses saat Dokter atau Paramedis meminta revisi (Revision) pada pengajuan Medical Record External?
 
 - intent: why_shift_loss_and_diagnosis_are_marked_with_minus_in_history_tab_medic_id
   examples: |
@@ -1562,7 +1419,6 @@ nlu:
 
 - intent: what_happens_after_claim_is_approved_in_medic_apps_medic_id
   examples: |
-    - Apa yang terjadi setelah medical klaim disetujui di Medic Apps?
     - Apa langkah berikutnya setelah medical klaim disetujui di Medic Apps?
     - Apa yang terjadi setelah medical klaim disetujui oleh tim medis di Medic Apps?
     - Setelah medical klaim disetujui di Medic Apps, apa yang terjadi selanjutnya?
@@ -1581,53 +1437,6 @@ nlu:
     - Apa yang terjadi pada medical klaim yang telah disetujui oleh tim medis di Medic Apps?
     - Apakah medical klaim yang disetujui di Medic Apps langsung diproses di ESS Apps?
     - Apa yang harus dilakukan setelah medical klaim disetujui di Medic Apps?
-
-# - intent: process_flow_after_medical_claim_submission_medic_id
-#   examples: |
-#     - Apa urutan proses yang terjadi setelah pengajuan medical klaim diajukan?
-#     - Apa langkah-langkah yang terjadi setelah medical klaim diajukan oleh karyawan?
-#     - Bagaimana proses yang dilakukan setelah medical klaim diajukan?
-#     - Apa yang terjadi setelah pengajuan medical klaim oleh karyawan?
-#     - Apa yang terjadi setelah medical klaim dikirimkan oleh karyawan?
-#     - Apa tahapan yang dilalui medical klaim setelah diajukan?
-#     - Bagaimana prosedur yang terjadi setelah medical klaim diajukan di ESS Apps?
-#     - Apa saja langkah-langkah yang diambil setelah medical klaim diajukan oleh karyawan?
-#     - Apa yang dilakukan setelah medical klaim diajukan di sistem?
-#     - Setelah medical klaim diajukan, bagaimana proses persetujuannya?
-#     - Apa urutan pengolahan medical klaim di sistem?
-#     - Apa yang dilakukan setelah medical klaim dimasukkan ke dalam ESS Apps?
-#     - Setelah pengajuan klaim, apa yang dilakukan oleh dokter/paramedis?
-#     - Apa yang terjadi setelah medical klaim dikirim oleh karyawan melalui ESS Apps?
-#     - Bagaimana cara medical klaim diproses setelah diajukan oleh karyawan?
-#     - Apa langkah-langkah yang diambil oleh tim medis setelah klaim diajukan?
-#     - Apa yang dimaksud dengan status "Need Approval" pada medical klaim?
-#     - Apa yang dimaksud dengan status "Approved" atau rejected pada medical klaim?
-#     - Apakah ada revisi yang dilakukan setelah medical klaim diajukan?
-#     - Bagaimana proses pembaruan status klaim di ESS Apps setelah disetujui atau ditolak?
-#     - Bagaimana langkah-langkah proses persetujuan medical klaim?
-#     - Apa saja tahapan dalam persetujuan medical klaim?
-
-#     - Apa tahapan yang dilakukan setelah medical klaim diajukan?
-#     - Bagaimana proses persetujuan medical klaim dari awal sampai akhir?
-#     - Apa yang terjadi setelah pengajuan medical klaim dilakukan oleh karyawan?
-#     - Apa urutan proses setelah medical klaim diajukan oleh karyawan?
-#     - Setelah medical klaim diajukan, bagaimana langkah-langkah selanjutnya?
-#     - Apa yang terjadi setelah medical klaim diverifikasi oleh dokter?
-#     - Apa yang terjadi jika medical klaim tidak disetujui?
-#     - Apa urutan proses persetujuan medical klaim setelah pengajuan?
-#     - Bagaimana langkah-langkah yang terjadi setelah pengajuan medical klaim?
-#     - Apa saja tahapan yang harus dilalui setelah medical klaim diajukan?
-#     - Apa yang terjadi setelah medical klaim diajukan oleh karyawan?
-#     - Bagaimana proses persetujuan medical klaim setelah diajukan?
-#     - Apa proses yang terjadi setelah medical klaim diajukan ke ESS Apps?
-#     - Setelah medical klaim diajukan, bagaimana proses persetujuannya?
-#     - Apa yang dilakukan dokter/paramedis setelah klaim diajukan oleh karyawan?
-#     - Apa urutan proses yang dilakukan tim medis setelah pengajuan medical klaim?
-#     - Apa yang dilakukan tim medis setelah menerima medical klaim untuk persetujuan?
-#     - Apa langkah yang dilakukan dokter setelah menerima medical klaim yang diajukan?
-#     - Apa yang terjadi jika klaim memerlukan revisi oleh karyawan?
-#     - Bagaimana pembaruan status klaim di ESS Apps setelah disetujui atau ditolak?
-#     - Bagaimana cara status klaim diperbarui di ESS Apps setelah tindakan dokter?
 
 - intent: what_is_approval_activity_feature_medic_id
   examples: |
@@ -1721,6 +1530,7 @@ nlu:
 - intent: what_is_medical_checkup_menu_medic_id
   examples: |
     - Apa itu menu Medical Checkup?
+    - Apa itu fungsi menu medical checkup?
     - Apa yang dimaksud dengan menu Medical Checkup dalam sistem?
     - Jelaskan fungsi dari menu Medical Checkup
     - Apa yang dapat dilakukan di menu Medical Checkup?
@@ -1886,27 +1696,28 @@ nlu:
     - Apa artinya jika status kesehatan di Hasil MCU adalah Temporary Unfit?
     - Bagaimana cara mengetahui status kesehatan karyawan berdasarkan Hasil MCU?
 
-- intent: how_to_search_medical_checkup_data_medic_id
-  examples: |
-    - Gimana cara ingin cari data medical check up secara spesifik?
-    - Apa langkah-langkah untuk mencari data medical check up berdasarkan nama atau NIK?
-    - Bagaimana cara mencari data medical check up dengan menggunakan NIK atau Nama?
-    - Apa yang harus dilakukan untuk mencari data medical check up secara detail?
-    - Bagaimana cara mencari data pemeriksaan kesehatan berdasarkan NIK?
-    - Apa cara mencari data medical check up berdasarkan nama karyawan?
-    - Bagaimana cara menggunakan search field untuk mencari data medical check up?
-    - Bagaimana cara mencari data medical check up di aplikasi?
-    - Bagaimana cara melakukan pencarian data medical check up secara spesifik?
-    - Apa yang perlu dilakukan untuk menemukan data medical check up dengan cepat?
-    - Apakah saya bisa mencari data medical check up berdasarkan NIK?
-    - Cara mencari data medical check up menggunakan Nama atau NIK?
-    - Bagaimana mencari data medical check up untuk karyawan tertentu?
-    - Bisakah saya mencari data medical check up berdasarkan Nama atau NIK?
-    - Apa fungsi search field dalam mencari data medical check up?
-    - Bagaimana cara menggunakan search field untuk pencarian data medical check up?
-    - Apa yang perlu dimasukkan di search field untuk mencari data medical check up?
-    - Bagaimana cara cepat mencari data medical check up berdasarkan NIK atau nama?
-    - Apa yang harus dicari di search field untuk menemukan data medical check up?
+##ini tanya widya apakah perlu dimasukkin apa engga?
+# - intent: how_to_search_medical_checkup_data_medic_id
+#   examples: |
+#     - Gimana cara ingin cari data medical check up secara spesifik?
+#     - Apa langkah-langkah untuk mencari data medical check up berdasarkan nama atau NIK?
+#     - Bagaimana cara mencari data medical check up dengan menggunakan NIK atau Nama?
+#     - Apa yang harus dilakukan untuk mencari data medical check up secara detail?
+#     - Bagaimana cara mencari data pemeriksaan kesehatan berdasarkan NIK?
+#     - Apa cara mencari data medical check up berdasarkan nama karyawan?
+#     - Bagaimana cara menggunakan search field untuk mencari data medical check up?
+#     - Bagaimana cara mencari data medical check up di aplikasi?
+#     - Bagaimana cara melakukan pencarian data medical check up secara spesifik?
+#     - Apa yang perlu dilakukan untuk menemukan data medical check up dengan cepat?
+#     - Apakah saya bisa mencari data medical check up berdasarkan NIK?
+#     - Cara mencari data medical check up menggunakan Nama atau NIK?
+#     - Bagaimana mencari data medical check up untuk karyawan tertentu?
+#     - Bisakah saya mencari data medical check up berdasarkan Nama atau NIK?
+#     - Apa fungsi search field dalam mencari data medical check up?
+#     - Bagaimana cara menggunakan search field untuk pencarian data medical check up?
+#     - Apa yang perlu dimasukkan di search field untuk mencari data medical check up?
+#     - Bagaimana cara cepat mencari data medical check up berdasarkan NIK atau nama?
+#     - Apa yang harus dicari di search field untuk menemukan data medical check up?
 
 - intent: what_are_filters_in_medical_checkup_menu_medic_id
   examples: |

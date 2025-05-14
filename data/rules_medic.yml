@@ -288,70 +288,6 @@ rules:
     - intent: paramedics_access_disease_data_in_the_future_medic_en
     - action: utter_paramedic_change_disease_data_medic_en
 
-- rule: Asks about How to Filter Disease Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_filter_disease_data_medic_id
-    - action: utter_how_to_filter_disease_data_medic_id
-
-- rule: Asks about How to Filter Disease Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_filter_disease_data_medic_en
-    - action: utter_how_to_filter_disease_data_medic_en
-
-- rule: Asks about How to Search for Disease Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_search_for_disease_data_medic_id
-    - action: utter_how_to_search_for_disease_data_medic_id
-
-- rule: Asks about How to Search for Disease Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_search_for_disease_data_medic_en
-    - action: utter_how_to_search_for_disease_data_medic_en
-
-- rule: Asks about Export and Import Disease Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: export_import_disease_data_medic_id
-    - action: utter_export_import_disease_data_medic_id
-
-- rule: Asks about Export and Import Disease Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: export_import_disease_data_medic_en
-    - action: utter_export_import_disease_data_medic_en
-
-- rule: Asks about Notification for Paramedics in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: notifications_for_paramedics_medic_id
-    - action: utter_notifications_for_paramedics_medic_id
-
-- rule: Asks about Notification for Paramedics in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: notifications_for_paramedics_medic_en
-    - action: utter_notifications_for_paramedics_medic_en
-
 - rule: Asks about How to Edit Disease Data in Indonesia
   condition:
     - slot_was_set:
@@ -784,54 +720,6 @@ rules:
     - intent: paramedics_access_medicine_data_in_the_future_medic_en
     - action: utter_paramedics_access_medicine_data_in_the_future_medic_en
 
-- rule: Asks about how to filter medicine data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_filter_medicine_data_medic_id
-    - action: utter_how_to_filter_medicine_data_medic_id
-
-- rule: Asks about how to filter medicine data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_filter_medicine_data_medic_en
-    - action: utter_how_to_filter_medicine_data_medic_en
-
-- rule: Asks about how to search medicine data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_search_medicine_data_medic_id
-    - action: utter_how_to_search_medicine_data_medic_id
-
-- rule: Asks about how to search medicine data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_search_medicine_data_medic_en
-    - action: utter_how_to_search_medicine_data_medic_en
-
-- rule: Asks about export and import medicine data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: export_import_medicine_data_medic_id
-    - action: utter_export_import_medicine_data_medic_id
-
-- rule: Asks about export and import medicine data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: export_import_medicine_data_medic_en
-    - action: utter_export_import_medicine_data_medic_en
-
 - rule: Asks about medical record external in Indonesia
   condition:
     - slot_was_set:
@@ -1120,22 +1008,6 @@ rules:
     - intent: what_happens_after_claim_is_approved_in_medic_apps_medic_en
     - action: utter_what_happens_after_claim_is_approved_in_medic_apps_medic_en
 
-# - rule: Asks about process flow after medical claim submission in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: process_flow_after_medical_claim_submission_medic_id
-#     - action: utter_process_flow_after_medical_claim_submission_medic_id
-
-# - rule: Asks about process flow after medical claim submission in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: process_flow_after_medical_claim_submission_medic_en
-#     - action: utter_process_flow_after_medical_claim_submission_medic_en
-
 - rule: Asks about what is approval activity feature in Indonesia
   condition:
     - slot_was_set:
@@ -1264,21 +1136,21 @@ rules:
     - intent: what_is_health_status_in_mcu_result_medic_en
     - action: utter_what_is_health_status_in_mcu_result_medic_en
 
-- rule: Asks about how to search medical checkup data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_search_medical_checkup_data_medic_id
-    - action: utter_how_to_search_medical_checkup_data_medic_id
+# - rule: Asks about how to search medical checkup data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_search_medical_checkup_data_medic_id
+#     - action: utter_how_to_search_medical_checkup_data_medic_id
 
-- rule: Asks about how to search medical checkup data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_search_medical_checkup_data_medic_en
-    - action: utter_how_to_search_medical_checkup_data_medic_en
+# - rule: Asks about how to search medical checkup data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_search_medical_checkup_data_medic_en
+#     - action: utter_how_to_search_medical_checkup_data_medic_en
 
 - rule: Asks about what is selected column feature menu in Indonesia
   condition:

@@ -2904,20 +2904,20 @@ stories:
   - action: action_get_001m_forecast_allocation_report_date_filter
   - action: utter_filter_data_forecast_allocation_report_001m_id
 
-- story: Handle select 001M app for get forecasting & allocation report 001M
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      send forecasting and allocation report
-    intent: ask_request_forecast_allocation_report_001M_en
-  - action: utter_select_apps_for_forecast_allocation_report_001M_en
-  - intent: forecasting_allocation_report_choose_001M_app_en
-  - action: get_forecast_allocation_report_select_001m_by_date_form
-  - active_loop: get_forecast_allocation_report_select_001m_by_date_form
-  - active_loop: null
-  - action: action_get_001m_forecast_allocation_report_date_filter
-  - action: utter_filter_data_forecast_allocation_report_001m_en
+# - story: Handle select 001M app for get forecasting & allocation report 001M
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       send forecasting and allocation report
+#     intent: ask_request_forecast_allocation_report_001M_en
+#   - action: utter_select_apps_for_forecast_allocation_report_001M_en
+#   - intent: forecasting_allocation_report_choose_001M_app_en
+#   - action: get_forecast_allocation_report_select_001m_by_date_form
+#   - active_loop: get_forecast_allocation_report_select_001m_by_date_form
+#   - active_loop: null
+#   - action: action_get_001m_forecast_allocation_report_date_filter
+#   - action: utter_filter_data_forecast_allocation_report_001m_en
 
 - story: Handle affirm filter forecasting & allocation report additional 001M
   steps:
@@ -2968,18 +2968,18 @@ stories:
   - action: action_get_001m_forecast_allocation_report_date_filter
   - action: utter_filter_data_forecast_allocation_report_001m_id
 
-- story: Handle request forecasting & allocation report 001M
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      Provide forecasting & allocation report 001M
-    intent: request_forecasting_allocation_report_choose_001M_en
-  - action: get_forecast_allocation_report_select_001m_by_date_form
-  - active_loop: get_forecast_allocation_report_select_001m_by_date_form
-  - active_loop: null
-  - action: action_get_001m_forecast_allocation_report_date_filter
-  - action: utter_filter_data_forecast_allocation_report_001m_en
+# - story: Handle request forecasting & allocation report 001M
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Provide forecasting & allocation report 001M
+#     intent: request_forecasting_allocation_report_choose_001M_en
+#   - action: get_forecast_allocation_report_select_001m_by_date_form
+#   - active_loop: get_forecast_allocation_report_select_001m_by_date_form
+#   - active_loop: null
+#   - action: action_get_001m_forecast_allocation_report_date_filter
+#   - action: utter_filter_data_forecast_allocation_report_001m_en
 
 - story: Handle estimate component repair finish date report 001M
   steps:
@@ -2993,17 +2993,17 @@ stories:
   - active_loop: null
   - action: action_get_001m_component_estimated_finish_date_forecast_allocation_report
 
-- story: Handle estimate component repair finish date report 001M
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      When is the TESTEXT2 component expected to be repaired?
-    intent: estimate_component_repair_finish_date_001M_en
-  - action: get_estimate_component_repair_finish_date_report_001m_form
-  - active_loop: get_estimate_component_repair_finish_date_report_001m_form
-  - active_loop: null
-  - action: action_get_001m_component_estimated_finish_date_forecast_allocation_report
+# - story: Handle estimate component repair finish date report 001M
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       When is the TESTEXT2 component expected to be repaired?
+#     intent: estimate_component_repair_finish_date_001M_en
+#   - action: get_estimate_component_repair_finish_date_report_001m_form
+#   - active_loop: get_estimate_component_repair_finish_date_report_001m_form
+#   - active_loop: null
+#   - action: action_get_001m_component_estimated_finish_date_forecast_allocation_report
 
 - story: Handle repair location report 001M
   steps:
@@ -3017,17 +3017,17 @@ stories:
   - active_loop: null
   - action: action_get_001m_component_repair_location_forecast_allocation_report
 
-- story: Handle repair location report 001M
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      Where is the location for repair of TESTEXT2 components?
-    intent: get_component_repair_location_001M_en
-  - action: get_component_repair_location_report_001m_form
-  - active_loop: get_component_repair_location_report_001m_form
-  - active_loop: null
-  - action: action_get_001m_component_repair_location_forecast_allocation_report
+# - story: Handle repair location report 001M
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Where is the location for repair of TESTEXT2 components?
+#     intent: get_component_repair_location_001M_en
+#   - action: get_component_repair_location_report_001m_form
+#   - active_loop: get_component_repair_location_report_001m_form
+#   - active_loop: null
+#   - action: action_get_001m_component_repair_location_forecast_allocation_report
 
 - story: Handle approval status route component repair report 001M
   steps:
@@ -3041,17 +3041,17 @@ stories:
   - active_loop: null
   - action: action_get_001m_approval_route_forecast_allocation_report
 
-- story: Handle approval status route component repair report 001M
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      Who approves fixes for TESTEXT2 components?
-    intent: get_approval_status_route_component_repair_001M_en
-  - action: get_approval_route_component_repair_report_001m_form
-  - active_loop: get_approval_route_component_repair_report_001m_form
-  - active_loop: null
-  - action: action_get_001m_approval_route_forecast_allocation_report
+# - story: Handle approval status route component repair report 001M
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Who approves fixes for TESTEXT2 components?
+#     intent: get_approval_status_route_component_repair_001M_en
+#   - action: get_approval_route_component_repair_report_001m_form
+#   - active_loop: get_approval_route_component_repair_report_001m_form
+#   - active_loop: null
+#   - action: action_get_001m_approval_route_forecast_allocation_report
 
 - story: Handle get members name working on component report 001M
   steps:
@@ -3065,17 +3065,17 @@ stories:
   - active_loop: null
   - action: action_get_001m_mechanic_name_on_component_repairs_forecast_allocation_report
 
-- story: Handle get members name working on component report 001M
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      Who is working on the DESCMTNR component fix?
-    intent: get_employee_name_working_on_component_repair_001M_en
-  - action: get_members_working_on_component_report_001m_form
-  - active_loop: get_members_working_on_component_report_001m_form
-  - active_loop: null
-  - action: action_get_001m_mechanic_name_on_component_repairs_forecast_allocation_report
+# - story: Handle get members name working on component report 001M
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Who is working on the DESCMTNR component fix?
+#     intent: get_employee_name_working_on_component_repair_001M_en
+#   - action: get_members_working_on_component_report_001m_form
+#   - active_loop: get_members_working_on_component_report_001m_form
+#   - active_loop: null
+#   - action: action_get_001m_mechanic_name_on_component_repairs_forecast_allocation_report
 
 - story: Handle get employee current task on component report 001M
   steps:
@@ -3089,17 +3089,17 @@ stories:
   - active_loop: null
   - action: action_get_001m_mechanic_current_task_on_component_repairs_forecast_allocation_report
 
-- story: Handle get employee current task on component report 001M
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      What component is Wahyu currently working on?
-    intent: get_employee_current_task_on_component_repair_001M_en
-  - action: get_mechanic_name_forecast_allocation_report_001m_form
-  - active_loop: get_mechanic_name_forecast_allocation_report_001m_form
-  - active_loop: null
-  - action: action_get_001m_mechanic_current_task_on_component_repairs_forecast_allocation_report
+# - story: Handle get employee current task on component report 001M
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What component is Wahyu currently working on?
+#     intent: get_employee_current_task_on_component_repair_001M_en
+#   - action: get_mechanic_name_forecast_allocation_report_001m_form
+#   - active_loop: get_mechanic_name_forecast_allocation_report_001m_form
+#   - active_loop: null
+#   - action: action_get_001m_mechanic_current_task_on_component_repairs_forecast_allocation_report
 
 - story: Handle shipment status on component repair report 001M
   steps:
@@ -3113,17 +3113,17 @@ stories:
   - active_loop: null
   - action: action_get_001m_shipment_status_for_component_repairs_traceabilty_report
 
-- story: Handle shipment status on component repair report 001M
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      What is the current shipping status of TESTEXTRFU components?
-    intent: get_shipment_status_on_component_repair_001M_en
-  - action: get_shipment_status_on_component_repair_report_001m_form
-  - active_loop: get_shipment_status_on_component_repair_report_001m_form
-  - active_loop: null
-  - action: action_get_001m_shipment_status_for_component_repairs_traceabilty_report
+# - story: Handle shipment status on component repair report 001M
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is the current shipping status of TESTEXTRFU components?
+#     intent: get_shipment_status_on_component_repair_001M_en
+#   - action: get_shipment_status_on_component_repair_report_001m_form
+#   - active_loop: get_shipment_status_on_component_repair_report_001m_form
+#   - active_loop: null
+#   - action: action_get_001m_shipment_status_for_component_repairs_traceabilty_report
 
 - story: Handle about Disease Management Menu Medic
   steps:
@@ -3131,17 +3131,17 @@ stories:
     - language: indonesia
   - user: |
       Apa itu menu Disease Management?
-    intent: ask_about_disease_management_menu_medic_id
+    intent: disease_management_menu_medic_id
   - action: utter_disease_management_menu_medic_id
 
-- story: Handle about Disease Management Menu
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      What is the Disease Management menu?
-    intent: ask_about_disease_management_menu_medic_en
-  - action: utter_disease_management_menu_medic_en
+# - story: Handle about Disease Management Menu
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is the Disease Management menu?
+#     intent: disease_management_menu_medic_en
+#   - action: utter_disease_management_menu_medic_en
 
 - story: Handle about disease management menu access
   steps:
@@ -3149,17 +3149,17 @@ stories:
     - language: indonesia
   - user: |
       Menu Disease Management bisa diakses oleh siapa saja?
-    intent: ask_disease_management_menu_access_medic_id
+    intent: disease_management_menu_access_medic_id
   - action: utter_who_can_access_disease_management_menu_medic_id
 
-- story: Handle about disease management menu access
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      Can anyone access the Disease Management menu?
-    intent: ask_disease_management_menu_access_medic_en
-  - action: utter_who_can_access_disease_management_menu_medic_en
+# - story: Handle about disease management menu access
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Can anyone access the Disease Management menu?
+#     intent: disease_management_menu_access_medic_en
+#   - action: utter_who_can_access_disease_management_menu_medic_en
 
 - story: Handle about paramedic change disease data
   steps:
@@ -3167,17 +3167,17 @@ stories:
     - language: indonesia
   - user: |
       Apakah paramedis dapat mengubah data penyakit?
-    intent: ask_paramedic_change_disease_data_medic_id
+    intent: paramedic_change_disease_data_medic_id
   - action: utter_paramedic_change_disease_data_medic_id
 
-- story: Handle about paramedic change disease data
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      Can paramedics change disease data?
-    intent: ask_paramedic_change_disease_data_medic_en
-  - action: utter_paramedic_change_disease_data_medic_en
+# - story: Handle about paramedic change disease data
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Can paramedics change disease data?
+#     intent: paramedic_change_disease_data_medic_en
+#   - action: utter_paramedic_change_disease_data_medic_en
 
 - story: Handle about how to add new disease data
   steps:
@@ -3185,17 +3185,17 @@ stories:
     - language: indonesia
   - user: |
       Langkah-langkah untuk menambahkan data penyakit baru di sistem aplikasi medic madhani?
-    intent: ask_how_to_add_new_disease_data_medic_id
+    intent: how_to_add_new_disease_data_medic_id
   - action: utter_how_to_add_new_disease_data_medic_id
 
-- story: Handle about how to add new disease data
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      Steps to add new disease data in the Medic Madhani application system?
-    intent: ask_how_to_add_new_disease_data_medic_en
-  - action: utter_how_to_add_new_disease_data_medic_en
+# - story: Handle about how to add new disease data
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Steps to add new disease data in the Medic Madhani application system?
+#     intent: how_to_add_new_disease_data_medic_en
+#   - action: utter_how_to_add_new_disease_data_medic_en
 
 - story: Handle about info for adding new disase data
   steps:
@@ -3203,17 +3203,17 @@ stories:
     - language: indonesia
   - user: |
       Apa saja informasi yang perlu dimasukkan saat menambahkan data penyakit baru ke aplikasi medic?
-    intent: ask_about_info_for_adding_new_disease_data_medic_id
+    intent: info_for_add_new_disease_data_medic_id
   - action: utter_how_to_add_new_disease_data_medic_id
 
-- story: Handle about info for adding new disase data
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      What information needs to be entered when adding new disease data to the medic application?
-    intent: ask_about_info_for_adding_new_disease_data_medic_en
-  - action: utter_how_to_add_new_disease_data_medic_en
+# - story: Handle about info for adding new disase data
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What information needs to be entered when adding new disease data to the medic application?
+#     intent: info_for_add_new_disease_data_medic_en
+#   - action: utter_how_to_add_new_disease_data_medic_en
 
 - story: Handle about disease type and add info
   steps:
@@ -3221,17 +3221,17 @@ stories:
     - language: indonesia
   - user: |
       Apa itu disease type dan bagaimana cara menambahkannya?
-    intent: ask_about_disease_type_and_add_info_medic_id
+    intent: disease_type_and_add_info_medic_id
   - action: utter_disease_type_add_and_info_medic_id
 
-- story: Handle about disease type and add info
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      What is a disease type and how do I add one?
-    intent: ask_about_disease_type_and_add_info_medic_en
-  - action: utter_disease_type_add_and_info_medic_en
+# - story: Handle about disease type and add info
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is a disease type and how do I add one?
+#     intent: disease_type_and_add_info_medic_en
+#   - action: utter_disease_type_add_and_info_medic_en
 
 - story: Handle about required fields empty
   steps:
@@ -3239,17 +3239,17 @@ stories:
     - language: indonesia
   - user: |
       Apa yang terjadi kalau ada field yang kosong saat saya nambah penyakit baru?
-    intent: ask_about_required_fields_empty_medic_id
-  - action: utter_about_required_fields_empty_medic_id
+    intent: required_fields_empty_medic_id
+  - action: utter_required_fields_empty_medic_id
 
-- story: Handle about required fields empty
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      What happens if there is an empty field when I add a new disease?
-    intent: ask_about_required_fields_empty_medic_en
-  - action: utter_about_required_fields_empty_medic_en
+# - story: Handle about required fields empty
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What happens if there is an empty field when I add a new disease?
+#     intent: required_fields_empty_medic_en
+#   - action: utter_required_fields_empty_medic_en
 
 - story: Handle about existing data entry in medic apps
   steps:
@@ -3257,17 +3257,17 @@ stories:
     - language: indonesia
   - user: |
       Gimana kalau data penyakit yang saya masukkan sudah terdaftar sebelumnya?
-    intent: ask_about_existing_data_entry_medic_id
-  - action: utter_about_existing_data_entry_medic_id
+    intent: existing_data_entry_medic_id
+  - action: utter_existing_data_entry_medic_id
 
-- story: Handle about existing data entry in medic apps
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      What if the disease data I entered has been registered previously?
-    intent: ask_about_existing_data_entry_medic_en
-  - action: utter_about_existing_data_entry_medic_en
+# - story: Handle about existing data entry in medic apps
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What if the disease data I entered has been registered previously?
+#     intent: existing_data_entry_medic_en
+#   - action: utter_existing_data_entry_medic_en
 
 - story: Handle about post addition process add disease data
   steps:
@@ -3275,17 +3275,17 @@ stories:
     - language: indonesia
   - user: |
       Kalau data penyakit sudah berhasil ditambah, apa yang akan muncul?
-    intent: ask_about_post_addition_process_add_disease_data_medic_id
-  - action: utter_about_post_addition_process_add_disease_data_medic_id
+    intent: post_addition_process_add_disease_data_medic_id
+  - action: utter_post_addition_process_add_disease_data_medic_id
 
-- story: Handle about post addition process add disease data
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      If the disease data has been successfully added, what will appear?
-    intent: ask_about_post_addition_process_add_disease_data_medic_en
-  - action: utter_about_post_addition_process_add_disease_data_medic_en
+# - story: Handle about post addition process add disease data
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       If the disease data has been successfully added, what will appear?
+#     intent: post_addition_process_add_disease_data_medic_en
+#   - action: utter_post_addition_process_add_disease_data_medic_en
 
 - story: Handle about who can see disease data medic
   steps:
@@ -3293,17 +3293,17 @@ stories:
     - language: indonesia
   - user: |
       Setelah dokter menambahkan data penyakit baru, siapa yang bisa melihat data penyakit tersebut?
-    intent: ask_about_who_can_see_disease_data_medic_id
-  - action: utter_about_who_can_see_disease_data_medic_id
+    intent: who_can_see_disease_data_medic_id
+  - action: utter_who_can_see_disease_data_medic_id
 
-- story: Handle about who can see disease data medic
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      After a doctor adds new disease data, who can see the disease data?
-    intent: ask_about_who_can_see_disease_data_medic_en
-  - action: utter_about_who_can_see_disease_data_medic_en
+# - story: Handle about who can see disease data medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       After a doctor adds new disease data, who can see the disease data?
+#     intent: who_can_see_disease_data_medic_en
+#   - action: utter_who_can_see_disease_data_medic_en
 
 - story: Handle about who can edit disease data medic
   steps:
@@ -3311,17 +3311,17 @@ stories:
     - language: indonesia
   - user: |
       Siapa yang memiliki akses untuk mengedit data penyakit?
-    intent: ask_about_who_can_edit_disease_data_medic_id
-  - action: utter_about_who_can_edit_disease_data_medic_id
+    intent: who_can_edit_disease_data_medic_id
+  - action: utter_who_can_edit_disease_data_medic_id
 
-- story: Handle about who can edit disease data medic
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      Who has access to edit disease data?
-    intent: ask_about_who_can_edit_disease_data_medic_en
-  - action: utter_about_who_can_edit_disease_data_medic_en
+# - story: Handle about who can edit disease data medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Who has access to edit disease data?
+#     intent: who_can_edit_disease_data_medic_en
+#   - action: utter_who_can_edit_disease_data_medic_en
 
 - story: Handle about disease management menu connections with others menu Medic
   steps:
@@ -3329,17 +3329,17 @@ stories:
     - language: indonesia
   - user: |
       Apakah menu Disease Management terhubung dengan menu lain di sistem?
-    intent: ask_about_disease_management_menu_connections_medic_id
-  - action: utter_about_disease_management_menu_connections_medic_id
+    intent: disease_management_menu_connections_medic_id
+  - action: utter_disease_management_menu_connections_medic_id
 
-- story: Handle about disease management menu connections with others menu Medic
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      Is the Disease Management menu connected to other menus in the system?
-    intent: ask_about_disease_management_menu_connections_medic_en
-  - action: utter_about_disease_management_menu_connections_medic_en
+# - story: Handle about disease management menu connections with others menu Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Is the Disease Management menu connected to other menus in the system?
+#     intent: disease_management_menu_connections_medic_en
+#   - action: utter_disease_management_menu_connections_medic_en
 
 - story: Handle about effect of updating disease data used in other menu Medic
   steps:
@@ -3347,17 +3347,17 @@ stories:
     - language: indonesia
   - user: |
       Apa yang terjadi jika dokter memperbarui data penyakit yang sudah digunakan dalam menu Medical Check Up, Medical Record FAR, dan Medical Record External?
-    intent: ask_about_effect_of_updating_disease_data_used_in_other_menus_medic_id
-  - action: utter_about_effect_of_updating_disease_data_used_in_other_menus_medic_id
+    intent: effect_of_updating_disease_data_used_in_other_menus_medic_id
+  - action: utter_effect_of_updating_disease_data_used_in_other_menus_medic_id
 
-- story: Handle about effect of updating disease data used in other menu Medic
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      What happens if a doctor updates disease data that has been used in the Medical Check Up, Medical Record FAR, and Medical Record External menus?
-    intent: ask_about_effect_of_updating_disease_data_used_in_other_menus_medic_en
-  - action: utter_about_effect_of_updating_disease_data_used_in_other_menus_medic_en
+# - story: Handle about effect of updating disease data used in other menu Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What happens if a doctor updates disease data that has been used in the Medical Check Up, Medical Record FAR, and Medical Record External menus?
+#     intent: effect_of_updating_disease_data_used_in_other_menus_medic_en
+#   - action: utter_effect_of_updating_disease_data_used_in_other_menus_medic_en
 
 - story: Handle about who can delete disease data Medic
   steps:
@@ -3365,17 +3365,17 @@ stories:
     - language: indonesia
   - user: |
       Siapa yang dapat menghapus data penyakit?
-    intent: ask_about_who_can_delete_disease_data_medic_id
-  - action: utter_about_who_can_delete_disease_data_medic_id
+    intent: who_can_delete_disease_data_medic_id
+  - action: utter_who_can_delete_disease_data_medic_id
 
-- story: Handle about who can delete disease data Medic
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      Who can delete disease data?
-    intent: ask_about_who_can_delete_disease_data_medic_en
-  - action: utter_about_who_can_delete_disease_data_medic_en
+# - story: Handle about who can delete disease data Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Who can delete disease data?
+#     intent: who_can_delete_disease_data_medic_en
+#   - action: utter_who_can_delete_disease_data_medic_en
 
 - story: Handle about how to delete disease data Medic
   steps:
@@ -3383,17 +3383,17 @@ stories:
     - language: indonesia
   - user: |
       Cara hapus data penyakit?
-    intent: ask_about_how_to_delete_disease_data_medic_id
-  - action: utter_about_how_to_delete_disease_data_medic_id
+    intent: how_to_delete_disease_data_medic_id
+  - action: utter_how_to_delete_disease_data_medic_id
 
-- story: Handle about how to delete disease data Medic
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      How to delete disease data?
-    intent: ask_about_how_to_delete_disease_data_medic_en
-  - action: utter_about_how_to_delete_disease_data_medic_en
+# - story: Handle about how to delete disease data Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How to delete disease data?
+#     intent: how_to_delete_disease_data_medic_en
+#   - action: utter_how_to_delete_disease_data_medic_en
 
 - story: Handle about deleting used disease data Medic
   steps:
@@ -3401,17 +3401,17 @@ stories:
     - language: indonesia
   - user: |
       Apa yang terjadi kalau dokter coba hapus data penyakit yang udah dipakai?
-    intent: ask_about_deleting_used_disease_data_medic_id
-  - action: utter_about_deleting_used_disease_data_medic_id
+    intent: deleting_used_disease_data_medic_id
+  - action: utter_deleting_used_disease_data_medic_id
 
-- story: Handle about deleting used disease data Medic
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      What happens if a doctor tries to delete disease data that has been used?
-    intent: ask_about_deleting_used_disease_data_medic_en
-  - action: utter_about_deleting_used_disease_data_medic_en
+# - story: Handle about deleting used disease data Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What happens if a doctor tries to delete disease data that has been used?
+#     intent: deleting_used_disease_data_medic_en
+#   - action: utter_deleting_used_disease_data_medic_en
 
 - story: Handle about deleting unused disease data Medic
   steps:
@@ -3419,17 +3419,17 @@ stories:
     - language: indonesia
   - user: |
       Apa yang terjadi kalau data penyakit belum dipakai di sistem?
-    intent: ask_about_deleting_unused_disease_data_medic_id
-  - action: utter_about_deleting_unused_disease_data_medic_id
+    intent: deleting_unused_disease_data_medic_id
+  - action: utter_deleting_unused_disease_data_medic_id
 
-- story: Handle about deleting unused disease data Medic
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      What happens if the disease data is not used in the system?
-    intent: ask_about_deleting_unused_disease_data_medic_en
-  - action: utter_about_deleting_unused_disease_data_medic_en
+# - story: Handle about deleting unused disease data Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What happens if the disease data is not used in the system?
+#     intent: deleting_unused_disease_data_medic_en
+#   - action: utter_deleting_unused_disease_data_medic_en
 
 - story: Handle about paramedic access in the future Medic
   steps:
@@ -3437,89 +3437,17 @@ stories:
     - language: indonesia
   - user: |
       Kedepannya, paramedis bisa nggak ya edit data penyakit?
-    intent: ask_about_paramedics_access_in_the_future_medic_id
+    intent: paramedics_access_disease_data_in_the_future_medic_id
   - action: utter_paramedic_change_disease_data_medic_id
 
-- story: Handle about paramedic access in the future Medic
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      In the future, will paramedics be able to edit disease data?
-    intent: ask_about_paramedics_access_in_the_future_medic_en
-  - action: utter_paramedic_change_disease_data_medic_en
-
-- story: Handle about how to filter disease data Medic
-  steps:
-  - slot_was_set:
-    - language: indonesia
-  - user: |
-      Gimana cara filter data penyakit?
-    intent: ask_about_how_to_filter_disease_data_medic_id
-  - action: utter_about_how_to_filter_disease_data_medic_id
-
-- story: Handle about how to filter disease data Medic
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      How to filter disease data?
-    intent: ask_about_how_to_filter_disease_data_medic_en
-  - action: utter_about_how_to_filter_disease_data_medic_en
-
-- story: Handle about how to search for disease data Medic
-  steps:
-  - slot_was_set:
-    - language: indonesia
-  - user: |
-      Gimana cara cari penyakit tertentu?
-    intent: ask_about_how_to_search_for_disease_data_medic_id
-  - action: utter_about_how_to_search_for_disease_data_medic_id
-
-- story: Handle about how to search for disease data Medic
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      How to search for a specific disease?
-    intent: ask_about_how_to_search_for_disease_data_medic_en
-  - action: utter_about_how_to_search_for_disease_data_medic_en
-
-- story: Handle about export and import disease data Medic
-  steps:
-  - slot_was_set:
-    - language: indonesia
-  - user: |
-      Apakah data penyakit bisa di export dan di import?
-    intent: ask_about_export_import_disease_data_medic_id
-  - action: utter_about_export_import_disease_data_medic_id
-
-- story: Handle about export and import disease data Medic
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      Can disease data be exported and imported?
-    intent: ask_about_export_import_disease_data_medic_en
-  - action: utter_about_export_import_disease_data_medic_en
-
-- story: Handle about notification for paramedics data Medic
-  steps:
-  - slot_was_set:
-    - language: indonesia
-  - user: |
-      Apakah paramedis dapat notifikasi kalau dokter menambahkan penyakit baru?
-    intent: ask_about_notifications_for_paramedics_medic_id
-  - action: utter_about_notifications_for_paramedics_medic_id
-
-- story: Handle about notification for paramedics data Medic
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      Do paramedics get notified if a doctor adds a new disease?
-    intent: ask_about_notifications_for_paramedics_medic_en
-  - action: utter_about_notifications_for_paramedics_medic_en
+# - story: Handle about paramedic access in the future Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       In the future, will paramedics be able to edit disease data?
+#     intent: paramedics_access_disease_data_in_the_future_medic_en
+#   - action: utter_paramedic_change_disease_data_medic_en
 
 - story: Handle about how to edit disease data Medic
   steps:
@@ -3527,17 +3455,17 @@ stories:
     - language: indonesia
   - user: |
       Gimana cara edit data penyakit?
-    intent: ask_about_how_to_edit_disease_data_medic_id
-  - action: utter_about_how_to_edit_disease_data_medic_id
+    intent: how_to_edit_disease_data_medic_id
+  - action: utter_how_to_edit_disease_data_medic_id
 
-- story: Handle about how to edit disease data Medic
-  steps:
-  - slot_was_set:
-    - language: english
-  - user: |
-      How to edit disease data?
-    intent: ask_about_how_to_edit_disease_data_medic_en
-  - action: utter_about_how_to_edit_disease_data_medic_en
+# - story: Handle about how to edit disease data Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How to edit disease data?
+#     intent: how_to_edit_disease_data_medic_en
+#   - action: utter_how_to_edit_disease_data_medic_en
 
 - story: Handle about post edit disease data process Medic
   steps:
@@ -3545,14 +3473,1070 @@ stories:
     - language: indonesia
   - user: |
       Apa yang terjadi setelah data penyakit berhasil diperbarui?
-    intent: ask_about_post_edit_disease_data_process_medic_id
-  - action: utter_about_post_edit_disease_data_process_medic_id
+    intent: post_edit_disease_data_process_medic_id
+  - action: utter_post_edit_disease_data_process_medic_id
 
-- story: Handle about post edit disease data process Medic
+# - story: Handle about post edit disease data process Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What happens after the disease data is successfully updated?
+#     intent: post_edit_disease_data_process_medic_en
+#   - action: utter_post_edit_disease_data_process_medic_en
+
+- story: Handle about medicine standard menu Medic
   steps:
   - slot_was_set:
-    - language: english
+    - language: indonesia
   - user: |
-      What happens after the disease data is successfully updated?
-    intent: ask_about_post_edit_disease_data_process_medic_en
-  - action: utter_about_post_edit_disease_data_process_medic_en
+      Apa itu menu medicine standard?
+    intent: medicine_standard_menu_medic_id
+  - action: utter_medicine_standard_menu_medic_id
+
+# - story: Handle about medicine standard menu Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is a standard medicine menu?
+#     intent: medicine_standard_menu_medic_en
+#   - action: utter_medicine_standard_menu_medic_en
+
+- story: Handle about who can access medicine standard menu Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Siapa yang dapat mengakses menu medicine standard?
+    intent: who_can_access_medicine_standard_menu_medic_id
+  - action: utter_who_can_access_medicine_standard_menu_medic_id
+
+# - story: Handle about who can access medicine standard menu Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Who can access the standard medicine menu?
+#     intent: who_can_access_medicine_standard_menu_medic_en
+#   - action: utter_who_can_access_medicine_standard_menu_medic_en
+
+- story: Handle about how doctors add medicine data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Gimana cara dokter menambahkan data obat baru di menu medicine standard?
+    intent: how_doctors_add_medicine_data_medic_id
+  - action: utter_how_doctors_add_medicine_data_medic_id
+
+# - story: Handle about how doctors add medicine data Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How do doctors add new medicine data to the standard medicine menu?
+#     intent: how_doctors_add_medicine_data_medic_en
+#   - action: utter_how_doctors_add_medicine_data_medic_en
+
+- story: Handle about how paramedics add medicine data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara paramedis menambah obat baru di menu medicine standard?
+    intent: how_paramedics_add_medicine_data_medic_id
+  - action: utter_how_paramedics_add_medicine_data_medic_id
+
+# - story: Handle about how paramedics add medicine data Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How do paramedics add new medicine to the standard medicine menu?
+#     intent: how_paramedics_add_medicine_data_medic_en
+#   - action: utter_how_paramedics_add_medicine_data_medic_en
+
+- story: Handle about info for doctors add new medicine data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja informasi yang perlu dimasukkan oleh dokter saat menambahkan obat baru?
+    intent: info_for_doctor_add_new_medicine_data_medic_id
+  - action: utter_how_doctors_add_medicine_data_medic_id
+
+# - story: Handle about info for doctors add new medicine data Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What information does a doctor need to include when adding a new medication?
+#     intent: info_for_doctor_add_new_medicine_data_medic_en
+#   - action: utter_how_doctors_add_medicine_data_medic_en
+
+- story: Handle about info for paramedics add new medicine data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja informasi yang perlu dimasukkan oleh paramedis saat menambahkan obat baru?
+    intent: info_for_paramedics_add_new_medicine_data_medic_id
+  - action: utter_how_paramedics_add_medicine_data_medic_id
+
+# - story: Handle about info for paramedics add new medicine data Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What information does a paramedic need to enter when adding a new medication?
+#     intent: info_for_paramedics_add_new_medicine_data_medic_en
+#   - action: utter_how_paramedics_add_medicine_data_medic_en
+
+- story: Handle about view medicine submission paramedic Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Gimana cara lihat obat yang telah diajukan oleh paramedis?
+    intent: view_medicine_submission_paramedic_medic_id
+  - action: utter_view_medicine_submission_paramedic_medic_id
+
+# - story: Handle about view medicine submission paramedic Medic
+#   steps:
+#   - slot_was_set:
+#     - language: indonesia
+#   - user: |
+#       How do I view the medications that have been prescribed by paramedics?
+#     intent: view_medicine_submission_paramedic_medic_en
+#   - action: utter_view_medicine_submission_paramedic_medic_en
+
+- story: Handle about approve medicine submission by paramedic Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana proses persetujuan obat yang diajukan oleh paramedis?
+    intent: approve_medicine_submission_by_paramedic_medic_id
+  - action: utter_approve_medicine_submission_by_paramedic_medic_id
+
+# - story: Handle about approve medicine submission by paramedic Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How is the medicine approval process submitted by paramedics?
+#     intent: approve_medicine_submission_by_paramedic_medic_en
+#   - action: utter_approve_medicine_submission_by_paramedic_medic_en
+
+- story: Handle about meaning status draft medicine submission Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa arti status Draft pada pengajuan obat?
+    intent: meaning_status_draft_medicine_submission_medic_id
+  - action: utter_meaning_status_draft_medicine_submission_medic_id
+
+# - story: Handle about meaning status draft medicine submission Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What does Draft status mean on a drug application?
+#     intent: meaning_status_draft_medicine_submission_medic_en
+#   - action: utter_meaning_status_draft_medicine_submission_medic_en
+
+- story: Handle about meaning status approved medicine submission Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa arti status approved pada pengajuan obat?
+    intent: meaning_status_approved_medicine_submission_medic_id
+  - action: utter_meaning_status_approved_medicine_submission_medic_id
+
+# - story: Handle about meaning status approved medicine submission Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What does approved status mean on a drug application?
+#     intent: meaning_status_approved_medicine_submission_medic_en
+#   - action: utter_meaning_status_approved_medicine_submission_medic_en
+
+- story: Handle about meaning status rejected medicine submission Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa arti status approved pada pengajuan obat?
+    intent: meaning_status_rejected_medicine_submission_medic_id
+  - action: utter_meaning_status_rejected_medicine_submission_medic_id
+
+# - story: Handle about meaning status rejected medicine submission Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What does rejected status mean on a drug application?
+#     intent: meaning_status_rejected_medicine_submission_medic_en
+#   - action: utter_meaning_status_rejected_medicine_submission_medic_en
+
+- story: Handle about rejected medicine resubmission Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah obat yang sudah ditolak dapat diajukan kembali?
+    intent: rejected_medicine_resubmission_medic_id
+  - action: utter_rejected_medicine_resubmission_medic_id
+
+# - story: Handle about rejected medicine resubmission Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Can a drug that has been rejected be resubmitted?
+#     intent: rejected_medicine_resubmission_medic_en
+#   - action: utter_rejected_medicine_resubmission_medic_en
+
+- story: Handle about who can edit medicine data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Siapa yang dapat mengedit data obat?
+    intent: who_can_edit_medicine_data_medic_id
+  - action: utter_who_can_edit_medicine_data_medic_id
+
+# - story: Handle about who can edit medicine data Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Who can edit medication data?
+#     intent: who_can_edit_medicine_data_medic_en
+#   - action: utter_who_can_edit_medicine_data_medic_en
+
+- story: Handle about what happens when doctor edit medicine data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa yang terjadi jika dokter mengedit data obat?
+    intent: what_happens_when_doctor_edits_medicine_data_medic_id
+  - action: utter_what_happens_when_doctor_edits_medicine_data_medic_id
+
+# - story: Handle about what happens when doctor edit medicine data Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What happens if a doctor edits medication data?
+#     intent: what_happens_when_doctor_edits_medicine_data_medic_en
+#   - action: utter_what_happens_when_doctor_edits_medicine_data_medic_en
+
+- story: Handle about how doctor edits medicine data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara ubah data obat di sistem?
+    intent: how_doctor_edits_medicine_data_medic_id
+  - action: utter_how_doctor_edits_medicine_data_medic_id
+
+# - story: Handle about how doctor edits medicine data Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How to change drug data in the system?
+#     intent: how_doctor_edits_medicine_data_medic_en
+#   - action: utter_how_doctor_edits_medicine_data_medic_en
+
+- story: Handle about why medicine code cannot be edited Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Mengapa medicine code tidak dapat diedit?
+    intent: why_medicine_code_cannot_be_edited_medic_id
+  - action: utter_why_medicine_code_cannot_be_edited_medic_id
+
+# - story: Handle about why medicine code cannot be edited Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Why can't the medicine code be edited?
+#     intent: why_medicine_code_cannot_be_edited_medic_en
+#   - action: utter_why_medicine_code_cannot_be_edited_medic_en
+
+- story: Handle about medicine code order in system Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana urutan medicine code yang telah diatur oleh sistem?
+    intent: medicine_code_order_in_system_medic_id
+  - action: utter_medicine_code_order_in_system_medic_id
+
+# - story: Handle about medicine code order in system Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is the order of medicine codes arranged by the system?
+#     intent: medicine_code_order_in_system_medic_en
+#   - action: utter_medicine_code_order_in_system_medic_en
+
+- story: Handle about doctor changes medicine name Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah dokter dapat melakukan perubahan data medicine name dengan medicine name yang sudah ada?
+    intent: doctor_changes_medicine_name_medic_id
+  - action: utter_doctor_changes_medicine_name_medic_id
+
+# - story: Handle about doctor changes medicine name Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Can doctors change medicine name data with existing medicine names?
+#     intent: doctor_changes_medicine_name_medic_en
+#   - action: utter_doctor_changes_medicine_name_medic_en
+
+- story: Handle about can medicine registered be deleted Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah obat yang sudah terdaftar dapat dihapus?
+    intent: can_medicine_registered_be_deleted_medic_id
+  - action: utter_can_medicine_registered_be_deleted_medic_id
+
+# - story: Handle about can medicine registered be deleted Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Can registered drugs be removed?
+#     intent: can_medicine_registered_be_deleted_medic_en
+#   - action: utter_can_medicine_registered_be_deleted_medic_en
+
+- story: Handle about how to activate or deactivate medicine Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara mengaktifkan atau menonaktifkan obat di medicine standard?
+    intent: how_to_activate_or_deactivate_medicine_medic_id
+  - action: utter_how_to_activate_or_deactivate_medicine_medic_id
+
+# - story: Handle about how to activate or deactivate medicine Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How to activate or deactivate drugs in medicine standard?
+#     intent: how_to_activate_or_deactivate_medicine_medic_en
+#   - action: utter_how_to_activate_or_deactivate_medicine_medic_en
+
+- story: Handle about what happens when doctor toggles medicine Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa yang terjadi jika dokter mengaktifkan atau menonaktifkan medicine?
+    intent: what_happens_when_doctor_toggles_medicine_medic_id
+  - action: utter_what_happens_when_doctor_toggles_medicine_medic_id
+
+# - story: Handle about what happens when doctor toggles medicine Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What happens if a doctor turns medicine on or off?
+#     intent: what_happens_when_doctor_toggles_medicine_medic_en
+#   - action: utter_what_happens_when_doctor_toggles_medicine_medic_en
+
+- story: Handle about who has access to toggle medicine Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Siapa yang memiliki akses untuk mengaktifkan atau menonaktifkan Medicine?
+    intent: who_has_access_to_toggle_medicine_medic_id
+  - action: utter_who_has_access_to_toggle_medicine_medic_id
+
+# - story: Handle about who has access to toggle medicine Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Who has access to enable or disable Medicine?
+#     intent: who_has_access_to_toggle_medicine_medic_en
+#   - action: utter_who_has_access_to_toggle_medicine_medic_en
+
+- story: Handle about what happens when medicine is deactivate in records Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa yang terjadi jika obat tersebut dinonaktifkan tetapi digunakan pada data Medical Record FAR dan Medical Check Up?
+    intent: what_happens_when_medicine_is_deactivated_in_records_medic_id
+  - action: utter_what_happens_when_medicine_is_deactivated_in_records_medic_id
+
+# - story: Handle about what happens when medicine is deactivate in records Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What happens if the drug is deactivated but used in the FAR Medical Record and Medical Check Up data?
+#     intent: what_happens_when_medicine_is_deactivated_in_records_medic_en
+#   - action: utter_what_happens_when_medicine_is_deactivated_in_records_medic_en
+
+- story: Handle about is medicine standard connected to other menus Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah menu medicine standard terhubung dengan menu lain di sistem?
+    intent: is_medicine_standard_connected_to_other_menus_medic_id
+  - action: utter_is_medicine_standard_connected_to_other_menus_medic_id
+
+# - story: Handle about is medicine standard connected to other menus Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Is the standard medicine menu connected to other menus in the system?
+#     intent: is_medicine_standard_connected_to_other_menus_medic_en
+#   - action: utter_is_medicine_standard_connected_to_other_menus_medic_en
+
+- story: Handle about paramedics access medicine data in the future Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah paramedis akan memiliki akses untuk mengedit atau menghapus data obat?
+    intent: paramedics_access_medicine_data_in_the_future_medic_id
+  - action: utter_paramedics_access_medicine_data_in_the_future_medic_id
+
+# - story: Handle about paramedics access medicine data in the future Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Will paramedics have access to edit or delete medication data?
+#     intent: paramedics_access_medicine_data_in_the_future_medic_en
+#   - action: utter_paramedics_access_medicine_data_in_the_future_medic_en
+
+- story: Handle about medical record external menu Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa itu menu medical record external?
+    intent: medical_record_external_menu_medic_id
+  - action: utter_medical_record_external_menu_medic_id
+
+# - story: Handle about medical record external menu Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is the external medical record menu?
+#     intent: medical_record_external_menu_medic_en
+#   - action: utter_medical_record_external_menu_medic_en
+
+- story: Handle about who can access medical record external menu Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Siapa yang dapat mengakses menu Medical Record External?
+    intent: who_can_access_medical_record_external_menu_medic_id
+  - action: utter_who_can_access_medical_record_external_menu_medic_id
+
+# - story: Handle about who can access medical record external menu Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Who can access the External Medical Record menu?
+#     intent: who_can_access_medical_record_external_menu_medic_en
+#   - action: utter_who_can_access_medical_record_external_menu_medic_en
+
+- story: Handle about how to access medical record external menu Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara mengakses menu Medical Record External?
+    intent: how_to_access_medical_record_external_menu_medic_id
+  - action: utter_how_to_access_medical_record_external_menu_medic_id
+
+# - story: Handle about how to access medical record external menu Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How do I access the External Medical Record menu?
+#     intent: how_to_access_medical_record_external_menu_medic_en
+#   - action: utter_how_to_access_medical_record_external_menu_medic_en
+
+- story: Handle about what is displayed in active tab of medical record external Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa yang ditampilkan dalam tab Active pada menu Medical Record External?
+    intent: what_is_displayed_in_active_tab_of_medical_record_external_medic_id
+  - action: utter_what_is_displayed_in_active_tab_of_medical_record_external_medic_id
+
+# - story: Handle about what is displayed in active tab of medical record external Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is displayed in the Active tab on the Medical Record External menu?
+#     intent: what_is_displayed_in_active_tab_of_medical_record_external_medic_en
+#   - action: utter_what_is_displayed_in_active_tab_of_medical_record_external_medic_en
+
+- story: Handle about what is displayed in history tab of medical record external Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa yang dapat dilihat di tab history pada menu Medical Record External?
+    intent: what_is_displayed_in_history_tab_of_medical_record_external_medic_id
+  - action: utter_what_is_displayed_in_history_tab_of_medical_record_external_medic_id
+
+# - story: Handle about what is displayed in history tab of medical record external Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What can be seen in the history tab on the Medical Record External menu?
+#     intent: what_is_displayed_in_history_tab_of_medical_record_external_medic_en
+#   - action: utter_what_is_displayed_in_history_tab_of_medical_record_external_medic_en
+
+- story: Handle about how to search data in medical record external menu Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara melakukan pencarian data dalam menu Medical Record External?
+    intent: how_to_search_data_in_medical_record_external_menu_medic_id
+  - action: utter_how_to_search_data_in_medical_record_external_menu_medic_id
+
+# - story: Handle about how to search data in medical record external menu Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How to search for data in the External Medical Record menu?
+#     intent: how_to_search_data_in_medical_record_external_menu_medic_en
+#   - action: utter_how_to_search_data_in_medical_record_external_menu_medic_en
+
+- story: Handle about how to view medical record external submission detail Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara melihat detail Pengajuan Medical Record External?
+    intent: how_to_view_medical_record_external_submission_detail_medic_id
+  - action: utter_how_to_view_medical_record_external_submission_detail_medic_id
+
+# - story: Handle about how to view medical record external submission detail Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How to view External Medical Record Submission details?
+#     intent: how_to_view_medical_record_external_submission_detail_medic_en
+#   - action: utter_how_to_view_medical_record_external_submission_detail_medic_en
+
+- story: Handle about what documents are needed for medical record external submission Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Dokumen apa saja yang perlu diunggah dalam pengajuan Medical Record External?
+    intent: what_documents_are_needed_for_medical_record_external_submission_medic_id
+  - action: utter_what_documents_are_needed_for_medical_record_external_submission_medic_id
+
+# - story: Handle about what documents are needed for medical record external submission Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What documents need to be uploaded when submitting an External Medical Record?
+#     intent: what_documents_are_needed_for_medical_record_external_submission_medic_en
+#   - action: utter_what_documents_are_needed_for_medical_record_external_submission_medic_en
+
+- story: Handle about how to filter based on cut off period Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa yang terjadi pada data medical record external setelah melewati batas cut-off?
+    intent: how_to_filter_based_on_cut_off_period_medic_id
+  - action: utter_how_to_filter_based_on_cut_off_period_medic_id
+
+# - story: Handle about how to filter based on cut off period Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What happens to external medical record data after it passes the cut-off limit?
+#     intent: how_to_filter_based_on_cut_off_period_medic_en
+#   - action: utter_how_to_filter_based_on_cut_off_period_medic_en
+
+- story: Handle about statuses are involved in medical claim approval process Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja status dalam proses persetujuan medical klaim?
+    intent: statuses_are_involved_in_medical_claim_approval_process_medic_id
+  - action: utter_statuses_are_involved_in_medical_claim_approval_process_medic_id
+
+# - story: Handle about statuses are involved in medical claim approval process Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What are the statuses in the medical claim approval process?
+#     intent: statuses_are_involved_in_medical_claim_approval_process_medic_en
+#   - action: utter_statuses_are_involved_in_medical_claim_approval_process_medic_en
+
+- story: Handle about how do doctor or paramedic approve medical claim Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara dokter/paramedis memberikan approval pengajuan medical klaim?
+    intent: how_do_doctor_or_paramedic_approve_medical_claim_medic_id
+  - action: utter_how_do_doctor_or_paramedic_approve_medical_claim_medic_id
+
+# - story: Handle about how do doctor or paramedic approve medical claim Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How do doctors/paramedics approve medical claim submissions?
+#     intent: how_do_doctor_or_paramedic_approve_medical_claim_medic_en
+#   - action: utter_how_do_doctor_or_paramedic_approve_medical_claim_medic_en
+
+- story: Handle about how do doctor or paramedic reject medical claim Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Gimana cara dokter/paramedis memberikan rejected pada pengajuan medical klaim?
+    intent: how_do_doctor_or_paramedic_reject_medical_claim_medic_id
+  - action: utter_how_do_doctor_or_paramedic_reject_medical_claim_medic_id
+
+# - story: Handle about how do doctor or paramedic reject medical claim Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How do doctors/paramedics reject a medical claim application?
+#     intent: how_do_doctor_or_paramedic_reject_medical_claim_medic_en
+#   - action: utter_how_do_doctor_or_paramedic_reject_medical_claim_medic_en
+
+- story: Handle about how do doctor or paramedic revision medical claim Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Gimana cara dokter/paramedis memberikan revision pada pengajuan medical klaim?
+    intent: how_do_doctor_or_paramedic_revision_medical_claim_medic_id
+  - action: utter_how_do_doctor_or_paramedic_revision_medical_claim_medic_id
+
+# - story: Handle about how do doctor or paramedic revision medical claim Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How do doctors/paramedics provide revisions to medical claim submissions?
+#     intent: how_do_doctor_or_paramedic_revision_medical_claim_medic_en
+#   - action: utter_how_do_doctor_or_paramedic_revision_medical_claim_medic_en
+
+- story: Handle about why shift loss and diagnosis are marked with minus in history tab Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Mengapa kolom Shift Loss dan Diagnosis ditandai dengan (-) pada tab History di menu medical record external?
+    intent: why_shift_loss_and_diagnosis_are_marked_with_minus_in_history_tab_medic_id
+  - action: utter_why_shift_loss_and_diagnosis_are_marked_with_minus_in_history_tab_medic_id
+
+# - story: Handle about why shift loss and diagnosis are marked with minus in history tab Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Why are the Shift Loss and Diagnosis columns marked with (-) on the History tab in the external medical record menu?
+#     intent: why_shift_loss_and_diagnosis_are_marked_with_minus_in_history_tab_medic_en
+#   - action: utter_why_shift_loss_and_diagnosis_are_marked_with_minus_in_history_tab_medic_en
+
+- story: Handle about can claim data be edited after approval/rejection Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah bisa mengedit data klaim yang sudah disetujui atau ditolak?
+    intent: can_claim_data_be_edited_after_approval_or_rejection_tab_medic_id
+  - action: utter_can_claim_data_be_edited_after_approval_or_rejection_tab_medic_id
+
+# - story: Handle about can claim data be edited after approval/rejection Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Can I edit claim data that has been approved or rejected?
+#     intent: can_claim_data_be_edited_after_approval_or_rejection_tab_medic_en
+#   - action: utter_can_claim_data_be_edited_after_approval_or_rejection_tab_medic_en
+
+- story: Handle about relationship between medical record external in medic and medical claim in ess Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa hubungan antara Medical Record External di Medic Apps dengan medical klaim di ESS Apps?
+    intent: relationship_between_medical_record_external_in_medic_and_medical_claim_in_ess_medic_id
+  - action: utter_relationship_between_medical_record_external_in_medic_and_medical_claim_in_ess_medic_id
+
+# - story: Handle about relationship between medical record external in medic and medical claim in ess Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is the relationship between External Medical Records in Medic Apps and medical claims in ESS Apps?
+#     intent: relationship_between_medical_record_external_in_medic_and_medical_claim_in_ess_medic_en
+#   - action: utter_relationship_between_medical_record_external_in_medic_and_medical_claim_in_ess_medic_en
+
+- story: Handle about meaning of numbers in active tab Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa arti angka yang muncul di tab Active pada menu medical record external?
+    intent: meaning_of_numbers_in_active_tab_medic_id
+  - action: utter_meaning_of_numbers_in_active_tab_medic_id
+
+# - story: Handle about meaning of numbers in active tab Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What do the numbers that appear on the Active tab in the external medical record menu mean?
+#     intent: meaning_of_numbers_in_active_tab_medic_en
+#   - action: utter_meaning_of_numbers_in_active_tab_medic_en
+
+- story: Handle about what happens after claim is approved in medic apps Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa yang terjadi setelah medical klaim disetujui di Medic Apps?
+    intent: what_happens_after_claim_is_approved_in_medic_apps_medic_id
+  - action: utter_what_happens_after_claim_is_approved_in_medic_apps_medic_id
+
+# - story: Handle about what happens after claim is approved in medic apps Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What happens after a medical claim is approved in Medic Apps?
+#     intent: what_happens_after_claim_is_approved_in_medic_apps_medic_en
+#   - action: utter_what_happens_after_claim_is_approved_in_medic_apps_medic_en
+
+- story: Handle about what is appoval activity feature Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa itu fitur Approval Activity?
+    intent: what_is_approval_activity_feature_medic_id
+  - action: utter_what_is_approval_activity_feature_medic_id
+
+# - story: Handle about what is appoval activity feature Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is the Approval Activity feature?
+#     intent: what_is_approval_activity_feature_medic_en
+#   - action: utter_what_is_approval_activity_feature_medic_en
+
+- story: Handle about see attachments uploaded by employee Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Gimana cara liat attachment kwitansi yang sudah diunggah?
+    intent: see_attachments_uploaded_by_employee_medic_id
+  - action: utter_see_attachments_uploaded_by_employee_medic_id
+
+# - story: Handle about see attachments uploaded by employee Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How do I view the receipt attachment that has been uploaded?
+#     intent: see_attachments_uploaded_by_employee_medic_en
+#   - action: utter_see_attachments_uploaded_by_employee_medic_en
+
+- story: Handle about notif sent in medical record external Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa penyebab notifikasi dikirimkan dalam sistem Medical Record External?
+    intent: notifications_sent_in_medical_record_external_medic_id
+  - action: utter_notifications_sent_in_medical_record_external_medic_id
+
+# - story: Handle about notif sent in medical record external Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What causes notifications to be sent in the External Medical Record system?
+#     intent: notifications_sent_in_medical_record_external_medic_en
+#   - action: utter_notifications_sent_in_medical_record_external_medic_en
+
+- story: Handle about what is MCU menu - choose website Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa itu menu Medical Checkup?
+    intent: what_is_medical_checkup_menu_medic_id
+  - action: utter_ask_platform_choice_medic_id
+  - intent: choose_website_platform_medic_id
+  - action: utter_what_is_medical_checkup_menu_web_medic_id
+
+# - story: Handle about what is MCU menu - choose website Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is the Medical Checkup menu?
+#     intent: what_is_medical_checkup_menu_medic_en
+#   - action: utter_ask_platform_choice_medic_en
+#   - intent: choose_website_platform_medic_en
+#   - action: utter_what_is_medical_checkup_menu_web_medic_en
+
+- story: Handle about who can access MCU menu - choose website Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Siapa yang dapat mengakses menu Medical Checkup?
+    intent: who_can_access_medical_checkup_menu_medic_id
+  - action: utter_ask_platform_choice_medic_id
+  - intent: choose_website_platform_medic_id
+  - action: utter_who_can_access_medical_checkup_menu_web_medic_id
+
+# - story: Handle about who can access MCU menu - choose website Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Who can access the Medical Checkup menu?
+#     intent: who_can_access_medical_checkup_menu_medic_en
+#   - action: utter_ask_platform_choice_medic_en
+#   - intent: choose_website_platform_medic_en
+#   - action: utter_who_can_access_medical_checkup_menu_web_medic_en
+
+- story: Handle about what is type mcu column in MCU Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa itu kolom type MCU dalam tabel Medical Checkup?
+    intent: what_is_type_mcu_column_in_medical_checkup_medic_id
+  - action: utter_what_is_type_mcu_column_in_medical_checkup_medic_id
+
+# - story: Handle about what is type mcu column in MCU Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is the MCU type column in the Medical Checkup table?
+#     intent: what_is_type_mcu_column_in_medical_checkup_medic_en
+#   - action: utter_what_is_type_mcu_column_in_medical_checkup_medic_en
+
+- story: Handle about what is last mcu date column in MCU Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa itu kolom last MCU date dalam tabel Medical Checkup?
+    intent: what_is_last_mcu_date_column_in_medical_checkup_medic_id
+  - action: utter_what_is_last_mcu_date_column_in_medical_checkup_medic_id
+
+# - story: Handle about what is last mcu date column in MCU Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is the last MCU date column in the Medical Checkup table?
+#     intent: what_is_last_mcu_date_column_in_medical_checkup_medic_en
+#   - action: utter_what_is_last_mcu_date_column_in_medical_checkup_medic_en
+
+- story: Handle about what is expired mcu column in MCU Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa itu kolom expired MCU dalam tabel Medical Checkup?
+    intent: what_is_expired_mcu_column_in_medical_checkup_medic_id
+  - action: utter_what_is_expired_mcu_column_in_medical_checkup_medic_id
+
+# - story: Handle about what is expired mcu column in MCU Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is the expired MCU column in the Medical Checkup table?
+#     intent: what_is_expired_mcu_column_in_medical_checkup_medic_en
+#   - action: utter_what_is_expired_mcu_column_in_medical_checkup_medic_en
+
+- story: Handle about what is health status column in MCU Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa itu kolom status kesehatan dalam tabel Medical Checkup?
+    intent: what_is_health_status_column_in_medical_checkup_medic_id
+  - action: utter_what_is_health_status_column_in_medical_checkup_medic_id
+
+# - story: Handle about what is health status column in MCU Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is the health status column in the Medical Checkup table?
+#     intent: what_is_health_status_column_in_medical_checkup_medic_en
+#   - action: utter_what_is_health_status_column_in_medical_checkup_medic_en
+
+- story: Handle about what is health status in MCU result Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa arti dari status kesehatan pada Hasil medical checkup?
+    intent: what_is_health_status_in_mcu_result_medic_id
+  - action: utter_what_is_health_status_in_mcu_result_medic_id
+
+# - story: Handle about what is health status in MCU result Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What does the health status mean in the medical checkup results?
+#     intent: what_is_health_status_in_mcu_result_medic_en
+#   - action: utter_what_is_health_status_in_mcu_result_medic_en
+
+- story: Handle about what are filter in MCU menu - choose website Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja filter yang tersedia di menu Medical Check Up?
+    intent: what_are_filters_in_medical_checkup_menu_medic_id
+  - action: utter_ask_platform_choice_medic_id
+  - intent: choose_website_platform_medic_id
+  - action: utter_what_are_filters_in_medical_checkup_menu_web_medic_id
+
+# - story: Handle about what are filter in MCU menu - choose website Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What filters are available in the Medical Check Up menu?
+#     intent: what_are_filters_in_medical_checkup_menu_medic_en
+#   - action: utter_ask_platform_choice_medic_en
+#   - intent: choose_website_platform_medic_en
+#   - action: utter_what_are_filters_in_medical_checkup_menu_web_medic_en
+
+- story: Handle about what is selected column feature menu Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa itu fitur selected column?
+    intent: what_is_selected_column_feature_menu_medic_id
+  - action: utter_what_is_selected_column_feature_menu_medic_id
+
+# - story: Handle about what is selected column feature menu Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       What is the selected column feature?
+#     intent: what_is_selected_column_feature_menu_medic_en
+#   - action: utter_what_is_selected_column_feature_menu_medic_en
+
+- story: Handle about is selected column change permanent Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Perubahan pada Selected Column apakah tetap ada setelah halaman dimuat ulang?
+    intent: is_selected_column_change_permanent_medic_id
+  - action: utter_is_selected_column_change_permanent_medic_id
+
+# - story: Handle about is selected column change permanent Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Do changes to Selected Column persist after the page is reloaded?
+#     intent: is_selected_column_change_permanent_medic_en
+#   - action: utter_is_selected_column_change_permanent_medic_en
+
+- story: Handle about does each user have different selected column preferences Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah setiap pengguna memiliki preferensi Selected Column yang berbeda?
+    intent: does_each_user_have_different_selected_column_preferences_medic_id
+  - action: utter_does_each_user_have_different_selected_column_preferences_medic_id
+
+# - story: Handle about does each user have different selected column preferences Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       Does each user have different Selected Column preferences?
+#     intent: does_each_user_have_different_selected_column_preferences_medic_en
+#   - action: utter_does_each_user_have_different_selected_column_preferences_medic_en
+
+- story: Handle about how to add MCU data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Gimana cara add data Medical Checkup?
+    intent: how_to_add_medical_checkup_data_medic_id
+  - action: utter_how_to_add_medical_checkup_data_medic_id
+
+# - story: Handle about how to add MCU data Medic
+#   steps:
+#   - slot_was_set:
+#     - language: english
+#   - user: |
+#       How to add Medical Checkup data?
+#     intent: how_to_add_medical_checkup_data_medic_en
+#   - action: utter_how_to_add_medical_checkup_data_medic_en
