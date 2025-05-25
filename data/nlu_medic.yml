@@ -563,6 +563,29 @@ nlu:
     - Langkah apa yang perlu diambil paramedis untuk menambah obat di aplikasi medicine standard
     - Jika paramedis ingin menambahkan obat baru di medicine standard, apa yang harus dilakukan?
 
+- intent: how_to_add_medicine_data_medic_id
+  examples: |
+    - Bagaimana cara add data obat baru di menu medicine standard?
+    - Tolong jelaskan cara menambahkan obat baru di medicine standard.
+    - Saya ingin tahu langkah tambah obat baru di menu medicine standard
+    - Gimana cara input obat baru di sistem?
+    - Bisa jelaskan prosedur add obat baru di medicine standard?
+    - Apa langkah-langkah untuk menambahkan obat baru di medicine standard?
+    - Cara add data obat baru di medicine standard untuk dokter gimana?
+    - Saya mau tambah obat baru di menu medicine standard, caranya apa?
+    - Bagaimana proses penambahan obat baru di medicine standard?
+    - Tolong informasikan cara tambah data obat baru di medicine standard.
+    - Bisa jelaskan tutorial add medicine baru di menu medicine standard?
+    - Gimana cara input medicine baru di menu medicine standard?
+    - Saya mau tanya, bagaimana cara menambah obat baru di medicine standard?
+    - Apa saja syarat dan cara menambahkan obat baru di medicine standard?
+    - Bagaimana cara buat data obat baru di menu medicine standard?
+    - Tolong bantu saya bagaimana menambah obat baru di medicine standard?
+    - Langkah apa saja untuk input data obat baru di medicine standard?
+    - Bagaimana caranya menambah obat baru di medicine standard?
+    - Bagaimana cara menginput obat baru?
+    - Bisa jelaskan cara tambah obat baru di menu medicine standard?
+
 - intent: info_for_doctor_add_new_medicine_data_medic_id
   examples: |
     - Apa saja informasi yang perlu dimasukkan oleh dokter saat menambahkan obat baru?
@@ -1577,6 +1600,8 @@ nlu:
     - Apakah ada pembatasan akses pada menu Medical Checkup?
     - Apakah hanya pengguna tertentu yang dapat mengakses menu Medical Checkup?
     - Bagaimana cara akses menu Medical Check Up?
+    - Bagaimana cara membuka menu Medical Checkup?
+    - Di mana saya bisa menemukan menu Medical Checkup?
     - Apa langkah-langkah untuk membuka menu Medical Checkup?
     - Bagaimana cara masuk ke menu Medical Checkup di aplikasi?
     - Apa yang perlu dilakukan untuk melihat menu Medical Checkup?
@@ -1587,6 +1612,8 @@ nlu:
     - Di bagian mana saya bisa menemukan menu Medical Checkup di aplikasi?
     - Bagaimana saya bisa membuka menu Medical Checkup?
     - Dimana menu Medical Checkup dapat diakses dalam aplikasi?
+    - Menu Medical Checkup itu ada di mana?
+    - Bagaimana cara menuju ke menu Medical Checkup di aplikasi Medic?
 
 - intent: what_is_type_mcu_column_in_medical_checkup_medic_id
   examples: |
@@ -1696,29 +1723,6 @@ nlu:
     - Apa artinya jika status kesehatan di Hasil MCU adalah Temporary Unfit?
     - Bagaimana cara mengetahui status kesehatan karyawan berdasarkan Hasil MCU?
 
-##ini tanya widya apakah perlu dimasukkin apa engga?
-# - intent: how_to_search_medical_checkup_data_medic_id
-#   examples: |
-#     - Gimana cara ingin cari data medical check up secara spesifik?
-#     - Apa langkah-langkah untuk mencari data medical check up berdasarkan nama atau NIK?
-#     - Bagaimana cara mencari data medical check up dengan menggunakan NIK atau Nama?
-#     - Apa yang harus dilakukan untuk mencari data medical check up secara detail?
-#     - Bagaimana cara mencari data pemeriksaan kesehatan berdasarkan NIK?
-#     - Apa cara mencari data medical check up berdasarkan nama karyawan?
-#     - Bagaimana cara menggunakan search field untuk mencari data medical check up?
-#     - Bagaimana cara mencari data medical check up di aplikasi?
-#     - Bagaimana cara melakukan pencarian data medical check up secara spesifik?
-#     - Apa yang perlu dilakukan untuk menemukan data medical check up dengan cepat?
-#     - Apakah saya bisa mencari data medical check up berdasarkan NIK?
-#     - Cara mencari data medical check up menggunakan Nama atau NIK?
-#     - Bagaimana mencari data medical check up untuk karyawan tertentu?
-#     - Bisakah saya mencari data medical check up berdasarkan Nama atau NIK?
-#     - Apa fungsi search field dalam mencari data medical check up?
-#     - Bagaimana cara menggunakan search field untuk pencarian data medical check up?
-#     - Apa yang perlu dimasukkan di search field untuk mencari data medical check up?
-#     - Bagaimana cara cepat mencari data medical check up berdasarkan NIK atau nama?
-#     - Apa yang harus dicari di search field untuk menemukan data medical check up?
-
 - intent: what_are_filters_in_medical_checkup_menu_medic_id
   examples: |
     - Apa saja filter yang tersedia di menu Medical Check Up?
@@ -1746,6 +1750,7 @@ nlu:
     - Bagaimana cara memfilter hasil medical check up berdasarkan tahun pelaksanaan MCU?
     - Filter apa yang tersedia untuk paramedis di menu Medical Check Up?
     - Bagaimana cara dokter menggunakan filter untuk mencari data berdasarkan status kesehatan di menu Medical Check Up?
+    - Cara menggunakan fitur filter pada Medical Checkup?
 
 - intent: what_is_selected_column_feature_menu_medic_id
   examples: |
@@ -1844,3 +1849,2075 @@ nlu:
     - Apa yang dilakukan dokter ketika menambahkan data Medical Checkup baru?
     - Bagaimana cara input data hasil Medical Checkup baru untuk pasien di aplikasi?
     - Apa saja yang perlu diisi dalam form untuk menambahkan data Medical Checkup?
+
+- intent: how_to_view_medical_checkup_detail_results_medic_id
+  examples: |
+    - Bagaimana cara melihat detail hasil Medical Check Up?
+    - Gimana cara lihat detail hasil Medical Check Up?
+    - Saya ingin tahu cara melihat hasil Medical Check Up secara lengkap.
+    - Tolong jelaskan bagaimana cara melihat detail Medical Check Up.
+    - Apa langkah-langkah untuk melihat detail hasil Medical Check Up?
+    - Bagaimana cara membuka halaman detail hasil Medical Check Up?
+    - Bisa kasih tahu cara melihat laporan lengkap Medical Check Up?
+    - Gimana cara akses data detail hasil Medical Check Up?
+    - Saya ingin melihat hasil Medical Check Up, bagaimana caranya?
+    - Apa yang harus dilakukan untuk melihat detail hasil Medical Check Up?
+    - Bagaimana cara memeriksa hasil Medical Check Up secara detail?
+    - Gimana cara saya bisa lihat detail hasil Medical Check Up?
+    - Bagaimana melihat detail data hasil Medical Check Up?
+    - Saya mau lihat detail hasil Medical Check Up, caranya gimana?
+    - Tolong bantu saya untuk melihat detail hasil Medical Check Up
+    - Gimana cara dokter atau paramedis melihat hasil Medical Checkup secara lengkap?
+    - Apa langkah untuk melihat rincian hasil Medical Check Up di website?
+    - Bagaimana saya dapat membuka halaman detail hasil MCU di aplikasi?
+    - Bagaimana cara memeriksa status kesehatan hasil Medical Checkup?
+    - Bagaimana melihat data lengkap hasil MCU yang sudah tersimpan?
+    - Bagaimana dokter/paramedis mengakses informasi detail MCU pada aplikasi?
+    - Apa langkah-langkah untuk membuka detail hasil Medical Checkup di website?
+    - Bagaimana cara memeriksa hasil Medical Checkup terbaru pada sistem?
+    - Mau lihat data Medical Checkup, caranya bagaimana?
+    - Bisa bantu jelaskan cara lihat hasil Medical Checkup?
+    - Mau tahu gimana cara lihat hasil pemeriksaan MCU?
+    - Saya ingin lihat riwayat pemeriksaan Medical Checkup.
+    - Bagaimana saya bisa lihat detail hasil MCU saya?
+    - Gimana cara saya akses laporan hasil Medical Checkup?
+    - Gimana cara buka detail hasil pemeriksaan MCU di website?
+    - Saya ingin lihat data kesehatan terakhir dari MCU, gimana caranya?
+
+- intent: how_to_search_medical_checkup_data_medic_id
+  examples: |
+    - Bagaimana cara mencari data MCU pada halaman Detail Medical Checkup?
+    - Cara cari data medical checkup gimana, pakai pencarian apa?
+    - Apa langkah-langkah untuk mencari data MCU di halaman Detail Medical Checkup?
+    - Bagaimana cara melakukan pencarian data MCU pada halaman Detail Medical Checkup?
+    - Apa cara mencari data MCU berdasarkan tahun di halaman Detail Medical Checkup?
+    - Bisakah saya mencari data MCU di halaman Detail Medical Checkup menggunakan keyword?
+    - Apa format pencarian untuk data MCU di halaman Detail Medical Checkup?
+    - Apa yang harus dilakukan untuk mencari data MCU di halaman Detail Medical Checkup?
+    - Bagaimana cara mencari data berdasarkan filter MCU di halaman Detail Medical Checkup?
+    - Dapatkah saya mencari data MCU berdasarkan tahun dan keyword pada halaman Detail Medical Checkup?
+    - Apa cara mencari data berdasarkan kata kunci di halaman Detail Medical Checkup?
+    - Apa yang harus saya lakukan untuk mencari data MCU berdasarkan keyword di halaman Detail Medical Checkup?
+    - Bagaimana mencari data MCU berdasarkan tahun dan kata kunci di halaman Detail Medical Checkup?
+    - Apa format pencarian untuk data MCU di halaman Detail Medical Checkup menggunakan kata kunci?
+    - Bagaimana cara menggunakan filter tahun dan kode MCU pada halaman Detail Medical Checkup?
+    - Dapatkah saya mencari data berdasarkan kode MCU dan tahun di halaman Detail Medical Checkup?
+    - Bagaimana cara menampilkan hasil pencarian MCU di halaman Detail Medical Checkup?
+    - Bagaimana cara mencari data MCU berdasarkan tahun dan keyword?
+    - Apa yang akan ditampilkan setelah saya mencari data MCU di halaman Detail Medical Checkup?
+    - Apa yang dimaksud dengan format kode MCU di halaman Detail Medical Checkup?
+
+- intent: how_mcu_code_generated_medic_id
+  examples: |
+    - Bagaimana sistem menghasilkan Code MCU?
+    - Gimana cara sistem membuat Code MCU secara otomatis?
+    - Bagaimana format Code MCU yang dihasilkan oleh sistem?
+    - Jelaskan bagaimana Code MCU di-generate dalam sistem
+    - Bagaimana urutan pembuatan Code MCU oleh sistem?
+    - Apa aturan dalam pembentukan Code MCU pada sistem?
+    - Bagaimana cara kerja sistem dalam menentukan Code MCU?
+    - Bagaimana sistem memberikan nomor seri pada Code MCU?
+    - Bagaimana sistem menentukan format Code MCU?
+    - Apa saja komponen dalam Code MCU yang dibuat sistem?
+    - Bagaimana sistem mengaitkan Code MCU dengan Project Site?
+    - Bagaimana sequence number diatur dalam pembuatan Code MCU?
+    - Bagaimana kode MCU direset setiap tahunnya?
+    - Bagaimana sistem menghasilkan kode unik untuk MCU?
+    - Bagaimana proses pembuatan Code MCU otomatis di aplikasi?
+    - Bagaimana cara kerja pembuatan Code MCU berdasarkan project site?
+    - Bagaimana nomor urut Code MCU dibuat oleh sistem?
+    - Bagaimana kode MCU berbeda untuk tiap project site?
+    - Bagaimana sistem menghasilkan kode MCU yang benar?
+    - Bagaimana format dan aturan pembuatan Code MCU?
+
+- intent: can_doctor_add_new_exam_parameter_medic_id
+  examples: |
+    - Apakah dokter dapat menambahkan parameter pemeriksaan baru pada hasil Pemeriksaan Fisik?
+    - Bisa dokter menambah parameter baru untuk Pemeriksaan Laboratorium?
+    - Apakah dokter bisa menambah parameter pemeriksaan yang belum ada di sistem?
+    - Bagaimana cara dokter menambahkan parameter baru pada hasil MCU?
+    - Apakah memungkinkan dokter menambah parameter pemeriksaan fisik baru?
+    - Dokter bolehkah menambahkan parameter pemeriksaan baru di Medical Checkup?
+    - Apakah dokter dapat menambah parameter baru untuk pemeriksaan laboratorium?
+    - Bagaimana dokter bisa menambah parameter pemeriksaan yang belum tersedia?
+    - Bisakah dokter menambahkan item pemeriksaan baru di MCU?
+    - Apakah dokter punya akses untuk menambah parameter pemeriksaan baru?
+    - Bagaimana dokter menambahkan parameter baru pada pemeriksaan fisik dan lab?
+    - Apakah dokter bisa memasukkan parameter pemeriksaan baru di Medical Checkup?
+    - Bagaimana cara menambah parameter baru di bagian pemeriksaan fisik dan laboratorium?
+    - Apakah dokter dapat menginput parameter pemeriksaan baru saat menambahkan data MCU?
+    - Bisa jelaskan bagaimana dokter menambahkan parameter baru pada pemeriksaan MCU?
+    - Apakah dokter memiliki kemampuan untuk menambahkan parameter pemeriksaan baru pada hasil Pemeriksaan Fisik dan Laboratorium?
+    - Apakah ada batasan jumlah parameter baru yang dapat ditambahkan oleh dokter?
+    - Bagaimana cara dokter menambahkan parameter pemeriksaan baru yang belum ada di hasil Pemeriksaan Fisik dan Laboratorium?
+    - Bagaimana sistem mencegah duplikasi parameter pemeriksaan saat dokter menambahkannya?
+    - Apakah parameter default sistem bisa dihapus oleh dokter?
+    - Apa yang terjadi jika dokter mencoba menambahkan parameter yang sudah ada?
+
+- intent: how_to_view_mcu_results_by_year_medic_id
+  examples: |
+    - Bagaimana cara melihat hasil Medical Check Up berdasarkan tahun pelaksanaan?
+    - Gimana cara melihat hasil MCU per tahun?
+    - Bagaimana cara menampilkan hasil Medical Checkup menurut tahun?
+    - Saya ingin tahu cara melihat data MCU berdasarkan tahun pelaksanaan
+    - Tolong jelaskan bagaimana cara melihat hasil MCU per tahun di sistem
+    - Apa langkah untuk melihat hasil Medical Check Up berdasarkan tahun?
+    - Bagaimana saya bisa melihat hasil MCU yang diurutkan per tahun?
+    - Bagaimana prosedur melihat hasil Medical Check Up per tahun pelaksanaan?
+    - Bisa jelaskan cara melihat hasil MCU berdasarkan tahun pelaksanaan?
+    - Gimana cara menampilkan detail hasil Medical Check Up per tahun?
+    - Saya ingin melihat hasil Medical Check Up tahun tertentu, bagaimana caranya?
+    - Bagaimana menampilkan data MCU yang diinput berdasarkan tahun pelaksanaan?
+    - Apa cara melihat hasil Medical Check Up per tahun di aplikasi?
+    - Gimana cara akses hasil MCU berdasarkan tahun pelaksanaan?
+    - Tolong tunjukkan cara melihat hasil Medical Check Up per tahun
+    - Bagaimana sistem menampilkan hasil MCU berdasarkan tahun?
+    - Saya mau lihat hasil MCU per tahun, bagaimana caranya?
+    - Apa saja langkah untuk melihat hasil Medical Check Up berdasar tahun pelaksanaan?
+    - Bagaimana melihat tab Result Medical Checkup berdasarkan tahun?
+    - Bagaimana cara dokter atau paramedis melihat hasil MCU per tahun?
+
+- intent: what_is_shown_in_mcu_result_tab_medic_id
+  examples: |
+    - Apa yang ditampilkan saat dokter membuka tab Result Medical Check Up?
+    - Apa isi dari tab Result Medical Check Up untuk dokter dan paramedis?
+    - Bisa jelaskan apa yang terlihat di tab Result Medical Check Up?
+    - Apa saja informasi yang muncul ketika membuka tab Result Medical Check Up?
+    - Ketika membuka tab Result Medical Check Up, apa yang dokter/paramedis lihat?
+    - Apa yang diperlihatkan sistem di tab Result Medical Check Up?
+    - Detail apa saja yang ditampilkan di tab Result Medical Check Up?
+    - Bagaimana tampilan tab Result Medical Check Up untuk dokter atau paramedis?
+    - Apa isi lengkap tab Result Medical Check Up?
+    - Apa saja yang bisa dilihat di tab Result Medical Check Up?
+    - Apa informasi yang ditampilkan di tab Result Medical Check Up?
+    - Apa fitur yang ada di tab Result Medical Check Up?
+    - Apa saja bagian yang ada dalam tab Result Medical Check Up?
+    - Ketika membuka tab Result Medical Check Up, data apa yang muncul?
+    - Apa yang terlihat di tab Result Medical Check Up setelah membuka data?
+    - Bisa jelaskan detail hasil pemeriksaan di tab Result Medical Check Up?
+    - Apa informasi kesehatan yang tampil di tab Result Medical Check Up?
+    - Apa yang muncul dalam tab Result Medical Check Up untuk dokter dan paramedis?
+    - Apa saja informasi yang tampil di tab Result Medical Check Up MCU?
+    - Bagaimana cara sistem menampilkan data di tab Result Medical Check Up?
+
+- intent: how_system_displays_responsible_medic_info_medic_id
+  examples: |
+    - Bagaimana sistem menampilkan informasi dokter atau paramedis yang bertanggung jawab?
+    - Siapa yang muncul sebagai penanggung jawab dalam hasil MCU di sistem?
+    - Bagaimana cara sistem menunjukkan dokter atau paramedis yang bertanggung jawab atas hasil MCU?
+    - Informasi apa yang ditampilkan tentang dokter atau paramedis yang menambahkan hasil MCU?
+    - Bagaimana sistem memperbarui data dokter atau paramedis yang bertanggung jawab jika ada perubahan?
+    - Apa saja detail yang muncul terkait dokter atau paramedis yang bertanggung jawab pada hasil MCU?
+    - Bagaimana sistem mengetahui dokter atau paramedis yang terakhir mengedit hasil MCU?
+    - Bagaimana data dokter atau paramedis yang bertanggung jawab ditampilkan dalam sistem?
+    - Siapa yang tercatat sebagai penanggung jawab hasil MCU di sistem?
+    - Bagaimana cara sistem update informasi dokter/paramedis yang bertanggung jawab saat ada edit?
+    - Bagaimana sistem menampilkan nama dan jabatan dokter atau paramedis yang bertanggung jawab?
+    - Apa saja data yang ditampilkan untuk dokter/paramedis yang bertanggung jawab atas hasil MCU?
+    - Bagaimana sistem mencatat dokter atau paramedis yang menambahkan hasil MCU?
+    - Bagaimana informasi penanggung jawab MCU diperlihatkan di aplikasi?
+    - Bagaimana sistem menampilkan data NIK dan departemen dokter/paramedis yang bertanggung jawab?
+    - Bagaimana proses update informasi dokter/paramedis yang bertanggung jawab jika ada perubahan data MCU?
+    - Bagaimana cara sistem menunjukan siapa yang bertanggung jawab atas hasil MCU?
+    - Bagaimana sistem mengelola informasi dokter atau paramedis yang bertanggung jawab?
+    - Bagaimana sistem menampilkan posisi dan jabatan dokter/paramedis yang bertanggung jawab?
+    - Bagaimana sistem mengidentifikasi pengguna terakhir yang mengedit data MCU?
+
+- intent: how_to_edit_medical_checkup_data_medic_id
+  examples: |
+    - Bagaimana cara mengedit data Medical Check Up?
+    - Saya ingin tahu langkah-langkah mengedit data Medical Check Up
+    - Apa saja langkah untuk mengubah data Medical Check Up?
+    - Bisa jelaskan bagaimana cara update data Medical Check Up?
+    - Bagaimana proses edit data Medical Check Up di sistem?
+    - Cara apa yang digunakan untuk mengedit hasil Medical Check Up?
+    - Bagaimana saya bisa mengubah data Medical Check Up di aplikasi?
+    - Tolong jelaskan cara mengakses dan mengedit data Medical Check Up
+    - Saya ingin mengedit data MCU, bagaimana caranya?
+    - Apa langkah-langkah untuk melakukan edit data Medical Check Up?
+    - Bagaimana cara membuka halaman edit Medical Check Up?
+    - Apa yang harus dilakukan untuk mengedit data Medical Check Up?
+    - Bagaimana cara membuka fitur edit pada data Medical Check Up?
+    - Bisa bantu saya dengan cara edit data Medical Check Up?
+    - Bagaimana dokter/paramedis dapat melakukan pengeditan data Medical Check Up?
+    - Langkah apa saja yang perlu dilakukan untuk edit data Medical Check Up?
+    - Apakah ada panduan untuk mengedit data Medical Check Up?
+    - Bagaimana proses untuk memperbarui data hasil Medical Check Up?
+    - Saya butuh informasi cara mengedit data Medical Check Up.
+    - Tolong jelaskan proses pengeditan data Medical Check Up di sistem.
+
+- intent: who_can_edit_medical_checkup_data_medic_id
+  examples: |
+    - Siapa yang berhak edit data Medical Check Up?
+    - Siapa yang dapat melakukan perubahan pada data Medical Check Up?
+    - Siapa saja yang bisa mengedit data Medical Check Up?
+    - Bagaimana mengetahui siapa yang boleh mengedit data Medical Check Up?
+    - Apakah semua user dapat mengedit data Medical Check Up?
+    - Siapa yang punya akses untuk mengubah data Medical Check Up?
+    - Apakah dokter bisa mengedit data Medical Check Up?
+    - Apakah paramedis boleh mengubah data Medical Check Up?
+    - Siapa saja yang berwenang melakukan edit pada Medical Check Up?
+    - Apakah ada batasan user yang boleh edit data Medical Check Up?
+    - Bagaimana aturan edit data Medical Check Up?
+    - Siapa yang dapat mengakses fitur edit Medical Check Up?
+    - Apakah project site mempengaruhi siapa yang bisa edit Medical Check Up?
+    - Jika data Medical Check Up dari project site lain, apakah bisa diedit?
+    - Siapa yang bertanggung jawab untuk mengedit data MCU?
+    - Apakah paramedis di project site lain bisa edit data Medical Check Up?
+    - Siapa yang bisa menggunakan tombol Edit Medical Checkup?
+    - Apa syarat agar bisa mengedit data Medical Check Up?
+    - Apakah ada pembatasan akses untuk edit data Medical Check Up?
+    - Bagaimana hak akses untuk edit Medical Check Up diatur?
+
+- intent: can_edit_old_medical_checkup_after_new_mcu_medic_id
+  examples: |
+    - Apakah dokter bisa mengedit data Medical Check Up lama setelah ada MCU terbaru?
+    - Bisa kah data Medical Check Up lama diedit setelah ada data MCU terbaru?
+    - Apakah data Medical Check Up lama dapat diubah jika sudah ada MCU terbaru?
+    - Apakah dokter bisa ubah Medical Check Up lama setelah update data terbaru?
+    - Apakah Medical Check Up lama bisa diedit setelah data terbaru masuk?
+    - Jika ada MCU terbaru, apakah data lama masih bisa diedit?
+    - Apakah tombol edit data MCU lama tetap aktif setelah data baru ditambahkan?
+    - Bagaimana aturan edit data MCU lama jika sudah ada data baru?
+    - Apakah edit Medical Check Up lama diizinkan ketika ada data MCU terbaru?
+    - Apakah Medical Check Up lama otomatis dinonaktifkan setelah update data?
+    - Apakah sistem memblokir edit data MCU lama setelah data baru masuk?
+    - Apakah dokter masih punya akses untuk edit data MCU lama jika ada data baru?
+    - Apakah data MCU lama terkunci saat data baru ditambahkan?
+    - Bagaimana proses pengeditan data MCU lama setelah adanya data terbaru?
+    - Apakah Medical Check Up lama menjadi tidak bisa diedit jika sudah ada data MCU baru?
+    - Apakah data Medical Check Up sebelumnya otomatis dinonaktifkan jika ada data baru?
+    - Apakah tombol edit untuk data MCU lama dinonaktifkan setelah ada MCU baru?
+    - Apakah bisa mengubah data Medical Check Up lama setelah pembaruan data MCU?
+    - Apakah edit Medical Check Up lama dibatasi saat ada data MCU terbaru?
+    - Apakah ada pembatasan edit data MCU lama jika data baru sudah ada?
+
+- intent: can_all_fields_be_edited_in_medical_checkup_medic_id
+  examples: |
+    - Apakah semua field di Medical Check Up bisa diedit?
+    - Bisa kah semua kolom Medical Check Up diedit?
+    - Apakah ada field yang tidak bisa diubah dalam Medical Check Up?
+    - Apakah semua data di Medical Check Up dapat diubah?
+    - Apakah semua bagian Medical Check Up dapat diedit oleh dokter?
+    - Apakah seluruh field Medical Check Up bisa diedit setelah data diinput?
+    - Apakah semua field Medical Check Up selalu bisa diedit?
+    - Apakah ada batasan untuk mengedit data Medical Check Up?
+    - Apakah ada field Medical Check Up yang terkunci untuk diedit?
+    - Apakah status hasil MCU mempengaruhi kemampuan edit field Medical Check Up?
+    - Kapan field Medical Check Up tidak bisa diedit?
+    - Apakah field Status Kesehatan bisa diedit setelah Follow Up?
+    - Bagaimana aturan edit field Medical Check Up saat Follow Up masih Open?
+    - Apakah data Medical Check Up dengan status Unfit dapat diedit semua?
+    - Apakah data Medical Check Up masih bisa diedit jika Follow Up belum dilakukan?
+    - Apa saja kondisi yang membuat field Medical Check Up tidak bisa diedit?
+    - Apakah Expired Date dapat diedit setelah Follow Up dilakukan?
+    - Apakah Periode MCU bisa diubah kapan saja?
+    - Apakah semua data MCU bisa diedit sebelum Follow Up?
+    - Apakah ada aturan sistem untuk membatasi pengeditan field Medical Check Up?
+
+- intent: how_to_add_follow_up_medical_checkup_medic_id
+  examples: |
+    - Bagaimana cara menambahkan Follow Up di Medical Check Up?
+    - Bagaimana langkah untuk menambah Follow Up pada Medical Check Up?
+    - Gimana cara input data Follow Up di menu Medical Check Up?
+    - Bagaimana saya bisa menambahkan Follow Up MCU?
+    - Apa langkah menambah Follow Up di hasil Medical Check Up?
+    - Bagaimana menambahkan data Follow Up di Medical Check Up?
+    - Saya ingin tahu cara menambah Follow Up di menu Medical Check Up.
+    - Bagaimana cara update dengan menambahkan Follow Up pada Medical Check Up?
+    - Di mana saya bisa menambahkan Follow Up di Medical Check Up?
+    - Bagaimana proses menambah Follow Up untuk Medical Check Up?
+    - Cara menambah Follow Up pada hasil MCU bagaimana?
+    - Langkah-langkah untuk input Follow Up Medical Check Up apa saja?
+    - Bagaimana menambah data tindak lanjut di Medical Check Up?
+    - Apa cara menambahkan Follow Up hasil MCU di sistem?
+    - Saya perlu menambahkan Follow Up di Medical Check Up, caranya bagaimana?
+    - Bagaimana cara melakukan input Follow Up pada Medical Check Up?
+    - Bisa jelaskan cara menambahkan Follow Up pada Medical Check Up?
+    - Bagaimana menambahkan Follow Up jika hasil MCU sudah ada?
+    - Bagaimana cara menambahkan Follow Up di tab Medical Check Up?
+    - Langkah untuk menambah Follow Up Medical Check Up di aplikasi apa saja?
+
+- intent: when_add_follow_up_button_active_medic_id
+  examples: |
+    - Kapan tombol Add Follow Up bisa dipakai?
+    - Kapan tombol Add Follow Up aktif?
+    - Kapan saya bisa menggunakan tombol Add Follow Up?
+    - Dalam kondisi apa tombol Add Follow Up bisa digunakan?
+    - Apa syarat tombol Add Follow Up menjadi aktif?
+    - Kapan tombol Add Follow Up muncul dan bisa diklik?
+    - Kapan tombol Add Follow Up bisa diakses?
+    - Tombol Add Follow Up aktif pada kondisi apa?
+    - Apa kondisi agar tombol Add Follow Up bisa dipakai?
+    - Bagaimana cara membuat tombol Add Follow Up menjadi aktif?
+    - Kapan tombol Add Follow Up bisa dipakai oleh dokter atau paramedis?
+    - Kapan tombol Add Follow Up muncul di menu Medical Check Up?
+    - Apa syarat agar tombol Add Follow Up aktif di aplikasi?
+    - Kapan tombol Add Follow Up tersedia untuk digunakan?
+    - Tombol Add Follow Up bisa diaktifkan kapan?
+    - Kondisi apa yang membuat tombol Add Follow Up aktif?
+    - Kapan tombol Add Follow Up dapat digunakan di Medical Check Up?
+    - Apa saja kondisi yang menyebabkan tombol Add Follow Up aktif?
+
+- intent: when_add_follow_up_button_disabled_medic_id
+  examples: |
+    - Kapan tombol Add Follow Up dinonaktifkan (disable)?
+    - Dalam kondisi apa tombol Add Follow Up disable?
+    - Kapan tombol Add Follow Up tidak aktif?
+    - Tombol Add Follow Up disable pada kondisi apa?
+    - Apa yang membuat tombol Add Follow Up tidak bisa dipakai?
+    - Kapan tombol Add Follow Up tidak dapat diakses?
+    - Kondisi apa yang menonaktifkan tombol Add Follow Up?
+    - Kapan tombol Add Follow Up menjadi disable di aplikasi?
+    - Apa alasan tombol Add Follow Up dinonaktifkan?
+    - Kapan tombol Add Follow Up otomatis dinonaktifkan?
+    - Kapan tombol Add Follow Up tidak dapat diklik?
+    - Apa saja kondisi yang membuat tombol Add Follow Up disable?
+    - Kapan tombol Add Follow Up tidak bisa dipakai di Medical Check Up?
+    - Bagaimana cara mengetahui tombol Add Follow Up dinonaktifkan?
+    - Kenapa tombol Add Follow Up dinonaktifkan atau disable?
+    - Kenapa tombol Add Follow Up mati?
+    - Kenapa tombol add follow up nonaktif?
+    - Kenapa tombol add follow up disable?
+    - Mengapa tombol Add Follow Up tidak aktif?
+    - Apa yang menyebabkan tombol Add Follow Up disable?
+    - Kenapa Add Follow Up tidak bisa dipilih?
+    - Apa yang menyebabkan tombol Add Follow Up tidak bisa digunakan?
+    - Tombol Add Follow Up kenapa tidak aktif?
+    - Apa penyebab tombol Add Follow Up dinonaktifkan?
+    - Apakah ada kondisi tertentu yang membuat tombol Add Follow Up tidak berfungsi?
+    
+- intent: ask_save_follow_up_result_medic_id
+  examples: |
+    - Apa yang terjadi setelah saya menekan tombol Save pada halaman Add Follow Up?
+    - Bagaimana sistem merespons setelah saya klik Save saat menambahkan Follow Up?
+    - Apa yang muncul setelah tombol Save ditekan di halaman Add Follow Up?
+    - Setelah klik Save di Add Follow Up, apa yang akan terjadi?
+    - Apa yang sistem lakukan setelah saya simpan data Follow Up?
+    - Setelah data Follow Up disimpan, apa pesan yang muncul?
+    - Apa yang terjadi jika penyimpanan Follow Up berhasil?
+    - Apa yang terjadi jika penyimpanan Follow Up gagal?
+    - Bagaimana cara mengetahui jika data Follow Up berhasil disimpan?
+    - Apakah ada pesan jika gagal simpan Follow Up?
+    - Apa respons sistem saat simpan Follow Up sukses?
+    - Apa respons sistem saat simpan Follow Up gagal?
+    - Bagaimana sistem menangani error saat simpan Follow Up?
+    - Apakah saya kembali ke halaman detail setelah simpan Follow Up?
+    - Halaman apa yang muncul setelah saya simpan Follow Up?
+    - Apakah halaman Add Follow Up tetap muncul jika gagal simpan data?
+    - Apakah pesan error muncul jika simpan Follow Up gagal?
+    - Bagaimana sistem menginformasikan keberhasilan simpan Follow Up?
+    - Apa yang harus saya lakukan jika simpan data Follow Up gagal?
+
+- intent: how_to_see_followup_result_medical_checkup_medic_id
+  examples: |
+    - Bagaimana cara melihat hasil Follow Up di menu Medical Check Up?
+    - Bagaimana saya bisa melihat data Follow Up Medical Check Up?
+    - Cara lihat hasil Follow Up MCU gimana ya?
+    - Tolong jelaskan cara melihat hasil Follow Up Medical Checkup
+    - Bagaimana cara akses tab Result Follow Up di Medical Checkup?
+    - Di mana saya dapat melihat hasil Follow Up Medical Checkup?
+    - Bagaimana langkah untuk melihat hasil Follow Up di MCU?
+    - Saya ingin tahu cara buka hasil Follow Up Medical Check Up
+    - Apa cara melihat detail hasil Follow Up Medical Checkup?
+    - Bagaimana cara membuka hasil Follow Up pada Medical Checkup?
+    - Bagaimana cara mengecek hasil Follow Up di Medical Checkup?
+    - Dimana lokasi tab result Follow Up di Medical Check Up?
+    - Tolong jelaskan bagaimana melihat data hasil Follow Up MCU
+    - Bagaimana cara akses informasi hasil Follow Up Medical Checkup?
+    - Bisa bantu jelaskan cara lihat hasil Follow Up Medical Check Up?
+    - Bagaimana cara saya dapat melihat result Follow Up di sistem Medical Checkup?
+    - Apa yang harus saya lakukan untuk melihat hasil Follow Up MCU?
+    - Bagaimana cara menampilkan data Follow Up di Medical Checkup?
+    - Saya mau tahu cara melihat hasil Follow Up di menu Medical Checkup
+    - Tolong tunjukkan cara melihat hasil Follow Up Medical Check Up
+    - Bagaimana cara melihat hasil Follow Up di aplikasi Medic?
+
+- intent: how_system_determines_followup_status_medic_id
+  examples: |
+    - Bagaimana sistem menentukan status Follow Up?
+    - Bagaimana cara sistem menetapkan status Follow Up?
+    - Apa aturan sistem untuk status Follow Up?
+    - Bagaimana sistem mengatur status Follow Up otomatis?
+    - Bagaimana status Follow Up diputuskan oleh sistem?
+    - Bagaimana cara kerja sistem dalam menentukan status Follow Up?
+    - Apa saja kondisi yang mempengaruhi status Follow Up di sistem?
+    - Bagaimana status Follow Up berubah sesuai hasil MCU?
+    - Apa yang membuat status Follow Up menjadi Open atau Close?
+    - Bagaimana sistem memutuskan Follow Up harus Open atau Close?
+    - Bagaimana hubungan status kesehatan dengan status Follow Up?
+    - Bagaimana sistem menentukan kapan Follow Up ditutup?
+    - Bagaimana aturan sistem dalam menetapkan Follow Up Open?
+    - Apa mekanisme sistem menentukan status Follow Up?
+    - Bagaimana proses otomatisasi status Follow Up di sistem?
+    - Kapan Follow Up ditetapkan sebagai Close oleh sistem?
+    - Bagaimana status Fit to Work mempengaruhi status Follow Up?
+    - Apa status Follow Up untuk hasil Fit with Note yang Control?
+    - Apa status Follow Up untuk hasil temporary unfit?
+    - Bagaimana sistem menangani Follow Up untuk status Unfit?
+    - Bagaimana peran status kesehatan pada pengaturan Follow Up?
+
+- intent: function_of_add_followup_button_medic_id
+  examples: |
+    - Apa fungsi tombol Add Follow Up?
+    - Untuk apa tombol Add Follow Up digunakan?
+    - Apa kegunaan tombol Add Follow Up di Medical Check Up?
+    - Bagaimana fungsi tombol Add Follow Up pada MCU?
+    - Apa maksud tombol Add Follow Up di sistem Medical Check Up?
+    - Apa yang dilakukan tombol Add Follow Up?
+    - Kapan tombol Add Follow Up bisa digunakan?
+    - Bagaimana tombol Add Follow Up berfungsi?
+    - Apa tujuan tombol Add Follow Up di menu Medical Check Up?
+    - Apa peran tombol Add Follow Up pada MCU?
+    - Apa arti tombol Add Follow Up di Medical Check Up?
+    - Bagaimana tombol Add Follow Up membantu proses MCU?
+    - Apa manfaat tombol Add Follow Up?
+    - Bagaimana cara kerja tombol Add Follow Up?
+    - Apa kegunaan tombol Add Follow Up bagi dokter dan paramedis?
+    - Untuk apa dokter memakai tombol Add Follow Up?
+    - Apa fungsi tombol Add Follow Up dalam pengelolaan Follow Up?
+    - Apa yang terjadi jika menekan tombol Add Follow Up?
+    - Bagaimana tombol Add Follow Up mempengaruhi status Follow Up?
+    - Apa kaitan tombol Add Follow Up dengan status kesehatan pasien?
+
+- intent: ask_followup_scheduling_medic_id
+  examples: |
+    - Bagaimana penjadwalan Follow Up selanjutnya?
+    - Apa proses penjadwalan Follow Up berikutnya?
+    - Bagaimana sistem mengatur jadwal Follow Up?
+    - Apa yang terjadi dengan jadwal Follow Up yang akan datang?
+    - Bagaimana cara sistem menjadwalkan Follow Up berikutnya?
+    - Bagaimana jadwal Follow Up selanjutnya dibuat?
+    - Apakah Follow Up selanjutnya dijadwalkan otomatis?
+    - Bagaimana proses scheduling Follow Up?
+    - Apa yang sistem lakukan untuk Follow Up yang belum selesai?
+    - Bagaimana informasi penjadwalan Follow Up muncul?
+    - Kapan Follow Up selanjutnya dijadwalkan?
+    - Bagaimana sistem menangani Follow Up yang masih Open?
+    - Apakah ada fitur penjadwalan Follow Up di sistem?
+    - Apa yang terjadi jika status Follow Up masih Open?
+    - Bagaimana pemberitahuan penjadwalan Follow Up diberikan?
+    - Apa status yang muncul saat Follow Up sedang dijadwalkan?
+    - Bagaimana sistem mengingatkan jadwal Follow Up?
+    - Apa arti informasi Pemeriksaan Follow Up dalam Proses Penjadwalan?
+    - Bagaimana update jadwal Follow Up setelah pemeriksaan?
+    - Bagaimana sistem memastikan Follow Up dijadwalkan ulang?
+
+- intent: ask_followup_code_format_medic_id
+  examples: |
+    - Bagaimana format kode Follow Up di sistem?
+    - Apa format Code Follow Up yang digunakan?
+    - Bagaimana sistem membuat Code Follow Up?
+    - Apa struktur kode Follow Up dalam aplikasi?
+    - Bagaimana format nomor kode Follow Up?
+    - Bisa jelaskan format kode Follow Up?
+    - Bagaimana cara sistem membuat Code Follow Up?
+    - Apa pola penamaan kode Follow Up?
+    - Bagaimana aturan pembuatan kode Follow Up?
+    - Apa format standar untuk kode Follow Up?
+    - Bagaimana format kode unik Follow Up?
+    - Bagaimana kode Follow Up diurutkan di sistem?
+    - Apa saja elemen dalam kode Follow Up?
+    - Bagaimana cara generate kode Follow Up?
+    - Apakah kode Follow Up memiliki sequence number?
+    - Bagaimana nomor urut kode Follow Up dibuat?
+    - Kapan sequence number kode Follow Up direset?
+    - Bagaimana kode Follow Up dibedakan per project site?
+    - Apa saja komponen dalam kode Follow Up?
+    - Bagaimana format kode Follow Up disusun?
+    - Apa arti nomor urut kode Follow Up yang tertulis?
+
+- intent: who_can_view_mcu_result_detail_medic_id
+  examples: |
+    - Siapa yang bisa melihat detail hasil MCU?
+    - Siapa saja yang boleh melihat hasil MCU?
+    - Siapa saja yang dapat mengakses detail MCU?
+    - Apakah dokter bisa melihat semua hasil MCU?
+    - Apakah paramedis bisa lihat hasil MCU?
+    - Siapa yang punya akses melihat detail MCU?
+    - Bagaimana aturan akses untuk melihat hasil MCU?
+    - Siapa yang dapat membuka detail hasil Medical Check Up?
+    - Apakah paramedis hanya bisa lihat hasil MCU project mereka?
+    - Apakah dokter bisa lihat hasil MCU semua project site?
+    - Siapa yang berhak melihat hasil Follow Up MCU?
+    - Siapa yang dapat melihat data hasil MCU di aplikasi?
+    - Siapa saja yang bisa membuka hasil Medical Check Up?
+    - Apakah hasil MCU terbatas untuk beberapa user saja?
+    - Bagaimana aturan akses hasil Follow Up MCU?
+    - Siapa saja yang dapat melihat informasi detail hasil MCU?
+    - Apakah paramedis punya akses terbatas ke hasil MCU?
+    - Apakah dokter dapat akses semua hasil MCU?
+    - Siapa yang boleh melihat hasil MCU berdasarkan project site?
+    - Siapa saja pengguna yang dapat akses hasil Follow Up MCU?
+
+- intent: ask_if_doctor_can_add_followup_all_projects_medic_id
+  examples: |
+    - Apakah dokter bisa menambahkan Follow Up di semua project site?
+    - Bisa kah dokter menambah Follow Up di semua project?
+    - Apakah dokter hanya boleh menambah Follow Up di project tempat dia bertugas?
+    - Dokter bisa menambahkan Follow Up di project lain tidak?
+    - Apakah dokter punya akses untuk tambah Follow Up di semua project site?
+    - Apakah tombol Add Follow Up aktif untuk semua project site bagi dokter?
+    - Apakah dokter dapat menambah Follow Up pada project yang bukan tempatnya?
+    - Bolehkah dokter menambahkan Follow Up di project site lain?
+    - Apakah dokter bisa akses fitur Add Follow Up untuk semua project?
+    - Apakah dokter dibatasi untuk menambah Follow Up hanya di project tertentu?
+    - Bagaimana aturan menambah Follow Up untuk dokter berdasarkan project site?
+    - Apakah ada pembatasan akses Follow Up untuk dokter?
+    - Apakah dokter hanya bisa membuat Follow Up di project yang jadi tanggung jawabnya?
+    - Apakah dokter bisa menambah Follow Up dari project selain miliknya?
+    - Apakah ada project site yang tidak bisa diakses dokter untuk Follow Up?
+    - Apakah tombol Add Follow Up disable jika dokter buka project lain?
+    - Bagaimana sistem membatasi dokter dalam menambahkan Follow Up?
+    - Apakah dokter bebas menambah Follow Up dimana saja?
+    - Apakah dokter dapat membuat Follow Up tanpa batasan project?
+    - Apakah Follow Up hanya bisa ditambahkan oleh dokter di project sendiri?
+
+- intent: how_to_edit_result_followup_mcu_data_medic_id
+  examples: |
+    - Gimana cara mengakses fitur Edit Follow Up pada Medical Check Up?
+    - Apa langkah-langkah untuk mengedit Follow Up pada MCU?
+    - Bagaimana cara mengedit Follow Up di menu Medical Check Up?
+    - Apa prosedur untuk mengakses fitur Edit Follow Up di Medical Check Up?
+    - Di mana saya bisa mengakses fitur Edit Follow Up di Medical Check Up?
+    - Cara mengedit data Follow Up di menu MCU bagaimana?
+    - Apa yang perlu dilakukan untuk mengedit Follow Up di Medical Check Up?
+    - Bagaimana edit data Follow Up di menu Medical Check Up?
+    - Bagaimana cara melihat dan mengedit Follow Up di Medical Check Up?
+    - Apa langkah untuk mengakses fitur edit pada Follow Up di Medical Check Up?
+    - Bagaimana cara edit Follow Up setelah membuka Detail Medical Check Up?
+    - Apa yang harus dilakukan untuk bisa mengakses fitur Edit Follow Up di menu MCU?
+    - Apakah ada langkah-langkah khusus untuk mengedit Follow Up di Medical Check Up?
+    - Bagaimana membuka dan mengedit Follow Up di Medical Check Up?
+    - Bisakah saya mengedit Follow Up di Medical Check Up? Bagaimana caranya?
+    - Apakah bisa mengedit Follow Up setelah mengakses Detail Medical Check Up?
+    - Bagaimana cara menggunakan fitur Edit Follow Up di Medical Check Up?
+    - Cara edit Follow Up setelah data Medical Check Up ada distem?
+    - Apa saja langkah-langkah untuk mengedit data Follow Up di menu MCU?
+    - Dimana fitur untuk Edit Follow Up pada Medical Check Up?
+
+- intent: who_can_edit_result_follow_up_mcu_data_medic_id
+  examples: |
+    - Siapa saja yang bisa mengedit data Follow Up MCU?
+    - Apakah dokter bisa mengedit data Follow Up MCU?
+    - Siapa yang memiliki hak untuk mengedit data Follow Up MCU?
+    - Apakah paramedis dapat mengedit Follow Up MCU?
+    - Siapa yang dapat mengubah data Follow Up pada Medical Check Up?
+    - Apa saja syarat agar bisa mengedit data Follow Up MCU?
+    - Bagaimana cara agar saya bisa mengedit data Follow Up MCU?
+    - Apakah hanya dokter yang bisa mengedit Follow Up MCU?
+    - Apakah paramedis dapat mengedit data Follow Up di project site lain?
+    - Dokter dapat mengedit Follow Up MCU di project site mana saja?
+    - Siapa yang bertanggung jawab mengedit data Follow Up MCU?
+    - Apa yang terjadi jika dokter mengakses Follow Up MCU di project site lain?
+    - Apakah bisa mengedit Follow Up MCU jika bukan project site yang menjadi tanggung jawabnya?
+    - Bagaimana cara mengedit Follow Up MCU jika saya paramedis?
+    - Mengapa tombol Edit di Follow Up MCU bisa nonaktif?
+    - Apakah ada batasan dalam mengedit Follow Up MCU berdasarkan project site?
+    - Apakah dokter bisa mengedit Follow Up di project site yang bukan tanggung jawabnya?
+    - Apakah ada perbedaan hak akses untuk mengedit Follow Up MCU?
+    - Jika saya paramedis, bisa kah saya mengedit data Follow Up yang bukan project site saya?
+    - Kenapa tombol Edit Follow Up MCU nonaktif?
+
+- intent: edit_follow_up_mcu_conditions_medic_id
+  examples: |
+    - Apa saja ketentuan saat mengedit data Follow Up MCU?
+    - Apa yang perlu diperhatikan saat mengedit Follow Up MCU?
+    - Apa yang terjadi jika data Follow Up MCU diedit oleh dokter lain?
+    - Bagaimana jika saya mengubah bulan dan tahun pelaksanaan Follow Up MCU?
+    - Apakah Follow Up MCU pertama bisa diedit setelah ada Follow Up MCU terbaru?
+    - Apa yang berubah ketika mengedit data Follow Up MCU?
+    - Apakah perubahan pada Follow Up MCU mempengaruhi data lainnya?
+    - Apakah saya bisa mengedit Follow Up MCU setelah data diubah oleh dokter lain?
+    - Ketika saya mengedit Follow Up MCU, apakah Code Follow Up berubah?
+    - Apa yang harus dilakukan saat ingin mengedit data Follow Up MCU?
+    - Apakah perubahan bulan pada Follow Up MCU merubah Code Follow Up?
+    - Bagaimana jika saya mencoba mengedit Follow Up MCU pertama setelah ada Follow Up MCU terbaru?
+    - Apakah saya bisa mengedit Follow Up jika ada perubahan oleh paramedis lain?
+    - Apa dampak edit data Follow Up MCU terhadap Medic Penanggung Jawab?
+    - Apakah perubahan tahun Follow Up MCU mengubah data lainnya?
+    - Apa yang terjadi jika mengedit Follow Up yang sudah ada dengan data baru?
+    - Apa yang perlu saya perhatikan saat mengedit Follow Up MCU pertama?
+
+- intent: save_changes_follow_up_mcu_medic_id
+  examples: |
+    - Bagaimana cara menyimpan perubahan data Follow Up MCU?
+    - Apa yang harus dilakukan untuk menyimpan perubahan data Follow Up MCU?
+    - Apa langkah untuk menyimpan perubahan data Follow Up MCU?
+    - Bagaimana cara menyimpan perubahan pada data Follow Up MCU yang telah diedit?
+    - Apa yang terjadi setelah mengklik tombol Save pada data Follow Up MCU?
+    - Bagaimana cara menyimpan data Follow Up setelah perubahan?
+    - Apa yang harus dilakukan untuk menyimpan hasil editan Follow Up MCU?
+    - Setelah mengedit data Follow Up MCU, bagaimana cara menyimpan perubahan?
+    - Bagaimana cara menyimpan perubahan pada Follow Up MCU yang sudah diedit?
+    - Apa langkah-langkah untuk menyimpan perubahan Follow Up MCU?
+    - Apakah ada tombol untuk menyimpan perubahan data Follow Up MCU?
+    - Bagaimana menyimpan data Follow Up setelah diubah oleh Dokter/Paramedis?
+    - Apakah ada konfirmasi setelah mengklik tombol Save pada data Follow Up MCU?
+    - Apa yang harus dilakukan setelah mengklik tombol Save pada Follow Up MCU?
+    - Apakah tombol Save digunakan untuk menyimpan perubahan Follow Up MCU?
+    - Apa pesan yang muncul setelah berhasil menyimpan perubahan data Follow Up MCU?
+    - Setelah data Follow Up MCU disimpan, apa yang terjadi selanjutnya?
+    - Setelah mengklik tombol Save, ke mana sistem akan mengalihkan saya?
+    - Apakah sistem akan memberi tahu jika perubahan data Follow Up MCU berhasil disimpan?
+    - Apa yang dilakukan sistem setelah perubahan data Follow Up MCU berhasil disimpan?
+
+- intent: when_notifications_are_sent_in_mcu_medic_id
+  examples: |
+    - Kapan notifikasi dalam sistem Medical Checkup dikirimkan?
+    - Dokter/paramedis akan mendapatkan notifikasi terkait Menu MCU jika mengalami kondisi apa?
+    - Apa saja kondisi yang mengirimkan notifikasi dalam sistem Medical Checkup?
+    - Kapan saya menerima notifikasi dalam sistem Medical Checkup?
+    - Pada kondisi apa notifikasi dikirimkan untuk MCU?
+    - Kapan dokter menerima notifikasi terkait Medical Checkup?
+    - Bagaimana sistem mengirimkan notifikasi pada proses medical checkup?
+    - Notifikasi pada sistem Medical Checkup dikirimkan dalam situasi apa saja?
+    - Sistem memberikan notifikasi kepada Dokter/Paramedis jika mengalami kondisi apa?
+    - Apakah notifikasi dikirim ketika ada perubahan status kesehatan dalam Medical Checkup?
+    - Kapan notifikasi muncul jika ada hasil Follow Up MCU di sistem?
+    - Apakah akan ada notifikasi ketika medical checkup sudah kedaluwarsa?
+    - Apakah sistem mengirimkan notifikasi tentang hasil MCU atau Follow Up MCU?
+    - Bagaimana cara kerja sistem dalam mengirimkan notifikasi terkait pemeriksaan MCU?
+    - Kapan sistem memberitahu Dokter/Paramedis tentang kedaluwarsa MCU?
+    - Bagaimana notifikasi dikirimkan jika status kesehatan dalam Medical Checkup diubah?
+    - Apa yang menyebabkan sistem mengirimkan notifikasi dalam Medical Checkup?
+    - Kapan sistem memberikan pemberitahuan hasil pemeriksaan MCU atau Follow Up MCU?
+    - Notifikasi apa yang diterima ketika hasil Follow Up MCU ditambahkan?
+    - Notifikasi seperti apa yang akan saya terima dalam pemeriksaan MCU?
+    - Apakah ada notifikasi terkait expired MCU?
+    - Jenis notifikasi apa saja yang akan saya terima dalam pemeriksaan MCU?
+    - Notifikasi apa yang akan saya terima selama pemeriksaan MCU?
+    - Apa saja jenis pemberitahuan yang saya terima terkait Medical Checkup?
+    - Apa saja jenis notifikasi yang akan saya terima setelah pemeriksaan MCU?
+    - Saya ingin tahu jenis notifikasi yang akan muncul saat pemeriksaan MCU.
+    - Apa yang diinformasikan dalam notifikasi hasil pemeriksaan MCU?
+    - Apa saja notifikasi yang akan saya terima terkait hasil MCU dan Follow Up?
+    - Apa pemberitahuan yang akan saya terima ketika MCU hampir kedaluwarsa?
+    - Jenis-jenis notifikasi yang diterima pada pemeriksaan MCU apa saja?
+    
+- intent: can_view_mcu_older_than_5_years_medic_id
+  examples: |
+    - Apakah saya bisa melihat hasil MCU lebih dari 5 tahun terakhir?
+    - Bisakah mengakses data Medical Checkup yang lebih lama dari 5 tahun?
+    - Apakah tersedia hasil MCU dari periode lebih dari 5 tahun yang lalu?
+    - Bisa lihat hasil Medical Checkup lebih lama dari 5 tahun tidak?
+    - Bagaimana cara melihat hasil MCU yang usianya lebih dari 5 tahun?
+    - Apakah hasil MCU yang lebih lama dari 5 tahun tersimpan di sistem?
+    - Saya ingin melihat hasil MCU dari lebih dari 5 tahun, bisa?
+    - Dapatkah saya mengakses data MCU yang berumur lebih dari 5 tahun?
+    - Apakah hasil Medical Checkup lebih dari 5 tahun masih bisa dilihat?
+    - Apakah sistem menyimpan data MCU lama lebih dari 5 tahun?
+    - Bisakah saya filter hasil Medical Checkup yang lebih lama dari 5 tahun?
+    - Bagaimana melihat data Medical Checkup yang lama dari 5 tahun ke atas?
+    - Apakah ada cara untuk mengakses hasil MCU lebih dari 5 tahun lalu?
+    - Apakah mungkin melihat data MCU yang sudah berumur lebih dari 5 tahun?
+    - Dapatkah saya akses rekam medis MCU yang lebih lama dari 5 tahun?
+    - Apakah sistem menyimpan hasil Medical Checkup lebih dari 5 tahun?
+    - Bagaimana melihat rekam MCU lama yang lebih dari 5 tahun?
+    - Apakah saya bisa menampilkan data Medical Checkup lebih lama dari 5 tahun?
+    - Apakah hasil MCU lama di atas 5 tahun masih dapat dilihat?
+    - Bisa tidak saya akses hasil Medical Checkup lama dari 5 tahun ke atas?
+
+- intent: how_system_shows_active_mcu_results_medic_id
+  examples: |
+    - Bagaimana sistem menampilkan hasil Medical Checkup yang masih berlaku?
+    - Bagaimana cara melihat hasil MCU yang belum kedaluwarsa di sistem?
+    - Di mana hasil MCU yang aktif ditampilkan?
+    - Bagaimana sistem menandai Medical Checkup yang masih aktif?
+    - Bagaimana hasil MCU yang belum expired ditampilkan?
+    - Apakah hasil MCU yang masih berlaku bisa dilihat di atas daftar?
+    - Bagaimana cara mengetahui hasil Medical Checkup yang masih valid?
+    - Bagaimana cara melihat hasil MCU yang aktif di aplikasi?
+    - Sistem menampilkan hasil MCU yang aktif bagaimana?
+    - Apakah Medical Checkup yang belum expired ada tanda khusus di sistem?
+    - Bagaimana sistem menandai hasil MCU yang masih berlaku?
+    - Apakah hasil MCU yang belum kedaluwarsa diprioritaskan tampilannya?
+    - Bagaimana hasil Medical Checkup yang aktif ditandai di sistem?
+    - Apakah hasil MCU yang aktif dipin di atas daftar?
+    - Bagaimana hasil MCU yang masih valid ditampilkan di aplikasi?
+    - Bagaimana cara sistem menampilkan Medical Checkup yang belum expired?
+    - Bagaimana sistem menempatkan hasil MCU yang masih berlaku?
+    - Apakah hasil Medical Checkup yang aktif ditampilkan secara khusus?
+    - Bagaimana hasil Medical Checkup yang belum expired bisa diketahui di sistem?
+    - Bagaimana cara sistem menampilkan data Medical Checkup yang masih valid?
+
+- intent: what_are_available_examination_details_medic_id
+  examples: |
+    - Apa saja detail hasil pemeriksaan yang tersedia?
+    - Pemeriksaan apa saja yang ada dalam hasil Medical Checkup?
+    - Informasi apa yang ditampilkan dalam hasil pemeriksaan?
+    - Detail pemeriksaan apa yang bisa dilihat?
+    - Apa isi detail pemeriksaan fisik dan laboratorium?
+    - Apa saja kategori hasil pemeriksaan di Medical Checkup?
+    - Bisa jelaskan detail hasil pemeriksaan yang ada?
+    - Apa yang termasuk dalam hasil pemeriksaan fisik?
+    - Apa yang termasuk dalam hasil pemeriksaan laboratorium?
+    - Apa informasi lengkap di bagian hasil pemeriksaan?
+    - Detail apa yang muncul untuk pemeriksaan fisik dan laboratorium?
+    - Bagaimana hasil pemeriksaan fisik ditampilkan?
+    - Bagaimana hasil pemeriksaan laboratorium ditampilkan?
+    - Apa pesan jika tidak ada temuan pemeriksaan fisik?
+    - Apa pesan jika tidak ada temuan pemeriksaan laboratorium?
+    - Apa yang ditampilkan jika pemeriksaan fisik normal?
+    - Apa yang ditampilkan jika pemeriksaan laboratorium normal?
+    - Bagaimana sistem menunjukkan temuan pemeriksaan fisik?
+    - Bagaimana sistem menunjukkan temuan pemeriksaan laboratorium?
+    - Apa saja rincian hasil pemeriksaan medis?
+
+- intent: is_disease_diagnosis_displayed_medic_id
+  examples: |
+    - Apakah hasil diagnosa penyakit ditampilkan?
+    - Apakah diagnosa penyakit muncul di hasil MCU?
+    - Bagaimana hasil diagnosa penyakit ditampilkan?
+    - Apakah sistem menampilkan diagnosa penyakit?
+    - Apakah ada informasi diagnosa penyakit pada hasil pemeriksaan?
+    - Apakah hasil diagnosa seperti Hipertensi atau Diabetes muncul?
+    - Apakah diagnosa penyakit bisa dilihat di Medical Checkup?
+    - Apakah hasil diagnosa penyakit tercantum?
+    - Apakah hasil pemeriksaan menunjukkan diagnosa penyakit?
+    - Apakah diagnosa penyakit disajikan dalam hasil MCU?
+    - Apakah ada hasil diagnosa penyakit di laporan MCU?
+    - Apakah sistem menunjukkan diagnosa penyakit?
+    - Bagaimana diagnosa penyakit ditampilkan dalam data MCU?
+    - Apakah ada tanda jika tidak ada diagnosa penyakit?
+    - Apa yang tampil jika tidak ada diagnosa penyakit?
+    - Bagaimana hasil diagnosa penyakit jika ada?
+    - Apakah hasil diagnosa penyakit lengkap tersedia?
+    - Apakah diagnosa penyakit muncul dalam format tertentu?
+    - Bagaimana hasil diagnosa penyakit diperlihatkan dalam laporan?
+
+- intent: difference_between_open_and_close_follow_up_status_medic_id
+  examples: |
+    - Apa perbedaan status Open dan Close pada Follow Up MCU?
+    - Jelaskan perbedaan antara status Open dan Close di Follow Up Medical Check Up.
+    - Apa arti status Open dalam Follow Up MCU?
+    - Apa arti status Close dalam Follow Up MCU?
+    - Bagaimana membedakan status Open dan Close pada Follow Up MCU?
+    - Apa yang dimaksud dengan status Close pada Follow Up MCU?
+    - Status Open dan Close pada Follow Up MCU itu apa bedanya?
+    - Kapan Follow Up dikatakan Open dan kapan Close?
+    - Jelaskan fungsi status Open dan Close dalam Follow Up Medical Checkup.
+    - Apa arti dari status Follow Up yang Open dan Close?
+    - Bagaimana sistem menentukan status Open dan Close pada Follow Up MCU?
+    - Apa makna status Open pada Follow Up Medical Checkup?
+    - Bagaimana cara kerja status Open dan Close di Follow Up MCU?
+    - Kapan status Follow Up menjadi Close?
+    - Kapan status Follow Up dianggap Open?
+    - Apa perbedaan mendasar antara status Open dan Close di Follow Up MCU?
+    - Apa kriteria untuk status Open dan Close pada Follow Up Medical Checkup?
+    - Bagaimana status Follow Up berpengaruh pada proses Medical Checkup?
+    - Apa arti status Close dalam Follow Up MCU?
+    - Bagaimana status Open mempengaruhi tindak lanjut MCU?
+    - Apa definisi status Open dan Close dalam Medical Checkup Follow Up?
+
+- intent: how_to_know_follow_up_location_medic_id
+  examples: |
+    - Bagaimana cara mengetahui lokasi tempat pelaksanaan Follow Up?
+    - Dimana lokasi Follow Up MCU biasanya dilakukan?
+    - Bagaimana mengetahui tempat Follow Up Internal dan External?
+    - Di mana saya bisa lihat lokasi Follow Up?
+    - Bagaimana sistem menunjukkan lokasi Follow Up MCU?
+    - Apa lokasi default Follow Up Internal?
+    - Bagaimana melihat lokasi fasilitas kesehatan untuk Follow Up External?
+    - Bagaimana cara cek tempat Follow Up?
+    - Apa lokasi pelaksanaan Follow Up kalau Internal?
+    - Bagaimana lokasi Follow Up kalau dilakukan di luar?
+    - Bagaimana cara mengetahui lokasi klinik atau rumah sakit untuk Follow Up External?
+    - Bagaimana sistem menampilkan lokasi Follow Up?
+    - Apakah lokasi Follow Up bisa berbeda untuk Internal dan External?
+    - Bagaimana mengetahui tempat Follow Up yang direkomendasikan dokter?
+    - Bagaimana cara melihat alamat fasilitas kesehatan untuk Follow Up?
+    - Bagaimana informasi lokasi Follow Up ditampilkan?
+    - Apa beda lokasi Follow Up Internal dan External?
+    - Bagaimana menampilkan lokasi Follow Up di sistem?
+    - Di mana saya bisa lihat tempat pelaksanaan Follow Up MCU?
+
+- intent: what_if_no_follow_up_needed_in_mcu_result_medic_id
+  examples: |
+    - Bagaimana kalau hasil MCU tidak butuh Follow Up?
+    - Apa yang terjadi jika hasil Medical Checkup tidak perlu tindak lanjut?
+    - Kalau MCU tidak memerlukan Follow Up, bagaimana?
+    - Apa jadinya kalau tidak ada Follow Up setelah MCU?
+    - Bagaimana sistem jika Follow Up tidak diperlukan?
+    - Apa yang tampil jika hasil MCU tidak perlu Follow Up?
+    - Jika pengguna tidak melakukan Follow Up, apa yang muncul?
+    - Bagaimana jika hasil pemeriksaan MCU tidak perlu di-follow up?
+    - Apa tanda jika hasil medical chekup tidak ada Follow Up?
+    - Bagaimana cara sistem menampilkan jika tidak ada Follow Up pada hasil MCU?
+    - Apakah ada pesan jika Follow Up MCU tidak perlu dilakukan?
+    - Bagaimana hasil Follow Up jika tidak ada tindak lanjut?
+    - Apakah tab Follow Up kosong jika tidak ada tindakan lanjutan?
+    - Kalau tidak ada Follow Up, apa yang tampil di tab Follow Up?
+    - Bagaimana menampilkan data jika tidak ada Follow Up MCU?
+    - Apa yang muncul saat Follow Up MCU belum dilakukan?
+    - Bagaimana tampilan tab Follow Up saat MCU tidak perlu Follow Up?
+    - Apa pesan jika Follow Up MCU kosong?
+    - Apakah sistem menampilkan pesan khusus jika Follow Up tidak ada?
+    - Bagaimana notifikasi saat tidak ada Follow Up MCU?
+
+- intent: what_is_displayed_in_follow_up_results_tab_medic_id
+  examples: |
+    - Apa yang ditampilkan dalam tab Hasil Follow Up?
+    - Informasi apa saja yang ada di tab Follow Up MCU?
+    - Bisa jelaskan isi tab hasil Follow Up MCU?
+    - Apa saja yang terlihat di tab hasil tindak lanjut MCU?
+    - Data apa yang muncul di tab Follow Up Medical Checkup?
+    - Apa detail yang ditampilkan di tab hasil Follow Up MCU?
+    - Bagaimana tampilan tab Follow Up MCU?
+    - Apa isi dari tab hasil Follow Up MCU?
+    - Apa yang muncul di tab Follow Up MCU?
+    - Informasi apa yang tersedia di tab Follow Up Medical Checkup?
+    - Apa saja rincian di tab Follow Up MCU?
+    - Apa fitur yang ada di tab hasil Follow Up MCU?
+    - Bisa jelaskan isi tab Follow Up di Medical Checkup?
+    - Apa yang bisa saya lihat di tab hasil Follow Up MCU?
+    - Apa data penting yang ada di tab Follow Up MCU?
+    - Bagaimana sistem menampilkan hasil Follow Up MCU di tab?
+    - Apa saja yang dicakup dalam tab hasil Follow Up MCU?
+    - Apa detail utama dalam tab Follow Up MCU?
+    - Apa yang ditunjukkan di dalam tab Follow Up MCU?
+    - Informasi apa yang disajikan di tab hasil Follow Up?
+
+- intent: does_follow_up_result_affect_final_health_status_medic_id
+  examples: |
+    - Apakah hasil Follow Up mempengaruhi status kesehatan akhir?
+    - Apakah status kesehatan akhir dipengaruhi oleh Follow Up?
+    - Bagaimana hasil Follow Up mempengaruhi status kesehatan terakhir?
+    - Apakah status Follow Up menentukan status kesehatan akhir?
+    - Apakah status kesehatan akhir tergantung pada Follow Up terakhir?
+    - Bagaimana status Follow Up terakhir mempengaruhi status kesehatan akhir?
+    - Apakah status kesehatan akhir dipengaruhi oleh status Follow Up sebelumnya?
+    - Apakah perubahan status Follow Up akan mengubah status kesehatan akhir?
+    - Apa pengaruh Follow Up terhadap status kesehatan akhir?
+    - Apakah status Follow Up dapat merubah status kesehatan akhir?
+    - Apakah Follow Up mempengaruhi status kesehatan akhir?
+    - Bagaimana Follow Up terakhir mempengaruhi status kesehatan akhir?
+    - Apakah status kesehatan akhir dipengaruhi oleh status Follow Up terakhir?
+    - Bagaimana hasil Follow Up mempengaruhi status kesehatan?
+    - Apakah status Follow Up menentukan status kesehatan terakhir?
+    - Apakah status Follow Up akan menentukan apakah seseorang fit atau tidak?
+    - Apakah hasil Follow Up berhubungan langsung dengan status kesehatan akhir?
+    - Apakah status kesehatan akhir tergantung pada status Follow Up terakhir?
+    - Apa hubungan antara Follow Up dan status kesehatan akhir?
+
+- intent: how_to_know_when_next_schedule_mcu_medic_id
+  examples: |
+    - Bagaimana cara mengetahui kapan saya harus melakukan Medical Checkup berikutnya?
+    - Bagaimana cara mengetahui jadwal Medical Checkup selanjutnya?
+    - Kapan saya harus melakukan Medical Checkup lagi?
+    - Bagaimana cara cek jadwal Medical Checkup berikutnya?
+    - Apakah ada cara untuk mengetahui kapan saya harus melakukan Medical Checkup selanjutnya?
+    - Di mana saya bisa cek jadwal Medical Checkup berikutnya?
+    - Bagaimana cara mengetahui kapan Medical Checkup berikutnya dilakukan?
+    - Kapan saya harus melakukan Medical Checkup berikutnya berdasarkan status saya?
+    - Apakah ada informasi tentang jadwal Medical Checkup saya selanjutnya?
+    - Bagaimana cara melihat jadwal Medical Checkup yang akan datang?
+    - Apa yang perlu saya lakukan untuk mengetahui kapan Medical Checkup berikutnya?
+    - Apakah saya bisa mengetahui next Medical Checkup saya yang berikutnya?
+    - Bagaimana cara mengetahui jadwal Medical Checkup saya yang akan datang?
+    - Di mana saya bisa lihat informasi mengenai Medical Checkup yang berikutnya?
+    - Apakah saya bisa cek kapan Medical Checkup berikutnya dari status kesehatan saya?
+    - Kapan saya bisa melakukan Medical Checkup lagi setelah yang terakhir?
+    - Bagaimana cara mengetahui jadwal next Medical Checkup selanjutnya?
+    - Apakah ada cara untuk melihat tanggal Medical Checkup yang akan datang?
+    - Bagaimana saya mengetahui kapan waktunya melakukan Medical Checkup lagi?
+
+- intent: how_to_download_attachment_follow_up_mcu_mobile_medic_id
+  examples: |
+    - Bagaimana cara mengunduh attachment dalam Follow Up MCU?
+    - Gimana cara mengunduh attachment hasil follow up dalam MCU?
+    - Bagaimana cara mendownload file Follow Up MCU?
+    - Cara mengunduh lampiran hasil Follow Up MCU gimana?
+    - Di mana saya bisa mengunduh attachment hasil Follow Up MCU di mobile?
+    - Apa langkah-langkah untuk mengunduh attachment dari Follow Up MCU di aplikasi mobile?
+    - Bagaimana cara mengakses dan mengunduh file hasil Follow Up MCU?
+    - Bagaimana cara download dokumen Follow Up MCU melalui mobile?
+    - Bisa jelaskan bagaimana mengunduh lampiran dalam Follow Up MCU?
+    - Bagaimana cara mendapatkan file dalam Follow Up MCU?
+    - Saya ingin mengunduh attachment di Follow Up MCU, bagaimana caranya?
+    - Apa langkah-langkah untuk mengunduh hasil Follow Up MCU?
+    - Bagaimana cara melihat dan mengunduh dokumen Follow Up MCU di mobile?
+    - Di mana saya bisa melihat dan download file Follow Up MCU?
+    - Saya ingin mengunduh lampiran dalam Hasil Follow Up MCU, bagaimana?
+    - Apakah ada cara untuk mendownload file dalam Follow Up MCU?
+    - Bagaimana cara mengunduh file dari tab Follow Up MCU?
+    - Apa cara mengunduh dokumen dalam Follow Up MCU di aplikasi?
+    - Saya butuh mengunduh file di Hasil Follow Up MCU, bagaimana?
+    - Apa langkah untuk mengunduh attachment hasil Follow Up MCU melalui mobile?
+
+- intent: what_is_medical_record_far_menu_medic_id
+  examples: |
+    - Apa itu menu Medical Record FAR?
+    - Bisa jelaskan tentang menu Medical Record FAR?
+    - Apa fungsi dari menu Medical Record FAR?
+    - Menu Medical Record FAR itu untuk apa?
+    - Jelaskan tentang Medical Record FAR dalam sistem Medical Management.
+    - Apa kegunaan menu Medical Record FAR di aplikasi?
+    - Saya ingin tahu apa itu menu Medical Record FAR
+    - Bisa terangkan fitur Medical Record FAR?
+    - Apa saja yang dapat dilakukan di menu Medical Record FAR?
+    - Menu Medical Record FAR berisi apa saja?
+    - Bagaimana menu Medical Record FAR digunakan?
+    - Untuk apa menu Medical Record FAR dalam Medical Management?
+    - Apa maksud dari menu Medical Record FAR?
+    - Apa itu fitur Medical Record FAR di Medic Apps?
+    - Dapatkah Anda menjelaskan fungsi menu Medical Record FAR?
+    - Apa peran menu Medical Record FAR dalam pengelolaan data medis?
+    - Menu Medical Record FAR di Medic Apps digunakan untuk apa?
+    - Apa isi dari menu Medical Record FAR?
+    - Apa yang dimaksud dengan Medical Record FAR?
+    - Tolong jelaskan menu Medical Record FAR di sistem Medical Management
+
+- intent: who_can_access_medical_record_far_menu_medic_id
+  examples: |
+    - Siapa yang dapat mengakses menu Medical Record FAR?
+    - Siapa saja yang berhak membuka menu Medical Record FAR?
+    - Menu Medical Record FAR bisa diakses oleh siapa saja?
+    - Saya ingin tahu siapa yang bisa membuka menu Medical Record FAR
+    - Tolong jelaskan siapa yang dapat masuk ke menu Medical Record FAR
+    - Siapa yang memiliki izin mengakses menu Medical Record FAR?
+    - Apakah dokter bisa mengakses menu Medical Record FAR?
+    - Bisakah paramedis membuka menu Medical Record FAR?
+    - Role apa yang bisa mengakses menu Medical Record FAR?
+    - Siapa yang dapat melihat data Medical Record FAR?
+    - Bagaimana aturan akses menu Medical Record FAR?
+    - Siapa yang boleh menambah data di Medical Record FAR?
+    - Siapa yang bertanggung jawab mengisi data di Medical Record FAR?
+    - Role apa saja yang memiliki akses ke Medical Record FAR?
+    - Apakah paramedis hanya bisa melihat atau juga menambah data Medical Record FAR?
+    - Dokter bisa menambah data Medical Record FAR di project site mana?
+    - Siapa yang dapat melihat hasil kunjungan FAR di berbagai project site?
+    - Siapa yang bisa menambah data di Medical Record FAR sesuai project site?
+    - Tolong jelaskan hak akses untuk menu Medical Record FAR
+    - Bagaimana cara mengakses menu Medical Record FAR?
+    - Bagaimana prosedur untuk membuka Medical Record FAR?
+    - Cara akses menu Medical Record FAR itu bagaimana?
+    - Bagaimana langkah-langkah mengakses Medical Record FAR?
+    - Bisa jelaskan cara buka menu Medical Record FAR?
+    - Apa langkah yang harus dilakukan untuk mengakses Medical Record FAR?
+    - Beri tahu gimana cara masuk ke menu Medical Record FAR
+    - Bagaimana proses membuka menu Medical Record FAR?
+    - Saya butuh panduan mengakses Medical Record FAR
+    - Bagaimana dokter atau paramedis bisa membuka menu Medical Record FAR?
+    - Apa saja langkah untuk akses Medical Record FAR?
+    - Bagaimana cara masuk ke halaman Medical FAR?
+    - Tolong jelaskan akses menu ke Medical Record FAR secara detail
+    - Bagaimana cara masuk ke menu Medical FAR?
+
+- intent: how_to_search_medical_record_far_data_medic_id
+  examples: |
+    - Bagaimana cara mencari data Medical Record FAR berdasarkan keyword?
+    - Tolong jelaskan cara mencari Medical Record FAR dengan filter
+    - Saya ingin tahu cara mencari Medical Record FAR pakai kata kunci atau filter
+    - Bagaimana prosedur mencari data Medical Record FAR dengan filter dan keyword?
+    - Bagaimana cara pakai filter untuk mencari Medical Record FAR?
+    - Bagaimana langkah mencari Medical Record FAR berdasarkan NIK atau Nama?
+    - Apa langkah mencari Medical Record FAR dengan Visit Classification?
+    - Bagaimana cara mencari data Medical Record FAR dengan Status Kunjungan?
+    - Bagaimana mencari Medical Record FAR berdasarkan rentang tanggal?
+    - Tolong jelaskan pencarian Medical Record FAR pakai keyword dan filter
+    - Bagaimana cara mencari Medical Record FAR dengan filter di tampilan dokter?
+    - Saya ingin tahu cara mencari Medical Record FAR dengan keyword dan filter sekaligus
+    - Bagaimana cara melakukan pencarian Medical Record FAR dengan berbagai filter?
+    - Bagaimana cara mencari data Medical Record FAR dengan kata kunci dan filter yang tersedia?
+    - Tolong beri tahu cara menggunakan fitur pencarian Medical Record FAR
+    - Apa saja cara mencari Medical Record FAR dengan filter dan keyword?
+    - Bagaimana langkah menggunakan pencarian di Medical Record FAR?
+    - Bagaimana cara mencari data FAR dengan filter yang tepat?
+    - Bagaimana prosedur mencari Medical Record FAR berdasarkan berbagai kriteria?
+    - Bagaimana cara memfilter hasil medical FAR?
+    - Langkah-langkah menggunakan fitur filter di medical far?
+    - Gimana cara mencari data dengan filter di medical far?
+    - Apa yang bisa saya filter di menu medical Far?
+    - Apa yang harus saya lakukan untuk memfilter berdasarkan status kunjungan di Medical FAR?
+    - Bagaimana cara mengatur urutan hasil Medical FAR?
+
+- intent: status_follow_up_medical_records_far_medic_id
+  examples: |
+    - Apa itu Status Follow-Up dalam Medical Record FAR?
+    - Jelaskan apa yang dimaksud dengan Status Follow-Up di Medical Record FAR
+    - Bisa jelaskan arti Status Follow-Up pada Medical Record FAR?
+    - Apa makna Status Follow-Up dalam Medical Record FAR?
+    - Apa penjelasan tentang Status Follow-Up di Medical Record FAR?
+    - Bagaimana pengertian Status Follow-Up dalam Medical Record FAR?
+    - Apa saja jenis Status Follow-Up dalam Medical Record FAR?
+    - Tolong terangkan arti Status Follow-Up dalam Medical Record FAR
+    - Apa definisi Status Follow-Up pada Medical Record FAR?
+    - Bisa jelaskan kegunaan Status Follow-Up di Medical Record FAR?
+    - Apa yang dimaksud dengan Status Follow-Up di Medical Record FAR?
+    - Jelaskan fungsi Status Follow-Up dalam Medical Record FAR
+    - Apa arti Status Follow-Up Open, Close, dan Open Overdue?
+    - Bagaimana status Follow-Up di Medical Record FAR diartikan?
+    - Apa perbedaan Status Follow-Up Open dan Close?
+    - Apa itu Status Follow-Up Open Overdue di Medical Record FAR?
+    - Tolong jelaskan Status Follow-Up Open Overdue dalam Medical Record FAR
+    - Bagaimana cara memahami Status Follow-Up dalam Medical Record FAR?
+    - Apa makna masing-masing Status Follow-Up dalam Medical Record FAR?
+    - Bisa jelaskan detail Status Follow-Up dalam Medical Record FAR?
+    - Apa arti dari status open pada Status Follow-Up?
+    - Apa arti dari status close pada Status Follow-Up?
+
+- intent: what_is_total_visit_medical_record_far_medic_id
+  examples: |
+    - Apa itu total visit dalam Medical Record FAR?
+    - Jelaskan apa yang dimaksud dengan total visit di Medical Record FAR
+    - Bisa jelaskan arti total visit pada Medical Record FAR?
+    - Apa makna total visit dalam Medical Record FAR?
+    - Apa penjelasan tentang total visit di Medical Record FAR?
+    - Bagaimana pengertian total visit dalam Medical Record FAR?
+    - Apa itu total visit dalam konteks Medical Record FAR?
+    - Tolong terangkan arti total visit dalam Medical Record FAR
+    - Apa definisi total visit pada Medical Record FAR?
+    - Bisa jelaskan kegunaan total visit di Medical Record FAR?
+    - Apa yang dimaksud dengan total visit di Medical Record FAR?
+    - Jelaskan fungsi total visit dalam Medical Record FAR
+    - Apa arti total visit yang tercatat dalam Medical Record FAR?
+    - Bagaimana cara menghitung total visit dalam Medical Record FAR?
+    - Apa itu Initial Visit dan Follow-Up Visit dalam total visit?
+    - Tolong jelaskan perbedaan Initial Visit dan Follow-Up Visit
+    - Apa hubungan Initial Visit dan Follow-Up Visit dengan total visit?
+    - Bagaimana total visit mempengaruhi laporan Medical Record FAR?
+    - Apa yang termasuk dalam total visit Medical Record FAR?
+    - Bisa jelaskan detail total visit di Medical Record FAR?
+
+- intent: ask_the_difference_in_the_appearance_of_medical_record_far_medic_id
+  examples: |
+    - Apa perbedaan tampilan Medical Record FAR antara dokter dan paramedis?
+    - Jelaskan perbedaan tampilan Medical Record FAR untuk dokter dan paramedis
+    - Bisa jelaskan bedanya tampilan Medical Record FAR antara dokter dan paramedis?
+    - Apa saja perbedaan tampilan Medical Record FAR antara dokter dan paramedis?
+    - Gimana perbedaan tampilan Medical Record FAR dokter dan paramedis?
+    - Tolong jelaskan perbedaan menu Medical Record FAR dokter dan paramedis
+    - Apa perbedaan kolom yang terlihat oleh dokter dan paramedis di Medical Record FAR?
+    - Bagaimana tampilan Medical Record FAR berbeda untuk dokter dan paramedis?
+    - Apa saja kolom yang berbeda di Medical Record FAR antara dokter dan paramedis?
+    - Tolong jelaskan fitur tampilan Medical Record FAR dokter dan paramedis
+    - Apa beda tampilan Medical Record FAR dokter dan paramedis?
+    - Bagaimana user dokter dan paramedis melihat Medical Record FAR secara berbeda?
+    - Apa perbedaan hak akses tampilan Medical Record FAR dokter dan paramedis?
+    - Jelaskan kolom yang tersedia di Medical Record FAR untuk dokter dan paramedis
+    - Apa kolom yang hanya terlihat oleh dokter dalam Medical Record FAR?
+    - Bagaimana tampilan Medical Record FAR untuk paramedis dibandingkan dokter?
+    - Apa yang membedakan tampilan Medical Record FAR dokter dan paramedis?
+    - Tolong jelaskan perbedaan antara tampilan Medical Record FAR dokter dan paramedis
+    - Apa perbedaan detail tampilan Medical Record FAR untuk dokter dan paramedis?
+    - Jelaskan perbedaan fitur tampilan Medical Record FAR untuk dokter dan paramedis
+
+- intent: ask_function_feature_add_medical_record_far_medic_id
+  examples: |
+    - Apa fungsi fitur Add Medical Record FAR?
+    - Jelaskan kegunaan fitur Add Medical Record FAR untuk dokter dan paramedis
+    - Bisa jelaskan fitur Add Medical Record FAR?
+    - Apa itu fitur Add Medical Record FAR?
+    - Bagaimana fitur Add Medical Record FAR digunakan oleh dokter dan paramedis?
+    - Tolong jelaskan fitur Add Medical Record FAR di Medical Record FAR
+    - Apa kegunaan fitur Add Medical Record FAR dalam Medical Record FAR?
+    - Bagaimana cara fitur Add Medical Record FAR membantu dokter dan paramedis?
+    - Apa perbedaan penggunaan fitur Add Medical Record FAR antara dokter dan paramedis?
+    - Fitur Add Medical Record FAR itu untuk apa?
+    - Jelaskan manfaat fitur Add Medical Record FAR
+    - Apa yang dapat dilakukan dengan fitur Add Medical Record FAR?
+    - Bagaimana cara kerja fitur Add Medical Record FAR?
+    - Apa fungsi fitur Add Medical Record FAR dalam pencatatan kunjungan pasien?
+    - Tolong jelaskan fitur Add Medical Record FAR secara detail
+    - Apa yang dicatat dalam fitur Add Medical Record FAR?
+    - Bagaimana dokter dan paramedis memakai fitur Add Medical Record FAR?
+    - Apa isi data yang dimasukkan melalui fitur Add Medical Record FAR?
+    - Bisa jelaskan fitur Add Medical Record FAR untuk pencatatan hasil kunjungan?
+
+- intent: ask_data_input_add_medical_record_far_medic_id
+  examples: |
+    - Apa saja data yang diinput melalui fitur Add Medical Record FAR?
+    - Data apa saja yang dimasukkan lewat fitur Add Medical Record FAR?
+    - Tolong jelaskan data yang harus diisi pada fitur Add Medical Record FAR
+    - Informasi apa yang dicatat melalui fitur Add Medical Record FAR?
+    - Bisa jelaskan jenis data yang diinput dalam Add Medical Record FAR?
+    - Apa saja informasi yang perlu diinput saat menggunakan fitur Add Medical Record FAR?
+    - Data apa yang dimasukkan dokter dan paramedis lewat fitur Add Medical Record FAR?
+    - Apa saja yang harus diisi saat menambah data Medical Record FAR?
+    - Tolong jelaskan detail data input pada Add Medical Record FAR
+    - Apa jenis data yang dicatat dalam fitur Add Medical Record FAR?
+    - Apa saja data penting yang diinput di fitur Add Medical Record FAR?
+    - Tolong sebutkan data yang diinput melalui fitur Add Medical Record FAR
+    - Apa data yang dicatat saat menambahkan Medical Record FAR?
+    - Informasi apa saja yang harus dimasukkan lewat fitur Add Medical Record FAR?
+    - Apa saja data yang diisi dalam Add Medical Record FAR?
+    - Bisa jelaskan detail informasi yang diinput pada Add Medical Record FAR?
+    - Apa data yang harus dicatat oleh dokter atau paramedis saat menggunakan fitur Add Medical Record FAR?
+
+- intent: how_to_add_medical_record_far_medic_id
+  examples: |
+    - Bagaimana cara tambah Medical Record FAR?
+    - Tolong jelaskan cara add data Medical Record FAR
+    - Saya ingin tahu langkah menambahkan Medical Record FAR
+    - Bagaimana prosedur untuk menambahkan Medical Record FAR?
+    - Bagaimana langkah menambahkan data Medical Record FAR?
+    - Bisa jelaskan cara tambah Medical Record FAR?
+    - Apa saja langkah untuk add data Medical Record FAR?
+    - Bagaimana cara memasukkan data Medical Record FAR baru?
+    - Tolong beri tahu cara tambah data Medical Record FAR
+    - Bagaimana cara membuat entry Medical Record FAR baru?
+    - Apa proses menambahkan Medical Record FAR?
+    - Bagaimana cara input Medical Record FAR?
+    - Tolong jelaskan step by step menambahkan Medical Record FAR
+    - Bagaimana prosedur input data Medical Record FAR?
+    - Bagaimana dokter atau paramedis bisa menambah Medical Record FAR?
+    - Apa saja langkah-langkah untuk menambah Medical Record FAR?
+    - Tolong jelaskan proses tambah Medical Record FAR secara detail
+    - Bagaimana cara menambah data FAR yang baru?
+    - Apa langkah penting dalam menambah Medical Record FAR?
+    - Bagaimana cara menggunakan fitur Add Medical Record FAR?
+
+- intent: asked_visit_classification_select_visitor_medic_id
+  examples: |
+    - Apa yang terjadi jika saya memilih Visit Classification sebagai Visitor?
+    - Jelaskan apa yang terjadi saat memilih Visit Classification Visitor
+    - Bagaimana sistem jika Visit Classification dipilih Visitor?
+    - Apa beda jika memilih Visitor pada Visit Classification?
+    - Tolong jelaskan fitur Visit Classification Visitor
+    - Apa saja yang harus dilakukan jika memilih Visitor sebagai Visit Classification?
+    - Apa perbedaan saat pilih Visitor pada Visit Classification?
+    - Bagaimana cara kerja sistem ketika Visit Classification Visitor dipilih?
+    - Apa konsekuensi memilih Visitor di Visit Classification pada saat menambahkan menambahkan medical record FAR?
+    - Apa yang harus diinput jika memilih Visitor pada Visit Classification?
+    - Apa yang terjadi pada field Project Site saat memilih Visitor?
+    - Sistem bagaimana jika saya pilih Visitor di Visit Classification?
+    - Apa yang muncul jika nama Visitor sudah ada jika memilih Visit Classification sebagai Visitor?
+    - Apa yang harus diperhatikan saat memilih Visit Classification Visitor?
+    - Bagaimana prosedur jika memilih Visitor di Visit Classification?
+    - Apa perbedaan input antara Visitor dan Employee/Sub Con di Visit Classification?
+    - Apa aturan jika Visit Classification adalah Visitor?
+    - Bagaimana sistem menangani data Visitor yang sudah ada sebelumnya?
+    - Apa yang tampil di sistem saat Visit Classification dipilih Visitor?
+
+- intent: ask_type_of_visit_far_medic_id
+  examples: |
+    - Bagaimana cara menentukan tipe kunjungan FAR?
+    - Jelaskan cara memilih tipe kunjungan FAR antara Initial Visit dan Follow-Up Visit
+    - Bagaimana memilih tipe kunjungan FAR?
+    - Apa saja cara menentukan tipe kunjungan FAR?
+    - Bagaimana prosedur memilih tipe kunjungan FAR?
+    - Tolong jelaskan perbedaan Initial Visit dan Follow-Up Visit di FAR
+    - Kapan harus memilih Initial Visit atau Follow-Up Visit?
+    - Bagaimana sistem menentukan tipe kunjungan FAR?
+    - Apa aturan memilih tipe kunjungan FAR?
+    - Bagaimana cara kerja tipe kunjungan FAR?
+    - Bagaimana dokter menentukan tipe kunjungan FAR?
+    - Apa perbedaan tipe kunjungan FAR?
+    - Tolong jelaskan langkah memilih tipe kunjungan FAR
+    - Bagaimana cara sistem menampilkan tipe kunjungan FAR?
+    - Apa yang harus diperhatikan dalam memilih tipe kunjungan FAR?
+    - Bagaimana mengetahui pasien termasuk Initial Visit atau Follow-Up Visit?
+    - Kapan pasien dianggap Follow-Up Visit?
+    - Bagaimana memilih tipe kunjungan untuk pasien lama dan baru?
+    - Apa saja ketentuan dalam menentukan tipe kunjungan FAR?
+    - Tolong jelaskan detail pemilihan tipe kunjungan FAR
+
+- intent: ask_how_to_choose_visit_date_far_medic_id
+  examples: |
+    - Bagaimana cara memilih tanggal kunjungan FAR?
+    - Tolong jelaskan cara memilih tanggal kunjungan FAR
+    - Saya ingin tahu cara memilih tanggal kunjungan FAR
+    - Bagaimana memilih tanggal kunjungan FAR?
+    - Apa prosedur memilih tanggal kunjungan FAR?
+    - Bagaimana cara menentukan tanggal kunjungan FAR?
+    - Tolong jelaskan aturan memilih tanggal kunjungan FAR
+    - Bagaimana sistem menentukan tanggal kunjungan FAR?
+    - Bagaimana cara memilih tanggal kunjungan untuk Initial Visit dan Follow-Up Visit?
+    - Apa saja aturan memilih tanggal kunjungan FAR?
+    - Bagaimana memilih tanggal kunjungan FAR dengan benar?
+    - Apa perbedaan pemilihan tanggal kunjungan untuk Initial dan Follow-Up Visit?
+    - Tolong jelaskan langkah memilih tanggal kunjungan FAR
+    - Bagaimana dokter memilih tanggal kunjungan FAR?
+    - Apa batasan tanggal kunjungan FAR untuk Initial dan Follow-Up Visit?
+    - Bagaimana memilih tanggal kunjungan FAR jika pasien sudah pernah datang?
+    - Apa aturan tanggal kunjungan FAR untuk pasien baru dan lama?
+    - Tolong jelaskan cara kerja pemilihan tanggal kunjungan FAR
+    - Bagaimana sistem membatasi tanggal kunjungan FAR?
+    - Bagaimana cara memilih tanggal kunjungan FAR yang sesuai?
+
+- intent: ask_choice_illness_statement_medic_id
+  examples: |
+    - Apa saja pilihan dalam field Keterangan Sakit?
+    - Jelaskan pilihan yang ada di field Keterangan Sakit
+    - Pilihan apa saja yang tersedia di Keterangan Sakit?
+    - Tolong sebutkan pilihan di field Keterangan Sakit
+    - Apa opsi yang harus dipilih di Keterangan Sakit?
+    - Bagaimana pilihan dalam field Keterangan Sakit?
+    - Apa pilihan yang ada dalam Keterangan Sakit?
+    - Bisa jelaskan opsi di field Keterangan Sakit?
+    - Apa saja jenis Keterangan Sakit yang tersedia?
+    - Tolong jelaskan jenis pilihan Keterangan Sakit
+    - Apa saja pilihan wajib di field Keterangan Sakit?
+    - Bagaimana sistem menentukan pilihan Keterangan Sakit?
+    - Apa arti dari setiap opsi field pilihan Keterangan Sakit?
+    - Apa yang dimaksud dengan pilihan Keterangan Sakit?
+    - Apa pilihan dalam Keterangan Sakit yang harus diisi?
+    - Jelaskan opsi Keterangan Sakit untuk pasien
+    - Apa perbedaan pilihan Keterangan Sakit?
+    - Tolong sebutkan jenis Keterangan Sakit yang wajib
+    - Apa fungsi pilihan di Keterangan Sakit?
+    - Bagaimana cara memilih Keterangan Sakit yang benar?
+    - Apa itu filed Keterangan Sakit?
+
+- intent: asked_how_input_shift_loss_rest_day_medic_id
+  examples: |
+    - Bagaimana cara menginput Shift Loss dan Rest Day?
+    - Tolong jelaskan cara input Shift Loss dan Rest Day
+    - Bagaimana memasukkan data Shift Loss dan Rest Day?
+    - Apa langkah mengisi Shift Loss dan Rest Day?
+    - Bagaimana cara isi Shift Loss dan Rest Day di sistem?
+    - Tolong beri tahu cara input Shift Loss dan Rest Day
+    - Bagaimana prosedur mengisi Shift Loss dan Rest Day?
+    - Apa aturan pengisian Shift Loss dan Rest Day?
+    - Bagaimana sistem mengatur input Shift Loss dan Rest Day?
+    - Apa saja yang harus diperhatikan saat menginput Shift Loss dan Rest Day?
+    - Bagaimana cara kerja input Shift Loss dan Rest Day?
+    - Tolong jelaskan langkah input Shift Loss dan Rest Day
+    - Bagaimana cara mengisi Shift Loss dan Rest Day dengan benar?
+    - Apa fungsi Shift Loss dan Rest Day?
+    - Bagaimana cara menginput Shift Loss dan Rest Day ketika memilih Sick Leave?
+    - Apa yang terjadi saat mengisi Shift Loss dan Rest Day?
+    - Bagaimana input Shift Loss mempengaruhi Rest Day?
+    - Tolong jelaskan hubungan Shift Loss dan Rest Day
+    - Bagaimana sistem menghitung Rest Day dari Shift Loss?
+    - Apa saja ketentuan input Shift Loss dan Rest Day?
+
+- intent: add_allergy_data_medical_record_far_medic_id
+  examples: |
+    - Bagaimana cara menambahkan data Allergy?
+    - Tolong jelaskan cara tambah data Allergy di medical record far
+    - Bagaimana prosedur menambahkan data Allergy di sistem medic?
+    - Apa langkah menambah data Allergy?
+    - Bagaimana cara input data Allergy di Medical Record FAR?
+    - Tolong beri tahu cara menambahkan data Allergy
+    - Bagaimana dokter/paramedis menambah data Allergy?
+    - Apa langkah-langkah untuk menambah data Allergy?
+    - Bagaimana cara memasukkan data alergi?
+    - Apa prosedur untuk menambahkan data alergi?
+    - Tolong jelaskan cara input alergi baru di medic
+    - Bagaimana sistem menangani penambahan data Allergy?
+    - Bagaimana cara pakai fitur tambah Allergy?
+    - Bagaimana menambahkan informasi alergi?
+    - Apa saja langkah menambah data Allergy?
+    - Tolong jelaskan proses menambahkan alergi di Medical Record FAR
+    - Bagaimana cara simpan data Allergy baru?
+    - Bagaimana menambahkan alergi pada Medical Record FAR?
+    - Tolong beri tahu prosedur tambah Allergy
+    - Apa cara tepat menambah data Allergy?
+
+- intent: edit_allergy_data_medical_record_far_medic_id
+  examples: |
+    - Bagaimana cara mengedit data Allergy?
+    - Tolong jelaskan cara edit data Allergy
+    - Bagaimana prosedur mengubah data Allergy?
+    - Apa langkah mengedit data Allergy?
+    - Bagaimana cara memperbarui data Allergy di Medical Record FAR?
+    - Tolong beri tahu cara mengedit data Allergy
+    - Bagaimana dokter/paramedis mengubah data Allergy?
+    - Apa langkah-langkah untuk mengedit data Allergy?
+    - Bagaimana cara memperbaiki data alergi?
+    - Apa prosedur untuk mengupdate data alergi?
+    - Tolong jelaskan cara edit alergi yang sudah ada
+    - Bagaimana sistem menangani pengeditan data Allergy?
+    - Bagaimana cara pakai fitur edit Allergy?
+    - Bagaimana memperbarui informasi alergi?
+    - Apa saja langkah untuk mengubah data Allergy?
+    - Tolong jelaskan proses pengeditan alergi di Medical Record FAR
+    - Bagaimana cara simpan perubahan data Allergy?
+    - Bagaimana mengedit alergi pada Medical Record FAR?
+    - Tolong beri tahu prosedur edit data Allergy
+    - Gimana cara memperbatui data Allerg di medicy?
+
+- intent: delete_allergy_data_medical_record_far_medic_id
+  examples: |
+    - Bagaimana cara menghapus data Allergy?
+    - Tolong jelaskan cara hapus data Allergy
+    - Bagaimana prosedur menghapus data Allergy?
+    - Apa langkah menghapus data Allergy?
+    - Bagaimana cara menghapus data Allergy di Medical Record FAR?
+    - Tolong beri tahu cara menghapus data Allergy di menu medical record far
+    - Bagaimana dokter/paramedis menghapus data Allergy?
+    - Apa langkah-langkah untuk menghapus data Allergy?
+    - Bagaimana cara menghilangkan data alergi?
+    - Apa prosedur untuk menghapus data alergi?
+    - Tolong jelaskan cara menghapus alergi yang sudah ada
+    - Bagaimana sistem menangani penghapusan data Allergy?
+    - Bagaimana cara pakai fitur hapus Allergy?
+    - Bagaimana menghapus informasi alergi?
+    - Apa saja langkah untuk menghapus data Allergy?
+    - Tolong jelaskan proses penghapusan alergi di Medical Record FAR
+    - Bagaimana cara menghapus data Allergy secara permanen?
+    - Bagaimana menghapus alergi pada Medical Record FAR?
+    - Tolong beri tahu prosedur hapus data Allergy di medic
+    - Apa cara tepat menghapus data Allergy?
+
+- intent: ask_feature_view_detail_all_medical_record_far_medic_id
+  examples: |
+    - Apa itu fitur View Detail All Medical Record FAR?
+    - Jelaskan fitur View Detail All Medical Record FAR
+    - Bisa jelaskan fungsi View Detail All Medical Record FAR?
+    - Apa kegunaan fitur View Detail All Medical Record FAR?
+    - Apa maksud dari fitur View Detail All Medical Record FAR?
+    - Bagaimana fitur View Detail All Medical Record FAR bekerja?
+    - Apa saja yang bisa dilihat dengan fitur View Detail All Medical Record FAR?
+    - Tolong jelaskan fitur View Detail All Medical Record FAR
+    - Apa manfaat fitur View Detail All Medical Record FAR?
+    - Bagaimana cara kerja View Detail All Medical Record FAR?
+    - Apa isi fitur View Detail All Medical Record FAR?
+    - Apa fungsi utama View Detail All Medical Record FAR?
+    - Apa yang termasuk dalam fitur View Detail All Medical Record FAR?
+    - Bisa jelaskan fitur View Detail All Medical Record FAR secara detail?
+    - Apa fitur yang ditawarkan oleh View Detail All Medical Record FAR?
+    - Apa tujuan fitur View Detail All Medical Record FAR?
+    - Apa informasi yang ditampilkan dalam View Detail All Medical Record FAR?
+    - Informasi apa yang dapat saya lihat di View Detail All Medical Record FAR?
+    - Apa saja informasi yang tersedia di View Detail All Medical Record FAR?
+    - Jelaskan informasi yang ada di View Detail All Medical Record FAR.
+    - Bisa jelaskan apa saja yang tampil di View Detail All Medical Record FAR?
+    - Informasi yang ditampilkan dalam View Detail All Medical Record FAR apa saja?
+
+- intent: how_to_view_visit_history_far_medic_id
+  examples: |
+    - Bagaimana cara melihat riwayat kunjungan FAR pengguna?
+    - Tolong jelaskan cara melihat riwayat kunjungan FAR
+    - Bagaimana melihat histori kunjungan FAR pengguna?
+    - Apa langkah untuk melihat riwayat kunjungan FAR?
+    - Bagaimana cara mengakses riwayat kunjungan FAR?
+    - Tolong beri tahu cara lihat riwayat kunjungan FAR
+    - Bagaimana dokter/paramedis melihat riwayat kunjungan FAR?
+    - Apa prosedur melihat riwayat kunjungan FAR pengguna?
+    - Bagaimana cara menampilkan riwayat kunjungan FAR?
+    - Tolong jelaskan langkah-langkah melihat riwayat kunjungan FAR
+    - Bagaimana sistem menampilkan riwayat kunjungan FAR pengguna?
+    - Apa saja langkah melihat riwayat kunjungan FAR?
+    - Bagaimana cara cek riwayat kunjungan FAR pengguna?
+    - Apa cara melihat detail kunjungan FAR?
+    - Bagaimana cara menelusuri riwayat kunjungan FAR?
+    - Apa yang harus dilakukan untuk melihat riwayat kunjungan FAR?
+    - Tolong jelaskan cara buka riwayat kunjungan FAR
+    - Bagaimana membuka detail riwayat kunjungan FAR?
+    - Apa langkah yang harus diikuti untuk melihat riwayat kunjungan FAR?
+    - Bagaimana melihat histori lengkap kunjungan FAR pengguna?
+
+- intent: how_to_search_data_results_of_visits_far_medic_id
+  examples: |
+    - Bagaimana cara melakukan pencarian data hasil kunjungan FAR pada halaman detail Medical Record FAR?
+    - Tolong jelaskan cara mencari data hasil kunjungan FAR di halaman detail Medical Record FAR
+    - Bagaimana cara mencari data kunjungan FAR di halaman detail Medical Record FAR?
+    - Apa langkah pencarian data hasil kunjungan FAR pada halaman detail Medical Record FAR?
+    - Bagaimana menggunakan fitur pencarian di halaman detail Medical Record FAR?
+    - Bagaimana cara filter data hasil kunjungan FAR di halaman detail Medical Record FAR?
+    - Tolong beri tahu cara mencari data kunjungan FAR secara detail
+    - Bagaimana mencari data hasil kunjungan FAR di Medical Record FAR?
+    - Apa prosedur pencarian data hasil kunjungan FAR di halaman detail Medical Record FAR?
+    - Bagaimana cara kerja pencarian data hasil kunjungan FAR?
+    - Apa saja langkah pencarian data kunjungan FAR?
+    - Tolong jelaskan fitur pencarian di halaman detail Medical Record FAR
+    - Bagaimana dokter/paramedis mencari data hasil kunjungan FAR?
+    - Apa fitur pencarian data kunjungan FAR yang tersedia?
+    - Bagaimana cara filter data kunjungan FAR berdasarkan tanggal dan status?
+    - Bagaimana mencari hasil kunjungan FAR yang spesifik di halaman detail?
+    - Apa aturan pencarian data kunjungan FAR di Medical Record FAR?
+    - Bagaimana sistem menampilkan hasil pencarian kunjungan FAR?
+    - Tolong jelaskan cara mencari data kunjungan FAR dengan filter
+    - Bagaimana cara menemukan data hasil kunjungan FAR di halaman detail Medical Record FAR?
+
+- intent: what_is_view_detail_visit_far_feature_medic_id
+  examples: |
+    - Apa itu fitur View Detail Visit FAR?
+    - Jelaskan fitur View Detail Visit FAR
+    - Bisa jelaskan fungsi View Detail Visit FAR?
+    - Apa kegunaan fitur View Detail Visit FAR?
+    - Apa maksud dari fitur View Detail Visit FAR?
+    - Bagaimana fitur View Detail Visit FAR bekerja?
+    - Apa saja yang bisa dilihat dengan fitur View Detail Visit FAR?
+    - Tolong jelaskan fitur View Detail Visit FAR
+    - Apa manfaat fitur View Detail Visit FAR?
+    - Apa fitur View Detail Visit FAR?
+    - Bagaimana cara kerja View Detail Visit FAR?
+    - Apa isi fitur View Detail Visit FAR?
+    - Apa fungsi utama View Detail Visit FAR?
+    - Apa yang termasuk dalam fitur View Detail Visit FAR?
+    - Bisa jelaskan fitur View Detail Visit FAR secara detail?
+    - Apa fitur yang ditawarkan oleh View Detail Visit FAR?
+    - Apa itu View Detail Visit FAR?
+    - Apa tujuan fitur View Detail Visit FAR?
+    - Apa yang ditampilkan dalam fitur View Detail Visit FAR?
+    - Tolong jelaskan kegunaan fitur View Detail Visit FAR
+
+- intent: how_to_access_view_detail_visit_far_medic_id
+  examples: |
+    - Bagaimana cara mengakses detail kunjungan Visit FAR pada salah satu karyawan?
+    - Tolong jelaskan cara membuka View Detail Visit FAR
+    - Bagaimana langkah mengakses View Detail Visit FAR?
+    - Apa prosedur membuka View Detail Visit FAR?
+    - Bagaimana cara melihat View Detail Visit FAR karyawan?
+    - Tolong beri tahu cara mengakses View Detail Visit FAR
+    - Bagaimana cara buka halaman View Detail Visit FAR?
+    - Apa langkah untuk mengakses View Detail Visit FAR?
+    - Bagaimana cara masuk ke View Detail Visit FAR?
+    - Tolong jelaskan langkah membuka View Detail Visit FAR
+    - Bagaimana cara pakai fitur View Detail Visit FAR?
+    - Apa saja langkah membuka View Detail Visit FAR?
+    - Bagaimana cara menampilkan View Detail Visit FAR?
+    - Bagaimana dokter/paramedis mengakses View Detail Visit FAR?
+    - Tolong beri tahu prosedur akses View Detail Visit FAR
+    - Apa cara melihat detail kunjungan FAR di View Detail Visit FAR?
+    - Bagaimana sistem menampilkan View Detail Visit FAR?
+    - Apa saja langkah yang harus diikuti untuk mengakses View Detail Visit FAR?
+    - Tolong jelaskan cara membuka detail kunjungan FAR
+    - Apa yang ditampilkan di halaman Detail Visit FAR?
+    - Informasi apa saja yang bisa dilihat di Detail Visit FAR?
+    - Jelaskan detail yang ditampilkan pada View Detail Visit FAR.
+    - Apa saja data yang ada pada halaman Detail Visit FAR?
+    - Apa informasi yang tersedia di Detail Visit FAR?
+    - Bisa jelaskan apa yang ada di halaman Detail Visit FAR?
+    - Apa saja yang ditampilkan dalam Detail Visit FAR?
+    - Berikan penjelasan mengenai informasi di View Detail Visit FAR.
+    - Apa saja yang bisa dilihat pada Detail Visit FAR?
+    - Informasi apa yang ada pada halaman Detail Visit FAR?
+
+- intent: doctor_access_result_visit_far_medic_id
+  examples: |
+    - Apakah Dokter dapat melihat semua hasil kunjungan FAR dari berbagai project site?
+    - Bisa Dokter melihat seluruh hasil kunjungan FAR di semua project site?
+    - Apakah Dokter memiliki akses melihat kunjungan FAR dari semua project site?
+    - Dapatkah Dokter melihat data kunjungan FAR dari berbagai project site?
+    - Apakah Dokter bisa akses hasil kunjungan FAR di semua project site?
+    - Bagaimana akses Dokter ke hasil kunjungan FAR di berbagai project site?
+    - Apakah Dokter dapat mengakses semua hasil kunjungan FAR?
+    - Apakah Dokter bisa melihat data FAR dari semua project site?
+    - Bisakah Dokter melihat riwayat kunjungan FAR di semua project site?
+    - Apakah Dokter diberikan akses untuk semua kunjungan FAR?
+    - Apakah Dokter boleh melihat kunjungan FAR dari seluruh project site?
+    - Dapatkah Dokter mengakses data FAR dari semua project site?
+    - Bagaimana hak akses Dokter pada hasil kunjungan FAR berbagai project site?
+    - Apakah Dokter memiliki izin melihat kunjungan FAR dari berbagai project site?
+    - Bolehkah Dokter melihat semua hasil kunjungan FAR dari semua site?
+    - Apakah Dokter dapat meninjau semua kunjungan FAR?
+    - Apakah Dokter berhak melihat kunjungan FAR seluruh project site?
+    - Apakah Dokter diberikan akses untuk melihat semua data kunjungan FAR?
+    - Apakah Dokter dapat melihat kunjungan FAR dari site lain?
+    - Bisakah Dokter mengakses hasil kunjungan FAR lintas project site?
+
+- intent: initial_followup_far_code_terms_medic_id
+  examples: |
+    - Bagaimana ketentuan Kode Initial Visit FAR & Follow Up FAR?
+    - Jelaskan ketentuan kode Initial Visit dan Follow Up FAR
+    - Apa aturan kode Initial Visit FAR dan Follow Up FAR?
+    - Bagaimana format kode kunjungan FAR untuk Initial Visit dan Follow Up?
+    - Tolong jelaskan cara kode Initial Visit dan Follow Up FAR dibuat
+    - Apa ketentuan pembuatan kode Initial Visit dan Follow Up FAR?
+    - Bagaimana aturan kode untuk Initial Visit dan Follow Up FAR?
+    - Apa saja ketentuan kode kunjungan FAR?
+    - Tolong beri tahu aturan kode kunjungan FAR untuk Initial dan Follow Up
+    - Bagaimana format kode kunjungan FAR?
+    - Jelaskan kode kunjungan Initial Visit dan Follow Up FAR
+    - Apa format kode FAR untuk Initial Visit dan Follow Up?
+    - Bagaimana kode FAR ditentukan untuk Initial dan Follow Up?
+    - Apa peraturan kode kunjungan FAR Initial dan Follow Up?
+    - Bagaimana kode FAR untuk kunjungan awal dan tindak lanjut?
+    - Tolong jelaskan kode kunjungan FAR Initial dan Follow Up secara detail
+    - Apa format kode untuk Initial Visit FAR dan Follow Up FAR?
+    - Bagaimana sistem membuat kode kunjungan FAR?
+    - Apa saja aturan kode FAR Initial dan Follow Up Visit?
+    - Bagaimana cara kerja kode kunjungan FAR?
+
+- intent: how_to_delete_visit_far_data_medic_id
+  examples: |
+    - Bagaimana cara menghapus data kunjungan Visit FAR?
+    - Tolong jelaskan cara hapus data kunjungan Visit FAR
+    - Bagaimana langkah menghapus data kunjungan Visit FAR?
+    - Apa prosedur menghapus data kunjungan Visit FAR?
+    - Bagaimana cara delete data kunjungan Visit FAR?
+    - Tolong beri tahu cara hapus data kunjungan Visit FAR
+    - Bagaimana dokter/paramedis menghapus data kunjungan Visit FAR?
+    - Apa langkah-langkah untuk menghapus data kunjungan Visit FAR?
+    - Bagaimana cara menghilangkan data kunjungan Visit FAR?
+    - Apa prosedur untuk menghapus data kunjungan FAR?
+    - Tolong jelaskan cara delete data kunjungan yang sudah ada
+    - Bagaimana sistem menangani penghapusan data kunjungan Visit FAR?
+    - Bagaimana cara pakai fitur hapus data kunjungan Visit FAR?
+    - Bagaimana delete informasi kunjungan FAR?
+    - Apa saja langkah untuk menghapus data kunjungan Visit FAR?
+    - Tolong jelaskan proses penghapusan kunjungan FAR di Medical Record FAR
+    - Bagaimana cara menghapus data kunjungan Visit FAR secara permanen?
+    - Bagaimana menghapus kunjungan FAR pada Medical Record FAR?
+    - Tolong beri tahu prosedur hapus data kunjungan Visit FAR
+    - Gimana caranya menghapus data kunjungan Visit FAR di sistem?
+
+- intent: ask_limits_delete_visit_far_data_medic_id
+  examples: |
+    - Apakah ada batasan dalam menghapus data Kunjungan Visit FAR?
+    - Apa saja batasan saat menghapus data kunjungan Visit FAR?
+    - Tolong jelaskan aturan menghapus data kunjungan Visit FAR
+    - Bagaimana ketentuan penghapusan data kunjungan Visit FAR?
+    - Apakah ada aturan dalam menghapus kunjungan Visit FAR?
+    - Bagaimana batasan hak akses untuk menghapus data kunjungan Visit FAR?
+    - Apakah dokter/paramedis boleh menghapus semua data kunjungan FAR?
+    - Apa syarat menghapus data kunjungan Visit FAR?
+    - Apakah ada pembatasan saat menghapus kunjungan Visit FAR?
+    - Tolong jelaskan aturan penghapusan data kunjungan Visit FAR
+    - Apakah tombol delete selalu aktif untuk semua kunjungan Visit FAR?
+    - Bagaimana aturan penghapusan kunjungan FAR dengan Follow Up?
+    - Apa konsekuensi menghapus Initial Visit dengan Follow Up?
+    - Apa yang harus diperhatikan saat menghapus data kunjungan FAR?
+    - Bagaimana pengaruh project site dalam hak hapus data kunjungan FAR?
+    - Apakah bisa menghapus kunjungan FAR dari project site lain?
+    - Tolong beri tahu ketentuan penghapusan data kunjungan FAR
+    - Apakah ada batasan akses untuk menghapus data kunjungan FAR?
+    - Apa yang terjadi jika menghapus Initial Visit yang punya Follow Up?
+    - Bagaimana aturan penghapusan data kunjungan FAR terkait project site?
+
+- intent: what_is_edit_visit_far_feature_medic_id
+  examples: |
+    - Apa itu fitur Edit Visit FAR?
+    - Jelaskan fitur Edit Visit FAR
+    - Bisa jelaskan fungsi Edit Visit FAR?
+    - Apa kegunaan fitur Edit Visit FAR?
+    - Apa maksud dari fitur Edit Visit FAR?
+    - Bagaimana fitur Edit Visit FAR bekerja?
+    - Apa saja yang bisa dilakukan dengan fitur Edit Visit FAR?
+    - Tolong jelaskan fitur Edit Visit FAR
+    - Apa manfaat fitur Edit Visit FAR?
+    - Apa fitur Edit Visit FAR?
+    - Bagaimana cara kerja Edit Visit FAR?
+    - Apa isi fitur Edit Visit FAR?
+    - Apa fungsi utama Edit Visit FAR?
+    - Apa yang termasuk dalam fitur Edit Visit FAR?
+    - Bisa jelaskan fitur Edit Visit FAR secara detail?
+    - Apa fitur yang ditawarkan oleh Edit Visit FAR?
+    - Apa itu Edit Visit FAR?
+    - Apa tujuan fitur Edit Visit FAR?
+    - Apa yang ditampilkan dalam fitur Edit Visit FAR?
+    - Tolong jelaskan kegunaan fitur Edit Visit FAR
+
+- intent: how_to_access_edit_visit_far_medic_id
+  examples: |
+    - Bagaimana cara mengakses Edit Visit FAR?
+    - Tolong jelaskan cara membuka Edit Visit FAR
+    - Bagaimana langkah mengakses Edit Visit FAR?
+    - Apa prosedur membuka Edit Visit FAR?
+    - Bagaimana cara mengedit kunjungan Visit FAR?
+    - Tolong beri tahu cara mengakses fitur Edit Visit FAR
+    - Bagaimana cara masuk ke Edit Visit FAR?
+    - Apa langkah untuk membuka Edit Visit FAR?
+    - Bagaimana cara menggunakan fitur Edit Visit FAR?
+    - Tolong jelaskan langkah membuka Edit Visit FAR
+    - Bagaimana dokter/paramedis mengakses Edit Visit FAR?
+    - Apa saja langkah membuka Edit Visit FAR?
+    - Bagaimana cara menampilkan Edit Visit FAR?
+    - Bagaimana cara buka halaman Edit Visit FAR?
+    - Apa prosedur untuk mengedit data kunjungan FAR?
+    - Bagaimana mengakses halaman Edit Visit FAR?
+    - Tolong jelaskan cara akses Edit Visit FAR secara detail
+    - Apa cara mengakses fitur Edit Visit FAR di Medical Record FAR?
+    - Bagaimana sistem menampilkan halaman Edit Visit FAR?
+    - Apa yang harus dilakukan untuk mengakses Edit Visit FAR?
+
+- intent: terms_edit_visit_far_data_medic_id
+  examples: |
+    - Apa saja ketentuan dalam Edit Visit FAR?
+    - Jelaskan ketentuan dalam melakukan Edit Visit FAR
+    - Apa aturan yang berlaku saat mengedit kunjungan FAR?
+    - Bagaimana ketentuan pengeditan data kunjungan FAR?
+    - Apa saja aturan dalam melakukan edit Visit FAR?
+    - Tolong jelaskan ketentuan untuk mengedit Visit FAR
+    - Apa ketentuan pengeditan data kunjungan Visit FAR?
+    - Bagaimana cara mengedit data kunjungan FAR dengan ketentuan yang ada?
+    - Apa yang boleh dan tidak boleh diubah dalam Edit Visit FAR?
+    - Apa syarat untuk mengedit kunjungan Visit FAR?
+    - Apa saja ketentuan yang berlaku saat mengedit kunjungan FAR?
+    - Tolong beri tahu ketentuan Edit Visit FAR
+    - Apa saja pembatasan dalam Edit Visit FAR?
+    - Apa yang perlu diperhatikan saat mengedit Visit FAR?
+    - Apakah ada batasan dalam Edit Visit FAR?
+    - Bagaimana cara mengedit Visit FAR sesuai ketentuan?
+    - Apa yang diizinkan untuk diubah saat Edit Visit FAR?
+    - Tolong beri tahu aturan edit kunjungan FAR
+    - Apakah ada ketentuan khusus dalam Edit Visit FAR?
+    - Bagaimana cara mengetahui ketentuan dalam Edit Visit FAR?
+
+- intent: rules_change_code_visit_far_medic_id
+  examples: |
+    - Bagaimana perubahan kode kunjungan FAR jika terdapat pengeditan data?
+    - Apa yang terjadi pada kode kunjungan FAR jika data diubah?
+    - Bagaimana perubahan kode FAR jika ada pengeditan data kunjungan?
+    - Apa yang akan terjadi pada kode kunjungan FAR jika data diubah oleh Dokter?
+    - Apa dampak pengeditan data terhadap kode kunjungan FAR?
+    - Bagaimana kode FAR berubah jika ada perubahan data?
+    - Apakah kode FAR akan berubah jika ada pengeditan data kunjungan?
+    - Bagaimana cara kerja kode FAR setelah pengeditan data dilakukan?
+    - Apa yang mempengaruhi perubahan kode kunjungan FAR?
+    - Jika data kunjungan FAR diedit, bagaimana perubahan kode yang terjadi?
+    - Apakah kode kunjungan FAR akan diubah setelah data diperbarui?
+    - Bagaimana kode kunjungan FAR berfungsi setelah perubahan data?
+    - Apakah kode kunjungan FAR tetap sama setelah pengeditan data?
+    - Bagaimana sistem menyesuaikan kode kunjungan FAR setelah pengeditan?
+    - Bagaimana cara kode kunjungan FAR diupdate setelah data diedit?
+    - Apakah perubahan data kunjungan akan mempengaruhi kode kunjungan FAR?
+    - Bagaimana kode kunjungan FAR diubah setelah pengeditan?
+    - Apa ketentuan kode kunjungan FAR setelah data diperbarui?
+    - Apakah kode kunjungan FAR otomatis berubah jika ada perubahan data?
+    - Apa saja faktor yang mempengaruhi perubahan kode kunjungan FAR?
+
+- intent: ask_limit_edit_visit_far_data_medic_id
+  examples: |
+    - Apakah ada batasan dalam mengedit data Kunjungan Visit FAR?
+    - Apa saja aturan dalam mengedit data kunjungan Visit FAR?
+    - Bagaimana ketentuan untuk mengedit data kunjungan Visit FAR?
+    - Apakah ada pembatasan dalam mengedit Visit FAR?
+    - Apa yang boleh dan tidak boleh diubah saat mengedit kunjungan Visit FAR?
+    - Apa yang menjadi batasan saat mengedit data kunjungan FAR?
+    - Bagaimana hak akses saat mengedit data kunjungan FAR?
+    - Apakah ada pembatasan akses saat mengedit kunjungan Visit FAR?
+    - Bagaimana aturan pengeditan data kunjungan FAR?
+    - Apakah tombol Edit akan nonaktif jika saya mengakses data project site lain?
+    - Apakah saya bisa mengedit data kunjungan Visit FAR dari project site lain?
+    - Bagaimana cara mengetahui batasan dalam mengedit data kunjungan FAR?
+    - Apakah ada ketentuan hak akses dalam mengedit Visit FAR?
+    - Apakah saya bisa mengedit data kunjungan FAR tanpa hak akses?
+    - Apakah hanya Dokter/Paramedis yang bisa mengedit data Visit FAR?
+    - Apakah tombol Edit akan dinonaktifkan untuk project site lain?
+    - Apa yang membatasi pengeditan data kunjungan FAR?
+    - Apa yang membedakan pengeditan data Visit FAR antar project site?
+    - Apakah ada batasan saat mengedit data FAR untuk Dokter atau Paramedis?
+    - Bagaimana sistem menanggapi pengeditan data kunjungan FAR jika saya mengakses project site lain?
+
+- intent: what_is_view_detail_follow_up_far_feature_medic_id
+  examples: |
+    - Apa itu fitur View Detail Follow Up FAR?
+    - Bisa jelaskan fitur View Detail Follow Up FAR?
+    - Apa fungsi dari fitur View Detail Follow Up FAR?
+    - Apa yang dimaksud dengan fitur View Detail Follow Up FAR?
+    - Apa kegunaan fitur View Detail Follow Up FAR?
+    - Bisa jelaskan fitur View Detail Follow Up FAR secara detail?
+    - Apa yang dapat dilihat melalui fitur View Detail Follow Up FAR?
+    - Bagaimana cara kerja fitur View Detail Follow Up FAR?
+    - Apa yang ditampilkan dalam fitur View Detail Follow Up FAR?
+    - Apa saja informasi yang bisa dilihat di fitur View Detail Follow Up FAR?
+    - Jelaskan tentang fitur View Detail Follow Up FAR
+    - Fitur View Detail Follow Up FAR digunakan untuk apa?
+    - Apa informasi yang ditampilkan di View Detail Follow Up FAR?
+    - Apa yang dimaksud dengan Follow Up FAR di fitur View Detail?
+    - Bagaimana cara menggunakan fitur View Detail Follow Up FAR?
+    - Apa manfaat fitur View Detail Follow Up FAR bagi Dokter/Paramedis?
+    - Apa yang bisa dilihat pada fitur View Detail Follow Up FAR untuk kunjungan follow-up?
+    - Apa yang tercakup dalam fitur View Detail Follow Up FAR?
+    - Apa saja detail yang ada pada View Detail Follow Up FAR?
+
+- intent: how_to_access_view_detail_follow_up_far_medic_id
+  examples: |
+    - Bagaimana cara mengakses View Detail Follow Up FAR?
+    - Apa langkah-langkah untuk mengakses View Detail Follow Up FAR?
+    - Bagaimana cara membuka halaman View Detail Follow Up FAR?
+    - Tolong jelaskan cara mengakses View Detail Follow Up FAR
+    - Apa prosedur untuk melihat detail follow up FAR?
+    - Bagaimana cara masuk ke fitur View Detail Follow Up FAR?
+    - Apa yang harus dilakukan untuk melihat detail Follow Up FAR?
+    - Bagaimana cara menggunakan fitur View Detail Follow Up FAR?
+    - Langkah-langkah mengakses View Detail Follow Up FAR?
+    - Bagaimana cara membuka detail kunjungan Follow Up FAR?
+    - Apa langkah mengakses View Detail Follow Up FAR?
+    - Bagaimana cara melihat Detail Follow Up FAR di menu Medical Record?
+    - Apa cara melihat informasi follow-up FAR?
+    - Bagaimana membuka halaman Detail Follow Up FAR?
+    - Bagaimana cara mengakses detail kunjungan Follow Up FAR?
+    - Bagaimana cara melihat detail Follow Up FAR setelah membuka Medical Record FAR?
+    - Apa yang perlu dilakukan untuk membuka detail Follow Up FAR?
+    - Bagaimana cara mengakses detail kunjungan Follow Up FAR melalui sistem?
+    - Apa yang harus saya klik untuk melihat detail Follow Up FAR?
+    - Apa yang harus dilakukan untuk melihat detail Follow Up FAR?
+    - Dimana saya bisa melihat detail Follow Up FAR?
+    - Bagaimana cara Melihat Detail Follow Up FAR?
+
+- intent: doctor_access_result_follow_up_far_medic_id
+  examples: |
+    - Apakah Dokter dapat melihat semua hasil Follow Up FAR dari berbagai project site?
+    - Dapatkah Dokter melihat semua hasil kunjungan Follow Up FAR dari project site lain?
+    - Apakah Dokter bisa mengakses semua hasil Follow Up FAR dari semua project site?
+    - Bisakah Dokter melihat hasil Follow Up FAR dari project site yang bukan tanggung jawabnya?
+    - Apakah Dokter memiliki akses untuk melihat semua hasil Follow Up FAR?
+    - Apa yang bisa dilihat oleh Dokter terkait Follow Up FAR di project site lain?
+    - Apakah Dokter dapat mengakses hasil kunjungan Follow Up FAR di semua project site?
+    - Bagaimana akses Dokter terhadap hasil Follow Up FAR di project site lain?
+    - Apakah ada batasan bagi Dokter untuk melihat hasil Follow Up FAR dari project site lainnya?
+    - Apakah Dokter bisa mengedit data Follow Up FAR dari project site lain?
+    - Bagaimana Dokter dapat melihat hasil Follow Up FAR dari project site yang bukan tanggung jawabnya?
+    - Apakah tombol Edit aktif untuk Dokter yang mengakses data Follow Up FAR dari project site lain?
+    - Bagaimana pengaturan akses Dokter terhadap Follow Up FAR dari project site lain?
+    - Apakah Dokter dapat melihat seluruh riwayat kunjungan Follow Up FAR dari project site lainnya?
+    - Apakah Dokter dapat melihat dan mengedit data Follow Up FAR dari project site yang bukan tanggung jawabnya?
+    - Bagaimana hak akses Dokter untuk melihat Follow Up FAR di project site lain?
+    - Apakah Dokter dapat mengakses dan mengedit data Follow Up FAR di seluruh project site?
+    - Dapatkah Dokter melihat dan mengedit data Follow Up FAR tanpa batasan?
+    - Apakah tombol Edit akan nonaktif jika Dokter mengakses data dari project site lain?
+    - Bagaimana cara Dokter mengakses data Follow Up FAR dari project site lain?
+
+- intent: what_is_edit_follow_up_far_feature_medic_id
+  examples: |
+    - Apa itu fitur Edit Follow Up FAR?
+    - Jelaskan tentang fitur Edit Follow Up FAR
+    - Apa kegunaan fitur Edit Follow Up FAR?
+    - Apa yang dimaksud dengan fitur Edit Follow Up FAR?
+    - Apa yang bisa dilakukan dengan fitur Edit Follow Up FAR?
+    - Bisakah Dokter/Paramedis mengedit data Follow Up FAR?
+    - Bagaimana cara kerja fitur Edit Follow Up FAR?
+    - Apa saja yang dapat diperbarui di fitur Edit Follow Up FAR?
+    - Apa fungsi dari Edit Follow Up FAR?
+    - Bagaimana cara menggunakan fitur Edit Follow Up FAR?
+    - Jelaskan fitur Edit Follow Up FAR secara rinci
+    - Apa yang dimaksud dengan pengeditan Follow Up FAR?
+    - Apa saja yang bisa diedit dalam fitur Edit Follow Up FAR?
+    - Apa saja informasi yang dapat diubah dalam Edit Follow Up FAR?
+    - Apa tujuan dari fitur Edit Follow Up FAR?
+    - Bagaimana fitur Edit Follow Up FAR membantu Dokter/Paramedis?
+    - Apa yang terjadi jika Dokter mengedit data Follow Up FAR?
+    - Apa yang diperbarui pada fitur Edit Follow Up FAR?
+    - Apa yang tercakup dalam fitur Edit Follow Up FAR?
+    - Apakah data pemeriksaan bisa diubah di fitur Edit Follow Up FAR?
+
+- intent: how_edit_data_follow_up_far_medic_id
+  examples: |
+    - Bagaimana cara mengedit data Follow Up FAR?
+    - Apa langkah-langkah untuk mengedit data Follow Up FAR?
+    - Bisa jelaskan cara mengedit data Follow Up FAR?
+    - Bagaimana prosedur mengedit data kunjungan Follow Up FAR?
+    - Apa yang harus dilakukan untuk mengedit data Follow Up FAR?
+    - Bagaimana cara mengubah data kunjungan Follow Up FAR?
+    - Apa langkah yang perlu diikuti untuk mengedit Follow Up FAR?
+    - Apakah saya bisa mengedit data Follow Up FAR?
+    - Bagaimana cara membuka halaman Edit Follow Up Visit FAR?
+    - Apa saja langkah mengedit data Follow Up FAR?
+    - Bagaimana cara mengakses fitur edit data Follow Up FAR?
+    - Apakah ada langkah tertentu untuk mengedit data Follow Up FAR?
+    - Bagaimana mengubah data Follow Up FAR dalam Medical Record FAR?
+    - Apa yang perlu dilakukan untuk memperbarui data Follow Up FAR?
+    - Bagaimana cara memperbarui data kunjungan Follow Up FAR?
+    - Bisakah saya mengedit data kunjungan Follow Up FAR di menu Medical Record FAR?
+    - Apa yang perlu dilakukan setelah mengedit data Follow Up FAR?
+    - Bagaimana cara menyimpan perubahan pada data Follow Up FAR?
+    - Apa yang terjadi setelah mengedit data Follow Up FAR?
+    - Bagaimana cara mengedit data Follow Up FAR jika ada kesalahan?
+
+- intent: ask_limits_edit_follow_up_far_data_medic_id
+  examples: |
+    - Apakah ada batasan dalam mengedit data Follow Up FAR?
+    - Apa saja aturan yang berlaku saat mengedit data Follow Up FAR?
+    - Apa ketentuan dalam mengedit data Follow Up FAR?
+    - Bagaimana aturan dalam mengedit data Follow Up FAR?
+    - Apakah saya bisa mengedit semua data Follow Up FAR?
+    - Apakah ada pembatasan hak akses dalam mengedit Follow Up FAR?
+    - Apakah ada batasan dalam mengedit Follow Up FAR jika statusnya Open?
+    - Apakah saya dapat mengedit Follow Up FAR jika sudah ada Follow Up baru?
+    - Bagaimana pengeditan dilakukan jika Follow Up FAR melewati Follow Up Date?
+    - Apakah saya bisa mengedit data Follow Up FAR setelah melewati tanggal Follow Up?
+    - Apa yang membatasi saya dalam mengedit data Follow Up FAR?
+    - Bagaimana cara mengedit data Follow Up FAR jika sudah lewat tanggal Follow Up?
+    - Apakah ada batasan jika Follow Up FAR statusnya Close?
+    - Apakah saya bisa mengedit Follow Up FAR dengan status Open jika sudah lewat tanggal Follow Up?
+    - Apa yang terjadi jika saya ingin mengedit data Follow Up FAR dari project site yang bukan tanggung jawab saya?
+    - Bagaimana dengan pengeditan data Follow Up FAR jika Keterangan Sakit adalah sick leave?
+    - Apakah saya dapat mengedit data Follow Up FAR setelah perubahan tanggal?
+    - Apa ketentuan terkait pengeditan Follow Up FAR jika ada Dokter yang berbeda yang login?
+    - Bagaimana pengaruh status close terhadap pengeditan data Follow Up FAR?
+    - Apakah tombol Edit akan nonaktif jika saya mencoba mengedit data Follow Up FAR di luar tanggung jawab saya?
+
+- intent: when_notifications_sent_in_medical_record_far_medic_id
+  examples: |
+    - Kapan notifikasi dalam sistem Medical Record FAR dikirimkan?
+    - Dalam kondisi apa notifikasi Medical Record FAR dikirim?
+    - Kapan saya akan menerima notifikasi dari Medical Record FAR?
+    - Apa saja momen pengiriman notifikasi di sistem Medical Record FAR?
+    - Bagaimana notifikasi Medical Record FAR terjadi?
+    - Kapan notifikasi dikirim kepada Dokter atau Paramedis di Medical Record FAR?
+    - Kapan notifikasi FAR muncul dalam sistem?
+    - Kapan sistem mengirim notifikasi terkait Medical Record FAR?
+    - Kapan saya mendapat notifikasi dari sistem Medical Record FAR?
+    - Dalam situasi apa notifikasi Medical Record FAR aktif?
+    - Apa kondisi yang memicu pengiriman notifikasi Medical Record FAR?
+    - Bagaimana mekanisme pengiriman notifikasi di Medical Record FAR?
+    - Apa yang menyebabkan notifikasi dikirim dalam Medical Record FAR?
+    - Kapan pemberitahuan dari sistem Medical Record FAR akan diterima?
+    - Apa saja pemicu notifikasi dalam sistem Medical Record FAR?
+    - Bagaimana cara kerja notifikasi di Medical Record FAR?
+    - Kapan sistem akan memberi tahu Dokter/Paramedis lewat notifikasi?
+    - Apa saat-saat penting untuk pengiriman notifikasi di Medical Record FAR?
+    - Bagaimana jadwal pengiriman alert dalam Medical Record FAR?
+    - Kapan tepatnya notifikasi dikirim oleh sistem Medical Record FAR?
+
+- intent: ask_when_no_visits_far_medic_id
+  examples: |
+    - Apa yang terjadi jika saya belum pernah melakukan kunjungan FAR?
+    - Apa yang akan ditampilkan jika saya belum melakukan kunjungan FAR?
+    - Bagaimana sistem menangani jika saya belum pernah melakukan kunjungan FAR?
+    - Apa yang akan muncul jika saya tidak punya riwayat kunjungan FAR?
+    - Jika saya belum pernah melakukan kunjungan FAR, apa yang ditampilkan?
+    - Apakah sistem menampilkan data jika saya belum pernah melakukan kunjungan FAR?
+    - Jika saya belum melakukan kunjungan FAR, apa yang bisa saya lihat?
+    - Apa pesan yang muncul jika saya tidak pernah melakukan kunjungan FAR?
+    - Jika saya belum melakukan kunjungan FAR, apakah ada informasi yang ditampilkan?
+    - Apa yang sistem tunjukkan jika belum ada kunjungan FAR?
+    - Apakah ada informasi yang muncul jika saya belum pernah mengunjungi FAR?
+    - Jika saya baru pertama kali menggunakan FAR, apa yang akan muncul?
+    - Apa yang akan terjadi jika saya tidak memiliki data kunjungan FAR?
+    - Bagaimana sistem merespons jika saya belum melakukan kunjungan FAR?
+    - Apakah ada pemberitahuan jika saya belum pernah melakukan kunjungan FAR?
+    - Apa pesan sistem jika saya belum melakukan kunjungan FAR?
+    - Apakah sistem akan memberi tahu jika tidak ada kunjungan FAR yang tercatat?
+    - Apa yang terjadi jika saya belum tercatat dalam sistem FAR?
+    - Bagaimana tampilan sistem jika saya tidak punya data kunjungan FAR?
+    - Apakah ada indikasi khusus jika saya belum melakukan kunjungan FAR?
+
+- intent: order_data_history_of_visit_far_medic_id
+  examples: |
+    - Bagaimana urutan data ditampilkan dalam Riwayat Kunjungan FAR?
+    - Apa urutan data pada Riwayat Kunjungan FAR?
+    - Bagaimana data kunjungan FAR ditampilkan di sistem?
+    - Apa urutan penampilan data pada Riwayat Kunjungan FAR?
+    - Bagaimana cara sistem menampilkan data Riwayat Kunjungan FAR?
+    - Apakah urutan data pada Riwayat Kunjungan FAR berdasarkan waktu?
+    - Bagaimana sistem mengurutkan data kunjungan FAR?
+    - Apakah data pada Riwayat Kunjungan FAR ditampilkan dari yang terbaru?
+    - Dalam urutan apa data kunjungan FAR ditampilkan?
+    - Apa yang menjadi dasar pengurutan data Riwayat Kunjungan FAR?
+    - Apakah data Riwayat Kunjungan FAR diurutkan berdasarkan tanggal?
+    - Urutan seperti apa yang digunakan untuk menampilkan Riwayat Kunjungan FAR?
+    - Bagaimana sistem mengurutkan kunjungan FAR dalam riwayat?
+    - Apakah urutan data di Riwayat Kunjungan FAR dimulai dari yang terbaru?
+    - Apakah yang pertama ditampilkan dalam Riwayat Kunjungan FAR adalah data terbaru?
+    - Apakah data kunjungan FAR yang terbaru selalu di atas?
+    - Bagaimana urutan pengurutan data dalam Riwayat Kunjungan FAR?
+    - Bagaimana cara kerja sistem dalam menampilkan Riwayat Kunjungan FAR?
+
+- intent: ask_every_medical_visit_if_follow_up_needs_medic_id
+  examples: |
+    - Apakah setiap kunjungan di Medical FAR memerlukan tindak lanjut?
+    - Semua kunjungan di Medical FAR membutuhkan tindak lanjut, bukan?
+    - Apakah kunjungan FAR selalu memerlukan tindak lanjut?
+    - Apakah hasil kunjungan FAR selalu membutuhkan tindak lanjut?
+    - Bagaimana jika hasil kunjungan FAR menunjukkan kondisi sehat, apakah saya perlu melakukan follow up di FAR?
+    - Apakah kunjungan yang hasilnya sehat memerlukan tindak lanjut?
+    - Bagaimana jika status kesehatan pasien Sehat setelah kunjungan FAR?
+    - Apakah kunjungan FAR dengan kondisi Sehat butuh Follow-Up?
+    - Apa yang terjadi jika hasil kunjungan FAR menunjukkan pasien sehat?
+    - Apa yang terjadi jika pasien tidak memerlukan tindak lanjut di FAR?
+    - Apakah status Follow-Up FAR akan berubah jika pasien sehat?
+    - Bagaimana jika kondisi pasien di FAR adalah Tidak Sehat?
+    - Bagaimana jika tindak lanjut tidak diperlukan pada kunjungan FAR?
+    - Apakah ada tindak lanjut untuk hasil Tidak Sehat di FAR?
+    - Bagaimana sistem menentukan apakah tindak lanjut diperlukan di FAR?
+    - Apakah setiap kunjungan FAR mencatat Next Follow-Up?
+    - Apakah kunjungan FAR selalu mencatat tanggal Follow-Up berikutnya?
+    - Apakah sistem mencatat Next Follow-Up untuk semua kunjungan FAR?
+    - Apakah kunjungan FAR selalu membutuhkan tanggal Follow-Up berikutnya?
+    - Apakah semua kondisi di FAR memerlukan Next Follow-Up?
+    - Bagaimana cara sistem menangani Next Follow-Up untuk pasien dengan status Tidak Sehat?
+
+- intent: what_to_do_if_you_have_a_next_follow_up_medic_id
+  examples: |
+    - Apa yang harus dilakukan pengguna jika memiliki Next Follow-Up?
+    - Bagaimana cara mengikuti Next Follow-Up yang ada?
+    - Apa yang perlu saya lakukan setelah mendapatkan tanggal Next Follow-Up?
+    - Apa yang harus saya lakukan jika saya memiliki tanggal Next Follow-Up?
+    - Bagaimana cara mengikuti jadwal Next Follow-Up yang ditentukan?
+    - Apa yang perlu dilakukan jika saya memiliki jadwal kunjungan FAR lebih lanjut?
+    - Apa yang harus saya cek jika ada Next Follow-Up di FAR?
+    - Apa yang perlu saya lakukan jika ada tanggal Follow-Up FAR yang sudah ditentukan?
+    - Bagaimana cara mempersiapkan diri untuk kunjungan Next Follow-Up di FAR?
+    - Jika saya memiliki jadwal next follow up , apa yang harus dilakukan?
+    - Bagaimana cara memastikan saya mengikuti Next Follow-Up yang dijadwalkan?
+    - Apa yang harus dilakukan jika saya tidak bisa datang pada tanggal Next Follow-Up?
+    - Apa yang harus saya lakukan jika saya memiliki jadwal kunjungan FAR selanjutnya?
+    - Apakah saya perlu melakukan sesuatu jika terdapat Next Follow-Up di FAR?
+    - Bagaimana saya bisa mengonfirmasi Next Follow-Up saya di FAR?
+    - Apa langkah yang harus saya ambil jika ada Next Follow-Up yang dijadwalkan?
+    - Apakah saya perlu menghubungi paramedis jika ada perubahan jadwal Follow-Up?
+    - Bagaimana cara memastikan kepatuhan terhadap Next Follow-Up di FAR?
+    - Apa yang perlu dilakukan jika saya menerima tanggal Next Follow-Up untuk kunjungan FAR?
+    - Apa yang perlu saya periksa jika ada Next Follow-Up yang dijadwalkan untuk saya?
+
+- intent: how_to_access_tab_results_of_visits_far_medic_id
+  examples: |
+    - Bagaimana cara mengakses Tab Hasil Kunjungan FAR?
+    - Apa langkah-langkah untuk membuka Tab Hasil Kunjungan FAR?
+    - Bagaimana cara menuju Tab Hasil Kunjungan FAR?
+    - Apa yang perlu dilakukan untuk mengakses Hasil Kunjungan FAR?
+    - Bagaimana cara melihat Hasil Kunjungan FAR di aplikasi?
+    - Apa yang perlu saya klik untuk membuka Tab Hasil Kunjungan FAR?
+    - Bagaimana cara menampilkan Hasil Kunjungan FAR di perangkat mobile?
+    - Apa yang harus dilakukan untuk melihat Hasil Kunjungan FAR di aplikasi mobile?
+    - Bagaimana saya bisa membuka Tab Hasil Kunjungan FAR?
+    - Apa langkah-langkah untuk melihat Hasil Kunjungan FAR di aplikasi Medic?
+    - Bagaimana cara mengakses informasi Hasil Kunjungan FAR?
+    - Apakah saya bisa mengakses Hasil Kunjungan FAR dari menu Medical?
+    - Bagaimana cara menuju halaman Hasil Kunjungan FAR di Medic Apps?
+    - Apa yang harus saya lakukan untuk melihat Detail Hasil Kunjungan FAR?
+    - Bagaimana cara mengakses Hasil Kunjungan FAR dari menu Medic Apps?
+    - Apa yang muncul setelah memilih Hasil Kunjungan FAR di aplikasi?
+    - Bagaimana cara menavigasi ke Hasil Kunjungan FAR dalam Medic Apps?
+    - Apa yang saya klik untuk melihat tab Hasil Kunjungan FAR?
+    - Bagaimana cara membuka tab Hasil Kunjungan FAR setelah masuk ke menu Medical?
+    - Bagaimana cara mengakses tab Hasil Kunjungan FAR untuk melihat detail?
+
+- intent: what_is_shown_in_the_far_visit_results_tab_medic_id
+  examples: |
+    - Apa yang ditampilkan di Tab Hasil Kunjungan FAR?
+    - Apa saja informasi yang ada di Tab Hasil Kunjungan FAR?
+    - Apa yang bisa saya lihat di Tab Hasil Kunjungan FAR?
+    - Apa yang muncul di Tab Hasil Kunjungan FAR?
+    - Bagaimana informasi di Tab Hasil Kunjungan FAR ditampilkan?
+    - Apa yang dapat ditemukan di Tab Hasil Kunjungan FAR?
+    - Informasi apa yang terdapat di Tab Hasil Kunjungan FAR?
+    - Apa saja informasi yang tertera di Tab Hasil Kunjungan FAR?
+    - Apa yang akan ditampilkan jika saya membuka Tab Hasil Kunjungan FAR?
+    - Informasi apa saja yang ada di Tab Hasil Kunjungan FAR?
+    - Apa yang ada di dalam Tab Hasil Kunjungan FAR?
+    - Bagaimana tampilan data di Tab Hasil Kunjungan FAR?
+    - Apa saja detail yang ada di Tab Hasil Kunjungan FAR?
+    - Tab Hasil Kunjungan FAR menampilkan apa saja?
+    - Apa yang bisa diakses di Tab Hasil Kunjungan FAR?
+    - Di mana saya bisa melihat hasil pemeriksaan FAR?
+    - Apa yang terlihat pada halaman Hasil Kunjungan FAR?
+    - Apa informasi yang ada di bagian Hasil Kunjungan FAR?
+    - Apa yang sistem tampilkan di Tab Hasil Kunjungan FAR?
+    - Bagaimana data pemeriksaan FAR ditampilkan di tab Hasil Kunjungan FAR?
+
+- intent: what_is_shift_loss_and_rest_day_in_results_far_medic_id
+  examples: |
+    - Apa yang dimaksud dengan Shift Loss dan Rest Day dalam hasil FAR?
+    - Apa itu Shift Loss dalam hasil FAR?
+    - Apa arti Rest Day dalam hasil FAR?
+    - Bagaimana Shift Loss dihitung dalam hasil FAR?
+    - Apa yang dimaksud dengan Shift Loss pada Sick Leave di FAR?
+    - Apa itu Rest Day yang tertera di hasil FAR?
+    - Apa hubungan antara Shift Loss dan Rest Day dalam hasil FAR?
+    - Apa yang dimaksud dengan Shift Loss terkait Sick Leave di FAR?
+    - Bagaimana Rest Day dihitung dalam FAR?
+    - Shift Loss itu apa dalam hasil FAR?
+    - Bagaimana cara kerja Shift Loss dan Rest Day pada FAR?
+    - Kapan Shift Loss dan Rest Day muncul dalam hasil FAR?
+    - Apa yang mempengaruhi nilai Shift Loss dan Rest Day di FAR?
+    - Bagaimana Shift Loss mempengaruhi hasil FAR?
+    - Mengapa Rest Day dihitung dalam FAR?
+    - Shift Loss terkait dengan Sick Leave, apa maksudnya?
+    - Apa itu Rest Day dalam laporan FAR?
+    - Apa itu Shift Loss dalam laporan FAR?
+    - Mengapa Shift Loss dan Rest Day hanya muncul pada Sick Leave?
+    - Apakah Shift Loss dan Rest Day selalu ada dalam hasil FAR?
+    - Bagaimana Shift Loss dan Rest Day dihasilkan dalam FAR?
+
+- intent: how_to_view_download_sick_leave_letter_far_medic_id
+  examples: |
+    - Bagaimana cara melihat surat sakit di Medical FAR?
+    - Gimana cara download surat sakit dari Medical FAR?
+    - Saya mau tahu cara mengunduh surat keterangan sakit di aplikasi Medic Apps.
+    - Bagaimana langkah-langkah untuk melihat dan mengunduh surat sakit?
+    - Cara akses surat keterangan istirahat di Medical FAR gimana ya?
+    - Bisa jelaskan bagaimana melihat file surat sakit di Medic Apps?
+    - Langkah apa saja untuk mengunduh surat sakit dari hasil Medical FAR?
+    - Saya ingin download surat sakit, bagaimana caranya?
+    - Tolong jelaskan cara mengakses surat sakit di aplikasi Medic Apps.
+    - Di mana saya bisa lihat dan unduh surat keterangan sakit?
+    - Bagaimana prosedur melihat surat sakit di Medical FAR?
+    - Cara download surat sakit melalui Medical FAR seperti apa?
+    - Bagaimana menampilkan file surat sakit dalam aplikasi Medic?
+    - Apakah bisa download surat sakit di Medical FAR? Caranya bagaimana?
+    - Saya ingin tahu cara download file surat keterangan sakit di Medical FAR.
+    - Bagaimana melihat dokumen surat sakit di aplikasi Medic?
+    - Bisa dijelaskan bagaimana cara membuka surat sakit di Medical FAR?
+    - Apa langkah untuk melihat dan mengunduh surat keterangan sakit?
+    - Tolong beri tahu cara download surat sakit dari Medic Apps.
+    - Bagaimana caranya untuk mengakses dan mengunduh surat sakit di Medical FAR?
+
+- intent: how_to_access_tab_results_of_follow_up_far_medic_id
+  examples: |
+    - Cara melihat Tab Hasil Follow Up di menu Medical FAR?
+    - Bagaimana cara mengakses tab Hasil Follow Up di Medical FAR?
+    - Apa langkah-langkah untuk melihat Tab Hasil Follow Up di Medical FAR?
+    - Bagaimana cara membuka Hasil Follow Up di menu Medical FAR?
+    - Apa yang harus dilakukan untuk membuka Tab Hasil Follow Up di FAR?
+    - Bagaimana cara melihat hasil Follow Up FAR di aplikasi Medic?
+    - Bagaimana membuka Tab Hasil Follow Up di aplikasi Medic FAR?
+    - Bagaimana cara melihat Hasil Follow Up FAR di mobile?
+    - Dimana saya bisa menemukan Tab Hasil Follow Up di Medical FAR?
+    - Bagaimana cara menavigasi ke Tab Hasil Follow Up di FAR?
+    - Apa yang saya klik untuk melihat Hasil Follow Up FAR di menu Medical FAR?
+    - Bagaimana cara akses Hasil Follow Up FAR setelah membuka menu Medical?
+    - Apa yang harus saya pilih untuk melihat Hasil Follow Up FAR?
+    - Bagaimana cara melihat hasil Follow Up pada aplikasi Medic FAR?
+    - Apa yang perlu saya lakukan untuk membuka tab Follow Up FAR?
+    - Bagaimana cara mengakses dan melihat Tab Hasil Follow Up FAR di aplikasi?
+    - Apa langkah untuk melihat hasil Follow Up di aplikasi Medic FAR?
+    - Bagaimana cara mengakses tab Follow Up FAR pada perangkat mobile?
+    - Bagaimana cara mengecek Hasil Follow Up FAR di aplikasi Medic?
+
+- intent: what_is_shown_in_tab_results_of_follow_up_far_medic_id
+  examples: |
+    - Apa yang ditampilkan di Tab Hasil Follow Up di Menu Medical FAR?
+    - Apa saja informasi yang ditampilkan di Tab Hasil Follow Up FAR?
+    - Apa yang terlihat pada Tab Hasil Follow Up di Medical FAR?
+    - Bagaimana informasi di Tab Hasil Follow Up Medical FAR ditampilkan?
+    - Informasi apa yang ada di Tab Hasil Follow Up FAR?
+    - Apa yang bisa saya lihat di Tab Hasil Follow Up di aplikasi Medic?
+    - Apa yang muncul di tab Hasil Follow Up FAR pada menu Medical?
+    - Apa yang ditampilkan di Tab Hasil Follow Up FAR pada aplikasi Medic?
+    - Bagaimana cara melihat informasi di Tab Hasil Follow Up FAR?
+    - Apa saja yang ada di Tab Hasil Follow Up FAR?
+    - Bagaimana informasi status follow up ditampilkan di Tab Hasil Follow Up FAR?
+    - Apa yang harus saya lihat di Tab Hasil Follow Up FAR?
+    - Apa informasi yang ada di dalam Tab Hasil Follow Up FAR?
+    - Apa yang tercantum di Tab Hasil Follow Up FAR pada menu Medical?
+    - Apa yang ditampilkan pada tab Hasil Follow Up FAR terkait status kesehatan?
+    - Di mana saya bisa menemukan status follow-up dalam Tab Hasil Follow Up FAR?
+    - Apa yang ditampilkan di bagian Riwayat Follow Up FAR?
+    - Bagaimana sistem menampilkan status follow-up di tab Hasil Follow Up FAR?
+    - Apa yang saya dapat lihat tentang kunjungan follow-up di Tab Hasil Follow Up FAR?
+    - Bagaimana rincian status follow-up ditampilkan di Tab Hasil Follow Up FAR?
+
+- intent: what_is_shown_on_the_follow_up_far_detail_page_mobile_medic_id
+  examples: |
+    - Apa yang ditampilkan di halaman Detail Follow Up FAR?
+    - Informasi apa saja yang ada di halaman Detail Follow Up FAR?
+    - Bisa jelaskan isi halaman Detail Follow Up FAR?
+    - Apa saja yang terlihat di halaman Detail Follow Up FAR?
+    - Apa yang muncul di halaman Detail Follow Up FAR?
+    - Bagaimana tampilan halaman Detail Follow Up FAR?
+    - Apa fitur utama di halaman Detail Follow Up FAR?
+    - Apa saja data yang ditampilkan pada halaman Detail Follow Up FAR?
+    - Halaman Detail Follow Up FAR berisi informasi apa saja?
+    - Bagaimana rincian yang ditampilkan di halaman Detail Follow Up FAR?
+    - Apa isi lengkap halaman Detail Follow Up FAR?
+    - Apa yang saya lihat di halaman Detail Follow Up FAR?
+    - Apa yang tersedia di halaman Detail Follow Up FAR?
+    - Bagaimana informasi disajikan di halaman Detail Follow Up FAR?
+    - Apa saja komponen yang ditampilkan di halaman Detail Follow Up FAR?
+    - Apa yang dapat diakses di halaman Detail Follow Up FAR?
+    - Apa yang dicakup di halaman Detail Follow Up FAR?
+    - Bagaimana informasi status kesehatan ditampilkan di halaman Detail Follow Up FAR?
+    - Apa yang terlihat pada bagian terapi di halaman Detail Follow Up FAR?
+    - Bagaimana sistem menampilkan dokumen Surat Sakit di halaman Detail Follow Up FAR?
+
+- intent: health_status_in_follow_up_far_medic_id
+  examples: |
+    - Bagaimana cara mengetahui status kesehatan di Follow Up FAR?
+    - Apa cara untuk melihat status kesehatan di Follow Up FAR?
+    - Di mana saya bisa cek status kesehatan pengguna di Follow Up FAR?
+    - Bagaimana mengetahui status kesehatan di Follow Up FAR?
+    - Bagaimana cara cek status kesehatan di tab Follow Up FAR?
+    - Apa yang ditampilkan pada status kesehatan di Follow Up FAR?
+    - Bagaimana mengetahui kondisi kesehatan pengguna di Follow Up FAR?
+    - Apa yang dimaksud dengan status kesehatan di Follow Up FAR?
+    - Bagaimana cara melihat apakah status kesehatan pengguna sehat atau tidak sehat di Follow Up FAR?
+    - Di mana bisa melihat status kesehatan pengguna dalam Follow Up FAR?
+    - Apa indikator yang digunakan untuk mengetahui status kesehatan di Follow Up FAR?
+    - Bagaimana cara mengecek status Follow Up FAR pengguna?
+    - Apakah saya bisa melihat status kesehatan di tab Follow Up FAR?
+    - Apa status kesehatan yang ditampilkan pada Follow Up FAR?
+    - Bagaimana cara memeriksa kondisi kesehatan di Follow Up FAR?
+    - Apakah status kesehatan ada di Follow Up FAR?
+    - Apa yang berarti status kesehatan di Follow Up FAR?
+    - Bagaimana cara melihat kesehatan pengguna di halaman Follow Up FAR?
+    - Bagaimana cara mengetahui apakah pengguna sehat atau tidak sehat di Follow Up FAR?
+    - Apa yang bisa saya lihat di status kesehatan Follow Up FAR?

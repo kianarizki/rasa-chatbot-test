@@ -1,12 +1,49 @@
 version: "3.1"
 stories:
+- story: Asks about how to add medicine data - choose doctor in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: how_to_add_medicine_data_medic_id
+    - action: utter_ask_role_add_medicine_medic_id
+    - intent: medicine_standard_choose_doctor_medic_id
+    - action: utter_how_doctors_add_medicine_data_medic_id
+
+- story: Asks about how to add medicine data - choose doctor in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: how_to_add_medicine_data_medic_en
+    - action: utter_ask_role_add_medicine_medic_en
+    - intent: medicine_standard_choose_doctor_medic_en
+    - action: utter_how_doctors_add_medicine_data_medic_en
+
+- story: Asks about how to add medicine data - choose paramedic in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: how_to_add_medicine_data_medic_id
+    - action: utter_ask_role_add_medicine_medic_id
+    - intent: medicine_standard_choose_paramedics_medic_id
+    - action: utter_how_paramedics_add_medicine_data_medic_id
+
+- story: Asks about how to add medicine data - choose paramedic in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: how_to_add_medicine_data_medic_en
+    - action: utter_ask_role_add_medicine_medic_en
+    - intent: medicine_standard_choose_paramedics_medic_en
+    - action: utter_how_paramedics_add_medicine_data_medic_en
+
+#### WEBSITE #####
 - story: Asks about what's medical menu checkup - choose website in Indonesia
   steps:
     - slot_was_set:
         - language: indonesia
     - intent: what_is_medical_checkup_menu_medic_id
-    - action: utter_ask_platform_choice_medic_id
-    - intent: choose_website_platform_medic_id
+    - action: utter_ask_platform_choice_mcu_medic_id
+    - intent: mcu_choose_website_platform_medic_id
     - action: utter_what_is_medical_checkup_menu_web_medic_id
 
 - story: Asks about what's medical menu checkup - choose website in English
@@ -14,8 +51,8 @@ stories:
     - slot_was_set:
         - language: english
     - intent: what_is_medical_checkup_menu_medic_id
-    - action: utter_ask_platform_choice_medic_en
-    - intent: choose_website_platform_medic_en
+    - action: utter_ask_platform_choice_mcu_medic_en
+    - intent: mcu_choose_website_platform_medic_en
     - action: utter_what_is_medical_checkup_menu_web_medic_en
 
 - story: Asks about who can accss medical checkup menu - choose website in Indonesia
@@ -23,8 +60,8 @@ stories:
     - slot_was_set:
         - language: indonesia
     - intent: who_can_access_medical_checkup_menu_medic_id
-    - action: utter_ask_platform_choice_medic_id
-    - intent: choose_website_platform_medic_id
+    - action: utter_ask_platform_choice_mcu_medic_id
+    - intent: mcu_choose_website_platform_medic_id
     - action: utter_who_can_access_medical_checkup_menu_web_medic_id
 
 - story: Asks about who can accss medical checkup menu - choose website in English
@@ -32,8 +69,8 @@ stories:
     - slot_was_set:
         - language: english
     - intent: who_can_access_medical_checkup_menu_medic_en
-    - action: utter_ask_platform_choice_medic_en
-    - intent: choose_website_platform_medic_en
+    - action: utter_ask_platform_choice_mcu_medic_en
+    - intent: mcu_choose_website_platform_medic_en
     - action: utter_who_can_access_medical_checkup_menu_web_medic_en
 
 - story: Asks about what are filters in medical checkup menu - choose website in Indonesia
@@ -41,8 +78,8 @@ stories:
     - slot_was_set:
         - language: indonesia
     - intent: what_are_filters_in_medical_checkup_menu_medic_id
-    - action: utter_ask_platform_choice_medic_id
-    - intent: choose_website_platform_medic_id
+    - action: utter_ask_platform_choice_mcu_medic_id
+    - intent: mcu_choose_website_platform_medic_id
     - action: utter_what_are_filters_in_medical_checkup_menu_web_medic_id
 
 - story: Asks about what are filters in medical checkup menu - choose website in English
@@ -50,6 +87,350 @@ stories:
     - slot_was_set:
         - language: english
     - intent: what_are_filters_in_medical_checkup_menu_medic_en
-    - action: utter_ask_platform_choice_medic_en
-    - intent: choose_website_platform_medic_en
+    - action: utter_ask_platform_choice_mcu_medic_en
+    - intent: mcu_choose_website_platform_medic_en
     - action: utter_what_are_filters_in_medical_checkup_menu_web_medic_en
+
+- story: Asks about how to view medical checkup detail results - choose website in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: how_to_view_medical_checkup_detail_results_medic_id
+    - action: utter_ask_platform_choice_mcu_medic_id
+    - intent: mcu_choose_website_platform_medic_id
+    - action: utter_how_to_view_medical_checkup_detail_results_web_medic_id
+
+- story: Asks about how to view medical checkup detail results - choose website in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: how_to_view_medical_checkup_detail_results_medic_en
+    - action: utter_ask_platform_choice_mcu_medic_en
+    - intent: mcu_choose_website_platform_medic_en
+    - action: utter_how_to_view_medical_checkup_detail_results_web_medic_en
+
+- story: Asks about how to see followup result MCU - choose website in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: how_to_see_followup_result_medical_checkup_medic_id
+    - action: utter_ask_platform_choice_mcu_medic_id
+    - intent: mcu_choose_website_platform_medic_id
+    - action: utter_how_to_see_followup_result_medical_checkup_web_medic_id
+
+- story: Asks about how to see followup result MCU - choose website in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: how_to_see_followup_result_medical_checkup_medic_en
+    - action: utter_ask_platform_choice_mcu_medic_en
+    - intent: mcu_choose_website_platform_medic_en
+    - action: utter_how_to_see_followup_result_medical_checkup_web_medic_en
+
+- story: Asks about when notifications are sent in MCU system - choose website in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: when_notifications_are_sent_in_mcu_medic_id
+    - action: utter_ask_platform_choice_mcu_medic_id
+    - intent: mcu_choose_website_platform_medic_id
+    - action: utter_when_notifications_are_sent_in_mcu_web_medic_id
+
+- story: Asks about when notifications are sent in MCU system - choose website in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: when_notifications_are_sent_in_mcu_medic_en
+    - action: utter_ask_platform_choice_mcu_medic_en
+    - intent: mcu_choose_website_platform_medic_en
+    - action: utter_when_notifications_are_sent_in_mcu_web_medic_en
+
+- story: Asks about what's medical record far menu - choose website in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: what_is_medical_record_far_menu_medic_id
+    - action: utter_ask_platform_choice_far_medic_id
+    - intent: far_choose_website_platform_medic_id
+    - action: utter_what_is_medical_record_far_menu_web_medic_id
+
+- story: Asks about what's medical record far menu - choose website in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: what_is_medical_record_far_menu_medic_en
+    - action: utter_ask_platform_choice_far_medic_en
+    - intent: far_choose_website_platform_medic_en
+    - action: utter_what_is_medical_record_far_menu_web_medic_en
+
+- story: Asks about who can accss medical record far menu - choose website in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: who_can_access_medical_record_far_menu_medic_id
+    - action: utter_ask_platform_choice_far_medic_id
+    - intent: far_choose_website_platform_medic_id
+    - action: utter_who_can_access_medical_record_far_menu_web_medic_id
+
+- story: Asks about who can accss medical record far menu - choose website in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: who_can_access_medical_record_far_menu_medic_en
+    - action: utter_ask_platform_choice_far_medic_en
+    - intent: far_choose_website_platform_medic_en
+    - action: utter_who_can_access_medical_record_far_menu_web_medic_en
+
+- story: Asks about how to search/filter medical record far data - choose website in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: how_to_search_medical_record_far_data_medic_id
+    - action: utter_ask_platform_choice_far_medic_id
+    - intent: far_choose_website_platform_medic_id
+    - action: utter_how_to_search_medical_record_far_data_web_medic_id
+
+- story: Asks about how to search/filter medical record far data - choose website in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: how_to_search_medical_record_far_data_medic_en
+    - action: utter_ask_platform_choice_far_medic_en
+    - intent: far_choose_website_platform_medic_en
+    - action: utter_how_to_search_medical_record_far_data_web_medic_en
+
+- story: Asks about how to access view detail follow up far - choose website in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: how_to_access_view_detail_follow_up_far_medic_id
+    - action: utter_ask_platform_choice_far_medic_id
+    - intent: far_choose_website_platform_medic_id
+    - action: utter_how_to_access_view_detail_follow_up_far_web_medic_id
+
+- story: Asks about how to access view detail follow up far - choose website in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: how_to_access_view_detail_follow_up_far_medic_en
+    - action: utter_ask_platform_choice_far_medic_en
+    - intent: far_choose_website_platform_medic_en
+    - action: utter_how_to_access_view_detail_follow_up_far_web_medic_en
+
+- story: Asks about when notifications are sent in Medical Record Far system - choose website in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: when_notifications_sent_in_medical_record_far_medic_id
+    - action: utter_ask_platform_choice_far_medic_id
+    - intent: far_choose_website_platform_medic_id
+    - action: utter_when_notifications_sent_in_medical_record_far_web_medic_id
+
+- story: Asks about when notifications are sent in Medical Record Far system - choose website in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: when_notifications_sent_in_medical_record_far_medic_en
+    - action: utter_ask_platform_choice_far_medic_en
+    - intent: far_choose_website_platform_medic_en
+    - action: utter_when_notifications_sent_in_medical_record_far_web_medic_en
+
+
+#### MOBILE #####
+- story: Asks about what's medical menu checkup - choose mobile in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: what_is_medical_checkup_menu_medic_id
+    - action: utter_ask_platform_choice_mcu_medic_id
+    - intent: mcu_choose_mobile_platform_medic_id
+    - action: utter_what_is_medical_checkup_menu_mobile_medic_id
+
+- story: Asks about what's medical menu checkup - choose mobile in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: what_is_medical_checkup_menu_medic_en
+    - action: utter_ask_platform_choice_mcu_medic_en
+    - intent: mcu_choose_mobile_platform_medic_en
+    - action: utter_what_is_medical_checkup_menu_mobile_medic_en
+
+- story: Asks about who can accss medical checkup menu - choose mobile in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: who_can_access_medical_checkup_menu_medic_id
+    - action: utter_ask_platform_choice_mcu_medic_id
+    - intent: mcu_choose_mobile_platform_medic_id
+    - action: utter_who_can_access_medical_checkup_menu_mobile_medic_id
+
+- story: Asks about who can accss medical checkup menu - choose mobile in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: who_can_access_medical_checkup_menu_medic_en
+    - action: utter_ask_platform_choice_mcu_medic_en
+    - intent: mcu_choose_mobile_platform_medic_en
+    - action: utter_who_can_access_medical_checkup_menu_mobile_medic_en
+
+- story: Asks about what are filters in medical checkup menu - choose mobile in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: what_are_filters_in_medical_checkup_menu_medic_id
+    - action: utter_ask_platform_choice_mcu_medic_id
+    - intent: mcu_choose_mobile_platform_medic_id
+    - action: utter_what_are_filters_in_medical_checkup_menu_mobile_medic_id
+
+- story: Asks about what are filters in medical checkup menu - choose mobile in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: what_are_filters_in_medical_checkup_menu_medic_en
+    - action: utter_ask_platform_choice_mcu_medic_en
+    - intent: mcu_choose_mobile_platform_medic_en
+    - action: utter_what_are_filters_in_medical_checkup_menu_mobile_medic_en
+
+- story: Asks about how to view medical checkup detail results - choose mobile in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: how_to_view_medical_checkup_detail_results_medic_id
+    - action: utter_ask_platform_choice_mcu_medic_id
+    - intent: mcu_choose_mobile_platform_medic_id
+    - action: utter_how_to_view_medical_checkup_detail_results_mobile_medic_id
+
+- story: Asks about how to view medical checkup detail results - choose mobile in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: how_to_view_medical_checkup_detail_results_medic_en
+    - action: utter_ask_platform_choice_mcu_medic_en
+    - intent: mcu_choose_mobile_platform_medic_en
+    - action: utter_how_to_view_medical_checkup_detail_results_mobile_medic_en
+
+- story: Asks about how to see followup result MCU - choose mobile in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: how_to_see_followup_result_medical_checkup_medic_id
+    - action: utter_ask_platform_choice_mcu_medic_id
+    - intent: mcu_choose_mobile_platform_medic_id
+    - action: utter_how_to_see_followup_result_medical_checkup_mobile_medic_id
+
+- story: Asks about how to see followup result MCU - choose mobile in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: how_to_see_followup_result_medical_checkup_medic_en
+    - action: utter_ask_platform_choice_mcu_medic_en
+    - intent: mcu_choose_mobile_platform_medic_en
+    - action: utter_how_to_see_followup_result_medical_checkup_mobile_medic_en
+
+- story: Asks about when notifications are sent in MCU system - choose mobile in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: when_notifications_are_sent_in_mcu_medic_id
+    - action: utter_ask_platform_choice_mcu_medic_id
+    - intent: mcu_choose_mobile_platform_medic_id
+    - action: utter_when_notifications_are_sent_in_mcu_mobile_medic_id
+
+- story: Asks about when notifications are sent in MCU system - choose mobile in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: when_notifications_are_sent_in_mcu_medic_en
+    - action: utter_ask_platform_choice_mcu_medic_en
+    - intent: mcu_choose_mobile_platform_medic_en
+    - action: utter_when_notifications_are_sent_in_mcu_mobile_medic_en
+
+- story: Asks about what's medical record far menu - choose mobile in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: what_is_medical_record_far_menu_medic_id
+    - action: utter_ask_platform_choice_far_medic_id
+    - intent: far_choose_mobile_platform_medic_id
+    - action: utter_what_is_medical_record_far_menu_mobile_medic_id
+
+- story: Asks about what's medical record far menu - choose mobile in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: what_is_medical_record_far_menu_medic_en
+    - action: utter_ask_platform_choice_far_medic_en
+    - intent: far_choose_mobile_platform_medic_en
+    - action: utter_what_is_medical_record_far_menu_mobile_medic_en
+
+- story: Asks about who can accss medical record far menu - choose mobile in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: who_can_access_medical_record_far_menu_medic_id
+    - action: utter_ask_platform_choice_far_medic_id
+    - intent: far_choose_mobile_platform_medic_id
+    - action: utter_who_can_access_medical_record_far_menu_mobile_medic_id
+
+- story: Asks about who can accss medical record far menu - choose mobile in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: who_can_access_medical_record_far_menu_medic_en
+    - action: utter_ask_platform_choice_far_medic_en
+    - intent: far_choose_mobile_platform_medic_en
+    - action: utter_who_can_access_medical_record_far_menu_mobile_medic_en
+
+- story: Asks about how to search/filter medical record far data - choose mobile in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: how_to_search_medical_record_far_data_medic_id
+    - action: utter_ask_platform_choice_far_medic_id
+    - intent: far_choose_mobile_platform_medic_id
+    - action: utter_how_to_search_medical_record_far_data_mobile_medic_id
+
+- story: Asks about how to search/filter medical record far data - choose mobile in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: how_to_search_medical_record_far_data_medic_en
+    - action: utter_ask_platform_choice_far_medic_en
+    - intent: far_choose_mobile_platform_medic_en
+    - action: utter_how_to_search_medical_record_far_data_mobile_medic_en
+
+- story: Asks about how to access view detail follow up far - choose mobile in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: how_to_access_view_detail_follow_up_far_medic_id
+    - action: utter_ask_platform_choice_far_medic_id
+    - intent: far_choose_mobile_platform_medic_id
+    - action: utter_how_to_access_view_detail_follow_up_far_mobile_medic_id
+
+- story: Asks about how to access view detail follow up far - choose mobile in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: how_to_access_view_detail_follow_up_far_medic_en
+    - action: utter_ask_platform_choice_far_medic_en
+    - intent: far_choose_mobile_platform_medic_en
+    - action: utter_how_to_access_view_detail_follow_up_far_mobile_medic_en
+
+- story: Asks about when notifications are sent in Medical Record Far system - choose mobile in Indonesia
+  steps:
+    - slot_was_set:
+        - language: indonesia
+    - intent: when_notifications_sent_in_medical_record_far_medic_id
+    - action: utter_ask_platform_choice_far_medic_id
+    - intent: far_choose_mobile_platform_medic_id
+    - action: utter_when_notifications_sent_in_medical_record_far_mobile_medic_id
+
+- story: Asks about when notifications are sent in Medical Record Far system - choose mobile in English
+  steps:
+    - slot_was_set:
+        - language: english
+    - intent: when_notifications_sent_in_medical_record_far_medic_en
+    - action: utter_ask_platform_choice_far_medic_en
+    - intent: far_choose_mobile_platform_medic_en
+    - action: utter_when_notifications_sent_in_medical_record_far_mobile_medic_en

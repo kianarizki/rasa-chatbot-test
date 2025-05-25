@@ -857,9 +857,6 @@ class ActionGet001MComponentEstimatedFinishDateForecastAllocationReport(Action):
                 message = "Sorry, there was error on server"
         
         dispatcher.utter_message(message)
-
-
-
         return [SlotSet("component_name_001m", None)]
     
 class ActionGet001MComponentRepairLocationForecastAllocationReport(Action):
