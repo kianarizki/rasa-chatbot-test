@@ -2463,12 +2463,3 @@ rules:
   steps:
     - intent: health_status_in_follow_up_far_medic_en
     - action: utter_health_status_in_follow_up_far_medic_en
-
-
-- rule: Asks about  in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: 
-    - action: 

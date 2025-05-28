@@ -517,8 +517,6 @@ intents:
   - how_to_know_follow_up_location_medic_en
   - what_if_no_follow_up_needed_in_mcu_result_medic_id
   - what_if_no_follow_up_needed_in_mcu_result_medic_en
-  - what_is_displayed_in_follow_up_results_tab_medic_id
-  - what_is_displayed_in_follow_up_results_tab_medic_en
   - does_follow_up_result_affect_final_health_status_medic_id
   - does_follow_up_result_affect_final_health_status_medic_en
   - how_to_know_when_next_schedule_mcu_medic_id
@@ -2866,21 +2864,21 @@ responses:
         **Informasi yang ditampilkan dalam Approval Activity**:
         1. **Pop-up dengan judul "Approval Activity"**  
         2. **Status Pengajuan**:  
-           - Approved → Pengajuan telah disetujui  
-           - Rejected → Pengajuan ditolak  
-           - Revision → Pengajuan membutuhkan revisi
+             - Approved → Pengajuan telah disetujui  
+             - Rejected → Pengajuan ditolak  
+             - Revision → Pengajuan membutuhkan revisi
         3. **Request Date**:  
-           - Menampilkan tanggal dan waktu saat karyawan melakukan pengajuan Medical Claim.
+             - Menampilkan tanggal dan waktu saat karyawan melakukan pengajuan Medical Claim.
         4. **Jenis Tunjangan**:  
-           - Menampilkan kategori tunjangan yang diajukan, yaitu:  
-             - Kesehatan Karyawan - Rawat Inap  
-             - Kesehatan Karyawan - Rawat Jalan  
-             - Keluarga Karyawan - Rawat Inap  
-             - Keluarga Karyawan - Rawat Jalan  
-             - Donasi
+             - Menampilkan kategori tunjangan yang diajukan, yaitu:  
+               - Kesehatan Karyawan - Rawat Inap  
+               - Kesehatan Karyawan - Rawat Jalan  
+               - Keluarga Karyawan - Rawat Inap  
+               - Keluarga Karyawan - Rawat Jalan  
+               - Donasi
         5. **Activity Log**:  
-           - Requested: Menampilkan nama karyawan yang mengajukan "Medical Claim" & "Tanggal & Waktu" pengajuan.  
-           - Dokter/Paramedis: Menampilkan nama Dokter/Paramedis yang melakukan "Approval/Revision/Rejected" & "Tanggal & Waktu" proses Approval/Revision/Rejected.
+             - Requested: Menampilkan nama karyawan yang mengajukan "Medical Claim" & "Tanggal & Waktu" pengajuan.  
+             - Dokter/Paramedis: Menampilkan nama Dokter/Paramedis yang melakukan "Approval/Revision/Rejected" & "Tanggal & Waktu" proses Approval/Revision/Rejected.
   utter_what_is_approval_activity_feature_medic_en:
     - text: |
         Approval Activity is a feature used to track the Medical Claim submission, including the history of status and approval activities from employee to Doctor/Paramedic.  
@@ -2889,21 +2887,21 @@ responses:
         **The information displayed in the Approval Activity**:
         1. **Pop-up with the title "Approval Activity"**  
         2. **Claim Status**:  
-           - Approved → The claim has been approved.  
-           - Rejected → The claim has been rejected.  
-           - Revision → The claim needs revisions.
+             - Approved → The claim has been approved.  
+             - Rejected → The claim has been rejected.  
+             - Revision → The claim needs revisions.
         3. **Request Date**:  
-           - Displays the date and time when the employee submitted the Medical Claim.
+             - Displays the date and time when the employee submitted the Medical Claim.
         4. **Benefit Type**:  
-           - Displays the benefit category that was applied for, such as:  
-             - Employee Health - Inpatient  
-             - Employee Health - Outpatient  
-             - Employee Family - Inpatient  
-             - Employee Family - Outpatient  
-             - Donation
+             - Displays the benefit category that was applied for, such as:  
+               - Employee Health - Inpatient  
+               - Employee Health - Outpatient  
+               - Employee Family - Inpatient  
+               - Employee Family - Outpatient  
+               - Donation
         5. **Activity Log**:  
-           - Requested: Displays the name of the employee who submitted the "Medical Claim" & "Date & Time" of the claim submission.  
-           - Doctor/Paramedic: Displays the name of the Doctor/Paramedic who performed the "Approval/Revision/Rejected" & the "Date & Time" of the Approval/Revision/Rejected process.
+             - Requested: Displays the name of the employee who submitted the "Medical Claim" & "Date & Time" of the claim submission.  
+             - Doctor/Paramedic: Displays the name of the Doctor/Paramedic who performed the "Approval/Revision/Rejected" & the "Date & Time" of the Approval/Revision/Rejected process.
   utter_see_attachments_uploaded_by_employee_medic_id:
     - text: |
         Dokter/Paramedis dapat melihat attachment dengan mengklik ikon "mata" (👁️) di samping nama file pada halaman **Detail Medical Record External**. Setelah diklik, dokumen atau gambar akan ditampilkan dalam jendela pratinjau.
@@ -2916,7 +2914,7 @@ responses:
     - text: Notifications in the Medical Record External system are automatically sent by the system when there is a new submission by an employee in the Medical Claim ESS.
   
   utter_ask_platform_choice_mcu_medic_id:
-    - text: "Terima kasih atas pertanyaan Anda. Untuk melanjutkan, apakah Anda lebih memilih menggunakan platform mobile atau website?"
+    - text: "Aplikasi ini mendukung dua perangkat: mobile dan web. Silakan pilih salah satu."
       buttons:
         - title: "Mobile"
           payload: "/mcu_choose_mobile_platform_medic_id"
@@ -2925,7 +2923,7 @@ responses:
       custom:
         text: "Silakan pilih platform yang Anda inginkan di bawah ini. "
   utter_ask_platform_choice_mcu_medic_en:
-    - text: "Thank you for your inquiry. To proceed, would you prefer to use the mobile platform or the website?"
+    - text: "This app supports two devices: mobile and web. Please choose one."
       buttons:
         - title: "Mobile"
           payload: "/mcu_choose_mobile_platform_medic_en"
@@ -3527,7 +3525,7 @@ responses:
         5. Klik tab **Result Follow Up**.
         6. Kunjungi section **Result Follow Up MCU**, klik tombol **View Detail** pada data Follow Up MCU yang ingin dilihat.
         7. Klik tombol **Edit** pada pop-up detail Follow Up MCU.
-        8. Sistem akan menampilkan halaman **Edit Follow Up MCU**.
+        8. Sistem akan menampilkan halaman Edit Follow Up MCU.
   utter_how_to_edit_result_followup_mcu_data_medic_en:
     - text: | 
         **Doctors/Paramedics** can edit Follow Up MCU data based on the project site they are responsible for. If a **Doctor** accesses Follow Up MCU data from another project site, the **"Edit"** button will automatically be **disabled**.
@@ -3582,7 +3580,7 @@ responses:
         2. **Hasil Follow Up MCU**: Setelah pengguna melakukan Follow Up MCU, sistem memperbarui hasil pemeriksaan.
         3. **MCU Kedaluwarsa**: Notifikasi diberikan pada H-3 bulan, H-2 bulan, H-1 bulan, dan H-7 hari sebelum masa berlaku MCU habis.
         4. **Hasil MCU/Follow Up MCU**: Ketika hasil MCU memiliki status "Open" atau butuh follow up, sistem akan mengirimkan notifikasi kepada Dokter/Paramedis.
-  utter_when_notifications_are_sent_in_mcu_medic_en:
+  utter_when_notifications_are_sent_in_mcu_web_medic_en:
     - text: | 
         Notifications will be sent to **Doctors/Paramedics** under various conditions, such as:
         1. **Health Status Change**: When a Doctor/Paramedic edits the health status of a Medical Checkup.
@@ -3684,18 +3682,18 @@ responses:
         6. Pada halaman ini, Anda akan melihat beberapa informasi seperti:
            a. **Status Kesehatan**: Menampilkan status akhir kesehatan berdasarkan hasil MCU dengan kategori Fit to Work, Fit with Note, Temporary Unfit, atau Unfit.
            b. **Detail Medical Checkup**: Berisi informasi utama terkait pelaksanaan MCU, meliputi:
-              - Tipe MCU: Jenis MCU yang dilakukan (New Hire, Periodik, Khusus, Pra-Pensiun).
-              - Periode MCU: Jangka waktu pemeriksaan MCU (6 Bulan, 1 Tahun).
-              - Pelaksanaan MCU: Tanggal dilakukannya pemeriksaan.
-              - Expired MCU: Masa berlaku hasil MCU.
-              - Tipe Schedule: Menunjukkan apakah MCU dilakukan secara terjadwal (Scheduled).
-              - Hasil Pemeriksaan: Merangkum berbagai aspek pemeriksaan kesehatan, meliputi:
-                - Pemeriksaan Fisik: Hasil pemeriksaan fisik dengan indikasi Tidak Normal.
-                - Pemeriksaan Laboratorium: Hasil pemeriksaan laboratorium dengan indikasi Tidak Normal. 
-                - Jika tidak ada temuan, akan muncul pesan "Tidak ada temuan pemeriksaan laboratorium/fisik".
+                - Tipe MCU: Jenis MCU yang dilakukan (New Hire, Periodik, Khusus, Pra-Pensiun).
+                - Periode MCU: Jangka waktu pemeriksaan MCU (6 Bulan, 1 Tahun).
+                - Pelaksanaan MCU: Tanggal dilakukannya pemeriksaan.
+                - Expired MCU: Masa berlaku hasil MCU.
+                - Tipe Schedule: Menunjukkan apakah MCU dilakukan secara terjadwal (Scheduled).
+                - Hasil Pemeriksaan: Merangkum berbagai aspek pemeriksaan kesehatan, meliputi:
+                  - Pemeriksaan Fisik: Hasil pemeriksaan fisik dengan indikasi Tidak Normal.
+                  - Pemeriksaan Laboratorium: Hasil pemeriksaan laboratorium dengan indikasi Tidak Normal. 
+                  - Jika tidak ada temuan, akan muncul pesan "Tidak ada temuan pemeriksaan laboratorium/fisik".
            c. **Lain-lain**: Berisi informasi tambahan terkait hasil MCU:
-              - Diagnosa Penyakit: Diagnosis penyakit dari hasil MCU. Jika tidak ada, akan ditampilkan tanda (-).
-              - Temuan MCU: Ringkasan hasil pemeriksaan. Jika deskripsi terlalu panjang, akan tersedia tombol "Lebih Lanjut" untuk melihat detailnya.
+                - Diagnosa Penyakit: Diagnosis penyakit dari hasil MCU. Jika tidak ada, akan ditampilkan tanda (-).
+                - Temuan MCU: Ringkasan hasil pemeriksaan. Jika deskripsi terlalu panjang, akan tersedia tombol "Lebih Lanjut" untuk melihat detailnya.
            d. **Terapi**: Menampilkan informasi obat yang diberikan setelah MCU. Jika tidak ada terapi yang diresepkan, akan muncul pesan "Tidak ada data terapi".
   utter_how_to_view_medical_checkup_detail_results_mobile_medic_en:
     - text: |
@@ -3708,18 +3706,18 @@ responses:
         6. On this page, you will see some information such as:
            a. **Health Status**: Displays the final health status based on the MCU results with categories: Fit to Work, Fit with Note, Temporary Unfit, or Unfit.
            b. **Medical Checkup Details**: Contains main information related to the MCU execution, including:
-              - MCU Type: The type of MCU performed (New Hire, Periodic, Special, Pre-Retirement).
-              - MCU Period: The duration of the MCU examination (6 Months, 1 Year).
-              - MCU Execution Date: The date when the examination was performed.
-              - Expired MCU: The validity period of the MCU results.
-              - Schedule Type: Indicates whether the MCU was performed as scheduled (Scheduled).
-              - Examination Results: Summarizes various aspects of the health examination, including:
-                - Physical Examination: Results of the physical examination with indications of abnormalities.
-                - Laboratory Examination: Results of the laboratory examination with indications of abnormalities. 
-                - If no findings are present, the message "No findings in laboratory/physical examination" will appear.
+                - MCU Type: The type of MCU performed (New Hire, Periodic, Special, Pre-Retirement).
+                - MCU Period: The duration of the MCU examination (6 Months, 1 Year).
+                - MCU Execution Date: The date when the examination was performed.
+                - Expired MCU: The validity period of the MCU results.
+                - Schedule Type: Indicates whether the MCU was performed as scheduled (Scheduled).
+                - Examination Results: Summarizes various aspects of the health examination, including:
+                  - Physical Examination: Results of the physical examination with indications of abnormalities.
+                  - Laboratory Examination: Results of the laboratory examination with indications of abnormalities. 
+                  - If no findings are present, the message "No findings in laboratory/physical examination" will appear.
            c. **Others**: Contains additional information related to the MCU results:
-              - Disease Diagnosis: The disease diagnosis from the MCU results. If none, a dash (-) will appear.
-              - MCU Findings: A summary of the examination results. If the description is too long, a "More Details" button will be available to view the details.
+                - Disease Diagnosis: The disease diagnosis from the MCU results. If none, a dash (-) will appear.
+                - MCU Findings: A summary of the examination results. If the description is too long, a "More Details" button will be available to view the details.
            d. **Therapy**: Displays information on the medication prescribed after the MCU. If no therapy is prescribed, the message "No therapy data" will appear.
   utter_what_are_available_examination_details_medic_id:
     - text: |
@@ -3776,7 +3774,7 @@ responses:
         Berikut penjelasan mengenai cara mengetahui lokasi pelaksanaan Follow Up:
         1. Jika Follow Up dilakukan secara **Internal**, lokasi otomatis ditampilkan sebagai **First Aid Room (FAR)**.
         2. Jika Follow Up dilakukan secara **External**, sistem akan menampilkan informasi fasilitas kesehatan yang direkomendasikan oleh Dokter/Paramedis.
-  utter_how_to_know_follow_up_location_medic_id:
+  utter_how_to_know_follow_up_location_medic_en:
     - text: |
         Here's the explanation on how to know the Follow Up location:
         1. If the Follow Up is done **Internally**, the location is automatically shown as **First Aid Room (FAR)**.
@@ -3851,7 +3849,7 @@ responses:
         **This feature will later be connected to the Medical Schedule (currently still under development).**
 
   utter_ask_platform_choice_far_medic_id:
-    - text: "Terima kasih atas pertanyaan Anda. Untuk melanjutkan, apakah Anda lebih memilih menggunakan platform mobile atau website?"
+    - text: "Aplikasi ini mendukung dua perangkat: mobile dan web. Silakan pilih salah satu."
       buttons:
         - title: "Mobile"
           payload: "/far_choose_mobile_platform_medic_id"
@@ -3860,7 +3858,7 @@ responses:
       custom:
         text: "Silakan pilih platform yang Anda inginkan di bawah ini. "
   utter_ask_platform_choice_far_medic_en:
-    - text: "Thank you for your inquiry. To proceed, would you prefer to use the mobile platform or the website?"
+    - text: "This app supports two devices: mobile and web. Please choose one."
       buttons:
         - title: "Mobile"
           payload: "/far_choose_mobile_platform_medic_en"

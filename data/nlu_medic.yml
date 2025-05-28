@@ -349,7 +349,7 @@ nlu:
 
 - intent: deleting_used_disease_data_medic_id
   examples: |
-    - Apa yang terjadi kalau dokter coba hapus data penyakit yang udah dipakai?
+    - Apa yang terjadi kalau dokter coba delete data penyakit yang udah dipakai?
     - Kalau data penyakit udah digunakan, bisa nggak dihapus?
     - Kenapa tombol delete nggak aktif kalau data penyakit udah dipakai?
     - Apa yang muncul kalau dokter mau hapus data yang udah dipakai?
@@ -366,15 +366,11 @@ nlu:
     - Kalau data penyakit sudah dipakai di Medical Checkup, FAR, atau External, apakah data bisa dihapus?
     - Apa yang terjadi jika dokter mencoba menghapus data penyakit yang sudah digunakan?
     - Kalau dokter mau hapus data yang dipakai di menu Medical Checkup atau Medical Record, apa yang muncul?
-    - Apa yang terjadi di sistem kalau dokter menghapus data penyakit yang udah digunakan di menu lain?
+    - Apa yang terjadi di sistem kalau dokter delete data penyakit yang udah digunakan di menu lain?
     - Bagaimana sistem menangani penghapusan data penyakit yang sudah digunakan di Medical Record FAR atau External?
     - Apa yang terjadi jika data penyakit sudah digunakan di beberapa menu dan dokter coba hapus?
     - Kenapa tombol delete nggak bisa dipakai kalau data udah terpakai di menu lain?
     - Apa pesan yang muncul jika dokter coba hapus data penyakit yang udah terpakai di Medical Checkup atau FAR?
-
-- synonym: delete
-  examples: |
-    - hapus
 
 - intent: deleting_unused_disease_data_medic_id
   examples: |
@@ -397,10 +393,6 @@ nlu:
     - Kalau data penyakit belum dipakai di Medical Record FAR, bisa dihapus ga?
     - Kalau data penyakit nggak dipake di Medical Checkup, bisa dihapus nggak?
     - Kalau data penyakit belum digunakan, dokter bisa langsung hapus?
-
-- synonym: edit
-  examples: |
-    - ubah
 
 - intent: paramedics_access_disease_data_in_the_future_medic_id
   examples: |
@@ -2655,29 +2647,6 @@ nlu:
     - Apakah sistem menampilkan pesan khusus jika Follow Up tidak ada?
     - Bagaimana notifikasi saat tidak ada Follow Up MCU?
 
-- intent: what_is_displayed_in_follow_up_results_tab_medic_id
-  examples: |
-    - Apa yang ditampilkan dalam tab Hasil Follow Up?
-    - Informasi apa saja yang ada di tab Follow Up MCU?
-    - Bisa jelaskan isi tab hasil Follow Up MCU?
-    - Apa saja yang terlihat di tab hasil tindak lanjut MCU?
-    - Data apa yang muncul di tab Follow Up Medical Checkup?
-    - Apa detail yang ditampilkan di tab hasil Follow Up MCU?
-    - Bagaimana tampilan tab Follow Up MCU?
-    - Apa isi dari tab hasil Follow Up MCU?
-    - Apa yang muncul di tab Follow Up MCU?
-    - Informasi apa yang tersedia di tab Follow Up Medical Checkup?
-    - Apa saja rincian di tab Follow Up MCU?
-    - Apa fitur yang ada di tab hasil Follow Up MCU?
-    - Bisa jelaskan isi tab Follow Up di Medical Checkup?
-    - Apa yang bisa saya lihat di tab hasil Follow Up MCU?
-    - Apa data penting yang ada di tab Follow Up MCU?
-    - Bagaimana sistem menampilkan hasil Follow Up MCU di tab?
-    - Apa saja yang dicakup dalam tab hasil Follow Up MCU?
-    - Apa detail utama dalam tab Follow Up MCU?
-    - Apa yang ditunjukkan di dalam tab Follow Up MCU?
-    - Informasi apa yang disajikan di tab hasil Follow Up?
-
 - intent: does_follow_up_result_affect_final_health_status_medic_id
   examples: |
     - Apakah hasil Follow Up mempengaruhi status kesehatan akhir?
@@ -2834,28 +2803,28 @@ nlu:
 
 - intent: status_follow_up_medical_records_far_medic_id
   examples: |
-    - Apa itu Status Follow-Up dalam Medical Record FAR?
-    - Jelaskan apa yang dimaksud dengan Status Follow-Up di Medical Record FAR
-    - Bisa jelaskan arti Status Follow-Up pada Medical Record FAR?
-    - Apa makna Status Follow-Up dalam Medical Record FAR?
-    - Apa penjelasan tentang Status Follow-Up di Medical Record FAR?
-    - Bagaimana pengertian Status Follow-Up dalam Medical Record FAR?
-    - Apa saja jenis Status Follow-Up dalam Medical Record FAR?
-    - Tolong terangkan arti Status Follow-Up dalam Medical Record FAR
-    - Apa definisi Status Follow-Up pada Medical Record FAR?
-    - Bisa jelaskan kegunaan Status Follow-Up di Medical Record FAR?
-    - Apa yang dimaksud dengan Status Follow-Up di Medical Record FAR?
-    - Jelaskan fungsi Status Follow-Up dalam Medical Record FAR
-    - Apa arti Status Follow-Up Open, Close, dan Open Overdue?
-    - Bagaimana status Follow-Up di Medical Record FAR diartikan?
-    - Apa perbedaan Status Follow-Up Open dan Close?
-    - Apa itu Status Follow-Up Open Overdue di Medical Record FAR?
-    - Tolong jelaskan Status Follow-Up Open Overdue dalam Medical Record FAR
-    - Bagaimana cara memahami Status Follow-Up dalam Medical Record FAR?
-    - Apa makna masing-masing Status Follow-Up dalam Medical Record FAR?
-    - Bisa jelaskan detail Status Follow-Up dalam Medical Record FAR?
-    - Apa arti dari status open pada Status Follow-Up?
-    - Apa arti dari status close pada Status Follow-Up?
+    - Apa itu Status Follow Up dalam Medical Record FAR?
+    - Jelaskan apa yang dimaksud dengan Status follow up di Medical Record FAR
+    - Bisa jelaskan arti Status follow up pada Medical Record FAR?
+    - Apa makna Status follow up dalam Medical Record FAR?
+    - Apa penjelasan tentang Status follow up di Medical Record FAR?
+    - Bagaimana pengertian Status follow up dalam Medical Record FAR?
+    - Apa saja jenis Status follow up dalam Medical Record FAR?
+    - Tolong terangkan arti Status follow up dalam Medical Record FAR
+    - Apa definisi Status follow up pada Medical Record FAR?
+    - Bisa jelaskan kegunaan Status follow up di Medical Record FAR?
+    - Apa yang dimaksud dengan Status follow up di Medical Record FAR?
+    - Jelaskan fungsi Status follow up dalam Medical Record FAR
+    - Apa arti Status follow up Open, Close, dan Open Overdue?
+    - Bagaimana status follow up di Medical Record FAR diartikan?
+    - Apa perbedaan Status follow up Open dan Close?
+    - Apa itu Status follow up Open Overdue di Medical Record FAR?
+    - Tolong jelaskan Status follow up Open Overdue dalam Medical Record FAR
+    - Bagaimana cara memahami Status follow up dalam Medical Record FAR?
+    - Apa makna masing-masing Status follow up dalam Medical Record FAR?
+    - Bisa jelaskan detail Status follow up dalam Medical Record FAR?
+    - Apa arti dari status open pada Status follow up?
+    - Apa arti dari status close pada Status follow up?
 
 - intent: what_is_total_visit_medical_record_far_medic_id
   examples: |
@@ -2873,9 +2842,9 @@ nlu:
     - Jelaskan fungsi total visit dalam Medical Record FAR
     - Apa arti total visit yang tercatat dalam Medical Record FAR?
     - Bagaimana cara menghitung total visit dalam Medical Record FAR?
-    - Apa itu Initial Visit dan Follow-Up Visit dalam total visit?
-    - Tolong jelaskan perbedaan Initial Visit dan Follow-Up Visit
-    - Apa hubungan Initial Visit dan Follow-Up Visit dengan total visit?
+    - Apa itu Initial Visit dan follow up Visit dalam total visit?
+    - Tolong jelaskan perbedaan Initial Visit dan follow up Visit
+    - Apa hubungan Initial Visit dan follow up Visit dengan total visit?
     - Bagaimana total visit mempengaruhi laporan Medical Record FAR?
     - Apa yang termasuk dalam total visit Medical Record FAR?
     - Bisa jelaskan detail total visit di Medical Record FAR?
@@ -2993,12 +2962,12 @@ nlu:
 - intent: ask_type_of_visit_far_medic_id
   examples: |
     - Bagaimana cara menentukan tipe kunjungan FAR?
-    - Jelaskan cara memilih tipe kunjungan FAR antara Initial Visit dan Follow-Up Visit
+    - Jelaskan cara memilih tipe kunjungan FAR antara Initial Visit dan follow up Visit
     - Bagaimana memilih tipe kunjungan FAR?
     - Apa saja cara menentukan tipe kunjungan FAR?
     - Bagaimana prosedur memilih tipe kunjungan FAR?
-    - Tolong jelaskan perbedaan Initial Visit dan Follow-Up Visit di FAR
-    - Kapan harus memilih Initial Visit atau Follow-Up Visit?
+    - Tolong jelaskan perbedaan Initial Visit dan follow up Visit di FAR
+    - Kapan harus memilih Initial Visit atau follow up Visit?
     - Bagaimana sistem menentukan tipe kunjungan FAR?
     - Apa aturan memilih tipe kunjungan FAR?
     - Bagaimana cara kerja tipe kunjungan FAR?
@@ -3007,8 +2976,8 @@ nlu:
     - Tolong jelaskan langkah memilih tipe kunjungan FAR
     - Bagaimana cara sistem menampilkan tipe kunjungan FAR?
     - Apa yang harus diperhatikan dalam memilih tipe kunjungan FAR?
-    - Bagaimana mengetahui pasien termasuk Initial Visit atau Follow-Up Visit?
-    - Kapan pasien dianggap Follow-Up Visit?
+    - Bagaimana mengetahui pasien termasuk Initial Visit atau follow up Visit?
+    - Kapan pasien dianggap follow up Visit?
     - Bagaimana memilih tipe kunjungan untuk pasien lama dan baru?
     - Apa saja ketentuan dalam menentukan tipe kunjungan FAR?
     - Tolong jelaskan detail pemilihan tipe kunjungan FAR
@@ -3023,13 +2992,13 @@ nlu:
     - Bagaimana cara menentukan tanggal kunjungan FAR?
     - Tolong jelaskan aturan memilih tanggal kunjungan FAR
     - Bagaimana sistem menentukan tanggal kunjungan FAR?
-    - Bagaimana cara memilih tanggal kunjungan untuk Initial Visit dan Follow-Up Visit?
+    - Bagaimana cara memilih tanggal kunjungan untuk Initial Visit dan follow up Visit?
     - Apa saja aturan memilih tanggal kunjungan FAR?
     - Bagaimana memilih tanggal kunjungan FAR dengan benar?
-    - Apa perbedaan pemilihan tanggal kunjungan untuk Initial dan Follow-Up Visit?
+    - Apa perbedaan pemilihan tanggal kunjungan untuk Initial dan follow up Visit?
     - Tolong jelaskan langkah memilih tanggal kunjungan FAR
     - Bagaimana dokter memilih tanggal kunjungan FAR?
-    - Apa batasan tanggal kunjungan FAR untuk Initial dan Follow-Up Visit?
+    - Apa batasan tanggal kunjungan FAR untuk Initial dan follow up Visit?
     - Bagaimana memilih tanggal kunjungan FAR jika pasien sudah pernah datang?
     - Apa aturan tanggal kunjungan FAR untuk pasien baru dan lama?
     - Tolong jelaskan cara kerja pemilihan tanggal kunjungan FAR
@@ -3503,7 +3472,7 @@ nlu:
     - Apa yang dimaksud dengan Follow Up FAR di fitur View Detail?
     - Bagaimana cara menggunakan fitur View Detail Follow Up FAR?
     - Apa manfaat fitur View Detail Follow Up FAR bagi Dokter/Paramedis?
-    - Apa yang bisa dilihat pada fitur View Detail Follow Up FAR untuk kunjungan follow-up?
+    - Apa yang bisa dilihat pada fitur View Detail Follow Up FAR untuk kunjungan follow up?
     - Apa yang tercakup dalam fitur View Detail Follow Up FAR?
     - Apa saja detail yang ada pada View Detail Follow Up FAR?
 
@@ -3521,7 +3490,7 @@ nlu:
     - Bagaimana cara membuka detail kunjungan Follow Up FAR?
     - Apa langkah mengakses View Detail Follow Up FAR?
     - Bagaimana cara melihat Detail Follow Up FAR di menu Medical Record?
-    - Apa cara melihat informasi follow-up FAR?
+    - Apa cara melihat informasi follow up FAR?
     - Bagaimana membuka halaman Detail Follow Up FAR?
     - Bagaimana cara mengakses detail kunjungan Follow Up FAR?
     - Bagaimana cara melihat detail Follow Up FAR setelah membuka Medical Record FAR?
@@ -3580,16 +3549,16 @@ nlu:
 
 - intent: how_edit_data_follow_up_far_medic_id
   examples: |
-    - Bagaimana cara mengedit data Follow Up FAR?
-    - Apa langkah-langkah untuk mengedit data Follow Up FAR?
+    - Bagaimana cara edit data Follow Up FAR?
+    - Apa langkah-langkah untuk edit data Follow Up FAR?
     - Bisa jelaskan cara mengedit data Follow Up FAR?
     - Bagaimana prosedur mengedit data kunjungan Follow Up FAR?
     - Apa yang harus dilakukan untuk mengedit data Follow Up FAR?
-    - Bagaimana cara mengubah data kunjungan Follow Up FAR?
+    - Bagaimana cara ubah data kunjungan Follow Up FAR?
     - Apa langkah yang perlu diikuti untuk mengedit Follow Up FAR?
-    - Apakah saya bisa mengedit data Follow Up FAR?
+    - Apakah saya bisa edit data Follow Up FAR?
     - Bagaimana cara membuka halaman Edit Follow Up Visit FAR?
-    - Apa saja langkah mengedit data Follow Up FAR?
+    - Apa saja langkah-langkah untuk edit data Follow Up FAR?
     - Bagaimana cara mengakses fitur edit data Follow Up FAR?
     - Apakah ada langkah tertentu untuk mengedit data Follow Up FAR?
     - Bagaimana mengubah data Follow Up FAR dalam Medical Record FAR?
@@ -3700,43 +3669,43 @@ nlu:
     - Bagaimana jika hasil kunjungan FAR menunjukkan kondisi sehat, apakah saya perlu melakukan follow up di FAR?
     - Apakah kunjungan yang hasilnya sehat memerlukan tindak lanjut?
     - Bagaimana jika status kesehatan pasien Sehat setelah kunjungan FAR?
-    - Apakah kunjungan FAR dengan kondisi Sehat butuh Follow-Up?
+    - Apakah kunjungan FAR dengan kondisi Sehat butuh follow up?
     - Apa yang terjadi jika hasil kunjungan FAR menunjukkan pasien sehat?
     - Apa yang terjadi jika pasien tidak memerlukan tindak lanjut di FAR?
-    - Apakah status Follow-Up FAR akan berubah jika pasien sehat?
+    - Apakah status follow up FAR akan berubah jika pasien sehat?
     - Bagaimana jika kondisi pasien di FAR adalah Tidak Sehat?
     - Bagaimana jika tindak lanjut tidak diperlukan pada kunjungan FAR?
     - Apakah ada tindak lanjut untuk hasil Tidak Sehat di FAR?
     - Bagaimana sistem menentukan apakah tindak lanjut diperlukan di FAR?
-    - Apakah setiap kunjungan FAR mencatat Next Follow-Up?
-    - Apakah kunjungan FAR selalu mencatat tanggal Follow-Up berikutnya?
-    - Apakah sistem mencatat Next Follow-Up untuk semua kunjungan FAR?
-    - Apakah kunjungan FAR selalu membutuhkan tanggal Follow-Up berikutnya?
-    - Apakah semua kondisi di FAR memerlukan Next Follow-Up?
-    - Bagaimana cara sistem menangani Next Follow-Up untuk pasien dengan status Tidak Sehat?
+    - Apakah setiap kunjungan FAR mencatat Next follow up?
+    - Apakah kunjungan FAR selalu mencatat tanggal follow up berikutnya?
+    - Apakah sistem mencatat Next follow up untuk semua kunjungan FAR?
+    - Apakah kunjungan FAR selalu membutuhkan tanggal follow up berikutnya?
+    - Apakah semua kondisi di FAR memerlukan Next follow up?
+    - Bagaimana cara sistem menangani Next follow up untuk pasien dengan status Tidak Sehat?
 
 - intent: what_to_do_if_you_have_a_next_follow_up_medic_id
   examples: |
-    - Apa yang harus dilakukan pengguna jika memiliki Next Follow-Up?
-    - Bagaimana cara mengikuti Next Follow-Up yang ada?
-    - Apa yang perlu saya lakukan setelah mendapatkan tanggal Next Follow-Up?
-    - Apa yang harus saya lakukan jika saya memiliki tanggal Next Follow-Up?
-    - Bagaimana cara mengikuti jadwal Next Follow-Up yang ditentukan?
+    - Apa yang harus dilakukan pengguna jika memiliki Next follow up?
+    - Bagaimana cara mengikuti Next follow up yang ada?
+    - Apa yang perlu saya lakukan setelah mendapatkan tanggal Next follow up?
+    - Apa yang harus saya lakukan jika saya memiliki tanggal Next follow up?
+    - Bagaimana cara mengikuti jadwal Next follow up yang ditentukan?
     - Apa yang perlu dilakukan jika saya memiliki jadwal kunjungan FAR lebih lanjut?
-    - Apa yang harus saya cek jika ada Next Follow-Up di FAR?
-    - Apa yang perlu saya lakukan jika ada tanggal Follow-Up FAR yang sudah ditentukan?
-    - Bagaimana cara mempersiapkan diri untuk kunjungan Next Follow-Up di FAR?
+    - Apa yang harus saya cek jika ada Next follow up di FAR?
+    - Apa yang perlu saya lakukan jika ada tanggal follow up FAR yang sudah ditentukan?
+    - Bagaimana cara mempersiapkan diri untuk kunjungan Next follow up di FAR?
     - Jika saya memiliki jadwal next follow up , apa yang harus dilakukan?
-    - Bagaimana cara memastikan saya mengikuti Next Follow-Up yang dijadwalkan?
-    - Apa yang harus dilakukan jika saya tidak bisa datang pada tanggal Next Follow-Up?
+    - Bagaimana cara memastikan saya mengikuti Next follow up yang dijadwalkan?
+    - Apa yang harus dilakukan jika saya tidak bisa datang pada tanggal Next follow up?
     - Apa yang harus saya lakukan jika saya memiliki jadwal kunjungan FAR selanjutnya?
-    - Apakah saya perlu melakukan sesuatu jika terdapat Next Follow-Up di FAR?
-    - Bagaimana saya bisa mengonfirmasi Next Follow-Up saya di FAR?
-    - Apa langkah yang harus saya ambil jika ada Next Follow-Up yang dijadwalkan?
-    - Apakah saya perlu menghubungi paramedis jika ada perubahan jadwal Follow-Up?
-    - Bagaimana cara memastikan kepatuhan terhadap Next Follow-Up di FAR?
-    - Apa yang perlu dilakukan jika saya menerima tanggal Next Follow-Up untuk kunjungan FAR?
-    - Apa yang perlu saya periksa jika ada Next Follow-Up yang dijadwalkan untuk saya?
+    - Apakah saya perlu melakukan sesuatu jika terdapat Next follow up di FAR?
+    - Bagaimana saya bisa mengonfirmasi Next follow up saya di FAR?
+    - Apa langkah yang harus saya ambil jika ada Next follow up yang dijadwalkan?
+    - Apakah saya perlu menghubungi paramedis jika ada perubahan jadwal follow up?
+    - Bagaimana cara memastikan kepatuhan terhadap Next follow up di FAR?
+    - Apa yang perlu dilakukan jika saya menerima tanggal Next follow up untuk kunjungan FAR?
+    - Apa yang perlu saya periksa jika ada Next follow up yang dijadwalkan untuk saya?
 
 - intent: how_to_access_tab_results_of_visits_far_medic_id
   examples: |
@@ -3870,11 +3839,11 @@ nlu:
     - Apa informasi yang ada di dalam Tab Hasil Follow Up FAR?
     - Apa yang tercantum di Tab Hasil Follow Up FAR pada menu Medical?
     - Apa yang ditampilkan pada tab Hasil Follow Up FAR terkait status kesehatan?
-    - Di mana saya bisa menemukan status follow-up dalam Tab Hasil Follow Up FAR?
+    - Di mana saya bisa menemukan status follow up dalam Tab Hasil Follow Up FAR?
     - Apa yang ditampilkan di bagian Riwayat Follow Up FAR?
-    - Bagaimana sistem menampilkan status follow-up di tab Hasil Follow Up FAR?
-    - Apa yang saya dapat lihat tentang kunjungan follow-up di Tab Hasil Follow Up FAR?
-    - Bagaimana rincian status follow-up ditampilkan di Tab Hasil Follow Up FAR?
+    - Bagaimana sistem menampilkan status follow up di tab Hasil Follow Up FAR?
+    - Apa yang saya dapat lihat tentang kunjungan follow up di Tab Hasil Follow Up FAR?
+    - Bagaimana rincian status follow up ditampilkan di Tab Hasil Follow Up FAR?
 
 - intent: what_is_shown_on_the_follow_up_far_detail_page_mobile_medic_id
   examples: |

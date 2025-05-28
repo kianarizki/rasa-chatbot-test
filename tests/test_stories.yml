@@ -4540,3 +4540,396 @@ stories:
 #       How to add Medical Checkup data?
 #     intent: how_to_add_medical_checkup_data_medic_en
 #   - action: utter_how_to_add_medical_checkup_data_medic_en
+
+- story: Handle about can doctor add new exam parameter Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah dokter dapat menambahkan parameter pemeriksaan baru pada hasil Pemeriksaan Fisik?
+    intent: can_doctor_add_new_exam_parameter_medic_id
+  - action: utter_can_doctor_add_new_exam_parameter_medic_id
+
+- story: Handle about how to view MCU detail result - choose website Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja filter yang tersedia di menu Medical Check Up?
+    intent: how_to_view_medical_checkup_detail_results_medic_id
+  - action: utter_ask_platform_choice_mcu_medic_id
+  - intent: mcu_choose_website_platform_medic_id
+  - action: utter_how_to_view_medical_checkup_detail_results_web_medic_id
+
+- story: Handle about how to view MCU detail result - choose mobile Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja filter yang tersedia di menu Medical Check Up?
+    intent: how_to_view_medical_checkup_detail_results_medic_id
+  - action: utter_ask_platform_choice_mcu_medic_id
+  - intent: mcu_choose_mobile_platform_medic_id
+  - action: utter_how_to_view_medical_checkup_detail_results_mobile_medic_id
+
+- story: Handle about how to search MCU data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Cara mencari data MCU pada halaman Detail Medical Checkup?
+    intent: how_to_search_medical_checkup_data_medic_id
+  - action: utter_how_to_search_medical_checkup_data_medic_id
+
+- story: Handle about how MCU code generated data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Gimana cara sistem membuat Code MCU secara otomatis?
+    intent: how_mcu_code_generated_medic_id
+  - action: utter_how_mcu_code_generated_medic_id
+
+- story: Handle about how to view MCU results by year Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara melihat hasil Medical Check Up berdasarkan tahun pelaksanaan?
+    intent: how_to_view_mcu_results_by_year_medic_id
+  - action: utter_how_to_view_mcu_results_by_year_medic_id
+
+- story: Handle about what is shown in MCU result tab Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa isi dari tab Result Medical Check Up untuk dokter dan paramedis?
+    intent: what_is_shown_in_mcu_result_tab_medic_id
+  - action: utter_what_is_shown_in_mcu_result_tab_medic_id
+
+- story: Handle about how system displays responsible medic info Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana sistem menampilkan informasi dokter atau paramedis yang bertanggung jawab?
+    intent: how_system_displays_responsible_medic_info_medic_id
+  - action: utter_how_system_displays_responsible_medic_info_medic_id
+
+- story: Handle about how to edit MCU data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara mengedit data Medical Check Up?
+    intent: how_to_edit_medical_checkup_data_medic_id
+  - action: utter_how_to_edit_medical_checkup_data_medic_id
+
+- story: Handle about who can edit MCU data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Siapa yang berhak edit data Medical Check Up?
+    intent: who_can_edit_medical_checkup_data_medic_id
+  - action: utter_who_can_edit_medical_checkup_data_medic_id
+
+- story: Handle about can edit old medical Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah dokter bisa mengedit data Medical Check Up lama setelah ada MCU terbaru?
+    intent: can_edit_old_medical_checkup_after_new_mcu_medic_id
+  - action: utter_can_edit_old_medical_checkup_after_new_mcu_medic_id
+
+- story: Handle about can all fields be edited in MCU Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah semua field di Medical Check Up bisa diedit?
+    intent: can_all_fields_be_edited_in_medical_checkup_medic_id
+  - action: utter_can_all_fields_be_edited_in_medical_checkup_medic_id
+
+- story: Handle about how to add follow up MCU Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara menambahkan Follow Up di Medical Check Up?
+    intent: how_to_add_follow_up_medical_checkup_medic_id
+  - action: utter_how_to_add_follow_up_medical_checkup_medic_id
+
+- story: Handle about when add follow up button active Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Kapan tombol Add Follow Up bisa dipakai?
+    intent: when_add_follow_up_button_active_medic_id
+  - action: utter_when_add_follow_up_button_active_medic_id
+
+- story: Handle about when add follow up button disabled Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Kapan tombol Add Follow Up dinonaktifkan (disable)?
+    intent: when_add_follow_up_button_disabled_medic_id
+  - action: utter_when_add_follow_up_button_disabled_medic_id
+
+- story: Handle about ask save follow up result Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa yang terjadi setelah saya menekan tombol Save pada halaman Add Follow Up?
+    intent: ask_save_follow_up_result_medic_id
+  - action: utter_ask_save_follow_up_result_medic_id
+
+- story: Handle about how to see follow up result MCU - choose website Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara melihat hasil Follow Up di menu Medical Check Up?
+    intent: how_to_see_followup_result_medical_checkup_medic_id
+  - action: utter_ask_platform_choice_mcu_medic_id
+  - intent: mcu_choose_website_platform_medic_id
+  - action: utter_how_to_see_followup_result_medical_checkup_web_medic_id
+
+- story: Handle about how to see follow up result MCU - choose mobile Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara melihat hasil Follow Up di menu Medical Check Up?
+    intent: how_to_see_followup_result_medical_checkup_medic_id
+  - action: utter_ask_platform_choice_mcu_medic_id
+  - intent: mcu_choose_mobile_platform_medic_id
+  - action: utter_how_to_see_followup_result_medical_checkup_mobile_medic_id
+
+- story: Handle about how system determines follow up status Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana sistem menentukan status Follow Up?
+    intent: how_system_determines_followup_status_medic_id
+  - action: utter_how_system_determines_followup_status_medic_id
+
+- story: Handle about function of add followup button Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa fungsi tombol Add Follow Up?
+    intent: function_of_add_followup_button_medic_id
+  - action: utter_function_of_add_followup_button_medic_id
+
+- story: Handle about ask follow up scheduling Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana penjadwalan Follow Up selanjutnya?
+    intent: ask_followup_scheduling_medic_id
+  - action: utter_ask_followup_scheduling_medic_id
+
+- story: Handle about ask follow up code format Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana format kode Follow Up di sistem?
+    intent: ask_followup_code_format_medic_id
+  - action: utter_ask_followup_code_format_medic_id
+
+- story: Handle about who can view MCU result detail Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Siapa yang bisa melihat detail hasil MCU?
+    intent: who_can_view_mcu_result_detail_medic_id
+  - action: utter_who_can_view_mcu_result_detail_medic_id
+
+- story: Handle about ask if doctor can add follow up all projects Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah dokter bisa menambahkan Follow Up di semua project site?
+    intent: ask_if_doctor_can_add_followup_all_projects_medic_id
+  - action: utter_ask_if_doctor_can_add_followup_all_projects_medic_id
+
+- story: Handle about how to dit result follow up MCU data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Gimana cara mengakses fitur Edit Follow Up pada Medical Check Up?
+    intent: how_to_edit_result_followup_mcu_data_medic_id
+  - action: utter_how_to_edit_result_followup_mcu_data_medic_id
+
+- story: Handle about who can edit result follow up MCU data Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Siapa saja yang bisa mengedit data Follow Up MCU?
+    intent: who_can_edit_result_follow_up_mcu_data_medic_id
+  - action: utter_who_can_edit_result_follow_up_mcu_data_medic_id
+
+- story: Handle about edit follow up MCU conditions Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja ketentuan saat mengedit data Follow Up MCU?
+    intent: edit_follow_up_mcu_conditions_medic_id
+  - action: utter_edit_follow_up_mcu_conditions_medic_id
+
+- story: Handle about save changes follow up MCU Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara menyimpan perubahan data Follow Up MCU?
+    intent: save_changes_follow_up_mcu_medic_id
+  - action: utter_save_changes_follow_up_mcu_medic_id
+
+- story: Handle about when notifications are sent in MCU - choose website Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Notifikasi pada sistem Medical Checkup dikirimkan dalam situasi apa saja?
+    intent: when_notifications_are_sent_in_mcu_medic_id
+  - action: utter_ask_platform_choice_mcu_medic_id
+  - intent: mcu_choose_website_platform_medic_id
+  - action: utter_when_notifications_are_sent_in_mcu_web_medic_id
+
+- story: Handle about when notifications are sent in MCU - choose mobile Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Notifikasi pada sistem Medical Checkup dikirimkan dalam situasi apa saja?
+    intent: when_notifications_are_sent_in_mcu_medic_id
+  - action: utter_ask_platform_choice_mcu_medic_id
+  - intent: mcu_choose_mobile_platform_medic_id
+  - action: utter_when_notifications_are_sent_in_mcu_mobile_medic_id
+
+- story: Handle about can view MCU older than 5 years Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah saya bisa melihat hasil MCU lebih dari 5 tahun terakhir?
+    intent: can_view_mcu_older_than_5_years_medic_id
+  - action: utter_can_view_mcu_older_than_5_years_medic_id
+
+- story: Handle about how system shows active MCU results Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana sistem menampilkan hasil Medical Checkup yang masih berlaku?
+    intent: how_system_shows_active_mcu_results_medic_id
+  - action: utter_how_system_shows_active_mcu_results_medic_id
+
+- story: Handle about what are available examination details Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa saja detail hasil pemeriksaan yang tersedia?
+    intent: what_are_available_examination_details_medic_id
+  - action: utter_what_are_available_examination_details_medic_id
+
+- story: Handle about is disease diagnosis displayed Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah hasil diagnosa penyakit ditampilkan?
+    intent: is_disease_diagnosis_displayed_medic_id
+  - action: utter_is_disease_diagnosis_displayed_medic_id
+
+- story: Handle about difference between open and close follow up status Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apa perbedaan status Open dan Close pada Follow Up MCU?
+    intent: difference_between_open_and_close_follow_up_status_medic_id
+  - action: utter_difference_between_open_and_close_follow_up_status_medic_id
+
+- story: Handle about how to know follow up location Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara mengetahui lokasi tempat pelaksanaan Follow Up?
+    intent: how_to_know_follow_up_location_medic_id
+  - action: utter_how_to_know_follow_up_location_medic_id
+
+- story: Handle about what if no follow up needed in MCU result Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana kalau hasil MCU tidak butuh Follow Up?
+    intent: what_if_no_follow_up_needed_in_mcu_result_medic_id
+  - action: utter_what_if_no_follow_up_needed_in_mcu_result_medic_id
+
+- story: Handle about does follow up result affect final health status Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Apakah hasil Follow Up mempengaruhi status kesehatan akhir?
+    intent: does_follow_up_result_affect_final_health_status_medic_id
+  - action: utter_does_follow_up_result_affect_final_health_status_medic_en
+
+- story: Handle about how to know when next schedule MCU Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara mengetahui kapan saya harus melakukan Medical Checkup berikutnya?
+    intent: how_to_know_when_next_schedule_mcu_medic_id
+  - action: utter_how_to_know_when_next_schedule_mcu_medic_id
+
+- story: Handle about how to download attachment follow up MCU mobile Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      Bagaimana cara mengunduh attachment dalam Follow Up MCU?
+    intent: how_to_download_attachment_follow_up_mcu_mobile_medic_id
+  - action: utter_how_to_download_attachment_follow_up_mcu_mobile_medic_id
+
+
+- story: Handle about  Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      
+    intent: 
+  - action: 
+
+- story: Handle about  - choose website Medic
+  steps:
+  - slot_was_set:
+    - language: indonesia
+  - user: |
+      
+    intent: 
+  - action: 
+  - intent: 
+  - action: 

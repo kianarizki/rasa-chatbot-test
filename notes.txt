@@ -1,0 +1,1 @@
+model untuk keseluruhan nlu medic pake model "20250525-232905-narrow-scale.tar.gz"
