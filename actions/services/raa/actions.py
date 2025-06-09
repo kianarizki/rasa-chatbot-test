@@ -94,7 +94,6 @@ class ActionAttendanceToday(Action):
                     dispatcher.utter_message(response="There was an error while processing the request")
             else:
                 dispatcher.utter_message(response="There was an error while processing the request")
-        
         return []
 
 class ActionAttendanceYesterday(Action):

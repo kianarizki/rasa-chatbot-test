@@ -1,2465 +1,2465 @@
-version: "3.1"
-rules:
-- rule: Asks about Disease Management Menu in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: disease_management_menu_medic_id
-    - action: utter_disease_management_menu_medic_id
-
-- rule: Asks about Disease Management Menu in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: disease_management_menu_medic_en
-    - action: utter_disease_management_menu_medic_en
-
-- rule: Asks about Disease Management Menu Access in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: disease_management_menu_access_medic_id
-    - action: utter_who_can_access_disease_management_menu_medic_id
-
-- rule: Asks about Disease Management Menu Access in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: disease_management_menu_access_medic_en
-    - action: utter_who_can_access_disease_management_menu_medic_en
-
-- rule: Asks about Paramedic Change Disease Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: paramedic_change_disease_data_medic_id
-    - action: utter_paramedic_change_disease_data_medic_id
-
-- rule: Asks about Paramedic Change Disease Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: paramedic_change_disease_data_medic_en
-    - action: utter_paramedic_change_disease_data_medic_en
-
-- rule: Asks about How to Add New Disease Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_add_new_disease_data_medic_id
-    - action: utter_how_to_add_new_disease_data_medic_id
-
-- rule: Asks about How to Add New Disease Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_add_new_disease_data_medic_en
-    - action: utter_how_to_add_new_disease_data_medic_en
-
-- rule: Asks about Info for Add New Disease Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: info_for_add_new_disease_data_medic_id
-    - action: utter_how_to_add_new_disease_data_medic_id
-
-- rule: Asks about Info for Add New Disease Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: info_for_add_new_disease_data_medic_en
-    - action: utter_how_to_add_new_disease_data_medic_en
-
-- rule: Asks about Disease Type and Add Info in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: disease_type_and_add_info_medic_id
-    - action: utter_disease_type_add_and_info_medic_id
-
-- rule: Asks about Disease Type and Add Info in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: disease_type_and_add_info_medic_en
-    - action: utter_disease_type_add_and_info_medic_en
-
-- rule: Asks about Required Fields Empty in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: required_fields_empty_medic_id
-    - action: utter_required_fields_empty_medic_id
-
-- rule: Asks about Required Fields Empty in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: required_fields_empty_medic_en
-    - action: utter_required_fields_empty_medic_en
-
-- rule: Asks about Existing Data Entry in Medic Apps in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: existing_data_entry_medic_id
-    - action: utter_existing_data_entry_medic_id
-
-- rule: Asks about Existing Data Entry in Medic Apps in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: existing_data_entry_medic_en
-    - action: utter_existing_data_entry_medic_en
-
-- rule: Asks about Post Addition Process Add Disease Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: post_addition_process_add_disease_data_medic_id
-    - action: utter_post_addition_process_add_disease_data_medic_id
-
-- rule: Asks about Post Addition Process Add Disease Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: post_addition_process_add_disease_data_medic_en
-    - action: utter_post_addition_process_add_disease_data_medic_en
-
-- rule: Asks about Who Can See Disease Data Medic in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: who_can_see_disease_data_medic_id
-    - action: utter_who_can_see_disease_data_medic_id
-
-- rule: Asks about Who Can See Disease Data Medic in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: who_can_see_disease_data_medic_en
-    - action: utter_who_can_see_disease_data_medic_en
-
-- rule: Asks about Who can edit Disease Data Medic in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: who_can_edit_disease_data_medic_id
-    - action: utter_who_can_edit_disease_data_medic_id
-
-- rule: Asks about Who can edit Disease Data Medic in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: who_can_edit_disease_data_medic_en
-    - action: utter_who_can_edit_disease_data_medic_en
-
-- rule: Asks about Disease Management Menu Connections with Others Menu in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: disease_management_menu_connections_medic_id
-    - action: utter_disease_management_menu_connections_medic_id
-
-- rule: Asks about Disease Management Menu Connections with Others Menu in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: disease_management_menu_connections_medic_en
-    - action: utter_disease_management_menu_connections_medic_en
-
-- rule: Asks about Effect of Updating Disease Data Used in Other Menu's in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: effect_of_updating_disease_data_used_in_other_menus_medic_id
-    - action: utter_effect_of_updating_disease_data_used_in_other_menus_medic_id
-
-- rule: Asks about Effect of Updating Disease Data Used in Other Menu's in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: effect_of_updating_disease_data_used_in_other_menus_medic_en
-    - action: utter_effect_of_updating_disease_data_used_in_other_menus_medic_en
-
-- rule: Asks about Who Can Delete Disease Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: who_can_delete_disease_data_medic_id
-    - action: utter_who_can_delete_disease_data_medic_id
-
-- rule: Asks about Who Can Delete Disease Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: who_can_delete_disease_data_medic_en
-    - action: utter_who_can_delete_disease_data_medic_en
-
-- rule: Asks about How to Delete Disease Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_delete_disease_data_medic_id
-    - action: utter_how_to_delete_disease_data_medic_id
-
-- rule: Asks about How to Delete Disease Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_delete_disease_data_medic_en
-    - action: utter_how_to_delete_disease_data_medic_en
-
-- rule: Asks about Deleting Used Disease Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: deleting_used_disease_data_medic_id
-    - action: utter_deleting_used_disease_data_medic_id
-
-- rule: Asks about Deleting Used Disease Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: deleting_used_disease_data_medic_en
-    - action: utter_deleting_used_disease_data_medic_en
-
-- rule: Asks about Deleting Unused Disease Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: deleting_unused_disease_data_medic_id
-    - action: utter_deleting_unused_disease_data_medic_id
-
-- rule: Asks about Deleting Unused Disease Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: deleting_unused_disease_data_medic_en
-    - action: utter_deleting_unused_disease_data_medic_en
-
-- rule: Asks about Paramedic Access in The Future in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: paramedics_access_disease_data_in_the_future_medic_id
-    - action: utter_paramedic_change_disease_data_medic_id
-
-- rule: Asks about Paramedic Access in The Future in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: paramedics_access_disease_data_in_the_future_medic_en
-    - action: utter_paramedic_change_disease_data_medic_en
-
-- rule: Asks about How to Edit Disease Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_edit_disease_data_medic_id
-    - action: utter_how_to_edit_disease_data_medic_id
-
-- rule: Asks about How to Edit Disease Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_edit_disease_data_medic_en
-    - action: utter_how_to_edit_disease_data_medic_en
-
-- rule: Asks about Post Edit Disease Data Process in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: post_edit_disease_data_process_medic_id
-    - action: utter_post_edit_disease_data_process_medic_id
-
-- rule: Asks about Post Edit Disease Data Process in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: post_edit_disease_data_process_medic_en
-    - action: utter_post_edit_disease_data_process_medic_en
-
-- rule: Asks about Medicine Standard menu in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: medicine_standard_menu_medic_id
-    - action: utter_medicine_standard_menu_medic_id
-
-- rule: Asks about Medicine Standard menu in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: medicine_standard_menu_medic_en
-    - action: utter_medicine_standard_menu_medic_en
-
-- rule: Asks about who can access Medicine Standard menu in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: who_can_access_medicine_standard_menu_medic_id
-    - action: utter_who_can_access_medicine_standard_menu_medic_id
-
-- rule: Asks about who can access Medicine Standard menu in ENglish
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: who_can_access_medicine_standard_menu_medic_en
-    - action: utter_who_can_access_medicine_standard_menu_medic_en
-
-- rule: Asks about How Doctors Add New Medicine Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_doctors_add_medicine_data_medic_id
-    - action: utter_how_doctors_add_medicine_data_medic_id
-
-- rule: Asks about How Doctors Add New Medicine Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_doctors_add_medicine_data_medic_en
-    - action: utter_how_doctors_add_medicine_data_medic_en
-
-- rule: Asks about How Paramedics Add New Medicine Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_paramedics_add_medicine_data_medic_id
-    - action: utter_how_paramedics_add_medicine_data_medic_id
-
-- rule: Asks about How Paramedics Add New Medicine Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_paramedics_add_medicine_data_medic_en
-    - action: utter_how_paramedics_add_medicine_data_medic_en
-
-- rule: Asks about Info for Doctor Add New Medicine Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: info_for_doctor_add_new_medicine_data_medic_id
-    - action: utter_how_doctors_add_medicine_data_medic_id
-
-- rule: Asks about Info for Doctor Add New Medicine Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: info_for_doctor_add_new_medicine_data_medic_en
-    - action: utter_how_doctors_add_medicine_data_medic_en
-
-- rule: Asks about Info for Paramedic Add New Medicine Data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: info_for_paramedics_add_new_medicine_data_medic_id
-    - action: utter_how_paramedics_add_medicine_data_medic_id
-
-- rule: Asks about Info for Paramedic Add New Medicine Data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: info_for_paramedics_add_new_medicine_data_medic_en
-    - action: utter_how_paramedics_add_medicine_data_medic_en
-
-- rule: Asks about View Medicine Submission Paramedic in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: view_medicine_submission_paramedic_medic_id
-    - action: utter_view_medicine_submission_paramedic_medic_id
-
-- rule: Asks about View Medicine Submission Paramedic in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: view_medicine_submission_paramedic_medic_en
-    - action: utter_view_medicine_submission_paramedic_medic_en
-
-- rule: Asks about Approve Medicine Submission by Paramedic in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: approve_medicine_submission_by_paramedic_medic_id
-    - action: utter_approve_medicine_submission_by_paramedic_medic_id
-
-- rule: Asks about Approve Medicine Submission by Paramedic in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: approve_medicine_submission_by_paramedic_medic_en
-    - action: utter_approve_medicine_submission_by_paramedic_medic_en
-
-- rule: Asks about Meaning of "Draft" status on Medicine Submission in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: meaning_status_draft_medicine_submission_medic_id
-    - action: utter_meaning_status_draft_medicine_submission_medic_id
-
-- rule: Asks about Meaning of "Draft" status on Medicine Submission in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: meaning_status_draft_medicine_submission_medic_en
-    - action: utter_meaning_status_draft_medicine_submission_medic_en
-
-- rule: Asks about Meaning of "Approved" status on Medicine Submission in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: meaning_status_approved_medicine_submission_medic_id
-    - action: utter_meaning_status_approved_medicine_submission_medic_id
-
-- rule: Asks about Meaning of "Approved" status on Medicine Submission in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: meaning_status_approved_medicine_submission_medic_en
-    - action: utter_meaning_status_approved_medicine_submission_medic_en
-
-- rule: Asks about Meaning of "Rejected" status on Medicine Submission in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: meaning_status_rejected_medicine_submission_medic_id
-    - action: utter_meaning_status_rejected_medicine_submission_medic_id
-
-- rule: Asks about Meaning of "Rejected" status on Medicine Submission in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: meaning_status_rejected_medicine_submission_medic_en
-    - action: utter_meaning_status_rejected_medicine_submission_medic_en
-
-- rule: Asks about Rejected Medicine Resubmission in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: rejected_medicine_resubmission_medic_id
-    - action: utter_rejected_medicine_resubmission_medic_id
-
-- rule: Asks about Rejected Medicine Resubmission in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: rejected_medicine_resubmission_medic_en
-    - action: utter_rejected_medicine_resubmission_medic_en
-
-- rule: Asks about who can edit medicine data medic in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: who_can_edit_medicine_data_medic_id
-    - action: utter_who_can_edit_medicine_data_medic_id
-
-- rule: Asks about who can edit medicine data medic in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: who_can_edit_medicine_data_medic_en
-    - action: utter_who_can_edit_medicine_data_medic_en
-
-- rule: Asks about what happens when doctor edits medicine data medic in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_happens_when_doctor_edits_medicine_data_medic_id
-    - action: utter_what_happens_when_doctor_edits_medicine_data_medic_id
-
-- rule: Asks about what happens when doctor edits medicine data medic in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_happens_when_doctor_edits_medicine_data_medic_en
-    - action: utter_what_happens_when_doctor_edits_medicine_data_medic_en
-
-- rule: Asks about how doctor edits medicine data medic in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_doctor_edits_medicine_data_medic_id
-    - action: utter_how_doctor_edits_medicine_data_medic_id
-
-- rule: Asks about how doctor edits medicine data medic in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_doctor_edits_medicine_data_medic_en
-    - action: utter_how_doctor_edits_medicine_data_medic_en
-
-- rule: Asks about why medicine code cannot be edited in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: why_medicine_code_cannot_be_edited_medic_id
-    - action: utter_why_medicine_code_cannot_be_edited_medic_id
-
-- rule: Asks about why medicine code cannot be edited in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: why_medicine_code_cannot_be_edited_medic_en
-    - action: utter_why_medicine_code_cannot_be_edited_medic_en
-
-- rule: Asks about medicine code order in system medic apps in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: medicine_code_order_in_system_medic_id
-    - action: utter_medicine_code_order_in_system_medic_id
-
-- rule: Asks about medicine code order in system medic apps in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: medicine_code_order_in_system_medic_en
-    - action: utter_medicine_code_order_in_system_medic_en
-
-- rule: Asks about doctor changes medicine name in system in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: doctor_changes_medicine_name_medic_id
-    - action: utter_doctor_changes_medicine_name_medic_id
-
-- rule: Asks about doctor changes medicine name in system in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: doctor_changes_medicine_name_medic_en
-    - action: utter_doctor_changes_medicine_name_medic_en
-
-- rule: Asks about can medicine registered be deleted in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: can_medicine_registered_be_deleted_medic_id
-    - action: utter_can_medicine_registered_be_deleted_medic_id
-
-- rule: Asks about can medicine registered be deleted in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: can_medicine_registered_be_deleted_medic_en
-    - action: utter_can_medicine_registered_be_deleted_medic_en
-
-- rule: Asks about how to activate or deactivate medicine data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_activate_or_deactivate_medicine_medic_id
-    - action: utter_how_to_activate_or_deactivate_medicine_medic_id
-
-- rule: Asks about how to activate or deactivate medicine data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_activate_or_deactivate_medicine_medic_en
-    - action: utter_how_to_activate_or_deactivate_medicine_medic_en
-
-- rule: Asks about what happens when doctor toggles medicine data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_happens_when_doctor_toggles_medicine_medic_id
-    - action: utter_what_happens_when_doctor_toggles_medicine_medic_id
-
-- rule: Asks about what happens when doctor toggles medicine data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_happens_when_doctor_toggles_medicine_medic_en
-    - action: utter_what_happens_when_doctor_toggles_medicine_medic_en
-
-- rule: Asks about who has access to toggle medicine data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: who_has_access_to_toggle_medicine_medic_id
-    - action: utter_who_has_access_to_toggle_medicine_medic_id
-
-- rule: Asks about who has access to toggle medicine data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: who_has_access_to_toggle_medicine_medic_en
-    - action: utter_who_has_access_to_toggle_medicine_medic_en
-
-- rule: Asks about what happens when medicine is deactivated in records in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_happens_when_medicine_is_deactivated_in_records_medic_id
-    - action: utter_what_happens_when_medicine_is_deactivated_in_records_medic_id
-
-- rule: Asks about what happens when medicine is deactivated in records in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_happens_when_medicine_is_deactivated_in_records_medic_en
-    - action: utter_what_happens_when_medicine_is_deactivated_in_records_medic_en
-
-- rule: Asks about is medicine standard connected to other menus in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: is_medicine_standard_connected_to_other_menus_medic_id
-    - action: utter_is_medicine_standard_connected_to_other_menus_medic_id
-
-- rule: Asks about is medicine standard connected to other menus in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: is_medicine_standard_connected_to_other_menus_medic_en
-    - action: utter_is_medicine_standard_connected_to_other_menus_medic_en
-
-- rule: Asks about paramedics access medicine data in the future in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: paramedics_access_medicine_data_in_the_future_medic_id
-    - action: utter_paramedics_access_medicine_data_in_the_future_medic_id
-
-- rule: Asks about paramedics access medicine data in the future in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: paramedics_access_medicine_data_in_the_future_medic_en
-    - action: utter_paramedics_access_medicine_data_in_the_future_medic_en
-
-- rule: Asks about medical record external in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: medical_record_external_menu_medic_id
-    - action: utter_medical_record_external_menu_medic_id
-
-- rule: Asks about medical record external in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: medical_record_external_menu_medic_en
-    - action: utter_medical_record_external_menu_medic_en
-
-- rule: Asks about who can access medical record external menu in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: who_can_access_medical_record_external_menu_medic_id
-    - action: utter_who_can_access_medical_record_external_menu_medic_id
-
-- rule: Asks about who can access medical record external menu in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: who_can_access_medical_record_external_menu_medic_en
-    - action: utter_who_can_access_medical_record_external_menu_medic_en
-
-- rule: Asks about how to access medical record external menu in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_access_medical_record_external_menu_medic_id
-    - action: utter_how_to_access_medical_record_external_menu_medic_id
-
-- rule: Asks about how to access medical record external menu in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_access_medical_record_external_menu_medic_en
-    - action: utter_how_to_access_medical_record_external_menu_medic_en
-
-- rule: Asks about what is displayed in active tab of medical record external in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_displayed_in_active_tab_of_medical_record_external_medic_id
-    - action: utter_what_is_displayed_in_active_tab_of_medical_record_external_medic_id
-
-- rule: Asks about what is displayed in active tab of medical record external in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_displayed_in_active_tab_of_medical_record_external_medic_en
-    - action: utter_what_is_displayed_in_active_tab_of_medical_record_external_medic_en
-
-- rule: Asks about what is displayed in history tab of medical record external in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_displayed_in_history_tab_of_medical_record_external_medic_id
-    - action: utter_what_is_displayed_in_history_tab_of_medical_record_external_medic_id
-
-- rule: Asks about what is displayed in history tab of medical record external in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_displayed_in_history_tab_of_medical_record_external_medic_en
-    - action: utter_what_is_displayed_in_history_tab_of_medical_record_external_medic_en
-
-- rule: Asks about how to search data in medical record external in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_search_data_in_medical_record_external_menu_medic_id
-    - action: utter_how_to_search_data_in_medical_record_external_menu_medic_id
-
-- rule: Asks about how to search data in medical record external in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_search_data_in_medical_record_external_menu_medic_en
-    - action: utter_how_to_search_data_in_medical_record_external_menu_medic_en
-
-- rule: Asks about how to view medical record external submission detail in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_view_medical_record_external_submission_detail_medic_id
-    - action: utter_how_to_view_medical_record_external_submission_detail_medic_id
-
-- rule: Asks about how to view medical record external submission detail in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_view_medical_record_external_submission_detail_medic_en
-    - action: utter_how_to_view_medical_record_external_submission_detail_medic_en
-
-- rule: Asks about what documents are needed for medical record external submission in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_documents_are_needed_for_medical_record_external_submission_medic_id
-    - action: utter_what_documents_are_needed_for_medical_record_external_submission_medic_id
-
-- rule: Asks about what documents are needed for medical record external submission in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_documents_are_needed_for_medical_record_external_submission_medic_en
-    - action: utter_what_documents_are_needed_for_medical_record_external_submission_medic_en
-
-- rule: Asks about how to filter based on cut off period in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_filter_based_on_cut_off_period_medic_id
-    - action: utter_how_to_filter_based_on_cut_off_period_medic_id
-
-- rule: Asks about how to filter based on cut off period in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_filter_based_on_cut_off_period_medic_en
-    - action: utter_how_to_filter_based_on_cut_off_period_medic_en
-
-- rule: Asks about what statuses are involved in medical claim approval process in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: statuses_are_involved_in_medical_claim_approval_process_medic_id
-    - action: utter_statuses_are_involved_in_medical_claim_approval_process_medic_id
-
-- rule: Asks about what statuses are involved in medical claim approval process in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: statuses_are_involved_in_medical_claim_approval_process_medic_en
-    - action: utter_statuses_are_involved_in_medical_claim_approval_process_medic_en
-
-- rule: Asks about how do doctor or paramedic approve medical claim in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_do_doctor_or_paramedic_approve_medical_claim_medic_id
-    - action: utter_how_do_doctor_or_paramedic_approve_medical_claim_medic_id
-
-- rule: Asks about how do doctor or paramedic approve medical claim in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_do_doctor_or_paramedic_approve_medical_claim_medic_en
-    - action: utter_how_do_doctor_or_paramedic_approve_medical_claim_medic_en
-
-- rule: Asks about how do doctor or paramedic reject medical claim in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_do_doctor_or_paramedic_reject_medical_claim_medic_id
-    - action: utter_how_do_doctor_or_paramedic_reject_medical_claim_medic_id
-
-- rule: Asks about how do doctor or paramedic reject medical claim in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_do_doctor_or_paramedic_reject_medical_claim_medic_en
-    - action: utter_how_do_doctor_or_paramedic_reject_medical_claim_medic_en
-
-- rule: Asks about how do doctor or paramedic revision medical claim in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_do_doctor_or_paramedic_revision_medical_claim_medic_id
-    - action: utter_how_do_doctor_or_paramedic_revision_medical_claim_medic_id
-
-- rule: Asks about how do doctor or paramedic revision medical claim in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_do_doctor_or_paramedic_revision_medical_claim_medic_en
-    - action: utter_how_do_doctor_or_paramedic_revision_medical_claim_medic_en
-
-- rule: Asks about why shift loss and diagnosis are marked with minus in history tab in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: why_shift_loss_and_diagnosis_are_marked_with_minus_in_history_tab_medic_id 
-    - action: utter_why_shift_loss_and_diagnosis_are_marked_with_minus_in_history_tab_medic_id
-
-- rule: Asks about why shift loss and diagnosis are marked with minus in history tab in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: why_shift_loss_and_diagnosis_are_marked_with_minus_in_history_tab_medic_en
-    - action: utter_why_shift_loss_and_diagnosis_are_marked_with_minus_in_history_tab_medic_en
-
-- rule: Asks about can claim data be edited after approval or rejection tab in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: can_claim_data_be_edited_after_approval_or_rejection_tab_medic_id
-    - action: utter_can_claim_data_be_edited_after_approval_or_rejection_tab_medic_id
-
-- rule: Asks about can claim data be edited after approval or rejection tab in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: can_claim_data_be_edited_after_approval_or_rejection_tab_medic_en
-    - action: utter_can_claim_data_be_edited_after_approval_or_rejection_tab_medic_en
-
-- rule: Asks about relationship between medical record external in medic and medical claim in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: relationship_between_medical_record_external_in_medic_and_medical_claim_in_ess_medic_id
-    - action: utter_relationship_between_medical_record_external_in_medic_and_medical_claim_in_ess_medic_id
-
-- rule: Asks about relationship between medical record external in medic and medical claim in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: relationship_between_medical_record_external_in_medic_and_medical_claim_in_ess_medic_en
-    - action: utter_relationship_between_medical_record_external_in_medic_and_medical_claim_in_ess_medic_en
-
-- rule: Asks about meaning of numbers in active tab in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: meaning_of_numbers_in_active_tab_medic_id
-    - action: utter_meaning_of_numbers_in_active_tab_medic_id
-
-- rule: Asks about meaning of numbers in active tab in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: meaning_of_numbers_in_active_tab_medic_en
-    - action: utter_meaning_of_numbers_in_active_tab_medic_en
-
-- rule: Asks about what happens after claim is approved in medic apps in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_happens_after_claim_is_approved_in_medic_apps_medic_id
-    - action: utter_what_happens_after_claim_is_approved_in_medic_apps_medic_id
-
-- rule: Asks about what happens after claim is approved in medic apps in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_happens_after_claim_is_approved_in_medic_apps_medic_en
-    - action: utter_what_happens_after_claim_is_approved_in_medic_apps_medic_en
-
-- rule: Asks about what is approval activity feature in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_approval_activity_feature_medic_id
-    - action: utter_what_is_approval_activity_feature_medic_id
-
-- rule: Asks about what is approval activity feature in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_approval_activity_feature_medic_en
-    - action: utter_what_is_approval_activity_feature_medic_en
-
-- rule: Asks about how to see attachments uploaded by employee in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: see_attachments_uploaded_by_employee_medic_id
-    - action: utter_see_attachments_uploaded_by_employee_medic_id
-
-- rule: Asks about how to see attachments uploaded by employee in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: see_attachments_uploaded_by_employee_medic_en
-    - action: utter_see_attachments_uploaded_by_employee_medic_en
-
-- rule: Asks about notifications sent in medical record external in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: notifications_sent_in_medical_record_external_medic_id
-    - action: utter_notifications_sent_in_medical_record_external_medic_id
-
-- rule: Asks about notifications sent in medical record external in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: notifications_sent_in_medical_record_external_medic_en
-    - action: utter_notifications_sent_in_medical_record_external_medic_en
-
-- rule: Asks about what is type mcu column in medical checkup menu in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_type_mcu_column_in_medical_checkup_medic_id
-    - action: utter_what_is_type_mcu_column_in_medical_checkup_medic_id
-
-- rule: Asks about what is type mcu column in medical checkup menu in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_type_mcu_column_in_medical_checkup_medic_en
-    - action: utter_what_is_type_mcu_column_in_medical_checkup_medic_en
-
-- rule: Asks about what is last mcu date column in medical checkup menu in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_last_mcu_date_column_in_medical_checkup_medic_id
-    - action: utter_what_is_last_mcu_date_column_in_medical_checkup_medic_id
-
-- rule: Asks about what is last mcu date column in medical checkup menu in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_last_mcu_date_column_in_medical_checkup_medic_en
-    - action: utter_what_is_last_mcu_date_column_in_medical_checkup_medic_en
-
-- rule: Asks about what is expired mcu column in medical checkup menu in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_expired_mcu_column_in_medical_checkup_medic_id
-    - action: utter_what_is_expired_mcu_column_in_medical_checkup_medic_id
-
-- rule: Asks about what is expired mcu column in medical checkup menu in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_expired_mcu_column_in_medical_checkup_medic_en
-    - action: utter_what_is_expired_mcu_column_in_medical_checkup_medic_en
-
-- rule: Asks about what is health status column in medical checkup menu in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_health_status_column_in_medical_checkup_medic_id
-    - action: utter_what_is_health_status_column_in_medical_checkup_medic_id
-
-- rule: Asks about what is health status column in medical checkup menu in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_health_status_column_in_medical_checkup_medic_en
-    - action: utter_what_is_health_status_column_in_medical_checkup_medic_en
-
-- rule: Asks about what is health status in medical chekup result in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_health_status_in_mcu_result_medic_id
-    - action: utter_what_is_health_status_in_mcu_result_medic_id
-
-- rule: Asks about what is health status in medical chekup result in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_health_status_in_mcu_result_medic_en
-    - action: utter_what_is_health_status_in_mcu_result_medic_en
-
-- rule: Asks about what is selected column feature menu in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_selected_column_feature_menu_medic_id
-    - action: utter_what_is_selected_column_feature_menu_medic_id
-
-- rule: Asks about what is selected column feature menu in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_selected_column_feature_menu_medic_en
-    - action: utter_what_is_selected_column_feature_menu_medic_en
-
-- rule: Asks about is selected column change permanent in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: is_selected_column_change_permanent_medic_id
-    - action: utter_is_selected_column_change_permanent_medic_id
-
-- rule: Asks about is selected column change permanent in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: is_selected_column_change_permanent_medic_en
-    - action: utter_is_selected_column_change_permanent_medic_en
-
-- rule: Asks about does each user have different selected column preference in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: does_each_user_have_different_selected_column_preferences_medic_id
-    - action: utter_does_each_user_have_different_selected_column_preferences_medic_id
-
-- rule: Asks about does each user have different selected column preference in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: does_each_user_have_different_selected_column_preferences_medic_en
-    - action: utter_does_each_user_have_different_selected_column_preferences_medic_en
-
-- rule: Asks about how to add medical checkup data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_add_medical_checkup_data_medic_id
-    - action: utter_how_to_add_medical_checkup_data_medic_id
-
-- rule: Asks about how to add medical checkup data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_add_medical_checkup_data_medic_en
-    - action: utter_how_to_add_medical_checkup_data_medic_en
-
-- rule: Asks about how to search MCU data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_search_medical_checkup_data_medic_id
-    - action: utter_how_to_search_medical_checkup_data_medic_id
-
-- rule: Asks about how to search MCU data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_search_medical_checkup_data_medic_en
-    - action: utter_how_to_search_medical_checkup_data_medic_en
-
-- rule: Asks about how MCU code generated in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_mcu_code_generated_medic_id
-    - action: utter_how_mcu_code_generated_medic_id
-
-- rule: Asks about how MCU code generated in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_mcu_code_generated_medic_en
-    - action: utter_how_mcu_code_generated_medic_en
-
-- rule: Asks about can doctor add new exam parameter in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: can_doctor_add_new_exam_parameter_medic_id
-    - action: utter_can_doctor_add_new_exam_parameter_medic_id
-
-- rule: Asks about can doctor add new exam parameter in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: can_doctor_add_new_exam_parameter_medic_en
-    - action: utter_can_doctor_add_new_exam_parameter_medic_en
-
-- rule: Asks about how to view MCU results by year in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_view_mcu_results_by_year_medic_id
-    - action: utter_how_to_view_mcu_results_by_year_medic_id
-
-- rule: Asks about how to view MCU results by year in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_view_mcu_results_by_year_medic_en
-    - action: utter_how_to_view_mcu_results_by_year_medic_en
-
-- rule: Asks about what is shown in MCU result tab in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_shown_in_mcu_result_tab_medic_id
-    - action: utter_what_is_shown_in_mcu_result_tab_medic_id
-
-- rule: Asks about what is shown in MCU result tab in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_shown_in_mcu_result_tab_medic_en
-    - action: utter_what_is_shown_in_mcu_result_tab_medic_en
-
-- rule: Asks about how system displays responsible medic info in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_system_displays_responsible_medic_info_medic_id
-    - action: utter_how_system_displays_responsible_medic_info_medic_id
-
-- rule: Asks about how system displays responsible medic info in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_system_displays_responsible_medic_info_medic_en
-    - action: utter_how_system_displays_responsible_medic_info_medic_en
-
-- rule: Asks about how to edit MCU data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_edit_medical_checkup_data_medic_id
-    - action: utter_how_to_edit_medical_checkup_data_medic_id
-
-- rule: Asks about how to edit MCU data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_edit_medical_checkup_data_medic_en
-    - action: utter_how_to_edit_medical_checkup_data_medic_en
-
-- rule: Asks about who can edit MCU data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: who_can_edit_medical_checkup_data_medic_id
-    - action: utter_who_can_edit_medical_checkup_data_medic_id
-
-- rule: Asks about who can edit MCU data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: who_can_edit_medical_checkup_data_medic_en
-    - action: utter_who_can_edit_medical_checkup_data_medic_en
-
-- rule: Asks about can edit old MCU after new MCU data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: can_edit_old_medical_checkup_after_new_mcu_medic_id
-    - action: utter_can_edit_old_medical_checkup_after_new_mcu_medic_id
-
-- rule: Asks about can edit old MCU after new MCU data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: can_edit_old_medical_checkup_after_new_mcu_medic_en
-    - action: utter_can_edit_old_medical_checkup_after_new_mcu_medic_en
-
-- rule: Asks about can all fields be edited in MCU in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: can_all_fields_be_edited_in_medical_checkup_medic_id
-    - action: utter_can_all_fields_be_edited_in_medical_checkup_medic_id
-
-- rule: Asks about can all fields be edited in MCU in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: can_all_fields_be_edited_in_medical_checkup_medic_en
-    - action: utter_can_all_fields_be_edited_in_medical_checkup_medic_en
-
-- rule: Asks about how to add follow up MCU in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_add_follow_up_medical_checkup_medic_id
-    - action: utter_how_to_add_follow_up_medical_checkup_medic_id
-
-- rule: Asks about how to add follow up MCU in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_add_follow_up_medical_checkup_medic_en
-    - action: utter_how_to_add_follow_up_medical_checkup_medic_en
-
-- rule: Asks about when add follow up button active in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: when_add_follow_up_button_active_medic_id
-    - action: utter_when_add_follow_up_button_active_medic_id
-
-- rule: Asks about when add follow up button active in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: when_add_follow_up_button_active_medic_en
-    - action: utter_when_add_follow_up_button_active_medic_en
-
-- rule: Asks about when add follow up button disabled in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: when_add_follow_up_button_disabled_medic_id
-    - action: utter_when_add_follow_up_button_disabled_medic_id
-
-- rule: Asks about when add follow up button disabled in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: when_add_follow_up_button_disabled_medic_en
-    - action: utter_when_add_follow_up_button_disabled_medic_en
-
-- rule: Asks about ask save follow up result in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_save_follow_up_result_medic_id
-    - action: utter_ask_save_follow_up_result_medic_id
-
-- rule: Asks about ask save follow up result in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_save_follow_up_result_medic_en
-    - action: utter_ask_save_follow_up_result_medic_en
-
-- rule: Asks about how system determines follow up status in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_system_determines_followup_status_medic_id
-    - action: utter_how_system_determines_followup_status_medic_id
-
-- rule: Asks about how system determines follow up status in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_system_determines_followup_status_medic_en
-    - action: utter_how_system_determines_followup_status_medic_en
-
-- rule: Asks about function of add followup button in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: function_of_add_followup_button_medic_id
-    - action: utter_function_of_add_followup_button_medic_id
-
-- rule: Asks about function of add followup button in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: function_of_add_followup_button_medic_en
-    - action: utter_function_of_add_followup_button_medic_en
-
-- rule: Asks about ask followup scheduling in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_followup_scheduling_medic_id
-    - action: utter_ask_followup_scheduling_medic_id
-
-- rule: Asks about ask followup scheduling in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_followup_scheduling_medic_en
-    - action: utter_ask_followup_scheduling_medic_en
-
-- rule: Asks about ask follow up code format in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_followup_code_format_medic_id
-    - action: utter_ask_followup_code_format_medic_id
-
-- rule: Asks about ask follow up code format in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_followup_code_format_medic_en
-    - action: utter_ask_followup_code_format_medic_en
-
-- rule: Asks about who can view MCU result detail in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: who_can_view_mcu_result_detail_medic_id
-    - action: utter_who_can_view_mcu_result_detail_medic_id
-
-- rule: Asks about who can view MCU result detail in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: who_can_view_mcu_result_detail_medic_en
-    - action: utter_who_can_view_mcu_result_detail_medic_en
-
-- rule: Asks about if doctor can add followup all projects in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_if_doctor_can_add_followup_all_projects_medic_id
-    - action: utter_ask_if_doctor_can_add_followup_all_projects_medic_id
-
-- rule: Asks about if doctor can add followup all projects in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_if_doctor_can_add_followup_all_projects_medic_en
-    - action: utter_ask_if_doctor_can_add_followup_all_projects_medic_en
-
-- rule: Asks about how to edit result followup MCU data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_edit_result_followup_mcu_data_medic_id
-    - action: utter_how_to_edit_result_followup_mcu_data_medic_id
-
-- rule: Asks about how to edit result followup MCU data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_edit_result_followup_mcu_data_medic_en
-    - action: utter_how_to_edit_result_followup_mcu_data_medic_en
-
-- rule: Asks about who can edit result follow up MCU data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: who_can_edit_result_follow_up_mcu_data_medic_id
-    - action: utter_who_can_edit_result_follow_up_mcu_data_medic_id
-
-- rule: Asks about who can edit result follow up MCU data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: who_can_edit_result_follow_up_mcu_data_medic_en
-    - action: utter_who_can_edit_result_follow_up_mcu_data_medic_en
-
-- rule: Asks about edit follow up MCU conditions in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: edit_follow_up_mcu_conditions_medic_id
-    - action: utter_edit_follow_up_mcu_conditions_medic_id
-
-- rule: Asks about edit follow up MCU conditions in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: edit_follow_up_mcu_conditions_medic_en
-    - action: utter_edit_follow_up_mcu_conditions_medic_en
-
-- rule: Asks about save changes follow up MCU in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: save_changes_follow_up_mcu_medic_id
-    - action: utter_save_changes_follow_up_mcu_medic_id
-
-- rule: Asks about save changes follow up MCU in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: save_changes_follow_up_mcu_medic_en
-    - action: utter_save_changes_follow_up_mcu_medic_en
-
-- rule: Asks about can view MCU older than 5 years in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: can_view_mcu_older_than_5_years_medic_id
-    - action: utter_can_view_mcu_older_than_5_years_medic_id
-
-- rule: Asks about can view MCU older than 5 years in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: can_view_mcu_older_than_5_years_medic_en
-    - action: utter_can_view_mcu_older_than_5_years_medic_en
-
-- rule: Asks about how system shows active MCU results in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_system_shows_active_mcu_results_medic_id
-    - action: utter_how_system_shows_active_mcu_results_medic_id
-
-- rule: Asks about how system shows active MCU results in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_system_shows_active_mcu_results_medic_en
-    - action: utter_how_system_shows_active_mcu_results_medic_en
-
-- rule: Asks about what are available examination details in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_are_available_examination_details_medic_id
-    - action: utter_what_are_available_examination_details_medic_id
-
-- rule: Asks about what are available examination details in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_are_available_examination_details_medic_en
-    - action: utter_what_are_available_examination_details_medic_en
-
-- rule: Asks about is disease diagnosis displayed in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: is_disease_diagnosis_displayed_medic_id
-    - action: utter_is_disease_diagnosis_displayed_medic_id
-
-- rule: Asks about is disease diagnosis displayed in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: is_disease_diagnosis_displayed_medic_en
-    - action: utter_is_disease_diagnosis_displayed_medic_en
-
-- rule: Asks about difference between open & close follow up status in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: difference_between_open_and_close_follow_up_status_medic_id
-    - action: utter_difference_between_open_and_close_follow_up_status_medic_id
-
-- rule: Asks about difference between open & close follow up status in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: difference_between_open_and_close_follow_up_status_medic_en
-    - action: utter_difference_between_open_and_close_follow_up_status_medic_en
-
-- rule: Asks about how to know follow up location in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_know_follow_up_location_medic_id
-    - action: utter_how_to_know_follow_up_location_medic_id
-
-- rule: Asks about how to know follow up location in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_know_follow_up_location_medic_en
-    - action: utter_how_to_know_follow_up_location_medic_en
-
-- rule: Asks about what if no follow up needed in MCU result in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_if_no_follow_up_needed_in_mcu_result_medic_id
-    - action: utter_what_if_no_follow_up_needed_in_mcu_result_medic_id
-
-- rule: Asks about what if no follow up needed in MCU result in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_if_no_follow_up_needed_in_mcu_result_medic_en
-    - action: utter_what_if_no_follow_up_needed_in_mcu_result_medic_en
-
-- rule: Asks about does follow up result affect final health status in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: does_follow_up_result_affect_final_health_status_medic_id
-    - action: utter_does_follow_up_result_affect_final_health_status_medic_en
-
-- rule: Asks about does follow up result affect final health status in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: does_follow_up_result_affect_final_health_status_medic_en
-    - action: utter_does_follow_up_result_affect_final_health_status_medic_en
-
-- rule: Asks about how to know when next schedule MCU in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_know_when_next_schedule_mcu_medic_id
-    - action: utter_how_to_know_when_next_schedule_mcu_medic_id
-
-- rule: Asks about how to know when next schedule MCU in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_know_when_next_schedule_mcu_medic_en
-    - action: utter_how_to_know_when_next_schedule_mcu_medic_en
-
-- rule: Asks about how to download attachment follow up MCU mobile in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_download_attachment_follow_up_mcu_mobile_medic_id
-    - action: utter_how_to_download_attachment_follow_up_mcu_mobile_medic_id
-
-- rule: Asks about how to download attachment follow up MCU mobile in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_download_attachment_follow_up_mcu_mobile_medic_en
-    - action: utter_how_to_download_attachment_follow_up_mcu_mobile_medic_en
-
-- rule: Asks about status follow up medical record far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: status_follow_up_medical_records_far_medic_id
-    - action: utter_status_follow_up_medical_records_far_medic_id
-
-- rule: Asks about status follow up medical record far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: status_follow_up_medical_records_far_medic_en
-    - action: utter_status_follow_up_medical_records_far_medic_en
-
-- rule: Asks about what is total visit medical record far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_total_visit_medical_record_far_medic_id
-    - action: utter_what_is_total_visit_medical_record_far_medic_id
-
-- rule: Asks about what is total visit medical record far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_total_visit_medical_record_far_medic_en
-    - action: utter_what_is_total_visit_medical_record_far_medic_en
-
-- rule: Asks about ask the difference in the appearance of medical record far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_the_difference_in_the_appearance_of_medical_record_far_medic_id
-    - action: utter_ask_the_difference_in_the_appearance_of_medical_record_far_medic_id
-
-- rule: Asks about ask the difference in the appearance of medical record far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_the_difference_in_the_appearance_of_medical_record_far_medic_en
-    - action: utter_ask_the_difference_in_the_appearance_of_medical_record_far_medic_en
-
-- rule: Asks about ask function feature add medical record far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_function_feature_add_medical_record_far_medic_id
-    - action: utter_ask_function_feature_add_medical_record_far_medic_id
-
-- rule: Asks about ask function feature add medical record far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_function_feature_add_medical_record_far_medic_en
-    - action: utter_ask_function_feature_add_medical_record_far_medic_en
-
-- rule: Asks about ask data input add medical record far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_data_input_add_medical_record_far_medic_id
-    - action: utter_ask_data_input_add_medical_record_far_medic_id
-
-- rule: Asks about ask data input add medical record far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_data_input_add_medical_record_far_medic_en
-    - action: utter_ask_data_input_add_medical_record_far_medic_en
-
-- rule: Asks about how to add medical record far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_add_medical_record_far_medic_id
-    - action: utter_how_to_add_medical_record_far_medic_id
-
-- rule: Asks about how to add medical record far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_add_medical_record_far_medic_en
-    - action: utter_how_to_add_medical_record_far_medic_en
-
-- rule: Asks about asked visit classification select visitor in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: asked_visit_classification_select_visitor_medic_id
-    - action: utter_asked_visit_classification_select_visitor_medic_id
-
-- rule: Asks about asked visit classification select visitor in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: asked_visit_classification_select_visitor_medic_en
-    - action: utter_asked_visit_classification_select_visitor_medic_en
-
-- rule: Asks about ask type of visit far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_type_of_visit_far_medic_id
-    - action: utter_ask_type_of_visit_far_medic_id
-
-- rule: Asks about ask type of visit far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_type_of_visit_far_medic_en
-    - action: utter_ask_type_of_visit_far_medic_en
-
-- rule: Asks about ask how to choose visit date far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_how_to_choose_visit_date_far_medic_id
-    - action: utter_ask_how_to_choose_visit_date_far_medic_id
-
-- rule: Asks about ask how to choose visit date far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_how_to_choose_visit_date_far_medic_en
-    - action: utter_ask_how_to_choose_visit_date_far_medic_en
-
-- rule: Asks about ask choice illness statement in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_choice_illness_statement_medic_id
-    - action: utter_ask_choice_illness_statement_medic_id
-
-- rule: Asks about ask choice illness statement in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_choice_illness_statement_medic_en
-    - action: utter_ask_choice_illness_statement_medic_en
-
-- rule: Asks about how input shift loss and rest day in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: asked_how_input_shift_loss_rest_day_medic_id
-    - action: utter_asked_how_input_shift_loss_rest_day_medic_id
-
-- rule: Asks about how input shift loss and rest day in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: asked_how_input_shift_loss_rest_day_medic_en
-    - action: utter_asked_how_input_shift_loss_rest_day_medic_en
-
-- rule: Asks about add allergy data medical record far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: add_allergy_data_medical_record_far_medic_id
-    - action: utter_add_allergy_data_medical_record_far_medic_id
-
-- rule: Asks about add allergy data medical record far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: add_allergy_data_medical_record_far_medic_en
-    - action: utter_add_allergy_data_medical_record_far_medic_en
-
-- rule: Asks about edit allergy data medical record far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: edit_allergy_data_medical_record_far_medic_id
-    - action: utter_edit_allergy_data_medical_record_far_medic_id
-
-- rule: Asks about edit allergy data medical record far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: edit_allergy_data_medical_record_far_medic_en
-    - action: utter_edit_allergy_data_medical_record_far_medic_en
-
-- rule: Asks about delete allergy data medical record far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: delete_allergy_data_medical_record_far_medic_id
-    - action: utter_delete_allergy_data_medical_record_far_medic_id
-
-- rule: Asks about delete allergy data medical record far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: delete_allergy_data_medical_record_far_medic_en
-    - action: utter_delete_allergy_data_medical_record_far_medic_en
-
-- rule: Asks about ask feature view detail all medical record far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_feature_view_detail_all_medical_record_far_medic_id
-    - action: utter_ask_feature_view_detail_all_medical_record_far_medic_id
-
-- rule: Asks about ask feature view detail all medical record far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_feature_view_detail_all_medical_record_far_medic_en
-    - action: utter_ask_feature_view_detail_all_medical_record_far_medic_en
-
-- rule: Asks about how to view visit history far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_view_visit_history_far_medic_id
-    - action: utter_how_to_view_visit_history_far_medic_id
-
-- rule: Asks about how to view visit history far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_view_visit_history_far_medic_en
-    - action: utter_how_to_view_visit_history_far_medic_en
-
-- rule: Asks about how to search data results of visits far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_search_data_results_of_visits_far_medic_id
-    - action: utter_how_to_search_data_results_of_visits_far_medic_id
-
-- rule: Asks about how to search data results of visits far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_search_data_results_of_visits_far_medic_en
-    - action: utter_how_to_search_data_results_of_visits_far_medic_en
-
-- rule: Asks about what is view detail visit far feature in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_view_detail_visit_far_feature_medic_id
-    - action: utter_what_is_view_detail_visit_far_feature_medic_id
-
-- rule: Asks about what is view detail visit far feature in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_view_detail_visit_far_feature_medic_en
-    - action: utter_what_is_view_detail_visit_far_feature_medic_en
-
-- rule: Asks about how to access view detail visit far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_access_view_detail_visit_far_medic_id
-    - action: utter_how_to_access_view_detail_visit_far_medic_id
-
-- rule: Asks about how to access view detail visit far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_access_view_detail_visit_far_medic_en
-    - action: utter_how_to_access_view_detail_visit_far_medic_en
-
-- rule: Asks about doctor access result visit far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: doctor_access_result_visit_far_medic_id
-    - action: utter_doctor_access_result_visit_far_medic_id
-
-- rule: Asks about doctor access result visit far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: doctor_access_result_visit_far_medic_en
-    - action: utter_doctor_access_result_visit_far_medic_en
-
-- rule: Asks about initial followup far code terms in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: initial_followup_far_code_terms_medic_id
-    - action: utter_initial_followup_far_code_terms_medic_id
-
-- rule: Asks about initial followup far code terms in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: initial_followup_far_code_terms_medic_en
-    - action: utter_initial_followup_far_code_terms_medic_en
-
-- rule: Asks about how to delete visit far data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_delete_visit_far_data_medic_id
-    - action: utter_how_to_delete_visit_far_data_medic_id
-
-- rule: Asks about how to delete visit far data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_delete_visit_far_data_medic_en
-    - action: utter_how_to_delete_visit_far_data_medic_en
-
-- rule: Asks about ask limits delete visit far data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_limits_delete_visit_far_data_medic_id
-    - action: utter_ask_limits_delete_visit_far_data_medic_id
-
-- rule: Asks about ask limits delete visit far data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_limits_delete_visit_far_data_medic_en
-    - action: utter_ask_limits_delete_visit_far_data_medic_en
-
-- rule: Asks about what is edit visit far feature in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_edit_visit_far_feature_medic_id
-    - action: utter_what_is_edit_visit_far_feature_medic_id
-
-- rule: Asks about what is edit visit far feature in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_edit_visit_far_feature_medic_en
-    - action: utter_what_is_edit_visit_far_feature_medic_en
-
-- rule: Asks about how to access edit visit far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_access_edit_visit_far_medic_id
-    - action: utter_how_to_access_edit_visit_far_medic_id
-
-- rule: Asks about how to access edit visit far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_access_edit_visit_far_medic_en
-    - action: utter_how_to_access_edit_visit_far_medic_en
-
-- rule: Asks about terms edit visit far data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: terms_edit_visit_far_data_medic_id
-    - action: utter_terms_edit_visit_far_data_medic_id
-
-- rule: Asks about terms edit visit far data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: terms_edit_visit_far_data_medic_en
-    - action: utter_terms_edit_visit_far_data_medic_en
-
-- rule: Asks about rules change code visit far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: rules_change_code_visit_far_medic_id
-    - action: utter_rules_change_code_visit_far_medic_id
-
-- rule: Asks about rules change code visit far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: rules_change_code_visit_far_medic_en
-    - action: utter_rules_change_code_visit_far_medic_en
-
-- rule: Asks about ask limit edit visit far data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_limit_edit_visit_far_data_medic_id
-    - action: utter_ask_limit_edit_visit_far_data_medic_id
-
-- rule: Asks about ask limit edit visit far data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_limit_edit_visit_far_data_medic_en
-    - action: utter_ask_limit_edit_visit_far_data_medic_en
-
-- rule: Asks about what is view detail follow up far feature in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_view_detail_follow_up_far_feature_medic_id
-    - action: utter_what_is_view_detail_follow_up_far_feature_medic_id
-
-- rule: Asks about what is view detail follow up far feature in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_view_detail_follow_up_far_feature_medic_en
-    - action: utter_what_is_view_detail_follow_up_far_feature_medic_en
-
-- rule: Asks about doctor access result follow up far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: doctor_access_result_follow_up_far_medic_id
-    - action: utter_doctor_access_result_follow_up_far_medic_id
-
-- rule: Asks about doctor access result follow up far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: doctor_access_result_follow_up_far_medic_en
-    - action: utter_doctor_access_result_follow_up_far_medic_en
-
-- rule: Asks about what is edit follow up far feature in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_edit_follow_up_far_feature_medic_id
-    - action: utter_what_is_edit_follow_up_far_feature_medic_id
-
-- rule: Asks about what is edit follow up far feature in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_edit_follow_up_far_feature_medic_en
-    - action: utter_what_is_edit_follow_up_far_feature_medic_en
-
-- rule: Asks about how edit data follow up far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_edit_data_follow_up_far_medic_id
-    - action: utter_how_edit_data_follow_up_far_medic_id
-
-- rule: Asks about how edit data follow up far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_edit_data_follow_up_far_medic_en
-    - action: utter_how_edit_data_follow_up_far_medic_en
-
-- rule: Asks about ask limits edit follow up far data in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_limits_edit_follow_up_far_data_medic_id
-    - action: utter_ask_limits_edit_follow_up_far_data_medic_id
-
-- rule: Asks about ask limits edit follow up far data in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_limits_edit_follow_up_far_data_medic_en
-    - action: utter_ask_limits_edit_follow_up_far_data_medic_en
-
-- rule: Asks about ask when no visits far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_when_no_visits_far_medic_id
-    - action: utter_ask_when_no_visits_far_medic_id
-
-- rule: Asks about ask when no visits far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_when_no_visits_far_medic_en
-    - action: utter_ask_when_no_visits_far_medic_en
-
-- rule: Asks about order data history of visit far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: order_data_history_of_visit_far_medic_id
-    - action: utter_order_data_history_of_visit_far_medic_id
-
-- rule: Asks about order data history of visit far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: order_data_history_of_visit_far_medic_en
-    - action: utter_order_data_history_of_visit_far_medic_en
-
-- rule: Asks about ask every medical visit if follow up needed in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: ask_every_medical_visit_if_follow_up_needs_medic_id
-    - action: utter_ask_every_medical_visit_if_follow_up_needs_medic_id
-
-- rule: Asks about ask every medical visit if follow up needed in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: ask_every_medical_visit_if_follow_up_needs_medic_en
-    - action: utter_ask_every_medical_visit_if_follow_up_needs_medic_en
-
-- rule: Asks about what to do if you have a next follow up date in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_to_do_if_you_have_a_next_follow_up_medic_id
-    - action: utter_what_to_do_if_you_have_a_next_follow_up_medic_id
-
-- rule: Asks about what to do if you have a next follow up date in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_to_do_if_you_have_a_next_follow_up_medic_en
-    - action: utter_what_to_do_if_you_have_a_next_follow_up_medic_en
-
-- rule: Asks about how to access tab results of visits far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_access_tab_results_of_visits_far_medic_id
-    - action: utter_how_to_access_tab_results_of_visits_far_medic_id
-
-- rule: Asks about how to access tab results of visits far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_access_tab_results_of_visits_far_medic_en
-    - action: utter_how_to_access_tab_results_of_visits_far_medic_en
-
-- rule: Asks about what is shown in the far visit results tab in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_shown_in_the_far_visit_results_tab_medic_id
-    - action: utter_what_is_shown_in_the_far_visit_results_tab_medic_id
-
-- rule: Asks about what is shown in the far visit results tab in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_shown_in_the_far_visit_results_tab_medic_en
-    - action: utter_what_is_shown_in_the_far_visit_results_tab_medic_en
-
-- rule: Asks about what is shift loss and rest day in results far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_shift_loss_and_rest_day_in_results_far_medic_id
-    - action: utter_what_is_shift_loss_and_rest_day_in_results_far_medic_id
-
-- rule: Asks about what is shift loss and rest day in results far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_shift_loss_and_rest_day_in_results_far_medic_en
-    - action: utter_what_is_shift_loss_and_rest_day_in_results_far_medic_en
-
-- rule: Asks about how to view & download sick leave letter far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_view_download_sick_leave_letter_far_medic_id
-    - action: utter_how_to_view_download_sick_leave_letter_far_medic_id
-
-- rule: Asks about how to view & download sick leave letter far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_view_download_sick_leave_letter_far_medic_en
-    - action: utter_how_to_view_download_sick_leave_letter_far_medic_en
-
-- rule: Asks about how to access tab results of follow up far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: how_to_access_tab_results_of_follow_up_far_medic_id
-    - action: utter_how_to_access_tab_results_of_follow_up_far_medic_id
-
-- rule: Asks about how to access tab results of follow up far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: how_to_access_tab_results_of_follow_up_far_medic_en
-    - action: utter_how_to_access_tab_results_of_follow_up_far_medic_en
-
-- rule: Asks about what is shown in tab results of follow up far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_shown_in_tab_results_of_follow_up_far_medic_id
-    - action: utter_what_is_shown_in_tab_results_of_follow_up_far_medic_id
-
-- rule: Asks about what is shown in tab results of follow up far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_shown_in_tab_results_of_follow_up_far_medic_en
-    - action: utter_what_is_shown_in_tab_results_of_follow_up_far_medic_en
-
-- rule: Asks about what is shown on the follow up far detail page mobile in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: what_is_shown_on_the_follow_up_far_detail_page_mobile_medic_id
-    - action: utter_what_is_shown_on_the_follow_up_far_detail_page_mobile_medic_id
-
-- rule: Asks about what is shown on the follow up far detail page mobile in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: what_is_shown_on_the_follow_up_far_detail_page_mobile_medic_en
-    - action: utter_what_is_shown_on_the_follow_up_far_detail_page_mobile_medic_en
-
-- rule: Asks about health status in follow up far in Indonesia
-  condition:
-    - slot_was_set:
-        - language: indonesia
-  steps:
-    - intent: health_status_in_follow_up_far_medic_id
-    - action: utter_health_status_in_follow_up_far_medic_id
-
-- rule: Asks about health status in follow up far in English
-  condition:
-    - slot_was_set:
-        - language: english
-  steps:
-    - intent: health_status_in_follow_up_far_medic_en
-    - action: utter_health_status_in_follow_up_far_medic_en
+# version: "3.1"
+# rules:
+# - rule: Asks about Disease Management Menu in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: disease_management_menu_medic_id
+#     - action: utter_disease_management_menu_medic_id
+
+# - rule: Asks about Disease Management Menu in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: disease_management_menu_medic_en
+#     - action: utter_disease_management_menu_medic_en
+
+# - rule: Asks about Disease Management Menu Access in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: disease_management_menu_access_medic_id
+#     - action: utter_who_can_access_disease_management_menu_medic_id
+
+# - rule: Asks about Disease Management Menu Access in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: disease_management_menu_access_medic_en
+#     - action: utter_who_can_access_disease_management_menu_medic_en
+
+# - rule: Asks about Paramedic Change Disease Data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: paramedic_change_disease_data_medic_id
+#     - action: utter_paramedic_change_disease_data_medic_id
+
+# - rule: Asks about Paramedic Change Disease Data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: paramedic_change_disease_data_medic_en
+#     - action: utter_paramedic_change_disease_data_medic_en
+
+# - rule: Asks about How to Add New Disease Data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_add_new_disease_data_medic_id
+#     - action: utter_how_to_add_new_disease_data_medic_id
+
+# - rule: Asks about How to Add New Disease Data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_add_new_disease_data_medic_en
+#     - action: utter_how_to_add_new_disease_data_medic_en
+
+# - rule: Asks about Info for Add New Disease Data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: info_for_add_new_disease_data_medic_id
+#     - action: utter_how_to_add_new_disease_data_medic_id
+
+# - rule: Asks about Info for Add New Disease Data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: info_for_add_new_disease_data_medic_en
+#     - action: utter_how_to_add_new_disease_data_medic_en
+
+# - rule: Asks about Disease Type and Add Info in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: disease_type_and_add_info_medic_id
+#     - action: utter_disease_type_add_and_info_medic_id
+
+# - rule: Asks about Disease Type and Add Info in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: disease_type_and_add_info_medic_en
+#     - action: utter_disease_type_add_and_info_medic_en
+
+# - rule: Asks about Required Fields Empty in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: required_fields_empty_medic_id
+#     - action: utter_required_fields_empty_medic_id
+
+# - rule: Asks about Required Fields Empty in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: required_fields_empty_medic_en
+#     - action: utter_required_fields_empty_medic_en
+
+# - rule: Asks about Existing Data Entry in Medic Apps in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: existing_data_entry_medic_id
+#     - action: utter_existing_data_entry_medic_id
+
+# - rule: Asks about Existing Data Entry in Medic Apps in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: existing_data_entry_medic_en
+#     - action: utter_existing_data_entry_medic_en
+
+# - rule: Asks about Post Addition Process Add Disease Data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: post_addition_process_add_disease_data_medic_id
+#     - action: utter_post_addition_process_add_disease_data_medic_id
+
+# - rule: Asks about Post Addition Process Add Disease Data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: post_addition_process_add_disease_data_medic_en
+#     - action: utter_post_addition_process_add_disease_data_medic_en
+
+# - rule: Asks about Who Can See Disease Data Medic in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: who_can_see_disease_data_medic_id
+#     - action: utter_who_can_see_disease_data_medic_id
+
+# - rule: Asks about Who Can See Disease Data Medic in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: who_can_see_disease_data_medic_en
+#     - action: utter_who_can_see_disease_data_medic_en
+
+# - rule: Asks about Who can edit Disease Data Medic in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: who_can_edit_disease_data_medic_id
+#     - action: utter_who_can_edit_disease_data_medic_id
+
+# - rule: Asks about Who can edit Disease Data Medic in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: who_can_edit_disease_data_medic_en
+#     - action: utter_who_can_edit_disease_data_medic_en
+
+# - rule: Asks about Disease Management Menu Connections with Others Menu in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: disease_management_menu_connections_medic_id
+#     - action: utter_disease_management_menu_connections_medic_id
+
+# - rule: Asks about Disease Management Menu Connections with Others Menu in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: disease_management_menu_connections_medic_en
+#     - action: utter_disease_management_menu_connections_medic_en
+
+# - rule: Asks about Effect of Updating Disease Data Used in Other Menu's in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: effect_of_updating_disease_data_used_in_other_menus_medic_id
+#     - action: utter_effect_of_updating_disease_data_used_in_other_menus_medic_id
+
+# - rule: Asks about Effect of Updating Disease Data Used in Other Menu's in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: effect_of_updating_disease_data_used_in_other_menus_medic_en
+#     - action: utter_effect_of_updating_disease_data_used_in_other_menus_medic_en
+
+# - rule: Asks about Who Can Delete Disease Data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: who_can_delete_disease_data_medic_id
+#     - action: utter_who_can_delete_disease_data_medic_id
+
+# - rule: Asks about Who Can Delete Disease Data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: who_can_delete_disease_data_medic_en
+#     - action: utter_who_can_delete_disease_data_medic_en
+
+# - rule: Asks about How to Delete Disease Data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_delete_disease_data_medic_id
+#     - action: utter_how_to_delete_disease_data_medic_id
+
+# - rule: Asks about How to Delete Disease Data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_delete_disease_data_medic_en
+#     - action: utter_how_to_delete_disease_data_medic_en
+
+# - rule: Asks about Deleting Used Disease Data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: deleting_used_disease_data_medic_id
+#     - action: utter_deleting_used_disease_data_medic_id
+
+# - rule: Asks about Deleting Used Disease Data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: deleting_used_disease_data_medic_en
+#     - action: utter_deleting_used_disease_data_medic_en
+
+# - rule: Asks about Deleting Unused Disease Data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: deleting_unused_disease_data_medic_id
+#     - action: utter_deleting_unused_disease_data_medic_id
+
+# - rule: Asks about Deleting Unused Disease Data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: deleting_unused_disease_data_medic_en
+#     - action: utter_deleting_unused_disease_data_medic_en
+
+# - rule: Asks about Paramedic Access in The Future in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: paramedics_access_disease_data_in_the_future_medic_id
+#     - action: utter_paramedic_change_disease_data_medic_id
+
+# - rule: Asks about Paramedic Access in The Future in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: paramedics_access_disease_data_in_the_future_medic_en
+#     - action: utter_paramedic_change_disease_data_medic_en
+
+# - rule: Asks about How to Edit Disease Data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_edit_disease_data_medic_id
+#     - action: utter_how_to_edit_disease_data_medic_id
+
+# - rule: Asks about How to Edit Disease Data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_edit_disease_data_medic_en
+#     - action: utter_how_to_edit_disease_data_medic_en
+
+# - rule: Asks about Post Edit Disease Data Process in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: post_edit_disease_data_process_medic_id
+#     - action: utter_post_edit_disease_data_process_medic_id
+
+# - rule: Asks about Post Edit Disease Data Process in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: post_edit_disease_data_process_medic_en
+#     - action: utter_post_edit_disease_data_process_medic_en
+
+# - rule: Asks about Medicine Standard menu in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: medicine_standard_menu_medic_id
+#     - action: utter_medicine_standard_menu_medic_id
+
+# - rule: Asks about Medicine Standard menu in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: medicine_standard_menu_medic_en
+#     - action: utter_medicine_standard_menu_medic_en
+
+# - rule: Asks about who can access Medicine Standard menu in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: who_can_access_medicine_standard_menu_medic_id
+#     - action: utter_who_can_access_medicine_standard_menu_medic_id
+
+# - rule: Asks about who can access Medicine Standard menu in ENglish
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: who_can_access_medicine_standard_menu_medic_en
+#     - action: utter_who_can_access_medicine_standard_menu_medic_en
+
+# - rule: Asks about How Doctors Add New Medicine Data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_doctors_add_medicine_data_medic_id
+#     - action: utter_how_doctors_add_medicine_data_medic_id
+
+# - rule: Asks about How Doctors Add New Medicine Data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_doctors_add_medicine_data_medic_en
+#     - action: utter_how_doctors_add_medicine_data_medic_en
+
+# - rule: Asks about How Paramedics Add New Medicine Data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_paramedics_add_medicine_data_medic_id
+#     - action: utter_how_paramedics_add_medicine_data_medic_id
+
+# - rule: Asks about How Paramedics Add New Medicine Data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_paramedics_add_medicine_data_medic_en
+#     - action: utter_how_paramedics_add_medicine_data_medic_en
+
+# - rule: Asks about Info for Doctor Add New Medicine Data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: info_for_doctor_add_new_medicine_data_medic_id
+#     - action: utter_how_doctors_add_medicine_data_medic_id
+
+# - rule: Asks about Info for Doctor Add New Medicine Data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: info_for_doctor_add_new_medicine_data_medic_en
+#     - action: utter_how_doctors_add_medicine_data_medic_en
+
+# - rule: Asks about Info for Paramedic Add New Medicine Data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: info_for_paramedics_add_new_medicine_data_medic_id
+#     - action: utter_how_paramedics_add_medicine_data_medic_id
+
+# - rule: Asks about Info for Paramedic Add New Medicine Data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: info_for_paramedics_add_new_medicine_data_medic_en
+#     - action: utter_how_paramedics_add_medicine_data_medic_en
+
+# - rule: Asks about View Medicine Submission Paramedic in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: view_medicine_submission_paramedic_medic_id
+#     - action: utter_view_medicine_submission_paramedic_medic_id
+
+# - rule: Asks about View Medicine Submission Paramedic in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: view_medicine_submission_paramedic_medic_en
+#     - action: utter_view_medicine_submission_paramedic_medic_en
+
+# - rule: Asks about Approve Medicine Submission by Paramedic in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: approve_medicine_submission_by_paramedic_medic_id
+#     - action: utter_approve_medicine_submission_by_paramedic_medic_id
+
+# - rule: Asks about Approve Medicine Submission by Paramedic in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: approve_medicine_submission_by_paramedic_medic_en
+#     - action: utter_approve_medicine_submission_by_paramedic_medic_en
+
+# - rule: Asks about Meaning of "Draft" status on Medicine Submission in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: meaning_status_draft_medicine_submission_medic_id
+#     - action: utter_meaning_status_draft_medicine_submission_medic_id
+
+# - rule: Asks about Meaning of "Draft" status on Medicine Submission in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: meaning_status_draft_medicine_submission_medic_en
+#     - action: utter_meaning_status_draft_medicine_submission_medic_en
+
+# - rule: Asks about Meaning of "Approved" status on Medicine Submission in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: meaning_status_approved_medicine_submission_medic_id
+#     - action: utter_meaning_status_approved_medicine_submission_medic_id
+
+# - rule: Asks about Meaning of "Approved" status on Medicine Submission in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: meaning_status_approved_medicine_submission_medic_en
+#     - action: utter_meaning_status_approved_medicine_submission_medic_en
+
+# - rule: Asks about Meaning of "Rejected" status on Medicine Submission in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: meaning_status_rejected_medicine_submission_medic_id
+#     - action: utter_meaning_status_rejected_medicine_submission_medic_id
+
+# - rule: Asks about Meaning of "Rejected" status on Medicine Submission in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: meaning_status_rejected_medicine_submission_medic_en
+#     - action: utter_meaning_status_rejected_medicine_submission_medic_en
+
+# - rule: Asks about Rejected Medicine Resubmission in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: rejected_medicine_resubmission_medic_id
+#     - action: utter_rejected_medicine_resubmission_medic_id
+
+# - rule: Asks about Rejected Medicine Resubmission in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: rejected_medicine_resubmission_medic_en
+#     - action: utter_rejected_medicine_resubmission_medic_en
+
+# - rule: Asks about who can edit medicine data medic in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: who_can_edit_medicine_data_medic_id
+#     - action: utter_who_can_edit_medicine_data_medic_id
+
+# - rule: Asks about who can edit medicine data medic in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: who_can_edit_medicine_data_medic_en
+#     - action: utter_who_can_edit_medicine_data_medic_en
+
+# - rule: Asks about what happens when doctor edits medicine data medic in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_happens_when_doctor_edits_medicine_data_medic_id
+#     - action: utter_what_happens_when_doctor_edits_medicine_data_medic_id
+
+# - rule: Asks about what happens when doctor edits medicine data medic in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_happens_when_doctor_edits_medicine_data_medic_en
+#     - action: utter_what_happens_when_doctor_edits_medicine_data_medic_en
+
+# - rule: Asks about how doctor edits medicine data medic in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_doctor_edits_medicine_data_medic_id
+#     - action: utter_how_doctor_edits_medicine_data_medic_id
+
+# - rule: Asks about how doctor edits medicine data medic in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_doctor_edits_medicine_data_medic_en
+#     - action: utter_how_doctor_edits_medicine_data_medic_en
+
+# - rule: Asks about why medicine code cannot be edited in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: why_medicine_code_cannot_be_edited_medic_id
+#     - action: utter_why_medicine_code_cannot_be_edited_medic_id
+
+# - rule: Asks about why medicine code cannot be edited in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: why_medicine_code_cannot_be_edited_medic_en
+#     - action: utter_why_medicine_code_cannot_be_edited_medic_en
+
+# - rule: Asks about medicine code order in system medic apps in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: medicine_code_order_in_system_medic_id
+#     - action: utter_medicine_code_order_in_system_medic_id
+
+# - rule: Asks about medicine code order in system medic apps in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: medicine_code_order_in_system_medic_en
+#     - action: utter_medicine_code_order_in_system_medic_en
+
+# - rule: Asks about doctor changes medicine name in system in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: doctor_changes_medicine_name_medic_id
+#     - action: utter_doctor_changes_medicine_name_medic_id
+
+# - rule: Asks about doctor changes medicine name in system in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: doctor_changes_medicine_name_medic_en
+#     - action: utter_doctor_changes_medicine_name_medic_en
+
+# - rule: Asks about can medicine registered be deleted in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: can_medicine_registered_be_deleted_medic_id
+#     - action: utter_can_medicine_registered_be_deleted_medic_id
+
+# - rule: Asks about can medicine registered be deleted in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: can_medicine_registered_be_deleted_medic_en
+#     - action: utter_can_medicine_registered_be_deleted_medic_en
+
+# - rule: Asks about how to activate or deactivate medicine data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_activate_or_deactivate_medicine_medic_id
+#     - action: utter_how_to_activate_or_deactivate_medicine_medic_id
+
+# - rule: Asks about how to activate or deactivate medicine data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_activate_or_deactivate_medicine_medic_en
+#     - action: utter_how_to_activate_or_deactivate_medicine_medic_en
+
+# - rule: Asks about what happens when doctor toggles medicine data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_happens_when_doctor_toggles_medicine_medic_id
+#     - action: utter_what_happens_when_doctor_toggles_medicine_medic_id
+
+# - rule: Asks about what happens when doctor toggles medicine data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_happens_when_doctor_toggles_medicine_medic_en
+#     - action: utter_what_happens_when_doctor_toggles_medicine_medic_en
+
+# - rule: Asks about who has access to toggle medicine data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: who_has_access_to_toggle_medicine_medic_id
+#     - action: utter_who_has_access_to_toggle_medicine_medic_id
+
+# - rule: Asks about who has access to toggle medicine data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: who_has_access_to_toggle_medicine_medic_en
+#     - action: utter_who_has_access_to_toggle_medicine_medic_en
+
+# - rule: Asks about what happens when medicine is deactivated in records in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_happens_when_medicine_is_deactivated_in_records_medic_id
+#     - action: utter_what_happens_when_medicine_is_deactivated_in_records_medic_id
+
+# - rule: Asks about what happens when medicine is deactivated in records in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_happens_when_medicine_is_deactivated_in_records_medic_en
+#     - action: utter_what_happens_when_medicine_is_deactivated_in_records_medic_en
+
+# - rule: Asks about is medicine standard connected to other menus in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: is_medicine_standard_connected_to_other_menus_medic_id
+#     - action: utter_is_medicine_standard_connected_to_other_menus_medic_id
+
+# - rule: Asks about is medicine standard connected to other menus in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: is_medicine_standard_connected_to_other_menus_medic_en
+#     - action: utter_is_medicine_standard_connected_to_other_menus_medic_en
+
+# - rule: Asks about paramedics access medicine data in the future in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: paramedics_access_medicine_data_in_the_future_medic_id
+#     - action: utter_paramedics_access_medicine_data_in_the_future_medic_id
+
+# - rule: Asks about paramedics access medicine data in the future in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: paramedics_access_medicine_data_in_the_future_medic_en
+#     - action: utter_paramedics_access_medicine_data_in_the_future_medic_en
+
+# - rule: Asks about medical record external in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: medical_record_external_menu_medic_id
+#     - action: utter_medical_record_external_menu_medic_id
+
+# - rule: Asks about medical record external in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: medical_record_external_menu_medic_en
+#     - action: utter_medical_record_external_menu_medic_en
+
+# - rule: Asks about who can access medical record external menu in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: who_can_access_medical_record_external_menu_medic_id
+#     - action: utter_who_can_access_medical_record_external_menu_medic_id
+
+# - rule: Asks about who can access medical record external menu in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: who_can_access_medical_record_external_menu_medic_en
+#     - action: utter_who_can_access_medical_record_external_menu_medic_en
+
+# - rule: Asks about how to access medical record external menu in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_access_medical_record_external_menu_medic_id
+#     - action: utter_how_to_access_medical_record_external_menu_medic_id
+
+# - rule: Asks about how to access medical record external menu in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_access_medical_record_external_menu_medic_en
+#     - action: utter_how_to_access_medical_record_external_menu_medic_en
+
+# - rule: Asks about what is displayed in active tab of medical record external in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_displayed_in_active_tab_of_medical_record_external_medic_id
+#     - action: utter_what_is_displayed_in_active_tab_of_medical_record_external_medic_id
+
+# - rule: Asks about what is displayed in active tab of medical record external in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_displayed_in_active_tab_of_medical_record_external_medic_en
+#     - action: utter_what_is_displayed_in_active_tab_of_medical_record_external_medic_en
+
+# - rule: Asks about what is displayed in history tab of medical record external in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_displayed_in_history_tab_of_medical_record_external_medic_id
+#     - action: utter_what_is_displayed_in_history_tab_of_medical_record_external_medic_id
+
+# - rule: Asks about what is displayed in history tab of medical record external in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_displayed_in_history_tab_of_medical_record_external_medic_en
+#     - action: utter_what_is_displayed_in_history_tab_of_medical_record_external_medic_en
+
+# - rule: Asks about how to search data in medical record external in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_search_data_in_medical_record_external_menu_medic_id
+#     - action: utter_how_to_search_data_in_medical_record_external_menu_medic_id
+
+# - rule: Asks about how to search data in medical record external in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_search_data_in_medical_record_external_menu_medic_en
+#     - action: utter_how_to_search_data_in_medical_record_external_menu_medic_en
+
+# - rule: Asks about how to view medical record external submission detail in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_view_medical_record_external_submission_detail_medic_id
+#     - action: utter_how_to_view_medical_record_external_submission_detail_medic_id
+
+# - rule: Asks about how to view medical record external submission detail in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_view_medical_record_external_submission_detail_medic_en
+#     - action: utter_how_to_view_medical_record_external_submission_detail_medic_en
+
+# - rule: Asks about what documents are needed for medical record external submission in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_documents_are_needed_for_medical_record_external_submission_medic_id
+#     - action: utter_what_documents_are_needed_for_medical_record_external_submission_medic_id
+
+# - rule: Asks about what documents are needed for medical record external submission in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_documents_are_needed_for_medical_record_external_submission_medic_en
+#     - action: utter_what_documents_are_needed_for_medical_record_external_submission_medic_en
+
+# - rule: Asks about how to filter based on cut off period in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_filter_based_on_cut_off_period_medic_id
+#     - action: utter_how_to_filter_based_on_cut_off_period_medic_id
+
+# - rule: Asks about how to filter based on cut off period in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_filter_based_on_cut_off_period_medic_en
+#     - action: utter_how_to_filter_based_on_cut_off_period_medic_en
+
+# - rule: Asks about what statuses are involved in medical claim approval process in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: statuses_are_involved_in_medical_claim_approval_process_medic_id
+#     - action: utter_statuses_are_involved_in_medical_claim_approval_process_medic_id
+
+# - rule: Asks about what statuses are involved in medical claim approval process in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: statuses_are_involved_in_medical_claim_approval_process_medic_en
+#     - action: utter_statuses_are_involved_in_medical_claim_approval_process_medic_en
+
+# - rule: Asks about how do doctor or paramedic approve medical claim in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_do_doctor_or_paramedic_approve_medical_claim_medic_id
+#     - action: utter_how_do_doctor_or_paramedic_approve_medical_claim_medic_id
+
+# - rule: Asks about how do doctor or paramedic approve medical claim in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_do_doctor_or_paramedic_approve_medical_claim_medic_en
+#     - action: utter_how_do_doctor_or_paramedic_approve_medical_claim_medic_en
+
+# - rule: Asks about how do doctor or paramedic reject medical claim in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_do_doctor_or_paramedic_reject_medical_claim_medic_id
+#     - action: utter_how_do_doctor_or_paramedic_reject_medical_claim_medic_id
+
+# - rule: Asks about how do doctor or paramedic reject medical claim in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_do_doctor_or_paramedic_reject_medical_claim_medic_en
+#     - action: utter_how_do_doctor_or_paramedic_reject_medical_claim_medic_en
+
+# - rule: Asks about how do doctor or paramedic revision medical claim in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_do_doctor_or_paramedic_revision_medical_claim_medic_id
+#     - action: utter_how_do_doctor_or_paramedic_revision_medical_claim_medic_id
+
+# - rule: Asks about how do doctor or paramedic revision medical claim in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_do_doctor_or_paramedic_revision_medical_claim_medic_en
+#     - action: utter_how_do_doctor_or_paramedic_revision_medical_claim_medic_en
+
+# - rule: Asks about why shift loss and diagnosis are marked with minus in history tab in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: why_shift_loss_and_diagnosis_are_marked_with_minus_in_history_tab_medic_id 
+#     - action: utter_why_shift_loss_and_diagnosis_are_marked_with_minus_in_history_tab_medic_id
+
+# - rule: Asks about why shift loss and diagnosis are marked with minus in history tab in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: why_shift_loss_and_diagnosis_are_marked_with_minus_in_history_tab_medic_en
+#     - action: utter_why_shift_loss_and_diagnosis_are_marked_with_minus_in_history_tab_medic_en
+
+# - rule: Asks about can claim data be edited after approval or rejection tab in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: can_claim_data_be_edited_after_approval_or_rejection_tab_medic_id
+#     - action: utter_can_claim_data_be_edited_after_approval_or_rejection_tab_medic_id
+
+# - rule: Asks about can claim data be edited after approval or rejection tab in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: can_claim_data_be_edited_after_approval_or_rejection_tab_medic_en
+#     - action: utter_can_claim_data_be_edited_after_approval_or_rejection_tab_medic_en
+
+# - rule: Asks about relationship between medical record external in medic and medical claim in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: relationship_between_medical_record_external_in_medic_and_medical_claim_in_ess_medic_id
+#     - action: utter_relationship_between_medical_record_external_in_medic_and_medical_claim_in_ess_medic_id
+
+# - rule: Asks about relationship between medical record external in medic and medical claim in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: relationship_between_medical_record_external_in_medic_and_medical_claim_in_ess_medic_en
+#     - action: utter_relationship_between_medical_record_external_in_medic_and_medical_claim_in_ess_medic_en
+
+# - rule: Asks about meaning of numbers in active tab in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: meaning_of_numbers_in_active_tab_medic_id
+#     - action: utter_meaning_of_numbers_in_active_tab_medic_id
+
+# - rule: Asks about meaning of numbers in active tab in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: meaning_of_numbers_in_active_tab_medic_en
+#     - action: utter_meaning_of_numbers_in_active_tab_medic_en
+
+# - rule: Asks about what happens after claim is approved in medic apps in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_happens_after_claim_is_approved_in_medic_apps_medic_id
+#     - action: utter_what_happens_after_claim_is_approved_in_medic_apps_medic_id
+
+# - rule: Asks about what happens after claim is approved in medic apps in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_happens_after_claim_is_approved_in_medic_apps_medic_en
+#     - action: utter_what_happens_after_claim_is_approved_in_medic_apps_medic_en
+
+# - rule: Asks about what is approval activity feature in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_approval_activity_feature_medic_id
+#     - action: utter_what_is_approval_activity_feature_medic_id
+
+# - rule: Asks about what is approval activity feature in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_approval_activity_feature_medic_en
+#     - action: utter_what_is_approval_activity_feature_medic_en
+
+# - rule: Asks about how to see attachments uploaded by employee in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: see_attachments_uploaded_by_employee_medic_id
+#     - action: utter_see_attachments_uploaded_by_employee_medic_id
+
+# - rule: Asks about how to see attachments uploaded by employee in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: see_attachments_uploaded_by_employee_medic_en
+#     - action: utter_see_attachments_uploaded_by_employee_medic_en
+
+# - rule: Asks about notifications sent in medical record external in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: notifications_sent_in_medical_record_external_medic_id
+#     - action: utter_notifications_sent_in_medical_record_external_medic_id
+
+# - rule: Asks about notifications sent in medical record external in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: notifications_sent_in_medical_record_external_medic_en
+#     - action: utter_notifications_sent_in_medical_record_external_medic_en
+
+# - rule: Asks about what is type mcu column in medical checkup menu in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_type_mcu_column_in_medical_checkup_medic_id
+#     - action: utter_what_is_type_mcu_column_in_medical_checkup_medic_id
+
+# - rule: Asks about what is type mcu column in medical checkup menu in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_type_mcu_column_in_medical_checkup_medic_en
+#     - action: utter_what_is_type_mcu_column_in_medical_checkup_medic_en
+
+# - rule: Asks about what is last mcu date column in medical checkup menu in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_last_mcu_date_column_in_medical_checkup_medic_id
+#     - action: utter_what_is_last_mcu_date_column_in_medical_checkup_medic_id
+
+# - rule: Asks about what is last mcu date column in medical checkup menu in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_last_mcu_date_column_in_medical_checkup_medic_en
+#     - action: utter_what_is_last_mcu_date_column_in_medical_checkup_medic_en
+
+# - rule: Asks about what is expired mcu column in medical checkup menu in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_expired_mcu_column_in_medical_checkup_medic_id
+#     - action: utter_what_is_expired_mcu_column_in_medical_checkup_medic_id
+
+# - rule: Asks about what is expired mcu column in medical checkup menu in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_expired_mcu_column_in_medical_checkup_medic_en
+#     - action: utter_what_is_expired_mcu_column_in_medical_checkup_medic_en
+
+# - rule: Asks about what is health status column in medical checkup menu in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_health_status_column_in_medical_checkup_medic_id
+#     - action: utter_what_is_health_status_column_in_medical_checkup_medic_id
+
+# - rule: Asks about what is health status column in medical checkup menu in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_health_status_column_in_medical_checkup_medic_en
+#     - action: utter_what_is_health_status_column_in_medical_checkup_medic_en
+
+# - rule: Asks about what is health status in medical chekup result in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_health_status_in_mcu_result_medic_id
+#     - action: utter_what_is_health_status_in_mcu_result_medic_id
+
+# - rule: Asks about what is health status in medical chekup result in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_health_status_in_mcu_result_medic_en
+#     - action: utter_what_is_health_status_in_mcu_result_medic_en
+
+# - rule: Asks about what is selected column feature menu in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_selected_column_feature_menu_medic_id
+#     - action: utter_what_is_selected_column_feature_menu_medic_id
+
+# - rule: Asks about what is selected column feature menu in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_selected_column_feature_menu_medic_en
+#     - action: utter_what_is_selected_column_feature_menu_medic_en
+
+# - rule: Asks about is selected column change permanent in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: is_selected_column_change_permanent_medic_id
+#     - action: utter_is_selected_column_change_permanent_medic_id
+
+# - rule: Asks about is selected column change permanent in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: is_selected_column_change_permanent_medic_en
+#     - action: utter_is_selected_column_change_permanent_medic_en
+
+# - rule: Asks about does each user have different selected column preference in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: does_each_user_have_different_selected_column_preferences_medic_id
+#     - action: utter_does_each_user_have_different_selected_column_preferences_medic_id
+
+# - rule: Asks about does each user have different selected column preference in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: does_each_user_have_different_selected_column_preferences_medic_en
+#     - action: utter_does_each_user_have_different_selected_column_preferences_medic_en
+
+# - rule: Asks about how to add medical checkup data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_add_medical_checkup_data_medic_id
+#     - action: utter_how_to_add_medical_checkup_data_medic_id
+
+# - rule: Asks about how to add medical checkup data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_add_medical_checkup_data_medic_en
+#     - action: utter_how_to_add_medical_checkup_data_medic_en
+
+# - rule: Asks about how to search MCU data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_search_medical_checkup_data_medic_id
+#     - action: utter_how_to_search_medical_checkup_data_medic_id
+
+# - rule: Asks about how to search MCU data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_search_medical_checkup_data_medic_en
+#     - action: utter_how_to_search_medical_checkup_data_medic_en
+
+# - rule: Asks about how MCU code generated in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_mcu_code_generated_medic_id
+#     - action: utter_how_mcu_code_generated_medic_id
+
+# - rule: Asks about how MCU code generated in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_mcu_code_generated_medic_en
+#     - action: utter_how_mcu_code_generated_medic_en
+
+# - rule: Asks about can doctor add new exam parameter in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: can_doctor_add_new_exam_parameter_medic_id
+#     - action: utter_can_doctor_add_new_exam_parameter_medic_id
+
+# - rule: Asks about can doctor add new exam parameter in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: can_doctor_add_new_exam_parameter_medic_en
+#     - action: utter_can_doctor_add_new_exam_parameter_medic_en
+
+# - rule: Asks about how to view MCU results by year in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_view_mcu_results_by_year_medic_id
+#     - action: utter_how_to_view_mcu_results_by_year_medic_id
+
+# - rule: Asks about how to view MCU results by year in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_view_mcu_results_by_year_medic_en
+#     - action: utter_how_to_view_mcu_results_by_year_medic_en
+
+# - rule: Asks about what is shown in MCU result tab in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_shown_in_mcu_result_tab_medic_id
+#     - action: utter_what_is_shown_in_mcu_result_tab_medic_id
+
+# - rule: Asks about what is shown in MCU result tab in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_shown_in_mcu_result_tab_medic_en
+#     - action: utter_what_is_shown_in_mcu_result_tab_medic_en
+
+# - rule: Asks about how system displays responsible medic info in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_system_displays_responsible_medic_info_medic_id
+#     - action: utter_how_system_displays_responsible_medic_info_medic_id
+
+# - rule: Asks about how system displays responsible medic info in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_system_displays_responsible_medic_info_medic_en
+#     - action: utter_how_system_displays_responsible_medic_info_medic_en
+
+# - rule: Asks about how to edit MCU data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_edit_medical_checkup_data_medic_id
+#     - action: utter_how_to_edit_medical_checkup_data_medic_id
+
+# - rule: Asks about how to edit MCU data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_edit_medical_checkup_data_medic_en
+#     - action: utter_how_to_edit_medical_checkup_data_medic_en
+
+# - rule: Asks about who can edit MCU data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: who_can_edit_medical_checkup_data_medic_id
+#     - action: utter_who_can_edit_medical_checkup_data_medic_id
+
+# - rule: Asks about who can edit MCU data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: who_can_edit_medical_checkup_data_medic_en
+#     - action: utter_who_can_edit_medical_checkup_data_medic_en
+
+# - rule: Asks about can edit old MCU after new MCU data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: can_edit_old_medical_checkup_after_new_mcu_medic_id
+#     - action: utter_can_edit_old_medical_checkup_after_new_mcu_medic_id
+
+# - rule: Asks about can edit old MCU after new MCU data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: can_edit_old_medical_checkup_after_new_mcu_medic_en
+#     - action: utter_can_edit_old_medical_checkup_after_new_mcu_medic_en
+
+# - rule: Asks about can all fields be edited in MCU in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: can_all_fields_be_edited_in_medical_checkup_medic_id
+#     - action: utter_can_all_fields_be_edited_in_medical_checkup_medic_id
+
+# - rule: Asks about can all fields be edited in MCU in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: can_all_fields_be_edited_in_medical_checkup_medic_en
+#     - action: utter_can_all_fields_be_edited_in_medical_checkup_medic_en
+
+# - rule: Asks about how to add follow up MCU in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_add_follow_up_medical_checkup_medic_id
+#     - action: utter_how_to_add_follow_up_medical_checkup_medic_id
+
+# - rule: Asks about how to add follow up MCU in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_add_follow_up_medical_checkup_medic_en
+#     - action: utter_how_to_add_follow_up_medical_checkup_medic_en
+
+# - rule: Asks about when add follow up button active in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: when_add_follow_up_button_active_medic_id
+#     - action: utter_when_add_follow_up_button_active_medic_id
+
+# - rule: Asks about when add follow up button active in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: when_add_follow_up_button_active_medic_en
+#     - action: utter_when_add_follow_up_button_active_medic_en
+
+# - rule: Asks about when add follow up button disabled in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: when_add_follow_up_button_disabled_medic_id
+#     - action: utter_when_add_follow_up_button_disabled_medic_id
+
+# - rule: Asks about when add follow up button disabled in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: when_add_follow_up_button_disabled_medic_en
+#     - action: utter_when_add_follow_up_button_disabled_medic_en
+
+# - rule: Asks about ask save follow up result in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_save_follow_up_result_medic_id
+#     - action: utter_ask_save_follow_up_result_medic_id
+
+# - rule: Asks about ask save follow up result in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_save_follow_up_result_medic_en
+#     - action: utter_ask_save_follow_up_result_medic_en
+
+# - rule: Asks about how system determines follow up status in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_system_determines_followup_status_medic_id
+#     - action: utter_how_system_determines_followup_status_medic_id
+
+# - rule: Asks about how system determines follow up status in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_system_determines_followup_status_medic_en
+#     - action: utter_how_system_determines_followup_status_medic_en
+
+# - rule: Asks about function of add followup button in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: function_of_add_followup_button_medic_id
+#     - action: utter_function_of_add_followup_button_medic_id
+
+# - rule: Asks about function of add followup button in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: function_of_add_followup_button_medic_en
+#     - action: utter_function_of_add_followup_button_medic_en
+
+# - rule: Asks about ask followup scheduling in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_followup_scheduling_medic_id
+#     - action: utter_ask_followup_scheduling_medic_id
+
+# - rule: Asks about ask followup scheduling in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_followup_scheduling_medic_en
+#     - action: utter_ask_followup_scheduling_medic_en
+
+# - rule: Asks about ask follow up code format in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_followup_code_format_medic_id
+#     - action: utter_ask_followup_code_format_medic_id
+
+# - rule: Asks about ask follow up code format in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_followup_code_format_medic_en
+#     - action: utter_ask_followup_code_format_medic_en
+
+# - rule: Asks about who can view MCU result detail in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: who_can_view_mcu_result_detail_medic_id
+#     - action: utter_who_can_view_mcu_result_detail_medic_id
+
+# - rule: Asks about who can view MCU result detail in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: who_can_view_mcu_result_detail_medic_en
+#     - action: utter_who_can_view_mcu_result_detail_medic_en
+
+# - rule: Asks about if doctor can add followup all projects in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_if_doctor_can_add_followup_all_projects_medic_id
+#     - action: utter_ask_if_doctor_can_add_followup_all_projects_medic_id
+
+# - rule: Asks about if doctor can add followup all projects in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_if_doctor_can_add_followup_all_projects_medic_en
+#     - action: utter_ask_if_doctor_can_add_followup_all_projects_medic_en
+
+# - rule: Asks about how to edit result followup MCU data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_edit_result_followup_mcu_data_medic_id
+#     - action: utter_how_to_edit_result_followup_mcu_data_medic_id
+
+# - rule: Asks about how to edit result followup MCU data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_edit_result_followup_mcu_data_medic_en
+#     - action: utter_how_to_edit_result_followup_mcu_data_medic_en
+
+# - rule: Asks about who can edit result follow up MCU data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: who_can_edit_result_follow_up_mcu_data_medic_id
+#     - action: utter_who_can_edit_result_follow_up_mcu_data_medic_id
+
+# - rule: Asks about who can edit result follow up MCU data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: who_can_edit_result_follow_up_mcu_data_medic_en
+#     - action: utter_who_can_edit_result_follow_up_mcu_data_medic_en
+
+# - rule: Asks about edit follow up MCU conditions in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: edit_follow_up_mcu_conditions_medic_id
+#     - action: utter_edit_follow_up_mcu_conditions_medic_id
+
+# - rule: Asks about edit follow up MCU conditions in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: edit_follow_up_mcu_conditions_medic_en
+#     - action: utter_edit_follow_up_mcu_conditions_medic_en
+
+# - rule: Asks about save changes follow up MCU in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: save_changes_follow_up_mcu_medic_id
+#     - action: utter_save_changes_follow_up_mcu_medic_id
+
+# - rule: Asks about save changes follow up MCU in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: save_changes_follow_up_mcu_medic_en
+#     - action: utter_save_changes_follow_up_mcu_medic_en
+
+# - rule: Asks about can view MCU older than 5 years in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: can_view_mcu_older_than_5_years_medic_id
+#     - action: utter_can_view_mcu_older_than_5_years_medic_id
+
+# - rule: Asks about can view MCU older than 5 years in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: can_view_mcu_older_than_5_years_medic_en
+#     - action: utter_can_view_mcu_older_than_5_years_medic_en
+
+# - rule: Asks about how system shows active MCU results in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_system_shows_active_mcu_results_medic_id
+#     - action: utter_how_system_shows_active_mcu_results_medic_id
+
+# - rule: Asks about how system shows active MCU results in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_system_shows_active_mcu_results_medic_en
+#     - action: utter_how_system_shows_active_mcu_results_medic_en
+
+# - rule: Asks about what are available examination details in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_are_available_examination_details_medic_id
+#     - action: utter_what_are_available_examination_details_medic_id
+
+# - rule: Asks about what are available examination details in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_are_available_examination_details_medic_en
+#     - action: utter_what_are_available_examination_details_medic_en
+
+# - rule: Asks about is disease diagnosis displayed in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: is_disease_diagnosis_displayed_medic_id
+#     - action: utter_is_disease_diagnosis_displayed_medic_id
+
+# - rule: Asks about is disease diagnosis displayed in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: is_disease_diagnosis_displayed_medic_en
+#     - action: utter_is_disease_diagnosis_displayed_medic_en
+
+# - rule: Asks about difference between open & close follow up status in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: difference_between_open_and_close_follow_up_status_medic_id
+#     - action: utter_difference_between_open_and_close_follow_up_status_medic_id
+
+# - rule: Asks about difference between open & close follow up status in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: difference_between_open_and_close_follow_up_status_medic_en
+#     - action: utter_difference_between_open_and_close_follow_up_status_medic_en
+
+# - rule: Asks about how to know follow up location in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_know_follow_up_location_medic_id
+#     - action: utter_how_to_know_follow_up_location_medic_id
+
+# - rule: Asks about how to know follow up location in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_know_follow_up_location_medic_en
+#     - action: utter_how_to_know_follow_up_location_medic_en
+
+# - rule: Asks about what if no follow up needed in MCU result in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_if_no_follow_up_needed_in_mcu_result_medic_id
+#     - action: utter_what_if_no_follow_up_needed_in_mcu_result_medic_id
+
+# - rule: Asks about what if no follow up needed in MCU result in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_if_no_follow_up_needed_in_mcu_result_medic_en
+#     - action: utter_what_if_no_follow_up_needed_in_mcu_result_medic_en
+
+# - rule: Asks about does follow up result affect final health status in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: does_follow_up_result_affect_final_health_status_medic_id
+#     - action: utter_does_follow_up_result_affect_final_health_status_medic_en
+
+# - rule: Asks about does follow up result affect final health status in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: does_follow_up_result_affect_final_health_status_medic_en
+#     - action: utter_does_follow_up_result_affect_final_health_status_medic_en
+
+# - rule: Asks about how to know when next schedule MCU in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_know_when_next_schedule_mcu_medic_id
+#     - action: utter_how_to_know_when_next_schedule_mcu_medic_id
+
+# - rule: Asks about how to know when next schedule MCU in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_know_when_next_schedule_mcu_medic_en
+#     - action: utter_how_to_know_when_next_schedule_mcu_medic_en
+
+# - rule: Asks about how to download attachment follow up MCU mobile in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_download_attachment_follow_up_mcu_mobile_medic_id
+#     - action: utter_how_to_download_attachment_follow_up_mcu_mobile_medic_id
+
+# - rule: Asks about how to download attachment follow up MCU mobile in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_download_attachment_follow_up_mcu_mobile_medic_en
+#     - action: utter_how_to_download_attachment_follow_up_mcu_mobile_medic_en
+
+# - rule: Asks about status follow up medical record far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: status_follow_up_medical_records_far_medic_id
+#     - action: utter_status_follow_up_medical_records_far_medic_id
+
+# - rule: Asks about status follow up medical record far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: status_follow_up_medical_records_far_medic_en
+#     - action: utter_status_follow_up_medical_records_far_medic_en
+
+# - rule: Asks about what is total visit medical record far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_total_visit_medical_record_far_medic_id
+#     - action: utter_what_is_total_visit_medical_record_far_medic_id
+
+# - rule: Asks about what is total visit medical record far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_total_visit_medical_record_far_medic_en
+#     - action: utter_what_is_total_visit_medical_record_far_medic_en
+
+# - rule: Asks about ask the difference in the appearance of medical record far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_the_difference_in_the_appearance_of_medical_record_far_medic_id
+#     - action: utter_ask_the_difference_in_the_appearance_of_medical_record_far_medic_id
+
+# - rule: Asks about ask the difference in the appearance of medical record far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_the_difference_in_the_appearance_of_medical_record_far_medic_en
+#     - action: utter_ask_the_difference_in_the_appearance_of_medical_record_far_medic_en
+
+# - rule: Asks about ask function feature add medical record far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_function_feature_add_medical_record_far_medic_id
+#     - action: utter_ask_function_feature_add_medical_record_far_medic_id
+
+# - rule: Asks about ask function feature add medical record far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_function_feature_add_medical_record_far_medic_en
+#     - action: utter_ask_function_feature_add_medical_record_far_medic_en
+
+# - rule: Asks about ask data input add medical record far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_data_input_add_medical_record_far_medic_id
+#     - action: utter_ask_data_input_add_medical_record_far_medic_id
+
+# - rule: Asks about ask data input add medical record far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_data_input_add_medical_record_far_medic_en
+#     - action: utter_ask_data_input_add_medical_record_far_medic_en
+
+# - rule: Asks about how to add medical record far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_add_medical_record_far_medic_id
+#     - action: utter_how_to_add_medical_record_far_medic_id
+
+# - rule: Asks about how to add medical record far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_add_medical_record_far_medic_en
+#     - action: utter_how_to_add_medical_record_far_medic_en
+
+# - rule: Asks about asked visit classification select visitor in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: asked_visit_classification_select_visitor_medic_id
+#     - action: utter_asked_visit_classification_select_visitor_medic_id
+
+# - rule: Asks about asked visit classification select visitor in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: asked_visit_classification_select_visitor_medic_en
+#     - action: utter_asked_visit_classification_select_visitor_medic_en
+
+# - rule: Asks about ask type of visit far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_type_of_visit_far_medic_id
+#     - action: utter_ask_type_of_visit_far_medic_id
+
+# - rule: Asks about ask type of visit far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_type_of_visit_far_medic_en
+#     - action: utter_ask_type_of_visit_far_medic_en
+
+# - rule: Asks about ask how to choose visit date far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_how_to_choose_visit_date_far_medic_id
+#     - action: utter_ask_how_to_choose_visit_date_far_medic_id
+
+# - rule: Asks about ask how to choose visit date far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_how_to_choose_visit_date_far_medic_en
+#     - action: utter_ask_how_to_choose_visit_date_far_medic_en
+
+# - rule: Asks about ask choice illness statement in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_choice_illness_statement_medic_id
+#     - action: utter_ask_choice_illness_statement_medic_id
+
+# - rule: Asks about ask choice illness statement in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_choice_illness_statement_medic_en
+#     - action: utter_ask_choice_illness_statement_medic_en
+
+# - rule: Asks about how input shift loss and rest day in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: asked_how_input_shift_loss_rest_day_medic_id
+#     - action: utter_asked_how_input_shift_loss_rest_day_medic_id
+
+# - rule: Asks about how input shift loss and rest day in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: asked_how_input_shift_loss_rest_day_medic_en
+#     - action: utter_asked_how_input_shift_loss_rest_day_medic_en
+
+# - rule: Asks about add allergy data medical record far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: add_allergy_data_medical_record_far_medic_id
+#     - action: utter_add_allergy_data_medical_record_far_medic_id
+
+# - rule: Asks about add allergy data medical record far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: add_allergy_data_medical_record_far_medic_en
+#     - action: utter_add_allergy_data_medical_record_far_medic_en
+
+# - rule: Asks about edit allergy data medical record far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: edit_allergy_data_medical_record_far_medic_id
+#     - action: utter_edit_allergy_data_medical_record_far_medic_id
+
+# - rule: Asks about edit allergy data medical record far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: edit_allergy_data_medical_record_far_medic_en
+#     - action: utter_edit_allergy_data_medical_record_far_medic_en
+
+# - rule: Asks about delete allergy data medical record far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: delete_allergy_data_medical_record_far_medic_id
+#     - action: utter_delete_allergy_data_medical_record_far_medic_id
+
+# - rule: Asks about delete allergy data medical record far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: delete_allergy_data_medical_record_far_medic_en
+#     - action: utter_delete_allergy_data_medical_record_far_medic_en
+
+# - rule: Asks about ask feature view detail all medical record far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_feature_view_detail_all_medical_record_far_medic_id
+#     - action: utter_ask_feature_view_detail_all_medical_record_far_medic_id
+
+# - rule: Asks about ask feature view detail all medical record far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_feature_view_detail_all_medical_record_far_medic_en
+#     - action: utter_ask_feature_view_detail_all_medical_record_far_medic_en
+
+# - rule: Asks about how to view visit history far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_view_visit_history_far_medic_id
+#     - action: utter_how_to_view_visit_history_far_medic_id
+
+# - rule: Asks about how to view visit history far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_view_visit_history_far_medic_en
+#     - action: utter_how_to_view_visit_history_far_medic_en
+
+# - rule: Asks about how to search data results of visits far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_search_data_results_of_visits_far_medic_id
+#     - action: utter_how_to_search_data_results_of_visits_far_medic_id
+
+# - rule: Asks about how to search data results of visits far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_search_data_results_of_visits_far_medic_en
+#     - action: utter_how_to_search_data_results_of_visits_far_medic_en
+
+# - rule: Asks about what is view detail visit far feature in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_view_detail_visit_far_feature_medic_id
+#     - action: utter_what_is_view_detail_visit_far_feature_medic_id
+
+# - rule: Asks about what is view detail visit far feature in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_view_detail_visit_far_feature_medic_en
+#     - action: utter_what_is_view_detail_visit_far_feature_medic_en
+
+# - rule: Asks about how to access view detail visit far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_access_view_detail_visit_far_medic_id
+#     - action: utter_how_to_access_view_detail_visit_far_medic_id
+
+# - rule: Asks about how to access view detail visit far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_access_view_detail_visit_far_medic_en
+#     - action: utter_how_to_access_view_detail_visit_far_medic_en
+
+# - rule: Asks about doctor access result visit far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: doctor_access_result_visit_far_medic_id
+#     - action: utter_doctor_access_result_visit_far_medic_id
+
+# - rule: Asks about doctor access result visit far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: doctor_access_result_visit_far_medic_en
+#     - action: utter_doctor_access_result_visit_far_medic_en
+
+# - rule: Asks about initial followup far code terms in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: initial_followup_far_code_terms_medic_id
+#     - action: utter_initial_followup_far_code_terms_medic_id
+
+# - rule: Asks about initial followup far code terms in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: initial_followup_far_code_terms_medic_en
+#     - action: utter_initial_followup_far_code_terms_medic_en
+
+# - rule: Asks about how to delete visit far data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_delete_visit_far_data_medic_id
+#     - action: utter_how_to_delete_visit_far_data_medic_id
+
+# - rule: Asks about how to delete visit far data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_delete_visit_far_data_medic_en
+#     - action: utter_how_to_delete_visit_far_data_medic_en
+
+# - rule: Asks about ask limits delete visit far data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_limits_delete_visit_far_data_medic_id
+#     - action: utter_ask_limits_delete_visit_far_data_medic_id
+
+# - rule: Asks about ask limits delete visit far data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_limits_delete_visit_far_data_medic_en
+#     - action: utter_ask_limits_delete_visit_far_data_medic_en
+
+# - rule: Asks about what is edit visit far feature in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_edit_visit_far_feature_medic_id
+#     - action: utter_what_is_edit_visit_far_feature_medic_id
+
+# - rule: Asks about what is edit visit far feature in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_edit_visit_far_feature_medic_en
+#     - action: utter_what_is_edit_visit_far_feature_medic_en
+
+# - rule: Asks about how to access edit visit far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_access_edit_visit_far_medic_id
+#     - action: utter_how_to_access_edit_visit_far_medic_id
+
+# - rule: Asks about how to access edit visit far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_access_edit_visit_far_medic_en
+#     - action: utter_how_to_access_edit_visit_far_medic_en
+
+# - rule: Asks about terms edit visit far data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: terms_edit_visit_far_data_medic_id
+#     - action: utter_terms_edit_visit_far_data_medic_id
+
+# - rule: Asks about terms edit visit far data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: terms_edit_visit_far_data_medic_en
+#     - action: utter_terms_edit_visit_far_data_medic_en
+
+# - rule: Asks about rules change code visit far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: rules_change_code_visit_far_medic_id
+#     - action: utter_rules_change_code_visit_far_medic_id
+
+# - rule: Asks about rules change code visit far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: rules_change_code_visit_far_medic_en
+#     - action: utter_rules_change_code_visit_far_medic_en
+
+# - rule: Asks about ask limit edit visit far data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_limit_edit_visit_far_data_medic_id
+#     - action: utter_ask_limit_edit_visit_far_data_medic_id
+
+# - rule: Asks about ask limit edit visit far data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_limit_edit_visit_far_data_medic_en
+#     - action: utter_ask_limit_edit_visit_far_data_medic_en
+
+# - rule: Asks about what is view detail follow up far feature in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_view_detail_follow_up_far_feature_medic_id
+#     - action: utter_what_is_view_detail_follow_up_far_feature_medic_id
+
+# - rule: Asks about what is view detail follow up far feature in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_view_detail_follow_up_far_feature_medic_en
+#     - action: utter_what_is_view_detail_follow_up_far_feature_medic_en
+
+# - rule: Asks about doctor access result follow up far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: doctor_access_result_follow_up_far_medic_id
+#     - action: utter_doctor_access_result_follow_up_far_medic_id
+
+# - rule: Asks about doctor access result follow up far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: doctor_access_result_follow_up_far_medic_en
+#     - action: utter_doctor_access_result_follow_up_far_medic_en
+
+# - rule: Asks about what is edit follow up far feature in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_edit_follow_up_far_feature_medic_id
+#     - action: utter_what_is_edit_follow_up_far_feature_medic_id
+
+# - rule: Asks about what is edit follow up far feature in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_edit_follow_up_far_feature_medic_en
+#     - action: utter_what_is_edit_follow_up_far_feature_medic_en
+
+# - rule: Asks about how edit data follow up far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_edit_data_follow_up_far_medic_id
+#     - action: utter_how_edit_data_follow_up_far_medic_id
+
+# - rule: Asks about how edit data follow up far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_edit_data_follow_up_far_medic_en
+#     - action: utter_how_edit_data_follow_up_far_medic_en
+
+# - rule: Asks about ask limits edit follow up far data in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_limits_edit_follow_up_far_data_medic_id
+#     - action: utter_ask_limits_edit_follow_up_far_data_medic_id
+
+# - rule: Asks about ask limits edit follow up far data in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_limits_edit_follow_up_far_data_medic_en
+#     - action: utter_ask_limits_edit_follow_up_far_data_medic_en
+
+# - rule: Asks about ask when no visits far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_when_no_visits_far_medic_id
+#     - action: utter_ask_when_no_visits_far_medic_id
+
+# - rule: Asks about ask when no visits far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_when_no_visits_far_medic_en
+#     - action: utter_ask_when_no_visits_far_medic_en
+
+# - rule: Asks about order data history of visit far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: order_data_history_of_visit_far_medic_id
+#     - action: utter_order_data_history_of_visit_far_medic_id
+
+# - rule: Asks about order data history of visit far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: order_data_history_of_visit_far_medic_en
+#     - action: utter_order_data_history_of_visit_far_medic_en
+
+# - rule: Asks about ask every medical visit if follow up needed in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: ask_every_medical_visit_if_follow_up_needs_medic_id
+#     - action: utter_ask_every_medical_visit_if_follow_up_needs_medic_id
+
+# - rule: Asks about ask every medical visit if follow up needed in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: ask_every_medical_visit_if_follow_up_needs_medic_en
+#     - action: utter_ask_every_medical_visit_if_follow_up_needs_medic_en
+
+# - rule: Asks about what to do if you have a next follow up date in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_to_do_if_you_have_a_next_follow_up_medic_id
+#     - action: utter_what_to_do_if_you_have_a_next_follow_up_medic_id
+
+# - rule: Asks about what to do if you have a next follow up date in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_to_do_if_you_have_a_next_follow_up_medic_en
+#     - action: utter_what_to_do_if_you_have_a_next_follow_up_medic_en
+
+# - rule: Asks about how to access tab results of visits far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_access_tab_results_of_visits_far_medic_id
+#     - action: utter_how_to_access_tab_results_of_visits_far_medic_id
+
+# - rule: Asks about how to access tab results of visits far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_access_tab_results_of_visits_far_medic_en
+#     - action: utter_how_to_access_tab_results_of_visits_far_medic_en
+
+# - rule: Asks about what is shown in the far visit results tab in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_shown_in_the_far_visit_results_tab_medic_id
+#     - action: utter_what_is_shown_in_the_far_visit_results_tab_medic_id
+
+# - rule: Asks about what is shown in the far visit results tab in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_shown_in_the_far_visit_results_tab_medic_en
+#     - action: utter_what_is_shown_in_the_far_visit_results_tab_medic_en
+
+# - rule: Asks about what is shift loss and rest day in results far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_shift_loss_and_rest_day_in_results_far_medic_id
+#     - action: utter_what_is_shift_loss_and_rest_day_in_results_far_medic_id
+
+# - rule: Asks about what is shift loss and rest day in results far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_shift_loss_and_rest_day_in_results_far_medic_en
+#     - action: utter_what_is_shift_loss_and_rest_day_in_results_far_medic_en
+
+# - rule: Asks about how to view & download sick leave letter far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_view_download_sick_leave_letter_far_medic_id
+#     - action: utter_how_to_view_download_sick_leave_letter_far_medic_id
+
+# - rule: Asks about how to view & download sick leave letter far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_view_download_sick_leave_letter_far_medic_en
+#     - action: utter_how_to_view_download_sick_leave_letter_far_medic_en
+
+# - rule: Asks about how to access tab results of follow up far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: how_to_access_tab_results_of_follow_up_far_medic_id
+#     - action: utter_how_to_access_tab_results_of_follow_up_far_medic_id
+
+# - rule: Asks about how to access tab results of follow up far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: how_to_access_tab_results_of_follow_up_far_medic_en
+#     - action: utter_how_to_access_tab_results_of_follow_up_far_medic_en
+
+# - rule: Asks about what is shown in tab results of follow up far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_shown_in_tab_results_of_follow_up_far_medic_id
+#     - action: utter_what_is_shown_in_tab_results_of_follow_up_far_medic_id
+
+# - rule: Asks about what is shown in tab results of follow up far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_shown_in_tab_results_of_follow_up_far_medic_en
+#     - action: utter_what_is_shown_in_tab_results_of_follow_up_far_medic_en
+
+# - rule: Asks about what is shown on the follow up far detail page mobile in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: what_is_shown_on_the_follow_up_far_detail_page_mobile_medic_id
+#     - action: utter_what_is_shown_on_the_follow_up_far_detail_page_mobile_medic_id
+
+# - rule: Asks about what is shown on the follow up far detail page mobile in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: what_is_shown_on_the_follow_up_far_detail_page_mobile_medic_en
+#     - action: utter_what_is_shown_on_the_follow_up_far_detail_page_mobile_medic_en
+
+# - rule: Asks about health status in follow up far in Indonesia
+#   condition:
+#     - slot_was_set:
+#         - language: indonesia
+#   steps:
+#     - intent: health_status_in_follow_up_far_medic_id
+#     - action: utter_health_status_in_follow_up_far_medic_id
+
+# - rule: Asks about health status in follow up far in English
+#   condition:
+#     - slot_was_set:
+#         - language: english
+#   steps:
+#     - intent: health_status_in_follow_up_far_medic_en
+#     - action: utter_health_status_in_follow_up_far_medic_en

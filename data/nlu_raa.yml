@@ -141,1233 +141,1233 @@ nlu:
     - select language options
     - select language preference
 
-# - intent: check_absentee_data_today_raa_id
-#   examples: |
-#     - jam berapa saya berangkat [hari ini](query_condition)?
-#     - jam berapa saya absen pulang [hari ini](query_condition)?
-#     - [hari ini](query_condition) saya absen berangkat jam berapa?
-#     - jam berapa saya absen berangkat [hari ini](query_condition)?
-#     - saya [hari ini](query_condition) absen di project apa?
-#     - di project mana saya bekerja [hari ini](query_condition)?
-#     - jam berapa saya check-in [hari ini](query_condition)?
-#     - jam berapa saya check-out [hari ini](query_condition)?
-#     - jam berapa saya mulai bekerja [hari ini](query_condition)?
-#     - di project mana saya bekerja [hari ini](query_condition)?
-#     - saya [hari ini](query_condition) bekerja di project mana?
-#     - [hari ini](query_condition) saya berangkat jam berapa ke kantor?
-#     - di project mana saya absen [hari ini](query_condition)?
-#     - jam berapa saya absen [hari ini](query_condition)?
-#     - [hari ini](query_condition) saya absen jam berapa?
+- intent: check_absentee_data_today_raa_id
+  examples: |
+    - jam berapa saya berangkat [hari ini](query_condition)?
+    - jam berapa saya absen pulang [hari ini](query_condition)?
+    - [hari ini](query_condition) saya absen berangkat jam berapa?
+    - jam berapa saya absen berangkat [hari ini](query_condition)?
+    - saya [hari ini](query_condition) absen di project apa?
+    - di project mana saya bekerja [hari ini](query_condition)?
+    - jam berapa saya check-in [hari ini](query_condition)?
+    - jam berapa saya check-out [hari ini](query_condition)?
+    - jam berapa saya mulai bekerja [hari ini](query_condition)?
+    - di project mana saya bekerja [hari ini](query_condition)?
+    - saya [hari ini](query_condition) bekerja di project mana?
+    - [hari ini](query_condition) saya berangkat jam berapa ke kantor?
+    - di project mana saya absen [hari ini](query_condition)?
+    - jam berapa saya absen [hari ini](query_condition)?
+    - [hari ini](query_condition) saya absen jam berapa?
 
-# - intent: check_absentee_data_today_raa_en
-#   examples: |
-#     - What time did I clock in [today](query_condition)?
-#     - What time did I leave [today](query_condition)?
-#     - What time did I clock out [today](query_condition)?
-#     - What project was I absent in [today](query_condition)?
-#     - What time did I start working [today](query_condition)?
-#     - Which project was I working on [today](query_condition)?
-#     - What project was I working on [today](query_condition)?
-#     - What time did I leave for the office [today](query_condition)?
-#     - Which project did I check in for [today](query_condition)?
-#     - What time did I check in [today](query_condition)?
-#     - What time did I check out [today](query_condition)?
+- intent: check_absentee_data_today_raa_en
+  examples: |
+    - What time did I clock in [today](query_condition)?
+    - What time did I leave [today](query_condition)?
+    - What time did I clock out [today](query_condition)?
+    - What project was I absent in [today](query_condition)?
+    - What time did I start working [today](query_condition)?
+    - Which project was I working on [today](query_condition)?
+    - What project was I working on [today](query_condition)?
+    - What time did I leave for the office [today](query_condition)?
+    - Which project did I check in for [today](query_condition)?
+    - What time did I check in [today](query_condition)?
+    - What time did I check out [today](query_condition)?
 
-# - intent: check_absentee_data_yesterday_raa_id
-#   examples: |
-#     - jam berapa saya absen berangkat [kemarin](query_condition)?
-#     - jam berapa saya berangkat [kemarin](query_condition)?
-#     - [kemarin](query_condition) saya berangkat jam berapa?
-#     - jam berapa saya absen pulang [kemarin](query_condition)?
-#     - jam berapa saya pulang [kemarin](query_condition)?
-#     - [kemarin](query_condition) saya pulang jam berapa?
-#     - di project mana saya absen [kemarin](query_condition)?
-#     - absen [kemarin](query_condition) di project mana?
-#     - [kemarin](query_condition) saya absen di project apa?
-#     - jam berapa saya absen [kemarin](query_condition)?
-#     - saya [kemarin](query_condition) absen di project apa?
-#     - jam berapa saya check-in [kemarin](query_condition)?
-#     - [kemarin](query_condition) saya check-in jam berapa?
-#     - jam berapa saya selesai bekerja [kemarin](query_condition)?
-#     - di project mana saya bekerja [kemarin](query_condition)?
-#     - absen [kemarin](query_condition) saya berangkat jam berapa?
-#     - saya [kemarin](query_condition) pulang jam berapa?
-#     - di mana saya bekerja [kemarin](query_condition)?
-#     - [kemarin](query_condition) saya absen ke kantor jam berapa?
-#     - jam berapa saya pulang dari project [kemarin](query_condition)?
-#     - [kemarin](query_condition) saya berangkat dan pulang jam berapa?
-#     - jam berapa saya check-out [kemarin](query_condition)?
-#     - [kemarin](query_condition) saya ada di project mana?
-#     - jam berapa saya mulai kerja [kemarin](query_condition)?
+- intent: check_absentee_data_yesterday_raa_id
+  examples: |
+    - jam berapa saya absen berangkat [kemarin](query_condition)?
+    - jam berapa saya berangkat [kemarin](query_condition)?
+    - [kemarin](query_condition) saya berangkat jam berapa?
+    - jam berapa saya absen pulang [kemarin](query_condition)?
+    - jam berapa saya pulang [kemarin](query_condition)?
+    - [kemarin](query_condition) saya pulang jam berapa?
+    - di project mana saya absen [kemarin](query_condition)?
+    - absen [kemarin](query_condition) di project mana?
+    - [kemarin](query_condition) saya absen di project apa?
+    - jam berapa saya absen [kemarin](query_condition)?
+    - saya [kemarin](query_condition) absen di project apa?
+    - jam berapa saya check-in [kemarin](query_condition)?
+    - [kemarin](query_condition) saya check-in jam berapa?
+    - jam berapa saya selesai bekerja [kemarin](query_condition)?
+    - di project mana saya bekerja [kemarin](query_condition)?
+    - absen [kemarin](query_condition) saya berangkat jam berapa?
+    - saya [kemarin](query_condition) pulang jam berapa?
+    - di mana saya bekerja [kemarin](query_condition)?
+    - [kemarin](query_condition) saya absen ke kantor jam berapa?
+    - jam berapa saya pulang dari project [kemarin](query_condition)?
+    - [kemarin](query_condition) saya berangkat dan pulang jam berapa?
+    - jam berapa saya check-out [kemarin](query_condition)?
+    - [kemarin](query_condition) saya ada di project mana?
+    - jam berapa saya mulai kerja [kemarin](query_condition)?
 
-# - intent: check_absentee_data_yesterday_raa_en
-#   examples: |
-#     - what time did I clock in [yesterday](query_condition)?
-#     - which project was I absent in [yesterday](query_condition)?
-#     - which project did I check in for [yesterday](query_condition)?
-#     - what project was I absent in [yesterday](query_condition)?
-#     - what time did I check in [yesterday](query_condition)?
-#     - what time did I leave the office [yesterday](query_condition)?
-#     - what time did I finish work [yesterday](query_condition)?
-#     - what time did I leave for the office [yesterday](query_condition)?
-#     - what time did I leave [yesterday](query_condition)?
-#     - which project was I working on [yesterday](query_condition)?
-#     - what time did I check out from the project [yesterday](query_condition)?
-#     - what time did I leave and come back [yesterday](query_condition)?
-#     - what time did I check out [yesterday](query_condition)?
-#     - what project was I in [yesterday](query_condition)?
-#     - what time did I start working [yesterday](query_condition)?
+- intent: check_absentee_data_yesterday_raa_en
+  examples: |
+    - what time did I clock in [yesterday](query_condition)?
+    - which project was I absent in [yesterday](query_condition)?
+    - which project did I check in for [yesterday](query_condition)?
+    - what project was I absent in [yesterday](query_condition)?
+    - what time did I check in [yesterday](query_condition)?
+    - what time did I leave the office [yesterday](query_condition)?
+    - what time did I finish work [yesterday](query_condition)?
+    - what time did I leave for the office [yesterday](query_condition)?
+    - what time did I leave [yesterday](query_condition)?
+    - which project was I working on [yesterday](query_condition)?
+    - what time did I check out from the project [yesterday](query_condition)?
+    - what time did I leave and come back [yesterday](query_condition)?
+    - what time did I check out [yesterday](query_condition)?
+    - what project was I in [yesterday](query_condition)?
+    - what time did I start working [yesterday](query_condition)?
 
-# - intent: check_absentee_data_last_time_raa_id
-#   examples: |
-#     - di project mana saya [terakhir](query_condition) absen?
-#     - absen [terakhir](query_condition) saya di project mana?
-#     - jam berapa saya absen [terakhir kali](query_condition)?
-#     - jam berapa saya [terakhir](query_condition) absen?
-#     - jam berapa saya absen pulang [terakhir kali](query_condition)?
-#     - [terakhir kali](query_condition) saya pulang jam berapa?
-#     - jam berapa saya absen berangkat kerja [terakhir kali](query_condition)?
-#     - jam berapa saya berangkat kerja [terakhir kali](query_condition)?
-#     - jam berapa absen [terakhir kali](query_condition) saya pulang?
-#     - kapan [terakhir kali](query_condition) saya absen?
-#     - kapan [terakhir kali](query_condition) saya absen di project tersebut?
-#     - kapan [terakhir kali](query_condition) saya absen di suatu project?
-#     - absen [terakhir kali](query_condition) saya di jam berapa?
-#     - absen [terakhir](query_condition) saya di jam berapa?
-#     - jam berapa saya check-in [terakhir kali](query_condition)?
-#     - di project mana saya absen [terakhir kali](query_condition)?
-#     - berapa lama saya bekerja [terakhir kali](query_condition)?
-#     - absen [terakhir kali](query_condition) saya pulang jam berapa?
-#     - jam berapa saya selesai bekerja [terakhir kali](query_condition)?
-#     - dimana saya bekerja [terakhir kali](query_condition)?
-#     - kapan saya [terakhir kali](query_condition) check-in dan check-out?
-#     - jam berapa saya mulai absen berangkat [terakhir kali](query_condition)?
-#     - apakah saya sudah absen berangkat [terakhir kali](query_condition)?
-#     - di project mana saya bekerja [terakhir kali](query_condition)?
-#     - saya [terakhir kali](query_condition) absen di project mana?
-#     - jam berapa saya check-out [terakhir kali](query_condition)?
-#     - kapan [terakhir kali](query_condition) saya pulang dari project?
-#     - absen [terakhir](query_condition) saya di jam berapa?
+- intent: check_absentee_data_last_time_raa_id
+  examples: |
+    - di project mana saya [terakhir](query_condition) absen?
+    - absen [terakhir](query_condition) saya di project mana?
+    - jam berapa saya absen [terakhir kali](query_condition)?
+    - jam berapa saya [terakhir](query_condition) absen?
+    - jam berapa saya absen pulang [terakhir kali](query_condition)?
+    - [terakhir kali](query_condition) saya pulang jam berapa?
+    - jam berapa saya absen berangkat kerja [terakhir kali](query_condition)?
+    - jam berapa saya berangkat kerja [terakhir kali](query_condition)?
+    - jam berapa absen [terakhir kali](query_condition) saya pulang?
+    - kapan [terakhir kali](query_condition) saya absen?
+    - kapan [terakhir kali](query_condition) saya absen di project tersebut?
+    - kapan [terakhir kali](query_condition) saya absen di suatu project?
+    - absen [terakhir kali](query_condition) saya di jam berapa?
+    - absen [terakhir](query_condition) saya di jam berapa?
+    - jam berapa saya check-in [terakhir kali](query_condition)?
+    - di project mana saya absen [terakhir kali](query_condition)?
+    - berapa lama saya bekerja [terakhir kali](query_condition)?
+    - absen [terakhir kali](query_condition) saya pulang jam berapa?
+    - jam berapa saya selesai bekerja [terakhir kali](query_condition)?
+    - dimana saya bekerja [terakhir kali](query_condition)?
+    - kapan saya [terakhir kali](query_condition) check-in dan check-out?
+    - jam berapa saya mulai absen berangkat [terakhir kali](query_condition)?
+    - apakah saya sudah absen berangkat [terakhir kali](query_condition)?
+    - di project mana saya bekerja [terakhir kali](query_condition)?
+    - saya [terakhir kali](query_condition) absen di project mana?
+    - jam berapa saya check-out [terakhir kali](query_condition)?
+    - kapan [terakhir kali](query_condition) saya pulang dari project?
+    - absen [terakhir](query_condition) saya di jam berapa?
 
-# - intent: check_absentee_data_last_time_raa_en
-#   examples: |
-#     - what project was I [last](query_condition) absent from?
-#     - what project did I [last](query_condition) clock in at?
-#     - what time did I clock in [last time](query_condition)?
-#     - where was I absent [last time](query_condition)?
-#     - what time did I check out for work [last time](query_condition)?
-#     - what time did I leave for work [last time](query_condition)?
-#     - when was my [last time](query_condition) absence?
-#     - when was my [last time](query_condition) absence in that project?
-#     - when was my [last time](query_condition) absence in any project?
-#     - what time was my [last time](query_condition) absence?
-#     - what time was my [last](query_condition) absence?
-#     - what time did I check in [last time](query_condition)?
-#     - which project was I absent from [last time](query_condition)?
-#     - how long did I work [last time](query_condition)?
-#     - what time did I leave [last time](query_condition)?
-#     - what time did I finish work [last time](query_condition)?
-#     - where was I working [last time](query_condition)?
-#     - when was my [last time](query_condition) check-in and check-out?
-#     - what time did I start my check-out [last time](query_condition)?
-#     - did I check out for work [last time](query_condition)?
-#     - which project was I working on [last time](query_condition)?
-#     - where did I check in [last time](query_condition)?
-#     - what time did I check out [last time](query_condition)?
-#     - when did I leave the project [last time](query_condition)?
-#     - what time was my [last](query_condition) check-out?
+- intent: check_absentee_data_last_time_raa_en
+  examples: |
+    - what project was I [last](query_condition) absent from?
+    - what project did I [last](query_condition) clock in at?
+    - what time did I clock in [last time](query_condition)?
+    - where was I absent [last time](query_condition)?
+    - what time did I check out for work [last time](query_condition)?
+    - what time did I leave for work [last time](query_condition)?
+    - when was my [last time](query_condition) absence?
+    - when was my [last time](query_condition) absence in that project?
+    - when was my [last time](query_condition) absence in any project?
+    - what time was my [last time](query_condition) absence?
+    - what time was my [last](query_condition) absence?
+    - what time did I check in [last time](query_condition)?
+    - which project was I absent from [last time](query_condition)?
+    - how long did I work [last time](query_condition)?
+    - what time did I leave [last time](query_condition)?
+    - what time did I finish work [last time](query_condition)?
+    - where was I working [last time](query_condition)?
+    - when was my [last time](query_condition) check-in and check-out?
+    - what time did I start my check-out [last time](query_condition)?
+    - did I check out for work [last time](query_condition)?
+    - which project was I working on [last time](query_condition)?
+    - where did I check in [last time](query_condition)?
+    - what time did I check out [last time](query_condition)?
+    - when did I leave the project [last time](query_condition)?
+    - what time was my [last](query_condition) check-out?
 
-# - synonym: kemarin
-#   examples: |
-#     - kemarin
-#     - kemaren
+- synonym: kemarin
+  examples: |
+    - kemarin
+    - kemaren
 
-# - synonym: terakhir kali
-#   examples: |
-#     - terakhir kali
-#     - terakhir
+- synonym: terakhir kali
+  examples: |
+    - terakhir kali
+    - terakhir
 
-# - synonym: last time
-#   examples: |
-#     - last time
-#     - last
+- synonym: last time
+  examples: |
+    - last time
+    - last
 
-# - intent: check_leave_requests_this_month_raa_id
-#   examples: |
-#     - Berapa kali saya mengajukan cuti bulan ini?
-#     - Berapa kali saya ambil cuti bulan ini?
-#     - Seberapa sering saya mengajukan cuti bulan ini?
-#     - Cuti bulan ini saya ajukan berapa kali?
-#     - Berapa banyak cuti yang saya ajukan bulan ini?
-#     - Berapa kali saya ambil cuti dalam bulan ini?
-#     - Cuti saya di bulan ini berapa kali ya saya mengajukan nya?
-#     - Cuti saya di bulan ini berapa kali?
-#     - Saya sudah mengajukan cuti bulan ini berapa kali?
-#     - Bisa kasih tahu saya jumlah cuti yang saya ambil bulan ini?
-#     - Cuti bulan ini berapa kali ya saya ajukan?
-#     - Total pengajuan cuti saya bulan ini berapa kali?
-#     - Berapa hari cuti saya yang telah disetujui bulan ini?
-#     - Berapa banyak cuti yang sudah saya ajukan bulan ini?
-#     - Saya sudah ambil cuti bulan ini, berapa kali ya?
-#     - Berapa banyak permintaan cuti yang saya buat bulan ini?
-#     - Berapa kali saya ambil waktu cuti bulan ini?
-#     - Jumlah cuti yang saya ajukan bulan ini berapa?
-#     - Cuti saya bulan ini tercatat berapa kali?
-#     - Berapa pengajuan cuti yang sudah saya lakukan bulan ini?
+- intent: check_leave_requests_this_month_raa_id
+  examples: |
+    - Berapa kali saya mengajukan cuti bulan ini?
+    - Berapa kali saya ambil cuti bulan ini?
+    - Seberapa sering saya mengajukan cuti bulan ini?
+    - Cuti bulan ini saya ajukan berapa kali?
+    - Berapa banyak cuti yang saya ajukan bulan ini?
+    - Berapa kali saya ambil cuti dalam bulan ini?
+    - Cuti saya di bulan ini berapa kali ya saya mengajukan nya?
+    - Cuti saya di bulan ini berapa kali?
+    - Saya sudah mengajukan cuti bulan ini berapa kali?
+    - Bisa kasih tahu saya jumlah cuti yang saya ambil bulan ini?
+    - Cuti bulan ini berapa kali ya saya ajukan?
+    - Total pengajuan cuti saya bulan ini berapa kali?
+    - Berapa hari cuti saya yang telah disetujui bulan ini?
+    - Berapa banyak cuti yang sudah saya ajukan bulan ini?
+    - Saya sudah ambil cuti bulan ini, berapa kali ya?
+    - Berapa banyak permintaan cuti yang saya buat bulan ini?
+    - Berapa kali saya ambil waktu cuti bulan ini?
+    - Jumlah cuti yang saya ajukan bulan ini berapa?
+    - Cuti saya bulan ini tercatat berapa kali?
+    - Berapa pengajuan cuti yang sudah saya lakukan bulan ini?
 
-# - intent: check_leave_requests_this_month_raa_en
-#   examples: |
-#     - How many times have I requested leave this month?
-#     - How many times have I taken leave this month?
-#     - How frequently have I requested leave this month?
-#     - How many leave requests have I submitted this month?
-#     - How many days of leave have I requested this month?
-#     - How many times have I taken leave in this month?
-#     - How many times have I applied for leave this month?
-#     - How many leaves have I taken this month?
-#     - How many times have I submitted leave requests this month?
-#     - Can you tell me the number of leave days I've taken this month?
-#     - How many leave requests have I made this month?
-#     - What is the total number of leave requests I've made this month?
-#     - How many leave days have been approved for me this month?
-#     - How many leaves have I applied for this month?
-#     - How many times have I taken leave so far this month?
-#     - How many leave applications have I made this month?
-#     - How many times have I taken leave this month?
-#     - How many leave days have I requested this month?
-#     - How many leaves have been recorded for me this month?
-#     - How many leave requests have I submitted this month?
+- intent: check_leave_requests_this_month_raa_en
+  examples: |
+    - How many times have I requested leave this month?
+    - How many times have I taken leave this month?
+    - How frequently have I requested leave this month?
+    - How many leave requests have I submitted this month?
+    - How many days of leave have I requested this month?
+    - How many times have I taken leave in this month?
+    - How many times have I applied for leave this month?
+    - How many leaves have I taken this month?
+    - How many times have I submitted leave requests this month?
+    - Can you tell me the number of leave days I've taken this month?
+    - How many leave requests have I made this month?
+    - What is the total number of leave requests I've made this month?
+    - How many leave days have been approved for me this month?
+    - How many leaves have I applied for this month?
+    - How many times have I taken leave so far this month?
+    - How many leave applications have I made this month?
+    - How many times have I taken leave this month?
+    - How many leave days have I requested this month?
+    - How many leaves have been recorded for me this month?
+    - How many leave requests have I submitted this month?
 
-# - intent: check_leave_requests_last_month_raa_id
-#   examples: |
-#     - Berapa kali saya mengajukan cuti bulan lalu?
-#     - Cuti bulan lalu saya ajukan berapa kali?
-#     - Berapa kali saya ambil cuti dalam bulan lalu?
-#     - Ada berapa pengajuan cuti saya bulan lalu?
-#     - Bisa kasih tahu saya jumlah cuti yang saya ambil bulan lalu?
-#     - Cuti bulan lalu berapa kali ya saya ajukan?
-#     - Berapa kali saya mengambil cuti bulan lalu?
-#     - Pengajuan cuti saya bulan lalu berapa kali?
-#     - Pengajuan cuti saya bulan lalu berapa hari?
-#     - Cuti bulan lalu saya ajukan berapa kali ya?
-#     - Seberapa sering saya mengajukan cuti bulan lalu?
-#     - Berapa banyak cuti yang saya ajukan bulan lalu?
-#     - Cuti yang saya ambil bulan lalu totalnya berapa kali?
-#     - Cuti yang saya ambil bulan lalu totalnya berapa hari?
-#     - Jumlah cuti yang saya ajukan bulan lalu ada berapa?
-#     - Berapa banyak permintaan cuti yang saya buat bulan lalu?
-#     - Saya mengajukan cuti bulan lalu berapa kali ya?
-#     - Bulan lalu, saya sudah berapa kali mengambil cuti?
-#     - Cuti yang sudah saya ajukan bulan lalu tercatat berapa kali?
-#     - Seberapa sering saya cuti bulan lalu?
-#     - Berapa kali saya cuti bulan lalu?
-#     - Saya sudah mengambil cuti bulan lalu, berapa hari?
-#     - Cuti saya yang saya ambil bulan lalu berapa banyak?
-#     - Cuti saya yang saya ajukan bulan lalu berapa hari?
-#     - Cuti saya yang saya gunakan bulan lalu berapa hari?
-#     - Ada berapa pengajuan cuti yang saya lakukan bulan lalu?
+- intent: check_leave_requests_last_month_raa_id
+  examples: |
+    - Berapa kali saya mengajukan cuti bulan lalu?
+    - Cuti bulan lalu saya ajukan berapa kali?
+    - Berapa kali saya ambil cuti dalam bulan lalu?
+    - Ada berapa pengajuan cuti saya bulan lalu?
+    - Bisa kasih tahu saya jumlah cuti yang saya ambil bulan lalu?
+    - Cuti bulan lalu berapa kali ya saya ajukan?
+    - Berapa kali saya mengambil cuti bulan lalu?
+    - Pengajuan cuti saya bulan lalu berapa kali?
+    - Pengajuan cuti saya bulan lalu berapa hari?
+    - Cuti bulan lalu saya ajukan berapa kali ya?
+    - Seberapa sering saya mengajukan cuti bulan lalu?
+    - Berapa banyak cuti yang saya ajukan bulan lalu?
+    - Cuti yang saya ambil bulan lalu totalnya berapa kali?
+    - Cuti yang saya ambil bulan lalu totalnya berapa hari?
+    - Jumlah cuti yang saya ajukan bulan lalu ada berapa?
+    - Berapa banyak permintaan cuti yang saya buat bulan lalu?
+    - Saya mengajukan cuti bulan lalu berapa kali ya?
+    - Bulan lalu, saya sudah berapa kali mengambil cuti?
+    - Cuti yang sudah saya ajukan bulan lalu tercatat berapa kali?
+    - Seberapa sering saya cuti bulan lalu?
+    - Berapa kali saya cuti bulan lalu?
+    - Saya sudah mengambil cuti bulan lalu, berapa hari?
+    - Cuti saya yang saya ambil bulan lalu berapa banyak?
+    - Cuti saya yang saya ajukan bulan lalu berapa hari?
+    - Cuti saya yang saya gunakan bulan lalu berapa hari?
+    - Ada berapa pengajuan cuti yang saya lakukan bulan lalu?
 
-# - intent: check_leave_requests_last_month_raa_en
-#   examples: |
-#     - How many times did I request leave last month?
-#     - How many leave requests did I submit last month?
-#     - How many leave requests did I have last month?
-#     - Can you tell me how many days of leave I took last month?
-#     - How many times did I apply for leave last month?
-#     - How many times did I take leave in the previous month?
-#     - How many leave requests did I submit in the last month?
-#     - How many days of leave did I request last month?
-#     - How frequently did I request leave last month?
-#     - How many leave requests have I made last month?
-#     - How many times did I take leave last month in total?
-#     - What is the total number of leave days I took last month?
-#     - How many days of leave did I take last month in total?
-#     - How many leave requests did I make last month?
-#     - How many leave applications did I submit last month?
-#     - Last month, how many times did I request leave?
-#     - How many times was my leave recorded last month?
-#     - How often did I take leave last month?
-#     - How many times did I take leave last month?
-#     - How many days of leave did I take last month?
-#     - How much leave did I take last month?
-#     - How many days of leave did I apply for last month?
-#     - How many days of leave did I use last month?
-#     - How many leave requests did I make in the last month?
+- intent: check_leave_requests_last_month_raa_en
+  examples: |
+    - How many times did I request leave last month?
+    - How many leave requests did I submit last month?
+    - How many leave requests did I have last month?
+    - Can you tell me how many days of leave I took last month?
+    - How many times did I apply for leave last month?
+    - How many times did I take leave in the previous month?
+    - How many leave requests did I submit in the last month?
+    - How many days of leave did I request last month?
+    - How frequently did I request leave last month?
+    - How many leave requests have I made last month?
+    - How many times did I take leave last month in total?
+    - What is the total number of leave days I took last month?
+    - How many days of leave did I take last month in total?
+    - How many leave requests did I make last month?
+    - How many leave applications did I submit last month?
+    - Last month, how many times did I request leave?
+    - How many times was my leave recorded last month?
+    - How often did I take leave last month?
+    - How many times did I take leave last month?
+    - How many days of leave did I take last month?
+    - How much leave did I take last month?
+    - How many days of leave did I apply for last month?
+    - How many days of leave did I use last month?
+    - How many leave requests did I make in the last month?
 
-# - intent: check_absence_requests_this_month_raa_id
-#   examples: |
-#     - Berapa kali saya izin tidak hadir bulan ini?
-#     - Saya sudah izin tidak hadir berapa hari bulan ini?
-#     - Saya sudah izin berapa hari bulan ini?
-#     - Izin tidak hadir saya bulan ini ada berapa kali?
-#     - Izin saya bulan ini ada berapa kali?
-#     - Tolong cek izin saya bulan ini.
-#     - Saya bulan ini sudah tidak hadir berapa kali?
-#     - Izin saya dalam bulan ini ada berapa?
-#     - Bulan ini saya sudah izin berapa kali?
-#     - Saya izin tidak hadir bulan ini berapa kali?
-#     - Sudah berapa kali saya izin bulan ini?
-#     - Bisa cek izin saya bulan ini?
-#     - Berapa kali saya tidak hadir bulan ini?
-#     - Saya izin bolos berapa kali bulan ini?
-#     - Izin tidak hadir saya bulan ini ada berapa?
-#     - Sejauh ini saya sudah izin tidak hadir berapa kali bulan ini?
-#     - Bisa lihat izin saya bulan ini?
-#     - Izin saya bulan ini ada berapa kali yang tercatat?
-#     - Bulan ini saya absen berapa kali karena izin?
-#     - Saya sudah izin berapa kali sepanjang bulan ini?
-#     - Saya sudah izin tidak hadir berapa kali sepanjang bulan ini?
-#     - Total izin saya bulan ini berapa kali?
-#     - Saya absen karena izin bulan ini berapa kali?
-#     - Berapa kali saya mengajukan izin tidak hadir bulan ini?
-#     - Sudah berapa kali saya minta izin tidak hadir bulan ini?
+- intent: check_absence_requests_this_month_raa_id
+  examples: |
+    - Berapa kali saya izin tidak hadir bulan ini?
+    - Saya sudah izin tidak hadir berapa hari bulan ini?
+    - Saya sudah izin berapa hari bulan ini?
+    - Izin tidak hadir saya bulan ini ada berapa kali?
+    - Izin saya bulan ini ada berapa kali?
+    - Tolong cek izin saya bulan ini.
+    - Saya bulan ini sudah tidak hadir berapa kali?
+    - Izin saya dalam bulan ini ada berapa?
+    - Bulan ini saya sudah izin berapa kali?
+    - Saya izin tidak hadir bulan ini berapa kali?
+    - Sudah berapa kali saya izin bulan ini?
+    - Bisa cek izin saya bulan ini?
+    - Berapa kali saya tidak hadir bulan ini?
+    - Saya izin bolos berapa kali bulan ini?
+    - Izin tidak hadir saya bulan ini ada berapa?
+    - Sejauh ini saya sudah izin tidak hadir berapa kali bulan ini?
+    - Bisa lihat izin saya bulan ini?
+    - Izin saya bulan ini ada berapa kali yang tercatat?
+    - Bulan ini saya absen berapa kali karena izin?
+    - Saya sudah izin berapa kali sepanjang bulan ini?
+    - Saya sudah izin tidak hadir berapa kali sepanjang bulan ini?
+    - Total izin saya bulan ini berapa kali?
+    - Saya absen karena izin bulan ini berapa kali?
+    - Berapa kali saya mengajukan izin tidak hadir bulan ini?
+    - Sudah berapa kali saya minta izin tidak hadir bulan ini?
 
-# - intent: check_absence_requests_this_month_raa_en
-#   examples: |
-#     - How many times have I been absent this month?
-#     - How many days have I been absent this month?
-#     - How many absences have I had this month?
-#     - Could you check my absences this month?
-#     - How many times have I not been present this month?
-#     - How many absences are recorded for me this month?
-#     - Can you tell me how many absences I have this month?
-#     - How many times have I been absent in this month?
-#     - This month, how many times have I been absent?
-#     - What is my total absence count for this month?
-#     - How many times have I filed an absence this month?
-#     - How many times have I requested an absence this month?
-#     - Could you show me how many times I've been absent this month?
-#     - How many absences are there for me this month?
-#     - Can you provide details on my absences this month?
-#     - How often have I been absent this month?
-#     - How many absences do I have recorded this month?
-#     - How many times have I missed work due to absence this month?
-#     - How many total absences do I have for this month?
-#     - Can you tell me how many absences I have so far this month?
-#     - What's the total number of my absences this month?
+- intent: check_absence_requests_this_month_raa_en
+  examples: |
+    - How many times have I been absent this month?
+    - How many days have I been absent this month?
+    - How many absences have I had this month?
+    - Could you check my absences this month?
+    - How many times have I not been present this month?
+    - How many absences are recorded for me this month?
+    - Can you tell me how many absences I have this month?
+    - How many times have I been absent in this month?
+    - This month, how many times have I been absent?
+    - What is my total absence count for this month?
+    - How many times have I filed an absence this month?
+    - How many times have I requested an absence this month?
+    - Could you show me how many times I've been absent this month?
+    - How many absences are there for me this month?
+    - Can you provide details on my absences this month?
+    - How often have I been absent this month?
+    - How many absences do I have recorded this month?
+    - How many times have I missed work due to absence this month?
+    - How many total absences do I have for this month?
+    - Can you tell me how many absences I have so far this month?
+    - What's the total number of my absences this month?
 
-# - intent: check_absence_requests_last_month_raa_id
-#   examples: |
-#     - Berapa kali saya tidak hadir bulan lalu?
-#     - Izin saya bulan lalu ada berapa kali?
-#     - Bulan lalu, saya izin tidak hadir berapa kali?
-#     - Saya sudah izin berapa kali bulan lalu?
-#     - Sejauh ini, izin tidak hadir saya bulan lalu ada berapa kali?
-#     - Izin saya untuk bulan lalu tercatat berapa kali?
-#     - Saya bulan lalu sudah tidak hadir berapa kali karena izin?
-#     - Berapa kali saya absen bulan lalu karena izin?
-#     - Tolong cek izin saya bulan lalu.
-#     - Bisa lihat berapa kali saya izin bulan lalu?
-#     - Saya izin tidak hadir di bulan lalu berapa kali?
-#     - Absen bulan lalu saya berapa kali?
-#     - Izin saya bulan lalu tercatat berapa kali?
-#     - Sudah berapa kali saya izin bulan lalu?
-#     - Bulan lalu, saya bolos kerja berapa kali?
-#     - Berapa kali izin saya yang tercatat bulan lalu?
-#     - Bisa cek izin saya yang tercatat bulan lalu?
-#     - Izin saya bulan lalu ada berapa kali yang tercatat? 
-#     - Izin tidak hadir saya bulan lalu ada berapa kali yang tercatat? 
-#     - Berapa kali saya izin tidak hadir bulan lalu?
-#     - Saya sudah izin tidak hadir bulan lalu sebanyak berapa kali?
+- intent: check_absence_requests_last_month_raa_id
+  examples: |
+    - Berapa kali saya tidak hadir bulan lalu?
+    - Izin saya bulan lalu ada berapa kali?
+    - Bulan lalu, saya izin tidak hadir berapa kali?
+    - Saya sudah izin berapa kali bulan lalu?
+    - Sejauh ini, izin tidak hadir saya bulan lalu ada berapa kali?
+    - Izin saya untuk bulan lalu tercatat berapa kali?
+    - Saya bulan lalu sudah tidak hadir berapa kali karena izin?
+    - Berapa kali saya absen bulan lalu karena izin?
+    - Tolong cek izin saya bulan lalu.
+    - Bisa lihat berapa kali saya izin bulan lalu?
+    - Saya izin tidak hadir di bulan lalu berapa kali?
+    - Absen bulan lalu saya berapa kali?
+    - Izin saya bulan lalu tercatat berapa kali?
+    - Sudah berapa kali saya izin bulan lalu?
+    - Bulan lalu, saya bolos kerja berapa kali?
+    - Berapa kali izin saya yang tercatat bulan lalu?
+    - Bisa cek izin saya yang tercatat bulan lalu?
+    - Izin saya bulan lalu ada berapa kali yang tercatat? 
+    - Izin tidak hadir saya bulan lalu ada berapa kali yang tercatat? 
+    - Berapa kali saya izin tidak hadir bulan lalu?
+    - Saya sudah izin tidak hadir bulan lalu sebanyak berapa kali?
 
-# - intent: check_absence_requests_last_month_raa_en
-#   examples: |
-#     - How many times was I absent last month?
-#     - How many absences did I have last month?
-#     - Last month, how many times was I absent?
-#     - How many times did I request an absence last month?
-#     - So far, how many absences did I have last month?
-#     - How many absences were recorded for me last month?
-#     - Last month, how many times was I absent due to an excuse?
-#     - How many times was I absent last month due to permission?
-#     - Please check my absences last month.
-#     - Can you tell me how many times I was absent last month?
-#     - How many absences did I have recorded last month?
-#     - How many times did I miss work last month?
-#     - How many absences were logged for me last month?
-#     - How many times was I absent last month without permission?
-#     - Last month, how many times did I skip work without permission?
-#     - How many of my absences were recorded last month?
-#     - Can you check my recorded absences for last month?
-#     - How many recorded absences did I have last month?
-#     - How many absences did I have last month that were documented?
-#     - How many times was I absent last month?
-#     - How many times was I absent last month in total?
+- intent: check_absence_requests_last_month_raa_en
+  examples: |
+    - How many times was I absent last month?
+    - How many absences did I have last month?
+    - Last month, how many times was I absent?
+    - How many times did I request an absence last month?
+    - So far, how many absences did I have last month?
+    - How many absences were recorded for me last month?
+    - Last month, how many times was I absent due to an excuse?
+    - How many times was I absent last month due to permission?
+    - Please check my absences last month.
+    - Can you tell me how many times I was absent last month?
+    - How many absences did I have recorded last month?
+    - How many times did I miss work last month?
+    - How many absences were logged for me last month?
+    - How many times was I absent last month without permission?
+    - Last month, how many times did I skip work without permission?
+    - How many of my absences were recorded last month?
+    - Can you check my recorded absences for last month?
+    - How many recorded absences did I have last month?
+    - How many absences did I have last month that were documented?
+    - How many times was I absent last month?
+    - How many times was I absent last month in total?
 
-# - intent: check_alpha_absence_requests_this_month_raa_id
-#   examples: |
-#     - Berapa kali saya mangkir bulan ini?
-#     - Berapa kali saya alpha bulan ini?
-#     - Berapa kali saya alpha/mangkir bulan ini?
-#     - Saya sudah mangkir berapa kali bulan ini?
-#     - Bisa cek berapa kali saya alpha bulan ini?
-#     - Berapa kali saya alpha bulan ini tanpa keterangan?
-#     - Saya sudah alpha berapa kali bulan ini?
-#     - Izin saya bulan ini ada berapa kali alpha?
-#     - Alpha bulan ini tercatat berapa kali ya?
-#     - Mangkir saya bulan ini ada berapa kali?
-#     - Saya sudah tidak hadir tanpa alasan bulan ini berapa kali?
-#     - Berapa kali saya tidak masuk bulan ini karena mangkir?
-#     - Mangkir saya bulan ini tercatat berapa kali?
-#     - Ada berapa kali saya mangkir bulan ini?
-#     - Ada berapa kali saya alpha bulan ini?
-#     - Ada berapa kali saya alpha/mangkir bulan ini?
-#     - Sejauh ini saya sudah alpha bulan ini berapa kali?
-#     - Izin alpha saya bulan ini ada berapa kali?
-#     - Berapa kali saya tidak hadir bulan ini tanpa izin/alpha?
+- intent: check_alpha_absence_requests_this_month_raa_id
+  examples: |
+    - Berapa kali saya mangkir bulan ini?
+    - Berapa kali saya alpha bulan ini?
+    - Berapa kali saya alpha/mangkir bulan ini?
+    - Saya sudah mangkir berapa kali bulan ini?
+    - Bisa cek berapa kali saya alpha bulan ini?
+    - Berapa kali saya alpha bulan ini tanpa keterangan?
+    - Saya sudah alpha berapa kali bulan ini?
+    - Izin saya bulan ini ada berapa kali alpha?
+    - Alpha bulan ini tercatat berapa kali ya?
+    - Mangkir saya bulan ini ada berapa kali?
+    - Saya sudah tidak hadir tanpa alasan bulan ini berapa kali?
+    - Berapa kali saya tidak masuk bulan ini karena mangkir?
+    - Mangkir saya bulan ini tercatat berapa kali?
+    - Ada berapa kali saya mangkir bulan ini?
+    - Ada berapa kali saya alpha bulan ini?
+    - Ada berapa kali saya alpha/mangkir bulan ini?
+    - Sejauh ini saya sudah alpha bulan ini berapa kali?
+    - Izin alpha saya bulan ini ada berapa kali?
+    - Berapa kali saya tidak hadir bulan ini tanpa izin/alpha?
 
-# - intent: check_alpha_absence_requests_this_month_raa_en
-#   examples: |
-#     - How many times have I been absent without permission this month?
-#     - How many times have I alpha this month?
-#     - How many times have I skipped work/alpha this month?
-#     - Can you check how many times I've alpha this month?
-#     - How many times have I been marked as alpha this month?
-#     - How many times have I been marked as alpha/absent this month?
-#     - Can you check how many times I've been marked as alpha this month?
-#     - How many times have I been absent without explanation this month?
-#     - How many times have I been marked as alpha so far this month?
-#     - How many alpha absences have been recorded for me this month?
-#     - How many alpha records do I have this month?
-#     - How many times have I been absent without reason this month?
-#     - How many times have I been absent this month without permission?
-#     - How many times have I been absent this month due to alpha?
-#     - How many alpha absences do I have this month?
-#     - How many alpha records are there for me this month?
-#     - How many times have I been absent without notice this month?
-#     - How many alpha or absent days do I have this month?
-#     - So far, how many times have I been marked as alpha this month?
-#     - How many alpha absences do I have recorded this month?
-#     - How many times have I been absent without permission this month?
-#     - How many times have I been absent this month due to alpha/no permission?
+- intent: check_alpha_absence_requests_this_month_raa_en
+  examples: |
+    - How many times have I been absent without permission this month?
+    - How many times have I alpha this month?
+    - How many times have I skipped work/alpha this month?
+    - Can you check how many times I've alpha this month?
+    - How many times have I been marked as alpha this month?
+    - How many times have I been marked as alpha/absent this month?
+    - Can you check how many times I've been marked as alpha this month?
+    - How many times have I been absent without explanation this month?
+    - How many times have I been marked as alpha so far this month?
+    - How many alpha absences have been recorded for me this month?
+    - How many alpha records do I have this month?
+    - How many times have I been absent without reason this month?
+    - How many times have I been absent this month without permission?
+    - How many times have I been absent this month due to alpha?
+    - How many alpha absences do I have this month?
+    - How many alpha records are there for me this month?
+    - How many times have I been absent without notice this month?
+    - How many alpha or absent days do I have this month?
+    - So far, how many times have I been marked as alpha this month?
+    - How many alpha absences do I have recorded this month?
+    - How many times have I been absent without permission this month?
+    - How many times have I been absent this month due to alpha/no permission?
 
-# - intent: check_alpha_absence_requests_last_month_raa_id
-#   examples: |
-#     - Berapa kali saya tidak hadir bulan lalu karena alpha?
-#     - Berapa kali saya tidak hadir bulan lalu karena mangkir?
-#     - Sudah berapa kali saya mangkir bulan lalu?
-#     - Sudah berapa kali saya alpha bulan lalu?
-#     - Sudah berapa kali saya tidak hadir bulan lalu karena alpha?
-#     - Bulan lalu, saya mangkir berapa kali ya?
-#     - Saya sudah alpha berapa kali bulan lalu?
-#     - Tercatat ada berapa kali saya mangkir bulan lalu?
-#     - Berapa kali saya tidak masuk bulan lalu karena mangkir?
-#     - Bulan lalu saya bolos alpha berapa kali?
-#     - Bisa cek berapa kali saya mangkir bulan lalu?
-#     - Alpha saya bulan lalu tercatat berapa kali?
-#     - Ada berapa kali saya tidak hadir tanpa izin bulan lalu?
-#     - Mangkir saya bulan lalu ada berapa kali ya?
-#     - Alpha saya bulan lalu ada berapa kali ya?
-#     - Sejauh ini saya sudah mangkir bulan lalu berapa kali?
-#     - Berapa kali saya tidak hadir bulan lalu tanpa alasan?
-#     - Saya bolos alpha bulan lalu sudah berapa kali?
-#     - Berapa kali alpha saya bulan lalu?
-#     - Berapa kali mangkir saya bulan lalu?
+- intent: check_alpha_absence_requests_last_month_raa_id
+  examples: |
+    - Berapa kali saya tidak hadir bulan lalu karena alpha?
+    - Berapa kali saya tidak hadir bulan lalu karena mangkir?
+    - Sudah berapa kali saya mangkir bulan lalu?
+    - Sudah berapa kali saya alpha bulan lalu?
+    - Sudah berapa kali saya tidak hadir bulan lalu karena alpha?
+    - Bulan lalu, saya mangkir berapa kali ya?
+    - Saya sudah alpha berapa kali bulan lalu?
+    - Tercatat ada berapa kali saya mangkir bulan lalu?
+    - Berapa kali saya tidak masuk bulan lalu karena mangkir?
+    - Bulan lalu saya bolos alpha berapa kali?
+    - Bisa cek berapa kali saya mangkir bulan lalu?
+    - Alpha saya bulan lalu tercatat berapa kali?
+    - Ada berapa kali saya tidak hadir tanpa izin bulan lalu?
+    - Mangkir saya bulan lalu ada berapa kali ya?
+    - Alpha saya bulan lalu ada berapa kali ya?
+    - Sejauh ini saya sudah mangkir bulan lalu berapa kali?
+    - Berapa kali saya tidak hadir bulan lalu tanpa alasan?
+    - Saya bolos alpha bulan lalu sudah berapa kali?
+    - Berapa kali alpha saya bulan lalu?
+    - Berapa kali mangkir saya bulan lalu?
 
-# - intent: check_alpha_absence_requests_last_month_raa_en
-#   examples: |
-#     - How many times was I absent last month due to alpha?
-#     - How many times did I skip work last month?
-#     - How many times was I marked as alpha last month?
-#     - Last month, how many times did I skip work last month due to alpha?
-#     - How many times have I been marked as alpha last month?
-#     - How many alpha absences were recorded last month?
-#     - How many times was I alpha absent last month without permission?
-#     - How many times did I skip work last month as alpha?
-#     - Can you check how many times I skipped work last month?
-#     - How many alpha absences were recorded for me last month?
-#     - How many times was I absent without permission last month?
-#     - How many times did I skip work last month without reason?
-#     - How many alpha records did I have last month?
-#     - So far, how many times did I skip work last month?
-#     - How many times was I absent last month without reason?
-#     - How many times did I skip work last month due to alpha?
-#     - How many alpha absences did I have last month?
-#     - How many times did I skip work without permission last month?
+- intent: check_alpha_absence_requests_last_month_raa_en
+  examples: |
+    - How many times was I absent last month due to alpha?
+    - How many times did I skip work last month?
+    - How many times was I marked as alpha last month?
+    - Last month, how many times did I skip work last month due to alpha?
+    - How many times have I been marked as alpha last month?
+    - How many alpha absences were recorded last month?
+    - How many times was I alpha absent last month without permission?
+    - How many times did I skip work last month as alpha?
+    - Can you check how many times I skipped work last month?
+    - How many alpha absences were recorded for me last month?
+    - How many times was I absent without permission last month?
+    - How many times did I skip work last month without reason?
+    - How many alpha records did I have last month?
+    - So far, how many times did I skip work last month?
+    - How many times was I absent last month without reason?
+    - How many times did I skip work last month due to alpha?
+    - How many alpha absences did I have last month?
+    - How many times did I skip work without permission last month?
 
-# - intent: check_attendance_this_month_raa_id
-#   examples: |
-#     - Berapa kali saya hadir bulan ini?
-#     - Saya sudah hadir berapa kali bulan ini?
-#     - Kehadiran saya bulan ini sudah berapa kali ya?
-#     - Bulan ini, berapa kali saya hadir?
-#     - Cek dong, berapa kali saya hadir bulan ini?
-#     - Tercatat ada berapa kali saya hadir bulan ini?
-#     - Kehadiran saya bulan ini tercatat berapa kali?
-#     - Saya hadir di bulan ini sudah berapa kali?
-#     - Bulan ini saya masuk kerja berapa kali ya?
-#     - Bisa cek kehadiran saya bulan ini berapa kali?
-#     - Bulan ini, sudah berapa kali saya datang kerja?
-#     - Cek jumlah kehadiran saya bulan ini?
-#     - Berapa kali saya datang ke kantor bulan ini?
-#     - Berapa kali saya hadir ke kantor pada bulan ini saja?
-#     - Kehadiran saya di bulan ini ke kantor ada berapa kali?
-#     - Total kehadiran saya ke kantor bulan ini berapa kali?
-#     - Total kehadiran saya bulan ini berapa kali?
-#     - Jumlah kehadiran saya di bulan ini sudah ada berapa?
-#     - Berapa kali saya masuk bulan ini?
-#     - Info dong, kehadiran saya bulan ini totalnya berapa kali?
-#     - Bisa bantu cek berapa total kehadiran saya bulan ini?
-#     - Saya ingin tahu, sudah berapa kali saya hadir bulan ini?
-#     - Berapa total hari saya hadir di bulan ini?
-#     - Berapa kali saya datang ke kantor bulan ini?
-#     - Total kehadiran saya bulan ini sudah berapa kali?
-#     - Total kehadiran saya bulan ini tercatat berapa kali?
-#     - Bisa cek total kehadiran saya bulan ini?
-#     - Hitung dong kehadiran saya di bulan ini!
-#     - Total kehadiran saya selama bulan ini berapa kali?
-#     - Cek berapa kali saya hadir di bulan ini secara total!
+- intent: check_attendance_this_month_raa_id
+  examples: |
+    - Berapa kali saya hadir bulan ini?
+    - Saya sudah hadir berapa kali bulan ini?
+    - Kehadiran saya bulan ini sudah berapa kali ya?
+    - Bulan ini, berapa kali saya hadir?
+    - Cek dong, berapa kali saya hadir bulan ini?
+    - Tercatat ada berapa kali saya hadir bulan ini?
+    - Kehadiran saya bulan ini tercatat berapa kali?
+    - Saya hadir di bulan ini sudah berapa kali?
+    - Bulan ini saya masuk kerja berapa kali ya?
+    - Bisa cek kehadiran saya bulan ini berapa kali?
+    - Bulan ini, sudah berapa kali saya datang kerja?
+    - Cek jumlah kehadiran saya bulan ini?
+    - Berapa kali saya datang ke kantor bulan ini?
+    - Berapa kali saya hadir ke kantor pada bulan ini saja?
+    - Kehadiran saya di bulan ini ke kantor ada berapa kali?
+    - Total kehadiran saya ke kantor bulan ini berapa kali?
+    - Total kehadiran saya bulan ini berapa kali?
+    - Jumlah kehadiran saya di bulan ini sudah ada berapa?
+    - Berapa kali saya masuk bulan ini?
+    - Info dong, kehadiran saya bulan ini totalnya berapa kali?
+    - Bisa bantu cek berapa total kehadiran saya bulan ini?
+    - Saya ingin tahu, sudah berapa kali saya hadir bulan ini?
+    - Berapa total hari saya hadir di bulan ini?
+    - Berapa kali saya datang ke kantor bulan ini?
+    - Total kehadiran saya bulan ini sudah berapa kali?
+    - Total kehadiran saya bulan ini tercatat berapa kali?
+    - Bisa cek total kehadiran saya bulan ini?
+    - Hitung dong kehadiran saya di bulan ini!
+    - Total kehadiran saya selama bulan ini berapa kali?
+    - Cek berapa kali saya hadir di bulan ini secara total!
 
-# - intent: check_attendance_this_month_raa_en
-#   examples: |
-#     - How many times have I attended this month?
-#     - How many times have I been present this month?
-#     - How many times have I recorded attendance this month?
-#     - This month, how many times have I attended?
-#     - Can you check how many times I've been present this month?
-#     - How many times is my attendance recorded this month?
-#     - How many times have I logged my attendance this month?
-#     - How many times have I gone to work this month?
-#     - How many times have I checked in at work this month?
-#     - Can you check how many times I've attended this month?
-#     - This month, how many times have I gone to the office?
-#     - Check my attendance count for this month.
-#     - How many times have I gone to the office this month?
-#     - How many times have I visited the office just this month?
-#     - How many times have I been recorded attending the office this month?
-#     - How many total office attendances have I recorded this month?
-#     - What is my total attendance count for this month?
-#     - How many attendances have I recorded this month so far?
-#     - How many times have I clocked in this month?
-#     - Can you give me info on my total attendance count for this month?
-#     - Can you help check my total attendance for this month?
-#     - I'd like to know how many times I've attended this month.
-#     - How many total days have I been present this month?
-#     - How many times have I gone to the office this month?
-#     - What's the total number of times I've attended this month?
-#     - How many total attendances have been recorded for me this month?
-#     - Can you check my total attendance for this month?
-#     - Count my attendance for this month!
-#     - How many times have I attended throughout this month?
-#     - Check the total number of attendances I've recorded this month!
+- intent: check_attendance_this_month_raa_en
+  examples: |
+    - How many times have I attended this month?
+    - How many times have I been present this month?
+    - How many times have I recorded attendance this month?
+    - This month, how many times have I attended?
+    - Can you check how many times I've been present this month?
+    - How many times is my attendance recorded this month?
+    - How many times have I logged my attendance this month?
+    - How many times have I gone to work this month?
+    - How many times have I checked in at work this month?
+    - Can you check how many times I've attended this month?
+    - This month, how many times have I gone to the office?
+    - Check my attendance count for this month.
+    - How many times have I gone to the office this month?
+    - How many times have I visited the office just this month?
+    - How many times have I been recorded attending the office this month?
+    - How many total office attendances have I recorded this month?
+    - What is my total attendance count for this month?
+    - How many attendances have I recorded this month so far?
+    - How many times have I clocked in this month?
+    - Can you give me info on my total attendance count for this month?
+    - Can you help check my total attendance for this month?
+    - I'd like to know how many times I've attended this month.
+    - How many total days have I been present this month?
+    - How many times have I gone to the office this month?
+    - What's the total number of times I've attended this month?
+    - How many total attendances have been recorded for me this month?
+    - Can you check my total attendance for this month?
+    - Count my attendance for this month!
+    - How many times have I attended throughout this month?
+    - Check the total number of attendances I've recorded this month!
 
-# - intent: check_attendance_last_month_raa_id
-#   examples: |
-#     - Berapa total kehadiran saya bulan lalu?
-#     - Saya ingin tahu jumlah kehadiran saya bulan lalu
-#     - Kehadiran saya di bulan lalu tercatat berapa kali?
-#     - Bisa cek berapa kali saya masuk bulan lalu?
-#     - Jumlah kehadiran saya bulan lalu ada berapa?
-#     - Saya hadir di bulan lalu berapa kali ya?
-#     - Bulan lalu saya datang ke kantor berapa kali?
-#     - Ada berapa kali saya hadir bulan lalu?
-#     - Total kehadiran saya bulan lalu, berapa ya?
-#     - Ke kantor bulan lalu saya hadir berapa kali?
-#     - Bagaimana total kehadiran saya bulan lalu?
-#     - Bulan lalu saya masuk berapa kali?
-#     - Berapa kali saya hadir bulan lalu, ya?
-#     - Cek total kehadiran saya di bulan lalu.
-#     - Saya hadir berapa kali saja bulan lalu?
-#     - Kehadiran saya bulan lalu berapa kali ya?
-#     - Boleh cek jumlah kehadiran saya bulan lalu?
-#     - Jumlah hari kehadiran saya bulan lalu berapa ya?
-#     - Bisa kasih tahu berapa kali saya hadir bulan lalu?
-#     - Total kehadiran saya bulan lalu tercatat berapa kali?
-#     - Berapa kali saya datang ke kantor bulan lalu?
-#     - Berapa kali saya hadir ke kantor pada bulan lalu?
-#     - Cek berapa kali saya hadir bulan lalu secara total
+- intent: check_attendance_last_month_raa_id
+  examples: |
+    - Berapa total kehadiran saya bulan lalu?
+    - Saya ingin tahu jumlah kehadiran saya bulan lalu
+    - Kehadiran saya di bulan lalu tercatat berapa kali?
+    - Bisa cek berapa kali saya masuk bulan lalu?
+    - Jumlah kehadiran saya bulan lalu ada berapa?
+    - Saya hadir di bulan lalu berapa kali ya?
+    - Bulan lalu saya datang ke kantor berapa kali?
+    - Ada berapa kali saya hadir bulan lalu?
+    - Total kehadiran saya bulan lalu, berapa ya?
+    - Ke kantor bulan lalu saya hadir berapa kali?
+    - Bagaimana total kehadiran saya bulan lalu?
+    - Bulan lalu saya masuk berapa kali?
+    - Berapa kali saya hadir bulan lalu, ya?
+    - Cek total kehadiran saya di bulan lalu.
+    - Saya hadir berapa kali saja bulan lalu?
+    - Kehadiran saya bulan lalu berapa kali ya?
+    - Boleh cek jumlah kehadiran saya bulan lalu?
+    - Jumlah hari kehadiran saya bulan lalu berapa ya?
+    - Bisa kasih tahu berapa kali saya hadir bulan lalu?
+    - Total kehadiran saya bulan lalu tercatat berapa kali?
+    - Berapa kali saya datang ke kantor bulan lalu?
+    - Berapa kali saya hadir ke kantor pada bulan lalu?
+    - Cek berapa kali saya hadir bulan lalu secara total
 
-# - intent: check_attendance_last_month_raa_en
-#   examples: |
-#     - What was my total attendance last month?
-#     - I'd like to know how many times I attended last month
-#     - How many times was my attendance recorded last month?
-#     - Can you check how many times I entered last month?
-#     - What is the number of times I attended last month?
-#     - How many times did I go to the office last month?
-#     - What's my total attendance last month?
-#     - How many times did I go to work last month?
-#     - How many times did I attend last month?
-#     - Can you check my attendance count for last month?
-#     - How many days did I attend last month?
-#     - Can you tell me how many times I attended last month?
-#     - What is my total attendance for last month?
-#     - How many times did I attend the office last month?
-#     - Check my total attendance for last month.
-#     - How many times did I attend last month in total?
+- intent: check_attendance_last_month_raa_en
+  examples: |
+    - What was my total attendance last month?
+    - I'd like to know how many times I attended last month
+    - How many times was my attendance recorded last month?
+    - Can you check how many times I entered last month?
+    - What is the number of times I attended last month?
+    - How many times did I go to the office last month?
+    - What's my total attendance last month?
+    - How many times did I go to work last month?
+    - How many times did I attend last month?
+    - Can you check my attendance count for last month?
+    - How many days did I attend last month?
+    - Can you tell me how many times I attended last month?
+    - What is my total attendance for last month?
+    - How many times did I attend the office last month?
+    - Check my total attendance for last month.
+    - How many times did I attend last month in total?
 
-# - intent: check_madhani_sites_projects_raa_id
-#   examples: |
-#     - project site madhani?
-#     - apa saja project site yang ada di Madhani?
-#     - project site madhani ada apa aja?
-#     - bisa jelaskan project site yang dikelola oleh Madhani?
-#     - apa saja proyek yang dikerjakan oleh Madhani di site-site mereka?
-#     - sebutkan semua site project yang ada di Madhani!
-#     - project site Madhani ada apa saja?
-#     - madhani mengelola site-project apa saja?
-#     - proyek yang sedang berjalan di site Madhani itu apa saja?
-#     - daftar project site yang ada di Madhani.
-#     - apa saja proyek site yang sedang dilakukan oleh Madhani?
-#     - bisa kasih tahu project site apa saja yang dimiliki oleh Madhani?
-#     - saya ingin tahu project site apa saja yang sedang ada di Madhani?
-#     - site-site yang dikelola oleh Madhani itu apa saja?
-#     - proyek di site Madhani yang sedang aktif itu apa saja?
-#     - bisa sebutkan nama-nama site project yang ada di Madhani?
-#     - tolong beri informasi mengenai total project site Madhani.
-#     - apa saja site project yang sedang dihandle oleh Madhani?
-#     - site-project Madhani apa saja yang sedang berjalan?
-#     - bisakah Anda memberikan rincian tentang proyek site yang ada di Madhani?
-#     - sebutkan beberapa project site yang ada di Madhani saat ini!
-#     - ada berapa project site Madhani?
-#     - berapa banyak site project yang dikelola oleh Madhani?
-#     - madhani memiliki berapa banyak project site?
-#     - ada berapa banyak site project yang sedang dikelola oleh Madhani?
-#     - madhani mengelola berapa banyak site project?
-#     - ada berapa project site yang sedang dijalankan oleh Madhani?
-#     - berapa total project site yang dimiliki oleh Madhani?
-#     - bisa beri tahu saya berapa banyak site project yang dimiliki oleh Madhani?
-#     - berapa banyak site yang sedang dikelola oleh Madhani?
-#     - madhani saat ini mengelola berapa banyak project site?
-#     - saat ini project madhani ada berapa total nya?
-#     - project site madhani saat ini total ada berapa?
-#     - total project site Madhani
-#     - apa saja project site madhani
+- intent: check_madhani_sites_projects_raa_id
+  examples: |
+    - project site madhani?
+    - apa saja project site yang ada di Madhani?
+    - project site madhani ada apa aja?
+    - bisa jelaskan project site yang dikelola oleh Madhani?
+    - apa saja proyek yang dikerjakan oleh Madhani di site-site mereka?
+    - sebutkan semua site project yang ada di Madhani!
+    - project site Madhani ada apa saja?
+    - madhani mengelola site-project apa saja?
+    - proyek yang sedang berjalan di site Madhani itu apa saja?
+    - daftar project site yang ada di Madhani.
+    - apa saja proyek site yang sedang dilakukan oleh Madhani?
+    - bisa kasih tahu project site apa saja yang dimiliki oleh Madhani?
+    - saya ingin tahu project site apa saja yang sedang ada di Madhani?
+    - site-site yang dikelola oleh Madhani itu apa saja?
+    - proyek di site Madhani yang sedang aktif itu apa saja?
+    - bisa sebutkan nama-nama site project yang ada di Madhani?
+    - tolong beri informasi mengenai total project site Madhani.
+    - apa saja site project yang sedang dihandle oleh Madhani?
+    - site-project Madhani apa saja yang sedang berjalan?
+    - bisakah Anda memberikan rincian tentang proyek site yang ada di Madhani?
+    - sebutkan beberapa project site yang ada di Madhani saat ini!
+    - ada berapa project site Madhani?
+    - berapa banyak site project yang dikelola oleh Madhani?
+    - madhani memiliki berapa banyak project site?
+    - ada berapa banyak site project yang sedang dikelola oleh Madhani?
+    - madhani mengelola berapa banyak site project?
+    - ada berapa project site yang sedang dijalankan oleh Madhani?
+    - berapa total project site yang dimiliki oleh Madhani?
+    - bisa beri tahu saya berapa banyak site project yang dimiliki oleh Madhani?
+    - berapa banyak site yang sedang dikelola oleh Madhani?
+    - madhani saat ini mengelola berapa banyak project site?
+    - saat ini project madhani ada berapa total nya?
+    - project site madhani saat ini total ada berapa?
+    - total project site Madhani
+    - apa saja project site madhani
 
-# - intent: check_madhani_sites_projects_raa_en
-#   examples: |
-#     - project sites madhani?
-#     - What project sites are there at Madhani?
-#     - What project sites does Madhani have?
-#     - Can you explain the project sites managed by Madhani?
-#     - What projects are being worked on by Madhani at their sites?
-#     - List all the project sites at Madhani!
-#     - What are the project sites of Madhani?
-#     - What site projects are managed by Madhani?
-#     - What projects are currently ongoing at Madhani's sites?
-#     - List the project sites available at Madhani.
-#     - What project sites are currently being handled by Madhani?
-#     - Can you tell me which project sites Madhani owns?
-#     - I want to know what project sites are currently at Madhani.
-#     - What sites are managed by Madhani?
-#     - What active projects are there at Madhani's sites?
-#     - Can you name the project sites at Madhani?
-#     - Please provide information about the total project sites of Madhani.
-#     - What project sites is Madhani currently handling?
-#     - What site projects are currently running at Madhani?
-#     - Could you give details about the project sites at Madhani?
-#     - Name some of the project sites currently at Madhani!
-#     - How many project sites does Madhani have?
-#     - How many project sites are managed by Madhani?
-#     - How many project sites does Madhani currently have?
-#     - How many site projects are currently managed by Madhani?
-#     - How many site projects does Madhani manage?
-#     - How many project sites are currently being operated by Madhani?
-#     - What is the total number of project sites Madhani owns?
-#     - Can you tell me how many site projects Madhani has?
-#     - How many sites are currently managed by Madhani?
-#     - How many project sites is Madhani currently managing?
-#     - How many total projects does Madhani have at the moment?
-#     - What is the total number of Madhani's project sites right now?
-#     - Total number of project sites of Madhani.
-#     - What are Madhani's project sites?
+- intent: check_madhani_sites_projects_raa_en
+  examples: |
+    - project sites madhani?
+    - What project sites are there at Madhani?
+    - What project sites does Madhani have?
+    - Can you explain the project sites managed by Madhani?
+    - What projects are being worked on by Madhani at their sites?
+    - List all the project sites at Madhani!
+    - What are the project sites of Madhani?
+    - What site projects are managed by Madhani?
+    - What projects are currently ongoing at Madhani's sites?
+    - List the project sites available at Madhani.
+    - What project sites are currently being handled by Madhani?
+    - Can you tell me which project sites Madhani owns?
+    - I want to know what project sites are currently at Madhani.
+    - What sites are managed by Madhani?
+    - What active projects are there at Madhani's sites?
+    - Can you name the project sites at Madhani?
+    - Please provide information about the total project sites of Madhani.
+    - What project sites is Madhani currently handling?
+    - What site projects are currently running at Madhani?
+    - Could you give details about the project sites at Madhani?
+    - Name some of the project sites currently at Madhani!
+    - How many project sites does Madhani have?
+    - How many project sites are managed by Madhani?
+    - How many project sites does Madhani currently have?
+    - How many site projects are currently managed by Madhani?
+    - How many site projects does Madhani manage?
+    - How many project sites are currently being operated by Madhani?
+    - What is the total number of project sites Madhani owns?
+    - Can you tell me how many site projects Madhani has?
+    - How many sites are currently managed by Madhani?
+    - How many project sites is Madhani currently managing?
+    - How many total projects does Madhani have at the moment?
+    - What is the total number of Madhani's project sites right now?
+    - Total number of project sites of Madhani.
+    - What are Madhani's project sites?
 
-# - intent: ask_user_role_raa_id
-#   examples: |
-#     - Apa role saya di aplikasi ini?
-#     - Saya punya role apa di aplikasi ini?
-#     - Peran saya apa di aplikasi ini?
-#     - Apa peran saya dalam aplikasi?
-#     - Role saya apa?
-#     - Tolong beri tahu role saya di aplikasi ini.
-#     - Bisa cek role saya?
-#     - Role saya itu apa ya?
-#     - Saya didaftarkan sebagai apa di aplikasi ini?
-#     - Apa peran saya di sini?
-#     - Role saya di sistem ini apa?
-#     - Bisakah Anda memberitahu role saya?
-#     - Role saya terdaftar sebagai apa?
-#     - Saya terdaftar sebagai apa di sistem ini?
-#     - Saya ingin tahu role saya di aplikasi ini.
-#     - Apa peran saya yang tercatat di aplikasi ini?
-#     - Sebagai apa saya terdaftar di aplikasi ini?
-#     - Tolong berikan informasi tentang role saya.
-#     - Apa jabatan saya di sistem ini?
-#     - Saya saat ini memiliki role apa di aplikasi ini?
-#     - Peran saya di aplikasi ini apa saja?
-#     - Saya ingin mengetahui role saya di sini.
-#     - Apa role yang diberikan kepada saya di aplikasi ini?
-#     - Jabatan saya di sistem ini apa ya?
-#     - Role saya di sistem ini apa ya?
-#     - Bisa beri tahu saya tentang role saya di aplikasi ini?
-#     - Apa yang terdaftar sebagai role saya di aplikasi ini?
+- intent: ask_user_role_raa_id
+  examples: |
+    - Apa role saya di aplikasi ini?
+    - Saya punya role apa di aplikasi ini?
+    - Peran saya apa di aplikasi ini?
+    - Apa peran saya dalam aplikasi?
+    - Role saya apa?
+    - Tolong beri tahu role saya di aplikasi ini.
+    - Bisa cek role saya?
+    - Role saya itu apa ya?
+    - Saya didaftarkan sebagai apa di aplikasi ini?
+    - Apa peran saya di sini?
+    - Role saya di sistem ini apa?
+    - Bisakah Anda memberitahu role saya?
+    - Role saya terdaftar sebagai apa?
+    - Saya terdaftar sebagai apa di sistem ini?
+    - Saya ingin tahu role saya di aplikasi ini.
+    - Apa peran saya yang tercatat di aplikasi ini?
+    - Sebagai apa saya terdaftar di aplikasi ini?
+    - Tolong berikan informasi tentang role saya.
+    - Apa jabatan saya di sistem ini?
+    - Saya saat ini memiliki role apa di aplikasi ini?
+    - Peran saya di aplikasi ini apa saja?
+    - Saya ingin mengetahui role saya di sini.
+    - Apa role yang diberikan kepada saya di aplikasi ini?
+    - Jabatan saya di sistem ini apa ya?
+    - Role saya di sistem ini apa ya?
+    - Bisa beri tahu saya tentang role saya di aplikasi ini?
+    - Apa yang terdaftar sebagai role saya di aplikasi ini?
 
-# - intent: ask_user_role_raa_en
-#   examples: |
-#     - What is my role in this application?
-#     - What role do I have in this application?
-#     - What is my role in the app?
-#     - What role am I registered with in this application?
-#     - Please tell me my role in this application.
-#     - Can you check my role?
-#     - What is my role?
-#     - What is my role here?
-#     - Can you tell me my role?
-#     - What is my registered role?
-#     - What am I listed as in this system?
-#     - I want to know my role in this application.
-#     - What is my recorded role in this application?
-#     - What am I registered as in this application?
-#     - Please provide information about my role.
-#     - What is my designation in this system?
-#     - What role do I currently have in this application?
-#     - What are my roles in this application?
-#     - I want to know my role here.
-#     - What role has been assigned to me in this application?
-#     - What is my role in this system?
-#     - Can you tell me about my role in this application?
-#     - What is registered as my role in this application?
+- intent: ask_user_role_raa_en
+  examples: |
+    - What is my role in this application?
+    - What role do I have in this application?
+    - What is my role in the app?
+    - What role am I registered with in this application?
+    - Please tell me my role in this application.
+    - Can you check my role?
+    - What is my role?
+    - What is my role here?
+    - Can you tell me my role?
+    - What is my registered role?
+    - What am I listed as in this system?
+    - I want to know my role in this application.
+    - What is my recorded role in this application?
+    - What am I registered as in this application?
+    - Please provide information about my role.
+    - What is my designation in this system?
+    - What role do I currently have in this application?
+    - What are my roles in this application?
+    - I want to know my role here.
+    - What role has been assigned to me in this application?
+    - What is my role in this system?
+    - Can you tell me about my role in this application?
+    - What is registered as my role in this application?
 
-# - intent: ask_user_department_raa_id
-#   examples: |
-#     - Saya terdaftar di departement apa?
-#     - departement saya apa?
-#     - Saya bekerja di departement mana?
-#     - Tolong cek saya di departement apa?
-#     - Apa nama departement tempat saya terdaftar?
-#     - Bisakah Anda memberitahu departement saya?
-#     - Saya termasuk di departement apa?
-#     - Apa departement saya di sistem ini?
-#     - Saya berada di departement mana?
-#     - Apa departement saya yang tercatat di aplikasi ini?
-#     - departement saya di aplikasi ini apa?
-#     - Saya ditempatkan di departement apa?
-#     - Saya ingin tahu departement saya.
-#     - Bisakah Anda beri tahu departement saya?
-#     - departement saya itu apa?
-#     - Bisa cek saya terdaftar di departement apa?
-#     - Tolong informasikan departement saya di aplikasi ini
-#     - departement mana tempat saya bekerja?
-#     - Apakah Anda tahu saya berada di departement apa?
-#     - Saya ingin tahu saya masuk ke departement mana?
-#     - departement saya itu tercatat sebagai apa?
-#     - Bisa tolong beri tahu departement saya?
-#     - Apa departement saya di sistem ini?
-#     - Saya ingin tahu departement saya yang terdaftar
-#     - Di departement mana saya bekerja?
-#     - Tolong beri tahu saya, departement apa tempat saya terdaftar?
-#     - Apa departement kerja saya?
-#     - Apa unit kerja saya di sistem?
-#     - Bisa beri tahu saya departement apa tempat saya?
+- intent: ask_user_department_raa_id
+  examples: |
+    - Saya terdaftar di departement apa?
+    - departement saya apa?
+    - Saya bekerja di departement mana?
+    - Tolong cek saya di departement apa?
+    - Apa nama departement tempat saya terdaftar?
+    - Bisakah Anda memberitahu departement saya?
+    - Saya termasuk di departement apa?
+    - Apa departement saya di sistem ini?
+    - Saya berada di departement mana?
+    - Apa departement saya yang tercatat di aplikasi ini?
+    - departement saya di aplikasi ini apa?
+    - Saya ditempatkan di departement apa?
+    - Saya ingin tahu departement saya.
+    - Bisakah Anda beri tahu departement saya?
+    - departement saya itu apa?
+    - Bisa cek saya terdaftar di departement apa?
+    - Tolong informasikan departement saya di aplikasi ini
+    - departement mana tempat saya bekerja?
+    - Apakah Anda tahu saya berada di departement apa?
+    - Saya ingin tahu saya masuk ke departement mana?
+    - departement saya itu tercatat sebagai apa?
+    - Bisa tolong beri tahu departement saya?
+    - Apa departement saya di sistem ini?
+    - Saya ingin tahu departement saya yang terdaftar
+    - Di departement mana saya bekerja?
+    - Tolong beri tahu saya, departement apa tempat saya terdaftar?
+    - Apa departement kerja saya?
+    - Apa unit kerja saya di sistem?
+    - Bisa beri tahu saya departement apa tempat saya?
 
-# - intent: ask_user_department_raa_en
-#   examples: |
-#     - What department am I registered in?
-#     - Please check what department I am in.
-#     - What is the name of the department where I am registered?
-#     - What department am I included in?
-#     - Which department am I in?
-#     - What is my recorded department in this application?
-#     - What is my department in this application?
-#     - Which department am I placed in?
-#     - I want to know my department.
-#     - What is my department?
-#     - Can you check which department I am registered in?
-#     - Please provide information about my department in this application.
-#     - Which department do I work in?
-#     - Do you know which department I belong to?
-#     - I want to know which department I am in.
-#     - What is my recorded department?
-#     - Can you tell me my department?
-#     - What is my department in this system?
-#     - I want to know my registered department.
-#     - Which department am I working in?
-#     - Please let me know the department where I am registered.
-#     - What is my work department?
-#     - What is my work unit in the system?
-#     - Can you tell me which department I belong to?
+- intent: ask_user_department_raa_en
+  examples: |
+    - What department am I registered in?
+    - Please check what department I am in.
+    - What is the name of the department where I am registered?
+    - What department am I included in?
+    - Which department am I in?
+    - What is my recorded department in this application?
+    - What is my department in this application?
+    - Which department am I placed in?
+    - I want to know my department.
+    - What is my department?
+    - Can you check which department I am registered in?
+    - Please provide information about my department in this application.
+    - Which department do I work in?
+    - Do you know which department I belong to?
+    - I want to know which department I am in.
+    - What is my recorded department?
+    - Can you tell me my department?
+    - What is my department in this system?
+    - I want to know my registered department.
+    - Which department am I working in?
+    - Please let me know the department where I am registered.
+    - What is my work department?
+    - What is my work unit in the system?
+    - Can you tell me which department I belong to?
 
-# - intent: ask_user_position_raa_id
-#   examples: |
-#     - Saya terdaftar di posisi apa?
-#     - Posisi saya apa?
-#     - Saya bekerja di posisi apa?
-#     - Apa nama posisi saya?
-#     - Bisakah Anda memberitahu posisi saya?
-#     - Saya termasuk di posisi apa?
-#     - Apa posisi saya di aplikasi ini?
-#     - Saya berada di posisi mana?
-#     - Apa posisi saya yang tercatat di sistem ini?
-#     - Posisi saya di aplikasi ini apa?
-#     - Saya ditempatkan di posisi apa?
-#     - Saya ingin tahu posisi saya.
-#     - Posisi saya itu apa?
-#     - Bisa cek saya terdaftar di posisi apa?
-#     - Posisi mana yang mencatat saya?
-#     - Tolong informasikan posisi saya di aplikasi ini
-#     - Posisi mana tempat saya bekerja?
-#     - Apa posisi kerja saya?
-#     - Apa peran posisi saya di sistem?
-#     - Bisa beri tahu saya posisi saya?
-#     - Apa posisi saya di sistem ini?
+- intent: ask_user_position_raa_id
+  examples: |
+    - Saya terdaftar di posisi apa?
+    - Posisi saya apa?
+    - Saya bekerja di posisi apa?
+    - Apa nama posisi saya?
+    - Bisakah Anda memberitahu posisi saya?
+    - Saya termasuk di posisi apa?
+    - Apa posisi saya di aplikasi ini?
+    - Saya berada di posisi mana?
+    - Apa posisi saya yang tercatat di sistem ini?
+    - Posisi saya di aplikasi ini apa?
+    - Saya ditempatkan di posisi apa?
+    - Saya ingin tahu posisi saya.
+    - Posisi saya itu apa?
+    - Bisa cek saya terdaftar di posisi apa?
+    - Posisi mana yang mencatat saya?
+    - Tolong informasikan posisi saya di aplikasi ini
+    - Posisi mana tempat saya bekerja?
+    - Apa posisi kerja saya?
+    - Apa peran posisi saya di sistem?
+    - Bisa beri tahu saya posisi saya?
+    - Apa posisi saya di sistem ini?
 
-# - intent: ask_user_position_raa_en
-#   examples: |
-#     - What position am I registered in?
-#     - What position am I working in?
-#     - What is the name of my position?
-#     - What position am I included in?
-#     - What position am I in?
-#     - What is my recorded position in this system?
-#     - What is my position in this application?
-#     - What position am I placed in?
-#     - I want to know my position.
-#     - What is my position?
-#     - Can you check what position I am registered in?
-#     - Which position am I recorded in?
-#     - Please provide information about my position in this application.
-#     - Which position do I work in?
-#     - What is my job position?
-#     - What is my role position in the system?
-#     - Can you tell me my position?
-#     - What is my position in this system?
+- intent: ask_user_position_raa_en
+  examples: |
+    - What position am I registered in?
+    - What position am I working in?
+    - What is the name of my position?
+    - What position am I included in?
+    - What position am I in?
+    - What is my recorded position in this system?
+    - What is my position in this application?
+    - What position am I placed in?
+    - I want to know my position.
+    - What is my position?
+    - Can you check what position I am registered in?
+    - Which position am I recorded in?
+    - Please provide information about my position in this application.
+    - Which position do I work in?
+    - What is my job position?
+    - What is my role position in the system?
+    - Can you tell me my position?
+    - What is my position in this system?
 
-# - intent: ask_user_assigned_project_site_raa_id
-#   examples: |
-#     - Saya ditugaskan di project site mana?
-#     - Project site saya apa?
-#     - Saya bekerja di site mana?
-#     - Apa nama project site saya?
-#     - Saya termasuk di project site apa?
-#     - Dimana lokasi project site saya?
-#     - Tolong beri tahu saya ditugaskan di project site mana.
-#     - Apa nama site tempat saya bekerja?
-#     - Saya berada di project site mana?
-#     - Bisa cek saya ditugaskan di project site mana?
-#     - Dimana saya terdaftar sebagai pekerja?
-#     - Apa nama lokasi kerja saya?
-#     - Lokasi kerja saya apa?
-#     - Project saya di site mana?
-#     - Tolong informasikan lokasi project saya
-#     - Saya ingin tahu project site saya
-#     - Saya terdaftar di site mana?
-#     - Dimana saya bekerja saat ini?
-#     - Dimana lokasi project site saya terdaftar?
-#     - Lokasi kerja yang tercatat untuk saya apa?
-#     - Lokasi project site yang tercatat untuk saya apa?
-#     - Lokasi project site saya bekerja apa?
+- intent: ask_user_assigned_project_site_raa_id
+  examples: |
+    - Saya ditugaskan di project site mana?
+    - Project site saya apa?
+    - Saya bekerja di site mana?
+    - Apa nama project site saya?
+    - Saya termasuk di project site apa?
+    - Dimana lokasi project site saya?
+    - Tolong beri tahu saya ditugaskan di project site mana.
+    - Apa nama site tempat saya bekerja?
+    - Saya berada di project site mana?
+    - Bisa cek saya ditugaskan di project site mana?
+    - Dimana saya terdaftar sebagai pekerja?
+    - Apa nama lokasi kerja saya?
+    - Lokasi kerja saya apa?
+    - Project saya di site mana?
+    - Tolong informasikan lokasi project saya
+    - Saya ingin tahu project site saya
+    - Saya terdaftar di site mana?
+    - Dimana saya bekerja saat ini?
+    - Dimana lokasi project site saya terdaftar?
+    - Lokasi kerja yang tercatat untuk saya apa?
+    - Lokasi project site yang tercatat untuk saya apa?
+    - Lokasi project site saya bekerja apa?
 
-# - intent: ask_user_assigned_project_site_raa_en
-#   examples: |
-#     - Which project site am I assigned to?
-#     - What is my project site?
-#     - Which site am I working at?
-#     - What is the name of my project site?
-#     - What project site am I part of?
-#     - Please tell me which project site I am assigned to
-#     - What is the name of the site where I work?
-#     - Which project site am I part of?
-#     - Can you check which project site I am assigned to?
-#     - Where am I registered as a worker?
-#     - What is the name of my work location?
-#     - What is my work location?
-#     - Which site is my project at?
-#     - Please provide information about my project location
-#     - I want to know my project site
-#     - Which site am I registered at?
-#     - Where am I currently working?
-#     - Where is my project site located?
-#     - What is the recorded work location for me?
-#     - What is the recorded project site location for me?
-#     - What is the project site location where I work?
+- intent: ask_user_assigned_project_site_raa_en
+  examples: |
+    - Which project site am I assigned to?
+    - What is my project site?
+    - Which site am I working at?
+    - What is the name of my project site?
+    - What project site am I part of?
+    - Please tell me which project site I am assigned to
+    - What is the name of the site where I work?
+    - Which project site am I part of?
+    - Can you check which project site I am assigned to?
+    - Where am I registered as a worker?
+    - What is the name of my work location?
+    - What is my work location?
+    - Which site is my project at?
+    - Please provide information about my project location
+    - I want to know my project site
+    - Which site am I registered at?
+    - Where am I currently working?
+    - Where is my project site located?
+    - What is the recorded work location for me?
+    - What is the recorded project site location for me?
+    - What is the project site location where I work?
 
-# - intent: ask_registered_email_raa_id
-#   examples: |
-#     - Email apa yang terdaftar di akun saya?
-#     - Apa email saya yang terdaftar?
-#     - Bisa cek email yang terdaftar di akun saya?
-#     - Email yang digunakan untuk akun ini apa?
-#     - Apa alamat email saya di sistem?
-#     - Email saya yang tercatat di aplikasi ini apa?
-#     - Email saya apa?
-#     - Tolong beritahu saya email yang terdaftar di akun saya
-#     - Apa email saya yang terhubung dengan aplikasi ini?
-#     - Akun saya menggunakan email apa?
-#     - Bisa informasikan email saya yang ada di aplikasi ini?
-#     - Email yang terdaftar di akun saya apa?
-#     - Tolong cek email saya yang ada di akun ini
-#     - Email yang terhubung dengan akun saya apa?
-#     - Bisa beri tahu saya alamat email di akun ini?
-#     - Email saya di aplikasi ini apa?
-#     - Saya ingin tahu email yang terdaftar di akun saya
-#     - Bisa kasih tahu alamat email saya yang tercatat?
-#     - Email yang terhubung ke akun saya apa?
-#     - Email yang saya gunakan di akun ini apa?
-#     - Cek email saya yang ada di sistem
-#     - Tolong cekkan email saya yang tercatat di aplikasi
-#     - Email akun saya apa?
-#     - Email saya di akun ini tercatat sebagai apa?
-#     - Bisa kasih tahu email saya yang ada di sistem ini?
-#     - Beritahu saya email saya yang terdaftar di aplikasi.
-#     - Informasikan alamat email saya yang digunakan di sistem ini.
-#     - Email yang ada di akun saya apa ya?
-#     - Tolong beri informasi tentang email yang saya gunakan di aplikasi.
-#     - Akun saya memakai alamat email apa?
-#     - Tolong beritahu saya email saya yang terdaftar
+- intent: ask_registered_email_raa_id
+  examples: |
+    - Email apa yang terdaftar di akun saya?
+    - Apa email saya yang terdaftar?
+    - Bisa cek email yang terdaftar di akun saya?
+    - Email yang digunakan untuk akun ini apa?
+    - Apa alamat email saya di sistem?
+    - Email saya yang tercatat di aplikasi ini apa?
+    - Email saya apa?
+    - Tolong beritahu saya email yang terdaftar di akun saya
+    - Apa email saya yang terhubung dengan aplikasi ini?
+    - Akun saya menggunakan email apa?
+    - Bisa informasikan email saya yang ada di aplikasi ini?
+    - Email yang terdaftar di akun saya apa?
+    - Tolong cek email saya yang ada di akun ini
+    - Email yang terhubung dengan akun saya apa?
+    - Bisa beri tahu saya alamat email di akun ini?
+    - Email saya di aplikasi ini apa?
+    - Saya ingin tahu email yang terdaftar di akun saya
+    - Bisa kasih tahu alamat email saya yang tercatat?
+    - Email yang terhubung ke akun saya apa?
+    - Email yang saya gunakan di akun ini apa?
+    - Cek email saya yang ada di sistem
+    - Tolong cekkan email saya yang tercatat di aplikasi
+    - Email akun saya apa?
+    - Email saya di akun ini tercatat sebagai apa?
+    - Bisa kasih tahu email saya yang ada di sistem ini?
+    - Beritahu saya email saya yang terdaftar di aplikasi.
+    - Informasikan alamat email saya yang digunakan di sistem ini.
+    - Email yang ada di akun saya apa ya?
+    - Tolong beri informasi tentang email yang saya gunakan di aplikasi.
+    - Akun saya memakai alamat email apa?
+    - Tolong beritahu saya email saya yang terdaftar
 
-# - intent: ask_registered_email_raa_en
-#   examples: |
-#     - What is my registered email?
-#     - Can you check the email registered to my account?
-#     - What email is used for this account?
-#     - What is my email address in the system?
-#     - What is my email recorded in this application?
-#     - What is my email?
-#     - Please tell me the email registered to my account
-#     - What is my email connected to this application?
-#     - What email does my account use?
-#     - Can you provide the email I have in this application?
-#     - What email is registered to my account?
-#     - Please check the email associated with my account
-#     - What email is connected to my account?
-#     - Can you tell me the email address for this account?
-#     - What is my email in this application?
-#     - I want to know the email registered to my account
-#     - Can you tell me the email address I have recorded?
-#     - What email is linked to my account?
-#     - What email am I using for this account?
-#     - Check the email I have in the system
-#     - Please check the email recorded in the application
-#     - What is my account email?
-#     - What email is recorded in my account?
-#     - Can you tell me the email I have in this system?
-#     - Tell me the email registered to my application
-#     - Provide information about the email I use in the system
-#     - What email is associated with my account?
-#     - What email am I using in this application?
-#     - Please provide details about the email I use in the app
-#     - What email is my account linked to?
-#     - What is the email registered to my account?
-#     - Please tell me my registered email
+- intent: ask_registered_email_raa_en
+  examples: |
+    - What is my registered email?
+    - Can you check the email registered to my account?
+    - What email is used for this account?
+    - What is my email address in the system?
+    - What is my email recorded in this application?
+    - What is my email?
+    - Please tell me the email registered to my account
+    - What is my email connected to this application?
+    - What email does my account use?
+    - Can you provide the email I have in this application?
+    - What email is registered to my account?
+    - Please check the email associated with my account
+    - What email is connected to my account?
+    - Can you tell me the email address for this account?
+    - What is my email in this application?
+    - I want to know the email registered to my account
+    - Can you tell me the email address I have recorded?
+    - What email is linked to my account?
+    - What email am I using for this account?
+    - Check the email I have in the system
+    - Please check the email recorded in the application
+    - What is my account email?
+    - What email is recorded in my account?
+    - Can you tell me the email I have in this system?
+    - Tell me the email registered to my application
+    - Provide information about the email I use in the system
+    - What email is associated with my account?
+    - What email am I using in this application?
+    - Please provide details about the email I use in the app
+    - What email is my account linked to?
+    - What is the email registered to my account?
+    - Please tell me my registered email
 
-# - intent: ask_registered_phone_raa_id
-#   examples: |
-#     - Nomor HP apa yang terdaftar di akun saya?
-#     - Nomor telepon saya yang tercatat di aplikasi apa?
-#     - Apa nomor HP yang saya gunakan untuk akun ini?
-#     - Bisa cek nomor telepon yang terdaftar di akun saya?
-#     - Nomor saya yang terhubung ke aplikasi ini apa?
-#     - Nomor WhatsApp saya yang terdaftar di sistem apa?
-#     - Nomor HP yang ada di akun saya apa?
-#     - Apa nomor WhatsApp saya di aplikasi ini?
-#     - Tolong beri tahu saya nomor telepon saya di aplikasi
-#     - Tolong beri tahu saya nomor whatsapp saya di aplikasi
-#     - Nomor HP saya di sistem ini apa ya?
-#     - Bisa kasih tahu nomor WhatsApp saya yang tercatat?
-#     - Apa nomor telepon saya yang terhubung ke akun ini?
-#     - Saya ingin tahu nomor WhatsApp saya di aplikasi ini
-#     - Apa nomor HP yang tercatat di akun saya?
-#     - Apa nomor WhatsApp saya yang digunakan untuk akun ini?
-#     - Nomor saya yang ada di aplikasi ini apa?
-#     - Nomor HP yang tercatat untuk akun ini apa?
-#     - Nomor WhatsApp yang tercatat untuk akun ini apa?
-#     - Tolong cekkan nomor WhatsApp saya yang ada di akun.
-#     - Akun saya menggunakan nomor telepon apa?
-#     - Nomor telepon yang saya daftarkan di aplikasi apa?
-#     - Tolong beri tahu saya nomor telepon saya
+- intent: ask_registered_phone_raa_id
+  examples: |
+    - Nomor HP apa yang terdaftar di akun saya?
+    - Nomor telepon saya yang tercatat di aplikasi apa?
+    - Apa nomor HP yang saya gunakan untuk akun ini?
+    - Bisa cek nomor telepon yang terdaftar di akun saya?
+    - Nomor saya yang terhubung ke aplikasi ini apa?
+    - Nomor WhatsApp saya yang terdaftar di sistem apa?
+    - Nomor HP yang ada di akun saya apa?
+    - Apa nomor WhatsApp saya di aplikasi ini?
+    - Tolong beri tahu saya nomor telepon saya di aplikasi
+    - Tolong beri tahu saya nomor whatsapp saya di aplikasi
+    - Nomor HP saya di sistem ini apa ya?
+    - Bisa kasih tahu nomor WhatsApp saya yang tercatat?
+    - Apa nomor telepon saya yang terhubung ke akun ini?
+    - Saya ingin tahu nomor WhatsApp saya di aplikasi ini
+    - Apa nomor HP yang tercatat di akun saya?
+    - Apa nomor WhatsApp saya yang digunakan untuk akun ini?
+    - Nomor saya yang ada di aplikasi ini apa?
+    - Nomor HP yang tercatat untuk akun ini apa?
+    - Nomor WhatsApp yang tercatat untuk akun ini apa?
+    - Tolong cekkan nomor WhatsApp saya yang ada di akun.
+    - Akun saya menggunakan nomor telepon apa?
+    - Nomor telepon yang saya daftarkan di aplikasi apa?
+    - Tolong beri tahu saya nomor telepon saya
 
-# - intent: ask_registered_phone_raa_en
-#   examples: |
-#     - Please tell me my phone number
-#     - What phone number is registered to my account?
-#     - What is my phone number recorded in the application?
-#     - What phone number am I using for this account?
-#     - Can you check the phone number registered to my account?
-#     - What is my number linked to this application?
-#     - What WhatsApp number is registered in the system?
-#     - What phone number is associated with my account?
-#     - What is my WhatsApp number in this application?
-#     - Please tell me my phone number in the application
-#     - Please tell me my WhatsApp number in the application
-#     - What is my phone number in this system?
-#     - Can you tell me the WhatsApp number recorded?
-#     - What phone number is linked to my account?
-#     - I want to know my WhatsApp number in this application
-#     - What is the phone number listed on my account?
-#     - What is my WhatsApp number used for this account?
-#     - What is my number in this application?
-#     - What is the phone number listed for this account?
-#     - What is the WhatsApp number listed for this account?
-#     - Please check the WhatsApp number on my account
-#     - What phone number is my account using?
-#     - What phone number did I register in the application?
+- intent: ask_registered_phone_raa_en
+  examples: |
+    - Please tell me my phone number
+    - What phone number is registered to my account?
+    - What is my phone number recorded in the application?
+    - What phone number am I using for this account?
+    - Can you check the phone number registered to my account?
+    - What is my number linked to this application?
+    - What WhatsApp number is registered in the system?
+    - What phone number is associated with my account?
+    - What is my WhatsApp number in this application?
+    - Please tell me my phone number in the application
+    - Please tell me my WhatsApp number in the application
+    - What is my phone number in this system?
+    - Can you tell me the WhatsApp number recorded?
+    - What phone number is linked to my account?
+    - I want to know my WhatsApp number in this application
+    - What is the phone number listed on my account?
+    - What is my WhatsApp number used for this account?
+    - What is my number in this application?
+    - What is the phone number listed for this account?
+    - What is the WhatsApp number listed for this account?
+    - Please check the WhatsApp number on my account
+    - What phone number is my account using?
+    - What phone number did I register in the application?
 
-# - intent: ask_date_of_hire_raa_id
-#   examples: |
-#     - Kapan saya mulai bekerja di perusahaan madhani?
-#     - Kapan saya mulai bekerja di perusahaan?
-#     - Kapan saya pertama kali masuk kerja di sini?
-#     - Tanggal mulai bekerja saya apa ya?
-#     - Saya mulai bekerja di perusahaan ini sejak kapan?
-#     - Saya mulai bekerja di perusahaan madhani sejak kapan?
-#     - Bisa beri tahu saya kapan saya mulai kerja di perusahaan ini?
-#     - Saya bekerja di sini mulai tanggal berapa?
-#     - Sejak kapan saya bekerja di perusahaan madhani?
-#     - Tanggal mulai kerja saya di perusahaan ini apa?
-#     - Kapan saya resmi bergabung di perusahaan madhani?
-#     - Bisa cek tanggal mulai kerja saya?
-#     - Tanggal pertama kerja saya di perusahaan apa?
-#     - Saya mulai di perusahaan madhani kapan ya?
-#     - Saya masuk kerja di perusahaan ini sejak kapan?
-#     - Kapan tanggal bergabung saya di perusahaan madhani?
-#     - Tolong beri tahu kapan saya mulai bekerja di madhani
-#     - Tolong beri tahu saya tanggal mulai kerja saya di madhani
-#     - Saya ingin tahu kapan saya bergabung dengan perusahaan madhani
+- intent: ask_date_of_hire_raa_id
+  examples: |
+    - Kapan saya mulai bekerja di perusahaan madhani?
+    - Kapan saya mulai bekerja di perusahaan?
+    - Kapan saya pertama kali masuk kerja di sini?
+    - Tanggal mulai bekerja saya apa ya?
+    - Saya mulai bekerja di perusahaan ini sejak kapan?
+    - Saya mulai bekerja di perusahaan madhani sejak kapan?
+    - Bisa beri tahu saya kapan saya mulai kerja di perusahaan ini?
+    - Saya bekerja di sini mulai tanggal berapa?
+    - Sejak kapan saya bekerja di perusahaan madhani?
+    - Tanggal mulai kerja saya di perusahaan ini apa?
+    - Kapan saya resmi bergabung di perusahaan madhani?
+    - Bisa cek tanggal mulai kerja saya?
+    - Tanggal pertama kerja saya di perusahaan apa?
+    - Saya mulai di perusahaan madhani kapan ya?
+    - Saya masuk kerja di perusahaan ini sejak kapan?
+    - Kapan tanggal bergabung saya di perusahaan madhani?
+    - Tolong beri tahu kapan saya mulai bekerja di madhani
+    - Tolong beri tahu saya tanggal mulai kerja saya di madhani
+    - Saya ingin tahu kapan saya bergabung dengan perusahaan madhani
 
-# - intent: ask_date_of_hire_raa_en
-#   examples: |
-#     - When did I start working at Madhani?
-#     - When did I start working at the company?
-#     - When did I first join here?
-#     - What is my start date at the company?
-#     - Since when have I been working at Madhani?
-#     - Can you tell me when I started working at this company?
-#     - From what date have I been working here?
-#     - Since when have I been an employee at Madhani?
-#     - What is my start date at this company?
-#     - When did I officially join Madhani?
-#     - Can you check my start date?
-#     - What is the date of my first day at this company?
-#     - When did I start at Madhani?
-#     - Since when have I been working at this company?
-#     - When is my joining date at Madhani?
-#     - Please let me know when I started working at madhani
-#     - Please tell me my work start date at madhani
-#     - I want to know when I joined Madhani
+- intent: ask_date_of_hire_raa_en
+  examples: |
+    - When did I start working at Madhani?
+    - When did I start working at the company?
+    - When did I first join here?
+    - What is my start date at the company?
+    - Since when have I been working at Madhani?
+    - Can you tell me when I started working at this company?
+    - From what date have I been working here?
+    - Since when have I been an employee at Madhani?
+    - What is my start date at this company?
+    - When did I officially join Madhani?
+    - Can you check my start date?
+    - What is the date of my first day at this company?
+    - When did I start at Madhani?
+    - Since when have I been working at this company?
+    - When is my joining date at Madhani?
+    - Please let me know when I started working at madhani
+    - Please tell me my work start date at madhani
+    - I want to know when I joined Madhani
 
-# - intent: ask_positions_in_madhani_raa_id
-#   examples: |
-#     - Apa saja posisi yang ada di Madhani?
-#     - Apa saja posisi pekerjaan yang ada di Madhani?
-#     - Bisakah Anda memberi tahu posisi apa saja yang tersedia di Madhani?
-#     - Saya ingin tahu tentang semua posisi di Madhani.
-#     - Posisi di Madhani itu apa saja?
-#     - Bisa beri informasi tentang daftar posisi di Madhani?
-#     - Apa saja daftar posisi yang ada di Madhani?
-#     - Tolong berikan rincian posisi di Madhani
-#     - Daftar posisi yang ada di Madhani itu apa saja?
-#     - Posisi di Madhani yang tersedia apa saja?
-#     - Apa nama posisi yang ada di Madhani?
-#     - Apa saja peran posisi yang ada di Madhani?
-#     - Saya ingin tahu posisi apa saja yang tersedia di Madhani.
-#     - Bisakah Anda menjelaskan posisi-posisi yang ada di Madhani?
-#     - Tolong informasikan semua jabatan di Madhani.
-#     - Jabatan apa saja yang tersedia di Madhani?
-#     - Posisi jabatan apa saja yang tersedia di Madhani?
-#     - Apa nama posisi kerja yang ada di Madhani?
-#     - Posisi kerja di Madhani itu apa saja?
-#     - Saya ingin tahu jabatan apa saja yang ada di Madhani
-#     - Tolong beri daftar semua posisi yang ada di Madhani
-#     - Bisakah Anda memberitahu daftar posisi kerja di Madhani?
-#     - Apa saja nama posisi kerja yang tersedia di Madhani?
-#     - Posisi pekerjaan di Madhani itu apa saja?
-#     - Apa saja posisi pekerjaan yang ada di Madhani saat ini?
-#     - Bisa cek posisi apa saja yang sedang tersedia di Madhani?
-#     - Apa saja peran pekerjaan di Madhani?
-#     - Posisi pekerjaan yang tersedia di Madhani itu apa saja?
-#     - Bisakah Anda memberitahu peran kerja di Madhani?
-#     - Tolong beri tahu daftar posisi yang ada di Madhani
-#     - Tolong beri tahu daftar posisi pekerjaan yang ada di Madhani
-#     - Jabatan apa saja yang tercatat di Madhani?
+- intent: ask_positions_in_madhani_raa_id
+  examples: |
+    - Apa saja posisi yang ada di Madhani?
+    - Apa saja posisi pekerjaan yang ada di Madhani?
+    - Bisakah Anda memberi tahu posisi apa saja yang tersedia di Madhani?
+    - Saya ingin tahu tentang semua posisi di Madhani.
+    - Posisi di Madhani itu apa saja?
+    - Bisa beri informasi tentang daftar posisi di Madhani?
+    - Apa saja daftar posisi yang ada di Madhani?
+    - Tolong berikan rincian posisi di Madhani
+    - Daftar posisi yang ada di Madhani itu apa saja?
+    - Posisi di Madhani yang tersedia apa saja?
+    - Apa nama posisi yang ada di Madhani?
+    - Apa saja peran posisi yang ada di Madhani?
+    - Saya ingin tahu posisi apa saja yang tersedia di Madhani.
+    - Bisakah Anda menjelaskan posisi-posisi yang ada di Madhani?
+    - Tolong informasikan semua jabatan di Madhani.
+    - Jabatan apa saja yang tersedia di Madhani?
+    - Posisi jabatan apa saja yang tersedia di Madhani?
+    - Apa nama posisi kerja yang ada di Madhani?
+    - Posisi kerja di Madhani itu apa saja?
+    - Saya ingin tahu jabatan apa saja yang ada di Madhani
+    - Tolong beri daftar semua posisi yang ada di Madhani
+    - Bisakah Anda memberitahu daftar posisi kerja di Madhani?
+    - Apa saja nama posisi kerja yang tersedia di Madhani?
+    - Posisi pekerjaan di Madhani itu apa saja?
+    - Apa saja posisi pekerjaan yang ada di Madhani saat ini?
+    - Bisa cek posisi apa saja yang sedang tersedia di Madhani?
+    - Apa saja peran pekerjaan di Madhani?
+    - Posisi pekerjaan yang tersedia di Madhani itu apa saja?
+    - Bisakah Anda memberitahu peran kerja di Madhani?
+    - Tolong beri tahu daftar posisi yang ada di Madhani
+    - Tolong beri tahu daftar posisi pekerjaan yang ada di Madhani
+    - Jabatan apa saja yang tercatat di Madhani?
 
-# - intent: ask_positions_in_madhani_raa_en
-#   examples: |
-#     - What are the positions available in Madhani?
-#     - What are the job positions in Madhani?
-#     - Can you tell me what positions are available in Madhani?
-#     - I'd like to know about all the positions in Madhani
-#     - What positions are there in Madhani?
-#     - Can you provide information about the list of positions in Madhani?
-#     - What is the list of positions available in Madhani?
-#     - Please provide details about the positions in Madhani
-#     - What are the positions listed in Madhani?
-#     - What positions are available in Madhani?
-#     - What are the position names in Madhani?
-#     - What are the role positions in Madhani?
-#     - I want to know what positions are available in Madhani
-#     - Can you explain the positions available in Madhani?
-#     - Please inform me about all the roles in Madhani
-#     - What job titles are available in Madhani?
-#     - What job positions are there in Madhani?
-#     - What are the job roles in Madhani?
-#     - What are the available job roles in Madhani?
-#     - What are the position names in Madhani's system?
-#     - What roles are available in Madhani's system?
-#     - Can you provide a list of all job positions in Madhani?
-#     - What are the job position names available in Madhani?
-#     - What job roles are currently available in Madhani?
-#     - Can you check what positions are available in Madhani?
-#     - What roles are there in Madhani?
-#     - What available job roles are there in Madhani?
-#     - Can you inform me about Madhani's job roles?
-#     - Please provide a list of all positions in Madhani
-#     - What job titles are recorded in Madhani?
-#     - Can you tell me the available roles in Madhani?
-#     - Please let me know about all positions recorded in Madhani
+- intent: ask_positions_in_madhani_raa_en
+  examples: |
+    - What are the positions available in Madhani?
+    - What are the job positions in Madhani?
+    - Can you tell me what positions are available in Madhani?
+    - I'd like to know about all the positions in Madhani
+    - What positions are there in Madhani?
+    - Can you provide information about the list of positions in Madhani?
+    - What is the list of positions available in Madhani?
+    - Please provide details about the positions in Madhani
+    - What are the positions listed in Madhani?
+    - What positions are available in Madhani?
+    - What are the position names in Madhani?
+    - What are the role positions in Madhani?
+    - I want to know what positions are available in Madhani
+    - Can you explain the positions available in Madhani?
+    - Please inform me about all the roles in Madhani
+    - What job titles are available in Madhani?
+    - What job positions are there in Madhani?
+    - What are the job roles in Madhani?
+    - What are the available job roles in Madhani?
+    - What are the position names in Madhani's system?
+    - What roles are available in Madhani's system?
+    - Can you provide a list of all job positions in Madhani?
+    - What are the job position names available in Madhani?
+    - What job roles are currently available in Madhani?
+    - Can you check what positions are available in Madhani?
+    - What roles are there in Madhani?
+    - What available job roles are there in Madhani?
+    - Can you inform me about Madhani's job roles?
+    - Please provide a list of all positions in Madhani
+    - What job titles are recorded in Madhani?
+    - Can you tell me the available roles in Madhani?
+    - Please let me know about all positions recorded in Madhani
 
-# - intent: ask_total_positions_in_madhani_raa_id
-#   examples: |
-#     - Ada berapa posisi yang tersedia di Madhani?
-#     - Berapa jumlah posisi yang ada di Madhani?
-#     - Tolong informasikan total posisi yang ada di Madhani
-#     - Bisa beri tahu jumlah posisi yang ada di Madhani?
-#     - Total posisi yang tersedia di Madhani ada berapa?
-#     - Berapa banyak posisi di Madhani saat ini?
-#     - Berapa total jabatan yang tersedia di Madhani?
-#     - Madhani memiliki berapa posisi?
-#     - Ada berapa jabatan di Madhani sekarang?
-#     - Saya ingin tahu jumlah posisi di Madhani
-#     - Posisi di Madhani ada berapa totalnya?
-#     - Berapa total posisi pekerjaan di Madhani?
-#     - Bisa cek jumlah total posisi di Madhani?
-#     - Posisi kerja di Madhani ada berapa?
-#     - Berapa total jabatan yang tersedia di sistem Madhani?
-#     - Bisa beri tahu jumlah jabatan di Madhani saat ini?
-#     - Berapa total posisi kerja di Madhani?
-#     - Jumlah posisi kerja di Madhani ada berapa?
+- intent: ask_total_positions_in_madhani_raa_id
+  examples: |
+    - Ada berapa posisi yang tersedia di Madhani?
+    - Berapa jumlah posisi yang ada di Madhani?
+    - Tolong informasikan total posisi yang ada di Madhani
+    - Bisa beri tahu jumlah posisi yang ada di Madhani?
+    - Total posisi yang tersedia di Madhani ada berapa?
+    - Berapa banyak posisi di Madhani saat ini?
+    - Berapa total jabatan yang tersedia di Madhani?
+    - Madhani memiliki berapa posisi?
+    - Ada berapa jabatan di Madhani sekarang?
+    - Saya ingin tahu jumlah posisi di Madhani
+    - Posisi di Madhani ada berapa totalnya?
+    - Berapa total posisi pekerjaan di Madhani?
+    - Bisa cek jumlah total posisi di Madhani?
+    - Posisi kerja di Madhani ada berapa?
+    - Berapa total jabatan yang tersedia di sistem Madhani?
+    - Bisa beri tahu jumlah jabatan di Madhani saat ini?
+    - Berapa total posisi kerja di Madhani?
+    - Jumlah posisi kerja di Madhani ada berapa?
 
-# - intent: ask_total_positions_in_madhani_raa_en
-#   examples: |
-#     - How many positions are available in Madhani?
-#     - Please provide information about the total positions in Madhani
-#     - Can you tell me the number of positions in Madhani?
-#     - How many total positions are available in Madhani?
-#     - How many positions are currently in Madhani?
-#     - What is the total number of job roles available in Madhani?
-#     - How many positions does Madhani have?
-#     - How many job roles are there in Madhani now?
-#     - I'd like to know the number of positions in Madhani
-#     - What is the total number of positions in Madhani?
-#     - How many total job roles are there in Madhani?
-#     - Can you check the total number of positions in Madhani?
-#     - What is the total number of job roles in the Madhani system?
-#     - Can you tell me the number of job roles in Madhani right now?
-#     - What is the total number of work positions in Madhani?
-#     - How many work positions are there in Madhani?
+- intent: ask_total_positions_in_madhani_raa_en
+  examples: |
+    - How many positions are available in Madhani?
+    - Please provide information about the total positions in Madhani
+    - Can you tell me the number of positions in Madhani?
+    - How many total positions are available in Madhani?
+    - How many positions are currently in Madhani?
+    - What is the total number of job roles available in Madhani?
+    - How many positions does Madhani have?
+    - How many job roles are there in Madhani now?
+    - I'd like to know the number of positions in Madhani
+    - What is the total number of positions in Madhani?
+    - How many total job roles are there in Madhani?
+    - Can you check the total number of positions in Madhani?
+    - What is the total number of job roles in the Madhani system?
+    - Can you tell me the number of job roles in Madhani right now?
+    - What is the total number of work positions in Madhani?
+    - How many work positions are there in Madhani?
 
-# - intent: ask_departments_in_madhani_raa_id
-#   examples: |
-#     - Apa saja department yang ada di Madhani?
-#     - Bisa beri tahu saya daftar departement di Madhani?
-#     - Tolong informasikan department di Madhani
-#     - Ada departement apa saja di Madhani?
-#     - Bisa kasih tahu saya daftar department di Madhani?
-#     - Daftar departement di Madhani apa saja?
-#     - Apa nama-nama departement yang ada di Madhani?
-#     - departement apa saja yang tersedia di Madhani?
-#     - Bisa sebutkan department yang ada di Madhani?
-#     - Tolong beri tahu daftar departement Madhani
-#     - Apa saja unit kerja di Madhani?
-#     - Ada unit kerja apa saja di Madhani?
-#     - Bisa informasikan semua departement di Madhani?
-#     - departement kerja apa saja yang tersedia di Madhani?
-#     - Apa nama unit kerja di Madhani?
-#     - Beri tahu saya departement di Madhani
-#     - Daftar unit kerja di Madhani apa saja?
-#     - Sebutkan departement kerja di Madhani
-#     - Unit kerja apa yang tersedia di Madhani?
-#     - Bisa cek daftar departement Madhani untuk saya?
-#     - Apa saja divisi yang ada di Madhani?
-#     - Tolong cek divisi apa saja yang ada di Madhani
-#     - departement apa yang dimiliki Madhani?
-#     - Tolong beri tahu daftar divisi di Madhani
-#     - Apakah ada daftar departement kerja di Madhani?
-#     - Tolong beri tahu saya unit kerja di Madhani
-#     - Apa daftar departement yang dimiliki oleh Madhani?
-#     - Saya ingin tahu semua departement di Madhani
-#     - departement kerja apa saja yang ada di perusahaan Madhani?
-#     - Bisa beri tahu departement apa saja yang ada di Madhani?
-#     - Informasikan departement di Madhani untuk saya.
-#     - Apa nama departement yang tersedia di Madhani?
-#     - Bisakah Anda memberi tahu saya daftar unit kerja di Madhani?
-#     - departement apa saja yang terdaftar di Madhani?
+- intent: ask_departments_in_madhani_raa_id
+  examples: |
+    - Apa saja department yang ada di Madhani?
+    - Bisa beri tahu saya daftar departement di Madhani?
+    - Tolong informasikan department di Madhani
+    - Ada departement apa saja di Madhani?
+    - Bisa kasih tahu saya daftar department di Madhani?
+    - Daftar departement di Madhani apa saja?
+    - Apa nama-nama departement yang ada di Madhani?
+    - departement apa saja yang tersedia di Madhani?
+    - Bisa sebutkan department yang ada di Madhani?
+    - Tolong beri tahu daftar departement Madhani
+    - Apa saja unit kerja di Madhani?
+    - Ada unit kerja apa saja di Madhani?
+    - Bisa informasikan semua departement di Madhani?
+    - departement kerja apa saja yang tersedia di Madhani?
+    - Apa nama unit kerja di Madhani?
+    - Beri tahu saya departement di Madhani
+    - Daftar unit kerja di Madhani apa saja?
+    - Sebutkan departement kerja di Madhani
+    - Unit kerja apa yang tersedia di Madhani?
+    - Bisa cek daftar departement Madhani untuk saya?
+    - Apa saja divisi yang ada di Madhani?
+    - Tolong cek divisi apa saja yang ada di Madhani
+    - departement apa yang dimiliki Madhani?
+    - Tolong beri tahu daftar divisi di Madhani
+    - Apakah ada daftar departement kerja di Madhani?
+    - Tolong beri tahu saya unit kerja di Madhani
+    - Apa daftar departement yang dimiliki oleh Madhani?
+    - Saya ingin tahu semua departement di Madhani
+    - departement kerja apa saja yang ada di perusahaan Madhani?
+    - Bisa beri tahu departement apa saja yang ada di Madhani?
+    - Informasikan departement di Madhani untuk saya.
+    - Apa nama departement yang tersedia di Madhani?
+    - Bisakah Anda memberi tahu saya daftar unit kerja di Madhani?
+    - departement apa saja yang terdaftar di Madhani?
 
-# - intent: ask_departments_in_madhani_raa_en
-#   examples: |
-#     - What are the departments in Madhani?
-#     - Can you tell me the list of departments in Madhani?
-#     - Please provide information about the departments in Madhani
-#     - What departments are available in Madhani?
-#     - Can you share the department list in Madhani with me?
-#     - What is the list of departments in Madhani?
-#     - What are the names of the departments in Madhani?
-#     - Which departments are available in Madhani?
-#     - Can you mention the departments in Madhani?
-#     - Please provide the list of departments in Madhani
-#     - What work units are there in Madhani?
-#     - What units are available in Madhani?
-#     - Can you provide information on all the departments in Madhani?
-#     - What working departments are available in Madhani?
-#     - What are the names of work units in Madhani?
-#     - Tell me about the departments in Madhani
-#     - What is the list of work units in Madhani?
-#     - Mention the working departments in Madhani
-#     - Which work units are available in Madhani?
-#     - Can you check the list of Madhani's departments for me?
-#     - What divisions exist in Madhani?
-#     - Please check what divisions are available in Madhani
-#     - What departments does Madhani have?
-#     - Please provide the list of divisions in Madhani
-#     - Is there a list of working departments in Madhani?
-#     - Please tell me the work units in Madhani
-#     - What is the list of departments owned by Madhani?
-#     - I'd like to know all the departments in Madhani
-#     - What working departments are there in Madhani's company?
-#     - Can you tell me the departments available in Madhani?
-#     - Provide information about Madhani's departments for me
-#     - What are the names of departments available in Madhani?
-#     - Could you tell me the list of work units in Madhani?
-#     - Which departments are registered in Madhani?
+- intent: ask_departments_in_madhani_raa_en
+  examples: |
+    - What are the departments in Madhani?
+    - Can you tell me the list of departments in Madhani?
+    - Please provide information about the departments in Madhani
+    - What departments are available in Madhani?
+    - Can you share the department list in Madhani with me?
+    - What is the list of departments in Madhani?
+    - What are the names of the departments in Madhani?
+    - Which departments are available in Madhani?
+    - Can you mention the departments in Madhani?
+    - Please provide the list of departments in Madhani
+    - What work units are there in Madhani?
+    - What units are available in Madhani?
+    - Can you provide information on all the departments in Madhani?
+    - What working departments are available in Madhani?
+    - What are the names of work units in Madhani?
+    - Tell me about the departments in Madhani
+    - What is the list of work units in Madhani?
+    - Mention the working departments in Madhani
+    - Which work units are available in Madhani?
+    - Can you check the list of Madhani's departments for me?
+    - What divisions exist in Madhani?
+    - Please check what divisions are available in Madhani
+    - What departments does Madhani have?
+    - Please provide the list of divisions in Madhani
+    - Is there a list of working departments in Madhani?
+    - Please tell me the work units in Madhani
+    - What is the list of departments owned by Madhani?
+    - I'd like to know all the departments in Madhani
+    - What working departments are there in Madhani's company?
+    - Can you tell me the departments available in Madhani?
+    - Provide information about Madhani's departments for me
+    - What are the names of departments available in Madhani?
+    - Could you tell me the list of work units in Madhani?
+    - Which departments are registered in Madhani?
 
-# - intent: ask_total_departments_in_madhani_raa_id
-#   examples: |
-#     - Ada berapa department yang ada di Madhani?
-#     - Berapa jumlah departement di Madhani?
-#     - departement di Madhani ada berapa?
-#     - Bisa beri tahu saya total departement di Madhani?
-#     - Berapa total unit kerja di Madhani?
-#     - Berapa total department kerja di Madhani?
-#     - Ada berapa unit kerja di Madhani?
-#     - Berapa banyak departement kerja di Madhani?
-#     - departement kerja di Madhani ada berapa?
-#     - Total departement yang ada di Madhani berapa?
-#     - Bisa cek jumlah departement di Madhani?
-#     - Tolong beri tahu jumlah departement di Madhani
-#     - Total departement Madhani ada berapa ya?
-#     - Unit kerja di Madhani total ada berapa?
-#     - Berapa total departement di perusahaan Madhani?
-#     - Saya ingin tahu jumlah departement di Madhani
-#     - Berapa banyak unit kerja di Madhani?
-#     - Berapa banyak unit departement kerja di Madhani?
+- intent: ask_total_departments_in_madhani_raa_id
+  examples: |
+    - Ada berapa department yang ada di Madhani?
+    - Berapa jumlah departement di Madhani?
+    - departement di Madhani ada berapa?
+    - Bisa beri tahu saya total departement di Madhani?
+    - Berapa total unit kerja di Madhani?
+    - Berapa total department kerja di Madhani?
+    - Ada berapa unit kerja di Madhani?
+    - Berapa banyak departement kerja di Madhani?
+    - departement kerja di Madhani ada berapa?
+    - Total departement yang ada di Madhani berapa?
+    - Bisa cek jumlah departement di Madhani?
+    - Tolong beri tahu jumlah departement di Madhani
+    - Total departement Madhani ada berapa ya?
+    - Unit kerja di Madhani total ada berapa?
+    - Berapa total departement di perusahaan Madhani?
+    - Saya ingin tahu jumlah departement di Madhani
+    - Berapa banyak unit kerja di Madhani?
+    - Berapa banyak unit departement kerja di Madhani?
 
-# - intent: ask_total_departments_in_madhani_raa_en
-#   examples: |
-#     - How many departments are there in Madhani?
-#     - How many departments does Madhani have?
-#     - Can you tell me the total number of departments in Madhani?
-#     - What is the total number of work units in Madhani?
-#     - How many work units are there in Madhani?
-#     - How many departments does Madhani manage?
-#     - How many working departments are in Madhani?
-#     - What is the total number of departments in Madhani?
-#     - Can you check the total number of departments in Madhani?
-#     - Please tell me the total number of departments in Madhani
-#     - What's the total count of departments in Madhani?
-#     - How many units are there in Madhani?
-#     - What is the total number of departments available in Madhani?
-#     - I'd like to know the total number of departments in Madhani
-#     - How many department units are there in Madhani?
-#     - What's the total number of work units in Madhani?
-#     - Can you let me know how many departments Madhani has?
-#     - How many department units are managed by Madhani?
-#     - How many total work units are listed in Madhani?
+- intent: ask_total_departments_in_madhani_raa_en
+  examples: |
+    - How many departments are there in Madhani?
+    - How many departments does Madhani have?
+    - Can you tell me the total number of departments in Madhani?
+    - What is the total number of work units in Madhani?
+    - How many work units are there in Madhani?
+    - How many departments does Madhani manage?
+    - How many working departments are in Madhani?
+    - What is the total number of departments in Madhani?
+    - Can you check the total number of departments in Madhani?
+    - Please tell me the total number of departments in Madhani
+    - What's the total count of departments in Madhani?
+    - How many units are there in Madhani?
+    - What is the total number of departments available in Madhani?
+    - I'd like to know the total number of departments in Madhani
+    - How many department units are there in Madhani?
+    - What's the total number of work units in Madhani?
+    - Can you let me know how many departments Madhani has?
+    - How many department units are managed by Madhani?
+    - How many total work units are listed in Madhani?

@@ -118,370 +118,370 @@ rules:
     - intent: btn_cancel_handover_no
     - action: action_cancel_handover_no
 
-# - rule: check attendance for today in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: check_absentee_data_today_raa_id
-#     - action: action_get_absence_data
+- rule: check attendance for today in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: check_absentee_data_today_raa_id
+    - action: action_get_absence_data
 
-# - rule: check attendance for today in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: check_absentee_data_today_raa_en
-#     - action: action_get_absence_data
+- rule: check attendance for today in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: check_absentee_data_today_raa_en
+    - action: action_get_absence_data
 
-# - rule: check attendance for yesterday in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: check_absentee_data_yesterday_raa_id
-#     - action: action_get_absence_data
+- rule: check attendance for yesterday in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: check_absentee_data_yesterday_raa_id
+    - action: action_get_absence_data
 
-# - rule: check attendance for yesterday in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: check_absentee_data_yesterday_raa_en
-#     - action: action_get_absence_data
+- rule: check attendance for yesterday in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: check_absentee_data_yesterday_raa_en
+    - action: action_get_absence_data
 
-# - rule: check attendance for last time in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: check_absentee_data_last_time_raa_id
-#     - action: action_get_absence_data
+- rule: check attendance for last time in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: check_absentee_data_last_time_raa_id
+    - action: action_get_absence_data
 
-# - rule: check attendance for last time in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: check_absentee_data_last_time_raa_en
-#     - action: action_get_absence_data
+- rule: check attendance for last time in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: check_absentee_data_last_time_raa_en
+    - action: action_get_absence_data
 
-# - rule: Check leave requests this month in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: check_leave_requests_this_month_raa_id
-#     - action: action_get_leave_requests_this_month
+- rule: Check leave requests this month in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: check_leave_requests_this_month_raa_id
+    - action: action_get_leave_requests_this_month
 
-# - rule: Check leave requests this month in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: check_leave_requests_this_month_raa_en
-#     - action: action_get_leave_requests_this_month
+- rule: Check leave requests this month in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: check_leave_requests_this_month_raa_en
+    - action: action_get_leave_requests_this_month
 
-# - rule: Check leave requests last month in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: check_leave_requests_last_month_raa_id
-#     - action: action_get_leave_requests_last_month
+- rule: Check leave requests last month in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: check_leave_requests_last_month_raa_id
+    - action: action_get_leave_requests_last_month
 
-# - rule: Check leave requests last month in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: check_leave_requests_last_month_raa_en
-#     - action: action_get_leave_requests_last_month
+- rule: Check leave requests last month in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: check_leave_requests_last_month_raa_en
+    - action: action_get_leave_requests_last_month
 
-# - rule: Check absence requests this month in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: check_absence_requests_this_month_raa_id
-#     - action: action_get_absence_requests_this_month
+- rule: Check absence requests this month in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: check_absence_requests_this_month_raa_id
+    - action: action_get_absence_requests_this_month
 
-# - rule: Check absence requests this month in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: check_absence_requests_this_month_raa_en
-#     - action: action_get_absence_requests_this_month
+- rule: Check absence requests this month in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: check_absence_requests_this_month_raa_en
+    - action: action_get_absence_requests_this_month
 
-# - rule: Check absence requests last month in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: check_absence_requests_last_month_raa_id
-#     - action: action_get_absence_requests_last_month
+- rule: Check absence requests last month in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: check_absence_requests_last_month_raa_id
+    - action: action_get_absence_requests_last_month
 
-# - rule: Check absence requests last month in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: check_absence_requests_last_month_raa_en
-#     - action: action_get_absence_requests_last_month
+- rule: Check absence requests last month in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: check_absence_requests_last_month_raa_en
+    - action: action_get_absence_requests_last_month
 
-# - rule: Check absence requests (alpha/mangkir) this month in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: check_alpha_absence_requests_this_month_raa_id
-#     - action: action_get_alpha_absence_requests_this_month
+- rule: Check absence requests (alpha/mangkir) this month in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: check_alpha_absence_requests_this_month_raa_id
+    - action: action_get_alpha_absence_requests_this_month
 
-# - rule: Check absence requests (alpha/mangkir) this month in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: check_alpha_absence_requests_this_month_raa_en
-#     - action: action_get_alpha_absence_requests_this_month
+- rule: Check absence requests (alpha/mangkir) this month in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: check_alpha_absence_requests_this_month_raa_en
+    - action: action_get_alpha_absence_requests_this_month
 
-# - rule: Check absence requests (alpha/mangkir) last month in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: check_alpha_absence_requests_last_month_raa_id
-#     - action: action_get_alpha_absence_requests_last_month
+- rule: Check absence requests (alpha/mangkir) last month in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: check_alpha_absence_requests_last_month_raa_id
+    - action: action_get_alpha_absence_requests_last_month
 
-# - rule: Check absence requests (alpha/mangkir) last month in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: check_alpha_absence_requests_last_month_raa_en
-#     - action: action_get_alpha_absence_requests_last_month
+- rule: Check absence requests (alpha/mangkir) last month in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: check_alpha_absence_requests_last_month_raa_en
+    - action: action_get_alpha_absence_requests_last_month
 
-# - rule: Check attendance this month in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: check_attendance_this_month_raa_id
-#     - action: action_get_presence_this_month
+- rule: Check attendance this month in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: check_attendance_this_month_raa_id
+    - action: action_get_presence_this_month
 
-# - rule: Check attendance this month in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: check_attendance_this_month_raa_en
-#     - action: action_get_presence_this_month
+- rule: Check attendance this month in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: check_attendance_this_month_raa_en
+    - action: action_get_presence_this_month
 
-# - rule: Check attendance last month in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: check_attendance_last_month_raa_id
-#     - action: action_get_presence_last_month 
+- rule: Check attendance last month in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: check_attendance_last_month_raa_id
+    - action: action_get_presence_last_month 
 
-# - rule: Check attendance last month in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: check_attendance_last_month_raa_en
-#     - action: action_get_presence_last_month 
+- rule: Check attendance last month in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: check_attendance_last_month_raa_en
+    - action: action_get_presence_last_month 
 
-# - rule: Check madhani sites projects in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: check_madhani_sites_projects_raa_id
-#     - action: action_get_project_sites_madhani
+- rule: Check madhani sites projects in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: check_madhani_sites_projects_raa_id
+    - action: action_get_project_sites_madhani
 
-# - rule: Check madhani sites projects in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: check_madhani_sites_projects_raa_en
-#     - action: action_get_project_sites_madhani
+- rule: Check madhani sites projects in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: check_madhani_sites_projects_raa_en
+    - action: action_get_project_sites_madhani
     
-# - rule: Provide user's role information in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: ask_user_role_raa_id
-#     - action: action_get_user_profile_role
+- rule: Provide user's role information in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_user_role_raa_id
+    - action: action_get_user_profile_role
 
-# - rule: Provide user's role information in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: ask_user_role_raa_en
-#     - action: action_get_user_profile_role
+- rule: Provide user's role information in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_user_role_raa_en
+    - action: action_get_user_profile_role
 
-# - rule: Provide user's department information in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: ask_user_department_raa_id
-#     - action: action_get_user_profile_department
+- rule: Provide user's department information in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_user_department_raa_id
+    - action: action_get_user_profile_department
 
-# - rule: Provide user's department information in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: ask_user_department_raa_en
-#     - action: action_get_user_profile_department
+- rule: Provide user's department information in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_user_department_raa_en
+    - action: action_get_user_profile_department
 
-# - rule: Provide user's position information in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: ask_user_position_raa_id
-#     - action: action_get_user_profile_position
+- rule: Provide user's position information in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_user_position_raa_id
+    - action: action_get_user_profile_position
 
-# - rule: Provide user's position information in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: ask_user_position_raa_en
-#     - action: action_get_user_profile_position
+- rule: Provide user's position information in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_user_position_raa_en
+    - action: action_get_user_profile_position
 
-# - rule: Provide user's assigned project site information in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: ask_user_assigned_project_site_raa_id
-#     - action: action_get_user_profile_project_site
+- rule: Provide user's assigned project site information in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_user_assigned_project_site_raa_id
+    - action: action_get_user_profile_project_site
 
-# - rule: Provide user's assigned project site information in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: ask_user_assigned_project_site_raa_en
-#     - action: action_get_user_profile_project_site
+- rule: Provide user's assigned project site information in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_user_assigned_project_site_raa_en
+    - action: action_get_user_profile_project_site
 
-# - rule: Provide user's registered email information in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: ask_registered_email_raa_id
-#     - action: action_get_user_profile_email
+- rule: Provide user's registered email information in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_registered_email_raa_id
+    - action: action_get_user_profile_email
 
-# - rule: Provide user's registered email information in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: ask_registered_email_raa_en
-#     - action: action_get_user_profile_email
+- rule: Provide user's registered email information in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_registered_email_raa_en
+    - action: action_get_user_profile_email
 
-# - rule: Provide user's registered phone number information in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: ask_registered_phone_raa_id
-#     - action: action_get_user_profile_phone_number
+- rule: Provide user's registered phone number information in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_registered_phone_raa_id
+    - action: action_get_user_profile_phone_number
 
-# - rule: Provide user's registered phone number information in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: ask_registered_phone_raa_en
-#     - action: action_get_user_profile_phone_number
+- rule: Provide user's registered phone number information in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_registered_phone_raa_en
+    - action: action_get_user_profile_phone_number
 
-# - rule: Provide user's date of hire information in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: ask_date_of_hire_raa_id
-#     - action: action_get_user_profile_hire_date
+- rule: Provide user's date of hire information in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_date_of_hire_raa_id
+    - action: action_get_user_profile_hire_date
 
-# - rule: Provide user's date of hire information in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: ask_date_of_hire_raa_en
-#     - action: action_get_user_profile_hire_date
+- rule: Provide user's date of hire information in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_date_of_hire_raa_en
+    - action: action_get_user_profile_hire_date
 
-# - rule: Respond to positions madhani's in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: ask_positions_in_madhani_raa_id
-#     - action: action_get_positions_madhani
+- rule: Respond to positions madhani's in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_positions_in_madhani_raa_id
+    - action: action_get_positions_madhani
 
-# - rule: Respond to positions madhani's in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: ask_positions_in_madhani_raa_en
-#     - action: action_get_positions_madhani
+- rule: Respond to positions madhani's in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_positions_in_madhani_raa_en
+    - action: action_get_positions_madhani
 
-# - rule: Respond to total positions madhani's in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: ask_total_positions_in_madhani_raa_id
-#     - action: action_get_total_positions_madhani
+- rule: Respond to total positions madhani's in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_total_positions_in_madhani_raa_id
+    - action: action_get_total_positions_madhani
 
-# - rule: Respond to total positions madhani's in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: ask_total_positions_in_madhani_raa_en
-#     - action: action_get_total_positions_madhani
+- rule: Respond to total positions madhani's in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_total_positions_in_madhani_raa_en
+    - action: action_get_total_positions_madhani
 
-# - rule: Respond to departments madhani's in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: ask_departments_in_madhani_raa_id
-#     - action: action_get_departments_madhani
+- rule: Respond to departments madhani's in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_departments_in_madhani_raa_id
+    - action: action_get_departments_madhani
 
-# - rule: Respond to departments madhani's in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: ask_departments_in_madhani_raa_en
-#     - action: action_get_departments_madhani
+- rule: Respond to departments madhani's in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_departments_in_madhani_raa_en
+    - action: action_get_departments_madhani
 
-# - rule: Respond to total departments madhani's in Indonesia
-#   condition:
-#     - slot_was_set:
-#         - language: indonesia
-#   steps:
-#     - intent: ask_total_departments_in_madhani_raa_id
-#     - action: action_get_total_departments_madhani
+- rule: Respond to total departments madhani's in Indonesia
+  condition:
+    - slot_was_set:
+        - language: indonesia
+  steps:
+    - intent: ask_total_departments_in_madhani_raa_id
+    - action: action_get_total_departments_madhani
 
-# - rule: Respond to total departments madhani's in English
-#   condition:
-#     - slot_was_set:
-#         - language: english
-#   steps:
-#     - intent: ask_total_departments_in_madhani_raa_en
-#     - action: action_get_total_departments_madhani
+- rule: Respond to total departments madhani's in English
+  condition:
+    - slot_was_set:
+        - language: english
+  steps:
+    - intent: ask_total_departments_in_madhani_raa_en
+    - action: action_get_total_departments_madhani
