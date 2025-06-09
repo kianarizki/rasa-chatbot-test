@@ -81,24 +81,12 @@ rasa.db-wal
 rasa/segment_key
 rasa/keys
 .rasa/
-# /results/
-# Local Netlify folder
 .netlify
 rasa.code-workspace
 /.rasa/
 rasa_env/
-Note.txt
-# models/*
-trackerstore_masmufid.py
-trackerstore_gueutakatik_berhasil(simpenan).py
-tracker_questdb_kiana_punya.py
-test_import.py
-tes.py
-requrirements.txt
 kaf-test.py
-test_query.py
 *.html
-test2.py
 
 ## Note : Ignore one models for deployment !
 # !/models/20250410-102245-bitter-pass.tar.gz
